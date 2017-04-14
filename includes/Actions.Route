@@ -1,0 +1,357 @@
+<h1 id="actions-route-module">Actions.Route Module</h1>
+
+<p>(SP) (MP) (FSM) Route AI or players through waypoints or to zones.</p>
+
+<h4 id="act_route-fsm-class-extends-fsm_process"><a href="#act_route-class">ACT_ROUTE</a> FSM class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+
+<h4 id="act_route-state-machine">ACT_ROUTE state machine:</h4>
+
+<p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
+All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
+Each derived class follows exactly the same process, using the same events and following the same state transitions,
+but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
+
+<h4 id="act_route-events">ACT_ROUTE <strong>Events</strong>:</h4>
+
+<p>These are the events defined in this class:</p>
+
+<ul>
+<li><strong>Start</strong>:  The process is started. The process will go into the Report state.</li>
+<li><strong>Report</strong>: The process is reporting to the player the route to be followed.</li>
+<li><strong>Route</strong>: The process is routing the controllable.</li>
+<li><strong>Pause</strong>: The process is pausing the route of the controllable.</li>
+<li><strong>Arrive</strong>: The controllable has arrived at a route point.</li>
+<li><strong>More</strong>:  There are more route points that need to be followed. The process will go back into the Report state.</li>
+<li><strong>NoMore</strong>:  There are no more route points that need to be followed. The process will go into the Success state.</li>
+</ul>
+
+<h4 id="act_route-event-methods">ACT_ROUTE <strong>Event methods</strong>:</h4>
+
+<p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
+There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
+
+<ul>
+<li><strong>Immediate</strong>: The event method has exactly the name of the event.</li>
+<li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
+</ul>
+
+<h4 id="act_route-states">ACT_ROUTE <strong>States</strong>:</h4>
+
+<ul>
+<li><strong>None</strong>: The controllable did not receive route commands.</li>
+<li><strong>Arrived (*)</strong>: The controllable has arrived at a route point.</li>
+<li><strong>Aborted (*)</strong>: The controllable has aborted the route path.</li>
+<li><strong>Routing</strong>: The controllable is understay to the route point.</li>
+<li><strong>Pausing</strong>: The process is pausing the routing. AI air will go into hover, AI ground will stop moving. Players can fly around.</li>
+<li><strong>Success (*)</strong>: All route points were reached.</li>
+<li><strong>Failed (*)</strong>: The process has failed.</li>
+</ul>
+
+<p>(*) End states of the process.</p>
+
+<h4 id="act_route-state-transition-methods">ACT_ROUTE state transition methods:</h4>
+
+<p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
+There are 2 moments when state transition methods will be called by the state machine:</p>
+
+<ul>
+<li><p><strong>Before</strong> the state transition.
+The state transition method needs to start with the name <strong>OnBefore + the name of the state</strong>.
+If the state transition method returns false, then the processing of the state transition will not be done!
+If you want to change the behaviour of the AIControllable at this event, return false,
+but then you&rsquo;ll need to specify your own logic using the AIControllable!</p></li>
+<li><p><strong>After</strong> the state transition.
+The state transition method needs to start with the name <strong>OnAfter + the name of the state</strong>.
+These state transition methods need to provide a return value, which is specified at the function description.</p></li>
+</ul>
+
+<h4 id="1-act_route_zone-class-extends-act_route">1) <a href="#act_route_zone-class">ACT_ROUTE_ZONE</a> class, extends <a href="#act_route-class">ACT_ROUTE</a></h4>
+
+<p>The ACT_ROUTE_ZONE class implements the core functions to route an AIR <a href="#controllable-module">Controllable</a> player <a href="#unit-module">Unit</a> to a <a href="#zone-module">Zone</a>.
+The player receives on perioding times messages with the coordinates of the route to follow.
+Upon arrival at the zone, a confirmation of arrival is sent, and the process will be ended.</p>
+
+<h4 id="1-1-act_route_zone-constructor">1.1) ACT_ROUTE_ZONE constructor:</h4>
+
+<ul>
+<li><a href="#act_route_zone-new-zone">ACT_ROUTE_ZONE:New()</a>: Creates a new ACT_ROUTE_ZONE object.</li>
+</ul>
+
+<h2 id="act_route-class">ACT_ROUTE Class</h2>
+
+<pre>
+Inheritance : The ACT_ROUTE Class inherits from the following parents :
+ERROR !
+    `-- ACT_ROUTE
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> TASK</li>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
+</ul>
+
+<h3 id="act_route-new">ACT_ROUTE:New()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+</ul>
+
+<h3 id="act_route-onafterstart-processunit-event-from-to">ACT_ROUTE:onafterStart(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route-onfunchasarrived-processunit">ACT_ROUTE:onfuncHasArrived(ProcessUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="act_route-onbeforeroute-processunit-event-from-to">ACT_ROUTE:onbeforeRoute(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h2 id="act_route_point-class">ACT_ROUTE_POINT Class</h2>
+
+<pre>
+Inheritance : The ACT_ROUTE_POINT Class inherits from the following parents :
+ERROR !
+    `-- ACT_ROUTE
+        `-- ACT_ROUTE_POINT
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> TASK</li>
+</ul>
+
+<h3 id="act_route_point-new-the-range-zone">ACT_ROUTE_POINT:New(The, Range, Zone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+<li><a href="#point_vec2%20the%20:%20pointvec2%20to-class">POINT_VEC2 The : PointVec2 to</a> Target.</li>
+<li>number Range : The Distance to Target.</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route_point-setpointvec2-pointvec2">ACT_ROUTE_POINT:SetPointVec2(PointVec2)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+<li><a href="#point_vec2%20pointvec2%20:%20the%20pointvec2%20to%20route-class">POINT_VEC2 PointVec2 : The PointVec2 to route</a> to.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route_point-getpointvec2">ACT_ROUTE_POINT:GetPointVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec2%20pointvec2%20:%20the%20pointvec2%20to%20route-class">POINT_VEC2 PointVec2 : The PointVec2 to route</a> to.</li>
+</ul>
+
+<h3 id="act_route_point-setrange-range">ACT_ROUTE_POINT:SetRange(Range)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+<li>number Range : The Range to consider the arrival. Default is 10000 meters.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route_point-getrange">ACT_ROUTE_POINT:GetRange()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>number The : Range to consider the arrival. Default is 10000 meters.</li>
+</ul>
+
+<h3 id="act_route_point-onfunchasarrived-processunit">ACT_ROUTE_POINT:onfuncHasArrived(ProcessUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="act_route_point-onenterreporting-processunit-event-from-to">ACT_ROUTE_POINT:onenterReporting(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h2 id="act_route_zone-class">ACT_ROUTE_ZONE Class</h2>
+
+<pre>
+Inheritance : The ACT_ROUTE_ZONE Class inherits from the following parents :
+ERROR !
+    `-- ACT_ROUTE
+        `-- ACT_ROUTE_ZONE
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> TASK</li>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
+</ul>
+
+<h3 id="act_route_zone-new-zone">ACT_ROUTE_ZONE:New(Zone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
+self</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route_zone-setzone-zone">ACT_ROUTE_ZONE:SetZone(Zone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
+self</li>
+<li><a href="#zone_base%20zone%20:%20the%20zone%20object%20where%20to%20route-class">ZONE_BASE Zone : The Zone object where to route</a> to.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_route_zone-getzone">ACT_ROUTE_ZONE:GetZone()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_base%20zone%20:%20the%20zone%20object%20where%20to%20route-class">ZONE_BASE Zone : The Zone object where to route</a> to.</li>
+</ul>
+
+<h3 id="act_route_zone-onfunchasarrived-processunit">ACT_ROUTE_ZONE:onfuncHasArrived(ProcessUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route-class">ACT_ROUTE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="act_route_zone-onenterreporting-processunit-event-from-to">ACT_ROUTE_ZONE:onenterReporting(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

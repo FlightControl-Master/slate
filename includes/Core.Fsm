@@ -1,0 +1,196 @@
+<h1 id="core-fsm-module">Core.Fsm Module</h1>
+
+<p><strong>Core</strong> - The <strong>FSM</strong> (<strong>F</strong>inite <strong>S</strong>tate <strong>M</strong>achine) class and derived <strong>FSM_</strong> classes
+are design patterns allowing efficient (long-lasting) processes and workflows.</p>
+
+<p><img src="/includes/Pictures/FSM/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>A FSM can only be in one of a finite number of states.
+The machine is in only one state at a time; the state it is in at any given time is called the <strong>current state</strong>.
+It can change from one state to another when initiated by an <strong><strong>internal</strong> or <strong>external</strong> triggering event</strong>, which is called a <strong>transition</strong>.
+An <strong>FSM implementation</strong> is defined by <strong>a list of its states</strong>, <strong>its initial state</strong>, and <strong>the triggering events</strong> for <strong>each possible transition</strong>.
+An FSM implementation is composed out of <strong>two parts</strong>, a set of <strong>state transition rules</strong>, and an implementation set of <strong>state transition handlers</strong>, implementing those transitions.</p>
+
+<p>The FSM class supports a <strong>hierarchical implementation of a Finite State Machine</strong>,
+that is, it allows to <strong>embed existing FSM implementations in a master FSM</strong>.
+FSM hierarchies allow for efficient FSM re-use, <strong>not having to re-invent the wheel every time again</strong> when designing complex processes.</p>
+
+<p><img src="/includes/Pictures/FSM/Dia2.JPG" alt="Workflow Example" /></p>
+
+<p>The above diagram shows a graphical representation of a FSM implementation for a <strong>Task</strong>, which guides a Human towards a Zone,
+orders him to destroy x targets and account the results.
+Other examples of ready made FSM could be:</p>
+
+<ul>
+<li>route a plane to a zone flown by a human</li>
+<li>detect targets by an AI and report to humans</li>
+<li>account for destroyed targets by human players</li>
+<li>handle AI infantry to deploy from or embark to a helicopter or airplane or vehicle</li>
+<li>let an AI patrol a zone</li>
+</ul>
+
+<p>The <strong>MOOSE framework</strong> uses extensively the FSM class and derived FSM_ classes,
+because <strong>the goal of MOOSE is to simplify mission design complexity for mission building</strong>.
+By efficiently utilizing the FSM class and derived classes, MOOSE allows mission designers to quickly build processes.
+<strong>Ready made FSM-based implementations classes</strong> exist within the MOOSE framework that <strong>can easily be re-used,
+and tailored</strong> by mission designers through <strong>the implementation of Transition Handlers</strong>.
+Each of these FSM implementation classes start either with:</p>
+
+<ul>
+<li>an acronym <strong>AI_</strong>, which indicates an FSM implementation directing <strong>AI controlled</strong> <a href="#group-module">GROUP</a> and/or <a href="#unit-module">UNIT</a>. These AI_ classes derive the <a href="#fsm_controllable-class">FSM_CONTROLLABLE</a> class.</li>
+<li>an acronym <strong>TASK_</strong>, which indicates an FSM implementation executing a <a href="#task-module">TASK</a> executed by Groups of players. These TASK_ classes derive the <a href="#fsm_task-class">FSM_TASK</a> class.</li>
+<li>an acronym <strong>ACT_</strong>, which indicates an Sub-FSM implementation, directing <strong>Humans actions</strong> that need to be done in a <a href="#task-module">TASK</a>, seated in a <a href="#client-module">CLIENT</a> (slot) or a <a href="#unit-module">UNIT</a> (CA join). These ACT_ classes derive the <a href="#fsm_process-class">FSM_PROCESS</a> class.</li>
+</ul>
+
+<p>Detailed explanations and API specifics are further below clarified and FSM derived class specifics are described in those class documentation sections.</p>
+
+<h4 id="dislaimer"><strong>Dislaimer:</strong></h4>
+
+<p>The FSM class development is based on a finite state machine implementation made by Conroy Kyle.
+The state machine can be found on <a href="https://github.com/kyleconroy/lua-state-machine">github</a>
+I&rsquo;ve reworked this development (taken the concept), and created a <strong>hierarchical state machine</strong> out of it, embedded within the DCS simulator.
+Additionally, I&rsquo;ve added extendability and created an API that allows seamless FSM implementation.</p>
+
+<p>The following derived classes are available in the MOOSE framework, that implement a specialised form of a FSM:</p>
+
+<ul>
+<li><a href="#fsm_task-class">FSM_TASK</a>: Models Finite State Machines for <a href="#task-module">Task</a>s.</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a>: Models Finite State Machines for <a href="#task-module">Task</a> actions, which control <a href="#client-module">Client</a>s.</li>
+<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>: Models Finite State Machines for <a href="#controllable-module">Controllable</a>s, which are <a href="#group-module">Group</a>s, <a href="#unit-module">Unit</a>s, <a href="#client-module">Client</a>s.</li>
+<li><a href="#fsm_set-class">FSM_SET</a>: Models Finite State Machines for <a href="#set-module">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
+for multiple objects or the position of the state machine in the process.</li>
+</ul>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>YYYY-MM-DD: CLASS:<strong>NewFunction</strong>( Params ) replaces CLASS:<em>OldFunction</em>( Params )
+YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
+
+<p>Hereby the change log:</p>
+
+<ul>
+<li>2016-12-18: Released.</li>
+</ul>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=62835"><strong>Pikey</strong></a>: Review of documentation &amp; advice for improvements.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
+</ul>
+
+<h2 id="fsm_task-class">FSM_TASK Class</h2>
+
+<pre>
+Inheritance : The FSM_TASK Class inherits from the following parents :
+ERROR !
+    `-- FSM_TASK
+</pre>
+
+<p>FSM_TASK class models Finite State Machines for <a href="#task-module">Task</a>s.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> Task</li>
+</ul>
+
+<h3 id="fsm_task-new-fsmt-task-taskunit">FSM_TASK:New(FSMT, Task, TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#fsm_task-class">FSM_TASK</a>
+self</li>
+<li>table[] FSMT</li>
+<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_task-class">FSM_TASK</a>
+self</li>
+</ul>
+
+<h2 id="fsm_set-class">FSM_SET Class</h2>
+
+<pre>
+Inheritance : The FSM_SET Class inherits from the following parents :
+ERROR !
+    `-- FSM_SET
+</pre>
+
+<p>FSM_SET class models Finite State Machines for <a href="#set-module">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
+for multiple objects or the position of the state machine in the process.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_base-class">SET_BASE</a> Set</li>
+</ul>
+
+<h3 id="fsm_set-new-fsmt-fsmset">FSM_SET:New(FSMT, FSMSet)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#fsm_set-class">FSM_SET</a>
+self</li>
+<li>table[] FSMT : Finite State Machine Table</li>
+<li>Set_SET_BASE FSMSet : (optional) The Set object that the FSM_SET governs.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_set-class">FSM_SET</a>
+self</li>
+</ul>
+
+<h3 id="fsm_set-set-fsmset">FSM_SET:Set(FSMSet)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#fsm_set-class">FSM_SET</a>
+self</li>
+<li><a href="#set_base-class">SET_BASE</a> FSMSet</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_set-class">FSM_SET</a>
+self</li>
+</ul>
+
+<h3 id="fsm_set-get">FSM_SET:Get()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#fsm_set-class">FSM_SET</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#set_base-class">SET_BASE</a> self</li>
+</ul>

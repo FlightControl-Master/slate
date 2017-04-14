@@ -1,0 +1,272 @@
+<h1 id="tasking-commandcenter-module">Tasking.CommandCenter Module</h1>
+
+<p>A COMMANDCENTER is the owner of multiple missions within MOOSE.
+A COMMANDCENTER governs multiple missions, the tasking and the reporting.</p>
+
+<h2 id="report-class">REPORT Class</h2>
+
+<pre>
+Inheritance : The REPORT Class inherits from the following parents :
+BASE
+    `-- REPORT
+</pre>
+
+<h3 id="report-new-title">REPORT:New(Title)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#report-class">REPORT</a>
+self</li>
+<li>string Title</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#report-class">REPORT</a>
+self</li>
+</ul>
+
+<h3 id="report-add-text">REPORT:Add(Text)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#report-class">REPORT</a>
+self</li>
+<li>string Text</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#report-class">REPORT</a>
+self</li>
+</ul>
+
+<h3 id="report-text-delimiter">REPORT:Text(Delimiter)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#report-class">REPORT</a>
+self</li>
+<li>string Delimiter : (optional) A delimiter text.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : report text.</li>
+</ul>
+
+<h2 id="commandcenter-class">COMMANDCENTER Class</h2>
+
+<pre>
+Inheritance : The COMMANDCENTER Class inherits from the following parents :
+BASE
+    `-- COMMANDCENTER
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#group-class">GROUP</a> HQ</li>
+<li>Dcs.DCSCoalitionWrapper.Object#coalition CommandCenterCoalition</li>
+</ul>
+
+<h3 id="commandcenter-new-commandcenterpositionable-commandcentername">COMMANDCENTER:New(CommandCenterPositionable, CommandCenterName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+<li><a href="#positionable-class">POSITIONABLE</a> CommandCenterPositionable</li>
+<li>string CommandCenterName</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h3 id="commandcenter-getname">COMMANDCENTER:GetName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="commandcenter-getpositionable">COMMANDCENTER:GetPositionable()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#positionable-class">POSITIONABLE</a> self</li>
+</ul>
+
+<h3 id="commandcenter-getmissions">COMMANDCENTER:GetMissions()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>#list<Tasking.Mission#MISSION> self</li>
+</ul>
+
+<h3 id="commandcenter-addmission-mission">COMMANDCENTER:AddMission(Mission)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#mission-class">MISSION</a> self</li>
+</ul>
+
+<h3 id="commandcenter-removemission-mission">COMMANDCENTER:RemoveMission(Mission)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#mission-class">MISSION</a> self</li>
+</ul>
+
+<h3 id="commandcenter-setmenu">COMMANDCENTER:SetMenu()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="commandcenter-getmenu">COMMANDCENTER:GetMenu()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#menu_coalition-class">MENU_COALITION</a> self</li>
+</ul>
+
+<h3 id="commandcenter-hasgroup-self">COMMANDCENTER:HasGroup(self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+<li><a href="#group-class">GROUP</a> self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="commandcenter-messagetoall">COMMANDCENTER:MessageToAll()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="commandcenter-messagetogroup-message-taskgroup-name">COMMANDCENTER:MessageToGroup(Message, TaskGroup, Name)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+<li>string Message</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li>#sring Name : (optional) The name of the Group used as a prefix for the message to the Group. If not provided, there will be nothing shown.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="commandcenter-messagetocoalition">COMMANDCENTER:MessageToCoalition()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="commandcenter-reportsummary">COMMANDCENTER:ReportSummary()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="commandcenter-reportdetails">COMMANDCENTER:ReportDetails()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#commandcenter-class">COMMANDCENTER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

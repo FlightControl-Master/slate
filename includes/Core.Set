@@ -1,0 +1,38 @@
+<h1 id="core-set-module">Core.Set Module</h1>
+
+<p><strong>Core</strong> - SET_ classes define <strong>collections</strong> of objects to perform <strong>bulk actions</strong> and logically <strong>group</strong> objects.</p>
+
+<p><img src="/includes/Pictures/SET/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>SET_ classes group objects of the same type into a collection, which is either:</p>
+
+<ul>
+<li>Manually managed using the <strong>:Add&hellip;()</strong> or <strong>:Remove&hellip;()</strong> methods. The initial SET can be filtered with the <strong>SET_BASE-FilterOnce</strong> method</li>
+<li>Dynamically updated when new objects are created or objects are destroyed using the <strong>SET_BASE-FilterStart</strong> method.</li>
+</ul>
+
+<p>Various types of SET_ classes are available:</p>
+
+<ul>
+<li><a href="#set_unit-class">SET_UNIT</a>: Defines a colleciton of <a href="#unit-module">Unit</a>s filtered by filter criteria.</li>
+<li><a href="#set_group-class">SET_GROUP</a>: Defines a collection of <a href="#group-module">Group</a>s filtered by filter criteria.</li>
+<li><a href="#set_client-class">SET_CLIENT</a>: Defines a collection of <a href="#client-module">Client</a>s filterd by filter criteria.</li>
+<li><a href="#set_airbase-class">SET_AIRBASE</a>: Defines a collection of <a href="#airbase-module">Airbase</a>s filtered by filter criteria.</li>
+</ul>
+
+<p>These classes are derived from <a href="#set_base-class">SET_BASE</a>, which contains the main methods to manage SETs.</p>
+
+<p>A multitude of other methods are available in SET_ classes that allow to:</p>
+
+<ul>
+<li>Validate the presence of objects in the SET.</li>
+<li>Trigger events when objects in the SET change a zone presence.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li>FlightControl : Design &amp; Programming</li>
+</ul>
+
+<h4 id="contributions">Contributions:</h4>

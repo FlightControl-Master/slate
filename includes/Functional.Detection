@@ -1,0 +1,527 @@
+<h1 id="functional-detection-module">Functional.Detection Module</h1>
+
+<p><strong>Functional</strong> - DETECTION_ classes model the detection of enemy units by FACs or RECCEs and group them according various methods.</p>
+
+<p><img src="/includes/Pictures/DETECTION/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>DETECTION classes facilitate the detection of enemy units within the battle zone executed by FACs (Forward Air Controllers) or RECCEs (Reconnassance Units).
+DETECTION uses the in-built detection capabilities of DCS World, but adds new functionalities.</p>
+
+<p>Find the DETECTION classes documentation further in this document in the globals section.</p>
+
+<h4 id="demo-missions">Demo Missions</h4>
+
+<h4 id="detection-demo-missions-and-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h4>
+
+<h4 id="detection-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h4>
+
+<h4 id="all-demo-missions-pack-of-the-latest-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h4>
+
+<h4 id="youtube-channel">YouTube Channel</h4>
+
+<h4 id="detection-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<ul>
+<li>Mechanist : Early concept of DETECTION_AREAS.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li>FlightControl : Analysis, Design, Programming, Testing</li>
+</ul>
+
+<h2 id="detection_base-detectedobjects-class">DETECTION_BASE.DetectedObjects Class</h2>
+
+<pre>
+**The DETECTION_BASE.DetectedObjects class does not inherit**
+</pre>
+
+<h2 id="detection_base-detectedobject-class">DETECTION_BASE.DetectedObject Class</h2>
+
+<pre>
+**The DETECTION_BASE.DetectedObject class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>string Name</li>
+<li>boolean Visible</li>
+<li>string Type</li>
+<li>number Distance</li>
+<li>boolean Identified</li>
+</ul>
+
+<h2 id="detection_base-detecteditems-class">DETECTION_BASE.DetectedItems Class</h2>
+
+<pre>
+**The DETECTION_BASE.DetectedItems class does not inherit**
+</pre>
+
+<h2 id="detection_base-detecteditem-class">DETECTION_BASE.DetectedItem Class</h2>
+
+<pre>
+**The DETECTION_BASE.DetectedItem class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_unit-class">SET_UNIT</a> Set</li>
+<li><a href="#set_unit%20set%20:%20--%20the%20set%20of%20units%20in%20the%20detected-class">SET_UNIT Set : &ndash; The Set of Units in the detected</a> area.</li>
+<li><a href="#zone_unit%20zone%20:%20--%20the%20zone%20of%20the%20detected-class">ZONE_UNIT Zone : &ndash; The Zone of the detected</a> area.</li>
+<li>boolean Changed : Documents if the detected area has changes.</li>
+<li>table[] Changes : A list of the changes reported on the detected area. (It is up to the user of the detected area to consume those changes).</li>
+<li>number ItemID : &ndash; The identifier of the detected area.</li>
+<li>boolean FriendliesNearBy : Indicates if there are friendlies within the detected area.</li>
+<li><a href="#unit%20nearestfac%20:%20the%20nearest%20fac%20near%20the-class">UNIT NearestFAC : The nearest FAC near the</a> Area.</li>
+</ul>
+
+<h2 id="detection_units-class">DETECTION_UNITS Class</h2>
+
+<pre>
+Inheritance : The DETECTION_UNITS Class inherits from the following parents :
+ERROR !
+    `-- DETECTION_UNITS
+</pre>
+
+<p>The DETECTION_UNITS class will detect units within the battle zone.
+It will build a DetectedItems list filled with DetectedItems. Each DetectedItem will contain a field Set, which contains a <a href="#set_unit-class">SET_UNIT</a> containing ONE <a href="#unit-module">UNIT</a> object reference.
+Beware that when the amount of units detected is large, the DetectedItems list will be large also.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#distance%20detectionrange%20:%20the%20range%20till%20which%20targets%20are-class">Distance DetectionRange : The range till which targets are</a> detected.</li>
+</ul>
+
+<h3 id="detection_units-new-detectionsetgroup">DETECTION_UNITS:New(DetectionSetGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a> self</li>
+<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a> self</li>
+</ul>
+
+<h3 id="detection_units-getchangetext-detecteditem">DETECTION_UNITS:GetChangeText(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+self</li>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : Changes text</li>
+</ul>
+
+<h3 id="detection_units-createdetectionsets">DETECTION_UNITS:CreateDetectionSets()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+self</li>
+</ul>
+
+<h3 id="detection_units-detecteditemreportsummary-self">DETECTION_UNITS:DetectedItemReportSummary(self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="detection_units-detectedreportdetailed">DETECTION_UNITS:DetectedReportDetailed()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_units-class">DETECTION_UNITS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h2 id="detection_types-class">DETECTION_TYPES Class</h2>
+
+<pre>
+Inheritance : The DETECTION_TYPES Class inherits from the following parents :
+ERROR !
+    `-- DETECTION_TYPES
+</pre>
+
+<p>The DETECTION_TYPES class will detect units within the battle zone.
+It will build a DetectedItems[] list filled with DetectedItems, grouped by the type of units detected.
+Each DetectedItem will contain a field Set, which contains a <a href="#set_unit-class">SET_UNIT</a> containing ONE <a href="#unit-module">UNIT</a> object reference.
+Beware that when the amount of different types detected is large, the DetectedItems[] list will be large also.</p>
+
+<h3 id="detection_types-new-detectionsetgroup">DETECTION_TYPES:New(DetectionSetGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a> self</li>
+<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20recce-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Recce</a> role.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a> self</li>
+</ul>
+
+<h3 id="detection_types-getchangetext-detecteditem">DETECTION_TYPES:GetChangeText(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+self</li>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : Changes text</li>
+</ul>
+
+<h3 id="detection_types-createdetectionsets">DETECTION_TYPES:CreateDetectionSets()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+self</li>
+</ul>
+
+<h3 id="detection_types-detecteditemreportsummary-self">DETECTION_TYPES:DetectedItemReportSummary(self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="detection_types-detectedreportdetailed">DETECTION_TYPES:DetectedReportDetailed()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_types-class">DETECTION_TYPES</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h2 id="detection_areas-class">DETECTION_AREAS Class</h2>
+
+<pre>
+Inheritance : The DETECTION_AREAS Class inherits from the following parents :
+ERROR !
+    `-- DETECTION_AREAS
+</pre>
+
+<p>The DETECTION_AREAS class will detect units within the battle zone for a list of <a href="#group-module">Group</a>s detecting targets following (a) detection method(s),
+and will build a list (table) of <a href="#set_unit-class">SET_UNIT</a>s containing the <a href="#unit-class">UNIT</a>s detected.
+The class is group the detected units within zones given a DetectedZoneRange parameter.
+A set with multiple detected zones will be created as there are groups of units detected.</p>
+
+<h4 id="4-1-retrieve-the-detected-unit-sets-and-detected-zones">4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
+
+<p>The methods to manage the DetectedItems[].Set(s) are implemented in <a href="#dectection_base-class">DECTECTION_BASE</a> and
+the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#detection_areas-class">DETECTION_AREAS</a>.</p>
+
+<p>Retrieve the DetectedItems[].Set with the method DETECTION_BASE-GetDetectedSet. A <a href="#set_unit-class">SET_UNIT</a> object will be returned.</p>
+
+<p>Retrieve the formed <a href="#zone@zone_unit-module">Zone@ZONE_UNIT</a>s as a result of the grouping the detected units within the DetectionZoneRange, use the method DETECTION_BASE-GetDetectionZones.
+To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount.
+If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone with a given index.</p>
+
+<h4 id="4-4-flare-or-smoke-detected-units">4.4) Flare or Smoke detected units</h4>
+
+<p>Use the methods <a href="#detection_areas-flaredetectedunits">DETECTION_AREAS:FlareDetectedUnits()</a> or <a href="#detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</a> to flare or smoke the detected units when a new detection has taken place.</p>
+
+<h4 id="4-5-flare-or-smoke-or-bound-detected-zones">4.5) Flare or Smoke or Bound detected zones</h4>
+
+<p>Use the methods:</p>
+
+<ul>
+<li><a href="#detection_areas-flaredetectedzones">DETECTION_AREAS:FlareDetectedZones()</a> to flare in a color</li>
+<li><a href="#detection_areas-smokedetectedzones">DETECTION_AREAS:SmokeDetectedZones()</a> to smoke in a color</li>
+<li><a href="#detection_areas-smokedetectedzones">DETECTION_AREAS:SmokeDetectedZones()</a> to bound with a tire with a white flag</li>
+</ul>
+
+<p>the detected zones when a new detection has taken place.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#distance%20detectionzonerange%20:%20the%20range%20till%20which%20targets%20are%20grouped%20upon%20the%20first%20detected-class">Distance DetectionZoneRange : The range till which targets are grouped upon the first detected</a> target.</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a>
+.DetectedItems DetectedItems : A list of areas containing the set of <a href="#unit-module">Unit</a>s, <a href="#zone-module">Zone</a>s, the center <a href="#unit-module">Unit</a> within the zone, and ID of each area that was detected within a DetectionZoneRange.</li>
+</ul>
+
+<h3 id="detection_areas-new-detectionsetgroup-detectionzonerange">DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
+<li><a href="#distance%20detectionzonerange%20:%20the%20range%20till%20which%20targets%20are%20grouped%20upon%20the%20first%20detected-class">Distance DetectionZoneRange : The range till which targets are grouped upon the first detected</a> target.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-detecteditemreportsummary-self">DETECTION_AREAS:DetectedItemReportSummary(self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="detection_areas-isfriendliesnearby">DETECTION_AREAS:IsFriendliesNearBy()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean trhe : if there are friendlies nearby</li>
+</ul>
+
+<h3 id="detection_areas-calculatethreatlevela2g-detecteditem">DETECTION_AREAS:CalculateThreatLevelA2G(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="detection_areas-nearestfac-detecteditem">DETECTION_AREAS:NearestFAC(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#unit%20the%20:%20nearest%20fac-class">UNIT The : nearest FAC</a> unit</li>
+</ul>
+
+<h3 id="detection_areas-gettreatlevela2g-detecteditem">DETECTION_AREAS:GetTreatLevelA2G(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>number a : scale from 0 to 10.</li>
+</ul>
+
+<h3 id="detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-flaredetectedunits">DETECTION_AREAS:FlareDetectedUnits()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-smokedetectedzones">DETECTION_AREAS:SmokeDetectedZones()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-flaredetectedzones">DETECTION_AREAS:FlareDetectedZones()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-bounddetectedzones">DETECTION_AREAS:BoundDetectedZones()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h3 id="detection_areas-getchangetext-detecteditem">DETECTION_AREAS:GetChangeText(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a>
+.DetectedItem DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : Changes text</li>
+</ul>
+
+<h3 id="detection_areas-createdetectionsets">DETECTION_AREAS:CreateDetectionSets()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#detection_areas-class">DETECTION_AREAS</a>
+self</li>
+</ul>

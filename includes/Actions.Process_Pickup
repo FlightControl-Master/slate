@@ -1,0 +1,154 @@
+<h1 id="actions-process_pickup-module">Actions.Process_Pickup Module</h1>
+
+<h2 id="process_pickup-class">PROCESS_PICKUP Class</h2>
+
+<pre>
+Inheritance : The PROCESS_PICKUP Class inherits from the following parents :
+ERROR !
+    `-- PROCESS_PICKUP
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+</ul>
+
+<h3 id="process_pickup-new-task-processunit-targetsetunit">PROCESS_PICKUP:New(Task, ProcessUnit, TargetSetUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+</ul>
+
+<h3 id="process_pickup-onstart-fsm-event-from-to">PROCESS_PICKUP:OnStart(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-onnavigating-fsm-event-from-to">PROCESS_PICKUP:OnNavigating(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-onhittarget-fsm-event-from-to-event">PROCESS_PICKUP:OnHitTarget(Fsm, Event, From, To, Event)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-onmoretargets-fsm-event-from-to">PROCESS_PICKUP:OnMoreTargets(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-onkilled-fsm-event-from-to-dcsevent">PROCESS_PICKUP:OnKilled(Fsm, Event, From, To, DCSEvent)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+<li><a href="#eventdata-class">EVENTDATA</a> DCSEvent</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-onrestart-fsm-event-from-to">PROCESS_PICKUP:OnRestart(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-ondestroyed-fsm-event-from-to">PROCESS_PICKUP:OnDestroyed(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_pickup-eventdead-event">PROCESS_PICKUP:EventDead(Event)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_pickup-class">PROCESS_PICKUP</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

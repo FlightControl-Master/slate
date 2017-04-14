@@ -1,0 +1,64 @@
+<h1 id="wrapper-static-module">Wrapper.Static Module</h1>
+
+<p>This module contains the STATIC class.</p>
+
+<h5 id="1-static-class-extends-positionable">1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
+
+<p>Statics are <strong>Static Units</strong> defined within the Mission Editor.
+Note that Statics are almost the same as Units, but they don&rsquo;t have a controller.
+The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DCS Static objects:</p>
+
+<ul>
+<li>Wraps the DCS Static objects.</li>
+<li>Support all DCS Static APIs.</li>
+<li>Enhance with Static specific APIs not in the DCS API set.</li>
+</ul>
+
+<h5 id="1-1-static-reference-methods">1.1) STATIC reference methods</h5>
+
+<p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module">DATABASE</a> object.
+This is done at the beginning of the mission (when the mission starts).</p>
+
+<p>The STATIC class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
+using the Static Name.</p>
+
+<p>Another thing to know is that STATIC objects do not &ldquo;contain&rdquo; the DCS Static object.
+The STATIc methods will reference the DCS Static object by name when it is needed during API execution.
+If the DCS Static object does not exist or is nil, the STATIC methods will return nil and log an exception in the DCS.log file.</p>
+
+<p>The STATIc class provides the following functions to retrieve quickly the relevant STATIC instance:</p>
+
+<ul>
+<li><a href="#static-findbyname-staticname-raiseerror">STATIC:FindByName()</a>: Find a STATIC instance from the _DATABASE object using a DCS Static name.</li>
+</ul>
+
+<p>IMPORTANT: ONE SHOULD NEVER SANATIZE these STATIC OBJECT REFERENCES! (make the STATIC object references nil).</p>
+
+<h2 id="static-class">STATIC Class</h2>
+
+<pre>
+Inheritance : The STATIC Class inherits from the following parents :
+BASE
+    `-- OBJECT
+        `-- IDENTIFIABLE
+            `-- POSITIONABLE
+                `-- STATIC
+</pre>
+
+<h3 id="static-findbyname-staticname-raiseerror">STATIC:FindByName(StaticName, RaiseError)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#static-class">STATIC</a>
+self</li>
+<li>string StaticName : Name of the DCS <strong>Static</strong> as defined within the Mission Editor.</li>
+<li>boolean RaiseError : Raise an error if not found.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#static-class">STATIC</a>
+self</li>
+</ul>

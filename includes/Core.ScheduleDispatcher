@@ -1,0 +1,50 @@
+<h1 id="core-scheduledispatcher-module">Core.ScheduleDispatcher Module</h1>
+
+<p>This module defines the SCHEDULEDISPATCHER class, which is used by a central object called _SCHEDULEDISPATCHER.</p>
+
+<p>Takes care of the creation and dispatching of scheduled functions for SCHEDULER objects.</p>
+
+<p>This class is tricky and needs some thorought explanation.
+SCHEDULE classes are used to schedule functions for objects, or as persistent objects.
+The SCHEDULEDISPATCHER class ensures that:</p>
+
+<ul>
+<li>Scheduled functions are planned according the SCHEDULER object parameters.</li>
+<li>Scheduled functions are repeated when requested, according the SCHEDULER object parameters.</li>
+<li>Scheduled functions are automatically removed when the schedule is finished, according the SCHEDULER object parameters.</li>
+</ul>
+
+<p>The SCHEDULEDISPATCHER class will manage SCHEDULER object in memory during garbage collection:
+- When a SCHEDULER object is not attached to another object (that is, it&rsquo;s first :Schedule() parameter is nil), then the SCHEDULER
+object is <em>persistent</em> within memory.
+- When a SCHEDULER object <em>is</em> attached to another object, then the SCHEDULER object is <em>not persistent</em> within memory after a garbage collection!
+The none persistency of SCHEDULERS attached to objects is required to allow SCHEDULER objects to be garbage collectged, when the parent object is also desroyed or nillified and garbage collected.
+Even when there are pending timer scheduled functions to be executed for the SCHEDULER object,
+these will not be executed anymore when the SCHEDULER object has been destroyed.</p>
+
+<p>The SCHEDULEDISPATCHER allows multiple scheduled functions to be planned and executed for one SCHEDULER object.
+The SCHEDULER object therefore keeps a table of &ldquo;CallID&rsquo;s&rdquo;, which are returned after each planning of a new scheduled function by the SCHEDULEDISPATCHER.
+The SCHEDULER object plans new scheduled functions through the <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> method.
+The Schedule() method returns the CallID that is the reference ID for each planned schedule.</p>
+
+<h4 id="contributions">Contributions: -</h4>
+
+<h4 id="authors-flightcontrol-design-programming">Authors: FlightControl : Design &amp; Programming</h4>
+
+<h2 id="scheduledispatcher-class">SCHEDULEDISPATCHER Class</h2>
+
+<pre>
+**The SCHEDULEDISPATCHER class does not inherit**
+</pre>
+
+<h3 id="scheduledispatcher-addschedule-scheduler">SCHEDULEDISPATCHER:AddSchedule(Scheduler)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#scheduledispatcher-class">SCHEDULEDISPATCHER</a>
+self</li>
+<li><a href="#scheduler-class">SCHEDULER</a> Scheduler</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

@@ -1,0 +1,574 @@
+<h1 id="core-event-module">Core.Event Module</h1>
+
+<p><strong>Core</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
+
+<h4 id="1-event-handling-overview">1) Event Handling Overview</h4>
+
+<p><img src="/includes/Pictures/EVENT/Dia2.JPG" alt="Objects" /></p>
+
+<p>Within a running mission, various DCS events occur. Units are dynamically created, crash, die, shoot stuff, get hit etc.
+This module provides a mechanism to dispatch those events occuring within your running mission, to the different objects orchestrating your mission.</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia3.JPG" alt="Objects" /></p>
+
+<p>Objects can subscribe to different events. The Event dispatcher will publish the received DCS events to the subscribed MOOSE objects, in a specified order.
+In this way, the subscribed MOOSE objects are kept in sync with your evolving running mission.</p>
+
+<h4 id="1-1-event-dispatching">1.1) Event Dispatching</h4>
+
+<p><img src="/includes/Pictures/EVENT/Dia4.JPG" alt="Objects" /></p>
+
+<p>The _EVENTDISPATCHER object is automatically created within MOOSE,
+and handles the dispatching of DCS Events occurring
+in the simulator to the subscribed objects
+in the correct processing order.</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia5.JPG" alt="Objects" /></p>
+
+<p>There are 5 levels of kind of objects that the _EVENTDISPATCHER services:</p>
+
+<ul>
+<li>_DATABASE object: The core of the MOOSE objects. Any object that is created, deleted or updated, is done in this database.</li>
+<li>SET_ derived classes: Subsets of the _DATABASE object. These subsets are updated by the _EVENTDISPATCHER as the second priority.</li>
+<li>UNIT objects: UNIT objects can subscribe to DCS events. Each DCS event will be directly published to teh subscribed UNIT object.</li>
+<li>GROUP objects: GROUP objects can subscribe to DCS events. Each DCS event will be directly published to the subscribed GROUP object.</li>
+<li>Any other object: Various other objects can subscribe to DCS events. Each DCS event triggered will be published to each subscribed object.</li>
+</ul>
+
+<p><img src="/includes/Pictures/EVENT/Dia6.JPG" alt="Objects" /></p>
+
+<p>For most DCS events, the above order of updating will be followed.</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia7.JPG" alt="Objects" /></p>
+
+<p>But for some DCS events, the publishing order is reversed. This is due to the fact that objects need to be <strong>erased</strong> instead of added.</p>
+
+<h4 id="1-2-event-handling">1.2) Event Handling</h4>
+
+<p><img src="/includes/Pictures/EVENT/Dia8.JPG" alt="Objects" /></p>
+
+<p>The actual event subscribing and handling is not facilitated through the _EVENTDISPATCHER, but it is done through the <a href="#base-module">BASE</a> class, <a href="#unit-module">UNIT</a> class and <a href="#group-module">GROUP</a> class.
+The _EVENTDISPATCHER is a component that is quietly working in the background of MOOSE.</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia9.JPG" alt="Objects" /></p>
+
+<p>The BASE class provides methods to catch DCS Events. These are events that are triggered from within the DCS simulator,
+and handled through lua scripting. MOOSE provides an encapsulation to handle these events more efficiently.</p>
+
+<h4 id="1-2-1-subscribe-unsubscribe-to-dcs-events">1.2.1 Subscribe / Unsubscribe to DCS Events</h4>
+
+<p>At first, the mission designer will need to <strong>Subscribe</strong> to a specific DCS event for the class.
+So, when the DCS event occurs, the class will be notified of that event.
+There are two functions which you use to subscribe to or unsubscribe from an event.</p>
+
+<ul>
+<li><a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a>: Subscribe to a DCS Event.</li>
+<li><a href="#base-unhandleevent-event">BASE:UnHandleEvent()</a>: Unsubscribe from a DCS Event.</li>
+</ul>
+
+<p>Note that for a UNIT, the event will be handled <strong>for that UNIT only</strong>!
+Note that for a GROUP, the event will be handled <strong>for all the UNITs in that GROUP only</strong>!</p>
+
+<p>For all objects of other classes, the subscribed events will be handled for <strong>all UNITs within the Mission</strong>!
+So if a UNIT within the mission has the subscribed event for that object,
+then the object event handler will receive the event for that UNIT!</p>
+
+<h4 id="1-3-2-event-handling-of-dcs-events">1.3.2 Event Handling of DCS Events</h4>
+
+<p>Once the class is subscribed to the event, an <strong>Event Handling</strong> method on the object or class needs to be written that will be called
+when the DCS event occurs. The Event Handling method receives an <a href="#eventdata-class">EVENTDATA</a> structure, which contains a lot of information
+about the event that occurred.</p>
+
+<p>Find below an example of the prototype how to write an event handling function for two units:</p>
+
+<p>local Tank1 = UNIT:FindByName( &ldquo;Tank A&rdquo; )
+local Tank2 = UNIT:FindByName( &ldquo;Tank B&rdquo; )</p>
+
+<p>&ndash; Here we subscribe to the Dead events. So, if one of these tanks dies, the Tank1 or Tank2 objects will be notified.
+Tank1:HandleEvent( EVENTS.Dead )
+Tank2:HandleEvent( EVENTS.Dead )</p>
+
+<p>This function is an Event Handling function that will be called when Tank1 is Dead.
+&ndash; @param <a href="#unit-class">UNIT</a> self
+&ndash; @param <a href="#eventdata-class">EVENTDATA</a> EventData
+function Tank1:OnEventDead( EventData )</p>
+
+<p>self:SmokeGreen()
+end</p>
+
+<p>This function is an Event Handling function that will be called when Tank2 is Dead.
+&ndash; @param <a href="#unit-class">UNIT</a> self
+&ndash; @param <a href="#eventdata-class">EVENTDATA</a> EventData
+function Tank2:OnEventDead( EventData )</p>
+
+<p>self:SmokeBlue()
+end</p>
+
+<h4 id="1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events">1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h4>
+
+<p><img src="/includes/Pictures/EVENT/Dia10.JPG" alt="Objects" /></p>
+
+<p>The following list outlines which EVENTS item in the structure corresponds to which Event Handling method.
+Always ensure that your event handling methods align with the events being subscribed to, or nothing will be executed.</p>
+
+<h4 id="2-events-type">2) EVENTS type</h4>
+
+<p>The EVENTS structure contains names for all the different DCS events that objects can subscribe to using the
+<a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
+
+<h4 id="3-eventdata-type">3) EVENTDATA type</h4>
+
+<p>The <a href="#eventdata-class">EVENTDATA</a> structure contains all the fields that are populated with event information before
+an Event Handler method is being called by the event dispatcher.
+The Event Handler received the EVENTDATA object as a parameter, and can be used to investigate further the different events.
+There are basically 4 main categories of information stored in the EVENTDATA structure:</p>
+
+<ul>
+<li>Initiator Unit data: Several fields documenting the initiator unit related to the event.</li>
+<li>Target Unit data: Several fields documenting the target unit related to the event.</li>
+<li>Weapon data: Certain events populate weapon information.</li>
+<li>Place data: Certain events populate place information.</li>
+</ul>
+
+<p>This function is an Event Handling function that will be called when Tank1 is Dead.
+&ndash; EventData is an EVENTDATA structure.
+&ndash; We use the EventData.IniUnit to smoke the tank Green.
+&ndash; @param <a href="#unit-class">UNIT</a> self
+&ndash; @param <a href="#eventdata-class">EVENTDATA</a> EventData
+function Tank1:OnEventDead( EventData )</p>
+
+<p>EventData.IniUnit:SmokeGreen()
+end</p>
+
+<p>Find below an overview which events populate which information categories:</p>
+
+<p><img src="/includes/Pictures/EVENT/Dia14.JPG" alt="Objects" /></p>
+
+<p><strong>IMPORTANT NOTE:</strong> Some events can involve not just UNIT objects, but also STATIC objects!!!
+In that case the initiator or target unit fields will refer to a STATIC object!
+In case a STATIC object is involved, the documentation indicates which fields will and won&rsquo;t not be populated.
+The fields <strong>IniObjectCategory</strong> and <strong>TgtObjectCategory</strong> contain the indicator which <strong>kind of object is involved</strong> in the event.
+You can use the enumerator <strong>Object.Category.UNIT</strong> and <strong>Object.Category.STATIC</strong> to check on IniObjectCategory and TgtObjectCategory.
+Example code snippet:</p>
+
+<p>if Event.IniObjectCategory == Object.Category.UNIT then
+&hellip;
+end
+if Event.IniObjectCategory == Object.Category.STATIC then
+&hellip;
+end</p>
+
+<p>When a static object is involved in the event, the Group and Player fields won&rsquo;t be populated.</p>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>YYYY-MM-DD: CLASS:<strong>NewFunction</strong>( Params ) replaces CLASS:<em>OldFunction</em>( Params )
+YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
+
+<p>Hereby the change log:</p>
+
+<ul>
+<li><p>2017-03-07: Added the correct event dispatching in case the event is subscribed by a GROUP.</p></li>
+<li><p>2017-02-07: Did a complete revision of the Event Handing API and underlying mechanisms.</p></li>
+</ul>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
+</ul>
+
+<h2 id="event-class">EVENT Class</h2>
+
+<pre>
+Inheritance : The EVENT Class inherits from the following parents :
+BASE
+    `-- EVENT
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+.Events Events</li>
+</ul>
+
+<h3 id="event-init-eventid-eventclass">EVENT:Init(EventID, EventClass)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#world.event-class">world.event</a> EventID</li>
+<li><a href="#base-class">BASE</a> EventClass</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+.Events self</li>
+</ul>
+
+<h3 id="event-remove-eventclass-eventid">EVENT:Remove(EventClass, EventID)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#base%20eventclass%20:%20the%20self%20instance%20of%20the%20class%20for%20which%20the%20event-class">BASE EventClass : The self instance of the class for which the event</a> is.</li>
+<li><a href="#world.event-class">world.event</a> EventID</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+.Events self</li>
+</ul>
+
+<h3 id="event-reset-eventclass-eventid">EVENT:Reset(EventClass, EventID)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#base%20eventclass%20:%20the%20self%20instance%20of%20the%20class%20for%20which%20the%20event-class">BASE EventClass : The self instance of the class for which the event</a> is.</li>
+<li><a href="#world.event-class">world.event</a> EventID</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+.Events self</li>
+</ul>
+
+<h3 id="event-removeall-eventobject">EVENT:RemoveAll(EventObject)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#base-class">BASE</a> EventObject</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction">EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>table[] EventTemplate</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : instance of the class for which the event is.</li>
+<li>#function OnEventFunction</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-oneventgeneric-eventfunction-eventclass-self">EVENT:OnEventGeneric(EventFunction, EventClass, self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li><a href="#base%20eventclass%20:%20the%20self%20instance%20of%20the%20class%20for%20which%20the%20event%20is%20captured.%20when%20the%20event%20happens,%20the%20event%20process%20will%20be%20called%20in%20this%20class-class">BASE EventClass : The self instance of the class for which the event is captured. When the event happens, the event process will be called in this class</a> provided.</li>
+<li>EventID self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-oneventforunit-unitname-eventfunction-eventclass-self">EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>string UnitName : The name of the UNIT.</li>
+<li>#function EventFunction : The function to be called when the event occurs for the GROUP.</li>
+<li><a href="#base%20eventclass%20:%20the%20self%20instance%20of%20the%20class%20for%20which%20the%20event-class">BASE EventClass : The self instance of the class for which the event</a> is.</li>
+<li>EventID self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-oneventforgroup-groupname-eventfunction-eventclass-self">EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>string GroupName : The name of the GROUP.</li>
+<li>#function EventFunction : The function to be called when the event occurs for the GROUP.</li>
+<li><a href="#base%20eventclass%20:%20the%20self%20instance%20of%20the%20class%20for%20which%20the%20event-class">BASE EventClass : The self instance of the class for which the event</a> is.</li>
+<li>EventID self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-onbirthfortemplate-eventgroup-eventfunction-the">EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#group-class">GROUP</a> EventGroup</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-oncrashfortemplate-eventgroup-eventfunction-the">EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#group-class">GROUP</a> EventGroup</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-ondeadfortemplate-eventgroup-eventfunction-the">EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#group-class">GROUP</a> EventGroup</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-onlandfortemplate-eventtemplate-eventfunction-the">EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>table[] EventTemplate</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-ontakeofffortemplate-eventtemplate-eventfunction-the">EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>table[] EventTemplate</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-onengineshutdownfortemplate-eventtemplate-eventfunction-the">EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li>table[] EventTemplate</li>
+<li>#function EventFunction : The function to be called when the event occurs for the unit.</li>
+<li>EventClass The : self instance of the class for which the event is.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+</ul>
+
+<h3 id="event-onevent-event">EVENT:onEvent(Event)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a>
+Event</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h2 id="events-class">EVENTS Class</h2>
+
+<pre>
+**The EVENTS class does not inherit**
+</pre>
+
+<p>Use this structure to subscribe to events using the <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
+
+<h2 id="eventdata-class">EVENTDATA Class</h2>
+
+<pre>
+**The EVENTDATA class does not inherit**
+</pre>
+
+<p>Note that at the beginning of each field description, there is an indication which field will be populated depending on the object type involved in the Event:</p>
+
+<ul>
+<li>A (Object.Category.)UNIT : A UNIT object type is involved in the Event.</li>
+<li>A (Object.Category.)STATIC : A STATIC object type is involved in the Event.µ</li>
+</ul>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>number id : The identifier of the event.</li>
+<li><a href="#unit%20initiator%20:%20(unit/static/scenery)%20the%20initiating%20@{dcs.dcsunit#unit}%20or-class">Unit initiator : (UNIT/STATIC/SCENERY) The initiating @{Dcs.DCSUnit#Unit} or</a> @{Dcs.DCSStaticObject#StaticObject}.</li>
+<li><a href="#object.category%20iniobjectcategory%20:%20(unit/static/scenery)%20the%20initiator%20object%20category%20(%20object.category.unit%20or%20object.category.static-class)">Object.Category IniObjectCategory : (UNIT/STATIC/SCENERY) The initiator object category ( Object.Category.UNIT or Object.Category.STATIC</a>.</li>
+<li><a href="#unit%20inidcsunit%20:%20(unit/static)%20the%20initiating%20@{dcsunit#unit}%20or-class">Unit IniDCSUnit : (UNIT/STATIC) The initiating @{DCSUnit#Unit} or</a> @{DCSStaticObject#StaticObject}.</li>
+<li>string IniDCSUnitName : (UNIT/STATIC) The initiating Unit name.</li>
+<li><a href="#unit%20iniunit%20:%20(unit/static)%20the%20initiating%20moose%20wrapper%20[unit](#unit-class)%20of%20the%20initiator%20unit-class">UNIT IniUnit : (UNIT/STATIC) The initiating MOOSE wrapper <a href="#unit-class">UNIT</a> of the initiator Unit</a> object.</li>
+<li>string IniUnitName : (UNIT/STATIC) The initiating UNIT name (same as IniDCSUnitName).</li>
+<li><a href="#group%20inidcsgroup%20:%20(unit)%20the%20initiating-class">Group IniDCSGroup : (UNIT) The initiating</a> {DCSGroup#Group}.</li>
+<li>string IniDCSGroupName : (UNIT) The initiating Group name.</li>
+<li><a href="#group%20inigroup%20:%20(unit)%20the%20initiating%20moose%20wrapper%20[group](#group-class)%20of%20the%20initiator%20group-class">GROUP IniGroup : (UNIT) The initiating MOOSE wrapper <a href="#group-class">GROUP</a> of the initiator Group</a> object.</li>
+<li>string IniGroupName : UNIT) The initiating GROUP name (same as IniDCSGroupName).</li>
+<li>string IniPlayerName : (UNIT) The name of the initiating player in case the Unit is a client or player slot.</li>
+<li><a href="#coalition.side%20inicoalition%20:%20(unit)%20the%20coalition%20of%20the-class">coalition.side IniCoalition : (UNIT) The coalition of the</a> initiator.</li>
+<li><a href="#unit.category%20inicategory%20:%20(unit)%20the%20category%20of%20the-class">Unit.Category IniCategory : (UNIT) The category of the</a> initiator.</li>
+<li>string IniTypeName : (UNIT) The type name of the initiator.</li>
+<li><a href="#unit%20target%20:%20(unit/static)%20the%20target%20@{dcs.dcsunit#unit}%20or-class">Unit target : (UNIT/STATIC) The target @{Dcs.DCSUnit#Unit} or</a> @{DCSStaticObject#StaticObject}.</li>
+<li><a href="#object.category%20tgtobjectcategory%20:%20(unit/static)%20the%20target%20object%20category%20(%20object.category.unit%20or%20object.category.static-class)">Object.Category TgtObjectCategory : (UNIT/STATIC) The target object category ( Object.Category.UNIT or Object.Category.STATIC</a>.</li>
+<li><a href="#unit%20tgtdcsunit%20:%20(unit/static)%20the%20target%20@{dcsunit#unit}%20or-class">Unit TgtDCSUnit : (UNIT/STATIC) The target @{DCSUnit#Unit} or</a> @{DCSStaticObject#StaticObject}.</li>
+<li>string TgtDCSUnitName : (UNIT/STATIC) The target Unit name.</li>
+<li><a href="#unit%20tgtunit%20:%20(unit/static)%20the%20target%20moose%20wrapper%20[unit](#unit-class)%20of%20the%20target%20unit-class">UNIT TgtUnit : (UNIT/STATIC) The target MOOSE wrapper <a href="#unit-class">UNIT</a> of the target Unit</a> object.</li>
+<li>string TgtUnitName : (UNIT/STATIC) The target UNIT name (same as TgtDCSUnitName).</li>
+<li><a href="#group%20tgtdcsgroup%20:%20(unit)%20the%20target-class">Group TgtDCSGroup : (UNIT) The target</a> {DCSGroup#Group}.</li>
+<li>string TgtDCSGroupName : (UNIT) The target Group name.</li>
+<li><a href="#group%20tgtgroup%20:%20(unit)%20the%20target%20moose%20wrapper%20[group](#group-class)%20of%20the%20target%20group-class">GROUP TgtGroup : (UNIT) The target MOOSE wrapper <a href="#group-class">GROUP</a> of the target Group</a> object.</li>
+<li>string TgtGroupName : (UNIT) The target GROUP name (same as TgtDCSGroupName).</li>
+<li>string TgtPlayerName : (UNIT) The name of the target player in case the Unit is a client or player slot.</li>
+<li><a href="#coalition.side%20tgtcoalition%20:%20(unit)%20the%20coalition%20of%20the-class">coalition.side TgtCoalition : (UNIT) The coalition of the</a> target.</li>
+<li><a href="#unit.category%20tgtcategory%20:%20(unit)%20the%20category%20of%20the-class">Unit.Category TgtCategory : (UNIT) The category of the</a> target.</li>
+<li>string TgtTypeName : (UNIT) The type name of the target.</li>
+<li>weapon The : weapon used during the event.</li>
+<li>Weapon self</li>
+<li>WeaponName self</li>
+<li>WeaponTgtDCSUnit self</li>
+</ul>
+
+<h2 id="event-events-class">EVENT.Events Class</h2>
+
+<pre>
+**The EVENT.Events class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>number IniUnit</li>
+</ul>
+
+<h2 id="eventhandler-class">EVENTHANDLER Class</h2>
+
+<pre>
+Inheritance : The EVENTHANDLER Class inherits from the following parents :
+BASE
+    `-- EVENTHANDLER
+</pre>
+
+<h3 id="eventhandler-new">EVENTHANDLER:New()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#eventhandler-class">EVENTHANDLER</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#eventhandler-class">EVENTHANDLER</a>
+self</li>
+</ul>

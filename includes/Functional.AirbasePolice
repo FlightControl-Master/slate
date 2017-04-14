@@ -1,0 +1,170 @@
+<h1 id="functional-airbasepolice-module">Functional.AirbasePolice Module</h1>
+
+<p>This module contains the AIRBASEPOLICE classes.</p>
+
+<h5 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
+
+<p>The <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class provides the main methods to monitor CLIENT behaviour at airbases.
+CLIENTS should not be allowed to:</p>
+
+<ul>
+<li>Don&rsquo;t taxi faster than 40 km/h.</li>
+<li>Don&rsquo;t take-off on taxiways.</li>
+<li>Avoid to hit other planes on the airbase.</li>
+<li>Obey ground control orders.</li>
+</ul>
+
+<h5 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
+
+<p>All the airbases on the caucasus map can be monitored using this class.
+If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
+The following names can be given:
+* AnapaVityazevo
+* Batumi
+* Beslan
+* Gelendzhik
+* Gudauta
+* Kobuleti
+* KrasnodarCenter
+* KrasnodarPashkovsky
+* Krymsk
+* Kutaisi
+* MaykopKhanskaya
+* MineralnyeVody
+* Mozdok
+* Nalchik
+* Novorossiysk
+* SenakiKolkhi
+* SochiAdler
+* Soganlug
+* SukhumiBabushara
+* TbilisiLochini
+* Vaziani</p>
+
+<h5 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
+
+<p>All the airbases on the NEVADA map can be monitored using this class.
+If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
+The following names can be given:
+* Nellis
+* McCarran
+* Creech
+* Groom Lake</p>
+
+<h4 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h4>
+
+<h4 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h4>
+
+<h2 id="airbasepolice_base-class">AIRBASEPOLICE_BASE Class</h2>
+
+<pre>
+Inheritance : The AIRBASEPOLICE_BASE Class inherits from the following parents :
+BASE
+    `-- AIRBASEPOLICE_BASE
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_client-class">SET_CLIENT</a> SetClient</li>
+</ul>
+
+<h3 id="airbasepolice_base-new-a-a">AIRBASEPOLICE_BASE:New(A, A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
+self</li>
+<li>SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.</li>
+<li>Airbases A : table of Airbase Names.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
+self</li>
+</ul>
+
+<h3 id="airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor(AirbaseNames)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
+self</li>
+<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
+.AirbaseNames AirbaseNames : A list of AirbaseNames to monitor. If this parameters is nil, then all airbases will be monitored.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
+self</li>
+</ul>
+
+<h2 id="airbasepolice_base-airbasenames-class">AIRBASEPOLICE_BASE.AirbaseNames Class</h2>
+
+<pre>
+**The AIRBASEPOLICE_BASE.AirbaseNames class does not inherit**
+</pre>
+
+<h2 id="airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS Class</h2>
+
+<pre>
+Inheritance : The AIRBASEPOLICE_CAUCASUS Class inherits from the following parents :
+BASE
+    `-- AIRBASEPOLICE_BASE
+        `-- AIRBASEPOLICE_CAUCASUS
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_client-class">SET_CLIENT</a> SetClient</li>
+</ul>
+
+<h3 id="airbasepolice_caucasus-new-a">AIRBASEPOLICE_CAUCASUS:New(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a>
+self</li>
+<li>SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a>
+self</li>
+</ul>
+
+<h2 id="airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA Class</h2>
+
+<pre>
+Inheritance : The AIRBASEPOLICE_NEVADA Class inherits from the following parents :
+BASE
+    `-- AIRBASEPOLICE_BASE
+        `-- AIRBASEPOLICE_NEVADA
+</pre>
+
+<h3 id="airbasepolice_nevada-new-a">AIRBASEPOLICE_NEVADA:New(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a>
+self</li>
+<li>SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a>
+self</li>
+</ul>

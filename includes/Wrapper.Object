@@ -1,0 +1,102 @@
+<h1 id="wrapper-object-module">Wrapper.Object Module</h1>
+
+<p>This module contains the OBJECT class.</p>
+
+<h5 id="1-object-class-extends-base">1) <a href="#object-class">OBJECT</a> class, extends <a href="#base-class">BASE</a></h5>
+
+<p>The <a href="#object-class">OBJECT</a> class is a wrapper class to handle the DCS Object objects:</p>
+
+<ul>
+<li>Support all DCS Object APIs.</li>
+<li>Enhance with Object specific APIs not in the DCS Object API set.</li>
+<li>Manage the &ldquo;state&rdquo; of the DCS Object.</li>
+</ul>
+
+<h5 id="1-1-object-constructor">1.1) OBJECT constructor:</h5>
+
+<p>The OBJECT class provides the following functions to construct a OBJECT instance:</p>
+
+<ul>
+<li><a href="#object-new-objectname">OBJECT:New()</a>: Create a OBJECT instance.</li>
+</ul>
+
+<h5 id="1-2-object-methods">1.2) OBJECT methods:</h5>
+
+<p>The following methods can be used to identify an Object object:</p>
+
+<ul>
+<li><a href="#object-getid">OBJECT:GetID()</a>: Returns the ID of the Object object.</li>
+</ul>
+
+<h2 id="object-class">OBJECT Class</h2>
+
+<pre>
+Inheritance : The OBJECT Class inherits from the following parents :
+BASE
+    `-- OBJECT
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>string ObjectName : The name of the Object.</li>
+</ul>
+
+<h3 id="object-new-objectname">OBJECT:New(ObjectName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#object-class">OBJECT</a>
+self</li>
+<li>Dcs.DCSWrapper.Object#Object ObjectName : The Object name</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#object-class">OBJECT</a>
+self</li>
+</ul>
+
+<h3 id="object-getid">OBJECT:GetID()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#object-class">OBJECT</a> self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>Dcs.DCSWrapper.Object#Object.ID ObjectID</li>
+<li>nil The : DCS Object is not existing or alive.</li>
+</ul>
+
+<h3 id="object-destroy">OBJECT:Destroy()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#object-class">OBJECT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>nil The : DCS Unit is not existing or alive.</li>
+</ul>
+
+<h2 id="dcsobject-class">DCSObject Class</h2>
+
+<pre>
+**The DCSObject class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>id_ The : ID of the controllable in DCS</li>
+</ul>

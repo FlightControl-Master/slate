@@ -1,0 +1,467 @@
+<h1 id="functional-escort-module">Functional.Escort Module</h1>
+
+<p>Taking the lead of AI escorting your flight.</p>
+
+<p><a href="#escort-class">ESCORT</a> class</p>
+
+<p>The <a href="#escort-class">ESCORT</a> class allows you to interact with escorting AI on your flight and take the lead.
+Each escorting group can be commanded with a whole set of radio commands (radio menu in your flight, and then F10).</p>
+
+<p>The radio commands will vary according the category of the group. The richest set of commands are with Helicopters and AirPlanes.
+Ships and Ground troops will have a more limited set, but they can provide support through the bombing of targets designated by the other escorts.</p>
+
+<p>RADIO MENUs that can be created:</p>
+
+<p>Find a summary below of the current available commands:</p>
+
+<p>Navigation &hellip;:</p>
+
+<p>Escort group navigation functions:</p>
+
+<ul>
+<li><strong>&ldquo;Join-Up and Follow at x meters&rdquo;:</strong> The escort group fill follow you at about x meters, and they will follow you.</li>
+<li><strong>&ldquo;Flare&rdquo;:</strong> Provides menu commands to let the escort group shoot a flare in the air in a color.</li>
+<li><strong>&ldquo;Smoke&rdquo;:</strong> Provides menu commands to let the escort group smoke the air in a color. Note that smoking is only available for ground and naval troops.</li>
+</ul>
+
+<p>Hold position &hellip;:</p>
+
+<p>Escort group navigation functions:</p>
+
+<ul>
+<li><strong>&ldquo;At current location&rdquo;:</strong> Stops the escort group and they will hover 30 meters above the ground at the position they stopped.</li>
+<li><strong>&ldquo;At client location&rdquo;:</strong> Stops the escort group and they will hover 30 meters above the ground at the position they stopped.</li>
+</ul>
+
+<p>Report targets &hellip;:</p>
+
+<p>Report targets will make the escort group to report any target that it identifies within a 8km range. Any detected target can be attacked using the 4. Attack nearby targets function. (see below).</p>
+
+<ul>
+<li><strong>&ldquo;Report now&rdquo;:</strong> Will report the current detected targets.</li>
+<li><strong>&ldquo;Report targets on&rdquo;:</strong> Will make the escort group to report detected targets and will fill the &ldquo;Attack nearby targets&rdquo; menu list.</li>
+<li><strong>&ldquo;Report targets off&rdquo;:</strong> Will stop detecting targets.</li>
+</ul>
+
+<p>Scan targets &hellip;:</p>
+
+<p>Menu items to pop-up the escort group for target scanning. After scanning, the escort group will resume with the mission or defined task.</p>
+
+<ul>
+<li><strong>&ldquo;Scan targets 30 seconds&rdquo;:</strong> Scan 30 seconds for targets.</li>
+<li><strong>&ldquo;Scan targets 60 seconds&rdquo;:</strong> Scan 60 seconds for targets.</li>
+</ul>
+
+<p>Attack targets &hellip;:</p>
+
+<p>This menu item will list all detected targets within a 15km range. Depending on the level of detection (known/unknown) and visuality, the targets type will also be listed.</p>
+
+<p>Request assistance from &hellip;:</p>
+
+<p>This menu item will list all detected targets within a 15km range, as with the menu item <strong>Attack Targets</strong>.
+This menu item allows to request attack support from other escorts supporting the current client group.
+eg. the function allows a player to request support from the Ship escort to attack a target identified by the Plane escort with its Tomahawk missiles.
+eg. the function allows a player to request support from other Planes escorting to bomb the unit with illumination missiles or bombs, so that the main plane escort can attack the area.</p>
+
+<p>ROE &hellip;:</p>
+
+<p>Sets the Rules of Engagement (ROE) of the escort group when in flight.</p>
+
+<ul>
+<li><strong>&ldquo;Hold Fire&rdquo;:</strong> The escort group will hold fire.</li>
+<li><strong>&ldquo;Return Fire&rdquo;:</strong> The escort group will return fire.</li>
+<li><strong>&ldquo;Open Fire&rdquo;:</strong> The escort group will open fire on designated targets.</li>
+<li><strong>&ldquo;Weapon Free&rdquo;:</strong> The escort group will engage with any target.</li>
+</ul>
+
+<p>Evasion &hellip;:</p>
+
+<p>Will define the evasion techniques that the escort group will perform during flight or combat.</p>
+
+<ul>
+<li><strong>&ldquo;Fight until death&rdquo;:</strong> The escort group will have no reaction to threats.</li>
+<li><strong>&ldquo;Use flares, chaff and jammers&rdquo;:</strong> The escort group will use passive defense using flares and jammers. No evasive manoeuvres are executed.</li>
+<li><strong>&ldquo;Evade enemy fire&rdquo;:</strong> The rescort group will evade enemy fire before firing.</li>
+<li><strong>&ldquo;Go below radar and evade fire&rdquo;:</strong> The escort group will perform evasive vertical manoeuvres.</li>
+</ul>
+
+<p>Resume Mission &hellip;:</p>
+
+<p>Escort groups can have their own mission. This menu item will allow the escort group to resume their Mission from a given waypoint.
+Note that this is really fantastic, as you now have the dynamic of taking control of the escort groups, and allowing them to resume their path or mission.</p>
+
+<p>ESCORT construction methods.</p>
+
+<p>Create a new SPAWN object with the <a href="#escort-new-escortclient-escortgroup-escortname-escortbriefing">ESCORT:New()</a> method:</p>
+
+<ul>
+<li><a href="#escort-new-escortclient-escortgroup-escortname-escortbriefing">ESCORT:New()</a>: Creates a new ESCORT object from a <a href="#group-class">GROUP</a> for a <a href="#client-class">CLIENT</a>, with an optional briefing text.</li>
+</ul>
+
+<p>ESCORT initialization methods.</p>
+
+<p>The following menus are created within the RADIO MENU (F10) of an active unit hosted by a player:</p>
+
+<ul>
+<li><a href="#escort-menufollowat-distance">ESCORT:MenuFollowAt()</a>: Creates a menu to make the escort follow the client.</li>
+<li><a href="#escort-menuholdatescortposition-height-seconds-menutextformat">ESCORT:MenuHoldAtEscortPosition()</a>: Creates a menu to hold the escort at its current position.</li>
+<li><a href="#escort-menuholdatleaderposition-height-seconds-menutextformat">ESCORT:MenuHoldAtLeaderPosition()</a>: Creates a menu to hold the escort at the client position.</li>
+<li><a href="#escort-menuscanfortargets-height-seconds-menutextformat">ESCORT:MenuScanForTargets()</a>: Creates a menu so that the escort scans targets.</li>
+<li><a href="#escort-menuflare-menutextformat">ESCORT:MenuFlare()</a>: Creates a menu to disperse flares.</li>
+<li><a href="#escort-menusmoke-menutextformat">ESCORT:MenuSmoke()</a>: Creates a menu to disparse smoke.</li>
+<li><a href="#escort-menureporttargets-seconds">ESCORT:MenuReportTargets()</a>: Creates a menu so that the escort reports targets.</li>
+<li>ESCORT-MenuReportPosition: Creates a menu so that the escort reports its current position from bullseye.</li>
+<li>@{#ESCORT.MenuAssistedAttack: Creates a menu so that the escort supportes assisted attack from other escorts with the client.</li>
+<li>@{#ESCORT.MenuROE: Creates a menu structure to set the rules of engagement of the escort.</li>
+<li>@{#ESCORT.MenuEvasion: Creates a menu structure to set the evasion techniques when the escort is under threat.</li>
+<li><a href="#escort-menuresumemission">ESCORT:MenuResumeMission()</a>: Creates a menu structure so that the escort can resume from a waypoint.</li>
+</ul>
+
+<p>@usage
+&ndash; Declare a new EscortPlanes object as follows:</p>
+
+<p>&ndash; First find the GROUP object and the CLIENT object.
+local EscortClient = CLIENT:FindByName( &ldquo;Unit Name&rdquo; ) &ndash; The Unit Name is the name of the unit flagged with the skill Client in the mission editor.
+local EscortGroup = GROUP:FindByName( &ldquo;Group Name&rdquo; ) &ndash; The Group Name is the name of the group that will escort the Escort Client.</p>
+
+<p>&ndash; Now use these 2 objects to construct the new EscortPlanes object.
+EscortPlanes = ESCORT:New( EscortClient, EscortGroup, &ldquo;Desert&rdquo;, &ldquo;Welcome to the mission. You are escorted by a plane with code name &lsquo;Desert&rsquo;, which can be instructed through the F10 radio menu.&rdquo; )</p>
+
+<h2 id="escort-class">ESCORT Class</h2>
+
+<pre>
+Inheritance : The ESCORT Class inherits from the following parents :
+BASE
+    `-- ESCORT
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a> EscortClient</li>
+<li><a href="#group-class">GROUP</a> EscortGroup</li>
+<li>string EscortName</li>
+<li><a href="#escort-class">ESCORT</a>
+.MODE EscortMode : The mode the escort is in.</li>
+<li><a href="#scheduler%20followscheduler%20:%20the%20instance%20of%20the%20scheduler-class">SCHEDULER FollowScheduler : The instance of the SCHEDULER</a> class.</li>
+<li>number FollowDistance : The current follow distance.</li>
+<li>boolean ReportTargets : If true, nearby targets are reported.</li>
+<li><a href="#ai.option.air.val.reaction_on_threat%20optionreactiononthreat%20:%20which%20reaction_on_threat%20is%20set%20to%20the-class">AI.Option.Air.val.REACTION_ON_THREAT OptionReactionOnThreat : Which REACTION_ON_THREAT is set to the</a> EscortGroup.</li>
+<li><a href="#menu_client-class">MENU_CLIENT</a> EscortMenuResumeMission</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
+</ul>
+
+<h3 id="escort-new-escortclient-escortgroup-escortname-escortbriefing">ESCORT:New(EscortClient, EscortGroup, EscortName, EscortBriefing)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Declare a new EscortPlanes object as follows:</span>
+
+<span class="c1">-- First find the GROUP object and the CLIENT object.</span>
+<span class="kd">local</span> <span class="n">EscortClient</span> <span class="o">=</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s2">"Unit Name"</span> <span class="p">)</span> <span class="c1">-- The Unit Name is the name of the unit flagged with the skill Client in the mission editor.</span>
+<span class="kd">local</span> <span class="n">EscortGroup</span> <span class="o">=</span> <span class="n">GROUP</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s2">"Group Name"</span> <span class="p">)</span> <span class="c1">-- The Group Name is the name of the group that will escort the Escort Client.</span>
+
+<span class="c1">-- Now use these 2 objects to construct the new EscortPlanes object.</span>
+<span class="n">EscortPlanes</span> <span class="o">=</span> <span class="n">ESCORT</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="n">EscortClient</span><span class="p">,</span> <span class="n">EscortGroup</span><span class="p">,</span> <span class="s2">"Desert"</span><span class="p">,</span> <span class="s2">"Welcome to the mission. You are escorted by a plane with code name 'Desert', which can be instructed through the F10 radio menu."</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#client%20escortclient%20:%20the%20client%20escorted%20by%20the-class">CLIENT EscortClient : The client escorted by the</a> EscortGroup.</li>
+<li><a href="#group%20escortgroup%20:%20the%20group%20ai%20escorting%20the-class">GROUP EscortGroup : The group AI escorting the</a> EscortClient.</li>
+<li>string EscortName : Name of the escort.</li>
+<li>string EscortBriefing : A text showing the ESCORT briefing to the player. Note that if no EscortBriefing is provided, the default briefing will be shown.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-setdetection-detection">ESCORT:SetDetection(Detection)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="escort-testsmokedirectionvector-smokedirection">ESCORT:TestSmokeDirectionVector(SmokeDirection)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li>boolean SmokeDirection : If true, then the direction vector will be smoked.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="escort-menus">ESCORT:Menus()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menufollowat-distance">ESCORT:MenuFollowAt(Distance)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#distance%20distance%20:%20the%20distance%20in%20meters%20that%20the%20escort%20needs%20to%20follow%20the-class">Distance Distance : The distance in meters that the escort needs to follow the</a> client.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuholdatescortposition-height-seconds-menutextformat">ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
+<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
+<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuholdatleaderposition-height-seconds-menutextformat">ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
+<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
+<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuscanfortargets-height-seconds-menutextformat">ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
+<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
+<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuflare-menutextformat">ESCORT:MenuFlare(MenuTextFormat)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menusmoke-menutextformat">ESCORT:MenuSmoke(MenuTextFormat)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menureporttargets-seconds">ESCORT:MenuReportTargets(Seconds)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20report%20their%20current%20detected%20targets%20after%20specified%20time%20interval%20in%20seconds.%20the%20default%20time%20is%2030-class">Time Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30</a> seconds.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuassistedattack">ESCORT:MenuAssistedAttack()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuroe">ESCORT:MenuROE()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuevasion">ESCORT:MenuEvasion()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-menuresumemission">ESCORT:MenuResumeMission()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h3 id="escort-joinupandfollow-escortgroup-escortclient-distance">ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a> self</li>
+<li><a href="#group-class">GROUP</a> EscortGroup</li>
+<li><a href="#client-class">CLIENT</a> EscortClient</li>
+<li><a href="#distance-class">Distance</a> Distance</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="escort-registerroute">ESCORT:RegisterRoute()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>table[] self</li>
+</ul>
+
+<h2 id="escort-mode-class">ESCORT.MODE Class</h2>
+
+<pre>
+**The ESCORT.MODE class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>number FOLLOW</li>
+<li>number MISSION</li>
+</ul>
+
+<h2 id="menuparam-class">MENUPARAM Class</h2>
+
+<pre>
+**The MENUPARAM class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#escort-class">ESCORT</a>
+ParamSelf</li>
+<li><a href="#d-class">D</a>
+istance ParamDistance</li>
+<li>#function ParamFunction</li>
+<li>string ParamMessage</li>
+</ul>

@@ -1,0 +1,334 @@
+<h1 id="wrapper-client-module">Wrapper.Client Module</h1>
+
+<p>This module contains the CLIENT class.</p>
+
+<h5 id="1-client-class-extends-unit">1) <a href="#client-class">CLIENT</a> class, extends <a href="#unit-class">UNIT</a></h5>
+
+<p>Clients are those <strong>Units</strong> defined within the Mission Editor that have the skillset defined as <strong>Client</strong> or <strong>Player</strong>.
+Note that clients are NOT the same as Units, they are NOT necessarily alive.
+The <a href="#client-class">CLIENT</a> class is a wrapper class to handle the DCS Unit objects that have the skillset defined as <strong>Client</strong> or <strong>Player</strong>:</p>
+
+<ul>
+<li>Wraps the DCS Unit objects with skill level set to Player or Client.</li>
+<li>Support all DCS Unit APIs.</li>
+<li>Enhance with Unit specific APIs not in the DCS Group API set.</li>
+<li>When player joins Unit, execute alive init logic.</li>
+<li>Handles messages to players.</li>
+<li>Manage the &ldquo;state&rdquo; of the DCS Unit.</li>
+</ul>
+
+<p>Clients are being used by the <a href="#mission-module">MISSION</a> class to follow players and register their successes.</p>
+
+<h5 id="1-1-client-reference-methods">1.1) CLIENT reference methods</h5>
+
+<p>For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
+This is done at the beginning of the mission (when the mission starts).</p>
+
+<p>The CLIENT class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
+using the DCS Unit or the DCS UnitName.</p>
+
+<p>Another thing to know is that CLIENT objects do not &ldquo;contain&rdquo; the DCS Unit object.
+The CLIENT methods will reference the DCS Unit object by name when it is needed during API execution.
+If the DCS Unit object does not exist or is nil, the CLIENT methods will return nil and log an exception in the DCS.log file.</p>
+
+<p>The CLIENT class provides the following functions to retrieve quickly the relevant CLIENT instance:</p>
+
+<ul>
+<li><a href="#client-find-clientname-clientbriefing">CLIENT:Find()</a>: Find a CLIENT instance from the _DATABASE object using a DCS Unit object.</li>
+<li><a href="#client-findbyname-clientname-clientbriefing-error">CLIENT:FindByName()</a>: Find a CLIENT instance from the _DATABASE object using a DCS Unit name.</li>
+</ul>
+
+<p>IMPORTANT: ONE SHOULD NEVER SANATIZE these CLIENT OBJECT REFERENCES! (make the CLIENT object references nil).</p>
+
+<h2 id="client-class">CLIENT Class</h2>
+
+<pre>
+Inheritance : The CLIENT Class inherits from the following parents :
+BASE
+    `-- OBJECT
+        `-- IDENTIFIABLE
+            `-- POSITIONABLE
+                `-- CONTROLLABLE
+                    `-- UNIT
+                        `-- CLIENT
+</pre>
+
+<h3 id="client-find-clientname-clientbriefing">CLIENT:Find(ClientName, ClientBriefing)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Create new Clients.</span>
+<span class="kd">local</span> <span class="n">Mission</span> <span class="o">=</span> <span class="n">MISSIONSCHEDULER</span><span class="p">.</span><span class="n">AddMission</span><span class="p">(</span> <span class="s1">'Russia Transport Troops SA-6'</span><span class="p">,</span> <span class="s1">'Operational'</span><span class="p">,</span> <span class="s1">'Transport troops from the control center to one of the SA-6 SAM sites to activate their operation.'</span><span class="p">,</span> <span class="s1">'Russia'</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddGoal</span><span class="p">(</span> <span class="n">DeploySA6TroopsGoal</span> <span class="p">)</span>
+
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 1'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 3'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string ClientName : Name of the DCS <strong>Unit</strong> as defined within the Mission Editor.</li>
+<li>string ClientBriefing : Text that describes the briefing of the mission when a Player logs into the Client.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-findbyname-clientname-clientbriefing-error">CLIENT:FindByName(ClientName, ClientBriefing, Error)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Create new Clients.</span>
+<span class="kd">local</span> <span class="n">Mission</span> <span class="o">=</span> <span class="n">MISSIONSCHEDULER</span><span class="p">.</span><span class="n">AddMission</span><span class="p">(</span> <span class="s1">'Russia Transport Troops SA-6'</span><span class="p">,</span> <span class="s1">'Operational'</span><span class="p">,</span> <span class="s1">'Transport troops from the control center to one of the SA-6 SAM sites to activate their operation.'</span><span class="p">,</span> <span class="s1">'Russia'</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddGoal</span><span class="p">(</span> <span class="n">DeploySA6TroopsGoal</span> <span class="p">)</span>
+
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 1'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 3'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string ClientName : Name of the DCS <strong>Unit</strong> as defined within the Mission Editor.</li>
+<li>string ClientBriefing : Text that describes the briefing of the mission when a Player logs into the Client.</li>
+<li>boolean Error : A flag that indicates whether an error should be raised if the CLIENT cannot be found. By default an error will be raised.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-transport">CLIENT:Transport()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-addbriefing-clientbriefing">CLIENT:AddBriefing(ClientBriefing)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string ClientBriefing : is the text defining the Mission briefing.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-showbriefing">CLIENT:ShowBriefing()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-showmissionbriefing-missionbriefing">CLIENT:ShowMissionBriefing(MissionBriefing)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string MissionBriefing</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-reset-clientname">CLIENT:Reset(ClientName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string ClientName : Name of the Group as defined within the Mission Editor. The Group must have a Unit with the type Client.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="client-ismultiseated">CLIENT:IsMultiSeated()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if multi-seated.</li>
+</ul>
+
+<h3 id="client-alive-callbackfunction">CLIENT:Alive(CallBackFunction)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>#function CallBackFunction : Create a function that will be called when a player joins the slot.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h3 id="client-getdcsgroup">CLIENT:GetDCSGroup()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>Dcs.DCSWrapper.Group#Group self</li>
+</ul>
+
+<h3 id="client-getclientgroupid">CLIENT:GetClientGroupID()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#group.id-class">Group.ID</a> self</li>
+</ul>
+
+<h3 id="client-getclientgroupname">CLIENT:GetClientGroupName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="client-getclientgroupunit">CLIENT:GetClientGroupUnit()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#unit-class">UNIT</a> self</li>
+</ul>
+
+<h3 id="client-getclientgroupdcsunit">CLIENT:GetClientGroupDCSUnit()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#unit-class">Unit</a> self</li>
+</ul>
+
+<h3 id="client-istransport">CLIENT:IsTransport()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : is a transport.</li>
+</ul>
+
+<h3 id="client-showcargo">CLIENT:ShowCargo()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="client-message-message-messageduration-messagecategory-messageinterval-messageid">CLIENT:Message(Message, MessageDuration, MessageCategory, MessageInterval, MessageID)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#client-class">CLIENT</a>
+self</li>
+<li>string Message : is the text describing the message.</li>
+<li>number MessageDuration : is the duration in seconds that the Message should be displayed.</li>
+<li>string MessageCategory : is the category of the message (the title).</li>
+<li>number MessageInterval : is the interval in seconds between the display of the <a href="#message-class">MESSAGE</a> when the CLIENT is in the air.</li>
+<li>string MessageID : is the identifier of the message when displayed with intervals.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

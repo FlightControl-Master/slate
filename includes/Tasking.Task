@@ -1,0 +1,1161 @@
+<h1 id="tasking-task-module">Tasking.Task Module</h1>
+
+<p><strong>Tasking</strong> &ndash; This module contains the TASK class.</p>
+
+<h4 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h4>
+
+<h2 id="task-class">TASK Class</h2>
+
+<pre>
+Inheritance : The TASK Class inherits from the following parents :
+ERROR !
+    `-- FSM_TASK
+        `-- TASK
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#scheduler-class">SCHEDULER</a> TaskScheduler</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#set_group%20setgroup%20:%20the%20set%20of%20groups%20assigned%20to%20the-class">SET_GROUP SetGroup : The Set of Groups assigned to the</a> Task</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> FsmTemplate</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#commandcenter-class">COMMANDCENTER</a> CommandCenter</li>
+</ul>
+
+<h3 id="task-onafterplayeraborted-playerunit-playername">TASK:OnAfterPlayerAborted(PlayerUnit, PlayerName)</h3>
+
+<p>FSM PlayerAborted event handler prototype for TASK.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20went%20back%20to%20spectators%20or%20left%20the-class">UNIT PlayerUnit : The Unit of the Player when he went back to spectators or left the</a> mission.</li>
+<li>string PlayerName : The name of the Player.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onafterplayercrashed-playerunit-playername">TASK:OnAfterPlayerCrashed(PlayerUnit, PlayerName)</h3>
+
+<p>FSM PlayerCrashed event handler prototype for TASK.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20crashed%20in%20the-class">UNIT PlayerUnit : The Unit of the Player when he crashed in the</a> mission.</li>
+<li>string PlayerName : The name of the Player.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onafterplayerdead-playerunit-playername">TASK:OnAfterPlayerDead(PlayerUnit, PlayerName)</h3>
+
+<p>FSM PlayerDead event handler prototype for TASK.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20died%20in%20the-class">UNIT PlayerUnit : The Unit of the Player when he died in the</a> mission.</li>
+<li>string PlayerName : The name of the Player.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-fail">TASK:Fail()</h3>
+
+<p>FSM Fail synchronous event function for TASK.
+Use this event to Fail the Task.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-abort">TASK:Abort()</h3>
+
+<p>FSM Abort synchronous event function for TASK.
+Use this event to Abort the Task.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-success">TASK:Success()</h3>
+
+<p>FSM Success synchronous event function for TASK.
+Use this event to make the Task a Success.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-cancel">TASK:Cancel()</h3>
+
+<p>FSM Cancel synchronous event function for TASK.
+Use this event to Cancel the Task.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-replan">TASK:Replan()</h3>
+
+<p>FSM Replan synchronous event function for TASK.
+Use this event to Replan the Task.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-new-mission-setgroupassign-taskname-tasktype">TASK:New(Mission, SetGroupAssign, TaskName, TaskType)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#mission%20mission%20:%20the%20mission%20wherein%20the%20task%20is-class">MISSION Mission : The mission wherein the Task is</a> registered.</li>
+<li><a href="#set_group%20setgroupassign%20:%20the%20set%20of%20groups%20for%20which%20the%20task%20can%20be-class">SET_GROUP SetGroupAssign : The set of groups for which the Task can be</a> assigned.</li>
+<li>string TaskName : The name of the Task</li>
+<li>string TaskType : The type of the Task</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-getunitprocess">TASK:GetUnitProcess()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+</ul>
+
+<h3 id="task-setunitprocess-self">TASK:SetUnitProcess(self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-joinunit-playerunit-playergroup">TASK:JoinUnit(PlayerUnit, PlayerGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20joining%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player joining the</a> Mission.</li>
+<li><a href="#group%20playergroup%20:%20the%20group%20of%20the%20player%20joining%20the-class">GROUP PlayerGroup : The GROUP of the player joining the</a> Mission.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if Unit is part of the Task.</li>
+</ul>
+
+<h3 id="task-abortunit-playerunit">TASK:AbortUnit(PlayerUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20aborting%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player aborting the</a> Task.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if Unit is part of the Task.</li>
+</ul>
+
+<h3 id="task-crashunit-playerunit">TASK:CrashUnit(PlayerUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20aborting%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player aborting the</a> Task.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if Unit is part of the Task.</li>
+</ul>
+
+<h3 id="task-getmission">TASK:GetMission()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#mission-class">MISSION</a> self</li>
+</ul>
+
+<h3 id="task-getgroups">TASK:GetGroups()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#set_group-class">SET_GROUP</a> self</li>
+</ul>
+
+<h3 id="task-assigntogroup-taskgroup">TASK:AssignToGroup(TaskGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-hasgroup-findgroup">TASK:HasGroup(FindGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> FindGroup</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="task-assigntounit-taskunit">TASK:AssignToUnit(TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-unassignfromunit-taskunit">TASK:UnAssignFromUnit(TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-settimeout-timer">TASK:SetTimeOut (Timer)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>#integer Timer : in seconds</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-messagetogroups">TASK:MessageToGroups()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-sendbriefingtoassignedgroups">TASK:SendBriefingToAssignedGroups()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-unassignfromgroups">TASK:UnAssignFromGroups()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-unassignfromgroup">TASK:UnAssignFromGroup()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isassignedtogroup-taskgroup">TASK:IsAssignedToGroup(TaskGroup)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="task-hasaliveunits">TASK:HasAliveUnits()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="task-setmenu-menutime">TASK:SetMenu(MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-setmenuforgroup-menutime">TASK:SetMenuForGroup(MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-setplannedmenuforgroup-taskgroup-menutext-menutime">TASK:SetPlannedMenuForGroup(TaskGroup, MenuText, MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li>string MenuText : The menu text.</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-setassignedmenuforgroup-taskgroup-menutime">TASK:SetAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-removemenu-menutime">TASK:RemoveMenu(MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-removeplannedmenuforgroup-taskgroup-menutime">TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-removeassignedmenuforgroup-taskgroup-menutime">TASK:RemoveAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li>number MenuTime</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-menutaskstatus">TASK:MenuTaskStatus()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-menutaskabort">TASK:MenuTaskAbort()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-gettaskname">TASK:GetTaskName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string TaskName</li>
+</ul>
+
+<h3 id="task-getprocesstemplate-processname">TASK:GetProcessTemplate(ProcessName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string ProcessName</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+</ul>
+
+<h3 id="task-failprocesses-taskunitname">TASK:FailProcesses(TaskUnitName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string TaskUnitName</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-setstatemachine-taskunit-fsm">TASK:SetStateMachine(TaskUnit, Fsm)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-getstatemachine-taskunit">TASK:GetStateMachine(TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+</ul>
+
+<h3 id="task-removestatemachine-taskunit">TASK:RemoveStateMachine(TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-hasstatemachine-taskunit">TASK:HasStateMachine(TaskUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-getscoring">TASK:GetScoring()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#scoring-class">SCORING</a> Scoring</li>
+</ul>
+
+<h3 id="task-gettaskindex">TASK:GetTaskIndex()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : Task ID</li>
+</ul>
+
+<h3 id="task-setname-taskname">TASK:SetName(TaskName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string TaskName</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-getname">TASK:GetName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : Task Name</li>
+</ul>
+
+<h3 id="task-settype-tasktype">TASK:SetType(TaskType)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string TaskType</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-gettype">TASK:GetType()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string TaskType</li>
+</ul>
+
+<h3 id="task-setid-taskid">TASK:SetID(TaskID)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string TaskID</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-getid">TASK:GetID()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string TaskID</li>
+</ul>
+
+<h3 id="task-statesuccess">TASK:StateSuccess()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstatesuccess">TASK:IsStateSuccess()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-statefailed">TASK:StateFailed()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstatefailed">TASK:IsStateFailed()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-stateplanned">TASK:StatePlanned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstateplanned">TASK:IsStatePlanned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-stateaborted">TASK:StateAborted()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstateaborted">TASK:IsStateAborted()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-statecancelled">TASK:StateCancelled()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstatecancelled">TASK:IsStateCancelled()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-stateassigned">TASK:StateAssigned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstateassigned">TASK:IsStateAssigned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-statehold">TASK:StateHold()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstatehold">TASK:IsStateHold()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-statereplanned">TASK:StateReplanned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-isstatereplanned">TASK:IsStateReplanned()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-getstatestring">TASK:GetStateString()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-setbriefing-taskbriefing">TASK:SetBriefing(TaskBriefing)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string TaskBriefing</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-onenterassigned-event-from-to">TASK:onenterAssigned(Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onentersuccess-event-from-to">TASK:onenterSuccess(Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onenteraborted-from-event-to">TASK:onenterAborted(From, Event, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string From</li>
+<li>string Event</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onafterreplan-from-event-to">TASK:onafterReplan(From, Event, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string From</li>
+<li>string Event</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onenterfailed-from-event-to">TASK:onenterFailed(From, Event, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string From</li>
+<li>string Event</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onstatechange-event-from-to">TASK:onstatechange(Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onenterplanned-event-from-to">TASK:onenterPlanned(Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-onbeforetimeout-event-from-to">TASK:onbeforeTimeOut(Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task-setdispatcher-dispatcher">TASK:SetDispatcher(Dispatcher)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+<li><a href="#detection_manager-class">DETECTION_MANAGER</a> Dispatcher</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h3 id="task-reportsummary">TASK:ReportSummary()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>
+
+<h3 id="task-reportdetails">TASK:ReportDetails()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string self</li>
+</ul>

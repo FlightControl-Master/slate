@@ -1,0 +1,34 @@
+<h1 id="functional-cleanup-module">Functional.CleanUp Module</h1>
+
+<p>The CLEANUP class keeps an area clean of crashing or colliding airplanes. It also prevents airplanes from firing within this area.</p>
+
+<h2 id="cleanup-class">CLEANUP Class</h2>
+
+<pre>
+Inheritance : The CLEANUP Class inherits from the following parents :
+BASE
+    `-- CLEANUP
+</pre>
+
+<h3 id="cleanup-new-zonenames-timeinterval">CLEANUP:New(ZoneNames, TimeInterval)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Clean these Zones.</span>
+<span class="n">CleanUpAirports</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'CLEAN Tbilisi'</span><span class="p">,</span> <span class="s1">'CLEAN Kutaisi'</span> <span class="p">},</span> <span class="mi">150</span> <span class="p">)</span>
+<span class="ow">or</span>
+<span class="n">CleanUpTbilisi</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'CLEAN Tbilisi'</span><span class="p">,</span> <span class="mi">150</span> <span class="p">)</span>
+<span class="n">CleanUpKutaisi</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'CLEAN Kutaisi'</span><span class="p">,</span> <span class="mi">600</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#cleanup-class">CLEANUP</a>
+self</li>
+<li>table[] ZoneNames : Is a table of zone names where the debris should be cleaned. Also a single string can be passed with one zone name.</li>
+<li>number TimeInterval : The interval in seconds when the clean activity takes place. The default is 300 seconds, thus every 5 minutes.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#cleanup-class">CLEANUP</a>
+self</li>
+</ul>

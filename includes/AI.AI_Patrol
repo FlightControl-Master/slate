@@ -1,0 +1,1032 @@
+<h1 id="ai-ai_patrol-module">AI.AI_Patrol Module</h1>
+
+<p><strong>AI</strong> &ndash; <strong>Air Patrolling or Staging.</strong></p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>AI PATROL classes makes AI Controllables execute an Patrol.</p>
+
+<p>There are the following types of PATROL classes defined:</p>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>: Perform a PATROL in a zone.</li>
+</ul>
+
+<h4 id="open-issues"><strong>OPEN ISSUES</strong></h4>
+
+<p>2017-01-17: When Spawned AI is located at an airbase, it will be routed first back to the airbase after take-off.</p>
+
+<p>2016-01-17:
+&ndash; Fixed problem with AI returning to base too early and unexpected.
+&ndash; ReSpawning of AI will reset the AI_PATROL and derived classes.
+&ndash; Checked the correct workings of SCHEDULER, and it DOES work correctly.</p>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<p>2017-01-17: Rename of class: <strong>AI_PATROL_ZONE</strong> is the new name for the old <em>AI_PATROLZONE</em>.</p>
+
+<p>2017-01-15: Complete revision. AI_PATROL_ZONE is the base class for other AI_PATROL like classes.</p>
+
+<p>2016-09-01: Initial class and API.</p>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<ul>
+<li><strong><a href="https://forums.eagle.ru/member.php?u=112075">Dutch_Baron</a></strong>: Working together with James has resulted in the creation of the AI_BALANCER class. James has shared his ideas on balancing AI with air units, and together we made a first design which you can use now :-)</li>
+<li><strong><a href="https://forums.eagle.ru/member.php?u=62835">Pikey</a></strong>: Testing and API concept review.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming.</li>
+</ul>
+
+<h2 id="ai_patrol_zone-class">AI_PATROL_ZONE Class</h2>
+
+<pre>
+Inheritance : The AI_PATROL_ZONE Class inherits from the following parents :
+ERROR !
+    `-- AI_PATROL_ZONE
+</pre>
+
+<p>The <a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a> class implements the core functions to patrol a <a href="#zone-module">Zone</a> by an AI <a href="#controllable-module">Controllable</a> or <a href="#group-module">Group</a>.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia3.JPG" alt="Process" /></p>
+
+<p>The AI_PATROL_ZONE is assigned a <a href="#group-module">Group</a> and this must be done before the AI_PATROL_ZONE process can be started using the <strong>Start</strong> event.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia4.JPG" alt="Process" /></p>
+
+<p>The AI will fly towards the random 3D point within the patrol zone, using a random speed within the given altitude and speed limits.
+Upon arrival at the 3D point, a new random 3D point will be selected within the patrol zone using the given limits.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia5.JPG" alt="Process" /></p>
+
+<p>This cycle will continue.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia6.JPG" alt="Process" /></p>
+
+<p>During the patrol, the AI will detect enemy targets, which are reported through the <strong>Detected</strong> event.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia9.JPG" alt="Process" /></p>
+
+<p>&ndash; Note that the enemy is not engaged! To model enemy engagement, either tailor the <strong>Detected</strong> event, or
+use derived AI_ classes to model AI offensive or defensive behaviour.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia10.JPG" alt="Process" /></p>
+
+<p>Until a fuel or damage treshold has been reached by the AI, or when the AI is commanded to RTB.
+When the fuel treshold has been reached, the airplane will fly towards the nearest friendly airbase and will land.</p>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia11.JPG" alt="Process" /></p>
+
+<h4 id="1-1-ai_patrol_zone-constructor">1.1) AI_PATROL_ZONE constructor</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_PATROL_ZONE:New()</a>: Creates a new AI_PATROL_ZONE object.</li>
+</ul>
+
+<h4 id="1-2-ai_patrol_zone-is-a-fsm">1.2) AI_PATROL_ZONE is a FSM</h4>
+
+<p><img src="/includes/Pictures/AI_PATROL/Dia2.JPG" alt="Process" /></p>
+
+<h4 id="1-2-1-ai_patrol_zone-states">1.2.1) AI_PATROL_ZONE States</h4>
+
+<ul>
+<li><strong>None</strong> ( Group ): The process is not started yet.</li>
+<li><strong>Patrolling</strong> ( Group ): The AI is patrolling the Patrol Zone.</li>
+<li><strong>Returning</strong> ( Group ): The AI is returning to Base.</li>
+<li><strong>Stopped</strong> ( Group ): The process is stopped.</li>
+<li><strong>Crashed</strong> ( Group ): The AI has crashed or is dead.</li>
+</ul>
+
+<h4 id="1-2-2-ai_patrol_zone-events">1.2.2) AI_PATROL_ZONE Events</h4>
+
+<ul>
+<li><strong>Start</strong> ( Group ): Start the process.</li>
+<li><strong>Stop</strong> ( Group ): Stop the process.</li>
+<li><strong>Route</strong> ( Group ): Route the AI to a new random 3D point within the Patrol Zone.</li>
+<li><strong>RTB</strong> ( Group ): Route the AI to the home base.</li>
+<li><strong>Detect</strong> ( Group ): The AI is detecting targets.</li>
+<li><strong>Detected</strong> ( Group ): The AI has detected new targets.</li>
+<li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
+</ul>
+
+<h4 id="1-3-set-or-get-the-ai-controllable">1.3) Set or Get the AI controllable</h4>
+
+<ul>
+<li>AI_PATROL_ZONE-SetControllable: Set the AIControllable.</li>
+<li>AI_PATROL_ZONE-GetControllable: Get the AIControllable.</li>
+</ul>
+
+<h4 id="1-4-set-the-speed-and-altitude-boundaries-of-the-ai-controllable">1.4) Set the Speed and Altitude boundaries of the AI controllable</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-setspeed-self-self">AI_PATROL_ZONE:SetSpeed()</a>: Set the patrol speed boundaries of the AI, for the next patrol.</li>
+<li><a href="#ai_patrol_zone-setaltitude-patrolflooraltitude-patrolceilingaltitude">AI_PATROL_ZONE:SetAltitude()</a>: Set altitude boundaries of the AI, for the next patrol.</li>
+</ul>
+
+<h4 id="1-5-manage-the-detection-process-of-the-ai-controllable">1.5) Manage the detection process of the AI controllable</h4>
+
+<p>The detection process of the AI controllable can be manipulated.
+Detection requires an amount of CPU power, which has an impact on your mission performance.
+Only put detection on when absolutely necessary, and the frequency of the detection can also be set.</p>
+
+<ul>
+<li><a href="#ai_patrol_zone-setdetectionon">AI_PATROL_ZONE:SetDetectionOn()</a>: Set the detection on. The AI will detect for targets.</li>
+<li><a href="#ai_patrol_zone-setdetectionoff">AI_PATROL_ZONE:SetDetectionOff()</a>: Set the detection off, the AI will not detect for targets. The existing target list will NOT be erased.</li>
+</ul>
+
+<p>The detection frequency can be set with <a href="#ai_patrol_zone-setdetectioninterval-seconds">AI_PATROL_ZONE:SetDetectionInterval()</a> seconds ), where the amount of seconds specify how much seconds will be waited before the next detection.
+Use the method <a href="#ai_patrol_zone-getdetectedunits">AI_PATROL_ZONE:GetDetectedUnits()</a> to obtain a list of the <a href="#unit-module">Unit</a>s detected by the AI.</p>
+
+<p>The detection can be filtered to potential targets in a specific zone.
+Use the method <a href="#ai_patrol_zone-setdetectionzone-detectionzone">AI_PATROL_ZONE:SetDetectionZone()</a> to set the zone where targets need to be detected.
+Note that when the zone is too far away, or the AI is not heading towards the zone, or the AI is too high, no targets may be detected
+according the weather conditions.</p>
+
+<h4 id="1-6-manage-the-out-of-fuel-in-the-ai_patrol_zone">1.6) Manage the &ldquo;out of fuel&rdquo; in the AI_PATROL_ZONE</h4>
+
+<p>When the AI is out of fuel, it is required that a new AI is started, before the old AI can return to the home base.
+Therefore, with a parameter and a calculation of the distance to the home base, the fuel treshold is calculated.
+When the fuel treshold is reached, the AI will continue for a given time its patrol task in orbit,
+while a new AI is targetted to the AI_PATROL_ZONE.
+Once the time is finished, the old AI will return to the base.
+Use the method <a href="#ai_patrol_zone-managefuel-patrolfueltresholdpercentage-patroloutoffuelorbittime">AI_PATROL_ZONE:ManageFuel()</a> to have this proces in place.</p>
+
+<h4 id="1-7-manage-damage-behaviour-of-the-ai-in-the-ai_patrol_zone">1.7) Manage &ldquo;damage&rdquo; behaviour of the AI in the AI_PATROL_ZONE</h4>
+
+<p>When the AI is damaged, it is required that a new AIControllable is started. However, damage cannon be foreseen early on.
+Therefore, when the damage treshold is reached, the AI will return immediately to the home base (RTB).
+Use the method <a href="#ai_patrol_zone-managedamage-patroldamagetreshold">AI_PATROL_ZONE:ManageDamage()</a> to have this proces in place.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#controllable%20aicontrollable%20:%20the%20[controllable](#controllable-module)-class">CONTROLLABLE AIControllable : The <a href="#controllable-module">Controllable</a></a> patrolling.</li>
+<li><a href="#zone_base%20patrolzone%20:%20the%20[zone](#zone-module)%20where%20the%20patrol%20needs%20to%20be-class">ZONE_BASE PatrolZone : The <a href="#zone-module">Zone</a> where the patrol needs to be</a> executed.</li>
+<li><a href="#altitude%20patrolflooraltitude%20:%20the%20lowest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolFloorAltitude : The lowest altitude in meters where to execute the</a> patrol.</li>
+<li><a href="#altitude%20patrolceilingaltitude%20:%20the%20highest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolCeilingAltitude : The highest altitude in meters where to execute the</a> patrol.</li>
+<li><a href="#speed%20self%20:%20patrolminspeed%20the%20minimum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+<li><a href="#speed%20self%20:%20patrolmaxspeed%20the%20maximum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+<li><a href="#spawn-class">SPAWN</a> CoordTest</li>
+</ul>
+
+<h3 id="ai_patrol_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_PATROL_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, PatrolAltType)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new AI_PATROL_ZONE Object. This PatrolArea will patrol an AIControllable within PatrolZone between 3000 and 6000 meters, with a variying speed between 600 and 900 km/h.</span>
+<span class="n">PatrolZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'PatrolZone'</span> <span class="p">)</span>
+<span class="n">PatrolSpawn</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'Patrol Group'</span> <span class="p">)</span>
+<span class="n">PatrolArea</span> <span class="o">=</span> <span class="n">AI_PATROL_ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="n">PatrolZone</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">900</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#zone_base%20patrolzone%20:%20the%20[zone](#zone-module)%20where%20the%20patrol%20needs%20to%20be-class">ZONE_BASE PatrolZone : The <a href="#zone-module">Zone</a> where the patrol needs to be</a> executed.</li>
+<li><a href="#altitude%20patrolflooraltitude%20:%20the%20lowest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolFloorAltitude : The lowest altitude in meters where to execute the</a> patrol.</li>
+<li><a href="#altitude%20patrolceilingaltitude%20:%20the%20highest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolCeilingAltitude : The highest altitude in meters where to execute the</a> patrol.</li>
+<li><a href="#speed%20self%20:%20patrolminspeed%20the%20minimum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+<li><a href="#speed%20self%20:%20patrolmaxspeed%20the%20maximum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+<li><a href="#altitudetype%20patrolalttype%20:%20the%20altitude%20type%20(&quot;radio&quot;==&quot;agl&quot;," title="baro&quot;==&quot;asl">AltitudeType PatrolAltType : The altitude type (&ldquo;RADIO&rdquo;==&ldquo;AGL&rdquo;, &ldquo;BARO&rdquo;==&ldquo;ASL&rdquo;). Defaults to</a>. defaults to-class) RADIO</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onleavestopped-controllable-from-event-to">AI_PATROL_ZONE:OnLeaveStopped(Controllable, From, Event, To)</h3>
+
+<p>OnLeave Transition Handler for State Stopped.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onenterstopped-controllable-from-event-to">AI_PATROL_ZONE:OnEnterStopped(Controllable, From, Event, To)</h3>
+
+<p>OnEnter Transition Handler for State Stopped.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforestop-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeStop(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Stop.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterstop-controllable-from-event-to">AI_PATROL_ZONE:OnAfterStop(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Stop.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-stop">AI_PATROL_ZONE:Stop()</h3>
+
+<p>Synchronous Event Trigger for Event Stop.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforestart-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeStart(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Start.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterstart-controllable-from-event-to">AI_PATROL_ZONE:OnAfterStart(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Start.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-start">AI_PATROL_ZONE:Start()</h3>
+
+<p>Synchronous Event Trigger for Event Start.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onleavepatrolling-controllable-from-event-to">AI_PATROL_ZONE:OnLeavePatrolling(Controllable, From, Event, To)</h3>
+
+<p>OnLeave Transition Handler for State Patrolling.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onenterpatrolling-controllable-from-event-to">AI_PATROL_ZONE:OnEnterPatrolling(Controllable, From, Event, To)</h3>
+
+<p>OnEnter Transition Handler for State Patrolling.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforeroute-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeRoute(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Route.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterroute-controllable-from-event-to">AI_PATROL_ZONE:OnAfterRoute(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Route.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-route">AI_PATROL_ZONE:Route()</h3>
+
+<p>Synchronous Event Trigger for Event Route.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforestatus-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeStatus(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Status.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterstatus-controllable-from-event-to">AI_PATROL_ZONE:OnAfterStatus(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Status.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-status">AI_PATROL_ZONE:Status()</h3>
+
+<p>Synchronous Event Trigger for Event Status.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforedetect-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeDetect(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Detect.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterdetect-controllable-from-event-to">AI_PATROL_ZONE:OnAfterDetect(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Detect.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-detect">AI_PATROL_ZONE:Detect()</h3>
+
+<p>Synchronous Event Trigger for Event Detect.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforedetected-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeDetected(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event Detected.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterdetected-controllable-from-event-to">AI_PATROL_ZONE:OnAfterDetected(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event Detected.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-detected">AI_PATROL_ZONE:Detected()</h3>
+
+<p>Synchronous Event Trigger for Event Detected.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforertb-controllable-from-event-to">AI_PATROL_ZONE:OnBeforeRTB(Controllable, From, Event, To)</h3>
+
+<p>OnBefore Transition Handler for Event RTB.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterrtb-controllable-from-event-to">AI_PATROL_ZONE:OnAfterRTB(Controllable, From, Event, To)</h3>
+
+<p>OnAfter Transition Handler for Event RTB.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-rtb">AI_PATROL_ZONE:RTB()</h3>
+
+<p>Synchronous Event Trigger for Event RTB.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onleavereturning-controllable-from-event-to">AI_PATROL_ZONE:OnLeaveReturning(Controllable, From, Event, To)</h3>
+
+<p>OnLeave Transition Handler for State Returning.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : false to cancel Transition.</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onenterreturning-controllable-from-event-to">AI_PATROL_ZONE:OnEnterReturning(Controllable, From, Event, To)</h3>
+
+<p>OnEnter Transition Handler for State Returning.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-setspeed-self-self">AI_PATROL_ZONE:SetSpeed(self, self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#speed%20self%20:%20patrolminspeed%20the%20minimum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+<li><a href="#speed%20self%20:%20patrolmaxspeed%20the%20maximum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setaltitude-patrolflooraltitude-patrolceilingaltitude">AI_PATROL_ZONE:SetAltitude(PatrolFloorAltitude, PatrolCeilingAltitude)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#altitude%20patrolflooraltitude%20:%20the%20lowest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolFloorAltitude : The lowest altitude in meters where to execute the</a> patrol.</li>
+<li><a href="#altitude%20patrolceilingaltitude%20:%20the%20highest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolCeilingAltitude : The highest altitude in meters where to execute the</a> patrol.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectionon">AI_PATROL_ZONE:SetDetectionOn()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectionoff">AI_PATROL_ZONE:SetDetectionOff()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setstatusoff">AI_PATROL_ZONE:SetStatusOff()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectionactivated">AI_PATROL_ZONE:SetDetectionActivated()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectiondeactivated">AI_PATROL_ZONE:SetDetectionDeactivated()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectioninterval-seconds">AI_PATROL_ZONE:SetDetectionInterval(Seconds)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li>number Seconds : The interval in seconds.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-setdetectionzone-detectionzone">AI_PATROL_ZONE:SetDetectionZone(DetectionZone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#zone%20detectionzone%20:%20the%20zone%20where%20to%20detect-class">ZONE DetectionZone : The zone where to detect</a> targets.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-getdetectedunits">AI_PATROL_ZONE:GetDetectedUnits()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>table[] The : list of <a href="#unit-class">UNIT</a>s</li>
+</ul>
+
+<h3 id="ai_patrol_zone-cleardetectedunits">AI_PATROL_ZONE:ClearDetectedUnits()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-managefuel-patrolfueltresholdpercentage-patroloutoffuelorbittime">AI_PATROL_ZONE:ManageFuel(PatrolFuelTresholdPercentage, PatrolOutOfFuelOrbitTime)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li>number PatrolFuelTresholdPercentage : The treshold in percentage (between 0 and 1) when the AIControllable is considered to get out of fuel.</li>
+<li>number PatrolOutOfFuelOrbitTime : The amount of seconds the out of fuel AIControllable will orbit before returning to the base.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-managedamage-patroldamagetreshold">AI_PATROL_ZONE:ManageDamage(PatrolDamageTreshold)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li>number PatrolDamageTreshold : The treshold in percentage (between 0 and 1) when the AI is considered to be damaged.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onafterstart-controllable-from-event-to">AI_PATROL_ZONE:onafterStart(Controllable, From, Event, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="ai_patrol_zone-onbeforedetect-controllable">AI_PATROL_ZONE:onbeforeDetect(Controllable)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onafterdetect-controllable">AI_PATROL_ZONE:onafterDetect(Controllable)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onafterroute-controllable-from-event-to">AI_PATROL_ZONE:onafterRoute(Controllable, From, Event, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onbeforestatus">AI_PATROL_ZONE:onbeforeStatus()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onafterstatus">AI_PATROL_ZONE:onafterStatus()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onafterrtb">AI_PATROL_ZONE:onafterRTB()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onafterdead">AI_PATROL_ZONE:onafterDead()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-oncrash-eventdata">AI_PATROL_ZONE:OnCrash(EventData)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onejection-eventdata">AI_PATROL_ZONE:OnEjection(EventData)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="ai_patrol_zone-onpilotdead-eventdata">AI_PATROL_ZONE:OnPilotDead(EventData)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

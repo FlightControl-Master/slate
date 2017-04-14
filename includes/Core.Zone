@@ -1,0 +1,770 @@
+<h1 id="core-zone-module">Core.Zone Module</h1>
+
+<p><strong>Core</strong> - ZONE classes define <strong>zones</strong> within your mission of <strong>various forms</strong>, with <strong>various capabilities</strong>.</p>
+
+<p><img src="/includes/Pictures/ZONE/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>There are essentially two core functions that zones accomodate:</p>
+
+<ul>
+<li>Test if an object is within the zone boundaries.</li>
+<li>Provide the zone behaviour. Some zones are static, while others are moveable.</li>
+</ul>
+
+<p>The object classes are using the zone classes to test the zone boundaries, which can take various forms:</p>
+
+<ul>
+<li>Test if completely within the zone.</li>
+<li>Test if partly within the zone (for <a href="#group-class">GROUP</a> objects).</li>
+<li>Test if not in the zone.</li>
+<li>Distance to the nearest intersecting point of the zone.</li>
+<li>Distance to the center of the zone.</li>
+<li>&hellip;</li>
+</ul>
+
+<p>Each of these ZONE classes have a zone name, and specific parameters defining the zone type:</p>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>: The ZONE_BASE class defining the base for all other zone classes.</li>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>: The ZONE_RADIUS class defined by a zone name, a location and a radius.</li>
+<li><a href="#zone-class">ZONE</a>: The ZONE class, defined by the zone name as defined within the Mission Editor.</li>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>: The ZONE_UNIT class defines by a zone around a <a href="#unit-class">UNIT</a> with a radius.</li>
+<li><a href="#zone_group-class">ZONE_GROUP</a>: The ZONE_GROUP class defines by a zone around a <a href="#group-class">GROUP</a> with a radius.</li>
+<li><a href="#zone_polygon-class">ZONE_POLYGON</a>: The ZONE_POLYGON class defines by a sequence of <a href="#group-class">GROUP</a> waypoints within the Mission Editor, forming a polygon.</li>
+</ul>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<p>2017-02-28: ZONE_BASE:<strong>IsVec2InZone()</strong> replaces ZONE_BASE:<em>IsPointVec2InZone()</em>.
+2017-02-28: ZONE_BASE:<strong>IsVec3InZone()</strong> replaces ZONE_BASE:<em>IsPointVec3InZone()</em>.
+2017-02-28: ZONE_RADIUS:<strong>IsVec2InZone()</strong> replaces ZONE_RADIUS:<em>IsPointVec2InZone()</em>.
+2017-02-28: ZONE_RADIUS:<strong>IsVec3InZone()</strong> replaces ZONE_RADIUS:<em>IsPointVec3InZone()</em>.
+2017-02-28: ZONE_POLYGON:<strong>IsVec2InZone()</strong> replaces ZONE_POLYGON:<em>IsPointVec2InZone()</em>.
+2017-02-28: ZONE_POLYGON:<strong>IsVec3InZone()</strong> replaces ZONE_POLYGON:<em>IsPointVec3InZone()</em>.</p>
+
+<p>2017-02-18: ZONE_POLYGON_BASE:<strong>GetRandomPointVec2()</strong> added.</p>
+
+<p>2017-02-18: ZONE_POLYGON_BASE:<strong>GetRandomPointVec3()</strong> added.</p>
+
+<p>2017-02-18: ZONE_RADIUS:<strong>GetRandomPointVec3( inner, outer )</strong> added.</p>
+
+<p>2017-02-18: ZONE_RADIUS:<strong>GetRandomPointVec2( inner, outer )</strong> added.</p>
+
+<p>2016-08-15: ZONE_BASE:<strong>GetName()</strong> added.</p>
+
+<p>2016-08-15: ZONE_BASE:<strong>SetZoneProbability( ZoneProbability )</strong> added.</p>
+
+<p>2016-08-15: ZONE_BASE:<strong>GetZoneProbability()</strong> added.</p>
+
+<p>2016-08-15: ZONE_BASE:<strong>GetZoneMaybe()</strong> added.</p>
+
+<h2 id="zone_base-class">ZONE_BASE Class</h2>
+
+<pre>
+Inheritance : The ZONE_BASE Class inherits from the following parents :
+BASE
+    `-- ZONE_BASE
+</pre>
+
+<p>This class is an abstract BASE class for derived classes, and is not meant to be instantiated.</p>
+
+<h4 id="1-1-each-zone-has-a-name">1.1) Each zone has a name:</h4>
+
+<ul>
+<li><a href="#zone_base-getname">ZONE_BASE:GetName()</a>: Returns the name of the zone.</li>
+</ul>
+
+<h4 id="1-2-each-zone-implements-two-polymorphic-functions-defined-in-zone_base">1.2) Each zone implements two polymorphic functions defined in <a href="#zone_base-class">ZONE_BASE</a>:</h4>
+
+<ul>
+<li><a href="#zone_base-isvec2inzone-vec2">ZONE_BASE:IsVec2InZone()</a>: Returns if a Vec2 is within the zone.</li>
+<li><a href="#zone_base-isvec3inzone-vec3">ZONE_BASE:IsVec3InZone()</a>: Returns if a Vec3 is within the zone.</li>
+</ul>
+
+<h4 id="1-3-a-zone-has-a-probability-factor-that-can-be-set-to-randomize-a-selection-between-zones">1.3) A zone has a probability factor that can be set to randomize a selection between zones:</h4>
+
+<ul>
+<li>ZONE_BASE-SetRandomizeProbability: Set the randomization probability of a zone to be selected, taking a value between 0 and 1 ( 0 = 0%, 1 = 100% )</li>
+<li>ZONE_BASE-GetRandomizeProbability: Get the randomization probability of a zone to be selected, passing a value between 0 and 1 ( 0 = 0%, 1 = 100% )</li>
+<li><a href="#zone_base-getzonemaybe">ZONE_BASE:GetZoneMaybe()</a>: Get the zone taking into account the randomization probability. nil is returned if this zone is not a candidate.</li>
+</ul>
+
+<h4 id="1-4-a-zone-manages-vectors">1.4) A zone manages Vectors:</h4>
+
+<ul>
+<li><a href="#zone_base-getvec2">ZONE_BASE:GetVec2()</a>: Returns the @{DCSTypes#Vec2} coordinate of the zone.</li>
+<li><a href="#zone_base-getrandomvec2">ZONE_BASE:GetRandomVec2()</a>: Define a random @{DCSTypes#Vec2} within the zone.</li>
+</ul>
+
+<h4 id="1-5-a-zone-has-a-bounding-square">1.5) A zone has a bounding square:</h4>
+
+<ul>
+<li><a href="#zone_base-getboundingsquare">ZONE_BASE:GetBoundingSquare()</a>: Get the outer most bounding square of the zone.</li>
+</ul>
+
+<h4 id="1-6-a-zone-can-be-marked">1.6) A zone can be marked:</h4>
+
+<ul>
+<li><a href="#zone_base-smokezone-smokecolor">ZONE_BASE:SmokeZone()</a>: Smokes the zone boundaries in a color.</li>
+<li>ZONE_BASE-FlareZone: Flares the zone boundaries in a color.</li>
+</ul>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>string ZoneName : Name of the zone.</li>
+<li>number ZoneProbability : A value between 0 and 1. 0 = 0% and 1 = 100% probability.</li>
+</ul>
+
+<h3 id="zone_base-new-zonename">ZONE_BASE:New(ZoneName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li>string ZoneName : Name of the zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h3 id="zone_base-getname">ZONE_BASE:GetName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : name of the zone.</li>
+</ul>
+
+<h3 id="zone_base-isvec2inzone-vec2">ZONE_BASE:IsVec2InZone(Vec2)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#vec2%20vec2%20:%20the%20location%20to-class">Vec2 Vec2 : The location to</a> test.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if the location is within the zone.</li>
+</ul>
+
+<h3 id="zone_base-isvec3inzone-vec3">ZONE_BASE:IsVec3InZone(Vec3)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#vec3%20vec3%20:%20the%20point%20to-class">Vec3 Vec3 : The point to</a> test.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if the point is within the zone.</li>
+</ul>
+
+<h3 id="zone_base-getvec2">ZONE_BASE:GetVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>nil. self</li>
+</ul>
+
+<h3 id="zone_base-getpointvec2-height">ZONE_BASE:GetPointVec2(Height)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#distance%20height%20:%20the%20height%20to%20add%20to%20the%20land%20height%20where%20the%20center%20of%20the%20zone%20is-class">Distance Height : The height to add to the land height where the center of the zone is</a> located.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec2%20the%20:%20pointvec2%20of%20the-class">POINT_VEC2 The : PointVec2 of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_base-getvec3-height">ZONE_BASE:GetVec3(Height)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#distance%20height%20:%20the%20height%20to%20add%20to%20the%20land%20height%20where%20the%20center%20of%20the%20zone%20is-class">Distance Height : The height to add to the land height where the center of the zone is</a> located.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec3%20the%20:%20vec3%20of%20the-class">Vec3 The : Vec3 of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_base-getpointvec3-height">ZONE_BASE:GetPointVec3(Height)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#distance%20height%20:%20the%20height%20to%20add%20to%20the%20land%20height%20where%20the%20center%20of%20the%20zone%20is-class">Distance Height : The height to add to the land height where the center of the zone is</a> located.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec3%20the%20:%20pointvec3%20of%20the-class">POINT_VEC3 The : PointVec3 of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_base-getrandomvec2">ZONE_BASE:GetRandomVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20vec2-class">Vec2 The : Vec2</a> coordinates.</li>
+</ul>
+
+<h3 id="zone_base-getrandompointvec2">ZONE_BASE:GetRandomPointVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec2%20the%20:%20pointvec2-class">POINT_VEC2 The : PointVec2</a> coordinates.</li>
+</ul>
+
+<h3 id="zone_base-getrandompointvec3">ZONE_BASE:GetRandomPointVec3()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec3%20the%20:%20pointvec3-class">POINT_VEC3 The : PointVec3</a> coordinates.</li>
+</ul>
+
+<h3 id="zone_base-getboundingsquare">ZONE_BASE:GetBoundingSquare()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>nil The : bounding square.</li>
+</ul>
+
+<h3 id="zone_base-boundzone">ZONE_BASE:BoundZone()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="zone_base-smokezone-smokecolor">ZONE_BASE:SmokeZone(SmokeColor)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li><a href="#smokecolor%20smokecolor%20:%20the%20smoke-class">SMOKECOLOR SmokeColor : The smoke</a> color.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="zone_base-setzoneprobability-a">ZONE_BASE:SetZoneProbability(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+<li>ZoneProbability A : value between 0 and 1. 0 = 0% and 1 = 100% probability.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="zone_base-getzoneprobability">ZONE_BASE:GetZoneProbability()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>number A : value between 0 and 1. 0 = 0% and 1 = 100% probability.</li>
+</ul>
+
+<h3 id="zone_base-getzonemaybe">ZONE_BASE:GetZoneMaybe()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a>
+The : zone is selected taking into account the randomization probability factor.</li>
+<li>nil The : zone is not selected taking into account the randomization probability factor.</li>
+</ul>
+
+<h2 id="zone_base-boundingsquare-class">ZONE_BASE.BoundingSquare Class</h2>
+
+<pre>
+**The ZONE_BASE.BoundingSquare class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#distance%20x1%20:%20the%20lower%20x%20coordinate%20(left-class)%20down">Distance x1 : The lower x coordinate (left</a></li>
+<li><a href="#distance%20y1%20:%20the%20lower%20y%20coordinate%20(left-class)%20down">Distance y1 : The lower y coordinate (left</a></li>
+<li><a href="#distance%20x2%20:%20the%20higher%20x%20coordinate%20(right-class)%20up">Distance x2 : The higher x coordinate (right</a></li>
+<li><a href="#distance%20y2%20:%20the%20higher%20y%20coordinate%20(right-class)%20up">Distance y2 : The higher y coordinate (right</a></li>
+</ul>
+
+<h2 id="zone_radius-class">ZONE_RADIUS Class</h2>
+
+<pre>
+Inheritance : The ZONE_RADIUS Class inherits from the following parents :
+BASE
+    `-- ZONE_BASE
+        `-- ZONE_RADIUS
+</pre>
+
+<p>The ZONE_RADIUS class defined by a zone name, a location and a radius.
+This class implements the inherited functions from <a href="#zone_base%20taking%20into%20account%20the%20own%20zone%20format%20and-class">ZONE_BASE taking into account the own zone format and</a> properties.</p>
+
+<h4 id="2-1-zone_radius-constructor">2.1) <a href="#zone_radius-class">ZONE_RADIUS</a> constructor</h4>
+
+<ul>
+<li><a href="#zone_radius-new-zonename-vec2-radius">ZONE_RADIUS:New()</a>: Constructor.</li>
+</ul>
+
+<h4 id="2-2-manage-the-radius-of-the-zone">2.2) Manage the radius of the zone</h4>
+
+<ul>
+<li><a href="#zone_radius-setradius-radius">ZONE_RADIUS:SetRadius()</a>: Sets the radius of the zone.</li>
+<li><a href="#zone_radius-getradius">ZONE_RADIUS:GetRadius()</a>: Returns the radius of the zone.</li>
+</ul>
+
+<h4 id="2-3-manage-the-location-of-the-zone">2.3) Manage the location of the zone</h4>
+
+<ul>
+<li><a href="#zone_radius-setvec2-vec2">ZONE_RADIUS:SetVec2()</a>: Sets the @{DCSTypes#Vec2} of the zone.</li>
+<li><a href="#zone_radius-getvec2">ZONE_RADIUS:GetVec2()</a>: Returns the @{DCSTypes#Vec2} of the zone.</li>
+<li><a href="#zone_radius-getvec3-height">ZONE_RADIUS:GetVec3()</a>: Returns the @{DCSTypes#Vec3} of the zone, taking an additional height parameter.</li>
+</ul>
+
+<h4 id="2-4-zone-point-randomization">2.4) Zone point randomization</h4>
+
+<p>Various functions exist to find random points within the zone.</p>
+
+<ul>
+<li><a href="#zone_radius-getrandomvec2-inner-outer">ZONE_RADIUS:GetRandomVec2()</a>: Gets a random 2D point in the zone.</li>
+<li><a href="#zone_radius-getrandompointvec2-inner-outer">ZONE_RADIUS:GetRandomPointVec2()</a>: Gets a @{Point#POINT_VEC2} object representing a random 2D point in the zone.</li>
+<li><a href="#zone_radius-getrandompointvec3-inner-outer">ZONE_RADIUS:GetRandomPointVec3()</a>: Gets a @{Point#POINT_VEC3} object representing a random 3D point in the zone. Note that the height of the point is at landheight.</li>
+</ul>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#vec2%20vec2%20:%20the%20current%20location%20of%20the-class">Vec2 Vec2 : The current location of the</a> zone.</li>
+<li><a href="#distance%20radius%20:%20the%20radius%20of%20the-class">Distance Radius : The radius of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-new-zonename-vec2-radius">ZONE_RADIUS:New(ZoneName, Vec2, Radius)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li>string ZoneName : Name of the zone.</li>
+<li><a href="#vec2%20vec2%20:%20the%20location%20of%20the-class">Vec2 Vec2 : The location of the</a> zone.</li>
+<li><a href="#distance%20radius%20:%20the%20radius%20of%20the-class">Distance Radius : The radius of the</a> zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h3 id="zone_radius-boundzone-points-unbound">ZONE_RADIUS:BoundZone(Points, UnBound)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li>number Points : (optional) The amount of points in the circle.</li>
+<li>boolean UnBound : If true the tyres will be destroyed.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h3 id="zone_radius-smokezone-smokecolor-points">ZONE_RADIUS:SmokeZone(SmokeColor, Points)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#smokecolor%20smokecolor%20:%20the%20smoke-class">SMOKECOLOR SmokeColor : The smoke</a> color.</li>
+<li>number Points : (optional) The amount of points in the circle.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h3 id="zone_radius-flarezone-flarecolor-points-azimuth">ZONE_RADIUS:FlareZone(FlareColor, Points, Azimuth)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#flarecolor%20flarecolor%20:%20the%20flare-class">FLARECOLOR FlareColor : The flare</a> color.</li>
+<li>number Points : (optional) The amount of points in the circle.</li>
+<li><a href="#azimuth%20azimuth%20:%20(optional)%20azimuth%20the%20azimuth%20of%20the-class">Azimuth Azimuth : (optional) Azimuth The azimuth of the</a> flare.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h3 id="zone_radius-getradius">ZONE_RADIUS:GetRadius()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#distance%20the%20:%20radius%20of%20the-class">Distance The : radius of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-setradius-radius">ZONE_RADIUS:SetRadius(Radius)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#distance%20radius%20:%20the%20radius%20of%20the-class">Distance Radius : The radius of the</a> zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#distance%20the%20:%20radius%20of%20the-class">Distance The : radius of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-getvec2">ZONE_RADIUS:GetVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20location%20of%20the-class">Vec2 The : location of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-setvec2-vec2">ZONE_RADIUS:SetVec2(Vec2)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#vec2%20vec2%20:%20the%20new%20location%20of%20the-class">Vec2 Vec2 : The new location of the</a> zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20new%20location%20of%20the-class">Vec2 The : new location of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-getvec3-height">ZONE_RADIUS:GetVec3(Height)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#distance%20height%20:%20the%20height%20to%20add%20to%20the%20land%20height%20where%20the%20center%20of%20the%20zone%20is-class">Distance Height : The height to add to the land height where the center of the zone is</a> located.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec3%20the%20:%20point%20of%20the-class">Vec3 The : point of the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-isvec2inzone-vec2">ZONE_RADIUS:IsVec2InZone(Vec2)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#vec2%20vec2%20:%20the%20location%20to-class">Vec2 Vec2 : The location to</a> test.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if the location is within the zone.</li>
+</ul>
+
+<h3 id="zone_radius-isvec3inzone-vec3">ZONE_RADIUS:IsVec3InZone(Vec3)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li><a href="#vec3%20vec3%20:%20the%20point%20to-class">Vec3 Vec3 : The point to</a> test.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean true : if the point is within the zone.</li>
+</ul>
+
+<h3 id="zone_radius-getrandomvec2-inner-outer">ZONE_RADIUS:GetRandomVec2(inner, outer)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li>number inner : (optional) Minimal distance from the center of the zone. Default is 0.</li>
+<li>number outer : (optional) Maximal distance from the outer edge of the zone. Default is the radius of the zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20random%20location%20within%20the-class">Vec2 The : random location within the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-getrandompointvec2-inner-outer">ZONE_RADIUS:GetRandomPointVec2(inner, outer)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li>number inner : (optional) Minimal distance from the center of the zone. Default is 0.</li>
+<li>number outer : (optional) Maximal distance from the outer edge of the zone. Default is the radius of the zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec2%20the%20:%20@{point#point_vec2}%20object%20reflecting%20the%20random%203d%20location%20within%20the-class">POINT_VEC2 The : @{Point#POINT_VEC2} object reflecting the random 3D location within the</a> zone.</li>
+</ul>
+
+<h3 id="zone_radius-getrandompointvec3-inner-outer">ZONE_RADIUS:GetRandomPointVec3(inner, outer)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_radius-class">ZONE_RADIUS</a>
+self</li>
+<li>number inner : (optional) Minimal distance from the center of the zone. Default is 0.</li>
+<li>number outer : (optional) Maximal distance from the outer edge of the zone. Default is the radius of the zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#point_vec3%20the%20:%20@{point#point_vec3}%20object%20reflecting%20the%20random%203d%20location%20within%20the-class">POINT_VEC3 The : @{Point#POINT_VEC3} object reflecting the random 3D location within the</a> zone.</li>
+</ul>
+
+<h2 id="zone_unit-class">ZONE_UNIT Class</h2>
+
+<pre>
+Inheritance : The ZONE_UNIT Class inherits from the following parents :
+BASE
+    `-- ZONE_BASE
+        `-- ZONE_RADIUS
+            `-- ZONE_UNIT
+</pre>
+
+<p>The ZONE_UNIT class defined by a zone around a <a href="#unit-class">UNIT</a> with a radius.
+This class implements the inherited functions from <a href="#zone_radius-class">ZONE_RADIUS</a> taking into account the own zone format and properties.</p>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#unit-class">UNIT</a> ZoneUNIT</li>
+</ul>
+
+<h3 id="zone_unit-new-zonename-zoneunit-radius">ZONE_UNIT:New(ZoneName, ZoneUNIT, Radius)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>
+self</li>
+<li>string ZoneName : Name of the zone.</li>
+<li><a href="#unit%20zoneunit%20:%20the%20unit%20as%20the%20center%20of%20the-class">UNIT ZoneUNIT : The unit as the center of the</a> zone.</li>
+<li><a href="#distance%20radius%20:%20the%20radius%20of%20the-class">Distance Radius : The radius of the</a> zone.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>
+self</li>
+</ul>
+
+<h3 id="zone_unit-getvec2">ZONE_UNIT:GetVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20location%20of%20the%20zone%20based%20on%20the-class">Vec2 The : location of the zone based on the</a> <a href="#unit-class">UNIT</a>location.</li>
+</ul>
+
+<h3 id="zone_unit-getrandomvec2">ZONE_UNIT:GetRandomVec2()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec2%20the%20:%20random%20location%20within%20the-class">Vec2 The : random location within the</a> zone.</li>
+</ul>
+
+<h3 id="zone_unit-getvec3-height">ZONE_UNIT:GetVec3(Height)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#zone_unit-class">ZONE_UNIT</a>
+self</li>
+<li><a href="#distance%20height%20:%20the%20height%20to%20add%20to%20the%20land%20height%20where%20the%20center%20of%20the%20zone%20is-class">Distance Height : The height to add to the land height where the center of the zone is</a> located.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#vec3%20the%20:%20point%20of%20the-class">Vec3 The : point of the</a> zone.</li>
+</ul>
+
+<h2 id="zone_polygon_base-listvec2-class">ZONE_POLYGON_BASE.ListVec2 Class</h2>
+
+<pre>
+**The ZONE_POLYGON_BASE.ListVec2 class does not inherit**
+</pre>

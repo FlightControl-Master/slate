@@ -1,0 +1,186 @@
+<h1 id="actions-smoke-module">Actions.Smoke Module</h1>
+
+<p>(SP) (MP) (FSM) Route AI or players through waypoints or to zones.</p>
+
+<h4 id="act_assist-fsm-class-extends-fsm_process"><a href="#act_assist-class">ACT_ASSIST</a> FSM class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+
+<h4 id="act_assist-state-machine">ACT_ASSIST state machine:</h4>
+
+<p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
+All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
+Each derived class follows exactly the same process, using the same events and following the same state transitions,
+but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
+
+<h4 id="act_assist-events">ACT_ASSIST <strong>Events</strong>:</h4>
+
+<p>These are the events defined in this class:</p>
+
+<ul>
+<li><strong>Start</strong>:  The process is started.</li>
+<li><strong>Next</strong>: The process is smoking the targets in the given zone.</li>
+</ul>
+
+<h4 id="act_assist-event-methods">ACT_ASSIST <strong>Event methods</strong>:</h4>
+
+<p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
+There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
+
+<ul>
+<li><strong>Immediate</strong>: The event method has exactly the name of the event.</li>
+<li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
+</ul>
+
+<h4 id="act_assist-states">ACT_ASSIST <strong>States</strong>:</h4>
+
+<ul>
+<li><strong>None</strong>: The controllable did not receive route commands.</li>
+<li><strong>AwaitSmoke (*)</strong>: The process is awaiting to smoke the targets in the zone.</li>
+<li><strong>Smoking (*)</strong>: The process is smoking the targets in the zone.</li>
+<li><strong>Failed (*)</strong>: The process has failed.</li>
+</ul>
+
+<p>(*) End states of the process.</p>
+
+<h4 id="act_assist-state-transition-methods">ACT_ASSIST state transition methods:</h4>
+
+<p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
+There are 2 moments when state transition methods will be called by the state machine:</p>
+
+<ul>
+<li><p><strong>Before</strong> the state transition.
+The state transition method needs to start with the name <strong>OnBefore + the name of the state</strong>.
+If the state transition method returns false, then the processing of the state transition will not be done!
+If you want to change the behaviour of the AIControllable at this event, return false,
+but then you&rsquo;ll need to specify your own logic using the AIControllable!</p></li>
+<li><p><strong>After</strong> the state transition.
+The state transition method needs to start with the name <strong>OnAfter + the name of the state</strong>.
+These state transition methods need to provide a return value, which is specified at the function description.</p></li>
+</ul>
+
+<h4 id="1-act_assist_smoke_targets_zone-class-extends-act_assist">1) <a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a> class, extends <a href="#act_assist-class">ACT_ASSIST</a></h4>
+
+<p>The ACT_ASSIST_SMOKE_TARGETS_ZONE class implements the core functions to smoke targets in a <a href="#zone-module">Zone</a>.
+The targets are smoked within a certain range around each target, simulating a realistic smoking behaviour.
+At random intervals, a new target is smoked.</p>
+
+<h4 id="1-1-act_assist_smoke_targets_zone-constructor">1.1) ACT_ASSIST_SMOKE_TARGETS_ZONE constructor:</h4>
+
+<ul>
+<li><a href="#act_assist_smoke_targets_zone-new-targetsetunit-targetzone">ACT_ASSIST_SMOKE_TARGETS_ZONE:New()</a>: Creates a new ACT_ASSIST_SMOKE_TARGETS_ZONE object.</li>
+</ul>
+
+<h2 id="act_assist-class">ACT_ASSIST Class</h2>
+
+<pre>
+Inheritance : The ACT_ASSIST Class inherits from the following parents :
+ERROR !
+    `-- ACT_ASSIST
+</pre>
+
+<h3 id="act_assist-new">ACT_ASSIST:New()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist-class">ACT_ASSIST</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#act_assist-class">ACT_ASSIST</a>
+self</li>
+</ul>
+
+<h3 id="act_assist-onafterstart-processunit-event-from-to">ACT_ASSIST:onafterStart(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist-class">ACT_ASSIST</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_assist-onafterstop-processunit-event-from-to">ACT_ASSIST:onafterStop(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist-class">ACT_ASSIST</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h2 id="act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE Class</h2>
+
+<pre>
+Inheritance : The ACT_ASSIST_SMOKE_TARGETS_ZONE Class inherits from the following parents :
+ERROR !
+    `-- ACT_ASSIST
+        `-- ACT_ASSIST_SMOKE_TARGETS_ZONE
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> TargetZone</li>
+</ul>
+
+<h3 id="act_assist_smoke_targets_zone-new-targetsetunit-targetzone">ACT_ASSIST_SMOKE_TARGETS_ZONE:New(TargetSetUnit, TargetZone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a>
+self</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> TargetZone</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="act_assist_smoke_targets_zone-init-targetsetunit-targetzone">ACT_ASSIST_SMOKE_TARGETS_ZONE:Init(TargetSetUnit, TargetZone)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a>
+self</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> TargetZone</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a>
+self</li>
+</ul>
+
+<h3 id="act_assist_smoke_targets_zone-onentersmoking-processunit-event-from-to">ACT_ASSIST_SMOKE_TARGETS_ZONE:onenterSmoking(ProcessUnit, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

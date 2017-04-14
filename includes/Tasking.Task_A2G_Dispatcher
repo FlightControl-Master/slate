@@ -1,0 +1,182 @@
+<h1 id="tasking-task_a2g_dispatcher-module">Tasking.Task_A2G_Dispatcher Module</h1>
+
+<p><strong>Tasking</strong> - The TASK_A2G_DISPATCHER creates and manages player TASK_A2G tasks based on detected targets.</p>
+
+<h4 id="1-task_a2g_dispatcher-class-extends-detection_manager">1) @{#TASK_A2G_DISPATCHER} class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h4>
+
+<p>The @{#TASK_A2G_DISPATCHER} class implements the dynamic dispatching of tasks upon groups of detected units determined a <a href="#set-module">Set</a> of FAC (groups).
+The FAC will detect units, will group them, and will dispatch <a href="#task-module">Task</a>s to groups. Depending on the type of target detected, different tasks will be dispatched.
+Find a summary below describing for which situation a task type is created:</p>
+
+<ul>
+<li><strong>CAS Task</strong>: Is created when there are enemy ground units within range of the FAC, while there are friendly units in the FAC perimeter.</li>
+<li><strong>BAI Task</strong>: Is created when there are enemy ground units within range of the FAC, while there are NO other friendly units within the FAC perimeter.</li>
+<li><strong>SEAD Task</strong>: Is created when there are enemy ground units wihtin range of the FAC, with air search radars.</li>
+</ul>
+
+<p>Other task types will follow&hellip;</p>
+
+<h5 id="3-1-task_a2g_dispatcher-constructor">3.1) TASK_A2G_DISPATCHER constructor:</h5>
+
+<p>The @{#TASK_A2G_DISPATCHER.New}() method creates a new TASK_A2G_DISPATCHER instance.</p>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<p>2017-03-09: Initial class and API.</p>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
+</ul>
+
+<h2 id="task_a2g_dispatcher-class">TASK_A2G_DISPATCHER Class</h2>
+
+<pre>
+Inheritance : The TASK_A2G_DISPATCHER Class inherits from the following parents :
+ERROR !
+    `-- DETECTION_MANAGER
+        `-- TASK_A2G_DISPATCHER
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#set_group%20setgroup%20:%20the%20groups%20to%20which%20the%20fac%20will%20report-class">SET_GROUP SetGroup : The groups to which the FAC will report</a> to.</li>
+<li><a href="#detection_base%20detection%20:%20the%20detection_base%20object%20that%20is%20used%20to%20report%20the%20detected-class">DETECTION_BASE Detection : The DETECTION_BASE object that is used to report the detected</a> objects.</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-new-mission-setgroup-detection">TASK_A2G_DISPATCHER:New(Mission, SetGroup, Detection)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#mission%20mission%20:%20the%20mission%20for%20which%20the%20task%20dispatching%20is-class">MISSION Mission : The mission for which the task dispatching is</a> done.</li>
+<li><a href="#set_group%20setgroup%20:%20the%20set%20of%20groups%20that%20can%20join%20the%20tasks%20within%20the-class">SET_GROUP SetGroup : The set of groups that can join the tasks within the</a> mission.</li>
+<li><a href="#detection_base%20detection%20:%20the%20detection%20results%20that%20are%20used%20to%20dynamically%20assign%20new%20tasks%20to%20human-class">DETECTION_BASE Detection : The detection results that are used to dynamically assign new tasks to human</a> players.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-onafterassign-from-event-to-task-taskunit-playername">TASK_A2G_DISPATCHER:OnAfterAssign(From, Event, To, Task, TaskUnit, PlayerName)</h3>
+
+<p>OnAfter Transition Handler for Event Assign.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li>string From : The From State string.</li>
+<li>string Event : The Event string.</li>
+<li>string To : The To State string.</li>
+<li><a href="#task_a2g-class">TASK_A2G</a> Task</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li>string PlayerName</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="task_a2g_dispatcher-evaluatesead-detecteditem">TASK_A2G_DISPATCHER:EvaluateSEAD(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#set_unit%20targetsetunit:%20:%20the%20target%20set%20of-class">SET_UNIT TargetSetUnit: : The target set of</a> units.</li>
+<li>nil If : there are no targets to be set.</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-evaluatecas-detecteditem">TASK_A2G_DISPATCHER:EvaluateCAS(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> self</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-evaluatebai-detecteditem">TASK_A2G_DISPATCHER:EvaluateBAI(DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> self</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem">TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#task-class">TASK</a> self</li>
+</ul>
+
+<h3 id="task_a2g_dispatcher-processdetected-detection">TASK_A2G_DISPATCHER:ProcessDetected(Detection)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#task_a-class">TASK_A</a>
+2G_DISPATCHER self</li>
+<li><a href="#detection_base%20detection%20:%20the%20detection%20created%20by%20the%20[detection_base](#detection_base-class)%20derived-class">DETECTION_BASE Detection : The detection created by the <a href="#detection_base-class">DETECTION_BASE</a> derived</a> object.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean Return : true if you want the task assigning to continue&hellip; false will cancel the loop.</li>
+</ul>

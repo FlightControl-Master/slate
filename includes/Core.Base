@@ -1,0 +1,817 @@
+<h1 id="core-base-module">Core.Base Module</h1>
+
+<p><strong>Core</strong> - BASE forms <strong>the basis of the MOOSE framework</strong>. Each class within the MOOSE framework derives from BASE.</p>
+
+<p><img src="/includes/Pictures/BASE/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>The <a href="#base-class">BASE</a> class is the core root class from where every other class in moose is derived.</p>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>YYYY-MM-DD: CLASS:<strong>NewFunction</strong>( Params ) replaces CLASS:<em>OldFunction</em>( Params )
+YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
+
+<p>Hereby the change log:</p>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<ul>
+<li>None.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
+
+<h2 id="base-class">BASE Class</h2>
+
+<pre>
+**The BASE class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>ClassName The : name of the class.</li>
+<li>ClassID The : ID number of the class.</li>
+<li>ClassNameAndID The : name of the class concatenated with the ID number of the class.</li>
+</ul>
+
+<h3 id="base-new">BASE:New()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h3 id="base-inherit-is-parent">BASE:Inherit(is, Parent)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Child is : the Child class that inherits.</li>
+<li><a href="#base-class">BASE</a>
+Parent : is the Parent class that the Child inherits from.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+Child</li>
+</ul>
+
+<h3 id="base-getparent-child">BASE:GetParent(Child)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#base-class">BASE</a>
+Child : is the Child class from which the Parent class needs to be retrieved.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h3 id="base-getclassnameandid">BASE:GetClassNameAndID()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : ClassName + ClassID of the class instance.</li>
+</ul>
+
+<h3 id="base-getclassname">BASE:GetClassName()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : ClassName of the class instance.</li>
+</ul>
+
+<h3 id="base-getclassid">BASE:GetClassID()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>string The : ClassID of the class instance.</li>
+</ul>
+
+<h3 id="base-eventdispatcher">BASE:EventDispatcher()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a> self</li>
+</ul>
+
+<h3 id="base-geteventpriority">BASE:GetEventPriority()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>number The : <a href="#event-module">Event</a> processing Priority.</li>
+</ul>
+
+<h3 id="base-seteventpriority-eventpriority">BASE:SetEventPriority(EventPriority)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>number EventPriority : The <a href="#event-module">Event</a> processing Priority.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>self self</li>
+</ul>
+
+<h3 id="base-eventremoveall">BASE:EventRemoveAll()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h3 id="base-handleevent-event-eventfunction">BASE:HandleEvent(Event, EventFunction)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#events-class">EVENTS</a> Event</li>
+<li>#function EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h3 id="base-unhandleevent-event">BASE:UnHandleEvent(Event)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#events-class">EVENTS</a> Event</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h3 id="base-oneventshot-eventdata">BASE:OnEventShot(EventData)</h3>
+
+<p>Occurs whenever any unit in a mission fires a weapon. But not any machine gun or autocannon based weapon, those are handled by EVENT.ShootingStart.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventhit-eventdata">BASE:OnEventHit(EventData)</h3>
+
+<p>Occurs whenever an object is hit by a weapon.
+initiator : The unit object the fired the weapon
+weapon: Weapon object that hit the target
+target: The Object that was hit.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventtakeoff-eventdata">BASE:OnEventTakeoff(EventData)</h3>
+
+<p>Occurs when an aircraft takes off from an airbase, farp, or ship.
+initiator : The unit that tookoff
+place: Object from where the AI took-off from. Can be an Airbase Object, FARP, or Ships</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventland-eventdata">BASE:OnEventLand(EventData)</h3>
+
+<p>Occurs when an aircraft lands at an airbase, farp or ship
+initiator : The unit that has landed
+place: Object that the unit landed on. Can be an Airbase Object, FARP, or Ships</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventcrash-eventdata">BASE:OnEventCrash(EventData)</h3>
+
+<p>Occurs when any aircraft crashes into the ground and is completely destroyed.
+initiator : The unit that has crashed</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventejection-eventdata">BASE:OnEventEjection(EventData)</h3>
+
+<p>Occurs when a pilot ejects from an aircraft
+initiator : The unit that has ejected</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventrefueling-eventdata">BASE:OnEventRefueling(EventData)</h3>
+
+<p>Occurs when an aircraft connects with a tanker and begins taking on fuel.
+initiator : The unit that is receiving fuel.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-onevent-eventdata">BASE:OnEvent(EventData)</h3>
+
+<p>Occurs when an object is completely destroyed.
+initiator : The unit that is was destroyed.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventpilotdead-eventdata">BASE:OnEventPilotDead(EventData)</h3>
+
+<p>Occurs when the pilot of an aircraft is killed. Can occur either if the player is alive and crashes or if a weapon kills the pilot without completely destroying the plane.
+initiator : The unit that the pilot has died in.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventbasecaptured-eventdata">BASE:OnEventBaseCaptured(EventData)</h3>
+
+<p>Occurs when a ground unit captures either an airbase or a farp.
+initiator : The unit that captured the base
+place: The airbase that was captured, can be a FARP or Airbase. When calling place:getCoalition() the faction will already be the new owning faction.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventmissionstart-eventdata">BASE:OnEventMissionStart(EventData)</h3>
+
+<p>Occurs when a mission starts</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventmissionend-eventdata">BASE:OnEventMissionEnd(EventData)</h3>
+
+<p>Occurs when a mission ends</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventrefuelingstop-eventdata">BASE:OnEventRefuelingStop(EventData)</h3>
+
+<p>Occurs when an aircraft is finished taking fuel.
+initiator : The unit that was receiving fuel.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventbirth-eventdata">BASE:OnEventBirth(EventData)</h3>
+
+<p>Occurs when any object is spawned into the mission.
+initiator : The unit that was spawned</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventhumanfailure-eventdata">BASE:OnEventHumanFailure(EventData)</h3>
+
+<p>Occurs when any system fails on a human controlled aircraft.
+initiator : The unit that had the failure</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventenginestartup-eventdata">BASE:OnEventEngineStartup(EventData)</h3>
+
+<p>Occurs when any aircraft starts its engines.
+initiator : The unit that is starting its engines.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventengineshutdown-eventdata">BASE:OnEventEngineShutdown(EventData)</h3>
+
+<p>Occurs when any aircraft shuts down its engines.
+initiator : The unit that is stopping its engines.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventplayerenterunit-eventdata">BASE:OnEventPlayerEnterUnit(EventData)</h3>
+
+<p>Occurs when any player assumes direct control of a unit.
+initiator : The unit that is being taken control of.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventplayerleaveunit-eventdata">BASE:OnEventPlayerLeaveUnit(EventData)</h3>
+
+<p>Occurs when any player relieves control of a unit to the AI.
+initiator : The unit that the player left.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventshootingstart-eventdata">BASE:OnEventShootingStart(EventData)</h3>
+
+<p>Occurs when any unit begins firing a weapon that has a high rate of fire. Most common with aircraft cannons (GAU-8), autocannons, and machine guns.
+initiator : The unit that is doing the shooing.
+target: The unit that is being targeted.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-oneventshootingend-eventdata">BASE:OnEventShootingEnd(EventData)</h3>
+
+<p>Occurs when any unit stops firing its weapon. Event will always correspond with a shooting start event.
+initiator : The unit that was doing the shooing.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-createeventbirth-eventtime-initiator-iniunitname-self-self">BASE:CreateEventBirth(EventTime, Initiator, IniUnitName, self, self)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#time%20eventtime%20:%20the%20time%20stamp%20of%20the-class">Time EventTime : The time stamp of the</a> event.</li>
+<li>Dcs.DCSWrapper.Object#Object Initiator : The initiating object of the event.</li>
+<li>string IniUnitName : The initiating unit name.</li>
+<li>place self</li>
+<li>subplace self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-createeventcrash-eventtime-initiator">BASE:CreateEventCrash(EventTime, Initiator)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#time%20eventtime%20:%20the%20time%20stamp%20of%20the-class">Time EventTime : The time stamp of the</a> event.</li>
+<li>Dcs.DCSWrapper.Object#Object Initiator : The initiating object of the event.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-onevent-event">BASE:onEvent(event)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li><a href="#event-class">Event</a> event</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-setstate-the-the-the">BASE:SetState(The, The, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Object The : object that will hold the Value set by the Key.</li>
+<li>Key The : key that is used as a reference of the value. Note that the key can be a string, but it can also be any other type!</li>
+<li>Value The : value to is stored in the object.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>The Value : set.</li>
+<li>nil The : Key was not found and thus the Value could not be retrieved.</li>
+</ul>
+
+<h3 id="base-getstate-the-the-the">BASE:GetState(The, The, The)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Object The : object that holds the Value set by the Key.</li>
+<li>Key The : key that is used to retrieve the value. Note that the key can be a string, but it can also be any other type!</li>
+<li>Value The : value to is stored in the Object.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>The Value : retrieved.</li>
+</ul>
+
+<h3 id="base-traceonoff-traceonoff">BASE:TraceOnOff(TraceOnOff)</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- Switch the tracing On</span>
+<span class="n">BASE</span><span class="p">:</span><span class="n">TraceOnOff</span><span class="p">(</span> <span class="kc">true</span> <span class="p">)</span>
+
+<span class="c1">-- Switch the tracing Off</span>
+<span class="n">BASE</span><span class="p">:</span><span class="n">TraceOnOff</span><span class="p">(</span> <span class="kc">false</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>boolean TraceOnOff : Switch the tracing on or off.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-istrace">BASE:IsTrace()</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>boolean self</li>
+</ul>
+
+<h3 id="base-tracelevel-level">BASE:TraceLevel(Level)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>number Level</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-traceall-traceall">BASE:TraceAll(TraceAll)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>boolean TraceAll : true = trace all methods in MOOSE.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-traceclass-class">BASE:TraceClass(Class)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>string Class</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-traceclassmethod-class-method">BASE:TraceClassMethod(Class, Method)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>string Class</li>
+<li>string Method</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-f-a">BASE:F(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-f2-a">BASE:F2(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-f3-a">BASE:F3(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-t-a">BASE:T(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-t2-a">BASE:T2(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-t3-a">BASE:T3(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="base-e-a">BASE:E(A)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#base-class">BASE</a>
+self</li>
+<li>Arguments A : table[] or any field.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h2 id="formation-class">FORMATION Class</h2>
+
+<pre>
+**The FORMATION class does not inherit**
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li>Cone A : cone formation.</li>
+</ul>

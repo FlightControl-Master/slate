@@ -1,0 +1,46 @@
+<h1 id="core-spawnstatic-module">Core.SpawnStatic Module</h1>
+
+<p><strong>Core</strong> &ndash; Spawn dynamically new STATICs in your missions.</p>
+
+<p><img src="/includes/Pictures/SPAWNSTATIC/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
+
+<h4 id="demo-missions">Demo Missions</h4>
+
+<h4 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h4>
+
+<h4 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h4>
+
+<h4 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h4>
+
+<h4 id="youtube-channel">YouTube Channel</h4>
+
+<h4 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h4>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
+
+<h2 id="spawnstatic-spawnzonetable-class">SPAWNSTATIC.SpawnZoneTable Class</h2>
+
+<pre>
+**The SPAWNSTATIC.SpawnZoneTable class does not inherit**
+</pre>

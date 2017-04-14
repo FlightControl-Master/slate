@@ -1,0 +1,40 @@
+<h1 id="functional-sead-module">Functional.Sead Module</h1>
+
+<p>Provides defensive behaviour to a set of SAM sites within a running Mission.</p>
+
+<h2 id="sead-class">SEAD Class</h2>
+
+<pre>
+Inheritance : The SEAD Class inherits from the following parents :
+BASE
+    `-- SEAD
+</pre>
+
+<h3 id="new">New()</h3>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- CCCP SEAD Defenses</span>
+<span class="c1">-- Defends the Russian SA installations from SEAD attacks.</span>
+<span class="n">SEAD_RU_SAM_Defenses</span> <span class="o">=</span> <span class="n">SEAD</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'RU SA-6 Kub'</span><span class="p">,</span> <span class="s1">'RU SA-6 Defenses'</span><span class="p">,</span> <span class="s1">'RU MI-26 Troops'</span><span class="p">,</span> <span class="s1">'RU Attack Gori'</span> <span class="p">}</span> <span class="p">)</span>
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li>table{string,&hellip;}|string SEADGroupPrefixes : which is a table of Prefixes of the SA Groups in the DCSRTE on which evasive actions need to be taken.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li>SEAD self</li>
+</ul>
+
+<h3 id="sead-oneventshot-eventdata">SEAD:OnEventShot(EventData)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#sead-class">SEAD</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4 id="returns">Returns</h4>

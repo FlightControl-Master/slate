@@ -1,0 +1,103 @@
+<h1 id="wrapper-airbase-module">Wrapper.Airbase Module</h1>
+
+<p>This module contains the AIRBASE classes.</p>
+
+<h5 id="1-airbase-class-extends-positionable">1) <a href="#airbase-class">AIRBASE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
+
+<p>The <a href="#airbase-module">AIRBASE</a> class is a wrapper class to handle the DCS Airbase objects:</p>
+
+<ul>
+<li>Support all DCS Airbase APIs.</li>
+<li>Enhance with Airbase specific APIs not in the DCS Airbase API set.</li>
+</ul>
+
+<h5 id="1-1-airbase-reference-methods">1.1) AIRBASE reference methods</h5>
+
+<p>For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
+This is done at the beginning of the mission (when the mission starts).</p>
+
+<p>The AIRBASE class <strong>does not contain a :New()</strong> method, rather it provides <strong>:Find()</strong> methods to retrieve the object reference
+using the DCS Airbase or the DCS AirbaseName.</p>
+
+<p>Another thing to know is that AIRBASE objects do not &ldquo;contain&rdquo; the DCS Airbase object.
+The AIRBASE methods will reference the DCS Airbase object by name when it is needed during API execution.
+If the DCS Airbase object does not exist or is nil, the AIRBASE methods will return nil and log an exception in the DCS.log file.</p>
+
+<p>The AIRBASE class provides the following functions to retrieve quickly the relevant AIRBASE instance:</p>
+
+<ul>
+<li><a href="#airbase-find-dcsairbase">AIRBASE:Find()</a>: Find a AIRBASE instance from the _DATABASE object using a DCS Airbase object.</li>
+<li><a href="#airbase-findbyname-airbasename">AIRBASE:FindByName()</a>: Find a AIRBASE instance from the _DATABASE object using a DCS Airbase name.</li>
+</ul>
+
+<p>IMPORTANT: ONE SHOULD NEVER SANATIZE these AIRBASE OBJECT REFERENCES! (make the AIRBASE object references nil).</p>
+
+<h5 id="1-2-dcs-airbase-apis">1.2) DCS AIRBASE APIs</h5>
+
+<p>The DCS Airbase APIs are used extensively within MOOSE. The AIRBASE class has for each DCS Airbase API a corresponding method.
+To be able to distinguish easily in your code the difference between a AIRBASE API call and a DCS Airbase API call,
+the first letter of the method is also capitalized. So, by example, the DCS Airbase method @{DCSWrapper.Airbase#Airbase.getName}()
+is implemented in the AIRBASE class as AIRBASE-GetName.</p>
+
+<p>More functions will be added</p>
+
+<p>During the MOOSE development, more functions will be added.</p>
+
+<h2 id="airbase-class">AIRBASE Class</h2>
+
+<pre>
+Inheritance : The AIRBASE Class inherits from the following parents :
+BASE
+    `-- OBJECT
+        `-- IDENTIFIABLE
+            `-- POSITIONABLE
+                `-- AIRBASE
+</pre>
+
+<h3 id="airbase-register-airbasename">AIRBASE:Register(AirbaseName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a>
+self</li>
+<li>string AirbaseName : The name of the airbase.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a> self</li>
+</ul>
+
+<h3 id="airbase-find-dcsairbase">AIRBASE:Find(DCSAirbase)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a>
+self</li>
+<li>Dcs.DCSWrapper.Airbase#Airbase DCSAirbase : An existing DCS Airbase object reference.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a> self</li>
+</ul>
+
+<h3 id="airbase-findbyname-airbasename">AIRBASE:FindByName(AirbaseName)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a>
+self</li>
+<li>string AirbaseName : The Airbase Name.</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#airbase-class">AIRBASE</a> self</li>
+</ul>

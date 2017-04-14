@@ -1,0 +1,44 @@
+<h1 id="ai-ai_cap-module">AI.AI_Cap Module</h1>
+
+<p><strong>AI</strong> - <strong>Execute Combat Air Patrol (CAP).</strong></p>
+
+<p><img src="/includes/Pictures/AI_CAP/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>AI CAP classes makes AI Controllables execute a Combat Air Patrol.</p>
+
+<p>There are the following types of CAP classes defined:</p>
+
+<ul>
+<li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>: Perform a CAP in a zone.</li>
+</ul>
+
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<p>2017-01-15: Initial class and API.</p>
+
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+
+<h4 id="contributions">Contributions:</h4>
+
+<ul>
+<li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
+<li><strong><a href="https://forums.eagle.ru/member.php?u=62835">Pikey</a></strong>: Concept, Advice &amp; Testing.</li>
+<li><strong><a href="http://forums.eagle.ru:8080/member.php?u=75036">Gunterlund</a></strong>: Test case revision.</li>
+<li>**<a href="http://forums.eagle.ru/member.php?u=3829">Whisper</a>: Testing.</li>
+<li>**<a href="https://forums.eagle.ru/member.php?u=125166">Delta99</a>: Testing.</li>
+</ul>
+
+<h4 id="authors">Authors:</h4>
+
+<ul>
+<li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
+</ul>

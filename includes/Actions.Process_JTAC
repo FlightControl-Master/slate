@@ -1,0 +1,113 @@
+<h1 id="actions-process_jtac-module">Actions.Process_JTAC Module</h1>
+
+<h2 id="process_jtac-class">PROCESS_JTAC Class</h2>
+
+<pre>
+Inheritance : The PROCESS_JTAC Class inherits from the following parents :
+ERROR !
+    `-- PROCESS_JTAC
+</pre>
+
+<h4 id="attributes">Attributes</h4>
+
+<ul>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+</ul>
+
+<h3 id="process_jtac-new-task-processunit-targetsetunit-facunit">PROCESS_JTAC:New(Task, ProcessUnit, TargetSetUnit, FACUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#unit-class">UNIT</a> FACUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+</ul>
+
+<h3 id="process_jtac-onstart-fsm-event-from-to">PROCESS_JTAC:OnStart(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_jtac-onjtacmenuupdate-fsm-event-from-to">PROCESS_JTAC:OnJTACMenuUpdate(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_jtac-onjtacmenuawait-fsm-event-from-to">PROCESS_JTAC:OnJTACMenuAwait(Fsm, Event, From, To)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_jtac-onjtacmenuspot-fsm-event-from-to-targetunit">PROCESS_JTAC:OnJTACMenuSpot(Fsm, Event, From, To, TargetUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+<li><a href="#unit-class">UNIT</a> TargetUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
+
+<h3 id="process_jtac-onjtacmenucancel-fsm-event-from-to-targetunit">PROCESS_JTAC:OnJTACMenuCancel(Fsm, Event, From, To, TargetUnit)</h3>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><a href="#process_jtac-class">PROCESS_JTAC</a>
+self</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li>string Event</li>
+<li>string From</li>
+<li>string To</li>
+<li><a href="#unit-class">UNIT</a> TargetUnit</li>
+</ul>
+
+<h4 id="returns">Returns</h4>
