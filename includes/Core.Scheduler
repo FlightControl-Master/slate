@@ -58,7 +58,7 @@ BASE
     `-- SCHEDULER
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>number ScheduleID : the ID of the scheduler.</li>
@@ -66,7 +66,7 @@ BASE
 
 <h3 id="scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -80,7 +80,7 @@ self</li>
 <li>number Stop : Specifies the amount of seconds when the scheduler will be stopped.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -90,7 +90,7 @@ self.</li>
 
 <h3 id="scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -104,7 +104,7 @@ self</li>
 <li>number Stop : Specifies the amount of seconds when the scheduler will be stopped.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : ScheduleID of the planned schedule.</li>
@@ -112,7 +112,7 @@ self</li>
 
 <h3 id="scheduler-start-scheduleid">SCHEDULER:Start(ScheduleID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -120,11 +120,11 @@ self</li>
 <li>number ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scheduler-stop-scheduleid">SCHEDULER:Stop(ScheduleID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -132,11 +132,11 @@ self</li>
 <li>number ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scheduler-remove-scheduleid">SCHEDULER:Remove(ScheduleID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
@@ -144,15 +144,15 @@ self</li>
 <li>number ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scheduler-clear">SCHEDULER:Clear()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

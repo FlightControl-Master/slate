@@ -4,11 +4,14 @@
 
 <pre>
 Inheritance : The PROCESS_PICKUP Class inherits from the following parents :
-ERROR !
-    `-- PROCESS_PICKUP
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- PROCESS_PICKUP
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a> ProcessUnit</li>
@@ -17,7 +20,7 @@ ERROR !
 
 <h3 id="process_pickup-new-task-processunit-targetsetunit">PROCESS_PICKUP:New(Task, ProcessUnit, TargetSetUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -27,7 +30,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -36,7 +39,7 @@ self</li>
 
 <h3 id="process_pickup-onstart-fsm-event-from-to">PROCESS_PICKUP:OnStart(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -47,11 +50,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-onnavigating-fsm-event-from-to">PROCESS_PICKUP:OnNavigating(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -62,11 +65,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-onhittarget-fsm-event-from-to-event">PROCESS_PICKUP:OnHitTarget(Fsm, Event, From, To, Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -78,11 +81,11 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-onmoretargets-fsm-event-from-to">PROCESS_PICKUP:OnMoreTargets(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -93,11 +96,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-onkilled-fsm-event-from-to-dcsevent">PROCESS_PICKUP:OnKilled(Fsm, Event, From, To, DCSEvent)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -109,11 +112,11 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> DCSEvent</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-onrestart-fsm-event-from-to">PROCESS_PICKUP:OnRestart(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -124,11 +127,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-ondestroyed-fsm-event-from-to">PROCESS_PICKUP:OnDestroyed(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -139,11 +142,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_pickup-eventdead-event">PROCESS_PICKUP:EventDead(Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
@@ -151,4 +154,4 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

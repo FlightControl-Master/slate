@@ -81,11 +81,14 @@ Upon arrival at the zone, a confirmation of arrival is sent, and the process wil
 
 <pre>
 Inheritance : The ACT_ROUTE Class inherits from the following parents :
-ERROR !
-    `-- ACT_ROUTE
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ROUTE
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> TASK</li>
@@ -95,14 +98,14 @@ ERROR !
 
 <h3 id="act_route-new">ACT_ROUTE:New()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
@@ -111,7 +114,7 @@ self</li>
 
 <h3 id="act_route-onafterstart-processunit-event-from-to">ACT_ROUTE:onafterStart(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
@@ -122,11 +125,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route-onfunchasarrived-processunit">ACT_ROUTE:onfuncHasArrived(ProcessUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
@@ -134,7 +137,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -142,7 +145,7 @@ self</li>
 
 <h3 id="act_route-onbeforeroute-processunit-event-from-to">ACT_ROUTE:onbeforeRoute(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
@@ -153,18 +156,21 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="act_route_point-class">ACT_ROUTE_POINT Class</h2>
 
 <pre>
 Inheritance : The ACT_ROUTE_POINT Class inherits from the following parents :
-ERROR !
-    `-- ACT_ROUTE
-        `-- ACT_ROUTE_POINT
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ROUTE
+                    `-- ACT_ROUTE_POINT
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> TASK</li>
@@ -172,7 +178,7 @@ ERROR !
 
 <h3 id="act_route_point-new-the-range-zone">ACT_ROUTE_POINT:New(The, Range, Zone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
@@ -182,11 +188,11 @@ self</li>
 <li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route_point-setpointvec2-pointvec2">ACT_ROUTE_POINT:SetPointVec2(PointVec2)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
@@ -194,18 +200,18 @@ self</li>
 <li><a href="#point_vec2%20pointvec2%20:%20the%20pointvec2%20to%20route-class">POINT_VEC2 PointVec2 : The PointVec2 to route</a> to.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route_point-getpointvec2">ACT_ROUTE_POINT:GetPointVec2()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#point_vec2%20pointvec2%20:%20the%20pointvec2%20to%20route-class">POINT_VEC2 PointVec2 : The PointVec2 to route</a> to.</li>
@@ -213,7 +219,7 @@ self</li>
 
 <h3 id="act_route_point-setrange-range">ACT_ROUTE_POINT:SetRange(Range)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
@@ -221,18 +227,18 @@ self</li>
 <li>number Range : The Range to consider the arrival. Default is 10000 meters.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route_point-getrange">ACT_ROUTE_POINT:GetRange()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : Range to consider the arrival. Default is 10000 meters.</li>
@@ -240,7 +246,7 @@ self</li>
 
 <h3 id="act_route_point-onfunchasarrived-processunit">ACT_ROUTE_POINT:onfuncHasArrived(ProcessUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
@@ -248,7 +254,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -256,7 +262,7 @@ self</li>
 
 <h3 id="act_route_point-onenterreporting-processunit-event-from-to">ACT_ROUTE_POINT:onenterReporting(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_point-class">ACT_ROUTE_POINT</a>
@@ -267,18 +273,21 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="act_route_zone-class">ACT_ROUTE_ZONE Class</h2>
 
 <pre>
 Inheritance : The ACT_ROUTE_ZONE Class inherits from the following parents :
-ERROR !
-    `-- ACT_ROUTE
-        `-- ACT_ROUTE_ZONE
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ROUTE
+                    `-- ACT_ROUTE_ZONE
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> TASK</li>
@@ -288,7 +297,7 @@ ERROR !
 
 <h3 id="act_route_zone-new-zone">ACT_ROUTE_ZONE:New(Zone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
@@ -296,11 +305,11 @@ self</li>
 <li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route_zone-setzone-zone">ACT_ROUTE_ZONE:SetZone(Zone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
@@ -308,18 +317,18 @@ self</li>
 <li><a href="#zone_base%20zone%20:%20the%20zone%20object%20where%20to%20route-class">ZONE_BASE Zone : The Zone object where to route</a> to.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_route_zone-getzone">ACT_ROUTE_ZONE:GetZone()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#zone_base%20zone%20:%20the%20zone%20object%20where%20to%20route-class">ZONE_BASE Zone : The Zone object where to route</a> to.</li>
@@ -327,7 +336,7 @@ self</li>
 
 <h3 id="act_route_zone-onfunchasarrived-processunit">ACT_ROUTE_ZONE:onfuncHasArrived(ProcessUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route-class">ACT_ROUTE</a>
@@ -335,7 +344,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -343,7 +352,7 @@ self</li>
 
 <h3 id="act_route_zone-onenterreporting-processunit-event-from-to">ACT_ROUTE_ZONE:onenterReporting(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_route_zone-class">ACT_ROUTE_ZONE</a>
@@ -354,4 +363,4 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

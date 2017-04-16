@@ -2,7 +2,7 @@
 
 <p>This module contains the TASK_PICKUP classes.</p>
 
-<h5 id="1-task_pickup-class-extends-task">1) <a href="#task_pickup-class">TASK_PICKUP</a> class, extends <a href="#task-class">TASK</a></h5>
+<h4 id="1-task_pickup-class-extends-task">1) <a href="#task_pickup-class">TASK_PICKUP</a> class, extends <a href="#task-class">TASK</a></h4>
 
 <p>The <a href="#task_pickup-class">TASK_PICKUP</a> class defines a pickup task of a <a href="#set-module">Set</a> of <a href="#cargo-module">CARGO</a> objects defined within the mission.
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
@@ -22,15 +22,16 @@ The TASK_PICKUP is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, a
 
 <pre>
 Inheritance : The TASK_PICKUP Class inherits from the following parents :
-ERROR !
-    `-- FSM_TASK
-        `-- TASK
-            `-- TASK_PICKUP
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_PICKUP
 </pre>
 
 <h3 id="task_pickup-new-mission-assignedsetgroup-taskname-tasktype-unitsettargets-targetzone">TASK_PICKUP:New(Mission, AssignedSetGroup, TaskName, TaskType, UnitSetTargets, TargetZone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
@@ -43,7 +44,7 @@ self</li>
 <li><a href="#zone_base-class">ZONE_BASE</a> TargetZone</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
@@ -52,14 +53,14 @@ self</li>
 
 <h3 id="task_pickup-cleanup">TASK_PICKUP:CleanUp()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>nil self</li>
@@ -67,7 +68,7 @@ self</li>
 
 <h3 id="task_pickup-assigntounit-taskunit">TASK_PICKUP:AssignToUnit(TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
@@ -75,7 +76,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
@@ -84,7 +85,7 @@ self</li>
 
 <h3 id="task_pickup-onnext-fsm-event-from-to-event">TASK_PICKUP:OnNext(Fsm, Event, From, To, Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
@@ -96,15 +97,15 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_pickup-getplannedmenutext">TASK_PICKUP:GetPlannedMenuText()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_pickup-class">TASK_PICKUP</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

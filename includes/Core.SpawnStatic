@@ -39,6 +39,118 @@
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
 </ul>
 
+<h2 id="spawnstatic-class">SPAWNSTATIC Class</h2>
+
+<pre>
+Inheritance : The SPAWNSTATIC Class inherits from the following parents :
+BASE
+    `-- SPAWNSTATIC
+</pre>
+
+<p>The SPAWNSTATIC class allows to spawn dynamically new <a href="#static-module">Static</a>s.
+Through creating a copy of an existing static object template as defined in the Mission Editor (ME),
+SPAWNSTATIC can retireve the properties of the defined static object template (like type, category etc), and &ldquo;copy&rdquo;
+these properties to create a new static object and place it at the desired coordinate.</p>
+
+<p>New spawned <a href="#static-module">Static</a>s get <strong>the same name</strong> as the name of the template Static,
+or gets the given name when a new name is provided at the Spawn method.
+By default, spawned <a href="#static-module">Static</a>s will follow a naming convention at run-time:</p>
+
+<ul>
+<li>Spawned <a href="#static-module">Static</a>s will have the name <em>StaticName</em>#<em>nnn</em>, where <em>StaticName</em> is the name of the <strong>Template Static</strong>,
+and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
+</ul>
+
+<h4 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h4>
+
+<p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
+
+<ul>
+<li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
+</ul>
+
+<h4 id="spawn-methods"><strong>Spawn</strong> methods</h4>
+
+<p>Groups can be spawned at different times and methods:</p>
+
+<ul>
+<li><a href="#spawnstatic-spawnfrompointvec2-pointvec2-heading-(optional)">SPAWNSTATIC:SpawnFromPointVec2()</a>: Spawn a new group from a POINT_VEC2 coordinate.
+(The group will be spawned at land height ).</li>
+<li><a href="#spawnstatic-spawnfromzone-zone-heading-(optional)">SPAWNSTATIC:SpawnFromZone()</a>: Spawn a new group in a <a href="#zone-module">Zone</a>.</li>
+</ul>
+
+<h3 id="spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</h3>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+<li>string SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+</ul>
+
+<h3 id="spawnstatic-newfromtype-spawntypename">SPAWNSTATIC:NewFromType(SpawnTypeName)</h3>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+<li>string SpawnTypeName : is the name of the type.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+</ul>
+
+<h3 id="spawnstatic-spawnfrompointvec2-pointvec2-heading-optional">SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</h3>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+<li><a href="#point_vec2%20pointvec2%20:%20the%202d%20coordinate%20where%20to%20spawn%20the-class">POINT_VEC2 PointVec2 : The 2D coordinate where to spawn the</a> static.</li>
+<li>number Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
+<li>string (optional) : The name of the new static.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+</ul>
+
+<h3 id="spawnstatic-spawnfromzone-zone-heading-optional">SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</h3>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+<li><a href="#zone_base%20zone%20:%20the%20zone%20where%20to%20spawn%20the-class">ZONE_BASE Zone : The Zone where to spawn the</a> static.</li>
+<li>number Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
+<li>string (optional) : The name of the new static.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spawnstatic-class">SPAWNSTATIC</a>
+self</li>
+</ul>
+
 <h2 id="spawnstatic-spawnzonetable-class">SPAWNSTATIC.SpawnZoneTable Class</h2>
 
 <pre>

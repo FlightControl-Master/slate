@@ -2,18 +2,18 @@
 
 <p>This module contains the DETECTION_MANAGER class and derived classes.</p>
 
-<h5 id="1-detection_manager-class-extends-fsm">1) <a href="#detection_manager-class">DETECTION_MANAGER</a> class, extends <a href="#fsm-class">FSM</a></h5>
+<h4 id="1-detection_manager-class-extends-fsm">1) <a href="#detection_manager-class">DETECTION_MANAGER</a> class, extends <a href="#fsm-class">FSM</a></h4>
 
 <p>The <a href="#detection_manager-class">DETECTION_MANAGER</a> class defines the core functions to report detected objects to groups.
 Reportings can be done in several manners, and it is up to the derived classes if DETECTION_MANAGER to model the reporting behaviour.</p>
 
-<h5 id="1-1-detection_manager-constructor">1.1) DETECTION_MANAGER constructor:</h5>
+<h4 id="1-1-detection_manager-constructor">1.1) DETECTION_MANAGER constructor:</h4>
 
 <ul>
 <li><a href="#detection_manager-new-setgroup-detection">DETECTION_MANAGER:New()</a>: Create a new DETECTION_MANAGER instance.</li>
 </ul>
 
-<h5 id="1-2-detection_manager-reporting">1.2) DETECTION_MANAGER reporting:</h5>
+<h4 id="1-2-detection_manager-reporting">1.2) DETECTION_MANAGER reporting:</h4>
 
 <p>Derived DETECTION_MANAGER classes will reports detected units using the method DETECTION_MANAGER-ReportDetected. This method implements polymorphic behaviour.</p>
 
@@ -26,11 +26,11 @@ If an ad-hoc report is requested, use the method @{DetectionManager#DETECTION_MA
 
 <p>The default reporting interval is every 60 seconds. The reporting messages are displayed 15 seconds.</p>
 
-<h5 id="2-detection_reporting-class-extends-detection_manager">2) <a href="#detection_reporting-class">DETECTION_REPORTING</a> class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h5>
+<h4 id="2-detection_reporting-class-extends-detection_manager">2) <a href="#detection_reporting-class">DETECTION_REPORTING</a> class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h4>
 
 <p>The <a href="#detection_reporting-class">DETECTION_REPORTING</a> class implements detected units reporting. Reporting can be controlled using the reporting methods available in the <a href="#detection_manager-class">DETECTION_MANAGER</a> class.</p>
 
-<h5 id="2-1-detection_reporting-constructor">2.1) DETECTION_REPORTING constructor:</h5>
+<h4 id="2-1-detection_reporting-constructor">2.1) DETECTION_REPORTING constructor:</h4>
 
 <p>The @{DetectionManager#DETECTION_REPORTING.New}() method creates a new DETECTION_REPORTING instance.</p>
 
@@ -42,11 +42,12 @@ If an ad-hoc report is requested, use the method @{DetectionManager#DETECTION_MA
 
 <pre>
 Inheritance : The DETECTION_MANAGER Class inherits from the following parents :
-ERROR !
-    `-- DETECTION_MANAGER
+BASE
+    `-- FSM
+        `-- DETECTION_MANAGER
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_group%20setgroup%20:%20the%20groups%20to%20which%20the%20fac%20will%20report-class">SET_GROUP SetGroup : The groups to which the FAC will report</a> to.</li>
@@ -55,7 +56,7 @@ ERROR !
 
 <h3 id="detection_manager-new-setgroup-detection">DETECTION_MANAGER:New(SetGroup, Detection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -64,7 +65,7 @@ self</li>
 <li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -73,7 +74,7 @@ self</li>
 
 <h3 id="detection_manager-setreportinterval-reportinterval">DETECTION_MANAGER:SetReportInterval(ReportInterval)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -81,7 +82,7 @@ self</li>
 <li>number ReportInterval : The interval in seconds when a report needs to be done.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -90,7 +91,7 @@ self</li>
 
 <h3 id="detection_manager-setreportdisplaytime-reportdisplaytime">DETECTION_MANAGER:SetReportDisplayTime(ReportDisplayTime)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -98,7 +99,7 @@ self</li>
 <li>number ReportDisplayTime : The display time in seconds when a report needs to be done.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -107,14 +108,14 @@ self</li>
 
 <h3 id="detection_manager-getreportdisplaytime">DETECTION_MANAGER:GetReportDisplayTime()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number ReportDisplayTime : The display time in seconds when a report needs to be done.</li>
@@ -122,7 +123,7 @@ self</li>
 
 <h3 id="detection_manager-processdetected-detection">DETECTION_MANAGER:ProcessDetected(Detection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -130,7 +131,7 @@ self</li>
 <li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -141,12 +142,13 @@ self</li>
 
 <pre>
 Inheritance : The DETECTION_REPORTING Class inherits from the following parents :
-ERROR !
-    `-- DETECTION_MANAGER
-        `-- DETECTION_REPORTING
+BASE
+    `-- FSM
+        `-- DETECTION_MANAGER
+            `-- DETECTION_REPORTING
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_group%20setgroup%20:%20the%20groups%20to%20which%20the%20fac%20will%20report-class">SET_GROUP SetGroup : The groups to which the FAC will report</a> to.</li>
@@ -155,7 +157,7 @@ ERROR !
 
 <h3 id="detection_reporting-new-setgroup-detection">DETECTION_REPORTING:New(SetGroup, Detection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_reporting-class">DETECTION_REPORTING</a>
@@ -164,7 +166,7 @@ self</li>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a> Detection</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_reporting-class">DETECTION_REPORTING</a>
@@ -173,7 +175,7 @@ self</li>
 
 <h3 id="detection_reporting-getdetecteditemstext-detectedset">DETECTION_REPORTING:GetDetectedItemsText(DetectedSet)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -181,7 +183,7 @@ self</li>
 <li><a href="#set_unit%20detectedset%20:%20the%20detected%20set%20created%20by%20the%20[detection_base](#detection_base-class)-class">SET_UNIT DetectedSet : The detected Set created by the <a href="#detection_base-class">DETECTION_BASE</a></a> object.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#detection_manager-class">DETECTION_MANAGER</a>
@@ -190,7 +192,7 @@ self</li>
 
 <h3 id="detection_reporting-processdetected-group-detection">DETECTION_REPORTING:ProcessDetected(Group, Detection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#detection_reporting-class">DETECTION_REPORTING</a>
@@ -199,7 +201,7 @@ self</li>
 <li><a href="#detection_areas%20detection%20:%20the%20detection%20created%20by%20the%20[detection_base](#detection_base-class)-class">DETECTION_AREAS Detection : The detection created by the <a href="#detection_base-class">DETECTION_BASE</a></a> object.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Return : true if you want the reporting to continue&hellip; false will cancel the reporting loop.</li>

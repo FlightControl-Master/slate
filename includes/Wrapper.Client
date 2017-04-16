@@ -2,7 +2,7 @@
 
 <p>This module contains the CLIENT class.</p>
 
-<h5 id="1-client-class-extends-unit">1) <a href="#client-class">CLIENT</a> class, extends <a href="#unit-class">UNIT</a></h5>
+<h4 id="1-client-class-extends-unit">1) <a href="#client-class">CLIENT</a> class, extends <a href="#unit-class">UNIT</a></h4>
 
 <p>Clients are those <strong>Units</strong> defined within the Mission Editor that have the skillset defined as <strong>Client</strong> or <strong>Player</strong>.
 Note that clients are NOT the same as Units, they are NOT necessarily alive.
@@ -19,7 +19,7 @@ The <a href="#client-class">CLIENT</a> class is a wrapper class to handle the DC
 
 <p>Clients are being used by the <a href="#mission-module">MISSION</a> class to follow players and register their successes.</p>
 
-<h5 id="1-1-client-reference-methods">1.1) CLIENT reference methods</h5>
+<h4 id="1-1-client-reference-methods">1.1) CLIENT reference methods</h4>
 
 <p>For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
@@ -63,7 +63,7 @@ BASE
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -72,7 +72,7 @@ self</li>
 <li>string ClientBriefing : Text that describes the briefing of the mission when a Player logs into the Client.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -89,7 +89,7 @@ self</li>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -99,7 +99,7 @@ self</li>
 <li>boolean Error : A flag that indicates whether an error should be raised if the CLIENT cannot be found. By default an error will be raised.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -108,14 +108,14 @@ self</li>
 
 <h3 id="client-transport">CLIENT:Transport()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -124,7 +124,7 @@ self</li>
 
 <h3 id="client-addbriefing-clientbriefing">CLIENT:AddBriefing(ClientBriefing)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -132,7 +132,7 @@ self</li>
 <li>string ClientBriefing : is the text defining the Mission briefing.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -141,14 +141,14 @@ self</li>
 
 <h3 id="client-showbriefing">CLIENT:ShowBriefing()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -157,7 +157,7 @@ self</li>
 
 <h3 id="client-showmissionbriefing-missionbriefing">CLIENT:ShowMissionBriefing(MissionBriefing)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -165,7 +165,7 @@ self</li>
 <li>string MissionBriefing</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -174,7 +174,7 @@ self</li>
 
 <h3 id="client-reset-clientname">CLIENT:Reset(ClientName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -182,18 +182,18 @@ self</li>
 <li>string ClientName : Name of the Group as defined within the Mission Editor. The Group must have a Unit with the type Client.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="client-ismultiseated">CLIENT:IsMultiSeated()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean true : if multi-seated.</li>
@@ -201,7 +201,7 @@ self</li>
 
 <h3 id="client-alive-callbackfunction">CLIENT:Alive(CallBackFunction)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -209,7 +209,7 @@ self</li>
 <li>#function CallBackFunction : Create a function that will be called when a player joins the slot.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -218,14 +218,14 @@ self</li>
 
 <h3 id="client-getdcsgroup">CLIENT:GetDCSGroup()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>Dcs.DCSWrapper.Group#Group self</li>
@@ -233,14 +233,14 @@ self</li>
 
 <h3 id="client-getclientgroupid">CLIENT:GetClientGroupID()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group.id-class">Group.ID</a> self</li>
@@ -248,14 +248,14 @@ self</li>
 
 <h3 id="client-getclientgroupname">CLIENT:GetClientGroupName()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string self</li>
@@ -263,14 +263,14 @@ self</li>
 
 <h3 id="client-getclientgroupunit">CLIENT:GetClientGroupUnit()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a> self</li>
@@ -278,14 +278,14 @@ self</li>
 
 <h3 id="client-getclientgroupdcsunit">CLIENT:GetClientGroupDCSUnit()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">Unit</a> self</li>
@@ -293,14 +293,14 @@ self</li>
 
 <h3 id="client-istransport">CLIENT:IsTransport()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean true : is a transport.</li>
@@ -308,18 +308,18 @@ self</li>
 
 <h3 id="client-showcargo">CLIENT:ShowCargo()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="client-message-message-messageduration-messagecategory-messageinterval-messageid">CLIENT:Message(Message, MessageDuration, MessageCategory, MessageInterval, MessageID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a>
@@ -331,4 +331,4 @@ self</li>
 <li>string MessageID : is the identifier of the message when displayed with intervals.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

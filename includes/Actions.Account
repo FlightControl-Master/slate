@@ -8,8 +8,11 @@
 
 <pre>
 Inheritance : The ACT_ACCOUNT Class inherits from the following parents :
-ERROR !
-    `-- ACT_ACCOUNT
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ACCOUNT
 </pre>
 
 <h4 id="act_account-state-machine">ACT_ACCOUNT state machine:</h4>
@@ -60,7 +63,7 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -68,14 +71,14 @@ These state transition methods need to provide a return value, which is specifie
 
 <h3 id="act_account-new">ACT_ACCOUNT:New()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
@@ -84,7 +87,7 @@ self</li>
 
 <h3 id="act_account-onafterstart-processunit-event-from-to">ACT_ACCOUNT:onafterStart(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
@@ -95,11 +98,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account-onenterwaiting-processunit-event-from-to">ACT_ACCOUNT:onenterWaiting(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
@@ -110,11 +113,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account-onafterevent-processunit-event-from-to">ACT_ACCOUNT:onafterEvent(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
@@ -125,15 +128,18 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="act_account_deads-class">ACT_ACCOUNT_DEADS Class</h2>
 
 <pre>
 Inheritance : The ACT_ACCOUNT_DEADS Class inherits from the following parents :
-ERROR !
-    `-- ACT_ACCOUNT
-        `-- ACT_ACCOUNT_DEADS
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ACCOUNT
+                    `-- ACT_ACCOUNT_DEADS
 </pre>
 
 <p>The ACT_ACCOUNT_DEADS class accounts (detects, counts and reports) successful kills of DCS units.
@@ -147,7 +153,7 @@ Each successful dead will trigger an Account state transition that can be scored
 <li><a href="#act_account_deads-new-targetsetunit-taskname">ACT_ACCOUNT_DEADS:New()</a>: Creates a new ACT_ACCOUNT_DEADS object.</li>
 </ul>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -155,7 +161,7 @@ Each successful dead will trigger an Account state transition that can be scored
 
 <h3 id="act_account_deads-new-targetsetunit-taskname">ACT_ACCOUNT_DEADS:New(TargetSetUnit, TaskName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
@@ -164,11 +170,11 @@ self</li>
 <li>string TaskName</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account_deads-onenterreport-processunit-event-from-to">ACT_ACCOUNT_DEADS:onenterReport(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
@@ -179,11 +185,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account_deads-onenteraccount-processunit-event-from-to">ACT_ACCOUNT_DEADS:onenterAccount(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
@@ -194,11 +200,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account_deads-onafterevent-processunit-event-from-to">ACT_ACCOUNT_DEADS:onafterEvent(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
@@ -209,11 +215,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_account_deads-onfunceventdead-eventdata">ACT_ACCOUNT_DEADS:onfuncEventDead(EventData)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
@@ -221,4 +227,4 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

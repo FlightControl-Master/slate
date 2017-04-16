@@ -199,7 +199,7 @@ BASE
     `-- EVENT
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -208,7 +208,7 @@ BASE
 
 <h3 id="event-init-eventid-eventclass">EVENT:Init(EventID, EventClass)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -217,7 +217,7 @@ self</li>
 <li><a href="#base-class">BASE</a> EventClass</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -226,7 +226,7 @@ self</li>
 
 <h3 id="event-remove-eventclass-eventid">EVENT:Remove(EventClass, EventID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -235,7 +235,7 @@ self</li>
 <li><a href="#world.event-class">world.event</a> EventID</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -244,7 +244,7 @@ self</li>
 
 <h3 id="event-reset-eventclass-eventid">EVENT:Reset(EventClass, EventID)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -253,7 +253,7 @@ self</li>
 <li><a href="#world.event-class">world.event</a> EventID</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -262,7 +262,7 @@ self</li>
 
 <h3 id="event-removeall-eventobject">EVENT:RemoveAll(EventObject)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -270,11 +270,11 @@ self</li>
 <li><a href="#base-class">BASE</a> EventObject</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction">EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -285,7 +285,7 @@ self</li>
 <li>#function OnEventFunction</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -294,7 +294,7 @@ self</li>
 
 <h3 id="event-oneventgeneric-eventfunction-eventclass-self">EVENT:OnEventGeneric(EventFunction, EventClass, self)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -304,7 +304,7 @@ self</li>
 <li>EventID self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -313,7 +313,7 @@ self</li>
 
 <h3 id="event-oneventforunit-unitname-eventfunction-eventclass-self">EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -324,7 +324,7 @@ self</li>
 <li>EventID self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -333,7 +333,7 @@ self</li>
 
 <h3 id="event-oneventforgroup-groupname-eventfunction-eventclass-self">EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -344,7 +344,7 @@ self</li>
 <li>EventID self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -353,7 +353,7 @@ self</li>
 
 <h3 id="event-onbirthfortemplate-eventgroup-eventfunction-the">EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -363,7 +363,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -372,7 +372,7 @@ self</li>
 
 <h3 id="event-oncrashfortemplate-eventgroup-eventfunction-the">EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -382,7 +382,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -391,7 +391,7 @@ self</li>
 
 <h3 id="event-ondeadfortemplate-eventgroup-eventfunction-the">EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -401,7 +401,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -410,7 +410,7 @@ self</li>
 
 <h3 id="event-onlandfortemplate-eventtemplate-eventfunction-the">EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -420,7 +420,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -429,7 +429,7 @@ self</li>
 
 <h3 id="event-ontakeofffortemplate-eventtemplate-eventfunction-the">EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -439,7 +439,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -448,7 +448,7 @@ self</li>
 
 <h3 id="event-onengineshutdownfortemplate-eventtemplate-eventfunction-the">EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -458,7 +458,7 @@ self</li>
 <li>EventClass The : self instance of the class for which the event is.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -467,7 +467,7 @@ self</li>
 
 <h3 id="event-onevent-event">EVENT:onEvent(Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#event-class">EVENT</a>
@@ -476,7 +476,7 @@ self</li>
 Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="events-class">EVENTS Class</h2>
 
@@ -499,7 +499,7 @@ Event</li>
 <li>A (Object.Category.)STATIC : A STATIC object type is involved in the Event.µ</li>
 </ul>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>number id : The identifier of the event.</li>
@@ -543,7 +543,7 @@ Event</li>
 **The EVENT.Events class does not inherit**
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>number IniUnit</li>
@@ -559,14 +559,14 @@ BASE
 
 <h3 id="eventhandler-new">EVENTHANDLER:New()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#eventhandler-class">EVENTHANDLER</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#eventhandler-class">EVENTHANDLER</a>

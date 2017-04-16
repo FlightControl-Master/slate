@@ -25,7 +25,7 @@ BASE
 
 <h3 id="unit-register-unitname">UNIT:Register(UnitName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -33,7 +33,7 @@ self</li>
 <li>string UnitName : The name of the DCS unit.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -42,7 +42,7 @@ self</li>
 
 <h3 id="unit-find-dcsunit">UNIT:Find(DCSUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -50,7 +50,7 @@ self</li>
 <li>Dcs.DCSWrapper.Unit#Unit DCSUnit : An existing DCS Unit object reference.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -59,7 +59,7 @@ self</li>
 
 <h3 id="unit-findbyname-unitname">UNIT:FindByName(UnitName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -67,7 +67,7 @@ self</li>
 <li>string UnitName : The Unit Name.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -76,14 +76,14 @@ self</li>
 
 <h3 id="unit-name">UNIT:Name()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : UNIT name.</li>
@@ -91,14 +91,14 @@ self</li>
 
 <h3 id="unit-getdcsobject">UNIT:GetDCSObject()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit self</li>
@@ -106,7 +106,7 @@ self</li>
 
 <h3 id="unit-respawn-spawnvec3-heading">UNIT:ReSpawn(SpawnVec3, Heading)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -115,18 +115,18 @@ self</li>
 <li>number Heading : The heading of the unit respawn.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-isactive">UNIT:IsActive()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean true : if Unit is activated.</li>
@@ -135,14 +135,14 @@ self</li>
 
 <h3 id="unit-isalive">UNIT:IsAlive()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean true : if Unit is alive and active.</li>
@@ -152,14 +152,14 @@ self</li>
 
 <h3 id="unit-getcallsign">UNIT:GetCallsign()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : Callsign of the Unit.</li>
@@ -168,14 +168,14 @@ self</li>
 
 <h3 id="unit-getplayername">UNIT:GetPlayerName()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string Player : Name</li>
@@ -184,14 +184,14 @@ self</li>
 
 <h3 id="unit-getnumber">UNIT:GetNumber()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : Unit number.</li>
@@ -200,13 +200,13 @@ self</li>
 
 <h3 id="unit-getgroup">UNIT:GetGroup()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a> self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20the%20:%20group%20of%20the-class">GROUP The : Group of the</a> Unit.</li>
@@ -215,14 +215,14 @@ self</li>
 
 <h3 id="unit-getprefix">UNIT:GetPrefix()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : name of the DCS Unit.</li>
@@ -231,14 +231,14 @@ self</li>
 
 <h3 id="unit-getammo">UNIT:GetAmmo()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit.Ammo self</li>
@@ -247,14 +247,14 @@ self</li>
 
 <h3 id="unit-getsensors">UNIT:GetSensors()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit.Sensors self</li>
@@ -263,14 +263,14 @@ self</li>
 
 <h3 id="unit-hassensors">UNIT:HasSensors()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean returns : true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&rsquo;t want to get information about all the unit&rsquo;s sensors, and just want to check if the unit has specified types of sensors.</li>
@@ -279,14 +279,14 @@ self</li>
 
 <h3 id="unit-hassead">UNIT:HasSEAD()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean returns : true if the unit is SEADable.</li>
@@ -295,14 +295,14 @@ self</li>
 
 <h3 id="unit-getradar">UNIT:GetRadar()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self : Indicates if at least one of the unit&rsquo;s radar(s) is on.</li>
@@ -312,14 +312,14 @@ self</li>
 
 <h3 id="unit-getfuel">UNIT:GetFuel()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : relative amount of fuel (from 0.0 to 1.0).</li>
@@ -328,14 +328,14 @@ self</li>
 
 <h3 id="unit-getunits">UNIT:GetUnits()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>#list<Wrapper.Unit#UNIT> The : UNITs wrappers.</li>
@@ -343,14 +343,14 @@ self</li>
 
 <h3 id="unit-getlife">UNIT:GetLife()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : Unit&rsquo;s health value.</li>
@@ -359,14 +359,14 @@ self</li>
 
 <h3 id="unit-getlife0">UNIT:GetLife0()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>number The : Unit&rsquo;s initial health value.</li>
@@ -375,14 +375,14 @@ self</li>
 
 <h3 id="unit-getcategoryname">UNIT:GetCategoryName()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string Category : name = Helicopter, Airplane, Ground Unit, Ship</li>
@@ -390,18 +390,18 @@ self</li>
 
 <h3 id="unit-getthreatlevel">UNIT:GetThreatLevel()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-isinzone-zone">UNIT:IsInZone(Zone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -409,7 +409,7 @@ self</li>
 <li><a href="#zone_base%20zone%20:%20the%20zone%20to-class">ZONE_BASE Zone : The zone to</a> test.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Returns : true if the unit is within the <a href="#zone_base-class">ZONE_BASE</a></li>
@@ -417,7 +417,7 @@ self</li>
 
 <h3 id="unit-isnotinzone-zone">UNIT:IsNotInZone(Zone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -425,7 +425,7 @@ self</li>
 <li><a href="#zone_base%20zone%20:%20the%20zone%20to-class">ZONE_BASE Zone : The zone to</a> test.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Returns : true if the unit is not within the <a href="#zone_base-class">ZONE_BASE</a></li>
@@ -433,7 +433,7 @@ self</li>
 
 <h3 id="unit-otherunitinradius-awaitunit-the">UNIT:OtherUnitInRadius(AwaitUnit, The)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -443,7 +443,7 @@ AwaitUnit : The other UNIT wrapper object.</li>
 <li>Radius The : radius in meters with the DCS Unit in the centre.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>true If : the other DCS Unit is within the radius of the 2D point of the DCS Unit.</li>
@@ -452,7 +452,7 @@ AwaitUnit : The other UNIT wrapper object.</li>
 
 <h3 id="unit-flare-flarecolor">UNIT:Flare(FlareColor)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -460,128 +460,128 @@ self</li>
 <li><a href="#flarecolor-class">FLARECOLOR</a> FlareColor</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-flarewhite">UNIT:FlareWhite()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-flareyellow">UNIT:FlareYellow()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-flaregreen">UNIT:FlareGreen()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-flarered">UNIT:FlareRed()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smoke">UNIT:Smoke()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smokegreen">UNIT:SmokeGreen()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smokered">UNIT:SmokeRed()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smokewhite">UNIT:SmokeWhite()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smokeorange">UNIT:SmokeOrange()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-smokeblue">UNIT:SmokeBlue()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="unit-isair">UNIT:IsAir()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Air : category evaluation result.</li>
@@ -589,14 +589,14 @@ self</li>
 
 <h3 id="unit-isground">UNIT:IsGround()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Ground : category evaluation result.</li>
@@ -604,14 +604,14 @@ self</li>
 
 <h3 id="unit-isfriendly">UNIT:IsFriendly()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean IsFriendly : evaluation result.</li>
@@ -619,14 +619,14 @@ self</li>
 
 <h3 id="unit-isship">UNIT:IsShip()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean Ship : category evaluation result.</li>
@@ -634,13 +634,13 @@ self</li>
 
 <h3 id="unit-inair">UNIT:InAir()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a> self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean true : if in the air.</li>
@@ -649,7 +649,7 @@ self</li>
 
 <h3 id="unit-handleevent-event-eventfunction">UNIT:HandleEvent(Event, EventFunction)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -658,7 +658,7 @@ self</li>
 <li>#function EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -667,7 +667,7 @@ self</li>
 
 <h3 id="unit-unhandleevent-event">UNIT:UnHandleEvent(Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -675,7 +675,7 @@ self</li>
 <li><a href="#events-class">EVENTS</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -684,14 +684,14 @@ self</li>
 
 <h3 id="unit-resetevents">UNIT:ResetEvents()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a>
@@ -704,7 +704,7 @@ self</li>
 **The Unit.SensorType class does not inherit**
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>OPTIC self</li>

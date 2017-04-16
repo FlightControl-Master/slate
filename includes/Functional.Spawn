@@ -132,8 +132,8 @@ a suffix is added to each spawned group and unit.</p>
 <p>Newly spawned groups will get the following naming structure at run-time:</p>
 
 <ol>
-<li>Spawned groups will have the name <a href="#_nnn_,%20where%20_groupname_%20is%20the%20name%20of%20the%20**template-class"><em>nnn</em>, where <em>GroupName</em> is the name of the **template</a> group*<em>,
-and <em>nnn</em> is a **counter from 0 to 999</em>*.</li>
+<li>Spawned groups will have the name <em>GroupName</em>#<em>nnn</em>, where <em>GroupName</em> is the name of the <strong>template group</strong>,
+and <em>nnn</em> is a <strong>counter from 0 to 999</strong>.</li>
 <li>Spawned units will have the name <em>GroupName</em>#<em>nnn</em>-<em>uu</em>,
 where <em>uu</em> is a <strong>counter from 0 to 99</strong> for each new spawned unit belonging to the group.</li>
 </ol>
@@ -314,7 +314,9 @@ activate a delay before the first <a href="#group-module">Group</a> is spawned. 
 can be used to switch off the initial delay. Because there is no delay by default, this method would only be used when a
 SPAWN-SpawnScheduledStop ; @{#SPAWN.SpawnScheduledStart}() sequence would have been used.</p>
 
-<h4 id="attributes">Attributes</h4>
+<p>SPAWN Class</p>
+
+<h4> Attributes </h4>
 
 <ul>
 <li>ClassName self</li>
@@ -333,7 +335,7 @@ SPAWN-SpawnScheduledStop ; @{#SPAWN.SpawnScheduledStart}() sequence would have b
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span> <span class="p">)</span>
 <span class="err">@</span><span class="n">usage</span> <span class="kd">local</span> <span class="n">Plane</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Plane"</span> <span class="p">)</span> <span class="c1">-- Creates a new local variable that can initiate new planes with the name "Plane#ddd" using the template "Plane" as defined within the ME.</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -341,7 +343,7 @@ self</li>
 <li>string SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -353,7 +355,7 @@ self</li>
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">NewWithAlias</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span><span class="p">,</span> <span class="s1">'Helicopter Attacking a City'</span> <span class="p">)</span>
 <span class="err">@</span><span class="n">usage</span> <span class="kd">local</span> <span class="n">PlaneWithAlias</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">NewWithAlias</span><span class="p">(</span> <span class="s2">"Plane"</span><span class="p">,</span> <span class="s2">"Bomber"</span> <span class="p">)</span> <span class="c1">-- Creates a new local variable that can instantiate new planes with the name "Bomber#ddd" using the template "Plane" as defined within the ME.</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -362,7 +364,7 @@ self</li>
 <li>string SpawnAliasPrefix : is the name that will be given to the Group at runtime.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -375,7 +377,7 @@ self</li>
 <span class="c1">-- There will be maximum 24 groups spawned during the whole mission lifetime.</span>
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span> <span class="p">):</span><span class="n">InitLimit</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">24</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -384,7 +386,7 @@ self</li>
 <li>number SpawnMaxGroups : The maximum amount of groups that can be spawned. When the limit is reached, then no more actual spawns will happen of the group.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -393,14 +395,14 @@ self</li>
 
 <h3 id="spawn-initkeepunitnames">SPAWN:InitKeepUnitNames()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -414,7 +416,7 @@ self</li>
 <span class="c1">-- The randomization of waypoint 2 and 3 will take place within a radius of 2000 meters.</span>
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span> <span class="p">):</span><span class="n">InitRandomizeRoute</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2000</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -425,7 +427,7 @@ self</li>
 <li>number SpawnHeight : (optional) Specifies the <strong>additional</strong> height in meters that can be added to the base height specified at each waypoint in the ME.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -434,7 +436,7 @@ self</li>
 
 <h3 id="spawn-initrandomizeposition-randomizeposition-outerradius-innerradius">SPAWN:InitRandomizePosition(RandomizePosition, OuterRadius, InnerRadius)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -444,7 +446,7 @@ self</li>
 <li><a href="#distance%20innerradius%20:%20(optional)%20the%20inner%20radius%20in%20meters%20where%20the%20new%20group%20will%20not%20be-class">Distance InnerRadius : (optional) The inner radius in meters where the new group will NOT be</a> spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -458,7 +460,7 @@ self</li>
 <span class="c1">-- The randomization of waypoint 2 and 3 will take place within a radius of 2000 meters.</span>
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span> <span class="p">):</span><span class="n">InitRandomizeRoute</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2000</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -468,7 +470,7 @@ self</li>
 <li><a href="#distance%20innerradius%20:%20(optional)%20the%20inner%20radius%20in%20meters%20where%20the%20new%20group%20will%20not%20be-class">Distance InnerRadius : (optional) The inner radius in meters where the new group will NOT be</a> spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -488,7 +490,7 @@ self</li>
 <span class="n">Spawn_US_Platoon_Middle</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'US Tank Platoon Middle'</span> <span class="p">):</span><span class="n">InitLimit</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">150</span> <span class="p">):</span><span class="n">Schedule</span><span class="p">(</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span> <span class="p">):</span><span class="n">InitRandomizeTemplate</span><span class="p">(</span> <span class="n">Spawn_US_Platoon</span> <span class="p">):</span><span class="n">InitRandomizeRoute</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2000</span> <span class="p">)</span>
 <span class="n">Spawn_US_Platoon_Right</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'US Tank Platoon Right'</span> <span class="p">):</span><span class="n">InitLimit</span><span class="p">(</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">150</span> <span class="p">):</span><span class="n">Schedule</span><span class="p">(</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span> <span class="p">):</span><span class="n">InitRandomizeTemplate</span><span class="p">(</span> <span class="n">Spawn_US_Platoon</span> <span class="p">):</span><span class="n">InitRandomizeRoute</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2000</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -496,7 +498,7 @@ self</li>
 <li>string SpawnTemplatePrefixTable : A table with the names of the groups defined within the mission editor, from which one will be choosen when a new group will be spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -507,7 +509,7 @@ self</li>
 <pre class="highlight lua tab-lua"><code><span class="c1">-- NATO Tank Platoons invading Gori.</span>
 <span class="c1">-- Choose between 3 different zones for each new SPAWN the Group to be executed, regardless of the zone type.</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -515,7 +517,7 @@ self</li>
 <li>table[] SpawnZoneTable : A table with <a href="#zone-module">Zone</a> objects. If this table is given, then each spawn will be executed within the given list of <a href="#zone-module">Zone</a>s objects.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -527,14 +529,14 @@ self</li>
 <span class="c1">-- Re-SPAWN the Group(s) after each landing and Engine Shut-Down automatically.</span>
 <span class="n">SpawnRU_SU34</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'TF1 RU Su-34 Krymsk@AI - Attack Ships'</span> <span class="p">):</span><span class="n">Schedule</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span> <span class="p">):</span><span class="n">SpawnUncontrolled</span><span class="p">():</span><span class="n">InitRandomizeRoute</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3000</span> <span class="p">):</span><span class="n">RepeatOnEngineShutDown</span><span class="p">()</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -543,14 +545,14 @@ self</li>
 
 <h3 id="spawn-initrepeatonlanding">SPAWN:InitRepeatOnLanding()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -559,14 +561,14 @@ self</li>
 
 <h3 id="spawn-initrepeatonengineshutdown">SPAWN:InitRepeatOnEngineShutDown()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -578,7 +580,7 @@ self</li>
 <p><code class="prettyprint">lua Spawn_Helicopter:CleanUp( 20 )  -- CleanUp the spawning of the helicopters every 20 seconds when they become inactive.
 </code></p>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -586,7 +588,7 @@ self</li>
 <li>string SpawnCleanUpInterval : The interval to check for inactive groups within seconds.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -597,7 +599,7 @@ self</li>
 <pre class="highlight lua tab-lua"><code><span class="c1">-- Define an array of Groups.</span>
 <span class="n">Spawn_BE_Ground</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE Ground'</span> <span class="p">):</span><span class="n">InitLimit</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">24</span> <span class="p">):</span><span class="n">InitArray</span><span class="p">(</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">"Diamond"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -608,7 +610,7 @@ self</li>
 <li>number SpawnDeltaY :       The space between each Group on the Y-axis.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -617,7 +619,7 @@ self</li>
 
 <h3 id="spawn-initaionoff-aionoff">SPAWN:InitAIOnOff(AIOnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -625,7 +627,7 @@ self</li>
 <li>boolean AIOnOff : A value of true sets the AI On, a value of false sets the AI Off.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -634,14 +636,14 @@ The : SPAWN object</li>
 
 <h3 id="spawn-initaion">SPAWN:InitAIOn()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -650,14 +652,14 @@ The : SPAWN object</li>
 
 <h3 id="spawn-initaioff">SPAWN:InitAIOff()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -666,7 +668,7 @@ The : SPAWN object</li>
 
 <h3 id="spawn-initdelayonoff-delayonoff">SPAWN:InitDelayOnOff(DelayOnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -674,7 +676,7 @@ self</li>
 <li>boolean DelayOnOff : A value of true sets the Delay On, a value of false sets the Delay Off.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -683,14 +685,14 @@ The : SPAWN object</li>
 
 <h3 id="spawn-initdelayon">SPAWN:InitDelayOn()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -699,14 +701,14 @@ The : SPAWN object</li>
 
 <h3 id="spawn-initdelayoff">SPAWN:InitDelayOff()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -715,14 +717,14 @@ The : SPAWN object</li>
 
 <h3 id="spawn-spawn">SPAWN:Spawn()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20the%20:%20group%20that%20was%20spawned.%20you%20can%20use%20this%20group%20for%20further-class">GROUP The : group that was spawned. You can use this group for further</a> actions.</li>
@@ -730,7 +732,7 @@ self</li>
 
 <h3 id="spawn-respawn-spawnindex">SPAWN:ReSpawn(SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -738,7 +740,7 @@ self</li>
 <li>string SpawnIndex : The index of the group to be spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20the%20:%20group%20that%20was%20spawned.%20you%20can%20use%20this%20group%20for%20further-class">GROUP The : group that was spawned. You can use this group for further</a> actions.</li>
@@ -746,7 +748,7 @@ self</li>
 
 <h3 id="spawn-spawnwithindex-spawnindex">SPAWN:SpawnWithIndex(SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -754,7 +756,7 @@ self</li>
 <li>string SpawnIndex : The index of the group to be spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20the%20:%20group%20that%20was%20spawned.%20you%20can%20use%20this%20group%20for%20further-class">GROUP The : group that was spawned. You can use this group for further</a> actions.</li>
@@ -770,7 +772,7 @@ self</li>
 <span class="c1">-- Between these two values, a random amount of seconds will be choosen for each new spawn of the helicopters.</span>
 <span class="n">Spawn_BE_KA50</span> <span class="o">=</span> <span class="n">SPAWN</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'BE KA-50@RAMP-Ground Defense'</span> <span class="p">):</span><span class="n">Schedule</span><span class="p">(</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -779,7 +781,7 @@ self</li>
 <li>number SpawnTimeVariation : The variation to be applied on the defined time interval between each new spawn.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -788,14 +790,14 @@ self</li>
 
 <h3 id="spawn-spawnschedulestart">SPAWN:SpawnScheduleStart()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -804,14 +806,14 @@ self</li>
 
 <h3 id="spawn-spawnschedulestop">SPAWN:SpawnScheduleStop()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -830,7 +832,7 @@ self</li>
 <span class="p">)</span>
 <span class="p">:</span><span class="n">SpawnScheduled</span><span class="p">(</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">3</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -839,7 +841,7 @@ self</li>
 <li>SpawnFunctionArguments A : random amount of arguments to be provided to the function when the group spawns.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -848,7 +850,7 @@ self</li>
 
 <h3 id="spawn-spawnfromvec3-vec3-spawnindex">SPAWN:SpawnFromVec3(Vec3, SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -857,7 +859,7 @@ self</li>
 <li>number SpawnIndex : (optional) The index which group to spawn within the given zone.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20that%20:%20was-class">GROUP that : was</a> spawned.</li>
@@ -866,7 +868,7 @@ self</li>
 
 <h3 id="spawn-spawnfromvec2-vec2-spawnindex">SPAWN:SpawnFromVec2(Vec2, SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -875,7 +877,7 @@ self</li>
 <li>number SpawnIndex : (optional) The index which group to spawn within the given zone.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20that%20:%20was-class">GROUP that : was</a> spawned.</li>
@@ -884,7 +886,7 @@ self</li>
 
 <h3 id="spawn-spawnfromunit-hostunit-spawnindex">SPAWN:SpawnFromUnit(HostUnit, SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -893,7 +895,7 @@ self</li>
 <li>number SpawnIndex : (optional) The index which group to spawn within the given zone.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20that%20:%20was-class">GROUP that : was</a> spawned.</li>
@@ -902,7 +904,7 @@ self</li>
 
 <h3 id="spawn-spawnfromstatic-hoststatic-spawnindex">SPAWN:SpawnFromStatic(HostStatic, SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -911,7 +913,7 @@ self</li>
 <li>number SpawnIndex : (optional) The index which group to spawn within the given zone.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20that%20:%20was-class">GROUP that : was</a> spawned.</li>
@@ -920,7 +922,7 @@ self</li>
 
 <h3 id="spawn-spawninzone-zone-randomizegroup-spawnindex">SPAWN:SpawnInZone(Zone, RandomizeGroup, SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -930,7 +932,7 @@ self</li>
 <li>number SpawnIndex : (optional) The index which group to spawn within the given zone.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group%20that%20:%20was-class">GROUP that : was</a> spawned.</li>
@@ -939,7 +941,7 @@ self</li>
 
 <h3 id="spawn-inituncontrolled-uncontrolled">SPAWN:InitUnControlled(UnControlled)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -947,7 +949,7 @@ self</li>
 <li>boolean UnControlled : true if UnControlled, false if Controlled.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -956,7 +958,7 @@ self</li>
 
 <h3 id="spawn-spawngroupname-spawnindex">SPAWN:SpawnGroupName(SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -964,7 +966,7 @@ self</li>
 <li>number SpawnIndex : Is the number of the Group that is to be spawned.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string SpawnGroupName</li>
@@ -978,14 +980,14 @@ self</li>
 <span class="n">GroupPlane</span><span class="p">,</span> <span class="n">Index</span> <span class="o">=</span> <span class="n">SpawnPlanes</span><span class="p">:</span><span class="n">GetNextAliveGroup</span><span class="p">(</span> <span class="n">Index</span> <span class="p">)</span>
 <span class="k">end</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group,%20number%20:%20the%20[group](#group-module)%20object%20found,%20the%20new%20index%20where%20the%20group%20was-class">GROUP, number : The <a href="#group-module">Group</a> object found, the new Index where the group was</a> found.</li>
@@ -1000,7 +1002,7 @@ self</li>
 <span class="n">GroupPlane</span><span class="p">,</span> <span class="n">Index</span> <span class="o">=</span> <span class="n">SpawnPlanes</span><span class="p">:</span><span class="n">GetNextAliveGroup</span><span class="p">(</span> <span class="n">Index</span> <span class="p">)</span>
 <span class="k">end</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -1008,7 +1010,7 @@ self</li>
 <li>number SpawnIndexStart : A Index holding the start position to search from. This method can also be used to find the first alive <a href="#group-module">Group</a> object from the given Index.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group,%20number%20:%20the%20next%20alive%20[group](#group-module)%20object%20found,%20the%20next%20index%20where%20the%20next%20alive%20[group](#group-module)%20object%20was-class">GROUP, number : The next alive <a href="#group-module">Group</a> object found, the next Index where the next alive <a href="#group-module">Group</a> object was</a> found.</li>
@@ -1022,14 +1024,14 @@ self</li>
 <span class="c1">-- Do actions with the GroupPlane object.</span>
 <span class="k">end</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group,%20number%20:%20the%20last%20alive%20[group](#group-module)%20object%20found,%20the%20last%20index%20where%20the%20last%20alive%20[group](#group-module)%20object%20was-class">GROUP, number : The last alive <a href="#group-module">Group</a> object found, the last Index where the last alive <a href="#group-module">Group</a> object was</a> found.</li>
@@ -1038,7 +1040,7 @@ self</li>
 
 <h3 id="spawn-getgroupfromindex-spawnindex">SPAWN:GetGroupFromIndex(SpawnIndex)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#spawn-class">SPAWN</a>
@@ -1046,7 +1048,7 @@ self</li>
 <li>number SpawnIndex : The index of the group to return.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#group-class">GROUP</a> self</li>
@@ -1054,9 +1056,9 @@ self</li>
 
 <h3 id="spawn-getspawnindexfromgroup">SPAWN.GetSpawnIndexFromGroup(()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="spawn-spawnzonetable-class">SPAWN.SpawnZoneTable Class</h2>
 

@@ -71,13 +71,14 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 
 <pre>
 Inheritance : The TASK_A2G Class inherits from the following parents :
-ERROR !
-    `-- FSM_TASK
-        `-- TASK
-            `-- TASK_A2G
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_A2G
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -85,7 +86,7 @@ ERROR !
 
 <h3 id="task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone">TASK_A2G:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -98,7 +99,7 @@ ERROR !
 <li><a href="#zone_base%20targetzone%20:%20the%20target%20zone,%20if-class">ZONE_BASE TargetZone : The target zone, if</a> known.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -107,18 +108,18 @@ ERROR !
 
 <h3 id="task_a2g-getplannedmenutext">TASK_A2G:GetPlannedMenuText()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
 2G self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_a2g-setrendezvouspointvec2-rendezvouspointvec2-rendezvousrange-taskunit">TASK_A2G:SetRendezVousPointVec2(RendezVousPointVec2, RendezVousRange, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -128,11 +129,11 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_a2g-getrendezvouspointvec2-taskunit">TASK_A2G:GetRendezVousPointVec2(TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -140,7 +141,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#point_vec2%20the%20:%20pointvec2%20object%20referencing%20to%20the%202d%20point%20where%20the%20rendezvous%20point%20is%20located%20on%20the-class">POINT_VEC2 The : PointVec2 object referencing to the 2D point where the RendezVous point is located on the</a> map.</li>
@@ -149,7 +150,7 @@ ERROR !
 
 <h3 id="task_a2g-setrendezvouszone-rendezvouszone-taskunit">TASK_A2G:SetRendezVousZone(RendezVousZone, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -158,11 +159,11 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_a2g-getrendezvouszone-taskunit">TASK_A2G:GetRendezVousZone(TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -170,7 +171,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#zone_base%20the%20:%20zone%20object%20where%20the%20rendezvous%20is%20located%20on%20the-class">ZONE_BASE The : Zone object where the RendezVous is located on the</a> map.</li>
@@ -178,7 +179,7 @@ ERROR !
 
 <h3 id="task_a2g-settargetpointvec2-targetpointvec2-taskunit">TASK_A2G:SetTargetPointVec2(TargetPointVec2, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -187,11 +188,11 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_a2g-gettargetpointvec2-taskunit">TASK_A2G:GetTargetPointVec2(TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -199,7 +200,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#point_vec2%20the%20:%20pointvec2%20object%20where%20the%20target%20is%20located%20on%20the-class">POINT_VEC2 The : PointVec2 object where the Target is located on the</a> map.</li>
@@ -207,7 +208,7 @@ ERROR !
 
 <h3 id="task_a2g-settargetzone-targetzone-taskunit">TASK_A2G:SetTargetZone(TargetZone, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -216,11 +217,11 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="task_a2g-gettargetzone-taskunit">TASK_A2G:GetTargetZone(TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -228,7 +229,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#zone_base%20the%20:%20zone%20object%20where%20the%20target%20is%20located%20on%20the-class">ZONE_BASE The : Zone object where the Target is located on the</a> map.</li>
@@ -236,7 +237,7 @@ ERROR !
 
 <h3 id="task_a2g-setscoreondestroy-text-score-taskunit">TASK_A2G:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -246,7 +247,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -255,7 +256,7 @@ ERROR !
 
 <h3 id="task_a2g-setscoreonsuccess-text-score-taskunit">TASK_A2G:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -265,7 +266,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -274,7 +275,7 @@ ERROR !
 
 <h3 id="task_a2g-setpenaltyonfailed-text-penalty-taskunit">TASK_A2G:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -284,7 +285,7 @@ ERROR !
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_a-class">TASK_A</a>
@@ -295,13 +296,14 @@ ERROR !
 
 <pre>
 Inheritance : The TASK_SEAD Class inherits from the following parents :
-ERROR !
-    `-- FSM_TASK
-        `-- TASK
-            `-- TASK_SEAD
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_SEAD
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -309,7 +311,7 @@ ERROR !
 
 <h3 id="task_sead-new-mission-setgroup-taskname-targetsetunit">TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_sead-class">TASK_SEAD</a>
@@ -320,7 +322,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_sead-class">TASK_SEAD</a>
@@ -331,13 +333,14 @@ self</li>
 
 <pre>
 Inheritance : The TASK_BAI Class inherits from the following parents :
-ERROR !
-    `-- FSM_TASK
-        `-- TASK
-            `-- TASK_BAI
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_BAI
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -345,7 +348,7 @@ ERROR !
 
 <h3 id="task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone">TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_bai-class">TASK_BAI</a>
@@ -358,7 +361,7 @@ self</li>
 <li><a href="#zone_base%20targetzone%20:%20the%20target%20zone,%20if-class">ZONE_BASE TargetZone : The target zone, if</a> known.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_bai-class">TASK_BAI</a>
@@ -369,13 +372,14 @@ self</li>
 
 <pre>
 Inheritance : The TASK_CAS Class inherits from the following parents :
-ERROR !
-    `-- FSM_TASK
-        `-- TASK
-            `-- TASK_CAS
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_CAS
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
@@ -383,7 +387,7 @@ ERROR !
 
 <h3 id="task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone">TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#task_cas-class">TASK_CAS</a>
@@ -396,7 +400,7 @@ self</li>
 <li><a href="#zone_base%20targetzone%20:%20the%20target%20zone,%20if-class">ZONE_BASE TargetZone : The target zone, if</a> known.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#task_cas-class">TASK_CAS</a>

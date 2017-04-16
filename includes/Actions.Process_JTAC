@@ -4,11 +4,14 @@
 
 <pre>
 Inheritance : The PROCESS_JTAC Class inherits from the following parents :
-ERROR !
-    `-- PROCESS_JTAC
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- PROCESS_JTAC
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#unit-class">UNIT</a> ProcessUnit</li>
@@ -17,7 +20,7 @@ ERROR !
 
 <h3 id="process_jtac-new-task-processunit-targetsetunit-facunit">PROCESS_JTAC:New(Task, ProcessUnit, TargetSetUnit, FACUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -28,7 +31,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a> FACUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -37,7 +40,7 @@ self</li>
 
 <h3 id="process_jtac-onstart-fsm-event-from-to">PROCESS_JTAC:OnStart(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -48,11 +51,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_jtac-onjtacmenuupdate-fsm-event-from-to">PROCESS_JTAC:OnJTACMenuUpdate(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -63,11 +66,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_jtac-onjtacmenuawait-fsm-event-from-to">PROCESS_JTAC:OnJTACMenuAwait(Fsm, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -78,11 +81,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_jtac-onjtacmenuspot-fsm-event-from-to-targetunit">PROCESS_JTAC:OnJTACMenuSpot(Fsm, Event, From, To, TargetUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -94,11 +97,11 @@ self</li>
 <li><a href="#unit-class">UNIT</a> TargetUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="process_jtac-onjtacmenucancel-fsm-event-from-to-targetunit">PROCESS_JTAC:OnJTACMenuCancel(Fsm, Event, From, To, TargetUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
@@ -110,4 +113,4 @@ self</li>
 <li><a href="#unit-class">UNIT</a> TargetUnit</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

@@ -194,7 +194,7 @@ BASE
     `-- SCORING
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>Players A : collection of the current players that have joined the game.</li>
@@ -204,7 +204,7 @@ BASE
 <pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new scoring object for the mission Gori Valley.</span>
 <span class="n">ScoringObject</span> <span class="o">=</span> <span class="n">SCORING</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Gori Valley"</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -212,7 +212,7 @@ self</li>
 <li>string GameName : The name of the game. This name is also logged in the CSV score file.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -221,7 +221,7 @@ self</li>
 
 <h3 id="scoring-setscaledestroyscore-scale">SCORING:SetScaleDestroyScore(Scale)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -229,11 +229,11 @@ self</li>
 <li>number Scale : The scale of the score given.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-setscaledestroypenalty-scale">SCORING:SetScaleDestroyPenalty(Scale)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -241,7 +241,7 @@ self</li>
 <li>number Scale : The scale of the score given.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -250,7 +250,7 @@ self</li>
 
 <h3 id="scoring-addunitscore-scoreunit-score">SCORING:AddUnitScore(ScoreUnit, Score)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -259,7 +259,7 @@ self</li>
 <li>number Score : The Score value.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -268,7 +268,7 @@ self</li>
 
 <h3 id="scoring-removeunitscore-scoreunit">SCORING:RemoveUnitScore(ScoreUnit)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -276,7 +276,7 @@ self</li>
 <li><a href="#unit%20scoreunit%20:%20the%20[unit](#unit-module)%20for%20which%20the%20score%20needs%20to%20be-class">UNIT ScoreUnit : The <a href="#unit-module">Unit</a> for which the Score needs to be</a> given.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -285,7 +285,7 @@ self</li>
 
 <h3 id="scoring-addstaticscore-scorestatic-score">SCORING:AddStaticScore(ScoreStatic, Score)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -294,7 +294,7 @@ self</li>
 <li>number Score : The Score value.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -303,7 +303,7 @@ self</li>
 
 <h3 id="scoring-removestaticscore-scorestatic">SCORING:RemoveStaticScore(ScoreStatic)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -311,7 +311,7 @@ self</li>
 <li><a href="#unit%20scorestatic%20:%20the%20[static](#static-module)%20for%20which%20the%20score%20needs%20to%20be-class">UNIT ScoreStatic : The <a href="#static-module">Static</a> for which the Score needs to be</a> given.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -320,7 +320,7 @@ self</li>
 
 <h3 id="scoring-addscoregroup-scoregroup-score">SCORING:AddScoreGroup(ScoreGroup, Score)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -329,7 +329,7 @@ self</li>
 <li>number Score : The Score value.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -338,7 +338,7 @@ self</li>
 
 <h3 id="scoring-addzonescore-scorezone-score">SCORING:AddZoneScore(ScoreZone, Score)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -347,7 +347,7 @@ self</li>
 <li>number Score : The Score value.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -356,7 +356,7 @@ self</li>
 
 <h3 id="scoring-removezonescore-scorezone">SCORING:RemoveZoneScore(ScoreZone)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -364,7 +364,7 @@ self</li>
 <li><a href="#zone_base%20scorezone%20:%20the%20[zone](#zone-module)%20which%20defines%20the%20destruction%20score-class">ZONE_BASE ScoreZone : The <a href="#zone-module">Zone</a> which defines the destruction score</a> perimeters.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -373,7 +373,7 @@ self</li>
 
 <h3 id="scoring-setmessageshit-onoff">SCORING:SetMessagesHit(OnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -381,7 +381,7 @@ self</li>
 <li>boolean OnOff : If true is given, the messages are sent.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -390,14 +390,14 @@ self</li>
 
 <h3 id="scoring-ifmessageshit">SCORING:IfMessagesHit()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -405,7 +405,7 @@ self</li>
 
 <h3 id="scoring-setmessagesdestroy-onoff">SCORING:SetMessagesDestroy(OnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -413,7 +413,7 @@ self</li>
 <li>boolean OnOff : If true is given, the messages are sent.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -422,14 +422,14 @@ self</li>
 
 <h3 id="scoring-ifmessagesdestroy">SCORING:IfMessagesDestroy()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -437,7 +437,7 @@ self</li>
 
 <h3 id="scoring-setmessagesscore-onoff">SCORING:SetMessagesScore(OnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -445,7 +445,7 @@ self</li>
 <li>boolean OnOff : If true is given, the messages are sent.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -454,14 +454,14 @@ self</li>
 
 <h3 id="scoring-ifmessagesscore">SCORING:IfMessagesScore()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -469,7 +469,7 @@ self</li>
 
 <h3 id="scoring-setmessageszone-onoff">SCORING:SetMessagesZone(OnOff)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -477,7 +477,7 @@ self</li>
 <li>boolean OnOff : If true is given, the messages are sent.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -486,14 +486,14 @@ self</li>
 
 <h3 id="scoring-ifmessageszone">SCORING:IfMessagesZone()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -501,14 +501,14 @@ self</li>
 
 <h3 id="scoring-setmessagestoall">SCORING:SetMessagesToAll()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -517,14 +517,14 @@ self</li>
 
 <h3 id="scoring-ifmessagestoall">SCORING:IfMessagesToAll()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -532,14 +532,14 @@ self</li>
 
 <h3 id="scoring-setmessagestocoalition">SCORING:SetMessagesToCoalition()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -548,14 +548,14 @@ self</li>
 
 <h3 id="scoring-ifmessagestocoalition">SCORING:IfMessagesToCoalition()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>boolean self</li>
@@ -563,7 +563,7 @@ self</li>
 
 <h3 id="scoring-setfratricide-fratricide">SCORING:SetFratricide(Fratricide)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -571,7 +571,7 @@ self</li>
 <li>number Fratricide : The amount of maximum penalty that may be inflicted by a friendly player before he gets kicked.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -580,7 +580,7 @@ self</li>
 
 <h3 id="scoring-setcoalitionchangepenalty-coalitionchangepenalty">SCORING:SetCoalitionChangePenalty(CoalitionChangePenalty)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -588,7 +588,7 @@ self</li>
 <li>number CoalitionChangePenalty : The amount of penalty that is given.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -597,7 +597,7 @@ self</li>
 
 <h3 id="scoring-addgoalscore-playerunit-goaltag-text-score">SCORING:AddGoalScore(PlayerUnit, GoalTag, Text, Score)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -608,11 +608,11 @@ self</li>
 <li>number Score : The score can be both positive or negative ( Penalty ).</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-oneventplayerenterunit-event">SCORING:OnEventPlayerEnterUnit(Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -620,11 +620,11 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-oneventplayerleaveunit-event">SCORING:OnEventPlayerLeaveUnit(Event)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -632,11 +632,11 @@ self</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-reportdetailedplayerhits-playername">SCORING:ReportDetailedPlayerHits(PlayerName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -644,7 +644,7 @@ self</li>
 <li>string PlayerName : The name of the player.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : report.</li>
@@ -652,7 +652,7 @@ self</li>
 
 <h3 id="scoring-reportdetailedplayerdestroys-playername">SCORING:ReportDetailedPlayerDestroys(PlayerName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -660,7 +660,7 @@ self</li>
 <li>string PlayerName : The name of the player.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : report.</li>
@@ -668,7 +668,7 @@ self</li>
 
 <h3 id="scoring-reportdetailedplayercoalitionchanges-playername">SCORING:ReportDetailedPlayerCoalitionChanges(PlayerName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -676,7 +676,7 @@ self</li>
 <li>string PlayerName : The name of the player.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : report.</li>
@@ -684,7 +684,7 @@ self</li>
 
 <h3 id="scoring-reportdetailedplayergoals-playername">SCORING:ReportDetailedPlayerGoals(PlayerName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -692,7 +692,7 @@ self</li>
 <li>string PlayerName : The name of the player.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : report.</li>
@@ -700,7 +700,7 @@ self</li>
 
 <h3 id="scoring-reportdetailedplayermissions-playername">SCORING:ReportDetailedPlayerMissions(PlayerName)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -708,7 +708,7 @@ self</li>
 <li>string PlayerName : The name of the player.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>string The : report.</li>
@@ -716,7 +716,7 @@ self</li>
 
 <h3 id="scoring-reportscoregroupsummary-playergroup">SCORING:ReportScoreGroupSummary(PlayerGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -724,11 +724,11 @@ self</li>
 <li><a href="#group%20playergroup%20:%20the%20player-class">GROUP PlayerGroup : The player</a> group.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-reportscoregroupdetailed-playergroup">SCORING:ReportScoreGroupDetailed(PlayerGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -736,11 +736,11 @@ self</li>
 <li><a href="#group%20playergroup%20:%20the%20player-class">GROUP PlayerGroup : The player</a> group.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-reportscoreallsummary-playergroup">SCORING:ReportScoreAllSummary(PlayerGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -748,14 +748,14 @@ self</li>
 <li><a href="#group%20playergroup%20:%20the%20player-class">GROUP PlayerGroup : The player</a> group.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="scoring-opencsv-scoringcsv">SCORING:OpenCSV(ScoringCSV)</h3>
 <pre class="highlight lua tab-lua"><code><span class="c1">-- Open a new CSV file to log the scores of the game Gori Valley. Let the name of the CSV file begin with "Player Scores".</span>
 <span class="n">ScoringObject</span> <span class="o">=</span> <span class="n">SCORING</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Gori Valley"</span> <span class="p">)</span>
 <span class="n">ScoringObject</span><span class="p">:</span><span class="n">OpenCSV</span><span class="p">(</span> <span class="s2">"Player Scores"</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -763,7 +763,7 @@ self</li>
 <li>string ScoringCSV</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -772,7 +772,7 @@ self</li>
 
 <h3 id="scoring-scorecsv-playername-targetplayername-scoretype-scoretimes-scoreamount-playerunitname-playerunitcoalition-playerunitcategory-playerunittype-targetunitname-targetunitcoalition-targetunitcategory-targetunittype">SCORING:ScoreCSV(PlayerName, TargetPlayerName, ScoreType, ScoreTimes, ScoreAmount, PlayerUnitName, PlayerUnitCoalition, PlayerUnitCategory, PlayerUnitType, TargetUnitName, TargetUnitCoalition, TargetUnitCategory, TargetUnitType)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>
@@ -792,7 +792,7 @@ self</li>
 <li>string TargetUnitType : The type of the target unit.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#scoring-class">SCORING</a>

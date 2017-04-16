@@ -135,7 +135,7 @@ BASE
     `-- ESCORT
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#client-class">CLIENT</a> EscortClient</li>
@@ -161,7 +161,7 @@ BASE
 <span class="c1">-- Now use these 2 objects to construct the new EscortPlanes object.</span>
 <span class="n">EscortPlanes</span> <span class="o">=</span> <span class="n">ESCORT</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="n">EscortClient</span><span class="p">,</span> <span class="n">EscortGroup</span><span class="p">,</span> <span class="s2">"Desert"</span><span class="p">,</span> <span class="s2">"Welcome to the mission. You are escorted by a plane with code name 'Desert', which can be instructed through the F10 radio menu."</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -172,7 +172,7 @@ self</li>
 <li>string EscortBriefing : A text showing the ESCORT briefing to the player. Note that if no EscortBriefing is provided, the default briefing will be shown.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -181,7 +181,7 @@ self</li>
 
 <h3 id="escort-setdetection-detection">ESCORT:SetDetection(Detection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -189,11 +189,11 @@ self</li>
 <li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="escort-testsmokedirectionvector-smokedirection">ESCORT:TestSmokeDirectionVector(SmokeDirection)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -201,18 +201,18 @@ self</li>
 <li>boolean SmokeDirection : If true, then the direction vector will be smoked.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="escort-menus">ESCORT:Menus()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -221,7 +221,7 @@ self</li>
 
 <h3 id="escort-menufollowat-distance">ESCORT:MenuFollowAt(Distance)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -229,7 +229,7 @@ self</li>
 <li><a href="#distance%20distance%20:%20the%20distance%20in%20meters%20that%20the%20escort%20needs%20to%20follow%20the-class">Distance Distance : The distance in meters that the escort needs to follow the</a> client.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -238,7 +238,7 @@ self</li>
 
 <h3 id="escort-menuholdatescortposition-height-seconds-menutextformat">ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -248,7 +248,7 @@ self</li>
 <li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -257,7 +257,7 @@ self</li>
 
 <h3 id="escort-menuholdatleaderposition-height-seconds-menutextformat">ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -267,7 +267,7 @@ self</li>
 <li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -276,7 +276,7 @@ self</li>
 
 <h3 id="escort-menuscanfortargets-height-seconds-menutextformat">ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -286,7 +286,7 @@ self</li>
 <li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -295,7 +295,7 @@ self</li>
 
 <h3 id="escort-menuflare-menutextformat">ESCORT:MenuFlare(MenuTextFormat)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -303,7 +303,7 @@ self</li>
 <li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -312,7 +312,7 @@ self</li>
 
 <h3 id="escort-menusmoke-menutextformat">ESCORT:MenuSmoke(MenuTextFormat)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -320,7 +320,7 @@ self</li>
 <li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -329,7 +329,7 @@ self</li>
 
 <h3 id="escort-menureporttargets-seconds">ESCORT:MenuReportTargets(Seconds)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -337,7 +337,7 @@ self</li>
 <li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20report%20their%20current%20detected%20targets%20after%20specified%20time%20interval%20in%20seconds.%20the%20default%20time%20is%2030-class">Time Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30</a> seconds.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -346,14 +346,14 @@ self</li>
 
 <h3 id="escort-menuassistedattack">ESCORT:MenuAssistedAttack()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -362,14 +362,14 @@ self</li>
 
 <h3 id="escort-menuroe">ESCORT:MenuROE()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -378,14 +378,14 @@ self</li>
 
 <h3 id="escort-menuevasion">ESCORT:MenuEvasion()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -394,14 +394,14 @@ self</li>
 
 <h3 id="escort-menuresumemission">ESCORT:MenuResumeMission()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
@@ -410,7 +410,7 @@ self</li>
 
 <h3 id="escort-joinupandfollow-escortgroup-escortclient-distance">ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a> self</li>
@@ -419,18 +419,18 @@ self</li>
 <li><a href="#distance-class">Distance</a> Distance</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="escort-registerroute">ESCORT:RegisterRoute()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>table[] self</li>
@@ -442,7 +442,7 @@ self</li>
 **The ESCORT.MODE class does not inherit**
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li>number FOLLOW</li>
@@ -455,7 +455,7 @@ self</li>
 **The MENUPARAM class does not inherit**
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#escort-class">ESCORT</a>

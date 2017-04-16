@@ -56,7 +56,7 @@ BASE
 <span class="n">MessageClient1</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Congratulations, you've just hit a target"</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">)</span>
 <span class="n">MessageClient2</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Congratulations, you've just killed a target"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span><span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li>self self</li>
@@ -65,7 +65,7 @@ BASE
 <li>string MessageCategory : (optional) is a string expressing the &ldquo;category&rdquo; of the Message. The category will be shown as the first text in the message followed by a &ldquo;: &rdquo;.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -88,7 +88,7 @@ self</li>
 <span class="n">MessageClient1</span><span class="p">:</span><span class="n">ToClient</span><span class="p">(</span> <span class="n">ClientGroup</span> <span class="p">)</span>
 <span class="n">MessageClient2</span><span class="p">:</span><span class="n">ToClient</span><span class="p">(</span> <span class="n">ClientGroup</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -96,7 +96,7 @@ self</li>
 <li><a href="#client%20client%20:%20is%20the%20group%20of%20the-class">CLIENT Client : is the Group of the</a> Client.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -105,7 +105,7 @@ self</li>
 
 <h3 id="message-togroup-group">MESSAGE:ToGroup(Group)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -113,7 +113,7 @@ self</li>
 <li><a href="#group%20group%20:%20is%20the-class">GROUP Group : is the</a> Group.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -129,14 +129,14 @@ self</li>
 <span class="n">MessageBLUE</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the BLUE Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">)</span>
 <span class="n">MessageBLUE</span><span class="p">:</span><span class="n">ToBlue</span><span class="p">()</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -152,14 +152,14 @@ self</li>
 <span class="n">MessageRED</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">)</span>
 <span class="n">MessageRED</span><span class="p">:</span><span class="n">ToRed</span><span class="p">()</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -175,7 +175,7 @@ self</li>
 <span class="n">MessageRED</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">)</span>
 <span class="n">MessageRED</span><span class="p">:</span><span class="n">ToCoalition</span><span class="p">(</span> <span class="n">coalition</span><span class="p">.</span><span class="n">side</span><span class="p">.</span><span class="n">RED</span> <span class="p">)</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -183,7 +183,7 @@ self</li>
 <li>CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -192,7 +192,7 @@ self</li>
 
 <h3 id="message-tocoalitionif-needs">MESSAGE:ToCoalitionIf(needs)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -200,7 +200,7 @@ self</li>
 <li>CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -216,14 +216,14 @@ self</li>
 <span class="n">MessageAll</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To all Players: BLUE has won! Each player of BLUE wins 50 points!"</span><span class="p">,</span> <span class="s2">"End of Mission"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Win"</span> <span class="p">)</span>
 <span class="n">MessageAll</span><span class="p">:</span><span class="n">ToAll</span><span class="p">()</span>
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
@@ -232,14 +232,14 @@ self</li>
 
 <h3 id="message-toallif">MESSAGE:ToAllIf()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#message-class">MESSAGE</a>

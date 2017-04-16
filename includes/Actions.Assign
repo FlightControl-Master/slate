@@ -85,11 +85,14 @@ The assignment type also allows to reject the task.</p>
 
 <pre>
 Inheritance : The ACT_ASSIGN Class inherits from the following parents :
-ERROR !
-    `-- ACT_ASSIGN
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ASSIGN
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> Task</li>
@@ -99,14 +102,14 @@ ERROR !
 
 <h3 id="act_assign-new">ACT_ASSIGN:New()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign-class">ACT_ASSIGN</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#act_assign-class">ACT_ASSIGN</a>
@@ -117,12 +120,15 @@ The : task acceptance process.</li>
 
 <pre>
 Inheritance : The ACT_ASSIGN_ACCEPT Class inherits from the following parents :
-ERROR !
-    `-- ACT_ASSIGN
-        `-- ACT_ASSIGN_ACCEPT
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ASSIGN
+                    `-- ACT_ASSIGN_ACCEPT
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> Task</li>
@@ -132,7 +138,7 @@ ERROR !
 
 <h3 id="act_assign_accept-new-taskbriefing">ACT_ASSIGN_ACCEPT:New(TaskBriefing)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
@@ -140,11 +146,11 @@ self</li>
 <li>string TaskBriefing</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_accept-onafterstart-processunit-event-from-to">ACT_ASSIGN_ACCEPT:onafterStart(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
@@ -155,11 +161,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_accept-onenterassigned-processunit-event-from-to">ACT_ASSIGN_ACCEPT:onenterAssigned(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
@@ -170,18 +176,21 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h2 id="act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT Class</h2>
 
 <pre>
 Inheritance : The ACT_ASSIGN_MENU_ACCEPT Class inherits from the following parents :
-ERROR !
-    `-- ACT_ASSIGN
-        `-- ACT_ASSIGN_MENU_ACCEPT
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- ACT_ASSIGN
+                    `-- ACT_ASSIGN_MENU_ACCEPT
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#task-class">TASK</a> Task</li>
@@ -191,7 +200,7 @@ ERROR !
 
 <h3 id="act_assign_menu_accept-new-taskname-taskbriefing">ACT_ASSIGN_MENU_ACCEPT:New(TaskName, TaskBriefing)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -200,7 +209,7 @@ self</li>
 <li>string TaskBriefing</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -209,7 +218,7 @@ self</li>
 
 <h3 id="act_assign_menu_accept-init-taskname-taskbriefing">ACT_ASSIGN_MENU_ACCEPT:Init(TaskName, TaskBriefing)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -218,7 +227,7 @@ self</li>
 <li>string TaskBriefing</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -227,7 +236,7 @@ self</li>
 
 <h3 id="act_assign_menu_accept-onafterstart-processunit-event-from-to">ACT_ASSIGN_MENU_ACCEPT:onafterStart(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -238,33 +247,33 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_menu_accept-menuassign">ACT_ASSIGN_MENU_ACCEPT:MenuAssign()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_menu_accept-menureject">ACT_ASSIGN_MENU_ACCEPT:MenuReject()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_menu_accept-onafterassign-processunit-event-from-to">ACT_ASSIGN_MENU_ACCEPT:onafterAssign(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -275,11 +284,11 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="act_assign_menu_accept-onafterreject-processunit-event-from-to">ACT_ASSIGN_MENU_ACCEPT:onafterReject(ProcessUnit, Event, From, To)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
@@ -290,4 +299,4 @@ self</li>
 <li>string To</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>

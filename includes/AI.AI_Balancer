@@ -102,12 +102,13 @@ otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the
 
 <pre>
 Inheritance : The AI_BALANCER Class inherits from the following parents :
-ERROR !
-    `-- FSM_SET
-        `-- AI_BALANCER
+BASE
+    `-- FSM
+        `-- FSM_SET
+            `-- AI_BALANCER
 </pre>
 
-<h4 id="attributes">Attributes</h4>
+<h4> Attributes </h4>
 
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> SetClient</li>
@@ -117,7 +118,7 @@ ERROR !
 
 <h3 id="ai_balancer-new-setclient-spawnai">AI_BALANCER:New(SetClient, SpawnAI)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -126,7 +127,7 @@ self</li>
 <li><a href="#spawn%20spawnai%20:%20the%20default%20spawn%20object%20to%20spawn%20new%20ai%20groups%20when-class">SPAWN SpawnAI : The default Spawn object to spawn new AI Groups when</a> needed.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -135,7 +136,7 @@ self</li>
 
 <h3 id="ai_balancer-initspawninterval-earliest-latest">AI_BALANCER:InitSpawnInterval(Earliest, Latest)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -144,7 +145,7 @@ self</li>
 <li>number Latest : The latest a new AI can be spawned in seconds.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <ul>
 <li>self self</li>
@@ -152,7 +153,7 @@ self</li>
 
 <h3 id="ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset">AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -161,11 +162,11 @@ self</li>
 <li><a href="#set_airbase%20returnairbaseset%20:%20the%20set%20of%20[set_airbase](#set_airbase-class)s%20to%20evaluate%20where%20to%20return-class">SET_AIRBASE ReturnAirbaseSet : The SET of <a href="#set_airbase-class">SET_AIRBASE</a>s to evaluate where to return</a> to.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="ai_balancer-returntohomeairbase-returntresholdrange">AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -173,11 +174,11 @@ self</li>
 <li><a href="#distance%20returntresholdrange%20:%20if%20there%20is%20an%20enemy%20[client](#client-class)%20within%20the%20returntresholdrange%20given%20in%20meters,%20the%20ai%20will%20not%20return%20to%20the%20nearest-class">Distance ReturnTresholdRange : If there is an enemy <a href="#client-class">CLIENT</a> within the ReturnTresholdRange given in meters, the AI will not return to the nearest</a> <a href="#airbase-class">AIRBASE</a>.</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="ai_balancer-onenterspawning-setgroup-clientname-aigroup">AI_BALANCER:onenterSpawning(SetGroup, ClientName, AIGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -187,11 +188,11 @@ self</li>
 <li><a href="#group-class">GROUP</a> AIGroup</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="ai_balancer-onenterdestroying-setgroup-aigroup">AI_BALANCER:onenterDestroying(SetGroup, AIGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -200,11 +201,11 @@ self</li>
 <li><a href="#group-class">GROUP</a> AIGroup</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="ai_balancer-onenterreturning-setgroup-aigroup">AI_BALANCER:onenterReturning(SetGroup, AIGroup)</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
@@ -213,15 +214,15 @@ self</li>
 <li><a href="#group-class">GROUP</a> AIGroup</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
 
 <h3 id="ai_balancer-onentermonitoring">AI_BALANCER:onenterMonitoring()</h3>
 
-<h4 id="parameters">Parameters</h4>
+<h4> Parameters </h4>
 
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
 </ul>
 
-<h4 id="returns">Returns</h4>
+<h4> Returns </h4>
