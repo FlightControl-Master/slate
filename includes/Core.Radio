@@ -31,7 +31,7 @@
 like the A10C or the Mirage 2000C. They will <strong>hear the transmission</strong> if they are tuned on the <strong>right frequency and modulation</strong> (and if they are close enough - more on that below).
 If a FC3 airacraft is used, it will <strong>hear every communication, whatever the frequency and the modulation</strong> is set to.</p>
 
-<h4 id="author-hugues-grey_echo-bousquet">Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h4>
+<h4> Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h4>
 
 <h2 id="radio-class">RADIO Class</h2>
 
@@ -41,7 +41,7 @@ BASE
     `-- RADIO
 </pre>
 
-<h4 id="1-1-radio-usage">1.1) RADIO usage</h4>
+<h4> 1.1) RADIO usage</h4>
 
 <p>There are 3 steps to a successful radio transmission.</p>
 

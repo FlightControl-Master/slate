@@ -2,7 +2,7 @@
 
 <p>This module contains the OBJECT class.</p>
 
-<h4 id="1-object-class-extends-base">1) <a href="#object-class">OBJECT</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) [OBJECT](#object-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#object-class">OBJECT</a> class is a wrapper class to handle the DCS Object objects:</p>
 
@@ -12,7 +12,7 @@
 <li>Manage the &ldquo;state&rdquo; of the DCS Object.</li>
 </ul>
 
-<h4 id="1-1-object-constructor">1.1) OBJECT constructor:</h4>
+<h4>1.1) OBJECT constructor:</h4>
 
 <p>The OBJECT class provides the following functions to construct a OBJECT instance:</p>
 
@@ -20,7 +20,7 @@
 <li><a href="#object-new-objectname">OBJECT:New()</a>: Create a OBJECT instance.</li>
 </ul>
 
-<h4 id="1-2-object-methods">1.2) OBJECT methods:</h4>
+<h4>1.2) OBJECT methods:</h4>
 
 <p>The following methods can be used to identify an Object object:</p>
 

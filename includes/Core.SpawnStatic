@@ -6,19 +6,19 @@
 
 <p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h4> Demo Missions</h4>
 
-<h4 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h4>
+<h4> [SPAWNSTATIC Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS - Spawning Statics)</h4>
 
-<h4 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h4>
+<h4> [SPAWNSTATIC Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics)</h4>
 
-<h4 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h4>
+<h4> [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)</h4>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h4> YouTube Channel</h4>
 
-<h4 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h4>
+<h4> [SPAWNSTATIC YouTube Channel]()</h4>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -29,11 +29,11 @@
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -61,7 +61,7 @@ By default, spawned <a href="#static-module">Static</a>s will follow a naming co
 and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 </ul>
 
-<h4 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h4>
+<h4> SPAWNSTATIC construction methods</h4>
 
 <p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
 
@@ -69,7 +69,7 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 <li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
 </ul>
 
-<h4 id="spawn-methods"><strong>Spawn</strong> methods</h4>
+<h4> **Spawn** methods</h4>
 
 <p>Groups can be spawned at different times and methods:</p>
 

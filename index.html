@@ -278,14 +278,14 @@ BASE
                 `-- ACT_ACCOUNT
 </pre>
 
-<h4 id="act_account-state-machine">ACT_ACCOUNT state machine:</h4>
+<h4> ACT_ACCOUNT state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_account-states">ACT_ACCOUNT States</h4>
+<h4> ACT_ACCOUNT States</h4>
 
 <ul>
 <li><strong>Asigned</strong>: The player is assigned.</li>
@@ -296,7 +296,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Failed</strong>: Failed the process.</li>
 </ul>
 
-<h4 id="act_account-events">ACT_ACCOUNT Events</h4>
+<h4> ACT_ACCOUNT Events</h4>
 
 <ul>
 <li><strong>Start</strong>: Start the process.</li>
@@ -310,7 +310,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_account-state-transition-methods">ACT_ACCOUNT state transition methods:</h4>
+<h4> ACT_ACCOUNT state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -410,7 +410,7 @@ The process is given a <a href="#set-module">Set</a> of units that will be track
 The process will end after each target has been successfully destroyed.
 Each successful dead will trigger an Account state transition that can be scored, modified or administered.</p>
 
-<h4 id="act_account_deads-constructor">ACT_ACCOUNT_DEADS constructor:</h4>
+<h4> ACT_ACCOUNT_DEADS constructor:</h4>
 
 <ul>
 <li><a href="#act_account_deads-new-targetsetunit-taskname">ACT_ACCOUNT_DEADS:New()</a>: Creates a new ACT_ACCOUNT_DEADS object.</li>
@@ -496,16 +496,16 @@ self</li>
 
 <p>(SP) (MP) (FSM) Accept or reject process for player (task) assignments.</p>
 
-<h4 id="act_assign-fsm-template-class-extends-fsm_process"><a href="#act_assign-class">ACT_ASSIGN</a> FSM template class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h4> [ACT_ASSIGN](#act_assign-class) FSM template class, extends [FSM_PROCESS](#fsm_process-class)</h4>
 
-<h4 id="act_assign-state-machine">ACT_ASSIGN state machine:</h4>
+<h4> ACT_ASSIGN state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_assign-events">ACT_ASSIGN <strong>Events</strong>:</h4>
+<h4> ACT_ASSIGN **Events**:</h4>
 
 <p>These are the events defined in this class:</p>
 
@@ -515,7 +515,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Reject</strong>:  Reject the task..</li>
 </ul>
 
-<h4 id="act_assign-event-methods">ACT_ASSIGN <strong>Event methods</strong>:</h4>
+<h4> ACT_ASSIGN **Event methods**:</h4>
 
 <p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
 There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
@@ -525,7 +525,7 @@ There are two types of event methods, which you can use to influence the normal 
 <li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
 </ul>
 
-<h4 id="act_assign-states">ACT_ASSIGN <strong>States</strong>:</h4>
+<h4> ACT_ASSIGN **States**:</h4>
 
 <ul>
 <li><strong>UnAssigned</strong>: The player has not accepted the task.</li>
@@ -537,7 +537,7 @@ There are two types of event methods, which you can use to influence the normal 
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_assign-state-transition-methods">ACT_ASSIGN state transition methods:</h4>
+<h4> ACT_ASSIGN state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -553,23 +553,23 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="1-act_assign_accept-class-extends-act_assign">1) <a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h4>
+<h4> 1) [ACT_ASSIGN_ACCEPT](#act_assign_accept-class) class, extends [ACT_ASSIGN](#act_assign-class)</h4>
 
 <p>The ACT_ASSIGN_ACCEPT class accepts by default a task for a player. No player intervention is allowed to reject the task.</p>
 
-<h4 id="1-1-act_assign_accept-constructor">1.1) ACT_ASSIGN_ACCEPT constructor:</h4>
+<h4> 1.1) ACT_ASSIGN_ACCEPT constructor:</h4>
 
 <ul>
 <li><a href="#act_assign_accept-new-taskbriefing">ACT_ASSIGN_ACCEPT:New()</a>: Creates a new ACT_ASSIGN_ACCEPT object.</li>
 </ul>
 
-<h4 id="2-act_assign_menu_accept-class-extends-act_assign">2) <a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h4>
+<h4> 2) [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class) class, extends [ACT_ASSIGN](#act_assign-class)</h4>
 
 <p>The ACT_ASSIGN_MENU_ACCEPT class accepts a task when the player accepts the task through an added menu option.
 This assignment type is useful to conditionally allow the player to choose whether or not he would accept the task.
 The assignment type also allows to reject the task.</p>
 
-<h4 id="2-1-act_assign_menu_accept-constructor">2.1) ACT_ASSIGN_MENU_ACCEPT constructor:</h4>
+<h4> 2.1) ACT_ASSIGN_MENU_ACCEPT constructor:</h4>
 
 <ul>
 <li><a href="#act_assign_menu_accept-new-taskname-taskbriefing">ACT_ASSIGN_MENU_ACCEPT:New()</a>: Creates a new ACT_ASSIGN_MENU_ACCEPT object.</li>
@@ -1074,16 +1074,16 @@ self</li>
 
 <p>(SP) (MP) (FSM) Route AI or players through waypoints or to zones.</p>
 
-<h4 id="act_route-fsm-class-extends-fsm_process"><a href="#act_route-class">ACT_ROUTE</a> FSM class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h4> [ACT_ROUTE](#act_route-class) FSM class, extends [FSM_PROCESS](#fsm_process-class)</h4>
 
-<h4 id="act_route-state-machine">ACT_ROUTE state machine:</h4>
+<h4> ACT_ROUTE state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_route-events">ACT_ROUTE <strong>Events</strong>:</h4>
+<h4> ACT_ROUTE **Events**:</h4>
 
 <p>These are the events defined in this class:</p>
 
@@ -1097,7 +1097,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>NoMore</strong>:  There are no more route points that need to be followed. The process will go into the Success state.</li>
 </ul>
 
-<h4 id="act_route-event-methods">ACT_ROUTE <strong>Event methods</strong>:</h4>
+<h4> ACT_ROUTE **Event methods**:</h4>
 
 <p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
 There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
@@ -1107,7 +1107,7 @@ There are two types of event methods, which you can use to influence the normal 
 <li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
 </ul>
 
-<h4 id="act_route-states">ACT_ROUTE <strong>States</strong>:</h4>
+<h4> ACT_ROUTE **States**:</h4>
 
 <ul>
 <li><strong>None</strong>: The controllable did not receive route commands.</li>
@@ -1121,7 +1121,7 @@ There are two types of event methods, which you can use to influence the normal 
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_route-state-transition-methods">ACT_ROUTE state transition methods:</h4>
+<h4> ACT_ROUTE state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -1137,13 +1137,13 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="1-act_route_zone-class-extends-act_route">1) <a href="#act_route_zone-class">ACT_ROUTE_ZONE</a> class, extends <a href="#act_route-class">ACT_ROUTE</a></h4>
+<h4> 1) [ACT_ROUTE_ZONE](#act_route_zone-class) class, extends [ACT_ROUTE](#act_route-class)</h4>
 
 <p>The ACT_ROUTE_ZONE class implements the core functions to route an AIR <a href="#controllable-module">Controllable</a> player <a href="#unit-module">Unit</a> to a <a href="#zone-module">Zone</a>.
 The player receives on perioding times messages with the coordinates of the route to follow.
 Upon arrival at the zone, a confirmation of arrival is sent, and the process will be ended.</p>
 
-<h4 id="1-1-act_route_zone-constructor">1.1) ACT_ROUTE_ZONE constructor:</h4>
+<h4> 1.1) ACT_ROUTE_ZONE constructor:</h4>
 
 <ul>
 <li><a href="#act_route_zone-new-zone">ACT_ROUTE_ZONE:New()</a>: Creates a new ACT_ROUTE_ZONE object.</li>
@@ -1441,16 +1441,16 @@ self</li>
 
 <p>(SP) (MP) (FSM) Route AI or players through waypoints or to zones.</p>
 
-<h4 id="act_assist-fsm-class-extends-fsm_process"><a href="#act_assist-class">ACT_ASSIST</a> FSM class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h4> [ACT_ASSIST](#act_assist-class) FSM class, extends [FSM_PROCESS](#fsm_process-class)</h4>
 
-<h4 id="act_assist-state-machine">ACT_ASSIST state machine:</h4>
+<h4> ACT_ASSIST state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_assist-events">ACT_ASSIST <strong>Events</strong>:</h4>
+<h4> ACT_ASSIST **Events**:</h4>
 
 <p>These are the events defined in this class:</p>
 
@@ -1459,7 +1459,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Next</strong>: The process is smoking the targets in the given zone.</li>
 </ul>
 
-<h4 id="act_assist-event-methods">ACT_ASSIST <strong>Event methods</strong>:</h4>
+<h4> ACT_ASSIST **Event methods**:</h4>
 
 <p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
 There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
@@ -1469,7 +1469,7 @@ There are two types of event methods, which you can use to influence the normal 
 <li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
 </ul>
 
-<h4 id="act_assist-states">ACT_ASSIST <strong>States</strong>:</h4>
+<h4> ACT_ASSIST **States**:</h4>
 
 <ul>
 <li><strong>None</strong>: The controllable did not receive route commands.</li>
@@ -1480,7 +1480,7 @@ There are two types of event methods, which you can use to influence the normal 
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_assist-state-transition-methods">ACT_ASSIST state transition methods:</h4>
+<h4> ACT_ASSIST state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -1496,13 +1496,13 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="1-act_assist_smoke_targets_zone-class-extends-act_assist">1) <a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a> class, extends <a href="#act_assist-class">ACT_ASSIST</a></h4>
+<h4> 1) [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class) class, extends [ACT_ASSIST](#act_assist-class)</h4>
 
 <p>The ACT_ASSIST_SMOKE_TARGETS_ZONE class implements the core functions to smoke targets in a <a href="#zone-module">Zone</a>.
 The targets are smoked within a certain range around each target, simulating a realistic smoking behaviour.
 At random intervals, a new target is smoked.</p>
 
-<h4 id="1-1-act_assist_smoke_targets_zone-constructor">1.1) ACT_ASSIST_SMOKE_TARGETS_ZONE constructor:</h4>
+<h4> 1.1) ACT_ASSIST_SMOKE_TARGETS_ZONE constructor:</h4>
 
 <ul>
 <li><a href="#act_assist_smoke_targets_zone-new-targetsetunit-targetzone">ACT_ASSIST_SMOKE_TARGETS_ZONE:New()</a>: Creates a new ACT_ASSIST_SMOKE_TARGETS_ZONE object.</li>
@@ -1638,7 +1638,7 @@ even when there are hardly any players in the mission.</strong></p>
 
 <p><img src="includes/Pictures/AI_Balancer/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-ai_balancer-class-extends-fsm_set">1) <a href="#ai_balancer-class">AI_BALANCER</a> class, extends <a href="#fsm_set-class">FSM_SET</a></h4>
+<h4> 1) [AI_BALANCER](#ai_balancer-class) class, extends [FSM_SET](#fsm_set-class)</h4>
 
 <p>The <a href="#ai_balancer-class">AI_BALANCER</a> class monitors and manages as many replacement AI groups as there are
 CLIENTS in a SET_CLIENT collection, which are not occupied by human players.
@@ -1654,15 +1654,15 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>AI_BALANCER-OnAfterSpawned</strong>( AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.</li>
 </ul>
 
-<h4 id="1-1-ai_balancer-construction">1.1) AI_BALANCER construction</h4>
+<h4> 1.1) AI_BALANCER construction</h4>
 
 <p>Create a new AI_BALANCER object with the <a href="#ai_balancer-new-setclient-spawnai">AI_BALANCER:New()</a> method:</p>
 
-<h4 id="1-2-ai_balancer-is-a-fsm">1.2) AI_BALANCER is a FSM</h4>
+<h4> 1.2) AI_BALANCER is a FSM</h4>
 
 <p><img src="includes/Pictures/AI_Balancer/Dia13.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_balancer-states">1.2.1) AI_BALANCER States</h4>
+<h4> 1.2.1) AI_BALANCER States</h4>
 
 <ul>
 <li><strong>Monitoring</strong> ( Set ): Monitoring the Set if all AI is spawned for the Clients.</li>
@@ -1672,7 +1672,7 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Returning</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods. Handle this state to customize the return behaviour of the AI, if any.</li>
 </ul>
 
-<h4 id="1-2-2-ai_balancer-events">1.2.2) AI_BALANCER Events</h4>
+<h4> 1.2.2) AI_BALANCER Events</h4>
 
 <ul>
 <li><strong>Monitor</strong> ( Set ): Every 10 seconds, the Monitor event is triggered to monitor the Set.</li>
@@ -1682,11 +1682,11 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Return</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods.</li>
 </ul>
 
-<h4 id="1-3-ai_balancer-spawn-interval-for-replacement-ai">1.3) AI_BALANCER spawn interval for replacement AI</h4>
+<h4> 1.3) AI_BALANCER spawn interval for replacement AI</h4>
 
 <p>Use the method <a href="#ai_balancer-initspawninterval-earliest-latest">AI_BALANCER:InitSpawnInterval()</a> to set the earliest and latest interval in seconds that is waited until a new replacement AI is spawned.</p>
 
-<h4 id="1-4-ai_balancer-returns-ai-to-airbases">1.4) AI_BALANCER returns AI to Airbases</h4>
+<h4> 1.4) AI_BALANCER returns AI to Airbases</h4>
 
 <p>By default, When a human player joins a slot that is AI_BALANCED, the AI group will be destroyed by default.
 However, there are 2 additional options that you can use to customize the destroy behaviour.
@@ -1700,7 +1700,7 @@ When a human player joins a slot, you can configure to let the AI return to:</p>
 <p>Note that when AI returns to an airbase, the AI_BALANCER will trigger the <strong>Return</strong> event and the AI will return,
 otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the AI will be destroyed.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -1715,16 +1715,16 @@ otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the
 
 <p>2017-01-08: AI_BALANCER:<strong>InitSpawnInterval( Earliest, Latest )</strong> added.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=112075">Dutch_Baron</a></strong>: Working together with James has resulted in the creation of the AI_BALANCER class. James has shared his ideas on balancing AI with air units, and together we made a first design which you can use now :-)</li>
 <li><strong>SNAFU</strong>: Had a couple of mails with the guys to validate, if the same concept in the GCI/CAP script could be reworked within MOOSE. None of the script code has been used however within the new AI_BALANCER moose class.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl: Framework Design &amp;  Programming and Documentation.</li>
@@ -1873,7 +1873,7 @@ self</li>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>: Perform a CAP in a zone.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -1886,9 +1886,9 @@ self</li>
 
 <p>2017-01-15: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
@@ -1898,7 +1898,7 @@ self</li>
 <li>**<a href="https://forums.eagle.ru/member.php?u=125166">Delta99</a>: Testing.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -1946,17 +1946,17 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 
 <p><img src="includes/Pictures/AI_CAP/Dia13.JPG" alt="Process" /></p>
 
-<h4 id="1-1-ai_cap_zone-constructor">1.1) AI_CAP_ZONE constructor</h4>
+<h4> 1.1) AI_CAP_ZONE constructor</h4>
 
 <ul>
 <li><a href="#ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_CAP_ZONE:New()</a>: Creates a new AI_CAP_ZONE object.</li>
 </ul>
 
-<h4 id="1-2-ai_cap_zone-is-a-fsm">1.2) AI_CAP_ZONE is a FSM</h4>
+<h4> 1.2) AI_CAP_ZONE is a FSM</h4>
 
 <p><img src="includes/Pictures/AI_CAP/Dia2.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_cap_zone-states">1.2.1) AI_CAP_ZONE States</h4>
+<h4> 1.2.1) AI_CAP_ZONE States</h4>
 
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
@@ -1965,7 +1965,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
 
-<h4 id="1-2-2-ai_cap_zone-events">1.2.2) AI_CAP_ZONE Events</h4>
+<h4> 1.2.2) AI_CAP_ZONE Events</h4>
 
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
@@ -1980,7 +1980,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
 </ul>
 
-<h4 id="1-3-set-the-range-of-engagement">1.3) Set the Range of Engagement</h4>
+<h4> 1.3) Set the Range of Engagement</h4>
 
 <p><img src="includes/Pictures/AI_CAP/Dia11.JPG" alt="Range" /></p>
 
@@ -1990,7 +1990,7 @@ The range can be beyond or smaller than the range of the Patrol Zone.
 The range is applied at the position of the AI.
 Use the method <a href="#ai_cap_zone-setengagerange-engagerange">AI_CAP_ZONE:SetEngageRange()</a> to define that range.</p>
 
-<h4 id="1-4-set-the-zone-of-engagement">1.4) Set the Zone of Engagement</h4>
+<h4> 1.4) Set the Zone of Engagement</h4>
 
 <p><img src="includes/Pictures/AI_CAP/Dia12.JPG" alt="Zone" /></p>
 
@@ -2486,7 +2486,7 @@ self</li>
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>: Perform a CAS in a zone.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -2499,9 +2499,9 @@ self</li>
 
 <p>2017-01-15: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
@@ -2509,7 +2509,7 @@ self</li>
 <li><strong><a href="http://forums.eagle.ru:8080/member.php?u=75036">Gunterlund</a></strong>: Test case revision.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -2584,17 +2584,17 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 
 <p><img src="includes/Pictures/AI_CAS/Dia12.JPG" alt="Engage Event" /></p>
 
-<h4 id="1-1-ai_cas_zone-constructor">1.1) AI_CAS_ZONE constructor</h4>
+<h4> 1.1) AI_CAS_ZONE constructor</h4>
 
 <ul>
 <li><a href="#ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype">AI_CAS_ZONE:New()</a>: Creates a new AI_CAS_ZONE object.</li>
 </ul>
 
-<h4 id="1-2-ai_cas_zone-is-a-fsm">1.2) AI_CAS_ZONE is a FSM</h4>
+<h4> 1.2) AI_CAS_ZONE is a FSM</h4>
 
 <p><img src="includes/Pictures/AI_CAS/Dia2.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_cas_zone-states">1.2.1) AI_CAS_ZONE States</h4>
+<h4> 1.2.1) AI_CAS_ZONE States</h4>
 
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
@@ -2603,7 +2603,7 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
 
-<h4 id="1-2-2-ai_cas_zone-events">1.2.2) AI_CAS_ZONE Events</h4>
+<h4> 1.2.2) AI_CAS_ZONE Events</h4>
 
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
@@ -3078,7 +3078,7 @@ self</li>
 <li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>: Perform a PATROL in a zone.</li>
 </ul>
 
-<h4 id="open-issues"><strong>OPEN ISSUES</strong></h4>
+<h4> **OPEN ISSUES**</h4>
 
 <p>2017-01-17: When Spawned AI is located at an airbase, it will be routed first back to the airbase after take-off.</p>
 
@@ -3087,7 +3087,7 @@ self</li>
 &ndash; ReSpawning of AI will reset the AI_PATROL and derived classes.
 &ndash; Checked the correct workings of SCHEDULER, and it DOES work correctly.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -3104,16 +3104,16 @@ self</li>
 
 <p>2016-09-01: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=112075">Dutch_Baron</a></strong>: Working together with James has resulted in the creation of the AI_BALANCER class. James has shared his ideas on balancing AI with air units, and together we made a first design which you can use now :-)</li>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=62835">Pikey</a></strong>: Testing and API concept review.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming.</li>
@@ -3160,17 +3160,17 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 
 <p><img src="includes/Pictures/AI_PATROL/Dia11.JPG" alt="Process" /></p>
 
-<h4 id="1-1-ai_patrol_zone-constructor">1.1) AI_PATROL_ZONE constructor</h4>
+<h4> 1.1) AI_PATROL_ZONE constructor</h4>
 
 <ul>
 <li><a href="#ai_patrol_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_PATROL_ZONE:New()</a>: Creates a new AI_PATROL_ZONE object.</li>
 </ul>
 
-<h4 id="1-2-ai_patrol_zone-is-a-fsm">1.2) AI_PATROL_ZONE is a FSM</h4>
+<h4> 1.2) AI_PATROL_ZONE is a FSM</h4>
 
 <p><img src="includes/Pictures/AI_PATROL/Dia2.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_patrol_zone-states">1.2.1) AI_PATROL_ZONE States</h4>
+<h4> 1.2.1) AI_PATROL_ZONE States</h4>
 
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
@@ -3180,7 +3180,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Crashed</strong> ( Group ): The AI has crashed or is dead.</li>
 </ul>
 
-<h4 id="1-2-2-ai_patrol_zone-events">1.2.2) AI_PATROL_ZONE Events</h4>
+<h4> 1.2.2) AI_PATROL_ZONE Events</h4>
 
 <ul>
 <li><strong>Start</strong> ( Group ): Start the process.</li>
@@ -3192,21 +3192,21 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
 </ul>
 
-<h4 id="1-3-set-or-get-the-ai-controllable">1.3) Set or Get the AI controllable</h4>
+<h4> 1.3) Set or Get the AI controllable</h4>
 
 <ul>
 <li>AI_PATROL_ZONE-SetControllable: Set the AIControllable.</li>
 <li>AI_PATROL_ZONE-GetControllable: Get the AIControllable.</li>
 </ul>
 
-<h4 id="1-4-set-the-speed-and-altitude-boundaries-of-the-ai-controllable">1.4) Set the Speed and Altitude boundaries of the AI controllable</h4>
+<h4> 1.4) Set the Speed and Altitude boundaries of the AI controllable</h4>
 
 <ul>
 <li><a href="#ai_patrol_zone-setspeed-self-self">AI_PATROL_ZONE:SetSpeed()</a>: Set the patrol speed boundaries of the AI, for the next patrol.</li>
 <li><a href="#ai_patrol_zone-setaltitude-patrolflooraltitude-patrolceilingaltitude">AI_PATROL_ZONE:SetAltitude()</a>: Set altitude boundaries of the AI, for the next patrol.</li>
 </ul>
 
-<h4 id="1-5-manage-the-detection-process-of-the-ai-controllable">1.5) Manage the detection process of the AI controllable</h4>
+<h4> 1.5) Manage the detection process of the AI controllable</h4>
 
 <p>The detection process of the AI controllable can be manipulated.
 Detection requires an amount of CPU power, which has an impact on your mission performance.
@@ -3225,7 +3225,7 @@ Use the method <a href="#ai_patrol_zone-setdetectionzone-detectionzone">AI_PATRO
 Note that when the zone is too far away, or the AI is not heading towards the zone, or the AI is too high, no targets may be detected
 according the weather conditions.</p>
 
-<h4 id="1-6-manage-the-out-of-fuel-in-the-ai_patrol_zone">1.6) Manage the &ldquo;out of fuel&rdquo; in the AI_PATROL_ZONE</h4>
+<h4> 1.6) Manage the &ldquo;out of fuel&rdquo; in the AI_PATROL_ZONE</h4>
 
 <p>When the AI is out of fuel, it is required that a new AI is started, before the old AI can return to the home base.
 Therefore, with a parameter and a calculation of the distance to the home base, the fuel treshold is calculated.
@@ -3234,7 +3234,7 @@ while a new AI is targetted to the AI_PATROL_ZONE.
 Once the time is finished, the old AI will return to the base.
 Use the method <a href="#ai_patrol_zone-managefuel-patrolfueltresholdpercentage-patroloutoffuelorbittime">AI_PATROL_ZONE:ManageFuel()</a> to have this proces in place.</p>
 
-<h4 id="1-7-manage-damage-behaviour-of-the-ai-in-the-ai_patrol_zone">1.7) Manage &ldquo;damage&rdquo; behaviour of the AI in the AI_PATROL_ZONE</h4>
+<h4> 1.7) Manage &ldquo;damage&rdquo; behaviour of the AI in the AI_PATROL_ZONE</h4>
 
 <p>When the AI is damaged, it is required that a new AIControllable is started. However, damage cannon be foreseen early on.
 Therefore, when the damage treshold is reached, the AI will return immediately to the home base (RTB).
@@ -4119,7 +4119,7 @@ self</li>
 <li><p>AI_CARGO_GROUPED, represented by a Group of CARGO_UNITs.</p></li>
 </ul>
 
-<h4 id="1-ai_cargo-class-extends-fsm_process">1) <a href="#ai_cargo-class">AI_CARGO</a> class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h4> 1) [AI_CARGO](#ai_cargo-class) class, extends [FSM_PROCESS](#fsm_process-class)</h4>
 
 <p>The <a href="#ai_cargo-class">AI_CARGO</a> class defines the core functions that defines a cargo object within MOOSE.
 A cargo is a logical object defined that is available for transport, and has a life status within a simulation.</p>
@@ -4127,7 +4127,7 @@ A cargo is a logical object defined that is available for transport, and has a l
 <p>The AI_CARGO is a state machine: it manages the different events and states of the cargo.
 All derived classes from AI_CARGO follow the same state machine, expose the same cargo event functions, and provide the same cargo states.</p>
 
-<h4 id="1-2-1-ai_cargo-events">1.2.1) AI_CARGO Events:</h4>
+<h4> 1.2.1) AI_CARGO Events:</h4>
 
 <ul>
 <li><a href="#ai_cargo-board-tocarrier">AI_CARGO:Board()</a> ToCarrier ):  Boards the cargo to a carrier.</li>
@@ -4137,7 +4137,7 @@ All derived classes from AI_CARGO follow the same state machine, expose the same
 <li>AI_CARGO-Dead Controllable ): The cargo is dead. The cargo process will be ended.</li>
 </ul>
 
-<h4 id="1-2-2-ai_cargo-states">1.2.2) AI_CARGO States:</h4>
+<h4> 1.2.2) AI_CARGO States:</h4>
 
 <ul>
 <li><strong>UnLoaded</strong>: The cargo is unloaded from a carrier.</li>
@@ -4148,7 +4148,7 @@ All derived classes from AI_CARGO follow the same state machine, expose the same
 <li><strong>End</strong>: The process has come to an end.</li>
 </ul>
 
-<h4 id="1-2-3-ai_cargo-state-transition-methods">1.2.3) AI_CARGO state transition methods:</h4>
+<h4> 1.2.3) AI_CARGO state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -4164,16 +4164,14 @@ The state transition method needs to start with the name <strong>OnEnter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="2-ai_cargo_unit">2) <a href="#ai_cargo_unit-class">AI_CARGO_UNIT</a></h4>
-
-<p>class</p>
+<h4> 2) [AI_CARGO_UNIT](#ai_cargo_unit-class)
+ class</h4>
 
 <p>The AI_CARGO_UNIT class defines a cargo that is represented by a UNIT object within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
 
-<h4 id="5-ai_cargo_grouped">5) <a href="#ai_cargo_grouped-class">AI_CARGO_GROUPED</a></h4>
-
-<p>class</p>
+<h4> 5) [AI_CARGO_GROUPED](#ai_cargo_grouped-class)
+ class</h4>
 
 <p>The AI_CARGO_GROUPED class defines a cargo that is represented by a group of UNIT objects within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
@@ -4985,7 +4983,7 @@ self</li>
 
 <p>The <a href="#base-class">BASE</a> class is the core root class from where every other class in moose is derived.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -4999,15 +4997,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>None.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -5799,7 +5797,7 @@ self</li>
 
 <p>This module contains the DATABASE class, managing the database of mission objects.</p>
 
-<h4 id="1-database-class-extends-base">1) <a href="#database-class">DATABASE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) [DATABASE](#database-class) class, extends [BASE](#base-class)</h4>
 
 <p>Mission designers can use the DATABASE class to refer to:</p>
 
@@ -5817,7 +5815,7 @@ self</li>
 <p>Moose will automatically create one instance of the DATABASE class into the <strong>global</strong> object _DATABASE.
 Moose refers to _DATABASE within the framework extensively, but you can also refer to the _DATABASE object within your missions if required.</p>
 
-<h4 id="1-1-database-iterators">1.1) DATABASE iterators</h4>
+<h4>1.1) DATABASE iterators</h4>
 
 <p>You can iterate the database with the available iterator methods.
 The iterator methods will walk the DATABASE set, and call for each element within the set a function that you provide.
@@ -6196,7 +6194,7 @@ self</li>
 
 <p><img src="includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-event-handling-overview">1) Event Handling Overview</h4>
+<h4> 1) Event Handling Overview</h4>
 
 <p><img src="includes/Pictures/EVENT/Dia2.JPG" alt="Objects" /></p>
 
@@ -6208,7 +6206,7 @@ This module provides a mechanism to dispatch those events occuring within your r
 <p>Objects can subscribe to different events. The Event dispatcher will publish the received DCS events to the subscribed MOOSE objects, in a specified order.
 In this way, the subscribed MOOSE objects are kept in sync with your evolving running mission.</p>
 
-<h4 id="1-1-event-dispatching">1.1) Event Dispatching</h4>
+<h4> 1.1) Event Dispatching</h4>
 
 <p><img src="includes/Pictures/EVENT/Dia4.JPG" alt="Objects" /></p>
 
@@ -6237,7 +6235,7 @@ in the correct processing order.</p>
 
 <p>But for some DCS events, the publishing order is reversed. This is due to the fact that objects need to be <strong>erased</strong> instead of added.</p>
 
-<h4 id="1-2-event-handling">1.2) Event Handling</h4>
+<h4> 1.2) Event Handling</h4>
 
 <p><img src="includes/Pictures/EVENT/Dia8.JPG" alt="Objects" /></p>
 
@@ -6249,7 +6247,7 @@ The _EVENTDISPATCHER is a component that is quietly working in the background of
 <p>The BASE class provides methods to catch DCS Events. These are events that are triggered from within the DCS simulator,
 and handled through lua scripting. MOOSE provides an encapsulation to handle these events more efficiently.</p>
 
-<h4 id="1-2-1-subscribe-unsubscribe-to-dcs-events">1.2.1 Subscribe / Unsubscribe to DCS Events</h4>
+<h4> 1.2.1 Subscribe / Unsubscribe to DCS Events</h4>
 
 <p>At first, the mission designer will need to <strong>Subscribe</strong> to a specific DCS event for the class.
 So, when the DCS event occurs, the class will be notified of that event.
@@ -6267,7 +6265,7 @@ Note that for a GROUP, the event will be handled <strong>for all the UNITs in th
 So if a UNIT within the mission has the subscribed event for that object,
 then the object event handler will receive the event for that UNIT!</p>
 
-<h4 id="1-3-2-event-handling-of-dcs-events">1.3.2 Event Handling of DCS Events</h4>
+<h4> 1.3.2 Event Handling of DCS Events</h4>
 
 <p>Once the class is subscribed to the event, an <strong>Event Handling</strong> method on the object or class needs to be written that will be called
 when the DCS event occurs. The Event Handling method receives an <a href="#eventdata-class">EVENTDATA</a> structure, which contains a lot of information
@@ -6298,19 +6296,19 @@ function Tank2:OnEventDead( EventData )</p>
 <p>self:SmokeBlue()
 end</p>
 
-<h4 id="1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events">1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h4>
+<h4> 1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h4>
 
 <p><img src="includes/Pictures/EVENT/Dia10.JPG" alt="Objects" /></p>
 
 <p>The following list outlines which EVENTS item in the structure corresponds to which Event Handling method.
 Always ensure that your event handling methods align with the events being subscribed to, or nothing will be executed.</p>
 
-<h4 id="2-events-type">2) EVENTS type</h4>
+<h4> 2) EVENTS type</h4>
 
 <p>The EVENTS structure contains names for all the different DCS events that objects can subscribe to using the
 <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
 
-<h4 id="3-eventdata-type">3) EVENTDATA type</h4>
+<h4> 3) EVENTDATA type</h4>
 
 <p>The <a href="#eventdata-class">EVENTDATA</a> structure contains all the fields that are populated with event information before
 an Event Handler method is being called by the event dispatcher.
@@ -6354,7 +6352,7 @@ end</p>
 
 <p>When a static object is involved in the event, the Group and Player fields won&rsquo;t be populated.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -6373,11 +6371,11 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li><p>2017-02-07: Did a complete revision of the Event Handing API and underlying mechanisms.</p></li>
 </ul>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
@@ -6811,7 +6809,7 @@ Each of these FSM implementation classes start either with:</p>
 
 <p>Detailed explanations and API specifics are further below clarified and FSM derived class specifics are described in those class documentation sections.</p>
 
-<h4 id="dislaimer"><strong>Dislaimer:</strong></h4>
+<h4>__Dislaimer:__</h4>
 
 <p>The FSM class development is based on a finite state machine implementation made by Conroy Kyle.
 The state machine can be found on <a href="https://github.com/kyleconroy/lua-state-machine">github</a>
@@ -6828,7 +6826,7 @@ Additionally, I&rsquo;ve added extendability and created an API that allows seam
 for multiple objects or the position of the state machine in the process.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -6846,15 +6844,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li>2016-12-18: Released.</li>
 </ul>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=62835"><strong>Pikey</strong></a>: Review of documentation &amp; advice for improvements.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
@@ -6890,13 +6888,13 @@ Most of the time, these Event Triggers are used within the Transition Handler me
 <p>As explained above, a FSM supports <strong>Linear State Transitions</strong> and <strong>Hierarchical State Transitions</strong>, and both can be mixed to make a comprehensive FSM implementation.
 The below documentation has a seperate chapter explaining both transition modes, taking into account the <strong>Transition Rules</strong>, <strong>Transition Handlers</strong> and <strong>Event Triggers</strong>.</p>
 
-<h4 id="1-1-fsm-linear-transitions">1.1) FSM Linear Transitions</h4>
+<h4> 1.1) FSM Linear Transitions</h4>
 
 <p>Linear Transitions are Transition Rules allowing an FSM to transition from one or multiple possible <strong>From</strong> state(s) towards a <strong>To</strong> state upon a Triggered <strong>Event</strong>.
 The Lineair transition rule evaluation will always be done from the <strong>current state</strong> of the FSM.
 If no valid Transition Rule can be found in the FSM, the FSM will log an error and stop.</p>
 
-<h4 id="1-1-1-fsm-transition-rules">1.1.1) FSM Transition Rules</h4>
+<h4> 1.1.1) FSM Transition Rules</h4>
 
 <p>The FSM has transition rules that it follows and validates, as it walks the process.
 These rules define when an FSM can transition from a specific state towards an other specific state upon a triggered event.</p>
@@ -6924,7 +6922,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 <li>Note that once the Switch is <strong>On</strong> or <strong>Middle</strong>, it can only be switched <strong>Off</strong>.</li>
 </ul>
 
-<h4 id="some-additional-comments">Some additional comments:</h4>
+<h4> Some additional comments:</h4>
 
 <p>Note that Linear Transition Rules <strong>can be declared in a few variations</strong>:</p>
 
@@ -6937,7 +6935,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 
 <p>FsmSwitch:AddTransition( { &ldquo;On&rdquo;,  &ldquo;Middle&rdquo; }, &ldquo;SwitchOff&rdquo;, &ldquo;Off&rdquo; )</p>
 
-<h4 id="1-1-2-transition-handling">1.1.2) Transition Handling</h4>
+<h4> 1.1.2) Transition Handling</h4>
 
 <p><img src="includes/Pictures/FSM/Dia4.JPG" alt="Transition Handlers" /></p>
 
@@ -6963,7 +6961,7 @@ These parameters are on the correct order: From, Event, To:</p>
 
 <p>On top, each of these methods can have a variable amount of parameters passed. See the example in section <a href="#1.1.3)-event-triggers">1.1.3</a>.</p>
 
-<h4 id="1-1-3-event-triggers">1.1.3) Event Triggers</h4>
+<h4> 1.1.3) Event Triggers</h4>
 
 <p><img src="includes/Pictures/FSM/Dia5.JPG" alt="Event Triggers" /></p>
 
@@ -7005,7 +7003,7 @@ Event will be processed after 5 seconds, and Amount is given as a parameter.</p>
 
 <p>Because &hellip; When Event was asynchronously processed after 5 seconds, Amount was set to 2. So be careful when processing and passing values and objects in asynchronous processing!</p>
 
-<h4 id="1-1-4-linear-transition-example">1.1.4) Linear Transition Example</h4>
+<h4> 1.1.4) Linear Transition Example</h4>
 
 <p>This example is fully implemented in the MOOSE test mission on GITHUB: <a href="https://github.com/FlightControl-Master/MOOSE/blob/master/Moose%20Test%20Missions/FSM%20-%20Finite%20State%20Machine/FSM-100%20-%20Transition%20Explanation/FSM-100%20-%20Transition%20Explanation.lua">FSM-100 - Transition Explanation</a></p>
 
@@ -7089,7 +7087,7 @@ FsmDemo:AddTransition( { &ldquo;Red&rdquo;, &ldquo;Green&rdquo; }, &ldquo;Stop&r
 <p>So&hellip; When FsmDemo:Stop() is being triggered, the state of FsmDemo will transition from Red or Green to Stopped.
 And there is no transition handling method defined for that transition, thus, no new event is being triggered causing the FsmDemo process flow to halt.</p>
 
-<h4 id="1-5-fsm-hierarchical-transitions">1.5) FSM Hierarchical Transitions</h4>
+<h4> 1.5) FSM Hierarchical Transitions</h4>
 
 <p>Hierarchical Transitions allow to re-use readily available and implemented FSMs.
 This becomes in very useful for mission building, where mission designers build complex processes and workflows,
@@ -7726,7 +7724,7 @@ On top, MOOSE implements <strong>variable parameter</strong> passing for command
 
 <p>There are basically two different MENU class types that you need to use:</p>
 
-<h4 id="to-manage-main-menus-the-classes-begin-with-menu_">To manage <strong>main menus</strong>, the classes begin with <strong>MENU_</strong>:</h4>
+<h4> To manage **main menus**, the classes begin with **MENU_**:</h4>
 
 <ul>
 <li><a href="#menu_mission-class">MENU_MISSION</a>: Manages main menus for whole mission file.</li>
@@ -7735,7 +7733,7 @@ On top, MOOSE implements <strong>variable parameter</strong> passing for command
 <li><a href="#menu_client-class">MENU_CLIENT</a>: Manages main menus for CLIENTs. This manages menus for units with the skill level &ldquo;Client&rdquo;.</li>
 </ul>
 
-<h4 id="to-manage-command-menus-which-are-menus-that-allow-the-player-to-issue-functions-the-classes-begin-with-menu_command_">To manage <strong>command menus</strong>, which are menus that allow the player to issue <strong>functions</strong>, the classes begin with <strong>MENU_COMMAND_</strong>:</h4>
+<h4> To manage **command menus**, which are menus that allow the player to issue **functions**, the classes begin with **MENU_COMMAND_**:</h4>
 
 <ul>
 <li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>: Manages command menus for whole mission file.</li>
@@ -7746,89 +7744,89 @@ On top, MOOSE implements <strong>variable parameter</strong> passing for command
 
 <p>The above menus classes <strong>are derived</strong> from 2 main <strong>abstract</strong> classes defined within the MOOSE framework (so don&rsquo;t use these):</p>
 
-<h4 id="1-menu_-base-abstract-base-classes-dont-use-them">1) MENU_ BASE abstract base classes (don&rsquo;t use them)</h4>
+<h4>1) MENU_ BASE abstract base classes (don&rsquo;t use them)</h4>
 
 <p>The underlying base menu classes are <strong>NOT</strong> to be used within your missions.
 These are simply abstract base classes defining a couple of fields that are used by the
 derived MENU_ classes to manage menus.</p>
 
-<h4 id="1-1-menu_base-class-extends-base">1.1) <a href="#menu_base-class">MENU_BASE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1.1) [MENU_BASE](#menu_base-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#menu_base-class">MENU_BASE</a> class defines the main MENU class where other MENU classes are derived from.</p>
 
-<h4 id="1-2-menu_command_base-class-extends-base">1.2) <a href="#menu_command_base-class">MENU_COMMAND_BASE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1.2) [MENU_COMMAND_BASE](#menu_command_base-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#menu_command_base-class">MENU_COMMAND_BASE</a> class defines the main MENU class where other MENU COMMAND_ classes are derived from, in order to set commands.</p>
 
 <p><strong>The next menus define the MENU classes that you can use within your missions.</strong></p>
 
-<h4 id="2-menu-mission-classes">2) MENU MISSION classes</h4>
+<h4>2) MENU MISSION classes</h4>
 
 <p>The underlying classes manage the menus for a complete mission file.</p>
 
-<h4 id="2-1-menu_mission-class-extends-menu_base">2.1) <a href="#menu_mission-class">MENU_MISSION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h4>
+<h4>2.1) [MENU_MISSION](#menu_mission-class) class, extends [MENU_BASE](#menu_base-class)</h4>
 
 <p>The <a href="#menu_mission-class">MENU_MISSION</a> class manages the main menus for a complete mission.
 You can add menus with the <a href="#menu_mission-new-menutext-parentmenu">MENU_MISSION:New()</a> method, which constructs a MENU_MISSION object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission-removesubmenus">MENU_MISSION:RemoveSubMenus()</a>.</p>
 
-<h4 id="2-2-menu_mission_command-class-extends-menu_command_base">2.2) <a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h4>
+<h4>2.2) [MENU_MISSION_COMMAND](#menu_mission_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)</h4>
 
 <p>The <a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a> class manages the command menus for a complete mission, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_mission_command-new-menutext-parentmenu-a-an">MENU_MISSION_COMMAND:New()</a> method, which constructs a MENU_MISSION_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission_command-remove">MENU_MISSION_COMMAND:Remove()</a>.</p>
 
-<h4 id="3-menu-coalition-classes">3) MENU COALITION classes</h4>
+<h4>3) MENU COALITION classes</h4>
 
 <p>The underlying classes manage the menus for whole coalitions.</p>
 
-<h4 id="3-1-menu_coalition-class-extends-menu_base">3.1) <a href="#menu_coalition-class">MENU_COALITION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h4>
+<h4>3.1) [MENU_COALITION](#menu_coalition-class) class, extends [MENU_BASE](#menu_base-class)</h4>
 
 <p>The <a href="#menu_coalition-class">MENU_COALITION</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_coalition-new-coalition-menutext-parentmenu">MENU_COALITION:New()</a> method, which constructs a MENU_COALITION object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition-removesubmenus">MENU_COALITION:RemoveSubMenus()</a>.</p>
 
-<h4 id="3-2-menu_coalition_command-class-extends-menu_command_base">3.2) <a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h4>
+<h4>3.2) [MENU_COALITION_COMMAND](#menu_coalition_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)</h4>
 
 <p>The <a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_coalition_command-new-coalition-menutext-parentmenu-a-an">MENU_COALITION_COMMAND:New()</a> method, which constructs a MENU_COALITION_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition_command-remove">MENU_COALITION_COMMAND:Remove()</a>.</p>
 
-<h4 id="4-menu-group-classes">4) MENU GROUP classes</h4>
+<h4>4) MENU GROUP classes</h4>
 
 <p>The underlying classes manage the menus for groups. Note that groups can be inactive, alive or can be destroyed.</p>
 
-<h4 id="4-1-menu_group-class-extends-menu_base">4.1) <a href="#menu_group-class">MENU_GROUP</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h4>
+<h4>4.1) [MENU_GROUP](#menu_group-class) class, extends [MENU_BASE](#menu_base-class)</h4>
 
 <p>The <a href="#menu_group-class">MENU_GROUP</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New()</a> method, which constructs a MENU_GROUP object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group-removesubmenus-self">MENU_GROUP:RemoveSubMenus()</a>.</p>
 
-<h4 id="4-2-menu_group_command-class-extends-menu_command_base">4.2) <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h4>
+<h4>4.2) [MENU_GROUP_COMMAND](#menu_group_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)</h4>
 
 <p>The <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_group_command-new-menugroup-the-the-a-an">MENU_GROUP_COMMAND:New()</a> method, which constructs a MENU_GROUP_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group_command-remove-self">MENU_GROUP_COMMAND:Remove()</a>.</p>
 
-<h4 id="5-menu-client-classes">5) MENU CLIENT classes</h4>
+<h4>5) MENU CLIENT classes</h4>
 
 <p>The underlying classes manage the menus for units with skill level client or player.</p>
 
-<h4 id="5-1-menu_client-class-extends-menu_base">5.1) <a href="#menu_client-class">MENU_CLIENT</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h4>
+<h4>5.1) [MENU_CLIENT](#menu_client-class) class, extends [MENU_BASE](#menu_base-class)</h4>
 
 <p>The <a href="#menu_client-class">MENU_CLIENT</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_client-new-client-menutext-parentmenu">MENU_CLIENT:New()</a> method, which constructs a MENU_CLIENT object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client-removesubmenus">MENU_CLIENT:RemoveSubMenus()</a>.</p>
 
-<h4 id="5-2-menu_client_command-class-extends-menu_command_base">5.2) <a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h4>
+<h4>5.2) [MENU_CLIENT_COMMAND](#menu_client_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)</h4>
 
 <p>The <a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_client_command-new-client-menutext-parentmenu-a">MENU_CLIENT_COMMAND:New()</a> method, which constructs a MENU_CLIENT_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client_command-remove">MENU_CLIENT_COMMAND:Remove()</a>.</p>
 
-<h4 id="contributions">Contributions: -</h4>
+<h4> Contributions: -</h4>
 
-<h4 id="authors-flightcontrol-design-programming">Authors: FlightControl : Design &amp; Programming</h4>
+<h4> Authors: FlightControl : Design & Programming</h4>
 
 <h2 id="menu_base-class">MENU_BASE Class</h2>
 
@@ -8359,18 +8357,18 @@ self</li>
 
 <p><img src="includes/Pictures/MESSAGE/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-message-class-extends-base">1) <a href="#message-class">MESSAGE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4> 1) [MESSAGE](#message-class) class, extends [BASE](#base-class)</h4>
 
 <p>Message System to display Messages to Clients, Coalitions or All.
 Messages are shown on the display panel for an amount of seconds, and will then disappear.
 Messages can contain a category which is indicating the category of the message.</p>
 
-<h4 id="1-1-message-construction">1.1) MESSAGE construction</h4>
+<h4> 1.1) MESSAGE construction</h4>
 
 <p>Messages are created with <a href="#message-new-messagetext-messageduration-messagecategory">MESSAGE:New()</a>. Note that when the MESSAGE object is created, no message is sent yet.
 To send messages, you need to use the To functions.</p>
 
-<h4 id="1-2-send-messages-to-an-audience">1.2) Send messages to an audience</h4>
+<h4> 1.2) Send messages to an audience</h4>
 
 <p>Messages are sent:</p>
 
@@ -8383,7 +8381,7 @@ To send messages, you need to use the To functions.</p>
 <li>To all Players using <a href="#message-toall">MESSAGE:ToAll()</a>.</li>
 </ul>
 
-<h4 id="1-3-send-conditionally-to-an-audience">1.3) Send conditionally to an audience</h4>
+<h4> 1.3) Send conditionally to an audience</h4>
 
 <p>Messages can be sent conditionally to an audience (when a condition is true):</p>
 
@@ -8605,14 +8603,14 @@ self</li>
 
 <p><strong>Core</strong> - <strong>POINT_VEC</strong> classes define an <strong>extensive API</strong> to <strong>manage 3D points</strong> in the simulation space.</p>
 
-<h4 id="1-point-point_vec3-class-extends-base">1) @{Point#POINT_VEC3} class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) @{Point#POINT_VEC3} class, extends [BASE](#base-class)</h4>
 
 <p>The @{Point#POINT_VEC3} class defines a 3D point in the simulator.</p>
 
 <p><strong>Important Note:</strong> Most of the functions in this section were taken from MIST, and reworked to OO concepts.
 In order to keep the credibility of the the author, I want to emphasize that the of the MIST framework was created by Grimes, who you can find on the Eagle Dynamics Forums.</p>
 
-<h4 id="1-1-point_vec3-constructor">1.1) POINT_VEC3 constructor</h4>
+<h4> 1.1) POINT_VEC3 constructor</h4>
 
 <p>A new POINT_VEC3 instance can be created with:</p>
 
@@ -8621,7 +8619,7 @@ In order to keep the credibility of the the author, I want to emphasize that the
 <li>@{Point#POINT_VEC3.NewFromVec3}(): a 3D point created from a @{DCSTypes#Vec3}.</li>
 </ul>
 
-<h4 id="1-2-manupulate-the-x-y-z-coordinates-of-the-point">1.2) Manupulate the X, Y, Z coordinates of the point</h4>
+<h4> 1.2) Manupulate the X, Y, Z coordinates of the point</h4>
 
 <p>A POINT_VEC3 class works in 3D space. It contains internally an X, Y, Z coordinate.
 Methods exist to manupulate these coordinates.</p>
@@ -8634,15 +8632,15 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <p>local Vec3 = PointVec3:AddX( 100 ):AddZ( 150 ):GetVec3()</p>
 
-<h4 id="1-3-create-waypoints-for-routes">1.3) Create waypoints for routes</h4>
+<h4> 1.3) Create waypoints for routes</h4>
 
 <p>A POINT_VEC3 can prepare waypoints for Ground, Air and Naval groups to be embedded into a Route.</p>
 
-<h4 id="1-5-smoke-flare-explode-illuminate">1.5) Smoke, flare, explode, illuminate</h4>
+<h4> 1.5) Smoke, flare, explode, illuminate</h4>
 
 <p>At the point a smoke, flare, explosion and illumination bomb can be triggered. Use the following methods:</p>
 
-<h4 id="1-5-1-smoke">1.5.1) Smoke</h4>
+<h4> 1.5.1) Smoke</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Smoke}(): To smoke the point in a certain color.</li>
@@ -8653,7 +8651,7 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{#POINT_VEC3.SmokeGreen}(): To smoke the point in green.</li>
 </ul>
 
-<h4 id="1-5-2-flare">1.5.2) Flare</h4>
+<h4> 1.5.2) Flare</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Flare}(): To flare the point in a certain color.</li>
@@ -8663,23 +8661,23 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{#POINT_VEC3.FlareGreen}(): To flare the point in green.</li>
 </ul>
 
-<h4 id="1-5-3-explode">1.5.3) Explode</h4>
+<h4> 1.5.3) Explode</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Explosion}(): To explode the point with a certain intensity.</li>
 </ul>
 
-<h4 id="1-5-4-illuminate">1.5.4) Illuminate</h4>
+<h4> 1.5.4) Illuminate</h4>
 
 <ul>
 <li>@{#POINT_VEC3.IlluminationBomb}(): To illuminate the point.</li>
 </ul>
 
-<h4 id="2-point-point_vec2-class-extends-point-point_vec3">2) @{Point#POINT_VEC2} class, extends @{Point#POINT_VEC3}</h4>
+<h4>2) @{Point#POINT_VEC2} class, extends @{Point#POINT_VEC3}</h4>
 
 <p>The @{Point#POINT_VEC2} class defines a 2D point in the simulator. The height coordinate (if needed) will be the land height + an optional added height specified.</p>
 
-<h4 id="2-1-point_vec2-constructor">2.1) POINT_VEC2 constructor</h4>
+<h4>2.1) POINT_VEC2 constructor</h4>
 
 <p>A new POINT_VEC2 instance can be created with:</p>
 
@@ -8688,7 +8686,7 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{Point#POINT_VEC2.NewFromVec2}(): a 2D point created from a @{DCSTypes#Vec2}.</li>
 </ul>
 
-<h4 id="1-2-manupulate-the-x-altitude-y-coordinates-of-the-2d-point">1.2) Manupulate the X, Altitude, Y coordinates of the 2D point</h4>
+<h4> 1.2) Manupulate the X, Altitude, Y coordinates of the 2D point</h4>
 
 <p>A POINT_VEC2 class works in 2D space, with an altitude setting. It contains internally an X, Altitude, Y coordinate.
 Methods exist to manupulate these coordinates.</p>
@@ -8729,13 +8727,13 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 .</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <h2 id="point_vec3-class">POINT_VEC3 Class</h2>
 
@@ -9856,7 +9854,7 @@ BASE
 like the A10C or the Mirage 2000C. They will <strong>hear the transmission</strong> if they are tuned on the <strong>right frequency and modulation</strong> (and if they are close enough - more on that below).
 If a FC3 airacraft is used, it will <strong>hear every communication, whatever the frequency and the modulation</strong> is set to.</p>
 
-<h4 id="author-hugues-grey_echo-bousquet">Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h4>
+<h4> Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h4>
 
 <h2 id="radio-class">RADIO Class</h2>
 
@@ -9866,7 +9864,7 @@ BASE
     `-- RADIO
 </pre>
 
-<h4 id="1-1-radio-usage">1.1) RADIO usage</h4>
+<h4> 1.1) RADIO usage</h4>
 
 <p>There are 3 steps to a successful radio transmission.</p>
 
@@ -10164,9 +10162,9 @@ The SCHEDULER object therefore keeps a table of &ldquo;CallID&rsquo;s&rdquo;, wh
 The SCHEDULER object plans new scheduled functions through the <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> method.
 The Schedule() method returns the CallID that is the reference ID for each planned schedule.</p>
 
-<h4 id="contributions">Contributions: -</h4>
+<h4> Contributions: -</h4>
 
-<h4 id="authors-flightcontrol-design-programming">Authors: FlightControl : Design &amp; Programming</h4>
+<h4> Authors: FlightControl : Design & Programming</h4>
 
 <h2 id="scheduledispatcher-class">SCHEDULEDISPATCHER Class</h2>
 
@@ -10192,11 +10190,11 @@ self</li>
 
 <p><img src="includes/Pictures/SCHEDULER/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-scheduler-class-extends-base">1) <a href="#scheduler-class">SCHEDULER</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4> 1) [SCHEDULER](#scheduler-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#scheduler-class">SCHEDULER</a> class creates schedule.</p>
 
-<h4 id="1-1-scheduler-constructor">1.1) SCHEDULER constructor</h4>
+<h4> 1.1) SCHEDULER constructor</h4>
 
 <p>The SCHEDULER class is quite easy to use, but note that the New constructor has variable parameters:</p>
 
@@ -10207,7 +10205,7 @@ self</li>
 <li><a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> Object, Function, FunctionArguments, Start, &hellip; ): Setup a new SCHEDULER object, linked to Object, and start a new schedule for the Function with the defined FunctionArguments according the Start and sequent parameters.</li>
 </ul>
 
-<h4 id="1-2-scheduler-timer-stopping-and-re-starting">1.2) SCHEDULER timer stopping and (re-)starting.</h4>
+<h4> 1.2) SCHEDULER timer stopping and (re-)starting.</h4>
 
 <p>The SCHEDULER can be stopped and restarted with the following methods:</p>
 
@@ -10216,23 +10214,23 @@ self</li>
 <li><a href="#scheduler-stop-scheduleid">SCHEDULER:Stop()</a>: Stop the schedules within the SCHEDULER object. If a CallID is provided to :Stop(), then only the schedule referenced by CallID will be stopped.</li>
 </ul>
 
-<h4 id="1-3-create-a-new-schedule">1.3) Create a new schedule</h4>
+<h4> 1.3) Create a new schedule</h4>
 
 <p>With <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> a new time event can be scheduled. This function is used by the :New() constructor when a new schedule is planned.</p>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>FlightControl : Concept &amp; Testing</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4 id="test-missions">Test Missions:</h4>
+<h4> Test Missions:</h4>
 
 <ul>
 <li>SCH - Scheduler</li>
@@ -10376,13 +10374,13 @@ self</li>
 <li>Trigger events when objects in the SET change a zone presence.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <h2 id="set_base-class">SET_BASE Class</h2>
 
@@ -10398,11 +10396,11 @@ In this way, large loops can be done while not blocking the simulator main proce
 The default <strong>&ldquo;yield interval&rdquo;</strong> is after 10 objects processed.
 The default <strong>&ldquo;time interval&rdquo;</strong> is after 0.001 seconds.</p>
 
-<h4 id="1-1-add-or-remove-objects-from-the-set">1.1) Add or remove objects from the SET</h4>
+<h4> 1.1) Add or remove objects from the SET</h4>
 
 <p>Some key core functions are <a href="#set_base-add-objectname-object">SET_BASE:Add()</a> and <a href="#set_base-remove-objectname">SET_BASE:Remove()</a> to add or remove objects from the SET in your logic.</p>
 
-<h4 id="1-2-define-the-set-iterator-yield-interval-and-the-time-interval">1.2) Define the SET iterator <strong>&ldquo;yield interval&rdquo;</strong> and the <strong>&ldquo;time interval&rdquo;</strong></h4>
+<h4> 1.2) Define the SET iterator **&ldquo;yield interval&rdquo;** and the **&ldquo;time interval&rdquo;**</h4>
 
 <p>Modify the iterator intervals with the SET_BASE-SetInteratorIntervals method.
 You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&ldquo;time interval&rdquo;</strong>. (See above).</p>
@@ -10722,7 +10720,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="2-1-set_group-constructor">2.1) SET_GROUP constructor</h4>
+<h4> 2.1) SET_GROUP constructor</h4>
 
 <p>Create a new SET_GROUP object with the <a href="#set_group-new">SET_GROUP:New()</a> method:</p>
 
@@ -10730,12 +10728,12 @@ BASE
 <li><a href="#set_group-new">SET_GROUP:New()</a>: Creates a new SET_GROUP object.</li>
 </ul>
 
-<h4 id="2-2-add-or-remove-group-s-from-set_group">2.2) Add or Remove GROUP(s) from SET_GROUP</h4>
+<h4> 2.2) Add or Remove GROUP(s) from SET_GROUP</h4>
 
 <p>GROUPS can be added and removed using the <a href="#set_group-addgroupsbyname-addgroupnames">SET_GROUP:AddGroupsByName()</a> and <a href="#set_group-removegroupsbyname-removegroupnames">SET_GROUP:RemoveGroupsByName()</a> respectively.
 These methods take a single GROUP name or an array of GROUP names to be added or removed from SET_GROUP.</p>
 
-<h4 id="2-3-set_group-filter-criteria">2.3) SET_GROUP filter criteria</h4>
+<h4> 2.3) SET_GROUP filter criteria</h4>
 
 <p>You can set filter criteria to define the set of groups within the SET_GROUP.
 Filter criteria are defined by:</p>
@@ -10759,7 +10757,7 @@ Filter criteria are defined by:</p>
 <li>SET_GROUP-FilterZones: Builds the SET_GROUP with the groups within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="2-4-set_group-iterators">2.4) SET_GROUP iterators</h4>
+<h4> 2.4) SET_GROUP iterators</h4>
 
 <p>Once the filters have been defined and the SET_GROUP has been built, you can iterate the SET_GROUP with the available iterator methods.
 The iterator methods will walk the SET_GROUP set, and call for each element within the set a function that you provide.
@@ -11061,7 +11059,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="3-1-set_unit-constructor">3.1) SET_UNIT constructor</h4>
+<h4> 3.1) SET_UNIT constructor</h4>
 
 <p>Create a new SET_UNIT object with the <a href="#set_unit-new">SET_UNIT:New()</a> method:</p>
 
@@ -11069,12 +11067,12 @@ BASE
 <li><a href="#set_unit-new">SET_UNIT:New()</a>: Creates a new SET_UNIT object.</li>
 </ul>
 
-<h4 id="3-2-add-or-remove-unit-s-from-set_unit">3.2) Add or Remove UNIT(s) from SET_UNIT</h4>
+<h4> 3.2) Add or Remove UNIT(s) from SET_UNIT</h4>
 
 <p>UNITs can be added and removed using the <a href="#set_unit-addunitsbyname-addunitnames">SET_UNIT:AddUnitsByName()</a> and <a href="#set_unit-removeunitsbyname-removeunitnames">SET_UNIT:RemoveUnitsByName()</a> respectively.
 These methods take a single UNIT name or an array of UNIT names to be added or removed from SET_UNIT.</p>
 
-<h4 id="3-3-set_unit-filter-criteria">3.3) SET_UNIT filter criteria</h4>
+<h4> 3.3) SET_UNIT filter criteria</h4>
 
 <p>You can set filter criteria to define the set of units within the SET_UNIT.
 Filter criteria are defined by:</p>
@@ -11099,7 +11097,7 @@ Filter criteria are defined by:</p>
 <li>SET_UNIT-FilterZones: Builds the SET_UNIT with the units within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="3-4-set_unit-iterators">3.4) SET_UNIT iterators</h4>
+<h4> 3.4) SET_UNIT iterators</h4>
 
 <p>Once the filters have been defined and the SET_UNIT has been built, you can iterate the SET_UNIT with the available iterator methods.
 The iterator methods will walk the SET_UNIT set, and call for each element within the set a function that you provide.
@@ -11119,7 +11117,7 @@ The following iterator methods are currently available within the SET_UNIT:</p>
 <li><a href="#set_unit-foreachunitnotinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitNotInZone()</a>: Iterate and call an iterator function for each <strong>alive</strong> UNIT presence not in a <a href="#zone-module">Zone</a>, providing the UNIT and optional parameters to the called function.</li>
 </ul>
 
-<h4 id="3-5-set_unit-atomic-methods">3.5 ) SET_UNIT atomic methods</h4>
+<h4> 3.5 ) SET_UNIT atomic methods</h4>
 
 <p>Various methods exist for a SET_UNIT to perform actions or calculations and retrieve results from the SET_UNIT:</p>
 
@@ -11600,7 +11598,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="4-1-set_client-constructor">4.1) SET_CLIENT constructor</h4>
+<h4> 4.1) SET_CLIENT constructor</h4>
 
 <p>Create a new SET_CLIENT object with the <a href="#set_client-new">SET_CLIENT:New()</a> method:</p>
 
@@ -11608,12 +11606,12 @@ BASE
 <li><a href="#set_client-new">SET_CLIENT:New()</a>: Creates a new SET_CLIENT object.</li>
 </ul>
 
-<h4 id="4-2-add-or-remove-client-s-from-set_client">4.2) Add or Remove CLIENT(s) from SET_CLIENT</h4>
+<h4> 4.2) Add or Remove CLIENT(s) from SET_CLIENT</h4>
 
 <p>CLIENTs can be added and removed using the <a href="#set_client-addclientsbyname-addclientnames">SET_CLIENT:AddClientsByName()</a> and <a href="#set_client-removeclientsbyname-removeclientnames">SET_CLIENT:RemoveClientsByName()</a> respectively.
 These methods take a single CLIENT name or an array of CLIENT names to be added or removed from SET_CLIENT.</p>
 
-<h4 id="4-3-set_client-filter-criteria">4.3) SET_CLIENT filter criteria</h4>
+<h4> 4.3) SET_CLIENT filter criteria</h4>
 
 <p>You can set filter criteria to define the set of clients within the SET_CLIENT.
 Filter criteria are defined by:</p>
@@ -11638,7 +11636,7 @@ Filter criteria are defined by:</p>
 <li>SET_CLIENT-FilterZones: Builds the SET_CLIENT with the clients within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="4-4-set_client-iterators">4.4) SET_CLIENT iterators</h4>
+<h4> 4.4) SET_CLIENT iterators</h4>
 
 <p>Once the filters have been defined and the SET_CLIENT has been built, you can iterate the SET_CLIENT with the available iterator methods.
 The iterator methods will walk the SET_CLIENT set, and call for each element within the set a function that you provide.
@@ -11932,7 +11930,7 @@ BASE
 <li>Coalitions</li>
 </ul>
 
-<h4 id="5-1-set_airbase-constructor">5.1) SET_AIRBASE constructor</h4>
+<h4> 5.1) SET_AIRBASE constructor</h4>
 
 <p>Create a new SET_AIRBASE object with the <a href="#set_airbase-new">SET_AIRBASE:New()</a> method:</p>
 
@@ -11940,12 +11938,12 @@ BASE
 <li><a href="#set_airbase-new">SET_AIRBASE:New()</a>: Creates a new SET_AIRBASE object.</li>
 </ul>
 
-<h4 id="5-2-add-or-remove-airbases-from-set_airbase">5.2) Add or Remove AIRBASEs from SET_AIRBASE</h4>
+<h4> 5.2) Add or Remove AIRBASEs from SET_AIRBASE</h4>
 
 <p>AIRBASEs can be added and removed using the <a href="#set_airbase-addairbasesbyname-addairbasenames">SET_AIRBASE:AddAirbasesByName()</a> and <a href="#set_airbase-removeairbasesbyname-removeairbasenames">SET_AIRBASE:RemoveAirbasesByName()</a> respectively.
 These methods take a single AIRBASE name or an array of AIRBASE names to be added or removed from SET_AIRBASE.</p>
 
-<h4 id="5-3-set_airbase-filter-criteria">5.3) SET_AIRBASE filter criteria</h4>
+<h4> 5.3) SET_AIRBASE filter criteria</h4>
 
 <p>You can set filter criteria to define the set of clients within the SET_AIRBASE.
 Filter criteria are defined by:</p>
@@ -11960,7 +11958,7 @@ Filter criteria are defined by:</p>
 <li><a href="#set_airbase-filterstart">SET_AIRBASE:FilterStart()</a>: Starts the filtering of the airbases within the SET_AIRBASE.</li>
 </ul>
 
-<h4 id="5-4-set_airbase-iterators">5.4) SET_AIRBASE iterators</h4>
+<h4> 5.4) SET_AIRBASE iterators</h4>
 
 <p>Once the filters have been defined and the SET_AIRBASE has been built, you can iterate the SET_AIRBASE with the available iterator methods.
 The iterator methods will walk the SET_AIRBASE set, and call for each airbase within the set a function that you provide.
@@ -12176,19 +12174,19 @@ self</li>
 
 <p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h4> Demo Missions</h4>
 
-<h4 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h4>
+<h4> [SPAWNSTATIC Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS - Spawning Statics)</h4>
 
-<h4 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h4>
+<h4> [SPAWNSTATIC Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics)</h4>
 
-<h4 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h4>
+<h4> [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)</h4>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h4> YouTube Channel</h4>
 
-<h4 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h4>
+<h4> [SPAWNSTATIC YouTube Channel]()</h4>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -12199,11 +12197,11 @@ self</li>
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -12231,7 +12229,7 @@ By default, spawned <a href="#static-module">Static</a>s will follow a naming co
 and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 </ul>
 
-<h4 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h4>
+<h4> SPAWNSTATIC construction methods</h4>
 
 <p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
 
@@ -12239,7 +12237,7 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 <li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
 </ul>
 
-<h4 id="spawn-methods"><strong>Spawn</strong> methods</h4>
+<h4> **Spawn** methods</h4>
 
 <p>Groups can be spawned at different times and methods:</p>
 
@@ -12362,7 +12360,7 @@ self</li>
 <li><a href="#zone_polygon-class">ZONE_POLYGON</a>: The ZONE_POLYGON class defines by a sequence of <a href="#group-class">GROUP</a> waypoints within the Mission Editor, forming a polygon.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -12406,20 +12404,20 @@ BASE
 
 <p>This class is an abstract BASE class for derived classes, and is not meant to be instantiated.</p>
 
-<h4 id="1-1-each-zone-has-a-name">1.1) Each zone has a name:</h4>
+<h4> 1.1) Each zone has a name:</h4>
 
 <ul>
 <li><a href="#zone_base-getname">ZONE_BASE:GetName()</a>: Returns the name of the zone.</li>
 </ul>
 
-<h4 id="1-2-each-zone-implements-two-polymorphic-functions-defined-in-zone_base">1.2) Each zone implements two polymorphic functions defined in <a href="#zone_base-class">ZONE_BASE</a>:</h4>
+<h4> 1.2) Each zone implements two polymorphic functions defined in [ZONE_BASE](#zone_base-class):</h4>
 
 <ul>
 <li><a href="#zone_base-isvec2inzone-vec2">ZONE_BASE:IsVec2InZone()</a>: Returns if a Vec2 is within the zone.</li>
 <li><a href="#zone_base-isvec3inzone-vec3">ZONE_BASE:IsVec3InZone()</a>: Returns if a Vec3 is within the zone.</li>
 </ul>
 
-<h4 id="1-3-a-zone-has-a-probability-factor-that-can-be-set-to-randomize-a-selection-between-zones">1.3) A zone has a probability factor that can be set to randomize a selection between zones:</h4>
+<h4> 1.3) A zone has a probability factor that can be set to randomize a selection between zones:</h4>
 
 <ul>
 <li>ZONE_BASE-SetRandomizeProbability: Set the randomization probability of a zone to be selected, taking a value between 0 and 1 ( 0 = 0%, 1 = 100% )</li>
@@ -12427,20 +12425,20 @@ BASE
 <li><a href="#zone_base-getzonemaybe">ZONE_BASE:GetZoneMaybe()</a>: Get the zone taking into account the randomization probability. nil is returned if this zone is not a candidate.</li>
 </ul>
 
-<h4 id="1-4-a-zone-manages-vectors">1.4) A zone manages Vectors:</h4>
+<h4> 1.4) A zone manages Vectors:</h4>
 
 <ul>
 <li><a href="#zone_base-getvec2">ZONE_BASE:GetVec2()</a>: Returns the @{DCSTypes#Vec2} coordinate of the zone.</li>
 <li><a href="#zone_base-getrandomvec2">ZONE_BASE:GetRandomVec2()</a>: Define a random @{DCSTypes#Vec2} within the zone.</li>
 </ul>
 
-<h4 id="1-5-a-zone-has-a-bounding-square">1.5) A zone has a bounding square:</h4>
+<h4> 1.5) A zone has a bounding square:</h4>
 
 <ul>
 <li><a href="#zone_base-getboundingsquare">ZONE_BASE:GetBoundingSquare()</a>: Get the outer most bounding square of the zone.</li>
 </ul>
 
-<h4 id="1-6-a-zone-can-be-marked">1.6) A zone can be marked:</h4>
+<h4> 1.6) A zone can be marked:</h4>
 
 <ul>
 <li><a href="#zone_base-smokezone-smokecolor">ZONE_BASE:SmokeZone()</a>: Smokes the zone boundaries in a color.</li>
@@ -12737,20 +12735,20 @@ BASE
 <p>The ZONE_RADIUS class defined by a zone name, a location and a radius.
 This class implements the inherited functions from <a href="#zone_base%20taking%20into%20account%20the%20own%20zone%20format%20and-class">ZONE_BASE taking into account the own zone format and</a> properties.</p>
 
-<h4 id="2-1-zone_radius-constructor">2.1) <a href="#zone_radius-class">ZONE_RADIUS</a> constructor</h4>
+<h4> 2.1) [ZONE_RADIUS](#zone_radius-class) constructor</h4>
 
 <ul>
 <li><a href="#zone_radius-new-zonename-vec2-radius">ZONE_RADIUS:New()</a>: Constructor.</li>
 </ul>
 
-<h4 id="2-2-manage-the-radius-of-the-zone">2.2) Manage the radius of the zone</h4>
+<h4> 2.2) Manage the radius of the zone</h4>
 
 <ul>
 <li><a href="#zone_radius-setradius-radius">ZONE_RADIUS:SetRadius()</a>: Sets the radius of the zone.</li>
 <li><a href="#zone_radius-getradius">ZONE_RADIUS:GetRadius()</a>: Returns the radius of the zone.</li>
 </ul>
 
-<h4 id="2-3-manage-the-location-of-the-zone">2.3) Manage the location of the zone</h4>
+<h4> 2.3) Manage the location of the zone</h4>
 
 <ul>
 <li><a href="#zone_radius-setvec2-vec2">ZONE_RADIUS:SetVec2()</a>: Sets the @{DCSTypes#Vec2} of the zone.</li>
@@ -12758,7 +12756,7 @@ This class implements the inherited functions from <a href="#zone_base%20taking%
 <li><a href="#zone_radius-getvec3-height">ZONE_RADIUS:GetVec3()</a>: Returns the @{DCSTypes#Vec3} of the zone, taking an additional height parameter.</li>
 </ul>
 
-<h4 id="2-4-zone-point-randomization">2.4) Zone point randomization</h4>
+<h4> 2.4) Zone point randomization</h4>
 
 <p>Various functions exist to find random points within the zone.</p>
 
@@ -13209,7 +13207,7 @@ BASE
 This class implements the inherited functions from <a href="#zone_radius-class">ZONE_RADIUS</a> taking into account the own zone format and properties.
 This class is an abstract BASE class for derived classes, and is not meant to be instantiated.</p>
 
-<h4 id="6-1-zone-point-randomization">6.1) Zone point randomization</h4>
+<h4> 6.1) Zone point randomization</h4>
 
 <p>Various functions exist to find random points within the zone.</p>
 
@@ -13413,7 +13411,7 @@ self</li>
 
 <p>This module contains the AIRBASEPOLICE classes.</p>
 
-<h4 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) [AIRBASEPOLICE_BASE](#airbasepolice_base-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class provides the main methods to monitor CLIENT behaviour at airbases.
 CLIENTS should not be allowed to:</p>
@@ -13425,7 +13423,7 @@ CLIENTS should not be allowed to:</p>
 <li>Obey ground control orders.</li>
 </ul>
 
-<h4 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
+<h4>2) [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)</h4>
 
 <p>All the airbases on the caucasus map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -13452,7 +13450,7 @@ The following names can be given:
 * TbilisiLochini
 * Vaziani</p>
 
-<h4 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
+<h4>3) [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)</h4>
 
 <p>All the airbases on the NEVADA map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -13462,9 +13460,9 @@ The following names can be given:
 * Creech
 * Groom Lake</p>
 
-<h4 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h4>
+<h4> Contributions: Dutch Baron - Concept & Testing</h4>
 
-<h4 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h4>
+<h4> Author: FlightControl - Framework Design &  Programming</h4>
 
 <h2 id="airbasepolice_base-class">AIRBASEPOLICE_BASE Class</h2>
 
@@ -13626,25 +13624,25 @@ DETECTION uses the in-built detection capabilities of DCS World, but adds new fu
 
 <p>Find the DETECTION classes documentation further in this document in the globals section.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h4> Demo Missions</h4>
 
-<h4 id="detection-demo-missions-and-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h4>
+<h4> [DETECTION Demo Missions and Source Code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection)</h4>
 
-<h4 id="detection-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h4>
+<h4> [DETECTION Demo Missions, only for Beta Testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection)</h4>
 
-<h4 id="all-demo-missions-pack-of-the-latest-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h4>
+<h4> [ALL Demo Missions pack of the Latest Release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)</h4>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h4> YouTube Channel</h4>
 
-<h4 id="detection-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h4>
+<h4> [DETECTION YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji)</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>Mechanist : Early concept of DETECTION_AREAS.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl : Analysis, Design, Programming, Testing</li>
@@ -13662,11 +13660,11 @@ BASE
 <p>The DETECTION_BASE class defines the core functions to administer detected objects.
 The DETECTION_BASE class will detect objects within the battle zone for a list of <a href="#group-module">Group</a>s detecting targets following (a) detection method(s).</p>
 
-<h4 id="detection_base-constructor">DETECTION_BASE constructor</h4>
+<h4> DETECTION_BASE constructor</h4>
 
 <p>Construct a new DETECTION_BASE instance using the <a href="#detection_base-new-detectionsetgroup">DETECTION_BASE:New()</a> method.</p>
 
-<h4 id="initialization">Initialization</h4>
+<h4> Initialization</h4>
 
 <p>By default, detection will return detected objects with all the detection sensors available.
 However, you can ask how the objects were found with specific detection methods.
@@ -13684,7 +13682,7 @@ You can specify to apply multiple detection methods.</p>
 <li><a href="#detection_base-initdetectdlink-detectdlink">DETECTION_BASE:InitDetectDLINK()</a>: Detected using DLINK.</li>
 </ul>
 
-<h4 id="filter-detected-units-based-on-category-of-the-unit"><strong>Filter</strong> detected units based on <strong>category of the unit</strong></h4>
+<h4> **Filter** detected units based on **category of the unit**</h4>
 
 <p>Filter the detected units based on Unit.Category using the method <a href="#detection_base-filtercategories-filtercategories">DETECTION_BASE:FilterCategories()</a>.
 The different values of Unit.Category can be:</p>
@@ -13707,7 +13705,7 @@ The different values of Unit.Category can be:</p>
 
 <p>DetectionObject:FilterCategories( { Unit.Category.AIRPLANE, Unit.Category.HELICOPTER } )</p>
 
-<h4 id="detection_-derived-classes-group-the-detected-units-into-a-detecteditems-list"><strong>DETECTION_ derived classes</strong> group the detected units into a <strong>DetectedItems[]</strong> list</h4>
+<h4> **DETECTION_ derived classes** group the detected units into a **DetectedItems[]** list</h4>
 
 <p>DETECTION_BASE derived classes build a list called DetectedItems[], which is essentially a first later
 of grouping of detected units. Each DetectedItem within the DetectedItems[] list contains
@@ -13728,7 +13726,7 @@ about the DetectedItem that is set by the DETECTION_BASE derived classes, used t
 This method retrieves the Set from a DetectedItem element from the DetectedItem list (DetectedItems[ DetectedItemIndex ].Set ).</li>
 </ul>
 
-<h4 id="visual-filters-to-fine-tune-the-probability-of-the-detected-objects"><strong>Visual filters</strong> to fine-tune the probability of the detected objects</h4>
+<h4> **Visual filters** to fine-tune the probability of the detected objects</h4>
 
 <p>By default, DCS World will return any object that is in LOS and within &ldquo;visual reach&rdquo;, or detectable through one of the electronic detection means.
 That being said, the DCS World detection algorithm can sometimes be unrealistic.
@@ -13751,7 +13749,7 @@ The mission designer needs to define these cloudy zones within the mission, and 
 <p>I advise however, that, when you first use the DETECTION derived classes, that you don&rsquo;t use these filters.
 Only when you experience unrealistic behaviour in your missions, these filters could be applied.</p>
 
-<h4 id="distance-visual-detection-probability">Distance visual detection probability</h4>
+<h4> Distance visual detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the further away a detected object is, the less likely it is to be detected properly.
 Also, the speed of accurate detection plays a role.</p>
@@ -13765,7 +13763,7 @@ Also, the speed of accurate detection plays a role.</p>
 
 <p>Use the method <a href="#detection_base-setdistanceprobability-the">DETECTION_BASE:SetDistanceProbability()</a> to set the probability factor upon a 10 km distance.</p>
 
-<h4 id="alpha-angle-visual-detection-probability">Alpha Angle visual detection probability</h4>
+<h4> Alpha Angle visual detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the higher the unit is during the detecting process, the more likely the detected unit is to be detected properly.
 A detection at a 90% alpha angle is the most optimal, a detection at 10% is less and a detection at 0% is less likely to be correct.</p>
@@ -13777,7 +13775,7 @@ A detection at a 90% alpha angle is the most optimal, a detection at 10% is less
 
 <p>Use the method <a href="#detection_base-setalphaangleprobability-the">DETECTION_BASE:SetAlphaAngleProbability()</a> to set the probability factor if 0°.</p>
 
-<h4 id="cloudy-zones-detection-probability">Cloudy Zones detection probability</h4>
+<h4> Cloudy Zones detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the more a detected unit is within a cloudy zone, the less likely the detected unit is to be detected successfully.
 The Cloudy Zones work with the ZONE_BASE derived classes. The mission designer can define within the mission
@@ -13792,12 +13790,12 @@ Expecially for ZONE_POLYGON, try to limit the amount of nodes of the polygon!</p
 <p>Typically, this kind of filter would be applied for very specific areas were a detection needs to be very realisting for
 AI not to detect so easily targets within a forrest or village rich area.</p>
 
-<h4 id="accept-reject-detected-units">Accept / Reject detected units</h4>
+<h4> Accept / Reject detected units</h4>
 
 <p>DETECTION_BASE can accept or reject successful detections based on the location of the detected object,
 if it is located in range or located inside or outside of specific zones.</p>
 
-<h4 id="detection-acceptance-of-within-range-limit">Detection acceptance of within range limit</h4>
+<h4> Detection acceptance of within range limit</h4>
 
 <p>A range can be set that will limit a successful detection for a unit.
 Use the method <a href="#detection_base-setacceptrange-acceptrange">DETECTION_BASE:SetAcceptRange()</a> to apply a range in meters till where detected units will be accepted.</p>
@@ -13813,7 +13811,7 @@ Detection:SetAcceptRange( 5000 )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-acceptance-if-within-zone-s">Detection acceptance if within zone(s).</h4>
+<h4> Detection acceptance if within zone(s).</h4>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will only accept a detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setacceptzones-can">DETECTION_BASE:SetAcceptZones()</a> will accept detected units if they are within the specified zones.</p>
@@ -13833,7 +13831,7 @@ Detection:SetAcceptZones( { ZoneAccept1, ZoneAccept2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-rejectance-if-within-zone-s">Detection rejectance if within zone(s).</h4>
+<h4> Detection rejectance if within zone(s).</h4>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will reject detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setrejectzones-can">DETECTION_BASE:SetRejectZones()</a> will reject detected units if they are within the specified zones.
@@ -13854,18 +13852,18 @@ Detection:SetRejectZones( { ZoneReject1, ZoneReject2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection_base-is-a-finite-state-machine">DETECTION_BASE is a Finite State Machine</h4>
+<h4> DETECTION_BASE is a Finite State Machine</h4>
 
 <p>Various Events and State Transitions can be tailored using DETECTION_BASE.</p>
 
-<h4 id="detection_base-states">DETECTION_BASE States</h4>
+<h4> DETECTION_BASE States</h4>
 
 <ul>
 <li><strong>Detecting</strong>: The detection is running.</li>
 <li><strong>Stopped</strong>: The detection is stopped.</li>
 </ul>
 
-<h4 id="detection_base-events">DETECTION_BASE Events</h4>
+<h4> DETECTION_BASE Events</h4>
 
 <ul>
 <li><strong>Start</strong>: Start the detection process.</li>
@@ -15105,7 +15103,7 @@ and will build a list (table) of <a href="#set_unit-class">SET_UNIT</a>s contain
 The class is group the detected units within zones given a DetectedZoneRange parameter.
 A set with multiple detected zones will be created as there are groups of units detected.</p>
 
-<h4 id="4-1-retrieve-the-detected-unit-sets-and-detected-zones">4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
+<h4> 4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
 
 <p>The methods to manage the DetectedItems[].Set(s) are implemented in <a href="#dectection_base-class">DECTECTION_BASE</a> and
 the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#detection_areas-class">DETECTION_AREAS</a>.</p>
@@ -15116,11 +15114,11 @@ the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#de
 To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount.
 If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone with a given index.</p>
 
-<h4 id="4-4-flare-or-smoke-detected-units">4.4) Flare or Smoke detected units</h4>
+<h4> 4.4) Flare or Smoke detected units</h4>
 
 <p>Use the methods <a href="#detection_areas-flaredetectedunits">DETECTION_AREAS:FlareDetectedUnits()</a> or <a href="#detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</a> to flare or smoke the detected units when a new detection has taken place.</p>
 
-<h4 id="4-5-flare-or-smoke-or-bound-detected-zones">4.5) Flare or Smoke or Bound detected zones</h4>
+<h4> 4.5) Flare or Smoke or Bound detected zones</h4>
 
 <p>Use the methods:</p>
 
@@ -15821,7 +15819,7 @@ istance ParamDistance</li>
 
 <p>This module contains the MISSILETRAINER class.</p>
 
-<h4 id="1-missiletrainer-class-extends-base">1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) [MISSILETRAINER](#missiletrainer-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#missiletrainer-class">MISSILETRAINER</a> class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
 the class will destroy the missile within a certain range, to avoid damage to your aircraft.
@@ -15867,7 +15865,7 @@ It suports the following functionality:</p>
 <li><strong>200 meter</strong>: Destroys the missile when the distance to the aircraft is below or equal to 200 meter.</li>
 </ul>
 
-<h4 id="1-1-missiletrainer-construction-methods">1.1) MISSILETRAINER construction methods:</h4>
+<h4>1.1) MISSILETRAINER construction methods:</h4>
 
 <p>Create a new MISSILETRAINER object with the <a href="#missiletrainer-new-distance-briefing">MISSILETRAINER:New()</a> method:</p>
 
@@ -15877,7 +15875,7 @@ It suports the following functionality:</p>
 
 <p>MISSILETRAINER will collect each unit declared in the mission with a skill level &ldquo;Client&rdquo; and &ldquo;Player&rdquo;, and will monitor the missiles shot at those.</p>
 
-<h4 id="1-2-missiletrainer-initialization-methods">1.2) MISSILETRAINER initialization methods:</h4>
+<h4>1.2) MISSILETRAINER initialization methods:</h4>
 
 <p>A MISSILETRAINER object will behave differently based on the usage of initialization methods:</p>
 
@@ -16220,9 +16218,9 @@ These CSV files can be used to:</p>
 Use the radio menu F10 to consult the scores while running the mission.
 Scores can be reported for your user, or an overall score can be reported of all players currently active in the mission.</p>
 
-<h4 id="1-scoring-class-extends-base">1) <a href="#scoring-class">SCORING</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4> 1) [SCORING](#scoring-class) class, extends [BASE](#base-class)</h4>
 
-<h4 id="1-1-set-the-destroy-score-or-penalty-scale">1.1) Set the destroy score or penalty scale</h4>
+<h4> 1.1) Set the destroy score or penalty scale</h4>
 
 <p>Score scales can be set for scores granted when enemies or friendlies are destroyed.
 Use the method <a href="#scoring-setscaledestroyscore-scale">SCORING:SetScaleDestroyScore()</a> to set the scale of enemy destroys (positive destroys).
@@ -16235,7 +16233,7 @@ Scoring:SetScaleDestroyPenalty( 40 )</p>
 <p>The above sets the scale for valid scores to 10. So scores will be given in a scale from 0 to 10.
 The penalties will be given in a scale from 0 to 40.</p>
 
-<h4 id="1-2-define-special-targets-that-will-give-extra-scores">1.2) Define special targets that will give extra scores.</h4>
+<h4> 1.2) Define special targets that will give extra scores.</h4>
 
 <p>Special targets can be set that will give extra scores to the players when these are destroyed.
 Use the methods <a href="#scoring-addunitscore-scoreunit-score">SCORING:AddUnitScore()</a> and <a href="#scoring-removeunitscore-scoreunit">SCORING:RemoveUnitScore()</a> to specify a special additional score for a specific <a href="#unit-module">Unit</a>s.
@@ -16252,7 +16250,7 @@ For example, this can be done as follows:</p>
 
 <p>Scoring:RemoveUnitScore( UNIT:FindByName( &ldquo;Unit #001&rdquo; ) )</p>
 
-<h4 id="1-3-define-destruction-zones-that-will-give-extra-scores">1.3) Define destruction zones that will give extra scores.</h4>
+<h4> 1.3) Define destruction zones that will give extra scores.</h4>
 
 <p>Define zones of destruction. Any object destroyed within the zone of the given category will give extra points.
 Use the method <a href="#scoring-addzonescore-scorezone-score">SCORING:AddZoneScore()</a> to add a <a href="#zone-module">Zone</a> for additional scoring.
@@ -16262,24 +16260,24 @@ then the zone is a moving zone, and anything destroyed within that <a href="#zon
 The other implementation could be to designate a scenery target (a building) in the mission editor surrounded by a <a href="#zone-module">Zone</a>,
 just large enough around that building.</p>
 
-<h4 id="1-4-add-extra-goal-scores-upon-an-event-or-a-condition">1.4) Add extra Goal scores upon an event or a condition.</h4>
+<h4> 1.4) Add extra Goal scores upon an event or a condition.</h4>
 
 <p>A mission has goals and achievements. The scoring system provides an API to set additional scores when a goal or achievement event happens.
 Use the method <a href="#scoring-addgoalscore-playerunit-goaltag-text-score">SCORING:AddGoalScore()</a> to add a score for a Player at any time in your mission.</p>
 
-<h4 id="1-5-configure-fratricide-level">1.5) Configure fratricide level.</h4>
+<h4> 1.5) Configure fratricide level.</h4>
 
 <p>When a player commits too much damage to friendlies, his penalty score will reach a certain level.
 Use the method <a href="#scoring-setfratricide-fratricide">SCORING:SetFratricide()</a> to define the level when a player gets kicked.
 By default, the fratricide level is the default penalty mutiplier * 2 for the penalty score.</p>
 
-<h4 id="1-6-penalty-score-when-a-player-changes-the-coalition">1.6) Penalty score when a player changes the coalition.</h4>
+<h4> 1.6) Penalty score when a player changes the coalition.</h4>
 
 <p>When a player changes the coalition, he can receive a penalty score.
 Use the method <a href="#scoring-setcoalitionchangepenalty-coalitionchangepenalty">SCORING:SetCoalitionChangePenalty()</a> to define the penalty when a player changes coalition.
 By default, the penalty for changing coalition is the default penalty scale.</p>
 
-<h4 id="1-8-define-output-csv-files">1.8) Define output CSV files.</h4>
+<h4> 1.8) Define output CSV files.</h4>
 
 <p>The CSV file is given the name of the string given in the <a href="#scoring-new-gamename">SCORING:New()</a>{} constructor, followed by the .csv extension.
 The file is incrementally saved in the <strong><User>\Saved Games\DCS\Logs</strong> folder, and has a time stamp indicating each mission run.
@@ -16290,7 +16288,7 @@ local ScoringSecondMission = SCORING:New( &ldquo;SecondMission&rdquo; )</p>
 
 <p>The above documents that 2 Scoring objects are created, ScoringFirstMission and ScoringSecondMission.</p>
 
-<h4 id="1-9-configure-messages">1.9) Configure messages.</h4>
+<h4> 1.9) Configure messages.</h4>
 
 <p>When players hit or destroy targets, messages are sent.
 Various methods exist to configure:</p>
@@ -16300,7 +16298,7 @@ Various methods exist to configure:</p>
 <li>Which audience receives the message.</li>
 </ul>
 
-<h4 id="1-9-1-configure-the-messages-sent-upon-the-event">1.9.1) Configure the messages sent upon the event.</h4>
+<h4> 1.9.1) Configure the messages sent upon the event.</h4>
 
 <p>Use the following methods to configure when to send messages. By default, all messages are sent.</p>
 
@@ -16311,7 +16309,7 @@ Various methods exist to configure:</p>
 <li><a href="#scoring-setmessageszone-onoff">SCORING:SetMessagesZone()</a>: Configure to send messages for additional score, after a target has been destroyed within a given zone.</li>
 </ul>
 
-<h4 id="1-9-2-configure-the-audience-of-the-messages">1.9.2) Configure the audience of the messages.</h4>
+<h4> 1.9.2) Configure the audience of the messages.</h4>
 
 <p>Use the following methods to configure the audience of the messages. By default, the messages are sent to all players in the mission.</p>
 
@@ -16320,7 +16318,7 @@ Various methods exist to configure:</p>
 <li><a href="#scoring-setmessagestocoalition">SCORING:SetMessagesToCoalition()</a>: Configure to send messages to only those players within the same coalition as the player.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -16333,9 +16331,9 @@ Various methods exist to configure:</p>
 
 <p>2017-02-26: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong>Wingthor (TAW)</strong>: Testing &amp; Advice.</li>
@@ -16343,7 +16341,7 @@ Various methods exist to configure:</p>
 <li>**<a href="http://forums.eagle.ru/member.php?u=3829">Whisper</a>: Testing and Advice.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -17011,19 +17009,19 @@ self</li>
 
 <p>The documentation of the SPAWN class can be found further in this document.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h4> Demo Missions</h4>
 
-<h4 id="spawn-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h4>
+<h4> [SPAWN Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning)</h4>
 
-<h4 id="spawn-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h4>
+<h4> [SPAWN Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning)</h4>
 
-<h4 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h4>
+<h4> [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)</h4>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h4> YouTube Channel</h4>
 
-<h4 id="spawn-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h4>
+<h4> [SPAWN YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL)</h4>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -17063,16 +17061,16 @@ self</li>
 2016-08-14: SPAWN.<strong>Init</strong>RandomizeTemplate( SpawnTemplatePrefixTable ) replaces SPAWN.<em>RandomizeTemplate</em>( SpawnTemplatePrefixTable ).
 2016-08-14: SPAWN.<strong>Init</strong>UnControlled() replaces SPAWN.<em>UnControlled</em>().</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong>Aaron</strong>: Posed the idea for Group position randomization at SpawnInZone and make the Unit randomization separate from the Group randomization.</li>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -17101,7 +17099,7 @@ which modify the behaviour or the way groups are spawned.
 These initialization methods have the prefix <strong>Init</strong>.
 There are also spawn methods with the prefix <strong>Spawn</strong> and will spawn new groups in various ways.</p>
 
-<h4 id="important-the-methods-with-prefix-init-must-be-used-before-any-methods-with-prefix-spawn-method-are-used-or-unexpected-results-may-appear">IMPORTANT! The methods with prefix <strong>Init</strong> must be used before any methods with prefix <strong>Spawn</strong> method are used, or unexpected results may appear!!!</h4>
+<h4> IMPORTANT! The methods with prefix **Init** must be used before any methods with prefix **Spawn** method are used, or unexpected results may appear!!!</h4>
 
 <p>Because SPAWN can spawn multiple groups of a template group,
 SPAWN has an <strong>internal index</strong> that keeps track
@@ -17127,7 +17125,7 @@ For example, if your template group has a group composition of 10 units, and you
 with unlimited resources = :InitLimit( 100, 0 ) and 10 groups are alive, but two groups have only one unit alive in the group,
 then a sequent Spawn(Scheduled) will allow a new group to be spawned!!!</p>
 
-<h4 id="important-if-a-limit-has-been-reached-it-is-possible-that-a-spawn-method-returns-nil-meaning-no-group-had-been-spawned">IMPORTANT!! If a limit has been reached, it is possible that a <strong>Spawn</strong> method returns <strong>nil</strong>, meaning, no <a href="#group-module">Group</a> had been spawned!!!</h4>
+<h4> IMPORTANT!! If a limit has been reached, it is possible that a **Spawn** method returns **nil**, meaning, no [Group](#group-module) had been spawned!!!</h4>
 
 <p>Spawned groups get <strong>the same name</strong> as the name of the template group.
 Spawned units in those groups keep <em>by default</em> <strong>the same name</strong> as the name of the template group.
@@ -17163,7 +17161,7 @@ a proper initialization of the SPAWN instance is done with the options you want 
 or the SPAWN module logic won&rsquo;t work anymore.</li>
 </ul>
 
-<h4 id="spawn-construction-methods">SPAWN construction methods</h4>
+<h4> SPAWN construction methods</h4>
 
 <p>Create a new SPAWN object with the <a href="#spawn-new-spawntemplateprefix">SPAWN:New()</a> or the <a href="#spawn-newwithalias-spawntemplateprefix-spawnaliasprefix">SPAWN:NewWithAlias()</a> methods:</p>
 
@@ -17176,41 +17174,41 @@ or the SPAWN module logic won&rsquo;t work anymore.</li>
 The initialization methods will modify this list of groups so that when a group gets spawned, ALL information is already prepared when spawning. This is done for performance reasons.
 So in principle, the group list will contain all parameters and configurations after initialization, and when groups get actually spawned, this spawning can be done quickly and efficient.</p>
 
-<h4 id="spawn-initialization-methods">SPAWN <strong>Init</strong>ialization methods</h4>
+<h4> SPAWN **Init**ialization methods</h4>
 
 <p>A spawn object will behave differently based on the usage of <strong>initialization</strong> methods, which all start with the <strong>Init</strong> prefix:</p>
 
-<h4 id="unit-names">Unit Names</h4>
+<h4> Unit Names</h4>
 
 <ul>
 <li><a href="#spawn-initkeepunitnames">SPAWN:InitKeepUnitNames()</a>: Keeps the unit names as defined within the mission editor, but note that anything after a # mark is ignored, and any spaces before and after the resulting name are removed. IMPORTANT! This method MUST be the first used after :New !!!</li>
 </ul>
 
-<h4 id="route-randomization">Route randomization</h4>
+<h4> Route randomization</h4>
 
 <ul>
 <li><a href="#spawn-initrandomizeroute-spawnstartpoint-spawnendpoint-spawnradius-spawnheight">SPAWN:InitRandomizeRoute()</a>: Randomize the routes of spawned groups, and for air groups also optionally the height.</li>
 </ul>
 
-<h4 id="group-composition-randomization">Group composition randomization</h4>
+<h4> Group composition randomization</h4>
 
 <ul>
 <li><a href="#spawn-initrandomizetemplate-spawntemplateprefixtable">SPAWN:InitRandomizeTemplate()</a>: Randomize the group templates so that when a new group is spawned, a random group template is selected from one of the templates defined.</li>
 </ul>
 
-<h4 id="uncontrolled">Uncontrolled</h4>
+<h4> Uncontrolled</h4>
 
 <ul>
 <li><a href="#spawn-inituncontrolled-uncontrolled">SPAWN:InitUnControlled()</a>: Spawn plane groups uncontrolled.</li>
 </ul>
 
-<h4 id="array-formation">Array formation</h4>
+<h4> Array formation</h4>
 
 <ul>
 <li><a href="#spawn-initarray-spawnangle-spawnwidth-spawndeltax-spawndeltay">SPAWN:InitArray()</a>: Make groups visible before they are actually activated, and order these groups like a batallion in an array.</li>
 </ul>
 
-<h4 id="position-randomization">Position randomization</h4>
+<h4> Position randomization</h4>
 
 <ul>
 <li><a href="#spawn-initrandomizeposition-randomizeposition-outerradius-innerradius">SPAWN:InitRandomizePosition()</a>: Randomizes the position of <a href="#group-module">Group</a>s that are spawned within a <strong>radius band</strong>, given an Outer and Inner radius, from the point that the spawn happens.</li>
@@ -17218,7 +17216,7 @@ So in principle, the group list will contain all parameters and configurations a
 <li><a href="#spawn-initrandomizezones-spawnzonetable">SPAWN:InitRandomizeZones()</a>: Randomizes the spawning between a predefined list of <a href="#zone-module">Zone</a>s that are declared using this function. Each zone can be given a probability factor.</li>
 </ul>
 
-<h4 id="enable-disable-ai-when-spawning-a-new-group">Enable / Disable AI when spawning a new <a href="#group-module">Group</a></h4>
+<h4> Enable / Disable AI when spawning a new [Group](#group-module)</h4>
 
 <ul>
 <li><a href="#spawn-initaionoff-aionoff">SPAWN:InitAIOnOff()</a>: Turns the AI On when spawning the new <a href="#group-module">Group</a> object.</li>
@@ -17226,13 +17224,13 @@ So in principle, the group list will contain all parameters and configurations a
 <li><a href="#spawn-initaionoff-aionoff">SPAWN:InitAIOnOff()</a>: Turns the AI On or Off when spawning the new <a href="#group-module">Group</a> object.</li>
 </ul>
 
-<h4 id="limit-scheduled-spawning">Limit scheduled spawning</h4>
+<h4> Limit scheduled spawning</h4>
 
 <ul>
 <li><a href="#spawn-initlimit-spawnmaxunitsalive-spawnmaxgroups">SPAWN:InitLimit()</a>: Limits the amount of groups that can be alive at the same time and that can be dynamically spawned.</li>
 </ul>
 
-<h4 id="delay-initial-scheduled-spawn">Delay initial scheduled spawn</h4>
+<h4> Delay initial scheduled spawn</h4>
 
 <ul>
 <li><a href="#spawn-initdelayonoff-delayonoff">SPAWN:InitDelayOnOff()</a>: Turns the inital delay On/Off when scheduled spawning the first <a href="#group-module">Group</a> object.</li>
@@ -17240,18 +17238,18 @@ So in principle, the group list will contain all parameters and configurations a
 <li><a href="#spawn-initdelayoff">SPAWN:InitDelayOff()</a>: Turns the inital delay Off when scheduled spawning the first <a href="#group-module">Group</a> object.</li>
 </ul>
 
-<h4 id="repeat-spawned-groups-upon-landing">Repeat spawned <a href="#group-module">Group</a>s upon landing</h4>
+<h4> Repeat spawned [Group](#group-module)s upon landing</h4>
 
 <ul>
 <li><a href="#spawn-initrepeat">SPAWN:InitRepeat()</a> or <a href="#spawn-initrepeatonlanding">SPAWN:InitRepeatOnLanding()</a>: This method is used to re-spawn automatically the same group after it has landed.</li>
 <li><a href="#spawn-initrepeatonengineshutdown">SPAWN:InitRepeatOnEngineShutDown()</a>: This method is used to re-spawn automatically the same group after it has landed and it shuts down the engines at the ramp.</li>
 </ul>
 
-<h4 id="spawn-spawn-methods">SPAWN <strong>Spawn</strong> methods</h4>
+<h4> SPAWN **Spawn** methods</h4>
 
 <p>Groups can be spawned at different times and methods:</p>
 
-<h4 id="single-spawning-methods"><strong>Single</strong> spawning methods</h4>
+<h4> **Single** spawning methods</h4>
 
 <ul>
 <li><a href="#unit-respawn-spawnvec3-heading">UNIT:ReSpawn()</a>: Spawn one new group based on the last spawned index.</li>
@@ -17266,7 +17264,7 @@ So in principle, the group list will contain all parameters and configurations a
 <p>Note that <a href="#unit-respawn-spawnvec3-heading">UNIT:ReSpawn()</a> and <a href="#spawn-respawn-spawnindex">SPAWN:ReSpawn()</a> return a <a href="#menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New()</a> object, that contains a reference to the DCSGroup object.
 You can use the <a href="#group-module">GROUP</a> object to do further actions with the DCSGroup.</p>
 
-<h4 id="scheduled-spawning-methods"><strong>Scheduled</strong> spawning methods</h4>
+<h4> **Scheduled** spawning methods</h4>
 
 <ul>
 <li><a href="#spawn-spawnscheduled-spawntime-spawntimevariation">SPAWN:SpawnScheduled()</a>: Spawn groups at scheduled but randomized intervals.</li>
@@ -17274,7 +17272,7 @@ You can use the <a href="#group-module">GROUP</a> object to do further actions w
 <li>SPAWN-SpawnScheduledStop: Stop the spawning of groups at scheduled time intervals.</li>
 </ul>
 
-<h4 id="retrieve-alive-groups-spawned-by-the-spawn-object">Retrieve alive GROUPs spawned by the SPAWN object</h4>
+<h4> Retrieve alive GROUPs spawned by the SPAWN object</h4>
 
 <p>The SPAWN class administers which GROUPS it has reserved (in stock) or has created during mission execution.
 Every time a SPAWN object spawns a new GROUP object, a reference to the GROUP object is added to an internal table of GROUPS.
@@ -17289,7 +17287,7 @@ SPAWN provides methods to iterate through that internal GROUP object reference t
 <p>You can use the methods <a href="#spawn-getfirstalivegroup">SPAWN:GetFirstAliveGroup()</a> and sequently <a href="#spawn-getnextalivegroup-spawnindexstart">SPAWN:GetNextAliveGroup()</a> to iterate through the alive GROUPS within the SPAWN object, and to actions&hellip; See the respective methods for an example.
 The method <a href="#spawn-getgroupfromindex-spawnindex">SPAWN:GetGroupFromIndex()</a> will return the GROUP object reference from the given Index, dead or alive&hellip;</p>
 
-<h4 id="spawned-cleaning-of-inactive-groups">Spawned cleaning of inactive groups</h4>
+<h4> Spawned cleaning of inactive groups</h4>
 
 <p>Sometimes, it will occur during a mission run-time, that ground or especially air objects get damaged, and will while being damged stop their activities, while remaining alive.
 In such cases, the SPAWN object will just sit there and wait until that group gets destroyed, but most of the time it won&rsquo;t,
@@ -17301,7 +17299,7 @@ In such a case, when the inactive group is cleaned, a new group will Re-spawned 
 This models AI that has succesfully returned to their airbase, to restart their combat activities.
 Check the <a href="#spawn-initcleanup-spawncleanupinterval">SPAWN:InitCleanUp()</a> for further info.</p>
 
-<h4 id="catch-the-group-spawn-event-in-a-callback-function">Catch the <a href="#group-module">Group</a> Spawn Event in a callback function!</h4>
+<h4> Catch the [Group](#group-module) Spawn Event in a callback function!</h4>
 
 <p>When using the @{#SPAWN.SpawnScheduled)() method, new <a href="#group-module">Group</a>s are created following the spawn time interval parameters.
 When a new <a href="#group-module">Group</a> is spawned, you maybe want to execute actions with that group spawned at the spawn event.
@@ -17311,7 +17309,7 @@ Whenever a new <a href="#group-module">Group</a> is spawned, the given function 
 As a result, your spawn event handling function requires one parameter to be declared, which will contain the spawned <a href="#group-module">Group</a> object.
 A coding example is provided at the description of the <a href="#spawn-onspawngroup-spawncallbackfunction-a">SPAWN:OnSpawnGroup()</a> *<em>function( SpawnedGroup ) end *</em> ) method.</p>
 
-<h4 id="delay-the-initial-spawning">Delay the initial spawning</h4>
+<h4> Delay the initial spawning</h4>
 
 <p>When using the @{#SPAWN.SpawnScheduled)() method, the default behaviour of this method will be that it will spawn the initial (first) <a href="#group-module">Group</a>
 immediately when :SpawnScheduled() is initiated. The methods <a href="#spawn-initdelayonoff-delayonoff">SPAWN:InitDelayOnOff()</a> and <a href="#spawn-initdelayonoff-delayonoff">SPAWN:InitDelayOnOff()</a> can be used to
@@ -18348,18 +18346,18 @@ self</li>
 
 <p>This module contains the DETECTION_MANAGER class and derived classes.</p>
 
-<h4 id="1-detection_manager-class-extends-fsm">1) <a href="#detection_manager-class">DETECTION_MANAGER</a> class, extends <a href="#fsm-class">FSM</a></h4>
+<h4>1) [DETECTION_MANAGER](#detection_manager-class) class, extends [FSM](#fsm-class)</h4>
 
 <p>The <a href="#detection_manager-class">DETECTION_MANAGER</a> class defines the core functions to report detected objects to groups.
 Reportings can be done in several manners, and it is up to the derived classes if DETECTION_MANAGER to model the reporting behaviour.</p>
 
-<h4 id="1-1-detection_manager-constructor">1.1) DETECTION_MANAGER constructor:</h4>
+<h4>1.1) DETECTION_MANAGER constructor:</h4>
 
 <ul>
 <li><a href="#detection_manager-new-setgroup-detection">DETECTION_MANAGER:New()</a>: Create a new DETECTION_MANAGER instance.</li>
 </ul>
 
-<h4 id="1-2-detection_manager-reporting">1.2) DETECTION_MANAGER reporting:</h4>
+<h4>1.2) DETECTION_MANAGER reporting:</h4>
 
 <p>Derived DETECTION_MANAGER classes will reports detected units using the method DETECTION_MANAGER-ReportDetected. This method implements polymorphic behaviour.</p>
 
@@ -18372,17 +18370,17 @@ If an ad-hoc report is requested, use the method @{DetectionManager#DETECTION_MA
 
 <p>The default reporting interval is every 60 seconds. The reporting messages are displayed 15 seconds.</p>
 
-<h4 id="2-detection_reporting-class-extends-detection_manager">2) <a href="#detection_reporting-class">DETECTION_REPORTING</a> class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h4>
+<h4>2) [DETECTION_REPORTING](#detection_reporting-class) class, extends [DETECTION_MANAGER](#detection_manager-class)</h4>
 
 <p>The <a href="#detection_reporting-class">DETECTION_REPORTING</a> class implements detected units reporting. Reporting can be controlled using the reporting methods available in the <a href="#detection_manager-class">DETECTION_MANAGER</a> class.</p>
 
-<h4 id="2-1-detection_reporting-constructor">2.1) DETECTION_REPORTING constructor:</h4>
+<h4>2.1) DETECTION_REPORTING constructor:</h4>
 
 <p>The @{DetectionManager#DETECTION_REPORTING.New}() method creates a new DETECTION_REPORTING instance.</p>
 
-<h4 id="contributions-mechanist-prof_hilactic-flightcontrol-concept-testing">Contributions: Mechanist, Prof_Hilactic, FlightControl - Concept &amp; Testing</h4>
+<h4> Contributions: Mechanist, Prof_Hilactic, FlightControl - Concept & Testing</h4>
 
-<h4 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h4>
+<h4> Author: FlightControl - Framework Design &  Programming</h4>
 
 <h2 id="detection_manager-class">DETECTION_MANAGER Class</h2>
 
@@ -19372,7 +19370,7 @@ self</li>
 
 <p><strong>Tasking</strong> &ndash; This module contains the TASK class.</p>
 
-<h4 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h4>
+<h4> Authors: FlightControl - Design and Programming</h4>
 
 <h2 id="task-class">TASK Class</h2>
 
@@ -20537,7 +20535,7 @@ self</li>
 
 <p><img src="includes/Pictures/TASK_A2G/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-task_a2g-task_a2g-class-extends-task">1) @{Task_A2G#TASK_A2G} class, extends <a href="#task-class">TASK</a></h4>
+<h4> 1) @{Task_A2G#TASK_A2G} class, extends [TASK](#task-class)</h4>
 
 <p>The @{#TASK_A2G} class defines Air To Ground tasks for a <a href="#set-module">Set</a> of Target Units,
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
@@ -20551,7 +20549,7 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li><strong>Failed</strong>: The A2G task has failed. This will happen if the player exists the task early, without communicating a possible cancellation to HQ.</li>
 </ul>
 
-<h4 id="1-1-set-the-scoring-of-achievements-in-an-a2g-attack">1.1) Set the scoring of achievements in an A2G attack.</h4>
+<h4> 1.1) Set the scoring of achievements in an A2G attack.</h4>
 
 <p>Scoring or penalties can be given in the following circumstances:</p>
 
@@ -20561,19 +20559,19 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li>@{#TASK_A2G.SetPenaltyOnFailed}(): Set a penalty when the A2G attack has failed.</li>
 </ul>
 
-<h4 id="2-task_sead-class-extends-task_a2g-task_a2g">2) <a href="#task_sead-class">TASK_SEAD</a> class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4> 2) [TASK_SEAD](#task_sead-class) class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_sead-class">TASK_SEAD</a> class defines a SEAD task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4 id="3-task_cas-class-extends-task_a2g-task_a2g">3) <a href="#task_cas-class">TASK_CAS</a> class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4> 3) [TASK_CAS](#task_cas-class) class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_cas-class">TASK_CAS</a> class defines a CAS task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4 id="4-task_bai-class-extends-task_a2g-task_a2g">4) <a href="#task_bai-class">TASK_BAI</a> class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4> 4) [TASK_BAI](#task_bai-class) class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_bai-class">TASK_BAI</a> class defines a BAI task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -20586,15 +20584,15 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 
 <p>2017-03-09: Revised version.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong>[WingThor]</strong>: Concept, Advice &amp; Testing.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -20944,7 +20942,7 @@ self</li>
 
 <p><strong>Tasking</strong> - The TASK_A2G_DISPATCHER creates and manages player TASK_A2G tasks based on detected targets.</p>
 
-<h4 id="1-task_a2g_dispatcher-class-extends-detection_manager">1) @{#TASK_A2G_DISPATCHER} class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h4>
+<h4> 1) @{#TASK_A2G_DISPATCHER} class, extends [DETECTION_MANAGER](#detection_manager-class)</h4>
 
 <p>The @{#TASK_A2G_DISPATCHER} class implements the dynamic dispatching of tasks upon groups of detected units determined a <a href="#set-module">Set</a> of FAC (groups).
 The FAC will detect units, will group them, and will dispatch <a href="#task-module">Task</a>s to groups. Depending on the type of target detected, different tasks will be dispatched.
@@ -20958,11 +20956,11 @@ Find a summary below describing for which situation a task type is created:</p>
 
 <p>Other task types will follow&hellip;</p>
 
-<h4 id="3-1-task_a2g_dispatcher-constructor">3.1) TASK_A2G_DISPATCHER constructor:</h4>
+<h4>3.1) TASK_A2G_DISPATCHER constructor:</h4>
 
 <p>The @{#TASK_A2G_DISPATCHER.New}() method creates a new TASK_A2G_DISPATCHER instance.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -20975,11 +20973,11 @@ Find a summary below describing for which situation a task type is created:</p>
 
 <p>2017-03-09: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -21128,7 +21126,7 @@ BASE
 
 <p>This module contains the TASK_PICKUP classes.</p>
 
-<h4 id="1-task_pickup-class-extends-task">1) <a href="#task_pickup-class">TASK_PICKUP</a> class, extends <a href="#task-class">TASK</a></h4>
+<h4>1) [TASK_PICKUP](#task_pickup-class) class, extends [TASK](#task-class)</h4>
 
 <p>The <a href="#task_pickup-class">TASK_PICKUP</a> class defines a pickup task of a <a href="#set-module">Set</a> of <a href="#cargo-module">CARGO</a> objects defined within the mission.
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
@@ -21142,7 +21140,7 @@ The TASK_PICKUP is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, a
 <li><strong>Failed</strong>: The SEAD task has failed. This will happen if the player exists the task early, without communicating a possible cancellation to HQ.</li>
 </ul>
 
-<h4 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h4>
+<h4> Authors: FlightControl - Design and Programming</h4>
 
 <h2 id="task_pickup-class">TASK_PICKUP Class</h2>
 
@@ -21245,13 +21243,13 @@ self</li>
 <p>This module contains derived utilities taken from the MIST framework,
 which are excellent tools to be reused in an OO environment!.</p>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>Grimes : Design &amp; Programming of the MIST framework.</li>
 </ul>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>FlightControl : Rework to OO framework</li>
@@ -21300,7 +21298,7 @@ which are excellent tools to be reused in an OO environment!.</p>
 
 <p>This module contains the AIRBASE classes.</p>
 
-<h4 id="1-airbase-class-extends-positionable">1) <a href="#airbase-class">AIRBASE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h4>1) [AIRBASE](#airbase-class) class, extends [POSITIONABLE](#positionable-class)</h4>
 
 <p>The <a href="#airbase-module">AIRBASE</a> class is a wrapper class to handle the DCS Airbase objects:</p>
 
@@ -21309,7 +21307,7 @@ which are excellent tools to be reused in an OO environment!.</p>
 <li>Enhance with Airbase specific APIs not in the DCS Airbase API set.</li>
 </ul>
 
-<h4 id="1-1-airbase-reference-methods">1.1) AIRBASE reference methods</h4>
+<h4>1.1) AIRBASE reference methods</h4>
 
 <p>For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
@@ -21330,7 +21328,7 @@ If the DCS Airbase object does not exist or is nil, the AIRBASE methods will ret
 
 <p>IMPORTANT: ONE SHOULD NEVER SANATIZE these AIRBASE OBJECT REFERENCES! (make the AIRBASE object references nil).</p>
 
-<h4 id="1-2-dcs-airbase-apis">1.2) DCS AIRBASE APIs</h4>
+<h4>1.2) DCS AIRBASE APIs</h4>
 
 <p>The DCS Airbase APIs are used extensively within MOOSE. The AIRBASE class has for each DCS Airbase API a corresponding method.
 To be able to distinguish easily in your code the difference between a AIRBASE API call and a DCS Airbase API call,
@@ -21404,7 +21402,7 @@ self</li>
 
 <p>This module contains the CLIENT class.</p>
 
-<h4 id="1-client-class-extends-unit">1) <a href="#client-class">CLIENT</a> class, extends <a href="#unit-class">UNIT</a></h4>
+<h4>1) [CLIENT](#client-class) class, extends [UNIT](#unit-class)</h4>
 
 <p>Clients are those <strong>Units</strong> defined within the Mission Editor that have the skillset defined as <strong>Client</strong> or <strong>Player</strong>.
 Note that clients are NOT the same as Units, they are NOT necessarily alive.
@@ -21421,7 +21419,7 @@ The <a href="#client-class">CLIENT</a> class is a wrapper class to handle the DC
 
 <p>Clients are being used by the <a href="#mission-module">MISSION</a> class to follow players and register their successes.</p>
 
-<h4 id="1-1-client-reference-methods">1.1) CLIENT reference methods</h4>
+<h4>1.1) CLIENT reference methods</h4>
 
 <p>For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
@@ -21739,7 +21737,7 @@ self</li>
 
 <p>This module contains the CONTROLLABLE class.</p>
 
-<h4 id="1-controllable-class-extends-positionable">1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h4>1) [CONTROLLABLE](#controllable-class) class, extends [POSITIONABLE](#positionable-class)</h4>
 
 <p>The <a href="#controllable-class">CONTROLLABLE</a> class is a wrapper class to handle the DCS Controllable objects:</p>
 
@@ -21750,7 +21748,7 @@ self</li>
 <li>Manage the &ldquo;state&rdquo; of the DCS Controllable.</li>
 </ul>
 
-<h4 id="1-1-controllable-constructor">1.1) CONTROLLABLE constructor</h4>
+<h4>1.1) CONTROLLABLE constructor</h4>
 
 <p>The CONTROLLABLE class provides the following functions to construct a CONTROLLABLE instance:</p>
 
@@ -21758,7 +21756,7 @@ self</li>
 <li><a href="#controllable-new-controllablename">CONTROLLABLE:New()</a>: Create a CONTROLLABLE instance.</li>
 </ul>
 
-<h4 id="1-2-controllable-task-methods">1.2) CONTROLLABLE task methods</h4>
+<h4>1.2) CONTROLLABLE task methods</h4>
 
 <p>Several controllable task methods are available that help you to prepare tasks.
 These methods return a string consisting of the task description, which can then be given to either a <a href="#controllable-pushtask">CONTROLLABLE:PushTask()</a> or @{Controllable#SetTask} method to assign the task to the CONTROLLABLE.
@@ -21766,7 +21764,7 @@ Tasks are specific for the category of the CONTROLLABLE, more specific, for AIR,
 Each task description where applicable indicates for which controllable category the task is valid.
 There are 2 main subdivisions of tasks: Assigned tasks and EnRoute tasks.</p>
 
-<h4 id="1-2-1-assigned-task-methods">1.2.1) Assigned task methods</h4>
+<h4> 1.2.1) Assigned task methods</h4>
 
 <p>Assigned task methods make the controllable execute the task where the location of the (possible) targets of the task are known before being detected.
 This is different from the EnRoute tasks, where the targets of the task need to be detected before the task can be executed.</p>
@@ -21799,7 +21797,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-TaskReturnToBase: (AIR) Route the controllable to an airbase.</li>
 </ul>
 
-<h4 id="1-2-2-enroute-task-methods">1.2.2) EnRoute task methods</h4>
+<h4> 1.2.2) EnRoute task methods</h4>
 
 <p>EnRoute tasks require the targets of the task need to be detected by the controllable (using its sensors) before the task can be executed:</p>
 
@@ -21813,7 +21811,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-enroutetasktanker">CONTROLLABLE:EnRouteTaskTanker()</a>: (AIR) Aircraft will act as a tanker for friendly units. No parameters.</li>
 </ul>
 
-<h4 id="1-2-3-preparation-task-methods">1.2.3) Preparation task methods</h4>
+<h4> 1.2.3) Preparation task methods</h4>
 
 <p>There are certain task methods that allow to tailor the task behaviour:</p>
 
@@ -21824,7 +21822,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskcontrolled-dcstask-dcsstopcondition">CONTROLLABLE:TaskControlled()</a>: Return a Controlled Task taking a Task and a TaskCondition.</li>
 </ul>
 
-<h4 id="1-2-4-obtain-the-mission-from-controllable-templates">1.2.4) Obtain the mission from controllable templates</h4>
+<h4> 1.2.4) Obtain the mission from controllable templates</h4>
 
 <p>Controllable templates contain complete mission descriptions. Sometimes you want to copy a complete mission from a controllable and assign it to another:</p>
 
@@ -21832,7 +21830,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskmission-taskmission">CONTROLLABLE:TaskMission()</a>: (AIR + GROUND) Return a mission task from a mission template.</li>
 </ul>
 
-<h4 id="1-3-controllable-command-methods">1.3) CONTROLLABLE Command methods</h4>
+<h4>1.3) CONTROLLABLE Command methods</h4>
 
 <p>Controllable <strong>command methods</strong> prepare the execution of commands using the <a href="#controllable-setcommand-dcscommand">CONTROLLABLE:SetCommand()</a> method:</p>
 
@@ -21841,11 +21839,11 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-commandswitchwaypoint-fromwaypoint-towaypoint">CONTROLLABLE:CommandSwitchWayPoint()</a>: Perform a switch waypoint command.</li>
 </ul>
 
-<h4 id="1-4-controllable-option-methods">1.4) CONTROLLABLE Option methods</h4>
+<h4>1.4) CONTROLLABLE Option methods</h4>
 
 <p>Controllable <strong>Option methods</strong> change the behaviour of the Controllable while being alive.</p>
 
-<h4 id="1-4-1-rule-of-engagement">1.4.1) Rule of Engagement:</h4>
+<h4> 1.4.1) Rule of Engagement:</h4>
 
 <ul>
 <li><a href="#controllable-optionroeweaponfreepossible">CONTROLLABLE:OptionROEWeaponFreePossible()</a></li>
@@ -21863,7 +21861,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-OptionROEEvadeFirePossible</li>
 </ul>
 
-<h4 id="1-4-2-rule-on-thread">1.4.2) Rule on thread:</h4>
+<h4> 1.4.2) Rule on thread:</h4>
 
 <ul>
 <li><a href="#controllable-optionrotnoreactionpossible">CONTROLLABLE:OptionROTNoReactionPossible()</a></li>
@@ -23155,7 +23153,7 @@ self</li>
 
 <p>See the detailed documentation on the GROUP class.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -23177,15 +23175,15 @@ self</li>
 
 <p>2017-01-24: GROUP:<strong>SetAIOff()</strong> added.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -24028,7 +24026,7 @@ self</li>
 
 <p>This module contains the IDENTIFIABLE class.</p>
 
-<h4 id="1-identifiable-class-extends-object">1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h4>
+<h4>1) [IDENTIFIABLE](#identifiable-class) class, extends [OBJECT](#object-class)</h4>
 
 <p>The <a href="#identifiable-class">IDENTIFIABLE</a> class is a wrapper class to handle the DCS Identifiable objects:</p>
 
@@ -24038,7 +24036,7 @@ self</li>
 <li>Manage the &ldquo;state&rdquo; of the DCS Identifiable.</li>
 </ul>
 
-<h4 id="1-1-identifiable-constructor">1.1) IDENTIFIABLE constructor:</h4>
+<h4>1.1) IDENTIFIABLE constructor:</h4>
 
 <p>The IDENTIFIABLE class provides the following functions to construct a IDENTIFIABLE instance:</p>
 
@@ -24046,7 +24044,7 @@ self</li>
 <li><a href="#identifiable-new-identifiablename">IDENTIFIABLE:New()</a>: Create a IDENTIFIABLE instance.</li>
 </ul>
 
-<h4 id="1-2-identifiable-methods">1.2) IDENTIFIABLE methods:</h4>
+<h4>1.2) IDENTIFIABLE methods:</h4>
 
 <p>The following methods can be used to identify an identifiable object:</p>
 
@@ -24236,7 +24234,7 @@ self</li>
 
 <p>This module contains the OBJECT class.</p>
 
-<h4 id="1-object-class-extends-base">1) <a href="#object-class">OBJECT</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4>1) [OBJECT](#object-class) class, extends [BASE](#base-class)</h4>
 
 <p>The <a href="#object-class">OBJECT</a> class is a wrapper class to handle the DCS Object objects:</p>
 
@@ -24246,7 +24244,7 @@ self</li>
 <li>Manage the &ldquo;state&rdquo; of the DCS Object.</li>
 </ul>
 
-<h4 id="1-1-object-constructor">1.1) OBJECT constructor:</h4>
+<h4>1.1) OBJECT constructor:</h4>
 
 <p>The OBJECT class provides the following functions to construct a OBJECT instance:</p>
 
@@ -24254,7 +24252,7 @@ self</li>
 <li><a href="#object-new-objectname">OBJECT:New()</a>: Create a OBJECT instance.</li>
 </ul>
 
-<h4 id="1-2-object-methods">1.2) OBJECT methods:</h4>
+<h4>1.2) OBJECT methods:</h4>
 
 <p>The following methods can be used to identify an Object object:</p>
 
@@ -24339,7 +24337,7 @@ self</li>
 
 <p>This module contains the POSITIONABLE class.</p>
 
-<h4 id="1-positionable-class-extends-identifiable">1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h4>
+<h4>1) [POSITIONABLE](#positionable-class) class, extends [IDENTIFIABLE](#identifiable-class)</h4>
 
 <p>The <a href="#positionable-class">POSITIONABLE</a> class is a wrapper class to handle the POSITIONABLE objects:</p>
 
@@ -24349,7 +24347,7 @@ self</li>
 <li>Manage the &ldquo;state&rdquo; of the POSITIONABLE.</li>
 </ul>
 
-<h4 id="1-1-positionable-constructor">1.1) POSITIONABLE constructor:</h4>
+<h4>1.1) POSITIONABLE constructor:</h4>
 
 <p>The POSITIONABLE class provides the following functions to construct a POSITIONABLE instance:</p>
 
@@ -24357,7 +24355,7 @@ self</li>
 <li><a href="#positionable-new-positionablename">POSITIONABLE:New()</a>: Create a POSITIONABLE instance.</li>
 </ul>
 
-<h4 id="1-2-positionable-methods">1.2) POSITIONABLE methods:</h4>
+<h4>1.2) POSITIONABLE methods:</h4>
 
 <p>The following methods can be used to identify an measurable object:</p>
 
@@ -24732,7 +24730,7 @@ Radio</li>
 
 <p>This module contains the SCENERY class.</p>
 
-<h4 id="1-scenery-class-extends-positionable">1) <a href="#scenery-class">SCENERY</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h4>1) [SCENERY](#scenery-class) class, extends [POSITIONABLE](#positionable-class)</h4>
 
 <p>Scenery objects are defined on the map.
 The <a href="#scenery-class">SCENERY</a> class is a wrapper class to handle the DCS Scenery objects:</p>
@@ -24747,7 +24745,7 @@ The <a href="#scenery-class">SCENERY</a> class is a wrapper class to handle the 
 
 <p>This module contains the STATIC class.</p>
 
-<h4 id="1-static-class-extends-positionable">1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h4>1) [STATIC](#static-class) class, extends [POSITIONABLE](#positionable-class)</h4>
 
 <p>Statics are <strong>Static Units</strong> defined within the Mission Editor.
 Note that Statics are almost the same as Units, but they don&rsquo;t have a controller.
@@ -24759,7 +24757,7 @@ The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DC
 <li>Enhance with Static specific APIs not in the DCS API set.</li>
 </ul>
 
-<h4 id="1-1-static-reference-methods">1.1) STATIC reference methods</h4>
+<h4>1.1) STATIC reference methods</h4>
 
 <p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>

@@ -33,7 +33,7 @@
 <li><a href="#zone_polygon-class">ZONE_POLYGON</a>: The ZONE_POLYGON class defines by a sequence of <a href="#group-class">GROUP</a> waypoints within the Mission Editor, forming a polygon.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -77,20 +77,20 @@ BASE
 
 <p>This class is an abstract BASE class for derived classes, and is not meant to be instantiated.</p>
 
-<h4 id="1-1-each-zone-has-a-name">1.1) Each zone has a name:</h4>
+<h4> 1.1) Each zone has a name:</h4>
 
 <ul>
 <li><a href="#zone_base-getname">ZONE_BASE:GetName()</a>: Returns the name of the zone.</li>
 </ul>
 
-<h4 id="1-2-each-zone-implements-two-polymorphic-functions-defined-in-zone_base">1.2) Each zone implements two polymorphic functions defined in <a href="#zone_base-class">ZONE_BASE</a>:</h4>
+<h4> 1.2) Each zone implements two polymorphic functions defined in [ZONE_BASE](#zone_base-class):</h4>
 
 <ul>
 <li><a href="#zone_base-isvec2inzone-vec2">ZONE_BASE:IsVec2InZone()</a>: Returns if a Vec2 is within the zone.</li>
 <li><a href="#zone_base-isvec3inzone-vec3">ZONE_BASE:IsVec3InZone()</a>: Returns if a Vec3 is within the zone.</li>
 </ul>
 
-<h4 id="1-3-a-zone-has-a-probability-factor-that-can-be-set-to-randomize-a-selection-between-zones">1.3) A zone has a probability factor that can be set to randomize a selection between zones:</h4>
+<h4> 1.3) A zone has a probability factor that can be set to randomize a selection between zones:</h4>
 
 <ul>
 <li>ZONE_BASE-SetRandomizeProbability: Set the randomization probability of a zone to be selected, taking a value between 0 and 1 ( 0 = 0%, 1 = 100% )</li>
@@ -98,20 +98,20 @@ BASE
 <li><a href="#zone_base-getzonemaybe">ZONE_BASE:GetZoneMaybe()</a>: Get the zone taking into account the randomization probability. nil is returned if this zone is not a candidate.</li>
 </ul>
 
-<h4 id="1-4-a-zone-manages-vectors">1.4) A zone manages Vectors:</h4>
+<h4> 1.4) A zone manages Vectors:</h4>
 
 <ul>
 <li><a href="#zone_base-getvec2">ZONE_BASE:GetVec2()</a>: Returns the @{DCSTypes#Vec2} coordinate of the zone.</li>
 <li><a href="#zone_base-getrandomvec2">ZONE_BASE:GetRandomVec2()</a>: Define a random @{DCSTypes#Vec2} within the zone.</li>
 </ul>
 
-<h4 id="1-5-a-zone-has-a-bounding-square">1.5) A zone has a bounding square:</h4>
+<h4> 1.5) A zone has a bounding square:</h4>
 
 <ul>
 <li><a href="#zone_base-getboundingsquare">ZONE_BASE:GetBoundingSquare()</a>: Get the outer most bounding square of the zone.</li>
 </ul>
 
-<h4 id="1-6-a-zone-can-be-marked">1.6) A zone can be marked:</h4>
+<h4> 1.6) A zone can be marked:</h4>
 
 <ul>
 <li><a href="#zone_base-smokezone-smokecolor">ZONE_BASE:SmokeZone()</a>: Smokes the zone boundaries in a color.</li>
@@ -408,20 +408,20 @@ BASE
 <p>The ZONE_RADIUS class defined by a zone name, a location and a radius.
 This class implements the inherited functions from <a href="#zone_base%20taking%20into%20account%20the%20own%20zone%20format%20and-class">ZONE_BASE taking into account the own zone format and</a> properties.</p>
 
-<h4 id="2-1-zone_radius-constructor">2.1) <a href="#zone_radius-class">ZONE_RADIUS</a> constructor</h4>
+<h4> 2.1) [ZONE_RADIUS](#zone_radius-class) constructor</h4>
 
 <ul>
 <li><a href="#zone_radius-new-zonename-vec2-radius">ZONE_RADIUS:New()</a>: Constructor.</li>
 </ul>
 
-<h4 id="2-2-manage-the-radius-of-the-zone">2.2) Manage the radius of the zone</h4>
+<h4> 2.2) Manage the radius of the zone</h4>
 
 <ul>
 <li><a href="#zone_radius-setradius-radius">ZONE_RADIUS:SetRadius()</a>: Sets the radius of the zone.</li>
 <li><a href="#zone_radius-getradius">ZONE_RADIUS:GetRadius()</a>: Returns the radius of the zone.</li>
 </ul>
 
-<h4 id="2-3-manage-the-location-of-the-zone">2.3) Manage the location of the zone</h4>
+<h4> 2.3) Manage the location of the zone</h4>
 
 <ul>
 <li><a href="#zone_radius-setvec2-vec2">ZONE_RADIUS:SetVec2()</a>: Sets the @{DCSTypes#Vec2} of the zone.</li>
@@ -429,7 +429,7 @@ This class implements the inherited functions from <a href="#zone_base%20taking%
 <li><a href="#zone_radius-getvec3-height">ZONE_RADIUS:GetVec3()</a>: Returns the @{DCSTypes#Vec3} of the zone, taking an additional height parameter.</li>
 </ul>
 
-<h4 id="2-4-zone-point-randomization">2.4) Zone point randomization</h4>
+<h4> 2.4) Zone point randomization</h4>
 
 <p>Various functions exist to find random points within the zone.</p>
 
@@ -880,7 +880,7 @@ BASE
 This class implements the inherited functions from <a href="#zone_radius-class">ZONE_RADIUS</a> taking into account the own zone format and properties.
 This class is an abstract BASE class for derived classes, and is not meant to be instantiated.</p>
 
-<h4 id="6-1-zone-point-randomization">6.1) Zone point randomization</h4>
+<h4> 6.1) Zone point randomization</h4>
 
 <p>Various functions exist to find random points within the zone.</p>
 

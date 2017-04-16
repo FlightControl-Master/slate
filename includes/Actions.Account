@@ -15,14 +15,14 @@ BASE
                 `-- ACT_ACCOUNT
 </pre>
 
-<h4 id="act_account-state-machine">ACT_ACCOUNT state machine:</h4>
+<h4> ACT_ACCOUNT state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_account-states">ACT_ACCOUNT States</h4>
+<h4> ACT_ACCOUNT States</h4>
 
 <ul>
 <li><strong>Asigned</strong>: The player is assigned.</li>
@@ -33,7 +33,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Failed</strong>: Failed the process.</li>
 </ul>
 
-<h4 id="act_account-events">ACT_ACCOUNT Events</h4>
+<h4> ACT_ACCOUNT Events</h4>
 
 <ul>
 <li><strong>Start</strong>: Start the process.</li>
@@ -47,7 +47,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_account-state-transition-methods">ACT_ACCOUNT state transition methods:</h4>
+<h4> ACT_ACCOUNT state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -147,7 +147,7 @@ The process is given a <a href="#set-module">Set</a> of units that will be track
 The process will end after each target has been successfully destroyed.
 Each successful dead will trigger an Account state transition that can be scored, modified or administered.</p>
 
-<h4 id="act_account_deads-constructor">ACT_ACCOUNT_DEADS constructor:</h4>
+<h4> ACT_ACCOUNT_DEADS constructor:</h4>
 
 <ul>
 <li><a href="#act_account_deads-new-targetsetunit-taskname">ACT_ACCOUNT_DEADS:New()</a>: Creates a new ACT_ACCOUNT_DEADS object.</li>

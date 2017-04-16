@@ -27,9 +27,9 @@ The SCHEDULER object therefore keeps a table of &ldquo;CallID&rsquo;s&rdquo;, wh
 The SCHEDULER object plans new scheduled functions through the <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> method.
 The Schedule() method returns the CallID that is the reference ID for each planned schedule.</p>
 
-<h4 id="contributions">Contributions: -</h4>
+<h4> Contributions: -</h4>
 
-<h4 id="authors-flightcontrol-design-programming">Authors: FlightControl : Design &amp; Programming</h4>
+<h4> Authors: FlightControl : Design & Programming</h4>
 
 <h2 id="scheduledispatcher-class">SCHEDULEDISPATCHER Class</h2>
 

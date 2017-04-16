@@ -57,9 +57,9 @@ These CSV files can be used to:</p>
 Use the radio menu F10 to consult the scores while running the mission.
 Scores can be reported for your user, or an overall score can be reported of all players currently active in the mission.</p>
 
-<h4 id="1-scoring-class-extends-base">1) <a href="#scoring-class">SCORING</a> class, extends <a href="#base-class">BASE</a></h4>
+<h4> 1) [SCORING](#scoring-class) class, extends [BASE](#base-class)</h4>
 
-<h4 id="1-1-set-the-destroy-score-or-penalty-scale">1.1) Set the destroy score or penalty scale</h4>
+<h4> 1.1) Set the destroy score or penalty scale</h4>
 
 <p>Score scales can be set for scores granted when enemies or friendlies are destroyed.
 Use the method <a href="#scoring-setscaledestroyscore-scale">SCORING:SetScaleDestroyScore()</a> to set the scale of enemy destroys (positive destroys).
@@ -72,7 +72,7 @@ Scoring:SetScaleDestroyPenalty( 40 )</p>
 <p>The above sets the scale for valid scores to 10. So scores will be given in a scale from 0 to 10.
 The penalties will be given in a scale from 0 to 40.</p>
 
-<h4 id="1-2-define-special-targets-that-will-give-extra-scores">1.2) Define special targets that will give extra scores.</h4>
+<h4> 1.2) Define special targets that will give extra scores.</h4>
 
 <p>Special targets can be set that will give extra scores to the players when these are destroyed.
 Use the methods <a href="#scoring-addunitscore-scoreunit-score">SCORING:AddUnitScore()</a> and <a href="#scoring-removeunitscore-scoreunit">SCORING:RemoveUnitScore()</a> to specify a special additional score for a specific <a href="#unit-module">Unit</a>s.
@@ -89,7 +89,7 @@ For example, this can be done as follows:</p>
 
 <p>Scoring:RemoveUnitScore( UNIT:FindByName( &ldquo;Unit #001&rdquo; ) )</p>
 
-<h4 id="1-3-define-destruction-zones-that-will-give-extra-scores">1.3) Define destruction zones that will give extra scores.</h4>
+<h4> 1.3) Define destruction zones that will give extra scores.</h4>
 
 <p>Define zones of destruction. Any object destroyed within the zone of the given category will give extra points.
 Use the method <a href="#scoring-addzonescore-scorezone-score">SCORING:AddZoneScore()</a> to add a <a href="#zone-module">Zone</a> for additional scoring.
@@ -99,24 +99,24 @@ then the zone is a moving zone, and anything destroyed within that <a href="#zon
 The other implementation could be to designate a scenery target (a building) in the mission editor surrounded by a <a href="#zone-module">Zone</a>,
 just large enough around that building.</p>
 
-<h4 id="1-4-add-extra-goal-scores-upon-an-event-or-a-condition">1.4) Add extra Goal scores upon an event or a condition.</h4>
+<h4> 1.4) Add extra Goal scores upon an event or a condition.</h4>
 
 <p>A mission has goals and achievements. The scoring system provides an API to set additional scores when a goal or achievement event happens.
 Use the method <a href="#scoring-addgoalscore-playerunit-goaltag-text-score">SCORING:AddGoalScore()</a> to add a score for a Player at any time in your mission.</p>
 
-<h4 id="1-5-configure-fratricide-level">1.5) Configure fratricide level.</h4>
+<h4> 1.5) Configure fratricide level.</h4>
 
 <p>When a player commits too much damage to friendlies, his penalty score will reach a certain level.
 Use the method <a href="#scoring-setfratricide-fratricide">SCORING:SetFratricide()</a> to define the level when a player gets kicked.
 By default, the fratricide level is the default penalty mutiplier * 2 for the penalty score.</p>
 
-<h4 id="1-6-penalty-score-when-a-player-changes-the-coalition">1.6) Penalty score when a player changes the coalition.</h4>
+<h4> 1.6) Penalty score when a player changes the coalition.</h4>
 
 <p>When a player changes the coalition, he can receive a penalty score.
 Use the method <a href="#scoring-setcoalitionchangepenalty-coalitionchangepenalty">SCORING:SetCoalitionChangePenalty()</a> to define the penalty when a player changes coalition.
 By default, the penalty for changing coalition is the default penalty scale.</p>
 
-<h4 id="1-8-define-output-csv-files">1.8) Define output CSV files.</h4>
+<h4> 1.8) Define output CSV files.</h4>
 
 <p>The CSV file is given the name of the string given in the <a href="#scoring-new-gamename">SCORING:New()</a>{} constructor, followed by the .csv extension.
 The file is incrementally saved in the <strong><User>\Saved Games\DCS\Logs</strong> folder, and has a time stamp indicating each mission run.
@@ -127,7 +127,7 @@ local ScoringSecondMission = SCORING:New( &ldquo;SecondMission&rdquo; )</p>
 
 <p>The above documents that 2 Scoring objects are created, ScoringFirstMission and ScoringSecondMission.</p>
 
-<h4 id="1-9-configure-messages">1.9) Configure messages.</h4>
+<h4> 1.9) Configure messages.</h4>
 
 <p>When players hit or destroy targets, messages are sent.
 Various methods exist to configure:</p>
@@ -137,7 +137,7 @@ Various methods exist to configure:</p>
 <li>Which audience receives the message.</li>
 </ul>
 
-<h4 id="1-9-1-configure-the-messages-sent-upon-the-event">1.9.1) Configure the messages sent upon the event.</h4>
+<h4> 1.9.1) Configure the messages sent upon the event.</h4>
 
 <p>Use the following methods to configure when to send messages. By default, all messages are sent.</p>
 
@@ -148,7 +148,7 @@ Various methods exist to configure:</p>
 <li><a href="#scoring-setmessageszone-onoff">SCORING:SetMessagesZone()</a>: Configure to send messages for additional score, after a target has been destroyed within a given zone.</li>
 </ul>
 
-<h4 id="1-9-2-configure-the-audience-of-the-messages">1.9.2) Configure the audience of the messages.</h4>
+<h4> 1.9.2) Configure the audience of the messages.</h4>
 
 <p>Use the following methods to configure the audience of the messages. By default, the messages are sent to all players in the mission.</p>
 
@@ -157,7 +157,7 @@ Various methods exist to configure:</p>
 <li><a href="#scoring-setmessagestocoalition">SCORING:SetMessagesToCoalition()</a>: Configure to send messages to only those players within the same coalition as the player.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -170,9 +170,9 @@ Various methods exist to configure:</p>
 
 <p>2017-02-26: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li><strong>Wingthor (TAW)</strong>: Testing &amp; Advice.</li>
@@ -180,7 +180,7 @@ Various methods exist to configure:</p>
 <li>**<a href="http://forums.eagle.ru/member.php?u=3829">Whisper</a>: Testing and Advice.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>

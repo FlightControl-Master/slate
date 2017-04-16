@@ -2,7 +2,7 @@
 
 <p>This module contains the CLIENT class.</p>
 
-<h4 id="1-client-class-extends-unit">1) <a href="#client-class">CLIENT</a> class, extends <a href="#unit-class">UNIT</a></h4>
+<h4>1) [CLIENT](#client-class) class, extends [UNIT](#unit-class)</h4>
 
 <p>Clients are those <strong>Units</strong> defined within the Mission Editor that have the skillset defined as <strong>Client</strong> or <strong>Player</strong>.
 Note that clients are NOT the same as Units, they are NOT necessarily alive.
@@ -19,7 +19,7 @@ The <a href="#client-class">CLIENT</a> class is a wrapper class to handle the DC
 
 <p>Clients are being used by the <a href="#mission-module">MISSION</a> class to follow players and register their successes.</p>
 
-<h4 id="1-1-client-reference-methods">1.1) CLIENT reference methods</h4>
+<h4>1.1) CLIENT reference methods</h4>
 
 <p>For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>

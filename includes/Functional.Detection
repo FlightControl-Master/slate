@@ -9,25 +9,25 @@ DETECTION uses the in-built detection capabilities of DCS World, but adds new fu
 
 <p>Find the DETECTION classes documentation further in this document in the globals section.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h4> Demo Missions</h4>
 
-<h4 id="detection-demo-missions-and-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h4>
+<h4> [DETECTION Demo Missions and Source Code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection)</h4>
 
-<h4 id="detection-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h4>
+<h4> [DETECTION Demo Missions, only for Beta Testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection)</h4>
 
-<h4 id="all-demo-missions-pack-of-the-latest-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h4>
+<h4> [ALL Demo Missions pack of the Latest Release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)</h4>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h4> YouTube Channel</h4>
 
-<h4 id="detection-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h4>
+<h4> [DETECTION YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji)</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>Mechanist : Early concept of DETECTION_AREAS.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li>FlightControl : Analysis, Design, Programming, Testing</li>
@@ -45,11 +45,11 @@ BASE
 <p>The DETECTION_BASE class defines the core functions to administer detected objects.
 The DETECTION_BASE class will detect objects within the battle zone for a list of <a href="#group-module">Group</a>s detecting targets following (a) detection method(s).</p>
 
-<h4 id="detection_base-constructor">DETECTION_BASE constructor</h4>
+<h4> DETECTION_BASE constructor</h4>
 
 <p>Construct a new DETECTION_BASE instance using the <a href="#detection_base-new-detectionsetgroup">DETECTION_BASE:New()</a> method.</p>
 
-<h4 id="initialization">Initialization</h4>
+<h4> Initialization</h4>
 
 <p>By default, detection will return detected objects with all the detection sensors available.
 However, you can ask how the objects were found with specific detection methods.
@@ -67,7 +67,7 @@ You can specify to apply multiple detection methods.</p>
 <li><a href="#detection_base-initdetectdlink-detectdlink">DETECTION_BASE:InitDetectDLINK()</a>: Detected using DLINK.</li>
 </ul>
 
-<h4 id="filter-detected-units-based-on-category-of-the-unit"><strong>Filter</strong> detected units based on <strong>category of the unit</strong></h4>
+<h4> **Filter** detected units based on **category of the unit**</h4>
 
 <p>Filter the detected units based on Unit.Category using the method <a href="#detection_base-filtercategories-filtercategories">DETECTION_BASE:FilterCategories()</a>.
 The different values of Unit.Category can be:</p>
@@ -90,7 +90,7 @@ The different values of Unit.Category can be:</p>
 
 <p>DetectionObject:FilterCategories( { Unit.Category.AIRPLANE, Unit.Category.HELICOPTER } )</p>
 
-<h4 id="detection_-derived-classes-group-the-detected-units-into-a-detecteditems-list"><strong>DETECTION_ derived classes</strong> group the detected units into a <strong>DetectedItems[]</strong> list</h4>
+<h4> **DETECTION_ derived classes** group the detected units into a **DetectedItems[]** list</h4>
 
 <p>DETECTION_BASE derived classes build a list called DetectedItems[], which is essentially a first later
 of grouping of detected units. Each DetectedItem within the DetectedItems[] list contains
@@ -111,7 +111,7 @@ about the DetectedItem that is set by the DETECTION_BASE derived classes, used t
 This method retrieves the Set from a DetectedItem element from the DetectedItem list (DetectedItems[ DetectedItemIndex ].Set ).</li>
 </ul>
 
-<h4 id="visual-filters-to-fine-tune-the-probability-of-the-detected-objects"><strong>Visual filters</strong> to fine-tune the probability of the detected objects</h4>
+<h4> **Visual filters** to fine-tune the probability of the detected objects</h4>
 
 <p>By default, DCS World will return any object that is in LOS and within &ldquo;visual reach&rdquo;, or detectable through one of the electronic detection means.
 That being said, the DCS World detection algorithm can sometimes be unrealistic.
@@ -134,7 +134,7 @@ The mission designer needs to define these cloudy zones within the mission, and 
 <p>I advise however, that, when you first use the DETECTION derived classes, that you don&rsquo;t use these filters.
 Only when you experience unrealistic behaviour in your missions, these filters could be applied.</p>
 
-<h4 id="distance-visual-detection-probability">Distance visual detection probability</h4>
+<h4> Distance visual detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the further away a detected object is, the less likely it is to be detected properly.
 Also, the speed of accurate detection plays a role.</p>
@@ -148,7 +148,7 @@ Also, the speed of accurate detection plays a role.</p>
 
 <p>Use the method <a href="#detection_base-setdistanceprobability-the">DETECTION_BASE:SetDistanceProbability()</a> to set the probability factor upon a 10 km distance.</p>
 
-<h4 id="alpha-angle-visual-detection-probability">Alpha Angle visual detection probability</h4>
+<h4> Alpha Angle visual detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the higher the unit is during the detecting process, the more likely the detected unit is to be detected properly.
 A detection at a 90% alpha angle is the most optimal, a detection at 10% is less and a detection at 0% is less likely to be correct.</p>
@@ -160,7 +160,7 @@ A detection at a 90% alpha angle is the most optimal, a detection at 10% is less
 
 <p>Use the method <a href="#detection_base-setalphaangleprobability-the">DETECTION_BASE:SetAlphaAngleProbability()</a> to set the probability factor if 0°.</p>
 
-<h4 id="cloudy-zones-detection-probability">Cloudy Zones detection probability</h4>
+<h4> Cloudy Zones detection probability</h4>
 
 <p>Upon a <strong>visual</strong> detection, the more a detected unit is within a cloudy zone, the less likely the detected unit is to be detected successfully.
 The Cloudy Zones work with the ZONE_BASE derived classes. The mission designer can define within the mission
@@ -175,12 +175,12 @@ Expecially for ZONE_POLYGON, try to limit the amount of nodes of the polygon!</p
 <p>Typically, this kind of filter would be applied for very specific areas were a detection needs to be very realisting for
 AI not to detect so easily targets within a forrest or village rich area.</p>
 
-<h4 id="accept-reject-detected-units">Accept / Reject detected units</h4>
+<h4> Accept / Reject detected units</h4>
 
 <p>DETECTION_BASE can accept or reject successful detections based on the location of the detected object,
 if it is located in range or located inside or outside of specific zones.</p>
 
-<h4 id="detection-acceptance-of-within-range-limit">Detection acceptance of within range limit</h4>
+<h4> Detection acceptance of within range limit</h4>
 
 <p>A range can be set that will limit a successful detection for a unit.
 Use the method <a href="#detection_base-setacceptrange-acceptrange">DETECTION_BASE:SetAcceptRange()</a> to apply a range in meters till where detected units will be accepted.</p>
@@ -196,7 +196,7 @@ Detection:SetAcceptRange( 5000 )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-acceptance-if-within-zone-s">Detection acceptance if within zone(s).</h4>
+<h4> Detection acceptance if within zone(s).</h4>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will only accept a detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setacceptzones-can">DETECTION_BASE:SetAcceptZones()</a> will accept detected units if they are within the specified zones.</p>
@@ -216,7 +216,7 @@ Detection:SetAcceptZones( { ZoneAccept1, ZoneAccept2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-rejectance-if-within-zone-s">Detection rejectance if within zone(s).</h4>
+<h4> Detection rejectance if within zone(s).</h4>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will reject detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setrejectzones-can">DETECTION_BASE:SetRejectZones()</a> will reject detected units if they are within the specified zones.
@@ -237,18 +237,18 @@ Detection:SetRejectZones( { ZoneReject1, ZoneReject2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection_base-is-a-finite-state-machine">DETECTION_BASE is a Finite State Machine</h4>
+<h4> DETECTION_BASE is a Finite State Machine</h4>
 
 <p>Various Events and State Transitions can be tailored using DETECTION_BASE.</p>
 
-<h4 id="detection_base-states">DETECTION_BASE States</h4>
+<h4> DETECTION_BASE States</h4>
 
 <ul>
 <li><strong>Detecting</strong>: The detection is running.</li>
 <li><strong>Stopped</strong>: The detection is stopped.</li>
 </ul>
 
-<h4 id="detection_base-events">DETECTION_BASE Events</h4>
+<h4> DETECTION_BASE Events</h4>
 
 <ul>
 <li><strong>Start</strong>: Start the detection process.</li>
@@ -1488,7 +1488,7 @@ and will build a list (table) of <a href="#set_unit-class">SET_UNIT</a>s contain
 The class is group the detected units within zones given a DetectedZoneRange parameter.
 A set with multiple detected zones will be created as there are groups of units detected.</p>
 
-<h4 id="4-1-retrieve-the-detected-unit-sets-and-detected-zones">4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
+<h4> 4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
 
 <p>The methods to manage the DetectedItems[].Set(s) are implemented in <a href="#dectection_base-class">DECTECTION_BASE</a> and
 the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#detection_areas-class">DETECTION_AREAS</a>.</p>
@@ -1499,11 +1499,11 @@ the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#de
 To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount.
 If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone with a given index.</p>
 
-<h4 id="4-4-flare-or-smoke-detected-units">4.4) Flare or Smoke detected units</h4>
+<h4> 4.4) Flare or Smoke detected units</h4>
 
 <p>Use the methods <a href="#detection_areas-flaredetectedunits">DETECTION_AREAS:FlareDetectedUnits()</a> or <a href="#detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</a> to flare or smoke the detected units when a new detection has taken place.</p>
 
-<h4 id="4-5-flare-or-smoke-or-bound-detected-zones">4.5) Flare or Smoke or Bound detected zones</h4>
+<h4> 4.5) Flare or Smoke or Bound detected zones</h4>
 
 <p>Use the methods:</p>
 

@@ -6,7 +6,7 @@
 
 <p>The <a href="#base-class">BASE</a> class is the core root class from where every other class in moose is derived.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h4> **API CHANGE HISTORY**</h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -20,15 +20,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h4> **AUTHORS and CONTRIBUTIONS**</h4>
 
-<h4 id="contributions">Contributions:</h4>
+<h4> Contributions:</h4>
 
 <ul>
 <li>None.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h4> Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>

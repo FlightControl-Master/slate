@@ -16,7 +16,7 @@
 <li><p>AI_CARGO_GROUPED, represented by a Group of CARGO_UNITs.</p></li>
 </ul>
 
-<h4 id="1-ai_cargo-class-extends-fsm_process">1) <a href="#ai_cargo-class">AI_CARGO</a> class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h4> 1) [AI_CARGO](#ai_cargo-class) class, extends [FSM_PROCESS](#fsm_process-class)</h4>
 
 <p>The <a href="#ai_cargo-class">AI_CARGO</a> class defines the core functions that defines a cargo object within MOOSE.
 A cargo is a logical object defined that is available for transport, and has a life status within a simulation.</p>
@@ -24,7 +24,7 @@ A cargo is a logical object defined that is available for transport, and has a l
 <p>The AI_CARGO is a state machine: it manages the different events and states of the cargo.
 All derived classes from AI_CARGO follow the same state machine, expose the same cargo event functions, and provide the same cargo states.</p>
 
-<h4 id="1-2-1-ai_cargo-events">1.2.1) AI_CARGO Events:</h4>
+<h4> 1.2.1) AI_CARGO Events:</h4>
 
 <ul>
 <li><a href="#ai_cargo-board-tocarrier">AI_CARGO:Board()</a> ToCarrier ):  Boards the cargo to a carrier.</li>
@@ -34,7 +34,7 @@ All derived classes from AI_CARGO follow the same state machine, expose the same
 <li>AI_CARGO-Dead Controllable ): The cargo is dead. The cargo process will be ended.</li>
 </ul>
 
-<h4 id="1-2-2-ai_cargo-states">1.2.2) AI_CARGO States:</h4>
+<h4> 1.2.2) AI_CARGO States:</h4>
 
 <ul>
 <li><strong>UnLoaded</strong>: The cargo is unloaded from a carrier.</li>
@@ -45,7 +45,7 @@ All derived classes from AI_CARGO follow the same state machine, expose the same
 <li><strong>End</strong>: The process has come to an end.</li>
 </ul>
 
-<h4 id="1-2-3-ai_cargo-state-transition-methods">1.2.3) AI_CARGO state transition methods:</h4>
+<h4> 1.2.3) AI_CARGO state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -61,16 +61,14 @@ The state transition method needs to start with the name <strong>OnEnter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="2-ai_cargo_unit">2) <a href="#ai_cargo_unit-class">AI_CARGO_UNIT</a></h4>
-
-<p>class</p>
+<h4> 2) [AI_CARGO_UNIT](#ai_cargo_unit-class)
+ class</h4>
 
 <p>The AI_CARGO_UNIT class defines a cargo that is represented by a UNIT object within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
 
-<h4 id="5-ai_cargo_grouped">5) <a href="#ai_cargo_grouped-class">AI_CARGO_GROUPED</a></h4>
-
-<p>class</p>
+<h4> 5) [AI_CARGO_GROUPED](#ai_cargo_grouped-class)
+ class</h4>
 
 <p>The AI_CARGO_GROUPED class defines a cargo that is represented by a group of UNIT objects within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
