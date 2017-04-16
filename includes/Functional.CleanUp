@@ -22,8 +22,8 @@ BASE
 <ul>
 <li><a href="#cleanup-class">CLEANUP</a>
 self</li>
-<li>table[] ZoneNames : Is a table of zone names where the debris should be cleaned. Also a single string can be passed with one zone name.</li>
-<li>number TimeInterval : The interval in seconds when the clean activity takes place. The default is 300 seconds, thus every 5 minutes.</li>
+<li><u>List[]</u> ZoneNames : Is a table of zone names where the debris should be cleaned. Also a single string can be passed with one zone name.</li>
+<li><u>Number</u> TimeInterval : The interval in seconds when the clean activity takes place. The default is 300 seconds, thus every 5 minutes.</li>
 </ul>
 
 <h4> Returns </h4>

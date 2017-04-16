@@ -2,7 +2,7 @@
 
 <p>This module contains the AIRBASEPOLICE classes.</p>
 
-<h4 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h4>
+<h5 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
 
 <p>The <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class provides the main methods to monitor CLIENT behaviour at airbases.
 CLIENTS should not be allowed to:</p>
@@ -14,7 +14,7 @@ CLIENTS should not be allowed to:</p>
 <li>Obey ground control orders.</li>
 </ul>
 
-<h4 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
+<h5 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
 
 <p>All the airbases on the caucasus map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -41,7 +41,7 @@ The following names can be given:
 * TbilisiLochini
 * Vaziani</p>
 
-<h4 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
+<h5 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
 
 <p>All the airbases on the NEVADA map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -51,9 +51,9 @@ The following names can be given:
 * Creech
 * Groom Lake</p>
 
-<h4 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h4>
+<h5 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h5>
 
-<h4 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h4>
+<h5 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h5>
 
 <h2 id="airbasepolice_base-class">AIRBASEPOLICE_BASE Class</h2>
 
@@ -94,8 +94,7 @@ self</li>
 <ul>
 <li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
 self</li>
-<li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
-.AirbaseNames AirbaseNames : A list of AirbaseNames to monitor. If this parameters is nil, then all airbases will be monitored.</li>
+<li><a href="#airbasepolice_base-airbasenames-class">AirbaseNames</a> AirbaseNames : A list of AirbaseNames to monitor. If this parameters is nil, then all airbases will be monitored.</li>
 </ul>
 
 <h4> Returns </h4>

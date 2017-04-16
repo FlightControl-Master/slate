@@ -6,7 +6,7 @@
 
 <p>The <a href="#base-class">BASE</a> class is the core root class from where every other class in moose is derived.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -20,15 +20,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li>None.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -113,7 +113,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : ClassName + ClassID of the class instance.</li>
+<li><u>String</u> The : ClassName + ClassID of the class instance.</li>
 </ul>
 
 <h3 id="base-getclassname">BASE:GetClassName()</h3>
@@ -128,7 +128,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : ClassName of the class instance.</li>
+<li><u>String</u> The : ClassName of the class instance.</li>
 </ul>
 
 <h3 id="base-getclassid">BASE:GetClassID()</h3>
@@ -143,7 +143,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : ClassID of the class instance.</li>
+<li><u>String</u> The : ClassID of the class instance.</li>
 </ul>
 
 <h3 id="base-eventdispatcher">BASE:EventDispatcher()</h3>
@@ -173,7 +173,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : <a href="#event-module">Event</a> processing Priority.</li>
+<li><u>Number</u> The : <a href="#event-module">Event</a> processing Priority.</li>
 </ul>
 
 <h3 id="base-seteventpriority-eventpriority">BASE:SetEventPriority(EventPriority)</h3>
@@ -183,7 +183,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>number EventPriority : The <a href="#event-module">Event</a> processing Priority.</li>
+<li><u>Number</u> EventPriority : The <a href="#event-module">Event</a> processing Priority.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -216,7 +216,7 @@ self</li>
 <li><a href="#base-class">BASE</a>
 self</li>
 <li><a href="#events-class">EVENTS</a> Event</li>
-<li>#function EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
+<li><u>Function()</u> EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -252,7 +252,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -269,7 +269,7 @@ target: The Object that was hit.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -285,7 +285,7 @@ place: Object from where the AI took-off from. Can be an Airbase Object, FARP, o
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -301,7 +301,7 @@ place: Object that the unit landed on. Can be an Airbase Object, FARP, or Ships<
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -316,7 +316,7 @@ initiator : The unit that has crashed</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -331,7 +331,7 @@ initiator : The unit that has ejected</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -346,7 +346,7 @@ initiator : The unit that is receiving fuel.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -361,7 +361,7 @@ initiator : The unit that is was destroyed.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -376,7 +376,7 @@ initiator : The unit that the pilot has died in.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -392,7 +392,7 @@ place: The airbase that was captured, can be a FARP or Airbase. When calling pla
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -406,7 +406,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -420,7 +420,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -435,7 +435,7 @@ initiator : The unit that was receiving fuel.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -450,7 +450,7 @@ initiator : The unit that was spawned</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -465,7 +465,7 @@ initiator : The unit that had the failure</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -480,7 +480,7 @@ initiator : The unit that is starting its engines.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -495,7 +495,7 @@ initiator : The unit that is stopping its engines.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -510,7 +510,7 @@ initiator : The unit that is being taken control of.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -525,7 +525,7 @@ initiator : The unit that the player left.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -541,7 +541,7 @@ target: The unit that is being targeted.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -556,7 +556,7 @@ initiator : The unit that was doing the shooing.</p>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#eventdata%20eventdata%20:%20the%20eventdata-class">EVENTDATA EventData : The EventData</a> structure.</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData : The EventData structure.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -568,9 +568,9 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#time%20eventtime%20:%20the%20time%20stamp%20of%20the-class">Time EventTime : The time stamp of the</a> event.</li>
+<li><a href="#time-class">Time</a> EventTime : The time stamp of the event.</li>
 <li>Dcs.DCSWrapper.Object#Object Initiator : The initiating object of the event.</li>
-<li>string IniUnitName : The initiating unit name.</li>
+<li><u>String</u> IniUnitName : The initiating unit name.</li>
 <li>place self</li>
 <li>subplace self</li>
 </ul>
@@ -584,7 +584,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li><a href="#time%20eventtime%20:%20the%20time%20stamp%20of%20the-class">Time EventTime : The time stamp of the</a> event.</li>
+<li><a href="#time-class">Time</a> EventTime : The time stamp of the event.</li>
 <li>Dcs.DCSWrapper.Object#Object Initiator : The initiating object of the event.</li>
 </ul>
 
@@ -610,7 +610,7 @@ self</li>
 <li><a href="#base-class">BASE</a>
 self</li>
 <li>Object The : object that will hold the Value set by the Key.</li>
-<li>Key The : key that is used as a reference of the value. Note that the key can be a string, but it can also be any other type!</li>
+<li>Key The : key that is used as a reference of the value. Note that the key can be a <u>String</u>, but it can also be any other type!</li>
 <li>Value The : value to is stored in the object.</li>
 </ul>
 
@@ -618,7 +618,7 @@ self</li>
 
 <ul>
 <li>The Value : set.</li>
-<li>nil The : Key was not found and thus the Value could not be retrieved.</li>
+<li><u>Nil</u> The : Key was not found and thus the Value could not be retrieved.</li>
 </ul>
 
 <h3 id="base-getstate-the-the-the">BASE:GetState(The, The, The)</h3>
@@ -629,7 +629,7 @@ self</li>
 <li><a href="#base-class">BASE</a>
 self</li>
 <li>Object The : object that holds the Value set by the Key.</li>
-<li>Key The : key that is used to retrieve the value. Note that the key can be a string, but it can also be any other type!</li>
+<li>Key The : key that is used to retrieve the value. Note that the key can be a <u>String</u>, but it can also be any other type!</li>
 <li>Value The : value to is stored in the Object.</li>
 </ul>
 
@@ -651,7 +651,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>boolean TraceOnOff : Switch the tracing on or off.</li>
+<li><u>Boolean</u> TraceOnOff : Switch the tracing on or off.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -668,7 +668,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="base-tracelevel-level">BASE:TraceLevel(Level)</h3>
@@ -678,7 +678,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>number Level</li>
+<li><u>Number</u> Level</li>
 </ul>
 
 <h4> Returns </h4>
@@ -690,7 +690,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>boolean TraceAll : true = trace all methods in MOOSE.</li>
+<li><u>Boolean</u> TraceAll : true = trace all methods in MOOSE.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -702,7 +702,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>string Class</li>
+<li><u>String</u> Class</li>
 </ul>
 
 <h4> Returns </h4>
@@ -714,8 +714,8 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>string Class</li>
-<li>string Method</li>
+<li><u>String</u> Class</li>
+<li><u>String</u> Method</li>
 </ul>
 
 <h4> Returns </h4>
@@ -727,7 +727,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -739,7 +739,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -751,7 +751,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -763,7 +763,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -775,7 +775,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -787,7 +787,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -799,7 +799,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a>
 self</li>
-<li>Arguments A : table[] or any field.</li>
+<li>Arguments A : <u>List[]</u> or any field.</li>
 </ul>
 
 <h4> Returns </h4>

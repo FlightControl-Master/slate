@@ -3,13 +3,13 @@
 <p>This module contains derived utilities taken from the MIST framework,
 which are excellent tools to be reused in an OO environment!.</p>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li>Grimes : Design &amp; Programming of the MIST framework.</li>
 </ul>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li>FlightControl : Rework to OO framework</li>

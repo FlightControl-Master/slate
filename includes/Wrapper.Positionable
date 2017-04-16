@@ -2,7 +2,7 @@
 
 <p>This module contains the POSITIONABLE class.</p>
 
-<h4 id="1-positionable-class-extends-identifiable">1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h4>
+<h5 id="1-positionable-class-extends-identifiable">1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h5>
 
 <p>The <a href="#positionable-class">POSITIONABLE</a> class is a wrapper class to handle the POSITIONABLE objects:</p>
 
@@ -12,7 +12,7 @@
 <li>Manage the &ldquo;state&rdquo; of the POSITIONABLE.</li>
 </ul>
 
-<h4 id="1-1-positionable-constructor">1.1) POSITIONABLE constructor:</h4>
+<h5 id="1-1-positionable-constructor">1.1) POSITIONABLE constructor:</h5>
 
 <p>The POSITIONABLE class provides the following functions to construct a POSITIONABLE instance:</p>
 
@@ -20,7 +20,7 @@
 <li><a href="#positionable-new-positionablename">POSITIONABLE:New()</a>: Create a POSITIONABLE instance.</li>
 </ul>
 
-<h4 id="1-2-positionable-methods">1.2) POSITIONABLE methods:</h4>
+<h5 id="1-2-positionable-methods">1.2) POSITIONABLE methods:</h5>
 
 <p>The following methods can be used to identify an measurable object:</p>
 
@@ -42,7 +42,7 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li>string PositionableName : The name of the measurable.</li>
+<li><u>String</u> PositionableName : The name of the measurable.</li>
 </ul>
 
 <h3 id="positionable-new-positionablename">POSITIONABLE:New(PositionableName)</h3>
@@ -73,8 +73,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#position%20the%20:%203d%20position%20vectors%20of%20the-class">Position The : 3D position vectors of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#position-class">Position</a> The : 3D position vectors of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getvec2">POSITIONABLE:GetVec2()</h3>
@@ -88,8 +88,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#vec2%20the%20:%202d%20point%20vector%20of%20the-class">Vec2 The : 2D point vector of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#vec2-class">Vec2</a> The : 2D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getpointvec2">POSITIONABLE:GetPointVec2()</h3>
@@ -103,8 +103,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#point_vec2%20the%20:%202d%20point%20vector%20of%20the-class">POINT_VEC2 The : 2D point vector of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#point_vec2-class">POINT_VEC2</a> The : 2D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getpointvec3">POSITIONABLE:GetPointVec3()</h3>
@@ -118,25 +118,25 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#point_vec3%20the%20:%203d%20point%20vector%20of%20the-class">POINT_VEC3 The : 3D point vector of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#point_vec3-class">POINT_VEC3</a> The : 3D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getrandomvec3-radius">POSITIONABLE:GetRandomVec3(Radius)</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3 of first UNIT of the](#vec3 of first unit of the-class) GROUP</span>
+<pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class) of first UNIT of the GROUP</span>
 </code></pre>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a> self</li>
-<li>number Radius</li>
+<li><u>Number</u> Radius</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#vec3%20the%20:%203d%20point%20vector%20of%20the-class">Vec3 The : 3D point vector of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#vec3-class">Vec3</a> The : 3D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getvec3">POSITIONABLE:GetVec3()</h3>
@@ -150,8 +150,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#vec3%20the%20:%203d%20point%20vector%20of%20the-class">Vec3 The : 3D point vector of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#vec3-class">Vec3</a> The : 3D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getaltitude">POSITIONABLE:GetAltitude()</h3>
@@ -165,8 +165,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#distance%20the%20:%20altitude%20of%20the-class">Distance The : altitude of the</a> POSITIONABLE.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#distance-class">Distance</a> The : altitude of the POSITIONABLE.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-isaboverunway">POSITIONABLE:IsAboveRunway()</h3>
@@ -180,8 +180,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Positionable is above a runway.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><u>Boolean</u> true : if Positionable is above a runway.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getheading">POSITIONABLE:GetHeading()</h3>
@@ -195,8 +195,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : POSTIONABLE heading</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><u>Number</u> The : POSTIONABLE heading</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-inair">POSITIONABLE:InAir()</h3>
@@ -210,8 +210,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if in the air.</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><u>Boolean</u> true : if in the air.</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getvelocity">POSITIONABLE:GetVelocity()</h3>
@@ -225,8 +225,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#vec3%20the%20:%20velocity-class">Vec3 The : velocity</a> vector</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><a href="#vec3-class">Vec3</a> The : velocity vector</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getvelocitykmh">POSITIONABLE:GetVelocityKMH()</h3>
@@ -240,8 +240,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : velocity in km/h</li>
-<li>nil The : POSITIONABLE is not existing or alive.</li>
+<li><u>Number</u> The : velocity in km/h</li>
+<li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
 
 <h3 id="positionable-getmessage-message-duration-name">POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
@@ -251,9 +251,9 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -269,9 +269,9 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -283,10 +283,10 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li><a href="#coalition%20messagecoalition%20:%20the%20coalition%20receiving%20the-class">coalition MessageCoalition : The Coalition receiving the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><a href="#coalition-class">coalition</a> MessageCoalition : The Coalition receiving the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -298,9 +298,9 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -312,9 +312,9 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -326,10 +326,10 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li><a href="#client%20client%20:%20the%20client%20object%20receiving%20the-class">CLIENT Client : The client object receiving the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><a href="#client-class">CLIENT</a> Client : The client object receiving the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -341,10 +341,10 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li><a href="#group%20messagegroup%20:%20the%20group%20object%20receiving%20the-class">GROUP MessageGroup : The GROUP object receiving the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><a href="#group-class">GROUP</a> MessageGroup : The GROUP object receiving the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -356,9 +356,9 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
-<li>string Message : The message text</li>
-<li><a href="#duration%20duration%20:%20the%20duration%20of%20the-class">Duration Duration : The duration of the</a> message.</li>
-<li>string Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
+<li><u>String</u> Message : The message text</li>
+<li><a href="#duration-class">Duration</a> Duration : The duration of the message.</li>
+<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
 </ul>
 
 <h4> Returns </h4>

@@ -9,25 +9,25 @@ DETECTION uses the in-built detection capabilities of DCS World, but adds new fu
 
 <p>Find the DETECTION classes documentation further in this document in the globals section.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h5 id="demo-missions">Demo Missions</h5>
 
-<h4 id="detection-demo-missions-and-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h4>
+<h5 id="detection-demo-missions-and-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h5>
 
-<h4 id="detection-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h4>
+<h5 id="detection-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h5>
 
-<h4 id="all-demo-missions-pack-of-the-latest-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h4>
+<h5 id="all-demo-missions-pack-of-the-latest-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h5>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h5 id="youtube-channel">YouTube Channel</h5>
 
-<h4 id="detection-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h4>
+<h5 id="detection-youtube-channel"><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li>Mechanist : Early concept of DETECTION_AREAS.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li>FlightControl : Analysis, Design, Programming, Testing</li>
@@ -45,11 +45,11 @@ BASE
 <p>The DETECTION_BASE class defines the core functions to administer detected objects.
 The DETECTION_BASE class will detect objects within the battle zone for a list of <a href="#group-module">Group</a>s detecting targets following (a) detection method(s).</p>
 
-<h4 id="detection_base-constructor">DETECTION_BASE constructor</h4>
+<h5 id="detection_base-constructor">DETECTION_BASE constructor</h5>
 
 <p>Construct a new DETECTION_BASE instance using the <a href="#detection_base-new-detectionsetgroup">DETECTION_BASE:New()</a> method.</p>
 
-<h4 id="initialization">Initialization</h4>
+<h5 id="initialization">Initialization</h5>
 
 <p>By default, detection will return detected objects with all the detection sensors available.
 However, you can ask how the objects were found with specific detection methods.
@@ -67,7 +67,7 @@ You can specify to apply multiple detection methods.</p>
 <li><a href="#detection_base-initdetectdlink-detectdlink">DETECTION_BASE:InitDetectDLINK()</a>: Detected using DLINK.</li>
 </ul>
 
-<h4 id="filter-detected-units-based-on-category-of-the-unit"><strong>Filter</strong> detected units based on <strong>category of the unit</strong></h4>
+<h5 id="filter-detected-units-based-on-category-of-the-unit"><strong>Filter</strong> detected units based on <strong>category of the unit</strong></h5>
 
 <p>Filter the detected units based on Unit.Category using the method <a href="#detection_base-filtercategories-filtercategories">DETECTION_BASE:FilterCategories()</a>.
 The different values of Unit.Category can be:</p>
@@ -90,7 +90,7 @@ The different values of Unit.Category can be:</p>
 
 <p>DetectionObject:FilterCategories( { Unit.Category.AIRPLANE, Unit.Category.HELICOPTER } )</p>
 
-<h4 id="detection_-derived-classes-group-the-detected-units-into-a-detecteditems-list"><strong>DETECTION_ derived classes</strong> group the detected units into a <strong>DetectedItems[]</strong> list</h4>
+<h5 id="detection_-derived-classes-group-the-detected-units-into-a-detecteditems-list"><strong>DETECTION_ derived classes</strong> group the detected units into a <strong>DetectedItems[]</strong> list</h5>
 
 <p>DETECTION_BASE derived classes build a list called DetectedItems[], which is essentially a first later
 of grouping of detected units. Each DetectedItem within the DetectedItems[] list contains
@@ -111,7 +111,7 @@ about the DetectedItem that is set by the DETECTION_BASE derived classes, used t
 This method retrieves the Set from a DetectedItem element from the DetectedItem list (DetectedItems[ DetectedItemIndex ].Set ).</li>
 </ul>
 
-<h4 id="visual-filters-to-fine-tune-the-probability-of-the-detected-objects"><strong>Visual filters</strong> to fine-tune the probability of the detected objects</h4>
+<h5 id="visual-filters-to-fine-tune-the-probability-of-the-detected-objects"><strong>Visual filters</strong> to fine-tune the probability of the detected objects</h5>
 
 <p>By default, DCS World will return any object that is in LOS and within &ldquo;visual reach&rdquo;, or detectable through one of the electronic detection means.
 That being said, the DCS World detection algorithm can sometimes be unrealistic.
@@ -134,7 +134,7 @@ The mission designer needs to define these cloudy zones within the mission, and 
 <p>I advise however, that, when you first use the DETECTION derived classes, that you don&rsquo;t use these filters.
 Only when you experience unrealistic behaviour in your missions, these filters could be applied.</p>
 
-<h4 id="distance-visual-detection-probability">Distance visual detection probability</h4>
+<h5 id="distance-visual-detection-probability">Distance visual detection probability</h5>
 
 <p>Upon a <strong>visual</strong> detection, the further away a detected object is, the less likely it is to be detected properly.
 Also, the speed of accurate detection plays a role.</p>
@@ -148,7 +148,7 @@ Also, the speed of accurate detection plays a role.</p>
 
 <p>Use the method <a href="#detection_base-setdistanceprobability-the">DETECTION_BASE:SetDistanceProbability()</a> to set the probability factor upon a 10 km distance.</p>
 
-<h4 id="alpha-angle-visual-detection-probability">Alpha Angle visual detection probability</h4>
+<h5 id="alpha-angle-visual-detection-probability">Alpha Angle visual detection probability</h5>
 
 <p>Upon a <strong>visual</strong> detection, the higher the unit is during the detecting process, the more likely the detected unit is to be detected properly.
 A detection at a 90% alpha angle is the most optimal, a detection at 10% is less and a detection at 0% is less likely to be correct.</p>
@@ -160,7 +160,7 @@ A detection at a 90% alpha angle is the most optimal, a detection at 10% is less
 
 <p>Use the method <a href="#detection_base-setalphaangleprobability-the">DETECTION_BASE:SetAlphaAngleProbability()</a> to set the probability factor if 0°.</p>
 
-<h4 id="cloudy-zones-detection-probability">Cloudy Zones detection probability</h4>
+<h5 id="cloudy-zones-detection-probability">Cloudy Zones detection probability</h5>
 
 <p>Upon a <strong>visual</strong> detection, the more a detected unit is within a cloudy zone, the less likely the detected unit is to be detected successfully.
 The Cloudy Zones work with the ZONE_BASE derived classes. The mission designer can define within the mission
@@ -175,12 +175,12 @@ Expecially for ZONE_POLYGON, try to limit the amount of nodes of the polygon!</p
 <p>Typically, this kind of filter would be applied for very specific areas were a detection needs to be very realisting for
 AI not to detect so easily targets within a forrest or village rich area.</p>
 
-<h4 id="accept-reject-detected-units">Accept / Reject detected units</h4>
+<h5 id="accept-reject-detected-units">Accept / Reject detected units</h5>
 
 <p>DETECTION_BASE can accept or reject successful detections based on the location of the detected object,
 if it is located in range or located inside or outside of specific zones.</p>
 
-<h4 id="detection-acceptance-of-within-range-limit">Detection acceptance of within range limit</h4>
+<h5 id="detection-acceptance-of-within-range-limit">Detection acceptance of within range limit</h5>
 
 <p>A range can be set that will limit a successful detection for a unit.
 Use the method <a href="#detection_base-setacceptrange-acceptrange">DETECTION_BASE:SetAcceptRange()</a> to apply a range in meters till where detected units will be accepted.</p>
@@ -196,7 +196,7 @@ Detection:SetAcceptRange( 5000 )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-acceptance-if-within-zone-s">Detection acceptance if within zone(s).</h4>
+<h5 id="detection-acceptance-if-within-zone-s">Detection acceptance if within zone(s).</h5>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will only accept a detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setacceptzones-can">DETECTION_BASE:SetAcceptZones()</a> will accept detected units if they are within the specified zones.</p>
@@ -216,7 +216,7 @@ Detection:SetAcceptZones( { ZoneAccept1, ZoneAccept2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection-rejectance-if-within-zone-s">Detection rejectance if within zone(s).</h4>
+<h5 id="detection-rejectance-if-within-zone-s">Detection rejectance if within zone(s).</h5>
 
 <p>Specific ZONE_BASE object(s) can be given as a parameter, which will reject detection if the unit is within the specified ZONE_BASE object(s).
 Use the method <a href="#detection_base-setrejectzones-can">DETECTION_BASE:SetRejectZones()</a> will reject detected units if they are within the specified zones.
@@ -237,18 +237,18 @@ Detection:SetRejectZones( { ZoneReject1, ZoneReject2 } )</p>
 <p>&ndash; Start the Detection.
 Detection:Start()</p>
 
-<h4 id="detection_base-is-a-finite-state-machine">DETECTION_BASE is a Finite State Machine</h4>
+<h5 id="detection_base-is-a-finite-state-machine">DETECTION_BASE is a Finite State Machine</h5>
 
 <p>Various Events and State Transitions can be tailored using DETECTION_BASE.</p>
 
-<h4 id="detection_base-states">DETECTION_BASE States</h4>
+<h5 id="detection_base-states">DETECTION_BASE States</h5>
 
 <ul>
 <li><strong>Detecting</strong>: The detection is running.</li>
 <li><strong>Stopped</strong>: The detection is stopped.</li>
 </ul>
 
-<h4 id="detection_base-events">DETECTION_BASE Events</h4>
+<h5 id="detection_base-events">DETECTION_BASE Events</h5>
 
 <ul>
 <li><strong>Start</strong>: Start the detection process.</li>
@@ -260,12 +260,11 @@ Detection:Start()</p>
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
-<li><a href="#distance%20detectionrange%20:%20the%20range%20till%20which%20targets%20are%20accepted%20to%20be-class">Distance DetectionRange : The range till which targets are accepted to be</a> detected.</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedObjects DetectedObjects : The list of detected objects.</li>
-<li>table[] DetectedObjectsIdentified : Map of the DetectedObjects identified.</li>
-<li>number DetectionRun</li>
+<li><a href="#set_group-class">SET_GROUP</a> DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller role.</li>
+<li><a href="#distance-class">Distance</a> DetectionRange : The range till which targets are accepted to be detected.</li>
+<li><a href="#detection_base-detectedobjects-class">DetectedObjects</a> DetectedObjects : The list of detected objects.</li>
+<li><u>List[]</u> DetectedObjectsIdentified : Map of the DetectedObjects identified.</li>
+<li><u>Number</u> DetectionRun</li>
 </ul>
 
 <h3 id="detection_base-new-detectionsetgroup">DETECTION_BASE:New(DetectionSetGroup)</h3>
@@ -275,7 +274,7 @@ Detection:Start()</p>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
+<li><a href="#set_group-class">SET_GROUP</a> DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller role.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -294,15 +293,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onenterstopped-from-event-to">DETECTION_BASE:OnEnterStopped(From, Event, To)</h3>
@@ -314,9 +313,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -330,15 +329,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onafterstart-from-event-to">DETECTION_BASE:OnAfterStart(From, Event, To)</h3>
@@ -350,9 +349,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -379,15 +378,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onenterdetecting-from-event-to">DETECTION_BASE:OnEnterDetecting(From, Event, To)</h3>
@@ -399,9 +398,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -415,15 +414,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onafterdetect-from-event-to">DETECTION_BASE:OnAfterDetect(From, Event, To)</h3>
@@ -435,9 +434,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -464,15 +463,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onafterdetected-from-event-to">DETECTION_BASE:OnAfterDetected(From, Event, To)</h3>
@@ -484,9 +483,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -513,15 +512,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onafterstop-from-event-to">DETECTION_BASE:OnAfterStop(From, Event, To)</h3>
@@ -533,9 +532,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -562,15 +561,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="detection_base-onenterstopped-from-event-to">DETECTION_BASE:OnEnterStopped(From, Event, To)</h3>
@@ -582,9 +581,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -596,9 +595,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -610,9 +609,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -624,10 +623,10 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
-<li><a href="#group%20detectiongroup%20:%20the%20group-class">GROUP DetectionGroup : The Group</a> detecting.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
+<li><a href="#group-class">GROUP</a> DetectionGroup : The Group detecting.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -639,7 +638,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectVisual</li>
+<li><u>Boolean</u> DetectVisual</li>
 </ul>
 
 <h4> Returns </h4>
@@ -656,7 +655,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectOptical</li>
+<li><u>Boolean</u> DetectOptical</li>
 </ul>
 
 <h4> Returns </h4>
@@ -673,7 +672,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectRadar</li>
+<li><u>Boolean</u> DetectRadar</li>
 </ul>
 
 <h4> Returns </h4>
@@ -690,7 +689,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectIRST</li>
+<li><u>Boolean</u> DetectIRST</li>
 </ul>
 
 <h4> Returns </h4>
@@ -707,7 +706,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectRWR</li>
+<li><u>Boolean</u> DetectRWR</li>
 </ul>
 
 <h4> Returns </h4>
@@ -724,7 +723,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>boolean DetectDLINK</li>
+<li><u>Boolean</u> DetectDLINK</li>
 </ul>
 
 <h4> Returns </h4>
@@ -758,7 +757,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number DetectionInterval : Interval in seconds.</li>
+<li><u>Number</u> DetectionInterval : Interval in seconds.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -775,7 +774,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number AcceptRange : Accept a detection if the unit is within the AcceptRange in meters.</li>
+<li><u>Number</u> AcceptRange : Accept a detection if the unit is within the AcceptRange in meters.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -877,8 +876,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
@@ -895,9 +893,8 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
-<li>string ChangeCode</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
+<li><u>String</u> ChangeCode</li>
 </ul>
 
 <h4> Returns </h4>
@@ -914,10 +911,9 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
-<li>string ChangeCode</li>
-<li>string ChangeUnitType</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
+<li><u>String</u> ChangeCode</li>
+<li><u>String</u> ChangeUnitType</li>
 </ul>
 
 <h4> Returns </h4>
@@ -939,7 +935,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean trhe : if there are friendlies nearby</li>
+<li><u>Boolean</u> trhe : if there are friendlies nearby</li>
 </ul>
 
 <h3 id="detection_base-reportfriendliesnearby">DETECTION_BASE:ReportFriendliesNearBy()</h3>
@@ -960,14 +956,13 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedObject DetectedObject</li>
+<li><a href="#detection_base-detectedobject-class">DetectedObject</a> DetectedObject</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if already identified.</li>
+<li><u>Boolean</u> true : if already identified.</li>
 </ul>
 
 <h3 id="detection_base-identifydetectedobject-detectedobject">DETECTION_BASE:IdentifyDetectedObject(DetectedObject)</h3>
@@ -977,8 +972,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedObject DetectedObject</li>
+<li><a href="#detection_base-detectedobject-class">DetectedObject</a> DetectedObject</li>
 </ul>
 
 <h4> Returns </h4>
@@ -990,8 +984,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedObject DetectedObject</li>
+<li><a href="#detection_base-detectedobject-class">DetectedObject</a> DetectedObject</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1014,14 +1007,13 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string ObjectName</li>
+<li><u>String</u> ObjectName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedObject self</li>
+<li><a href="#detection_base-detectedobject-class">DetectedObject</a> self</li>
 </ul>
 
 <h3 id="detection_base-adddetecteditem-detecteditemindex-set">DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)</h3>
@@ -1031,15 +1023,14 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string DetectedItemIndex : The index of the DetectedItem.</li>
-<li><a href="#set_unit%20set%20:%20(optional)%20the%20set%20of%20units%20to%20be-class">SET_UNIT Set : (optional) The Set of Units to be</a> added.</li>
+<li><u>String</u> DetectedItemIndex : The index of the DetectedItem.</li>
+<li><a href="#set_unit-class">SET_UNIT</a> Set : (optional) The Set of Units to be added.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem self</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> self</li>
 </ul>
 
 <h3 id="detection_base-adddetecteditemzone-detecteditemindex-set-zone">DETECTION_BASE:AddDetectedItemZone(DetectedItemIndex, Set, Zone)</h3>
@@ -1049,16 +1040,15 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>string DetectedItemIndex : The index of the DetectedItem.</li>
-<li><a href="#set_unit%20set%20:%20(optional)%20the%20set%20of%20units%20to%20be-class">SET_UNIT Set : (optional) The Set of Units to be</a> added.</li>
-<li><a href="#zone_unit%20zone%20:%20(optional)%20the%20zone%20to%20be%20added%20where%20the%20units%20are-class">ZONE_UNIT Zone : (optional) The Zone to be added where the Units are</a> located.</li>
+<li><u>String</u> DetectedItemIndex : The index of the DetectedItem.</li>
+<li><a href="#set_unit-class">SET_UNIT</a> Set : (optional) The Set of Units to be added.</li>
+<li><a href="#zone_unit-class">ZONE_UNIT</a> Zone : (optional) The Zone to be added where the Units are located.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem self</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> self</li>
 </ul>
 
 <h3 id="detection_base-removedetecteditem-detecteditemindex">DETECTION_BASE:RemoveDetectedItem(DetectedItemIndex)</h3>
@@ -1068,7 +1058,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number DetectedItemIndex : The index or position in the DetectedItems list where the item needs to be removed.</li>
+<li><u>Number</u> DetectedItemIndex : The index or position in the DetectedItems list where the item needs to be removed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1085,8 +1075,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItems self</li>
+<li><a href="#detection_base-detecteditems-class">DetectedItems</a> self</li>
 </ul>
 
 <h3 id="detection_base-getdetecteditemscount">DETECTION_BASE:GetDetectedItemsCount()</h3>
@@ -1101,7 +1090,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number Count</li>
+<li><u>Number</u> Count</li>
 </ul>
 
 <h3 id="detection_base-getdetecteditem-index">DETECTION_BASE:GetDetectedItem(Index)</h3>
@@ -1111,14 +1100,13 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number Index</li>
+<li><u>Number</u> Index</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem self</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> self</li>
 </ul>
 
 <h3 id="detection_base-getdetectedset-index">DETECTION_BASE:GetDetectedSet(Index)</h3>
@@ -1128,7 +1116,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number Index</li>
+<li><u>Number</u> Index</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1144,7 +1132,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number Index</li>
+<li><u>Number</u> Index</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1166,7 +1154,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="detection_base-detectedreportdetailed">DETECTION_BASE:DetectedReportDetailed()</h3>
@@ -1181,7 +1169,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="detection_base-getdetectionsetgroup">DETECTION_BASE:GetDetectionSetGroup()</h3>
@@ -1222,8 +1210,8 @@ self</li>
 <ul>
 <li><a href="#detection_base-class">DETECTION_BASE</a>
 self</li>
-<li>number DelayTime : The delay in seconds to wait the reporting.</li>
-<li>number RepeatInterval : The repeat interval in seconds for the reporting to happen repeatedly.</li>
+<li><u>Number</u> DelayTime : The delay in seconds to wait the reporting.</li>
+<li><u>Number</u> RepeatInterval : The repeat interval in seconds for the reporting to happen repeatedly.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1248,11 +1236,11 @@ self</li>
 <h4> Attributes </h4>
 
 <ul>
-<li>string Name</li>
-<li>boolean Visible</li>
-<li>string Type</li>
-<li>number Distance</li>
-<li>boolean Identified</li>
+<li><u>String</u> Name</li>
+<li><u>Boolean</u> Visible</li>
+<li><u>String</u> Type</li>
+<li><u>Number</u> Distance</li>
+<li><u>Boolean</u> Identified</li>
 </ul>
 
 <h2 id="detection_base-detecteditems-class">DETECTION_BASE.DetectedItems Class</h2>
@@ -1271,13 +1259,13 @@ self</li>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> Set</li>
-<li><a href="#set_unit%20set%20:%20--%20the%20set%20of%20units%20in%20the%20detected-class">SET_UNIT Set : &ndash; The Set of Units in the detected</a> area.</li>
-<li><a href="#zone_unit%20zone%20:%20--%20the%20zone%20of%20the%20detected-class">ZONE_UNIT Zone : &ndash; The Zone of the detected</a> area.</li>
-<li>boolean Changed : Documents if the detected area has changes.</li>
-<li>table[] Changes : A list of the changes reported on the detected area. (It is up to the user of the detected area to consume those changes).</li>
-<li>number ItemID : &ndash; The identifier of the detected area.</li>
-<li>boolean FriendliesNearBy : Indicates if there are friendlies within the detected area.</li>
-<li><a href="#unit%20nearestfac%20:%20the%20nearest%20fac%20near%20the-class">UNIT NearestFAC : The nearest FAC near the</a> Area.</li>
+<li><a href="#set_unit-class">SET_UNIT</a> Set : &ndash; The Set of Units in the detected area.</li>
+<li><a href="#zone_unit-class">ZONE_UNIT</a> Zone : &ndash; The Zone of the detected area.</li>
+<li><u>Boolean</u> Changed : Documents if the detected area has changes.</li>
+<li><u>List[]</u> Changes : A list of the changes reported on the detected area. (It is up to the user of the detected area to consume those changes).</li>
+<li><u>Number</u> ItemID : &ndash; The identifier of the detected area.</li>
+<li><u>Boolean</u> FriendliesNearBy : Indicates if there are friendlies within the detected area.</li>
+<li><a href="#unit-class">UNIT</a> NearestFAC : The nearest FAC near the Area.</li>
 </ul>
 
 <h2 id="detection_units-class">DETECTION_UNITS Class</h2>
@@ -1297,7 +1285,7 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#distance%20detectionrange%20:%20the%20range%20till%20which%20targets%20are-class">Distance DetectionRange : The range till which targets are</a> detected.</li>
+<li><a href="#distance-class">Distance</a> DetectionRange : The range till which targets are detected.</li>
 </ul>
 
 <h3 id="detection_units-new-detectionsetgroup">DETECTION_UNITS:New(DetectionSetGroup)</h3>
@@ -1306,7 +1294,7 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 
 <ul>
 <li><a href="#detection_units-class">DETECTION_UNITS</a> self</li>
-<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
+<li><a href="#set_group-class">SET_GROUP</a> DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller role.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1322,14 +1310,13 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 <ul>
 <li><a href="#detection_units-class">DETECTION_UNITS</a>
 self</li>
-<li><a href="#detection_units-class">DETECTION_UNITS</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_units-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Changes text</li>
+<li><u>String</u> The : Changes text</li>
 </ul>
 
 <h3 id="detection_units-createdetectionsets">DETECTION_UNITS:CreateDetectionSets()</h3>
@@ -1361,7 +1348,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="detection_units-detectedreportdetailed">DETECTION_UNITS:DetectedReportDetailed()</h3>
@@ -1376,7 +1363,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h2 id="detection_types-class">DETECTION_TYPES Class</h2>
@@ -1400,7 +1387,7 @@ Beware that when the amount of different types detected is large, the DetectedIt
 
 <ul>
 <li><a href="#detection_types-class">DETECTION_TYPES</a> self</li>
-<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20recce-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Recce</a> role.</li>
+<li><a href="#set_group-class">SET_GROUP</a> DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Recce role.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1416,14 +1403,13 @@ Beware that when the amount of different types detected is large, the DetectedIt
 <ul>
 <li><a href="#detection_types-class">DETECTION_TYPES</a>
 self</li>
-<li><a href="#detection_types-class">DETECTION_TYPES</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_types-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Changes text</li>
+<li><u>String</u> The : Changes text</li>
 </ul>
 
 <h3 id="detection_types-createdetectionsets">DETECTION_TYPES:CreateDetectionSets()</h3>
@@ -1455,7 +1441,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="detection_types-detectedreportdetailed">DETECTION_TYPES:DetectedReportDetailed()</h3>
@@ -1470,7 +1456,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h2 id="detection_areas-class">DETECTION_AREAS Class</h2>
@@ -1488,7 +1474,7 @@ and will build a list (table) of <a href="#set_unit-class">SET_UNIT</a>s contain
 The class is group the detected units within zones given a DetectedZoneRange parameter.
 A set with multiple detected zones will be created as there are groups of units detected.</p>
 
-<h4 id="4-1-retrieve-the-detected-unit-sets-and-detected-zones">4.1) Retrieve the Detected Unit Sets and Detected Zones</h4>
+<h5 id="4-1-retrieve-the-detected-unit-sets-and-detected-zones">4.1) Retrieve the Detected Unit Sets and Detected Zones</h5>
 
 <p>The methods to manage the DetectedItems[].Set(s) are implemented in <a href="#dectection_base-class">DECTECTION_BASE</a> and
 the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#detection_areas-class">DETECTION_AREAS</a>.</p>
@@ -1499,11 +1485,11 @@ the methods to manage the DetectedItems[].Zone(s) is implemented in <a href="#de
 To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount.
 If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone with a given index.</p>
 
-<h4 id="4-4-flare-or-smoke-detected-units">4.4) Flare or Smoke detected units</h4>
+<h5 id="4-4-flare-or-smoke-detected-units">4.4) Flare or Smoke detected units</h5>
 
 <p>Use the methods <a href="#detection_areas-flaredetectedunits">DETECTION_AREAS:FlareDetectedUnits()</a> or <a href="#detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</a> to flare or smoke the detected units when a new detection has taken place.</p>
 
-<h4 id="4-5-flare-or-smoke-or-bound-detected-zones">4.5) Flare or Smoke or Bound detected zones</h4>
+<h5 id="4-5-flare-or-smoke-or-bound-detected-zones">4.5) Flare or Smoke or Bound detected zones</h5>
 
 <p>Use the methods:</p>
 
@@ -1518,9 +1504,8 @@ If you want to obtain a specific zone from the DetectedZones, use the method DET
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#distance%20detectionzonerange%20:%20the%20range%20till%20which%20targets%20are%20grouped%20upon%20the%20first%20detected-class">Distance DetectionZoneRange : The range till which targets are grouped upon the first detected</a> target.</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItems DetectedItems : A list of areas containing the set of <a href="#unit-module">Unit</a>s, <a href="#zone-module">Zone</a>s, the center <a href="#unit-module">Unit</a> within the zone, and ID of each area that was detected within a DetectionZoneRange.</li>
+<li><a href="#distance-class">Distance</a> DetectionZoneRange : The range till which targets are grouped upon the first detected target.</li>
+<li><a href="#detection_base-detecteditems-class">DetectedItems</a> DetectedItems : A list of areas containing the set of <a href="#unit-module">Unit</a>s, <a href="#zone-module">Zone</a>s, the center <a href="#unit-module">Unit</a> within the zone, and ID of each area that was detected within a DetectionZoneRange.</li>
 </ul>
 
 <h3 id="detection_areas-new-detectionsetgroup-detectionzonerange">DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)</h3>
@@ -1530,8 +1515,8 @@ If you want to obtain a specific zone from the DetectedZones, use the method DET
 <ul>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a>
 self</li>
-<li><a href="#set_group%20detectionsetgroup%20:%20the%20[set](#set-module)%20of%20groups%20in%20the%20forward%20air%20controller-class">SET_GROUP DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller</a> role.</li>
-<li><a href="#distance%20detectionzonerange%20:%20the%20range%20till%20which%20targets%20are%20grouped%20upon%20the%20first%20detected-class">Distance DetectionZoneRange : The range till which targets are grouped upon the first detected</a> target.</li>
+<li><a href="#set_group-class">SET_GROUP</a> DetectionSetGroup : The <a href="#set-module">Set</a> of GROUPs in the Forward Air Controller role.</li>
+<li><a href="#distance-class">Distance</a> DetectionZoneRange : The range till which targets are grouped upon the first detected target.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1554,7 +1539,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="detection_areas-isfriendliesnearby">DETECTION_AREAS:IsFriendliesNearBy()</h3>
@@ -1569,7 +1554,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean trhe : if there are friendlies nearby</li>
+<li><u>Boolean</u> trhe : if there are friendlies nearby</li>
 </ul>
 
 <h3 id="detection_areas-calculatethreatlevela2g-detecteditem">DETECTION_AREAS:CalculateThreatLevelA2G(DetectedItem)</h3>
@@ -1579,8 +1564,7 @@ self</li>
 <ul>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1592,14 +1576,13 @@ self</li>
 <ul>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#unit%20the%20:%20nearest%20fac-class">UNIT The : nearest FAC</a> unit</li>
+<li><a href="#unit-class">UNIT</a> The : nearest FAC unit</li>
 </ul>
 
 <h3 id="detection_areas-gettreatlevela2g-detecteditem">DETECTION_AREAS:GetTreatLevelA2G(DetectedItem)</h3>
@@ -1609,14 +1592,13 @@ self</li>
 <ul>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>number a : scale from 0 to 10.</li>
+<li><u>Number</u> a : scale from 0 to 10.</li>
 </ul>
 
 <h3 id="detection_areas-smokedetectedunits">DETECTION_AREAS:SmokeDetectedUnits()</h3>
@@ -1706,14 +1688,13 @@ self</li>
 <ul>
 <li><a href="#detection_areas-class">DETECTION_AREAS</a>
 self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a>
-.DetectedItem DetectedItem</li>
+<li><a href="#detection_base-detecteditem-class">DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Changes text</li>
+<li><u>String</u> The : Changes text</li>
 </ul>
 
 <h3 id="detection_areas-createdetectionsets">DETECTION_AREAS:CreateDetectionSets()</h3>

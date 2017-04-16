@@ -2,7 +2,7 @@
 
 <p>This module contains the AIRBASE classes.</p>
 
-<h4 id="1-airbase-class-extends-positionable">1) <a href="#airbase-class">AIRBASE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h5 id="1-airbase-class-extends-positionable">1) <a href="#airbase-class">AIRBASE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
 
 <p>The <a href="#airbase-module">AIRBASE</a> class is a wrapper class to handle the DCS Airbase objects:</p>
 
@@ -11,7 +11,7 @@
 <li>Enhance with Airbase specific APIs not in the DCS Airbase API set.</li>
 </ul>
 
-<h4 id="1-1-airbase-reference-methods">1.1) AIRBASE reference methods</h4>
+<h5 id="1-1-airbase-reference-methods">1.1) AIRBASE reference methods</h5>
 
 <p>For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
@@ -32,7 +32,7 @@ If the DCS Airbase object does not exist or is nil, the AIRBASE methods will ret
 
 <p>IMPORTANT: ONE SHOULD NEVER SANATIZE these AIRBASE OBJECT REFERENCES! (make the AIRBASE object references nil).</p>
 
-<h4 id="1-2-dcs-airbase-apis">1.2) DCS AIRBASE APIs</h4>
+<h5 id="1-2-dcs-airbase-apis">1.2) DCS AIRBASE APIs</h5>
 
 <p>The DCS Airbase APIs are used extensively within MOOSE. The AIRBASE class has for each DCS Airbase API a corresponding method.
 To be able to distinguish easily in your code the difference between a AIRBASE API call and a DCS Airbase API call,
@@ -61,7 +61,7 @@ BASE
 <ul>
 <li><a href="#airbase-class">AIRBASE</a>
 self</li>
-<li>string AirbaseName : The name of the airbase.</li>
+<li><u>String</u> AirbaseName : The name of the airbase.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -93,7 +93,7 @@ self</li>
 <ul>
 <li><a href="#airbase-class">AIRBASE</a>
 self</li>
-<li>string AirbaseName : The Airbase Name.</li>
+<li><u>String</u> AirbaseName : The Airbase Name.</li>
 </ul>
 
 <h4> Returns </h4>

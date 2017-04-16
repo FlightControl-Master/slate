@@ -46,9 +46,9 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -61,9 +61,9 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -76,9 +76,9 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -91,9 +91,9 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 <li><a href="#unit-class">UNIT</a> TargetUnit</li>
 </ul>
 
@@ -107,9 +107,9 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 <li><a href="#unit-class">UNIT</a> TargetUnit</li>
 </ul>
 

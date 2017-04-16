@@ -2,7 +2,7 @@
 
 <p>This module contains the CONTROLLABLE class.</p>
 
-<h4 id="1-controllable-class-extends-positionable">1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
+<h5 id="1-controllable-class-extends-positionable">1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
 
 <p>The <a href="#controllable-class">CONTROLLABLE</a> class is a wrapper class to handle the DCS Controllable objects:</p>
 
@@ -13,7 +13,7 @@
 <li>Manage the &ldquo;state&rdquo; of the DCS Controllable.</li>
 </ul>
 
-<h4 id="1-1-controllable-constructor">1.1) CONTROLLABLE constructor</h4>
+<h5 id="1-1-controllable-constructor">1.1) CONTROLLABLE constructor</h5>
 
 <p>The CONTROLLABLE class provides the following functions to construct a CONTROLLABLE instance:</p>
 
@@ -21,7 +21,7 @@
 <li><a href="#controllable-new-controllablename">CONTROLLABLE:New()</a>: Create a CONTROLLABLE instance.</li>
 </ul>
 
-<h4 id="1-2-controllable-task-methods">1.2) CONTROLLABLE task methods</h4>
+<h5 id="1-2-controllable-task-methods">1.2) CONTROLLABLE task methods</h5>
 
 <p>Several controllable task methods are available that help you to prepare tasks.
 These methods return a string consisting of the task description, which can then be given to either a <a href="#controllable-pushtask">CONTROLLABLE:PushTask()</a> or @{Controllable#SetTask} method to assign the task to the CONTROLLABLE.
@@ -29,7 +29,7 @@ Tasks are specific for the category of the CONTROLLABLE, more specific, for AIR,
 Each task description where applicable indicates for which controllable category the task is valid.
 There are 2 main subdivisions of tasks: Assigned tasks and EnRoute tasks.</p>
 
-<h4 id="1-2-1-assigned-task-methods">1.2.1) Assigned task methods</h4>
+<h5 id="1-2-1-assigned-task-methods">1.2.1) Assigned task methods</h5>
 
 <p>Assigned task methods make the controllable execute the task where the location of the (possible) targets of the task are known before being detected.
 This is different from the EnRoute tasks, where the targets of the task need to be detected before the task can be executed.</p>
@@ -62,7 +62,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-TaskReturnToBase: (AIR) Route the controllable to an airbase.</li>
 </ul>
 
-<h4 id="1-2-2-enroute-task-methods">1.2.2) EnRoute task methods</h4>
+<h5 id="1-2-2-enroute-task-methods">1.2.2) EnRoute task methods</h5>
 
 <p>EnRoute tasks require the targets of the task need to be detected by the controllable (using its sensors) before the task can be executed:</p>
 
@@ -76,7 +76,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-enroutetasktanker">CONTROLLABLE:EnRouteTaskTanker()</a>: (AIR) Aircraft will act as a tanker for friendly units. No parameters.</li>
 </ul>
 
-<h4 id="1-2-3-preparation-task-methods">1.2.3) Preparation task methods</h4>
+<h5 id="1-2-3-preparation-task-methods">1.2.3) Preparation task methods</h5>
 
 <p>There are certain task methods that allow to tailor the task behaviour:</p>
 
@@ -87,7 +87,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskcontrolled-dcstask-dcsstopcondition">CONTROLLABLE:TaskControlled()</a>: Return a Controlled Task taking a Task and a TaskCondition.</li>
 </ul>
 
-<h4 id="1-2-4-obtain-the-mission-from-controllable-templates">1.2.4) Obtain the mission from controllable templates</h4>
+<h5 id="1-2-4-obtain-the-mission-from-controllable-templates">1.2.4) Obtain the mission from controllable templates</h5>
 
 <p>Controllable templates contain complete mission descriptions. Sometimes you want to copy a complete mission from a controllable and assign it to another:</p>
 
@@ -95,7 +95,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskmission-taskmission">CONTROLLABLE:TaskMission()</a>: (AIR + GROUND) Return a mission task from a mission template.</li>
 </ul>
 
-<h4 id="1-3-controllable-command-methods">1.3) CONTROLLABLE Command methods</h4>
+<h5 id="1-3-controllable-command-methods">1.3) CONTROLLABLE Command methods</h5>
 
 <p>Controllable <strong>command methods</strong> prepare the execution of commands using the <a href="#controllable-setcommand-dcscommand">CONTROLLABLE:SetCommand()</a> method:</p>
 
@@ -104,11 +104,11 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-commandswitchwaypoint-fromwaypoint-towaypoint">CONTROLLABLE:CommandSwitchWayPoint()</a>: Perform a switch waypoint command.</li>
 </ul>
 
-<h4 id="1-4-controllable-option-methods">1.4) CONTROLLABLE Option methods</h4>
+<h5 id="1-4-controllable-option-methods">1.4) CONTROLLABLE Option methods</h5>
 
 <p>Controllable <strong>Option methods</strong> change the behaviour of the Controllable while being alive.</p>
 
-<h4 id="1-4-1-rule-of-engagement">1.4.1) Rule of Engagement:</h4>
+<h5 id="1-4-1-rule-of-engagement">1.4.1) Rule of Engagement:</h5>
 
 <ul>
 <li><a href="#controllable-optionroeweaponfreepossible">CONTROLLABLE:OptionROEWeaponFreePossible()</a></li>
@@ -126,7 +126,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-OptionROEEvadeFirePossible</li>
 </ul>
 
-<h4 id="1-4-2-rule-on-thread">1.4.2) Rule on thread:</h4>
+<h5 id="1-4-2-rule-on-thread">1.4.2) Rule on thread:</h5>
 
 <ul>
 <li><a href="#controllable-optionrotnoreactionpossible">CONTROLLABLE:OptionROTNoReactionPossible()</a></li>
@@ -159,7 +159,7 @@ BASE
 
 <ul>
 <li>Dcs.DCSWrapper.Controllable#Controllable DCSControllable : The DCS controllable class.</li>
-<li>string ControllableName : The name of the controllable.</li>
+<li><u>String</u> ControllableName : The name of the controllable.</li>
 </ul>
 
 <h3 id="controllable-new-controllablename">CONTROLLABLE:New(ControllableName)</h3>
@@ -206,8 +206,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : controllable health value (unit or group average).</li>
-<li>nil The : controllable is not existing or alive.</li>
+<li><u>Number</u> The : controllable health value (unit or group average).</li>
+<li><u>Nil</u> The : controllable is not existing or alive.</li>
 </ul>
 
 <h3 id="controllable-cleartasks">CONTROLLABLE:ClearTasks()</h3>
@@ -279,11 +279,11 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 <li><a href="#time-class">Time</a> time</li>
-<li>string userFlag</li>
-<li>boolean userFlagValue</li>
-<li>string condition</li>
+<li><u>String</u> userFlag</li>
+<li><u>Boolean</u> userFlagValue</li>
+<li><u>String</u> condition</li>
 <li><a href="#time-class">Time</a> duration</li>
-<li>number lastWayPoint</li>
+<li><u>Number</u> lastWayPoint</li>
 </ul>
 
 <h4> Returns </h4>
@@ -296,8 +296,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 <li>Dcs.DCSTasking.Task#Task DCSTask</li>
-<li><a href="#dcss-class">DCSS</a>
-topCondition DCSStopCondition</li>
+<li>#DCSStopCondition DCSStopCondition</li>
 </ul>
 
 <h4> Returns </h4>
@@ -373,8 +372,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number FromWayPoint</li>
-<li>number ToWayPoint</li>
+<li><u>Number</u> FromWayPoint</li>
+<li><u>Number</u> ToWayPoint</li>
 </ul>
 
 <h4> Returns </h4>
@@ -390,7 +389,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>boolean StopRoute : true if the ground unit needs to stop, false if it needs to continue to move.</li>
+<li><u>Boolean</u> StopRoute : true if the ground unit needs to stop, false if it needs to continue to move.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -406,13 +405,13 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20attackgroup%20:%20the%20controllable%20to%20be-class">CONTROLLABLE AttackGroup : The Controllable to be</a> attacked.</li>
-<li>number WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li><a href="#distance%20altitude%20:%20(optional)%20desired%20attack%20start%20altitude.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20altitude.%20if%20the%20altitude%20is%20too%20low%20or%20too%20high%20to%20use%20weapon%20aircraft/controllable%20will%20choose%20closest%20altitude%20to%20the%20desired%20attack%20start%20altitude.%20if%20the%20desired%20altitude%20is%20defined%20controllable/aircraft%20will%20not%20attack%20from%20safe-class">Distance Altitude : (optional) Desired attack start altitude. Controllable/aircraft will make its attacks from the altitude. If the altitude is too low or too high to use weapon aircraft/controllable will choose closest altitude to the desired attack start altitude. If the desired altitude is defined controllable/aircraft will not attack from safe</a> altitude.</li>
-<li>boolean AttackQtyLimit : (optional) The flag determines how to interpret attackQty parameter. If the flag is true then attackQty is a limit on maximal attack quantity for &ldquo;AttackGroup&rdquo; and &ldquo;AttackUnit&rdquo; tasks. If the flag is false then attackQty is a desired attack quantity for &ldquo;Bombing&rdquo; and &ldquo;BombingRunway&rdquo; tasks.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> AttackGroup : The Controllable to be attacked.</li>
+<li><u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><a href="#distance-class">Distance</a> Altitude : (optional) Desired attack start altitude. Controllable/aircraft will make its attacks from the altitude. If the altitude is too low or too high to use weapon aircraft/controllable will choose closest altitude to the desired attack start altitude. If the desired altitude is defined controllable/aircraft will not attack from safe altitude.</li>
+<li><u>Boolean</u> AttackQtyLimit : (optional) The flag determines how to interpret attackQty parameter. If the flag is true then attackQty is a limit on maximal attack quantity for &ldquo;AttackGroup&rdquo; and &ldquo;AttackUnit&rdquo; tasks. If the flag is false then attackQty is a desired attack quantity for &ldquo;Bombing&rdquo; and &ldquo;BombingRunway&rdquo; tasks.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -428,14 +427,14 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#unit%20attackunit%20:%20the-class">UNIT AttackUnit : The</a> UNIT.</li>
-<li>boolean GroupAttack : (optional) If true, all units in the group will attack the Unit when found.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li>number Altitude : (optional) The altitude from where to attack.</li>
-<li>boolean Visible : (optional) not a clue.</li>
-<li>number WeaponType : (optional) The WeaponType.</li>
+<li><a href="#unit-class">UNIT</a> AttackUnit : The UNIT.</li>
+<li><u>Boolean</u> GroupAttack : (optional) If true, all units in the group will attack the Unit when found.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><u>Number</u> Altitude : (optional) The altitude from where to attack.</li>
+<li><u>Boolean</u> Visible : (optional) not a clue.</li>
+<li><u>Number</u> WeaponType : (optional) The WeaponType.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -451,12 +450,12 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20vec2%20:%202d-coordinates%20of%20the%20point%20to%20deliver%20weapon-class">Vec2 Vec2 : 2D-coordinates of the point to deliver weapon</a> at.</li>
-<li>number WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) Desired quantity of passes. The parameter is not the same in AttackGroup and AttackUnit tasks.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li>boolean ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
+<li><a href="#vec2-class">Vec2</a> Vec2 : 2D-coordinates of the point to deliver weapon at.</li>
+<li><u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) Desired quantity of passes. The parameter is not the same in AttackGroup and AttackUnit tasks.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><u>Boolean</u> ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -472,9 +471,9 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20point%20:%20the%20point%20to%20hold%20the-class">Vec2 Point : The point to hold the</a> position.</li>
-<li>number Altitude : The altitude to hold the position.</li>
-<li>number Speed : The speed flying when holding the position.</li>
+<li><a href="#vec2-class">Vec2</a> Point : The point to hold the position.</li>
+<li><u>Number</u> Altitude : The altitude to hold the position.</li>
+<li><u>Number</u> Speed : The speed flying when holding the position.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -491,8 +490,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number Altitude : The altitude to hold the position.</li>
-<li>number Speed : The speed flying when holding the position.</li>
+<li><u>Number</u> Altitude : The altitude to hold the position.</li>
+<li><u>Number</u> Speed : The speed flying when holding the position.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -509,7 +508,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number Duration : The maximum duration in seconds to hold the position.</li>
+<li><u>Number</u> Duration : The maximum duration in seconds to hold the position.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -526,12 +525,12 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20vec2%20:%202d-coordinates%20of%20the%20point%20the%20map%20object%20is%20closest%20to.%20the%20distance%20between%20the%20point%20and%20the%20map%20object%20must%20not%20be%20greater%20than%202000%20meters.%20object%20id%20is%20not%20used%20here%20because%20mission%20editor%20doesn't%20support%20map%20object-class">Vec2 Vec2 : 2D-coordinates of the point the map object is closest to. The distance between the point and the map object must not be greater than 2000 meters. Object id is not used here because Mission Editor doesn&rsquo;t support map object</a> identificators.</li>
-<li>number WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li>boolean ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
+<li><a href="#vec2-class">Vec2</a> Vec2 : 2D-coordinates of the point the map object is closest to. The distance between the point and the map object must not be greater than 2000 meters. Object id is not used here because Mission Editor doesn&rsquo;t support map object identificators.</li>
+<li><u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><u>Boolean</u> ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -547,12 +546,12 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#airbase%20airbase%20:%20airbase%20to-class">AIRBASE Airbase : Airbase to</a> attack.</li>
-<li>number WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li>boolean ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
+<li><a href="#airbase-class">AIRBASE</a> Airbase : Airbase to attack.</li>
+<li><u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><u>Boolean</u> ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -583,8 +582,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20point%20:%20the%20point%20where%20to-class">Vec2 Point : The point where to</a> land.</li>
-<li>number Duration : The duration in seconds to stay on the ground.</li>
+<li><a href="#vec2-class">Vec2</a> Point : The point where to land.</li>
+<li><u>Number</u> Duration : The duration in seconds to stay on the ground.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -601,8 +600,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#zone%20zone%20:%20the%20zone%20where%20to-class">ZONE Zone : The zone where to</a> land.</li>
-<li>number Duration : The duration in seconds to stay on the ground.</li>
+<li><a href="#zone-class">ZONE</a> Zone : The zone where to land.</li>
+<li><u>Number</u> Duration : The duration in seconds to stay on the ground.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -619,9 +618,9 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20followcontrollable%20:%20the%20controllable%20to%20be-class">CONTROLLABLE FollowControllable : The controllable to be</a> followed.</li>
-<li><a href="#vec3%20vec3%20:%20position%20of%20the%20unit%20/%20lead%20unit%20of%20the%20controllable%20relative%20lead%20unit%20of%20another%20controllable%20in%20frame%20reference%20oriented%20by%20course%20of%20lead%20unit%20of%20another%20controllable.%20if%20another%20controllable%20is%20on%20land%20the%20unit%20/%20controllable%20will%20orbit-class">Vec3 Vec3 : Position of the unit / lead unit of the controllable relative lead unit of another controllable in frame reference oriented by course of lead unit of another controllable. If another controllable is on land the unit / controllable will orbit</a> around.</li>
-<li>number LastWaypointIndex : Detach waypoint of another controllable. Once reached the unit / controllable Follow task is finished.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> FollowControllable : The controllable to be followed.</li>
+<li><a href="#vec3-class">Vec3</a> Vec3 : Position of the unit / lead unit of the controllable relative lead unit of another controllable in frame reference oriented by course of lead unit of another controllable. If another controllable is on land the unit / controllable will orbit around.</li>
+<li><u>Number</u> LastWaypointIndex : Detach waypoint of another controllable. Once reached the unit / controllable Follow task is finished.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -637,11 +636,11 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20escortcontrollable%20:%20the%20controllable%20to%20be-class">CONTROLLABLE EscortControllable : The controllable to be</a> escorted.</li>
-<li><a href="#vec3%20vec3%20:%20position%20of%20the%20unit%20/%20lead%20unit%20of%20the%20controllable%20relative%20lead%20unit%20of%20another%20controllable%20in%20frame%20reference%20oriented%20by%20course%20of%20lead%20unit%20of%20another%20controllable.%20if%20another%20controllable%20is%20on%20land%20the%20unit%20/%20controllable%20will%20orbit-class">Vec3 Vec3 : Position of the unit / lead unit of the controllable relative lead unit of another controllable in frame reference oriented by course of lead unit of another controllable. If another controllable is on land the unit / controllable will orbit</a> around.</li>
-<li>number LastWaypointIndex : Detach waypoint of another controllable. Once reached the unit / controllable Follow task is finished.</li>
-<li>number EngagementDistanceMax : Maximal distance from escorted controllable to threat. If the threat is already engaged by escort escort will disengage if the distance becomes greater than 1.5 * engagementDistMax.</li>
-<li><a href="#attributenamearray%20targettypes%20:%20array%20of%20attributename%20that%20is%20contains%20threat%20categories%20allowed%20to-class">AttributeNameArray TargetTypes : Array of AttributeName that is contains threat categories allowed to</a> engage.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> EscortControllable : The controllable to be escorted.</li>
+<li><a href="#vec3-class">Vec3</a> Vec3 : Position of the unit / lead unit of the controllable relative lead unit of another controllable in frame reference oriented by course of lead unit of another controllable. If another controllable is on land the unit / controllable will orbit around.</li>
+<li><u>Number</u> LastWaypointIndex : Detach waypoint of another controllable. Once reached the unit / controllable Follow task is finished.</li>
+<li><u>Number</u> EngagementDistanceMax : Maximal distance from escorted controllable to threat. If the threat is already engaged by escort escort will disengage if the distance becomes greater than 1.5 * engagementDistMax.</li>
+<li><a href="#attributenamearray-class">AttributeNameArray</a> TargetTypes : Array of AttributeName that is contains threat categories allowed to engage.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -657,9 +656,9 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20vec2%20:%20the%20point%20to%20fire-class">Vec2 Vec2 : The point to fire</a> at.</li>
-<li><a href="#distance%20radius%20:%20the%20radius%20of%20the%20zone%20to%20deploy%20the%20fire-class">Distance Radius : The radius of the zone to deploy the fire</a> at.</li>
-<li>number AmmoCount : (optional) Quantity of ammunition to expand (omit to fire until ammunition is depleted).</li>
+<li><a href="#vec2-class">Vec2</a> Vec2 : The point to fire at.</li>
+<li><a href="#distance-class">Distance</a> Radius : The radius of the zone to deploy the fire at.</li>
+<li><u>Number</u> AmmoCount : (optional) Quantity of ammunition to expand (omit to fire until ammunition is depleted).</li>
 </ul>
 
 <h4> Returns </h4>
@@ -690,10 +689,10 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20attackgroup%20:%20target-class">CONTROLLABLE AttackGroup : Target</a> CONTROLLABLE.</li>
-<li>number WeaponType : Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.designation%20designation%20:%20(optional)%20designation-class">AI.Task.Designation Designation : (optional) Designation</a> type.</li>
-<li>boolean Datalink : (optional) Allows to use datalink to send the target information to attack aircraft. Enabled by default.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> AttackGroup : Target CONTROLLABLE.</li>
+<li><u>Number</u> WeaponType : Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.designation-class">AI.Task.Designation</a> Designation : (optional) Designation type.</li>
+<li><u>Boolean</u> Datalink : (optional) Allows to use datalink to send the target information to attack aircraft. Enabled by default.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -709,9 +708,9 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#distance%20distance%20:%20maximal%20distance%20from%20the%20target%20to%20a%20route%20leg.%20if%20the%20target%20is%20on%20a%20greater%20distance%20it%20will%20be-class">Distance Distance : Maximal distance from the target to a route leg. If the target is on a greater distance it will be</a> ignored.</li>
-<li><a href="#attributenamearray%20targettypes%20:%20array%20of%20target%20categories%20allowed%20to-class">AttributeNameArray TargetTypes : Array of target categories allowed to</a> engage.</li>
-<li>number Priority : All enroute tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><a href="#distance-class">Distance</a> Distance : Maximal distance from the target to a route leg. If the target is on a greater distance it will be ignored.</li>
+<li><a href="#attributenamearray-class">AttributeNameArray</a> TargetTypes : Array of target categories allowed to engage.</li>
+<li><u>Number</u> Priority : All enroute tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -727,10 +726,10 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20vec2%20:%202d-coordinates%20of%20the-class">Vec2 Vec2 : 2D-coordinates of the</a> zone.</li>
-<li><a href="#distance%20radius%20:%20radius%20of%20the-class">Distance Radius : Radius of the</a> zone.</li>
-<li><a href="#attributenamearray%20targettypes%20:%20array%20of%20target%20categories%20allowed%20to-class">AttributeNameArray TargetTypes : Array of target categories allowed to</a> engage.</li>
-<li>number Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><a href="#vec2-class">Vec2</a> Vec2 : 2D-coordinates of the zone.</li>
+<li><a href="#distance-class">Distance</a> Radius : Radius of the zone.</li>
+<li><a href="#attributenamearray-class">AttributeNameArray</a> TargetTypes : Array of target categories allowed to engage.</li>
+<li><u>Number</u> Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -746,14 +745,14 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20attackgroup%20:%20the%20controllable%20to%20be-class">CONTROLLABLE AttackGroup : The Controllable to be</a> attacked.</li>
-<li>number Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
-<li>number WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li><a href="#distance%20altitude%20:%20(optional)%20desired%20attack%20start%20altitude.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20altitude.%20if%20the%20altitude%20is%20too%20low%20or%20too%20high%20to%20use%20weapon%20aircraft/controllable%20will%20choose%20closest%20altitude%20to%20the%20desired%20attack%20start%20altitude.%20if%20the%20desired%20altitude%20is%20defined%20controllable/aircraft%20will%20not%20attack%20from%20safe-class">Distance Altitude : (optional) Desired attack start altitude. Controllable/aircraft will make its attacks from the altitude. If the altitude is too low or too high to use weapon aircraft/controllable will choose closest altitude to the desired attack start altitude. If the desired altitude is defined controllable/aircraft will not attack from safe</a> altitude.</li>
-<li>boolean AttackQtyLimit : (optional) The flag determines how to interpret attackQty parameter. If the flag is true then attackQty is a limit on maximal attack quantity for &ldquo;AttackGroup&rdquo; and &ldquo;AttackUnit&rdquo; tasks. If the flag is false then attackQty is a desired attack quantity for &ldquo;Bombing&rdquo; and &ldquo;BombingRunway&rdquo; tasks.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> AttackGroup : The Controllable to be attacked.</li>
+<li><u>Number</u> Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><a href="#distance-class">Distance</a> Altitude : (optional) Desired attack start altitude. Controllable/aircraft will make its attacks from the altitude. If the altitude is too low or too high to use weapon aircraft/controllable will choose closest altitude to the desired attack start altitude. If the desired altitude is defined controllable/aircraft will not attack from safe altitude.</li>
+<li><u>Boolean</u> AttackQtyLimit : (optional) The flag determines how to interpret attackQty parameter. If the flag is true then attackQty is a limit on maximal attack quantity for &ldquo;AttackGroup&rdquo; and &ldquo;AttackUnit&rdquo; tasks. If the flag is false then attackQty is a desired attack quantity for &ldquo;Bombing&rdquo; and &ldquo;BombingRunway&rdquo; tasks.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -769,15 +768,15 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#unit%20engageunit%20:%20the-class">UNIT EngageUnit : The</a> UNIT.</li>
-<li>number Priority : (optional) All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
-<li>boolean GroupAttack : (optional) If true, all units in the group will attack the Unit when found.</li>
-<li><a href="#ai.task.weaponexpend%20weaponexpend%20:%20(optional)%20determines%20how%20much%20weapon%20will%20be%20released%20at%20each%20attack.%20if%20parameter%20is%20not%20defined%20the%20unit%20/%20controllable%20will%20choose%20expend%20on%20its%20own-class">AI.Task.WeaponExpend WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own</a> discretion.</li>
-<li>number AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
-<li><a href="#azimuth%20direction%20:%20(optional)%20desired%20ingress%20direction%20from%20the%20target%20to%20the%20attacking%20aircraft.%20controllable/aircraft%20will%20make%20its%20attacks%20from%20the%20direction.%20of%20course%20if%20there%20is%20no%20way%20to%20attack%20from%20the%20direction%20due%20the%20terrain%20controllable/aircraft%20will%20choose%20another-class">Azimuth Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another</a> direction.</li>
-<li><a href="#distance%20altitude%20:%20(optional)%20desired%20altitude%20to%20perform%20the%20unit-class">Distance Altitude : (optional) Desired altitude to perform the unit</a> engagement.</li>
-<li>boolean Visible : (optional) Unit must be visible.</li>
-<li>boolean ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
+<li><a href="#unit-class">UNIT</a> EngageUnit : The UNIT.</li>
+<li><u>Number</u> Priority : (optional) All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><u>Boolean</u> GroupAttack : (optional) If true, all units in the group will attack the Unit when found.</li>
+<li><a href="#ai.task.weaponexpend-class">AI.Task.WeaponExpend</a> WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.</li>
+<li><u>Number</u> AttackQty : (optional) This parameter limits maximal quantity of attack. The aicraft/controllable will not make more attack than allowed even if the target controllable not destroyed and the aicraft/controllable still have ammo. If not defined the aircraft/controllable will attack target until it will be destroyed or until the aircraft/controllable will run out of ammo.</li>
+<li><a href="#azimuth-class">Azimuth</a> Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.</li>
+<li><a href="#distance-class">Distance</a> Altitude : (optional) Desired altitude to perform the unit engagement.</li>
+<li><u>Boolean</u> Visible : (optional) Unit must be visible.</li>
+<li><u>Boolean</u> ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -838,11 +837,11 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20attackgroup%20:%20target-class">CONTROLLABLE AttackGroup : Target</a> CONTROLLABLE.</li>
-<li>number Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
-<li>number WeaponType : Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
-<li><a href="#ai.task.designation%20designation%20:%20(optional)%20designation-class">AI.Task.Designation Designation : (optional) Designation</a> type.</li>
-<li>boolean Datalink : (optional) Allows to use datalink to send the target information to attack aircraft. Enabled by default.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> AttackGroup : Target CONTROLLABLE.</li>
+<li><u>Number</u> Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><u>Number</u> WeaponType : Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.</li>
+<li><a href="#ai.task.designation-class">AI.Task.Designation</a> Designation : (optional) Designation type.</li>
+<li><u>Boolean</u> Datalink : (optional) Allows to use datalink to send the target information to attack aircraft. Enabled by default.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -858,8 +857,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#distance%20radius%20:%20%20the%20maximal%20distance%20from%20the%20fac%20to%20a-class">Distance Radius :  The maximal distance from the FAC to a</a> target.</li>
-<li>number Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
+<li><a href="#distance-class">Distance</a> Radius :  The maximal distance from the FAC to a target.</li>
+<li><u>Number</u> Priority : All en-route tasks have the priority parameter. This is a number (less value - higher priority) that determines actions related to what task will be performed first.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -875,8 +874,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20point%20:%20the%20point%20where%20to-class">Vec2 Point : The point where to</a> wait.</li>
-<li>number Duration : The duration in seconds to wait.</li>
+<li><a href="#vec2-class">Vec2</a> Point : The point where to wait.</li>
+<li><u>Number</u> Duration : The duration in seconds to wait.</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 EmbarkingControllable : The controllable to be embarked.</li>
 </ul>
@@ -894,8 +893,8 @@ EmbarkingControllable : The controllable to be embarked.</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec2%20point%20:%20the%20point%20where%20to-class">Vec2 Point : The point where to</a> wait.</li>
-<li>number Radius : The radius of the embarking zone around the Point.</li>
+<li><a href="#vec2-class">Vec2</a> Point : The point where to wait.</li>
+<li><u>Number</u> Radius : The radius of the embarking zone around the Point.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -911,7 +910,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>table[] TaskMission : A table containing the mission task.</li>
+<li><u>List[]</u> TaskMission : A table containing the mission task.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -927,7 +926,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>table[] Points : A table of route points.</li>
+<li><u>List[]</u> Points : A table of route points.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -943,8 +942,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec3%20point%20:%20the%20destination%20point%20in%20vec3-class">Vec3 Point : The destination point in Vec3</a> format.</li>
-<li>number Speed : The speed to travel.</li>
+<li><a href="#vec3-class">Vec3</a> Point : The destination point in Vec3 format.</li>
+<li><u>Number</u> Speed : The speed to travel.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -961,8 +960,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#vec3%20point%20:%20the%20destination%20point%20in%20vec3-class">Vec3 Point : The destination point in Vec3</a> format.</li>
-<li>number Speed : The speed to travel.</li>
+<li><a href="#vec3-class">Vec3</a> Point : The destination point in Vec3 format.</li>
+<li><u>Number</u> Speed : The speed to travel.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -979,7 +978,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>table[] GoPoints : A table of Route Points.</li>
+<li><u>List[]</u> GoPoints : A table of Route Points.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -996,10 +995,10 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li><a href="#zone%20zone%20:%20the%20zone%20where%20to%20route-class">ZONE Zone : The zone where to route</a> to.</li>
-<li>boolean Randomize : Defines whether to target point gets randomized within the Zone.</li>
-<li>number Speed : The speed.</li>
-<li><a href="#formation%20formation%20:%20the%20formation-class">FORMATION Formation : The formation</a> string.</li>
+<li><a href="#zone-class">ZONE</a> Zone : The zone where to route to.</li>
+<li><u>Boolean</u> Randomize : Defines whether to target point gets randomized within the Zone.</li>
+<li><u>Number</u> Speed : The speed.</li>
+<li><a href="#formation-class">FORMATION</a> Formation : The formation string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1011,14 +1010,13 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>string DoScript</li>
+<li><u>String</u> DoScript</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#dcsc-class">DCSC</a>
-ommand self</li>
+<li>#DCSCommand self</li>
 </ul>
 
 <h3 id="controllable-gettaskmission">CONTROLLABLE:GetTaskMission()</h3>
@@ -1033,7 +1031,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] The : MissionTemplate</li>
+<li><u>List[]</u> The : MissionTemplate</li>
 </ul>
 
 <h3 id="controllable-gettaskroute">CONTROLLABLE:GetTaskRoute()</h3>
@@ -1048,7 +1046,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] The : mission route defined by points.</li>
+<li><u>List[]</u> The : mission route defined by points.</li>
 </ul>
 
 <h3 id="controllable-copyroute-begin-end-randomize-radius">CONTROLLABLE:CopyRoute(Begin, End, Randomize, Radius)</h3>
@@ -1058,10 +1056,10 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number Begin : The route point from where the copy will start. The base route point is 0.</li>
-<li>number End : The route point where the copy will end. The End point is the last point - the End point. The last point has base 0.</li>
-<li>boolean Randomize : Randomization of the route, when true.</li>
-<li>number Radius : When randomization is on, the randomization is within the radius.</li>
+<li><u>Number</u> Begin : The route point from where the copy will start. The base route point is 0.</li>
+<li><u>Number</u> End : The route point where the copy will end. The End point is the last point - the End point. The last point has base 0.</li>
+<li><u>Boolean</u> Randomize : Randomization of the route, when true.</li>
+<li><u>Number</u> Radius : When randomization is on, the randomization is within the radius.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1072,18 +1070,18 @@ self</li>
 
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a> self</li>
-<li>boolean DetectVisual : (optional)</li>
-<li>boolean DetectOptical : (optional)</li>
-<li>boolean DetectRadar : (optional)</li>
-<li>boolean DetectIRST : (optional)</li>
-<li>boolean DetectRWR : (optional)</li>
-<li>boolean DetectDLINK : (optional)</li>
+<li><u>Boolean</u> DetectVisual : (optional)</li>
+<li><u>Boolean</u> DetectOptical : (optional)</li>
+<li><u>Boolean</u> DetectRadar : (optional)</li>
+<li><u>Boolean</u> DetectIRST : (optional)</li>
+<li><u>Boolean</u> DetectRWR : (optional)</li>
+<li><u>Boolean</u> DetectDLINK : (optional)</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>table[] DetectedTargets</li>
+<li><u>List[]</u> DetectedTargets</li>
 </ul>
 
 <h3 id="controllable-optionroeholdfirepossible">CONTROLLABLE:OptionROEHoldFirePossible()</h3>
@@ -1098,7 +1096,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionroeholdfire">CONTROLLABLE:OptionROEHoldFire()</h3>
@@ -1127,7 +1125,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionroereturnfire">CONTROLLABLE:OptionROEReturnFire()</h3>
@@ -1158,7 +1156,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionroeopenfire">CONTROLLABLE:OptionROEOpenFire()</h3>
@@ -1189,7 +1187,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionroeweaponfree">CONTROLLABLE:OptionROEWeaponFree()</h3>
@@ -1220,7 +1218,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionrotnoreaction">CONTROLLABLE:OptionROTNoReaction()</h3>
@@ -1251,7 +1249,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionrotpassivedefense">CONTROLLABLE:OptionROTPassiveDefense()</h3>
@@ -1282,7 +1280,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionrotevadefire">CONTROLLABLE:OptionROTEvadeFire()</h3>
@@ -1313,7 +1311,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="controllable-optionrotvertical">CONTROLLABLE:OptionROTVertical()</h3>
@@ -1339,7 +1337,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>table[] WayPoints : If WayPoints is given, then use the route.</li>
+<li><u>List[]</u> WayPoints : If WayPoints is given, then use the route.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1361,7 +1359,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] WayPoints : If WayPoints is given, then return the WayPoints structure.</li>
+<li><u>List[]</u> WayPoints : If WayPoints is given, then return the WayPoints structure.</li>
 </ul>
 
 <h3 id="controllable-waypointfunction-waypoint-waypointindex-waypointfunction">CONTROLLABLE:WayPointFunction(WayPoint, WayPointIndex, WayPointFunction)</h3>
@@ -1371,9 +1369,9 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number WayPoint : The waypoint number. Note that the start waypoint on the route is WayPoint 1!</li>
-<li>number WayPointIndex : When defining multiple WayPoint functions for one WayPoint, use WayPointIndex to set the sequence of actions.</li>
-<li>#function WayPointFunction : The waypoint function to be called when the controllable moves over the waypoint. The waypoint function takes variable parameters.</li>
+<li><u>Number</u> WayPoint : The waypoint number. Note that the start waypoint on the route is WayPoint 1!</li>
+<li><u>Number</u> WayPointIndex : When defining multiple WayPoint functions for one WayPoint, use WayPointIndex to set the sequence of actions.</li>
+<li><u>Function()</u> WayPointFunction : The waypoint function to be called when the controllable moves over the waypoint. The waypoint function takes variable parameters.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1390,8 +1388,8 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
-<li>number WayPoint : The WayPoint from where to execute the mission.</li>
-<li>number WaitTime : The amount seconds to wait before initiating the mission.</li>
+<li><u>Number</u> WayPoint : The WayPoint from where to execute the mission.</li>
+<li><u>Number</u> WaitTime : The amount seconds to wait before initiating the mission.</li>
 </ul>
 
 <h4> Returns </h4>

@@ -29,13 +29,13 @@
 <li>Trigger events when objects in the SET change a zone presence.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <h2 id="set_base-class">SET_BASE Class</h2>
 
@@ -51,11 +51,11 @@ In this way, large loops can be done while not blocking the simulator main proce
 The default <strong>&ldquo;yield interval&rdquo;</strong> is after 10 objects processed.
 The default <strong>&ldquo;time interval&rdquo;</strong> is after 0.001 seconds.</p>
 
-<h4 id="1-1-add-or-remove-objects-from-the-set">1.1) Add or remove objects from the SET</h4>
+<h5 id="1-1-add-or-remove-objects-from-the-set">1.1) Add or remove objects from the SET</h5>
 
 <p>Some key core functions are <a href="#set_base-add-objectname-object">SET_BASE:Add()</a> and <a href="#set_base-remove-objectname">SET_BASE:Remove()</a> to add or remove objects from the SET in your logic.</p>
 
-<h4 id="1-2-define-the-set-iterator-yield-interval-and-the-time-interval">1.2) Define the SET iterator <strong>&ldquo;yield interval&rdquo;</strong> and the <strong>&ldquo;time interval&rdquo;</strong></h4>
+<h5 id="1-2-define-the-set-iterator-yield-interval-and-the-time-interval">1.2) Define the SET iterator <strong>&ldquo;yield interval&rdquo;</strong> and the <strong>&ldquo;time interval&rdquo;</strong></h5>
 
 <p>Modify the iterator intervals with the SET_BASE-SetInteratorIntervals method.
 You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&ldquo;time interval&rdquo;</strong>. (See above).</p>
@@ -63,9 +63,9 @@ You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&
 <h4> Attributes </h4>
 
 <ul>
-<li>table[] Filter</li>
-<li>table[] Set</li>
-<li>table[] List</li>
+<li><u>List[]</u> Filter</li>
+<li><u>List[]</u> Set</li>
+<li><u>List[]</u> List</li>
 <li><a href="#scheduler-class">SCHEDULER</a> CallScheduler</li>
 </ul>
 
@@ -110,14 +110,14 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>string ObjectName</li>
+<li><u>String</u> ObjectName</li>
 <li><a href="#base-class">BASE</a> Object</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#base%20the%20:%20added%20base-class">BASE The : added BASE</a> Object.</li>
+<li><a href="#base-class">BASE</a> The : added BASE Object.</li>
 </ul>
 
 <h3 id="set_base-addobject-object">SET_BASE:AddObject(Object)</h3>
@@ -133,7 +133,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#base%20the%20:%20added%20base-class">BASE The : added BASE</a> Object.</li>
+<li><a href="#base-class">BASE</a> The : added BASE Object.</li>
 </ul>
 
 <h3 id="set_base-remove-objectname">SET_BASE:Remove(ObjectName)</h3>
@@ -143,7 +143,7 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>string ObjectName</li>
+<li><u>String</u> ObjectName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -155,7 +155,7 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>string ObjectName</li>
+<li><u>String</u> ObjectName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -221,7 +221,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number Count</li>
+<li><u>Number</u> Count</li>
 </ul>
 
 <h3 id="set_base-setdatabase-baseset">SET_BASE:SetDatabase(BaseSet)</h3>
@@ -249,8 +249,8 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>number YieldInterval : Sets the frequency when the iterator loop will yield after the number of objects processed. The default frequency is 10 objects processed.</li>
-<li>number TimeInterval : Sets the time in seconds when the main logic will resume the iterator loop. The default time is 0.001 seconds.</li>
+<li><u>Number</u> YieldInterval : Sets the frequency when the iterator loop will yield after the number of objects processed. The default frequency is 10 objects processed.</li>
+<li><u>Number</u> TimeInterval : Sets the time in seconds when the main logic will resume the iterator loop. The default time is 0.001 seconds.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -299,13 +299,13 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li><a href="#point_vec2%20pointvec2%20:%20a%20@{point#point_vec2}%20object%20from%20where%20to%20evaluate%20the%20closest%20object%20in%20the-class">POINT_VEC2 PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest object in the</a> set.</li>
+<li><a href="#point_vec2-class">POINT_VEC2</a> PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest object in the set.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#base%20the%20:%20closest-class">BASE The : closest</a> object.</li>
+<li><a href="#base-class">BASE</a> The : closest object.</li>
 </ul>
 
 <h3 id="set_base-foreach-iteratorfunction">SET_BASE:ForEach(IteratorFunction)</h3>
@@ -315,7 +315,7 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>#function IteratorFunction : The function that will be called.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -332,7 +332,7 @@ self</li>
 <ul>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
-<li>table[] Object</li>
+<li><u>List[]</u> Object</li>
 </ul>
 
 <h4> Returns </h4>
@@ -354,7 +354,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string A : string with the names of the objects.</li>
+<li><u>String</u> A : string with the names of the objects.</li>
 </ul>
 
 <h2 id="set_group-class">SET_GROUP Class</h2>
@@ -375,7 +375,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="2-1-set_group-constructor">2.1) SET_GROUP constructor</h4>
+<h5 id="2-1-set_group-constructor">2.1) SET_GROUP constructor</h5>
 
 <p>Create a new SET_GROUP object with the <a href="#set_group-new">SET_GROUP:New()</a> method:</p>
 
@@ -383,12 +383,12 @@ BASE
 <li><a href="#set_group-new">SET_GROUP:New()</a>: Creates a new SET_GROUP object.</li>
 </ul>
 
-<h4 id="2-2-add-or-remove-group-s-from-set_group">2.2) Add or Remove GROUP(s) from SET_GROUP</h4>
+<h5 id="2-2-add-or-remove-group-s-from-set_group">2.2) Add or Remove GROUP(s) from SET_GROUP</h5>
 
 <p>GROUPS can be added and removed using the <a href="#set_group-addgroupsbyname-addgroupnames">SET_GROUP:AddGroupsByName()</a> and <a href="#set_group-removegroupsbyname-removegroupnames">SET_GROUP:RemoveGroupsByName()</a> respectively.
 These methods take a single GROUP name or an array of GROUP names to be added or removed from SET_GROUP.</p>
 
-<h4 id="2-3-set_group-filter-criteria">2.3) SET_GROUP filter criteria</h4>
+<h5 id="2-3-set_group-filter-criteria">2.3) SET_GROUP filter criteria</h5>
 
 <p>You can set filter criteria to define the set of groups within the SET_GROUP.
 Filter criteria are defined by:</p>
@@ -412,7 +412,7 @@ Filter criteria are defined by:</p>
 <li>SET_GROUP-FilterZones: Builds the SET_GROUP with the groups within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="2-4-set_group-iterators">2.4) SET_GROUP iterators</h4>
+<h5 id="2-4-set_group-iterators">2.4) SET_GROUP iterators</h5>
 
 <p>Once the filters have been defined and the SET_GROUP has been built, you can iterate the SET_GROUP with the available iterator methods.
 The iterator methods will walk the SET_GROUP set, and call for each element within the set a function that you provide.
@@ -449,7 +449,7 @@ self</li>
 
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a> self</li>
-<li>string AddGroupNames : A single name or an array of GROUP names.</li>
+<li><u>String</u> AddGroupNames : A single name or an array of GROUP names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -464,7 +464,7 @@ self</li>
 
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a> self</li>
-<li><a href="#group%20removegroupnames%20:%20a%20single%20name%20or%20an%20array%20of%20group-class">GROUP RemoveGroupNames : A single name or an array of GROUP</a> names.</li>
+<li><a href="#group-class">GROUP</a> RemoveGroupNames : A single name or an array of GROUP names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -480,13 +480,13 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>string GroupName</li>
+<li><u>String</u> GroupName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#group%20the%20:%20found-class">GROUP The : found</a> Group.</li>
+<li><a href="#group-class">GROUP</a> The : found Group.</li>
 </ul>
 
 <h3 id="set_group-filtercoalitions-coalitions">SET_GROUP:FilterCoalitions(Coalitions)</h3>
@@ -496,7 +496,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>string Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -513,7 +513,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>string Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -530,7 +530,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>string Countries : Can take those country strings known within DCS world.</li>
+<li><u>String</u> Countries : Can take those country strings known within DCS world.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -547,7 +547,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>string Prefixes : The prefix of which the group name starts with.</li>
+<li><u>String</u> Prefixes : The prefix of which the group name starts with.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -586,8 +586,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the GROUP</li>
-<li>table[] The : GROUP</li>
+<li><u>String</u> The : name of the GROUP</li>
+<li><u>List[]</u> The : GROUP</li>
 </ul>
 
 <h3 id="set_group-findindatabase-event">SET_GROUP:FindInDatabase(Event)</h3>
@@ -603,8 +603,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the GROUP</li>
-<li>table[] The : GROUP</li>
+<li><u>String</u> The : name of the GROUP</li>
+<li><u>List[]</u> The : GROUP</li>
 </ul>
 
 <h3 id="set_group-foreachgroup-iteratorfunction">SET_GROUP:ForEachGroup(IteratorFunction)</h3>
@@ -614,7 +614,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -631,8 +631,8 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -649,8 +649,8 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -667,8 +667,8 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -714,7 +714,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="3-1-set_unit-constructor">3.1) SET_UNIT constructor</h4>
+<h5 id="3-1-set_unit-constructor">3.1) SET_UNIT constructor</h5>
 
 <p>Create a new SET_UNIT object with the <a href="#set_unit-new">SET_UNIT:New()</a> method:</p>
 
@@ -722,12 +722,12 @@ BASE
 <li><a href="#set_unit-new">SET_UNIT:New()</a>: Creates a new SET_UNIT object.</li>
 </ul>
 
-<h4 id="3-2-add-or-remove-unit-s-from-set_unit">3.2) Add or Remove UNIT(s) from SET_UNIT</h4>
+<h5 id="3-2-add-or-remove-unit-s-from-set_unit">3.2) Add or Remove UNIT(s) from SET_UNIT</h5>
 
 <p>UNITs can be added and removed using the <a href="#set_unit-addunitsbyname-addunitnames">SET_UNIT:AddUnitsByName()</a> and <a href="#set_unit-removeunitsbyname-removeunitnames">SET_UNIT:RemoveUnitsByName()</a> respectively.
 These methods take a single UNIT name or an array of UNIT names to be added or removed from SET_UNIT.</p>
 
-<h4 id="3-3-set_unit-filter-criteria">3.3) SET_UNIT filter criteria</h4>
+<h5 id="3-3-set_unit-filter-criteria">3.3) SET_UNIT filter criteria</h5>
 
 <p>You can set filter criteria to define the set of units within the SET_UNIT.
 Filter criteria are defined by:</p>
@@ -752,7 +752,7 @@ Filter criteria are defined by:</p>
 <li>SET_UNIT-FilterZones: Builds the SET_UNIT with the units within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="3-4-set_unit-iterators">3.4) SET_UNIT iterators</h4>
+<h5 id="3-4-set_unit-iterators">3.4) SET_UNIT iterators</h5>
 
 <p>Once the filters have been defined and the SET_UNIT has been built, you can iterate the SET_UNIT with the available iterator methods.
 The iterator methods will walk the SET_UNIT set, and call for each element within the set a function that you provide.
@@ -772,7 +772,7 @@ The following iterator methods are currently available within the SET_UNIT:</p>
 <li><a href="#set_unit-foreachunitnotinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitNotInZone()</a>: Iterate and call an iterator function for each <strong>alive</strong> UNIT presence not in a <a href="#zone-module">Zone</a>, providing the UNIT and optional parameters to the called function.</li>
 </ul>
 
-<h4 id="3-5-set_unit-atomic-methods">3.5 ) SET_UNIT atomic methods</h4>
+<h5 id="3-5-set_unit-atomic-methods">3.5 ) SET_UNIT atomic methods</h5>
 
 <p>Various methods exist for a SET_UNIT to perform actions or calculations and retrieve results from the SET_UNIT:</p>
 
@@ -805,7 +805,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string AddUnit : A single UNIT.</li>
+<li><u>String</u> AddUnit : A single UNIT.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -822,7 +822,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string AddUnitNames : A single name or an array of UNIT names.</li>
+<li><u>String</u> AddUnitNames : A single name or an array of UNIT names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -838,7 +838,7 @@ self</li>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> self</li>
-<li><a href="#unit%20removeunitnames%20:%20a%20single%20name%20or%20an%20array%20of%20unit-class">UNIT RemoveUnitNames : A single name or an array of UNIT</a> names.</li>
+<li><a href="#unit-class">UNIT</a> RemoveUnitNames : A single name or an array of UNIT names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -854,13 +854,13 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string UnitName</li>
+<li><u>String</u> UnitName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#unit%20the%20:%20found-class">UNIT The : found</a> Unit.</li>
+<li><a href="#unit-class">UNIT</a> The : found Unit.</li>
 </ul>
 
 <h3 id="set_unit-filtercoalitions-coalitions">SET_UNIT:FilterCoalitions(Coalitions)</h3>
@@ -870,7 +870,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -887,7 +887,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -904,7 +904,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Types : Can take those type strings known within DCS world.</li>
+<li><u>String</u> Types : Can take those type strings known within DCS world.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -921,7 +921,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Countries : Can take those country strings known within DCS world.</li>
+<li><u>String</u> Countries : Can take those country strings known within DCS world.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -938,7 +938,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Prefixes : The prefix of which the unit name starts with.</li>
+<li><u>String</u> Prefixes : The prefix of which the unit name starts with.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -955,7 +955,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>table[] RadarTypes : The radar types.</li>
+<li><u>List[]</u> RadarTypes : The radar types.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1010,8 +1010,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the UNIT</li>
-<li>table[] The : UNIT</li>
+<li><u>String</u> The : name of the UNIT</li>
+<li><u>List[]</u> The : UNIT</li>
 </ul>
 
 <h3 id="set_unit-findindatabase-event">SET_UNIT:FindInDatabase(Event)</h3>
@@ -1027,8 +1027,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the UNIT</li>
-<li>table[] The : UNIT</li>
+<li><u>String</u> The : name of the UNIT</li>
+<li><u>List[]</u> The : UNIT</li>
 </ul>
 
 <h3 id="set_unit-foreachunit-iteratorfunction">SET_UNIT:ForEachUnit(IteratorFunction)</h3>
@@ -1038,7 +1038,7 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1055,8 +1055,8 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1073,8 +1073,8 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive UNIT in the SET_UNIT. The function needs to accept a UNIT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1096,7 +1096,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>#map<string,number> A : map of the unit types found. The key is the UnitTypeName and the value is the amount of unit types found.</li>
+<li>#map&lt;<u>String</u>,<u>Number</u>&gt; A : map of the unit types found. The key is the UnitTypeName and the value is the amount of unit types found.</li>
 </ul>
 
 <h3 id="set_unit-getunittypestext">SET_UNIT:GetUnitTypesText()</h3>
@@ -1111,7 +1111,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : unit types string</li>
+<li><u>String</u> The : unit types string</li>
 </ul>
 
 <h3 id="set_unit-getunitthreatlevels">SET_UNIT:GetUnitThreatLevels()</h3>
@@ -1126,7 +1126,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[]. self</li>
+<li><u>List[]</u>. self</li>
 </ul>
 
 <h3 id="set_unit-calculatethreatlevela2g">SET_UNIT:CalculateThreatLevelA2G()</h3>
@@ -1153,7 +1153,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : amount of radars in the Set with the given type</li>
+<li><u>Number</u> The : amount of radars in the Set with the given type</li>
 </ul>
 
 <h3 id="set_unit-hassead">SET_UNIT:HasSEAD()</h3>
@@ -1168,7 +1168,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : amount of SEADable units in the Set</li>
+<li><u>Number</u> The : amount of SEADable units in the Set</li>
 </ul>
 
 <h3 id="set_unit-hasgroundunits">SET_UNIT:HasGroundUnits()</h3>
@@ -1183,7 +1183,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : amount of ground targets in the Set.</li>
+<li><u>Number</u> The : amount of ground targets in the Set.</li>
 </ul>
 
 <h3 id="set_unit-hasfriendlyunits">SET_UNIT:HasFriendlyUnits()</h3>
@@ -1198,7 +1198,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : amount of ground targets in the Set.</li>
+<li><u>Number</u> The : amount of ground targets in the Set.</li>
 </ul>
 
 <h3 id="set_unit-isincludeobject-munit">SET_UNIT:IsIncludeObject(MUnit)</h3>
@@ -1225,13 +1225,13 @@ self</li>
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li>string Delimiter : (optional) The delimiter, which is default a comma.</li>
+<li><u>String</u> Delimiter : (optional) The delimiter, which is default a comma.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>string The : types of the <a href="#unit-module">Unit</a>s delimited.</li>
+<li><u>String</u> The : types of the <a href="#unit-module">Unit</a>s delimited.</li>
 </ul>
 
 <h2 id="set_client-class">SET_CLIENT Class</h2>
@@ -1253,7 +1253,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4 id="4-1-set_client-constructor">4.1) SET_CLIENT constructor</h4>
+<h5 id="4-1-set_client-constructor">4.1) SET_CLIENT constructor</h5>
 
 <p>Create a new SET_CLIENT object with the <a href="#set_client-new">SET_CLIENT:New()</a> method:</p>
 
@@ -1261,12 +1261,12 @@ BASE
 <li><a href="#set_client-new">SET_CLIENT:New()</a>: Creates a new SET_CLIENT object.</li>
 </ul>
 
-<h4 id="4-2-add-or-remove-client-s-from-set_client">4.2) Add or Remove CLIENT(s) from SET_CLIENT</h4>
+<h5 id="4-2-add-or-remove-client-s-from-set_client">4.2) Add or Remove CLIENT(s) from SET_CLIENT</h5>
 
 <p>CLIENTs can be added and removed using the <a href="#set_client-addclientsbyname-addclientnames">SET_CLIENT:AddClientsByName()</a> and <a href="#set_client-removeclientsbyname-removeclientnames">SET_CLIENT:RemoveClientsByName()</a> respectively.
 These methods take a single CLIENT name or an array of CLIENT names to be added or removed from SET_CLIENT.</p>
 
-<h4 id="4-3-set_client-filter-criteria">4.3) SET_CLIENT filter criteria</h4>
+<h5 id="4-3-set_client-filter-criteria">4.3) SET_CLIENT filter criteria</h5>
 
 <p>You can set filter criteria to define the set of clients within the SET_CLIENT.
 Filter criteria are defined by:</p>
@@ -1291,7 +1291,7 @@ Filter criteria are defined by:</p>
 <li>SET_CLIENT-FilterZones: Builds the SET_CLIENT with the clients within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4 id="4-4-set_client-iterators">4.4) SET_CLIENT iterators</h4>
+<h5 id="4-4-set_client-iterators">4.4) SET_CLIENT iterators</h5>
 
 <p>Once the filters have been defined and the SET_CLIENT has been built, you can iterate the SET_CLIENT with the available iterator methods.
 The iterator methods will walk the SET_CLIENT set, and call for each element within the set a function that you provide.
@@ -1325,7 +1325,7 @@ self</li>
 
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> self</li>
-<li>string AddClientNames : A single name or an array of CLIENT names.</li>
+<li><u>String</u> AddClientNames : A single name or an array of CLIENT names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1340,7 +1340,7 @@ self</li>
 
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> self</li>
-<li><a href="#client%20removeclientnames%20:%20a%20single%20name%20or%20an%20array%20of%20client-class">CLIENT RemoveClientNames : A single name or an array of CLIENT</a> names.</li>
+<li><a href="#client-class">CLIENT</a> RemoveClientNames : A single name or an array of CLIENT names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1356,13 +1356,13 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string ClientName</li>
+<li><u>String</u> ClientName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#client%20the%20:%20found-class">CLIENT The : found</a> Client.</li>
+<li><a href="#client-class">CLIENT</a> The : found Client.</li>
 </ul>
 
 <h3 id="set_client-filtercoalitions-coalitions">SET_CLIENT:FilterCoalitions(Coalitions)</h3>
@@ -1372,7 +1372,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1389,7 +1389,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1406,7 +1406,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string Types : Can take those type strings known within DCS world.</li>
+<li><u>String</u> Types : Can take those type strings known within DCS world.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1423,7 +1423,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string Countries : Can take those country strings known within DCS world.</li>
+<li><u>String</u> Countries : Can take those country strings known within DCS world.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1440,7 +1440,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>string Prefixes : The prefix of which the client name starts with.</li>
+<li><u>String</u> Prefixes : The prefix of which the client name starts with.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1479,8 +1479,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the CLIENT</li>
-<li>table[] The : CLIENT</li>
+<li><u>String</u> The : name of the CLIENT</li>
+<li><u>List[]</u> The : CLIENT</li>
 </ul>
 
 <h3 id="set_client-findindatabase-event">SET_CLIENT:FindInDatabase(Event)</h3>
@@ -1496,8 +1496,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the CLIENT</li>
-<li>table[] The : CLIENT</li>
+<li><u>String</u> The : name of the CLIENT</li>
+<li><u>List[]</u> The : CLIENT</li>
 </ul>
 
 <h3 id="set_client-foreachclient-iteratorfunction">SET_CLIENT:ForEachClient(IteratorFunction)</h3>
@@ -1507,7 +1507,7 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1524,8 +1524,8 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1542,8 +1542,8 @@ self</li>
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li><a href="#zone%20zoneobject%20:%20the%20zone%20to%20be%20tested-class">ZONE ZoneObject : The Zone to be tested</a> for.</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive CLIENT in the SET_CLIENT. The function needs to accept a CLIENT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1585,7 +1585,7 @@ BASE
 <li>Coalitions</li>
 </ul>
 
-<h4 id="5-1-set_airbase-constructor">5.1) SET_AIRBASE constructor</h4>
+<h5 id="5-1-set_airbase-constructor">5.1) SET_AIRBASE constructor</h5>
 
 <p>Create a new SET_AIRBASE object with the <a href="#set_airbase-new">SET_AIRBASE:New()</a> method:</p>
 
@@ -1593,12 +1593,12 @@ BASE
 <li><a href="#set_airbase-new">SET_AIRBASE:New()</a>: Creates a new SET_AIRBASE object.</li>
 </ul>
 
-<h4 id="5-2-add-or-remove-airbases-from-set_airbase">5.2) Add or Remove AIRBASEs from SET_AIRBASE</h4>
+<h5 id="5-2-add-or-remove-airbases-from-set_airbase">5.2) Add or Remove AIRBASEs from SET_AIRBASE</h5>
 
 <p>AIRBASEs can be added and removed using the <a href="#set_airbase-addairbasesbyname-addairbasenames">SET_AIRBASE:AddAirbasesByName()</a> and <a href="#set_airbase-removeairbasesbyname-removeairbasenames">SET_AIRBASE:RemoveAirbasesByName()</a> respectively.
 These methods take a single AIRBASE name or an array of AIRBASE names to be added or removed from SET_AIRBASE.</p>
 
-<h4 id="5-3-set_airbase-filter-criteria">5.3) SET_AIRBASE filter criteria</h4>
+<h5 id="5-3-set_airbase-filter-criteria">5.3) SET_AIRBASE filter criteria</h5>
 
 <p>You can set filter criteria to define the set of clients within the SET_AIRBASE.
 Filter criteria are defined by:</p>
@@ -1613,7 +1613,7 @@ Filter criteria are defined by:</p>
 <li><a href="#set_airbase-filterstart">SET_AIRBASE:FilterStart()</a>: Starts the filtering of the airbases within the SET_AIRBASE.</li>
 </ul>
 
-<h4 id="5-4-set_airbase-iterators">5.4) SET_AIRBASE iterators</h4>
+<h5 id="5-4-set_airbase-iterators">5.4) SET_AIRBASE iterators</h5>
 
 <p>Once the filters have been defined and the SET_AIRBASE has been built, you can iterate the SET_AIRBASE with the available iterator methods.
 The iterator methods will walk the SET_AIRBASE set, and call for each airbase within the set a function that you provide.
@@ -1647,7 +1647,7 @@ self</li>
 
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a> self</li>
-<li>string AddAirbaseNames : A single name or an array of AIRBASE names.</li>
+<li><u>String</u> AddAirbaseNames : A single name or an array of AIRBASE names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1662,7 +1662,7 @@ self</li>
 
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a> self</li>
-<li><a href="#airbase%20removeairbasenames%20:%20a%20single%20name%20or%20an%20array%20of%20airbase-class">AIRBASE RemoveAirbaseNames : A single name or an array of AIRBASE</a> names.</li>
+<li><a href="#airbase-class">AIRBASE</a> RemoveAirbaseNames : A single name or an array of AIRBASE names.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1678,13 +1678,13 @@ self</li>
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li>string AirbaseName</li>
+<li><u>String</u> AirbaseName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase%20the%20:%20found-class">AIRBASE The : found</a> Airbase.</li>
+<li><a href="#airbase-class">AIRBASE</a> The : found Airbase.</li>
 </ul>
 
 <h3 id="set_airbase-filtercoalitions-coalitions">SET_AIRBASE:FilterCoalitions(Coalitions)</h3>
@@ -1694,7 +1694,7 @@ self</li>
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li>string Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1711,7 +1711,7 @@ self</li>
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li>string Categories : Can take the following values: &ldquo;airdrome&rdquo;, &ldquo;helipad&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &ldquo;airdrome&rdquo;, &ldquo;helipad&rdquo;, &ldquo;ship&rdquo;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1750,8 +1750,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the AIRBASE</li>
-<li>table[] The : AIRBASE</li>
+<li><u>String</u> The : name of the AIRBASE</li>
+<li><u>List[]</u> The : AIRBASE</li>
 </ul>
 
 <h3 id="set_airbase-findindatabase-event">SET_AIRBASE:FindInDatabase(Event)</h3>
@@ -1767,8 +1767,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the AIRBASE</li>
-<li>table[] The : AIRBASE</li>
+<li><u>String</u> The : name of the AIRBASE</li>
+<li><u>List[]</u> The : AIRBASE</li>
 </ul>
 
 <h3 id="set_airbase-foreachairbase-iteratorfunction">SET_AIRBASE:ForEachAirbase(IteratorFunction)</h3>
@@ -1778,7 +1778,7 @@ self</li>
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li>#function IteratorFunction : The function that will be called when there is an alive AIRBASE in the SET_AIRBASE. The function needs to accept a AIRBASE parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive AIRBASE in the SET_AIRBASE. The function needs to accept a AIRBASE parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1795,13 +1795,13 @@ self</li>
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li><a href="#point_vec2%20pointvec2%20:%20a%20@{point#point_vec2}%20object%20from%20where%20to%20evaluate%20the%20closest-class">POINT_VEC2 PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest</a> <a href="#airbase-class">AIRBASE</a>.</li>
+<li><a href="#point_vec2-class">POINT_VEC2</a> PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest <a href="#airbase-class">AIRBASE</a>.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase%20the%20:%20closest-class">AIRBASE The : closest</a> <a href="#airbase-class">AIRBASE</a>.</li>
+<li><a href="#airbase-class">AIRBASE</a> The : closest <a href="#airbase-class">AIRBASE</a>.</li>
 </ul>
 
 <h3 id="set_airbase-isincludeobject-mairbase">SET_AIRBASE:IsIncludeObject(MAirbase)</h3>

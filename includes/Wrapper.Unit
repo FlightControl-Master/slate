@@ -30,7 +30,7 @@ BASE
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
-<li>string UnitName : The name of the DCS unit.</li>
+<li><u>String</u> UnitName : The name of the DCS unit.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -64,7 +64,7 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
-<li>string UnitName : The Unit Name.</li>
+<li><u>String</u> UnitName : The Unit Name.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -86,7 +86,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : UNIT name.</li>
+<li><u>String</u> The : UNIT name.</li>
 </ul>
 
 <h3 id="unit-getdcsobject">UNIT:GetDCSObject()</h3>
@@ -111,8 +111,8 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
-<li><a href="#vec3%20spawnvec3%20:%20the%20position%20where%20to%20spawn%20the%20new%20unit-class">Vec3 SpawnVec3 : The position where to Spawn the new Unit</a> at.</li>
-<li>number Heading : The heading of the unit respawn.</li>
+<li><a href="#vec3-class">Vec3</a> SpawnVec3 : The position where to Spawn the new Unit at.</li>
+<li><u>Number</u> Heading : The heading of the unit respawn.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -129,8 +129,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Unit is activated.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Boolean</u> true : if Unit is activated.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-isalive">UNIT:IsAlive()</h3>
@@ -145,9 +145,9 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Unit is alive and active.</li>
-<li>boolean false : if Unit is alive but not active.</li>
-<li>nil if : the Unit is not existing or is not alive.</li>
+<li><u>Boolean</u> true : if Unit is alive and active.</li>
+<li><u>Boolean</u> false : if Unit is alive but not active.</li>
+<li><u>Nil</u> if : the Unit is not existing or is not alive.</li>
 </ul>
 
 <h3 id="unit-getcallsign">UNIT:GetCallsign()</h3>
@@ -162,8 +162,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Callsign of the Unit.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>String</u> The : Callsign of the Unit.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getplayername">UNIT:GetPlayerName()</h3>
@@ -178,8 +178,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string Player : Name</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>String</u> Player : Name</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getnumber">UNIT:GetNumber()</h3>
@@ -194,8 +194,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : Unit number.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Number</u> The : Unit number.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getgroup">UNIT:GetGroup()</h3>
@@ -209,8 +209,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#group%20the%20:%20group%20of%20the-class">GROUP The : Group of the</a> Unit.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><a href="#group-class">GROUP</a> The : Group of the Unit.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getprefix">UNIT:GetPrefix()</h3>
@@ -225,8 +225,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the DCS Unit.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>String</u> The : name of the DCS Unit.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getammo">UNIT:GetAmmo()</h3>
@@ -242,7 +242,7 @@ self</li>
 
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit.Ammo self</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getsensors">UNIT:GetSensors()</h3>
@@ -258,7 +258,7 @@ self</li>
 
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit.Sensors self</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-hassensors">UNIT:HasSensors()</h3>
@@ -273,8 +273,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean returns : true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&rsquo;t want to get information about all the unit&rsquo;s sensors, and just want to check if the unit has specified types of sensors.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Boolean</u> returns : true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&rsquo;t want to get information about all the unit&rsquo;s sensors, and just want to check if the unit has specified types of sensors.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-hassead">UNIT:HasSEAD()</h3>
@@ -289,8 +289,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean returns : true if the unit is SEADable.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Boolean</u> returns : true if the unit is SEADable.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getradar">UNIT:GetRadar()</h3>
@@ -305,9 +305,9 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self : Indicates if at least one of the unit&rsquo;s radar(s) is on.</li>
+<li><u>Boolean</u> self : Indicates if at least one of the unit&rsquo;s radar(s) is on.</li>
 <li>Dcs.DCSWrapper.Object#Object The : object of the radar&rsquo;s interest. Not nil only if at least one radar of the unit is tracking a target.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getfuel">UNIT:GetFuel()</h3>
@@ -322,8 +322,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : relative amount of fuel (from 0.0 to 1.0).</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Number</u> The : relative amount of fuel (from 0.0 to 1.0).</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getunits">UNIT:GetUnits()</h3>
@@ -353,8 +353,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : Unit&rsquo;s health value.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Number</u> The : Unit&rsquo;s health value.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getlife0">UNIT:GetLife0()</h3>
@@ -369,8 +369,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>number The : Unit&rsquo;s initial health value.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Number</u> The : Unit&rsquo;s initial health value.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-getcategoryname">UNIT:GetCategoryName()</h3>
@@ -385,7 +385,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string Category : name = Helicopter, Airplane, Ground Unit, Ship</li>
+<li><u>String</u> Category : name = Helicopter, Airplane, Ground Unit, Ship</li>
 </ul>
 
 <h3 id="unit-getthreatlevel">UNIT:GetThreatLevel()</h3>
@@ -406,13 +406,13 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
-<li><a href="#zone_base%20zone%20:%20the%20zone%20to-class">ZONE_BASE Zone : The zone to</a> test.</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone : The zone to test.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Returns : true if the unit is within the <a href="#zone_base-class">ZONE_BASE</a></li>
+<li><u>Boolean</u> Returns : true if the unit is within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
 
 <h3 id="unit-isnotinzone-zone">UNIT:IsNotInZone(Zone)</h3>
@@ -422,13 +422,13 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a>
 self</li>
-<li><a href="#zone_base%20zone%20:%20the%20zone%20to-class">ZONE_BASE Zone : The zone to</a> test.</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone : The zone to test.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Returns : true if the unit is not within the <a href="#zone_base-class">ZONE_BASE</a></li>
+<li><u>Boolean</u> Returns : true if the unit is not within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
 
 <h3 id="unit-otherunitinradius-awaitunit-the">UNIT:OtherUnitInRadius(AwaitUnit, The)</h3>
@@ -447,7 +447,7 @@ AwaitUnit : The other UNIT wrapper object.</li>
 
 <ul>
 <li>true If : the other DCS Unit is within the radius of the 2D point of the DCS Unit.</li>
-<li>nil The : DCS Unit is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-flare-flarecolor">UNIT:Flare(FlareColor)</h3>
@@ -584,7 +584,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Air : category evaluation result.</li>
+<li><u>Boolean</u> Air : category evaluation result.</li>
 </ul>
 
 <h3 id="unit-isground">UNIT:IsGround()</h3>
@@ -599,7 +599,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Ground : category evaluation result.</li>
+<li><u>Boolean</u> Ground : category evaluation result.</li>
 </ul>
 
 <h3 id="unit-isfriendly">UNIT:IsFriendly()</h3>
@@ -614,7 +614,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean IsFriendly : evaluation result.</li>
+<li><u>Boolean</u> IsFriendly : evaluation result.</li>
 </ul>
 
 <h3 id="unit-isship">UNIT:IsShip()</h3>
@@ -629,7 +629,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Ship : category evaluation result.</li>
+<li><u>Boolean</u> Ship : category evaluation result.</li>
 </ul>
 
 <h3 id="unit-inair">UNIT:InAir()</h3>
@@ -643,8 +643,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if in the air.</li>
-<li>nil The : UNIT is not existing or alive.</li>
+<li><u>Boolean</u> true : if in the air.</li>
+<li><u>Nil</u> The : UNIT is not existing or alive.</li>
 </ul>
 
 <h3 id="unit-handleevent-event-eventfunction">UNIT:HandleEvent(Event, EventFunction)</h3>
@@ -655,7 +655,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 <li><a href="#events-class">EVENTS</a> Event</li>
-<li>#function EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
+<li><u>Function()</u> EventFunction : (optional) The function to be called when the event occurs for the unit.</li>
 </ul>
 
 <h4> Returns </h4>

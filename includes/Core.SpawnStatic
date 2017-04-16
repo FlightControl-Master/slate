@@ -6,19 +6,19 @@
 
 <p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
 
-<h4 id="demo-missions">Demo Missions</h4>
+<h5 id="demo-missions">Demo Missions</h5>
 
-<h4 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h4>
+<h5 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h5>
 
-<h4 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h4>
+<h5 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h5>
 
-<h4 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h4>
+<h5 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5>
 
-<h4 id="youtube-channel">YouTube Channel</h4>
+<h5 id="youtube-channel">YouTube Channel</h5>
 
-<h4 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h4>
+<h5 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h5>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -29,11 +29,11 @@
 
 <p>Hereby the change log:</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
@@ -61,7 +61,7 @@ By default, spawned <a href="#static-module">Static</a>s will follow a naming co
 and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 </ul>
 
-<h4 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h4>
+<h5 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h5>
 
 <p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
 
@@ -69,7 +69,7 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 <li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
 </ul>
 
-<h4 id="spawn-methods"><strong>Spawn</strong> methods</h4>
+<h5 id="spawn-methods"><strong>Spawn</strong> methods</h5>
 
 <p>Groups can be spawned at different times and methods:</p>
 
@@ -86,7 +86,7 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 <ul>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
-<li>string SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.</li>
+<li><u>String</u> SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -103,7 +103,7 @@ self</li>
 <ul>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
-<li>string SpawnTypeName : is the name of the type.</li>
+<li><u>String</u> SpawnTypeName : is the name of the type.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -120,9 +120,9 @@ self</li>
 <ul>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
-<li><a href="#point_vec2%20pointvec2%20:%20the%202d%20coordinate%20where%20to%20spawn%20the-class">POINT_VEC2 PointVec2 : The 2D coordinate where to spawn the</a> static.</li>
-<li>number Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
-<li>string (optional) : The name of the new static.</li>
+<li><a href="#point_vec2-class">POINT_VEC2</a> PointVec2 : The 2D coordinate where to spawn the static.</li>
+<li><u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
+<li><u>String</u> (optional) : The name of the new static.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -139,9 +139,9 @@ self</li>
 <ul>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
-<li><a href="#zone_base%20zone%20:%20the%20zone%20where%20to%20spawn%20the-class">ZONE_BASE Zone : The Zone where to spawn the</a> static.</li>
-<li>number Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
-<li>string (optional) : The name of the new static.</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> Zone : The Zone where to spawn the static.</li>
+<li><u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
+<li><u>String</u> (optional) : The name of the new static.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -156,3 +156,9 @@ self</li>
 <pre>
 **The SPAWNSTATIC.SpawnZoneTable class does not inherit**
 </pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>List[]</u>[Core.Zone#ZONE_BASE] SpawnZone</li>
+</ul>

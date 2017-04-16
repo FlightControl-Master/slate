@@ -2,7 +2,7 @@
 
 <p><strong>Tasking</strong> &ndash; This module contains the TASK class.</p>
 
-<h4 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h4>
+<h5 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h5>
 
 <h2 id="task-class">TASK Class</h2>
 
@@ -19,7 +19,7 @@ BASE
 <ul>
 <li><a href="#scheduler-class">SCHEDULER</a> TaskScheduler</li>
 <li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#set_group%20setgroup%20:%20the%20set%20of%20groups%20assigned%20to%20the-class">SET_GROUP SetGroup : The Set of Groups assigned to the</a> Task</li>
+<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The Set of Groups assigned to the Task</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> FsmTemplate</li>
 <li><a href="#mission-class">MISSION</a> Mission</li>
 <li><a href="#commandcenter-class">COMMANDCENTER</a> CommandCenter</li>
@@ -34,8 +34,8 @@ BASE
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20went%20back%20to%20spectators%20or%20left%20the-class">UNIT PlayerUnit : The Unit of the Player when he went back to spectators or left the</a> mission.</li>
-<li>string PlayerName : The name of the Player.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he went back to spectators or left the mission.</li>
+<li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -49,8 +49,8 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20crashed%20in%20the-class">UNIT PlayerUnit : The Unit of the Player when he crashed in the</a> mission.</li>
-<li>string PlayerName : The name of the Player.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he crashed in the mission.</li>
+<li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -64,8 +64,8 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20unit%20of%20the%20player%20when%20he%20died%20in%20the-class">UNIT PlayerUnit : The Unit of the Player when he died in the</a> mission.</li>
-<li>string PlayerName : The name of the Player.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he died in the mission.</li>
+<li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -147,10 +147,10 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#mission%20mission%20:%20the%20mission%20wherein%20the%20task%20is-class">MISSION Mission : The mission wherein the Task is</a> registered.</li>
-<li><a href="#set_group%20setgroupassign%20:%20the%20set%20of%20groups%20for%20which%20the%20task%20can%20be-class">SET_GROUP SetGroupAssign : The set of groups for which the Task can be</a> assigned.</li>
-<li>string TaskName : The name of the Task</li>
-<li>string TaskType : The type of the Task</li>
+<li><a href="#mission-class">MISSION</a> Mission : The mission wherein the Task is registered.</li>
+<li><a href="#set_group-class">SET_GROUP</a> SetGroupAssign : The set of groups for which the Task can be assigned.</li>
+<li><u>String</u> TaskName : The name of the Task</li>
+<li><u>String</u> TaskType : The type of the Task</li>
 </ul>
 
 <h4> Returns </h4>
@@ -194,14 +194,14 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20joining%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player joining the</a> Mission.</li>
-<li><a href="#group%20playergroup%20:%20the%20group%20of%20the%20player%20joining%20the-class">GROUP PlayerGroup : The GROUP of the player joining the</a> Mission.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
+<li><a href="#group-class">GROUP</a> PlayerGroup : The GROUP of the player joining the Mission.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Unit is part of the Task.</li>
+<li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
 
 <h3 id="task-abortunit-playerunit">TASK:AbortUnit(PlayerUnit)</h3>
@@ -211,13 +211,13 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20aborting%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player aborting the</a> Task.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Unit is part of the Task.</li>
+<li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
 
 <h3 id="task-crashunit-playerunit">TASK:CrashUnit(PlayerUnit)</h3>
@@ -227,13 +227,13 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li><a href="#unit%20playerunit%20:%20the%20client%20or%20unit%20of%20the%20player%20aborting%20the-class">UNIT PlayerUnit : The CLIENT or UNIT of the Player aborting the</a> Task.</li>
+<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Unit is part of the Task.</li>
+<li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
 
 <h3 id="task-getmission">TASK:GetMission()</h3>
@@ -296,7 +296,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="task-assigntounit-taskunit">TASK:AssignToUnit(TaskUnit)</h3>
@@ -407,7 +407,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="task-hasaliveunits">TASK:HasAliveUnits()</h3>
@@ -422,7 +422,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean self</li>
+<li><u>Boolean</u> self</li>
 </ul>
 
 <h3 id="task-setmenu-menutime">TASK:SetMenu(MenuTime)</h3>
@@ -432,7 +432,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -449,7 +449,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -467,8 +467,8 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 <li><a href="#group-class">GROUP</a> TaskGroup</li>
-<li>string MenuText : The menu text.</li>
-<li>number MenuTime</li>
+<li><u>String</u> MenuText : The menu text.</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -486,7 +486,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 <li><a href="#group-class">GROUP</a> TaskGroup</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -503,7 +503,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -521,7 +521,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 <li><a href="#group-class">GROUP</a> TaskGroup</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -539,7 +539,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 <li><a href="#group-class">GROUP</a> TaskGroup</li>
-<li>number MenuTime</li>
+<li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
@@ -583,7 +583,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string TaskName</li>
+<li><u>String</u> TaskName</li>
 </ul>
 
 <h3 id="task-getprocesstemplate-processname">TASK:GetProcessTemplate(ProcessName)</h3>
@@ -593,7 +593,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string ProcessName</li>
+<li><u>String</u> ProcessName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -609,7 +609,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string TaskUnitName</li>
+<li><u>String</u> TaskUnitName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -714,7 +714,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Task ID</li>
+<li><u>String</u> The : Task ID</li>
 </ul>
 
 <h3 id="task-setname-taskname">TASK:SetName(TaskName)</h3>
@@ -724,7 +724,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string TaskName</li>
+<li><u>String</u> TaskName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -741,7 +741,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : Task Name</li>
+<li><u>String</u> The : Task Name</li>
 </ul>
 
 <h3 id="task-settype-tasktype">TASK:SetType(TaskType)</h3>
@@ -751,7 +751,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string TaskType</li>
+<li><u>String</u> TaskType</li>
 </ul>
 
 <h4> Returns </h4>
@@ -768,7 +768,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string TaskType</li>
+<li><u>String</u> TaskType</li>
 </ul>
 
 <h3 id="task-setid-taskid">TASK:SetID(TaskID)</h3>
@@ -778,7 +778,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string TaskID</li>
+<li><u>String</u> TaskID</li>
 </ul>
 
 <h4> Returns </h4>
@@ -795,7 +795,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string TaskID</li>
+<li><u>String</u> TaskID</li>
 </ul>
 
 <h3 id="task-statesuccess">TASK:StateSuccess()</h3>
@@ -992,7 +992,7 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string TaskBriefing</li>
+<li><u>String</u> TaskBriefing</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1009,9 +1009,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1023,9 +1023,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1037,9 +1037,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string From</li>
-<li>string Event</li>
-<li>string To</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1051,9 +1051,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string From</li>
-<li>string Event</li>
-<li>string To</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1065,9 +1065,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string From</li>
-<li>string Event</li>
-<li>string To</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1079,9 +1079,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1093,9 +1093,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1107,9 +1107,9 @@ self</li>
 <ul>
 <li><a href="#task-class">TASK</a>
 self</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1143,7 +1143,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>
 
 <h3 id="task-reportdetails">TASK:ReportDetails()</h3>
@@ -1158,5 +1158,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string self</li>
+<li><u>String</u> self</li>
 </ul>

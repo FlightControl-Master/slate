@@ -2,7 +2,7 @@
 
 <p>This module contains the MISSILETRAINER class.</p>
 
-<h4 id="1-missiletrainer-class-extends-base">1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h4>
+<h5 id="1-missiletrainer-class-extends-base">1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h5>
 
 <p>The <a href="#missiletrainer-class">MISSILETRAINER</a> class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
 the class will destroy the missile within a certain range, to avoid damage to your aircraft.
@@ -48,7 +48,7 @@ It suports the following functionality:</p>
 <li><strong>200 meter</strong>: Destroys the missile when the distance to the aircraft is below or equal to 200 meter.</li>
 </ul>
 
-<h4 id="1-1-missiletrainer-construction-methods">1.1) MISSILETRAINER construction methods:</h4>
+<h5 id="1-1-missiletrainer-construction-methods">1.1) MISSILETRAINER construction methods:</h5>
 
 <p>Create a new MISSILETRAINER object with the <a href="#missiletrainer-new-distance-briefing">MISSILETRAINER:New()</a> method:</p>
 
@@ -58,7 +58,7 @@ It suports the following functionality:</p>
 
 <p>MISSILETRAINER will collect each unit declared in the mission with a skill level &ldquo;Client&rdquo; and &ldquo;Player&rdquo;, and will monitor the missiles shot at those.</p>
 
-<h4 id="1-2-missiletrainer-initialization-methods">1.2) MISSILETRAINER initialization methods:</h4>
+<h5 id="1-2-missiletrainer-initialization-methods">1.2) MISSILETRAINER initialization methods:</h5>
 
 <p>A MISSILETRAINER object will behave differently based on the usage of initialization methods:</p>
 
@@ -103,8 +103,8 @@ BASE
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>number Distance : The distance in meters when a tracked missile needs to be destroyed when close to a player.</li>
-<li>string Briefing : (Optional) Will show a text to the players when starting their mission. Can be used for briefing purposes.</li>
+<li><u>Number</u> Distance : The distance in meters when a tracked missile needs to be destroyed when close to a player.</li>
+<li><u>String</u> Briefing : (Optional) Will show a text to the players when starting their mission. Can be used for briefing purposes.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -121,7 +121,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean MessagesOnOff : true or false</li>
+<li><u>Boolean</u> MessagesOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -138,7 +138,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean TrackingToAll : true or false</li>
+<li><u>Boolean</u> TrackingToAll : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -155,7 +155,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean TrackingOnOff : true or false</li>
+<li><u>Boolean</u> TrackingOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -172,7 +172,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>number TrackingFrequency : Provide a negative or positive value in seconds to incraese or decrease the display frequency.</li>
+<li><u>Number</u> TrackingFrequency : Provide a negative or positive value in seconds to incraese or decrease the display frequency.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -189,7 +189,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean AlertsToAll : true or false</li>
+<li><u>Boolean</u> AlertsToAll : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -206,7 +206,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean AlertsHitsOnOff : true or false</li>
+<li><u>Boolean</u> AlertsHitsOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -223,7 +223,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean AlertsLaunchesOnOff : true or false</li>
+<li><u>Boolean</u> AlertsLaunchesOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -240,7 +240,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean DetailsRangeOnOff : true or false</li>
+<li><u>Boolean</u> DetailsRangeOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -257,7 +257,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean DetailsBearingOnOff : true or false</li>
+<li><u>Boolean</u> DetailsBearingOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>
@@ -274,7 +274,7 @@ self</li>
 <ul>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
-<li>boolean MenusOnOff : true or false</li>
+<li><u>Boolean</u> MenusOnOff : true or false</li>
 </ul>
 
 <h4> Returns </h4>

@@ -6,7 +6,7 @@ even when there are hardly any players in the mission.</strong></p>
 
 <p><img src="/includes/Pictures/AI_Balancer/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4 id="1-ai_balancer-class-extends-fsm_set">1) <a href="#ai_balancer-class">AI_BALANCER</a> class, extends <a href="#fsm_set-class">FSM_SET</a></h4>
+<h5 id="1-ai_balancer-class-extends-fsm_set">1) <a href="#ai_balancer-class">AI_BALANCER</a> class, extends <a href="#fsm_set-class">FSM_SET</a></h5>
 
 <p>The <a href="#ai_balancer-class">AI_BALANCER</a> class monitors and manages as many replacement AI groups as there are
 CLIENTS in a SET_CLIENT collection, which are not occupied by human players.
@@ -22,15 +22,15 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>AI_BALANCER-OnAfterSpawned</strong>( AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.</li>
 </ul>
 
-<h4 id="1-1-ai_balancer-construction">1.1) AI_BALANCER construction</h4>
+<h5 id="1-1-ai_balancer-construction">1.1) AI_BALANCER construction</h5>
 
 <p>Create a new AI_BALANCER object with the <a href="#ai_balancer-new-setclient-spawnai">AI_BALANCER:New()</a> method:</p>
 
-<h4 id="1-2-ai_balancer-is-a-fsm">1.2) AI_BALANCER is a FSM</h4>
+<h5 id="1-2-ai_balancer-is-a-fsm">1.2) AI_BALANCER is a FSM</h5>
 
 <p><img src="/includes/Pictures/AI_Balancer/Dia13.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_balancer-states">1.2.1) AI_BALANCER States</h4>
+<h5 id="1-2-1-ai_balancer-states">1.2.1) AI_BALANCER States</h5>
 
 <ul>
 <li><strong>Monitoring</strong> ( Set ): Monitoring the Set if all AI is spawned for the Clients.</li>
@@ -40,7 +40,7 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Returning</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods. Handle this state to customize the return behaviour of the AI, if any.</li>
 </ul>
 
-<h4 id="1-2-2-ai_balancer-events">1.2.2) AI_BALANCER Events</h4>
+<h5 id="1-2-2-ai_balancer-events">1.2.2) AI_BALANCER Events</h5>
 
 <ul>
 <li><strong>Monitor</strong> ( Set ): Every 10 seconds, the Monitor event is triggered to monitor the Set.</li>
@@ -50,11 +50,11 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Return</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods.</li>
 </ul>
 
-<h4 id="1-3-ai_balancer-spawn-interval-for-replacement-ai">1.3) AI_BALANCER spawn interval for replacement AI</h4>
+<h5 id="1-3-ai_balancer-spawn-interval-for-replacement-ai">1.3) AI_BALANCER spawn interval for replacement AI</h5>
 
 <p>Use the method <a href="#ai_balancer-initspawninterval-earliest-latest">AI_BALANCER:InitSpawnInterval()</a> to set the earliest and latest interval in seconds that is waited until a new replacement AI is spawned.</p>
 
-<h4 id="1-4-ai_balancer-returns-ai-to-airbases">1.4) AI_BALANCER returns AI to Airbases</h4>
+<h5 id="1-4-ai_balancer-returns-ai-to-airbases">1.4) AI_BALANCER returns AI to Airbases</h5>
 
 <p>By default, When a human player joins a slot that is AI_BALANCED, the AI group will be destroyed by default.
 However, there are 2 additional options that you can use to customize the destroy behaviour.
@@ -68,7 +68,7 @@ When a human player joins a slot, you can configure to let the AI return to:</p>
 <p>Note that when AI returns to an airbase, the AI_BALANCER will trigger the <strong>Return</strong> event and the AI will return,
 otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the AI will be destroyed.</p>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -83,16 +83,16 @@ otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the
 
 <p>2017-01-08: AI_BALANCER:<strong>InitSpawnInterval( Earliest, Latest )</strong> added.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=112075">Dutch_Baron</a></strong>: Working together with James has resulted in the creation of the AI_BALANCER class. James has shared his ideas on balancing AI with air units, and together we made a first design which you can use now :-)</li>
 <li><strong>SNAFU</strong>: Had a couple of mails with the guys to validate, if the same concept in the GCI/CAP script could be reworked within MOOSE. None of the script code has been used however within the new AI_BALANCER moose class.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li>FlightControl: Framework Design &amp;  Programming and Documentation.</li>
@@ -123,8 +123,8 @@ BASE
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
-<li><a href="#set_client%20setclient%20:%20a%20set_client%20object%20that%20will%20contain%20the%20client%20objects%20to%20be%20monitored%20if%20they%20are%20alive%20or%20not%20(joined%20by%20a-class)%20player">SET_CLIENT SetClient : A SET_CLIENT object that will contain the CLIENT objects to be monitored if they are alive or not (joined by a</a>.</li>
-<li><a href="#spawn%20spawnai%20:%20the%20default%20spawn%20object%20to%20spawn%20new%20ai%20groups%20when-class">SPAWN SpawnAI : The default Spawn object to spawn new AI Groups when</a> needed.</li>
+<li><a href="#set_client-class">SET_CLIENT</a> SetClient : A SET_CLIENT object that will contain the CLIENT objects to be monitored if they are alive or not (joined by a player).</li>
+<li><a href="#spawn-class">SPAWN</a> SpawnAI : The default Spawn object to spawn new AI Groups when needed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -141,8 +141,8 @@ self</li>
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
-<li>number Earliest : The earliest a new AI can be spawned in seconds.</li>
-<li>number Latest : The latest a new AI can be spawned in seconds.</li>
+<li><u>Number</u> Earliest : The earliest a new AI can be spawned in seconds.</li>
+<li><u>Number</u> Latest : The latest a new AI can be spawned in seconds.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -158,8 +158,8 @@ self</li>
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
-<li><a href="#distance%20returntresholdrange%20:%20if%20there%20is%20an%20enemy%20[client](#client-class)%20within%20the%20returntresholdrange%20given%20in%20meters,%20the%20ai%20will%20not%20return%20to%20the%20nearest-class">Distance ReturnTresholdRange : If there is an enemy <a href="#client-class">CLIENT</a> within the ReturnTresholdRange given in meters, the AI will not return to the nearest</a> <a href="#airbase-class">AIRBASE</a>.</li>
-<li><a href="#set_airbase%20returnairbaseset%20:%20the%20set%20of%20[set_airbase](#set_airbase-class)s%20to%20evaluate%20where%20to%20return-class">SET_AIRBASE ReturnAirbaseSet : The SET of <a href="#set_airbase-class">SET_AIRBASE</a>s to evaluate where to return</a> to.</li>
+<li><a href="#distance-class">Distance</a> ReturnTresholdRange : If there is an enemy <a href="#client-class">CLIENT</a> within the ReturnTresholdRange given in meters, the AI will not return to the nearest <a href="#airbase-class">AIRBASE</a>.</li>
+<li><a href="#set_airbase-class">SET_AIRBASE</a> ReturnAirbaseSet : The SET of <a href="#set_airbase-class">SET_AIRBASE</a>s to evaluate where to return to.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -171,7 +171,7 @@ self</li>
 <ul>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
-<li><a href="#distance%20returntresholdrange%20:%20if%20there%20is%20an%20enemy%20[client](#client-class)%20within%20the%20returntresholdrange%20given%20in%20meters,%20the%20ai%20will%20not%20return%20to%20the%20nearest-class">Distance ReturnTresholdRange : If there is an enemy <a href="#client-class">CLIENT</a> within the ReturnTresholdRange given in meters, the AI will not return to the nearest</a> <a href="#airbase-class">AIRBASE</a>.</li>
+<li><a href="#distance-class">Distance</a> ReturnTresholdRange : If there is an enemy <a href="#client-class">CLIENT</a> within the ReturnTresholdRange given in meters, the AI will not return to the nearest <a href="#airbase-class">AIRBASE</a>.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -184,7 +184,7 @@ self</li>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
 <li><a href="#set_group-class">SET_GROUP</a> SetGroup</li>
-<li>string ClientName</li>
+<li><u>String</u> ClientName</li>
 <li><a href="#group-class">GROUP</a> AIGroup</li>
 </ul>
 

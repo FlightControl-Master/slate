@@ -2,16 +2,16 @@
 
 <p>(SP) (MP) (FSM) Accept or reject process for player (task) assignments.</p>
 
-<h4 id="act_assign-fsm-template-class-extends-fsm_process"><a href="#act_assign-class">ACT_ASSIGN</a> FSM template class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
+<h5 id="act_assign-fsm-template-class-extends-fsm_process"><a href="#act_assign-class">ACT_ASSIGN</a> FSM template class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h5>
 
-<h4 id="act_assign-state-machine">ACT_ASSIGN state machine:</h4>
+<h5 id="act_assign-state-machine">ACT_ASSIGN state machine:</h5>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_assign-events">ACT_ASSIGN <strong>Events</strong>:</h4>
+<h5 id="act_assign-events">ACT_ASSIGN <strong>Events</strong>:</h5>
 
 <p>These are the events defined in this class:</p>
 
@@ -21,7 +21,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Reject</strong>:  Reject the task..</li>
 </ul>
 
-<h4 id="act_assign-event-methods">ACT_ASSIGN <strong>Event methods</strong>:</h4>
+<h5 id="act_assign-event-methods">ACT_ASSIGN <strong>Event methods</strong>:</h5>
 
 <p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
 There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
@@ -31,7 +31,7 @@ There are two types of event methods, which you can use to influence the normal 
 <li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
 </ul>
 
-<h4 id="act_assign-states">ACT_ASSIGN <strong>States</strong>:</h4>
+<h5 id="act_assign-states">ACT_ASSIGN <strong>States</strong>:</h5>
 
 <ul>
 <li><strong>UnAssigned</strong>: The player has not accepted the task.</li>
@@ -43,7 +43,7 @@ There are two types of event methods, which you can use to influence the normal 
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_assign-state-transition-methods">ACT_ASSIGN state transition methods:</h4>
+<h5 id="act_assign-state-transition-methods">ACT_ASSIGN state transition methods:</h5>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -59,23 +59,23 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4 id="1-act_assign_accept-class-extends-act_assign">1) <a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h4>
+<h5 id="1-act_assign_accept-class-extends-act_assign">1) <a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h5>
 
 <p>The ACT_ASSIGN_ACCEPT class accepts by default a task for a player. No player intervention is allowed to reject the task.</p>
 
-<h4 id="1-1-act_assign_accept-constructor">1.1) ACT_ASSIGN_ACCEPT constructor:</h4>
+<h5 id="1-1-act_assign_accept-constructor">1.1) ACT_ASSIGN_ACCEPT constructor:</h5>
 
 <ul>
 <li><a href="#act_assign_accept-new-taskbriefing">ACT_ASSIGN_ACCEPT:New()</a>: Creates a new ACT_ASSIGN_ACCEPT object.</li>
 </ul>
 
-<h4 id="2-act_assign_menu_accept-class-extends-act_assign">2) <a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h4>
+<h5 id="2-act_assign_menu_accept-class-extends-act_assign">2) <a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a> class, extends <a href="#act_assign-class">ACT_ASSIGN</a></h5>
 
 <p>The ACT_ASSIGN_MENU_ACCEPT class accepts a task when the player accepts the task through an added menu option.
 This assignment type is useful to conditionally allow the player to choose whether or not he would accept the task.
 The assignment type also allows to reject the task.</p>
 
-<h4 id="2-1-act_assign_menu_accept-constructor">2.1) ACT_ASSIGN_MENU_ACCEPT constructor:</h4>
+<h5 id="2-1-act_assign_menu_accept-constructor">2.1) ACT_ASSIGN_MENU_ACCEPT constructor:</h5>
 
 <ul>
 <li><a href="#act_assign_menu_accept-new-taskname-taskbriefing">ACT_ASSIGN_MENU_ACCEPT:New()</a>: Creates a new ACT_ASSIGN_MENU_ACCEPT object.</li>
@@ -143,7 +143,7 @@ BASE
 <ul>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
 self</li>
-<li>string TaskBriefing</li>
+<li><u>String</u> TaskBriefing</li>
 </ul>
 
 <h4> Returns </h4>
@@ -156,9 +156,9 @@ self</li>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
 self</li>
 <li><a href="#unit-class">UNIT</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -171,9 +171,9 @@ self</li>
 <li><a href="#act_assign_accept-class">ACT_ASSIGN_ACCEPT</a>
 self</li>
 <li><a href="#unit-class">UNIT</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -205,8 +205,8 @@ BASE
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
-<li>string TaskName</li>
-<li>string TaskBriefing</li>
+<li><u>String</u> TaskName</li>
+<li><u>String</u> TaskBriefing</li>
 </ul>
 
 <h4> Returns </h4>
@@ -223,8 +223,8 @@ self</li>
 <ul>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
-<li>string TaskName</li>
-<li>string TaskBriefing</li>
+<li><u>String</u> TaskName</li>
+<li><u>String</u> TaskBriefing</li>
 </ul>
 
 <h4> Returns </h4>
@@ -242,9 +242,9 @@ self</li>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -279,9 +279,9 @@ self</li>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -294,9 +294,9 @@ self</li>
 <li><a href="#act_assign_menu_accept-class">ACT_ASSIGN_MENU_ACCEPT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>

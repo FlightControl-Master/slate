@@ -44,7 +44,7 @@ Each of these FSM implementation classes start either with:</p>
 
 <p>Detailed explanations and API specifics are further below clarified and FSM derived class specifics are described in those class documentation sections.</p>
 
-<h4 id="dislaimer"><strong>Dislaimer:</strong></h4>
+<h5 id="dislaimer"><strong>Dislaimer:</strong></h5>
 
 <p>The FSM class development is based on a finite state machine implementation made by Conroy Kyle.
 The state machine can be found on <a href="https://github.com/kyleconroy/lua-state-machine">github</a>
@@ -61,7 +61,7 @@ Additionally, I&rsquo;ve added extendability and created an API that allows seam
 for multiple objects or the position of the state machine in the process.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -79,15 +79,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li>2016-12-18: Released.</li>
 </ul>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=62835"><strong>Pikey</strong></a>: Review of documentation &amp; advice for improvements.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
@@ -123,13 +123,13 @@ Most of the time, these Event Triggers are used within the Transition Handler me
 <p>As explained above, a FSM supports <strong>Linear State Transitions</strong> and <strong>Hierarchical State Transitions</strong>, and both can be mixed to make a comprehensive FSM implementation.
 The below documentation has a seperate chapter explaining both transition modes, taking into account the <strong>Transition Rules</strong>, <strong>Transition Handlers</strong> and <strong>Event Triggers</strong>.</p>
 
-<h4 id="1-1-fsm-linear-transitions">1.1) FSM Linear Transitions</h4>
+<h5 id="1-1-fsm-linear-transitions">1.1) FSM Linear Transitions</h5>
 
 <p>Linear Transitions are Transition Rules allowing an FSM to transition from one or multiple possible <strong>From</strong> state(s) towards a <strong>To</strong> state upon a Triggered <strong>Event</strong>.
 The Lineair transition rule evaluation will always be done from the <strong>current state</strong> of the FSM.
 If no valid Transition Rule can be found in the FSM, the FSM will log an error and stop.</p>
 
-<h4 id="1-1-1-fsm-transition-rules">1.1.1) FSM Transition Rules</h4>
+<h5 id="1-1-1-fsm-transition-rules">1.1.1) FSM Transition Rules</h5>
 
 <p>The FSM has transition rules that it follows and validates, as it walks the process.
 These rules define when an FSM can transition from a specific state towards an other specific state upon a triggered event.</p>
@@ -140,8 +140,7 @@ These rules define when an FSM can transition from a specific state towards an o
 
 <p>Find below an example of a Linear Transition Rule definition for an FSM.</p>
 
-<p>local Fsm3Switch = FSM:New() &ndash; <a href="#f-class">F</a>
-smDemo
+<p>local Fsm3Switch = FSM:New() &ndash; #FsmDemo
 FsmSwitch:SetStartState( &ldquo;Off&rdquo; )
 FsmSwitch:AddTransition( &ldquo;Off&rdquo;, &ldquo;SwitchOn&rdquo;, &ldquo;On&rdquo; )
 FsmSwitch:AddTransition( &ldquo;Off&rdquo;, &ldquo;SwitchMiddle&rdquo;, &ldquo;Middle&rdquo; )
@@ -157,7 +156,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 <li>Note that once the Switch is <strong>On</strong> or <strong>Middle</strong>, it can only be switched <strong>Off</strong>.</li>
 </ul>
 
-<h4 id="some-additional-comments">Some additional comments:</h4>
+<h5 id="some-additional-comments">Some additional comments:</h5>
 
 <p>Note that Linear Transition Rules <strong>can be declared in a few variations</strong>:</p>
 
@@ -170,7 +169,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 
 <p>FsmSwitch:AddTransition( { &ldquo;On&rdquo;,  &ldquo;Middle&rdquo; }, &ldquo;SwitchOff&rdquo;, &ldquo;Off&rdquo; )</p>
 
-<h4 id="1-1-2-transition-handling">1.1.2) Transition Handling</h4>
+<h5 id="1-1-2-transition-handling">1.1.2) Transition Handling</h5>
 
 <p><img src="/includes/Pictures/FSM/Dia4.JPG" alt="Transition Handlers" /></p>
 
@@ -196,7 +195,7 @@ These parameters are on the correct order: From, Event, To:</p>
 
 <p>On top, each of these methods can have a variable amount of parameters passed. See the example in section <a href="#1.1.3)-event-triggers">1.1.3</a>.</p>
 
-<h4 id="1-1-3-event-triggers">1.1.3) Event Triggers</h4>
+<h5 id="1-1-3-event-triggers">1.1.3) Event Triggers</h5>
 
 <p><img src="/includes/Pictures/FSM/Dia5.JPG" alt="Event Triggers" /></p>
 
@@ -238,7 +237,7 @@ Event will be processed after 5 seconds, and Amount is given as a parameter.</p>
 
 <p>Because &hellip; When Event was asynchronously processed after 5 seconds, Amount was set to 2. So be careful when processing and passing values and objects in asynchronous processing!</p>
 
-<h4 id="1-1-4-linear-transition-example">1.1.4) Linear Transition Example</h4>
+<h5 id="1-1-4-linear-transition-example">1.1.4) Linear Transition Example</h5>
 
 <p>This example is fully implemented in the MOOSE test mission on GITHUB: <a href="https://github.com/FlightControl-Master/MOOSE/blob/master/Moose%20Test%20Missions/FSM%20-%20Finite%20State%20Machine/FSM-100%20-%20Transition%20Explanation/FSM-100%20-%20Transition%20Explanation.lua">FSM-100 - Transition Explanation</a></p>
 
@@ -253,8 +252,7 @@ the FsmDemo will transition from state <strong>Green</strong> to <strong>Red</st
 
 <p><img src="/includes/Pictures/FSM/Dia6.JPG" alt="Transition Example" /></p>
 
-<p>local FsmDemo = FSM:New() &ndash; <a href="#f-class">F</a>
-smDemo
+<p>local FsmDemo = FSM:New() &ndash; #FsmDemo
 FsmDemo:SetStartState( &ldquo;Green&rdquo; )
 FsmDemo:AddTransition( &ldquo;Green&rdquo;, &ldquo;Switch&rdquo;, &ldquo;Red&rdquo; )
 FsmDemo:AddTransition( &ldquo;Red&rdquo;, &ldquo;Switch&rdquo;, &ldquo;Green&rdquo; )</p>
@@ -308,8 +306,7 @@ end</p>
 The new event <strong>Stop</strong> will cancel the Switching process.
 The transition for event Stop can be executed if the current state of the FSM is either &ldquo;Red&rdquo; or &ldquo;Green&rdquo;.</p>
 
-<p>local FsmDemo = FSM:New() &ndash; <a href="#f-class">F</a>
-smDemo
+<p>local FsmDemo = FSM:New() &ndash; #FsmDemo
 FsmDemo:SetStartState( &ldquo;Green&rdquo; )
 FsmDemo:AddTransition( &ldquo;Green&rdquo;, &ldquo;Switch&rdquo;, &ldquo;Red&rdquo; )
 FsmDemo:AddTransition( &ldquo;Red&rdquo;, &ldquo;Switch&rdquo;, &ldquo;Green&rdquo; )
@@ -322,7 +319,7 @@ FsmDemo:AddTransition( { &ldquo;Red&rdquo;, &ldquo;Green&rdquo; }, &ldquo;Stop&r
 <p>So&hellip; When FsmDemo:Stop() is being triggered, the state of FsmDemo will transition from Red or Green to Stopped.
 And there is no transition handling method defined for that transition, thus, no new event is being triggered causing the FsmDemo process flow to halt.</p>
 
-<h4 id="1-5-fsm-hierarchical-transitions">1.5) FSM Hierarchical Transitions</h4>
+<h5 id="1-5-fsm-hierarchical-transitions">1.5) FSM Hierarchical Transitions</h5>
 
 <p>Hierarchical Transitions allow to re-use readily available and implemented FSMs.
 This becomes in very useful for mission building, where mission designers build complex processes and workflows,
@@ -356,7 +353,7 @@ self</li>
 <ul>
 <li><a href="#fsm-class">FSM</a>
 self</li>
-<li>string State : A string defining the start state.</li>
+<li><u>String</u> State : A string defining the start state.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -373,7 +370,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string A : string containing the start state.</li>
+<li><u>String</u> A : string containing the start state.</li>
 </ul>
 
 <h3 id="fsm-addtransition-from-event-to">FSM:AddTransition(From, Event, To)</h3>
@@ -383,9 +380,9 @@ self</li>
 <ul>
 <li><a href="#fsm-class">FSM</a>
 self</li>
-<li>table[] From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
-<li>string Event : The Event name.</li>
-<li>string To : The To state.</li>
+<li><u>List[]</u> From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
+<li><u>String</u> Event : The Event name.</li>
+<li><u>String</u> To : The To state.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -397,7 +394,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] self</li>
+<li><u>List[]</u> self</li>
 </ul>
 
 <h3 id="fsm-addprocess-from-event-process-returnevents">FSM:AddProcess(From, Event, Process, ReturnEvents)</h3>
@@ -407,16 +404,16 @@ self</li>
 <ul>
 <li><a href="#fsm-class">FSM</a>
 self</li>
-<li>table[] From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
-<li>string Event : The Event name.</li>
-<li><a href="#fsm_process%20process%20:%20an%20sub-process-class">FSM_PROCESS Process : An sub-process</a> FSM.</li>
-<li>table[] ReturnEvents : A table indicating for which returned events of the SubFSM which Event must be triggered in the FSM.</li>
+<li><u>List[]</u> From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
+<li><u>String</u> Event : The Event name.</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> Process : An sub-process FSM.</li>
+<li><u>List[]</u> ReturnEvents : A table indicating for which returned events of the SubFSM which Event must be triggered in the FSM.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process%20the%20:-class">FSM_PROCESS The :</a> SubFSM.</li>
+<li><a href="#fsm_process-class">FSM_PROCESS</a> The : SubFSM.</li>
 </ul>
 
 <h3 id="fsm-getprocesses">FSM.GetProcesses(()</h3>
@@ -426,7 +423,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] self</li>
+<li><u>List[]</u> self</li>
 </ul>
 
 <h3 id="fsm-addendstate">FSM.AddEndState(()</h3>
@@ -448,9 +445,9 @@ self</li>
 <ul>
 <li><a href="#fsm-class">FSM</a>
 self</li>
-<li>string State : is the state of the process when the score needs to be given. (See the relevant state descriptions of the process).</li>
-<li>string ScoreText : is a text describing the score that is given according the status.</li>
-<li>number Score : is a number providing the score of the status.</li>
+<li><u>String</u> State : is the state of the process when the score needs to be given. (See the relevant state descriptions of the process).</li>
+<li><u>String</u> ScoreText : is a text describing the score that is given according the status.</li>
+<li><u>Number</u> Score : is a number providing the score of the status.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -467,11 +464,11 @@ self</li>
 <ul>
 <li><a href="#fsm-class">FSM</a>
 self</li>
-<li>string From : is the From State of the main process.</li>
-<li>string Event : is the Event of the main process.</li>
-<li>string State : is the state of the process when the score needs to be given. (See the relevant state descriptions of the process).</li>
-<li>string ScoreText : is a text describing the score that is given according the status.</li>
-<li>number Score : is a number providing the score of the status.</li>
+<li><u>String</u> From : is the From State of the main process.</li>
+<li><u>String</u> Event : is the Event of the main process.</li>
+<li><u>String</u> State : is the state of the process when the score needs to be given. (See the relevant state descriptions of the process).</li>
+<li><u>String</u> ScoreText : is a text describing the score that is given according the status.</li>
+<li><u>Number</u> Score : is a number providing the score of the status.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -517,8 +514,8 @@ BASE
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li>table[] FSMT : Finite State Machine Table</li>
-<li><a href="#controllable%20controllable%20:%20(optional)%20the%20controllable%20object%20that%20the%20fsm_controllable-class">CONTROLLABLE Controllable : (optional) The CONTROLLABLE object that the FSM_CONTROLLABLE</a> governs.</li>
+<li><u>List[]</u> FSMT : Finite State Machine Table</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : (optional) The CONTROLLABLE object that the FSM_CONTROLLABLE governs.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -537,16 +534,16 @@ self</li>
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="fsm_controllable-onafterstop-controllable-from-event-to">FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)</h3>
@@ -558,10 +555,10 @@ self</li>
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -588,16 +585,16 @@ self</li>
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="fsm_controllable-onenterstopped-controllable-from-event-to">FSM_CONTROLLABLE:OnEnterStopped(Controllable, From, Event, To)</h3>
@@ -609,10 +606,10 @@ self</li>
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -626,10 +623,10 @@ self</li>
 <ul>
 <li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -831,9 +828,9 @@ self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -864,7 +861,7 @@ BASE
 <ul>
 <li><a href="#fsm_task-class">FSM_TASK</a>
 self</li>
-<li>table[] FSMT</li>
+<li><u>List[]</u> FSMT</li>
 <li><a href="#task-class">TASK</a> Task</li>
 <li><a href="#unit-class">UNIT</a> TaskUnit</li>
 </ul>
@@ -903,7 +900,7 @@ for multiple objects or the position of the state machine in the process.</p>
 <ul>
 <li><a href="#fsm_set-class">FSM_SET</a>
 self</li>
-<li>table[] FSMT : Finite State Machine Table</li>
+<li><u>List[]</u> FSMT : Finite State Machine Table</li>
 <li>Set_SET_BASE FSMSet : (optional) The Set object that the FSM_SET governs.</li>
 </ul>
 

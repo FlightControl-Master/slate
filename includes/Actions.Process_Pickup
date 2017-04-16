@@ -45,9 +45,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -60,9 +60,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -75,9 +75,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 <li><a href="#eventdata-class">EVENTDATA</a> Event</li>
 </ul>
 
@@ -91,9 +91,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -106,9 +106,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 <li><a href="#eventdata-class">EVENTDATA</a> DCSEvent</li>
 </ul>
 
@@ -122,9 +122,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -137,9 +137,9 @@ self</li>
 <li><a href="#process_pickup-class">PROCESS_PICKUP</a>
 self</li>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>

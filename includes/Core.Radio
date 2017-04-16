@@ -31,7 +31,7 @@
 like the A10C or the Mirage 2000C. They will <strong>hear the transmission</strong> if they are tuned on the <strong>right frequency and modulation</strong> (and if they are close enough - more on that below).
 If a FC3 airacraft is used, it will <strong>hear every communication, whatever the frequency and the modulation</strong> is set to.</p>
 
-<h4 id="author-hugues-grey_echo-bousquet">Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h4>
+<h5 id="author-hugues-grey_echo-bousquet">Author: Hugues &ldquo;Grey_Echo&rdquo; Bousquet</h5>
 
 <h2 id="radio-class">RADIO Class</h2>
 
@@ -41,7 +41,7 @@ BASE
     `-- RADIO
 </pre>
 
-<h4 id="1-1-radio-usage">1.1) RADIO usage</h4>
+<h5 id="1-1-radio-usage">1.1) RADIO usage</h5>
 
 <p>There are 3 steps to a successful radio transmission.</p>
 
@@ -88,14 +88,14 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#positionable%20positionable%20:%20the-class">POSITIONABLE Positionable : The</a> transmiter</li>
-<li>string FileName : Name of the sound file</li>
-<li>number Frequency : Frequency of the transmission in Hz</li>
-<li>number Modulation : Modulation of the transmission (either radio.modulation.AM or radio.modulation.FM)</li>
-<li>string Subtitle : Subtitle of the transmission</li>
-<li>number SubtitleDuration : Duration of the Subtitle in seconds</li>
-<li>number Power : Power of the antenna is Watts</li>
-<li>boolean Loop</li>
+<li><a href="#positionable-class">POSITIONABLE</a> Positionable : The transmiter</li>
+<li><u>String</u> FileName : Name of the sound file</li>
+<li><u>Number</u> Frequency : Frequency of the transmission in Hz</li>
+<li><u>Number</u> Modulation : Modulation of the transmission (either radio.modulation.AM or radio.modulation.FM)</li>
+<li><u>String</u> Subtitle : Subtitle of the transmission</li>
+<li><u>Number</u> SubtitleDuration : Duration of the Subtitle in seconds</li>
+<li><u>Number</u> Power : Power of the antenna is Watts</li>
+<li><u>Boolean</u> Loop</li>
 </ul>
 
 <h3 id="radio-new-positionable">RADIO:New(Positionable)</h3>
@@ -106,7 +106,7 @@ BASE
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li><a href="#positionable%20positionable%20:%20the%20[positionable](#positionable-module)%20that%20will%20receive%20radio-class">POSITIONABLE Positionable : The <a href="#positionable-module">Positionable</a> that will receive radio</a> capabilities.</li>
+<li><a href="#positionable-class">POSITIONABLE</a> Positionable : The <a href="#positionable-module">Positionable</a> that will receive radio capabilities.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -114,7 +114,7 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 Radio</li>
-<li>nil If : Positionable is invalid</li>
+<li><u>Nil</u> If : Positionable is invalid</li>
 </ul>
 
 <h3 id="radio-setfilename-filename">RADIO:SetFileName(FileName)</h3>
@@ -124,7 +124,7 @@ Radio</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>string FileName : File name of the sound file (i.e. &ldquo;Noise.ogg&rdquo;)</li>
+<li><u>String</u> FileName : File name of the sound file (i.e. &ldquo;Noise.ogg&rdquo;)</li>
 </ul>
 
 <h4> Returns </h4>
@@ -141,7 +141,7 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>number Frequency : in MHz (Ranges allowed for radio transmissions in DCS : 30-88 / 108-152 / 225-400MHz)</li>
+<li><u>Number</u> Frequency : in MHz (Ranges allowed for radio transmissions in DCS : 30-88 / 108-152 / 225-400MHz)</li>
 </ul>
 
 <h4> Returns </h4>
@@ -158,7 +158,7 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>number Modulation : either radio.modulation.AM or radio.modulation.FM</li>
+<li><u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM</li>
 </ul>
 
 <h4> Returns </h4>
@@ -175,7 +175,7 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>number Power : in W</li>
+<li><u>Number</u> Power : in W</li>
 </ul>
 
 <h4> Returns </h4>
@@ -192,7 +192,7 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>boolean Loop</li>
+<li><u>Boolean</u> Loop</li>
 </ul>
 
 <h4> Returns </h4>
@@ -210,8 +210,8 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>string Subtitle</li>
-<li>number SubtitleDuration : in s</li>
+<li><u>String</u> Subtitle</li>
+<li><u>Number</u> SubtitleDuration : in s</li>
 </ul>
 
 <h4> Returns </h4>
@@ -231,10 +231,10 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>string FileName</li>
-<li>number Frequency : in MHz</li>
-<li>number Modulation : either radio.modulation.AM or radio.modulation.FM</li>
-<li>number Power : in W</li>
+<li><u>String</u> FileName</li>
+<li><u>Number</u> Frequency : in MHz</li>
+<li><u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM</li>
+<li><u>Number</u> Power : in W</li>
 </ul>
 
 <h4> Returns </h4>
@@ -254,12 +254,12 @@ self</li>
 <ul>
 <li><a href="#radio-class">RADIO</a>
 self</li>
-<li>string FileName</li>
-<li>string Subtitle</li>
-<li>number SubtitleDuration : in s</li>
-<li>number Frequency : in MHz</li>
-<li>number Modulation : either radio.modulation.AM or radio.modulation.FM</li>
-<li>boolean Loop</li>
+<li><u>String</u> FileName</li>
+<li><u>String</u> Subtitle</li>
+<li><u>Number</u> SubtitleDuration : in s</li>
+<li><u>Number</u> Frequency : in MHz</li>
+<li><u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM</li>
+<li><u>Boolean</u> Loop</li>
 </ul>
 
 <h4> Returns </h4>

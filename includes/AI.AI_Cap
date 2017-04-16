@@ -12,7 +12,7 @@
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>: Perform a CAP in a zone.</li>
 </ul>
 
-<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
+<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -25,9 +25,9 @@
 
 <p>2017-01-15: Initial class and API.</p>
 
-<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
+<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
 
-<h4 id="contributions">Contributions:</h4>
+<h5 id="contributions">Contributions:</h5>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
@@ -37,7 +37,7 @@
 <li>**<a href="https://forums.eagle.ru/member.php?u=125166">Delta99</a>: Testing.</li>
 </ul>
 
-<h4 id="authors">Authors:</h4>
+<h5 id="authors">Authors:</h5>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -85,17 +85,17 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 
 <p><img src="/includes/Pictures/AI_CAP/Dia13.JPG" alt="Process" /></p>
 
-<h4 id="1-1-ai_cap_zone-constructor">1.1) AI_CAP_ZONE constructor</h4>
+<h5 id="1-1-ai_cap_zone-constructor">1.1) AI_CAP_ZONE constructor</h5>
 
 <ul>
 <li><a href="#ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_CAP_ZONE:New()</a>: Creates a new AI_CAP_ZONE object.</li>
 </ul>
 
-<h4 id="1-2-ai_cap_zone-is-a-fsm">1.2) AI_CAP_ZONE is a FSM</h4>
+<h5 id="1-2-ai_cap_zone-is-a-fsm">1.2) AI_CAP_ZONE is a FSM</h5>
 
 <p><img src="/includes/Pictures/AI_CAP/Dia2.JPG" alt="Process" /></p>
 
-<h4 id="1-2-1-ai_cap_zone-states">1.2.1) AI_CAP_ZONE States</h4>
+<h5 id="1-2-1-ai_cap_zone-states">1.2.1) AI_CAP_ZONE States</h5>
 
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
@@ -104,7 +104,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
 
-<h4 id="1-2-2-ai_cap_zone-events">1.2.2) AI_CAP_ZONE Events</h4>
+<h5 id="1-2-2-ai_cap_zone-events">1.2.2) AI_CAP_ZONE Events</h5>
 
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
@@ -119,7 +119,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
 </ul>
 
-<h4 id="1-3-set-the-range-of-engagement">1.3) Set the Range of Engagement</h4>
+<h5 id="1-3-set-the-range-of-engagement">1.3) Set the Range of Engagement</h5>
 
 <p><img src="/includes/Pictures/AI_CAP/Dia11.JPG" alt="Range" /></p>
 
@@ -129,7 +129,7 @@ The range can be beyond or smaller than the range of the Patrol Zone.
 The range is applied at the position of the AI.
 Use the method <a href="#ai_cap_zone-setengagerange-engagerange">AI_CAP_ZONE:SetEngageRange()</a> to define that range.</p>
 
-<h4 id="1-4-set-the-zone-of-engagement">1.4) Set the Zone of Engagement</h4>
+<h5 id="1-4-set-the-zone-of-engagement">1.4) Set the Zone of Engagement</h5>
 
 <p><img src="/includes/Pictures/AI_CAP/Dia12.JPG" alt="Zone" /></p>
 
@@ -140,8 +140,8 @@ Use the method <a href="#ai_cap_zone-setengagezone-engagezone">AI_CAP_ZONE:SetEn
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#controllable%20aicontrollable%20:%20the%20[controllable](#controllable-module)-class">CONTROLLABLE AIControllable : The <a href="#controllable-module">Controllable</a></a> patrolling.</li>
-<li><a href="#zone_base%20targetzone%20:%20the%20[zone](#zone-module)%20where%20the%20patrol%20needs%20to%20be-class">ZONE_BASE TargetZone : The <a href="#zone-module">Zone</a> where the patrol needs to be</a> executed.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> AIControllable : The <a href="#controllable-module">Controllable</a> patrolling.</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> TargetZone : The <a href="#zone-module">Zone</a> where the patrol needs to be executed.</li>
 </ul>
 
 <h3 id="ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_CAP_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, PatrolAltType)</h3>
@@ -151,12 +151,12 @@ Use the method <a href="#ai_cap_zone-setengagezone-engagezone">AI_CAP_ZONE:SetEn
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#zone_base%20patrolzone%20:%20the%20[zone](#zone-module)%20where%20the%20patrol%20needs%20to%20be-class">ZONE_BASE PatrolZone : The <a href="#zone-module">Zone</a> where the patrol needs to be</a> executed.</li>
-<li><a href="#altitude%20patrolflooraltitude%20:%20the%20lowest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolFloorAltitude : The lowest altitude in meters where to execute the</a> patrol.</li>
-<li><a href="#altitude%20patrolceilingaltitude%20:%20the%20highest%20altitude%20in%20meters%20where%20to%20execute%20the-class">Altitude PatrolCeilingAltitude : The highest altitude in meters where to execute the</a> patrol.</li>
-<li><a href="#speed%20self%20:%20patrolminspeed%20the%20minimum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
-<li><a href="#speed%20self%20:%20patrolmaxspeed%20the%20maximum%20speed%20of%20the%20[controllable](#controllable-module)%20in-class">Speed self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in</a> km/h.</li>
-<li><a href="#altitudetype%20patrolalttype%20:%20the%20altitude%20type%20(&quot;radio&quot;==&quot;agl&quot;," title="baro&quot;==&quot;asl">AltitudeType PatrolAltType : The altitude type (&ldquo;RADIO&rdquo;==&ldquo;AGL&rdquo;, &ldquo;BARO&rdquo;==&ldquo;ASL&rdquo;). Defaults to</a>. defaults to-class) RADIO</li>
+<li><a href="#zone_base-class">ZONE_BASE</a> PatrolZone : The <a href="#zone-module">Zone</a> where the patrol needs to be executed.</li>
+<li><a href="#altitude-class">Altitude</a> PatrolFloorAltitude : The lowest altitude in meters where to execute the patrol.</li>
+<li><a href="#altitude-class">Altitude</a> PatrolCeilingAltitude : The highest altitude in meters where to execute the patrol.</li>
+<li><a href="#speed-class">Speed</a> self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in km/h.</li>
+<li><a href="#speed-class">Speed</a> self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in km/h.</li>
+<li><a href="#altitudetype-class">AltitudeType</a> PatrolAltType : The altitude type (&ldquo;RADIO&rdquo;==&ldquo;AGL&rdquo;, &ldquo;BARO&rdquo;==&ldquo;ASL&rdquo;). Defaults to RADIO</li>
 </ul>
 
 <h4> Returns </h4>
@@ -175,16 +175,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onafterengage-controllable-from-event-to">AI_CAP_ZONE:OnAfterEngage(Controllable, From, Event, To)</h3>
@@ -196,10 +196,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -226,16 +226,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onenterengaging-controllable-from-event-to">AI_CAP_ZONE:OnEnterEngaging(Controllable, From, Event, To)</h3>
@@ -247,10 +247,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -264,16 +264,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onafterfired-controllable-from-event-to">AI_CAP_ZONE:OnAfterFired(Controllable, From, Event, To)</h3>
@@ -285,10 +285,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -315,16 +315,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onafterdestroy-controllable-from-event-to">AI_CAP_ZONE:OnAfterDestroy(Controllable, From, Event, To)</h3>
@@ -336,10 +336,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -366,16 +366,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onafterabort-controllable-from-event-to">AI_CAP_ZONE:OnAfterAbort(Controllable, From, Event, To)</h3>
@@ -387,10 +387,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -417,16 +417,16 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>boolean Return : false to cancel Transition.</li>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
 
 <h3 id="ai_cap_zone-onafteraccomplish-controllable-from-event-to">AI_CAP_ZONE:OnAfterAccomplish(Controllable, From, Event, To)</h3>
@@ -438,10 +438,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -466,7 +466,7 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#zone%20engagezone%20:%20the%20zone%20where%20the%20ai%20is%20performing-class">ZONE EngageZone : The zone where the AI is performing</a> CAP.</li>
+<li><a href="#zone-class">ZONE</a> EngageZone : The zone where the AI is performing CAP.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -483,7 +483,7 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li>number EngageRange : The Engage Range.</li>
+<li><u>Number</u> EngageRange : The Engage Range.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -500,10 +500,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -515,10 +515,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -530,10 +530,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -545,10 +545,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -560,10 +560,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -575,10 +575,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -590,10 +590,10 @@ self</li>
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
-<li><a href="#controllable%20controllable%20:%20the%20controllable%20object%20managed%20by%20the-class">CONTROLLABLE Controllable : The Controllable Object managed by the</a> FSM.</li>
-<li>string From : The From State string.</li>
-<li>string Event : The Event string.</li>
-<li>string To : The To State string.</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
 <li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
 </ul>
 

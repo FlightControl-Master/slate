@@ -15,14 +15,14 @@ BASE
                 `-- ACT_ACCOUNT
 </pre>
 
-<h4 id="act_account-state-machine">ACT_ACCOUNT state machine:</h4>
+<h5 id="act_account-state-machine">ACT_ACCOUNT state machine:</h5>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4 id="act_account-states">ACT_ACCOUNT States</h4>
+<h5 id="act_account-states">ACT_ACCOUNT States</h5>
 
 <ul>
 <li><strong>Asigned</strong>: The player is assigned.</li>
@@ -33,7 +33,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Failed</strong>: Failed the process.</li>
 </ul>
 
-<h4 id="act_account-events">ACT_ACCOUNT Events</h4>
+<h5 id="act_account-events">ACT_ACCOUNT Events</h5>
 
 <ul>
 <li><strong>Start</strong>: Start the process.</li>
@@ -47,7 +47,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 
 <p>(*) End states of the process.</p>
 
-<h4 id="act_account-state-transition-methods">ACT_ACCOUNT state transition methods:</h4>
+<h5 id="act_account-state-transition-methods">ACT_ACCOUNT state transition methods:</h5>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -93,9 +93,9 @@ self</li>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -108,9 +108,9 @@ self</li>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -123,9 +123,9 @@ self</li>
 <li><a href="#act_account-class">ACT_ACCOUNT</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -147,7 +147,7 @@ The process is given a <a href="#set-module">Set</a> of units that will be track
 The process will end after each target has been successfully destroyed.
 Each successful dead will trigger an Account state transition that can be scored, modified or administered.</p>
 
-<h4 id="act_account_deads-constructor">ACT_ACCOUNT_DEADS constructor:</h4>
+<h5 id="act_account_deads-constructor">ACT_ACCOUNT_DEADS constructor:</h5>
 
 <ul>
 <li><a href="#act_account_deads-new-targetsetunit-taskname">ACT_ACCOUNT_DEADS:New()</a>: Creates a new ACT_ACCOUNT_DEADS object.</li>
@@ -167,7 +167,7 @@ Each successful dead will trigger an Account state transition that can be scored
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
 self</li>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
-<li>string TaskName</li>
+<li><u>String</u> TaskName</li>
 </ul>
 
 <h4> Returns </h4>
@@ -180,9 +180,9 @@ self</li>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -195,9 +195,9 @@ self</li>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>
@@ -210,9 +210,9 @@ self</li>
 <li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
 self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
-<li>string Event</li>
-<li>string From</li>
-<li>string To</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
 </ul>
 
 <h4> Returns </h4>

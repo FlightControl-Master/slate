@@ -140,13 +140,12 @@ BASE
 <ul>
 <li><a href="#client-class">CLIENT</a> EscortClient</li>
 <li><a href="#group-class">GROUP</a> EscortGroup</li>
-<li>string EscortName</li>
-<li><a href="#escort-class">ESCORT</a>
-.MODE EscortMode : The mode the escort is in.</li>
-<li><a href="#scheduler%20followscheduler%20:%20the%20instance%20of%20the%20scheduler-class">SCHEDULER FollowScheduler : The instance of the SCHEDULER</a> class.</li>
-<li>number FollowDistance : The current follow distance.</li>
-<li>boolean ReportTargets : If true, nearby targets are reported.</li>
-<li><a href="#ai.option.air.val.reaction_on_threat%20optionreactiononthreat%20:%20which%20reaction_on_threat%20is%20set%20to%20the-class">AI.Option.Air.val.REACTION_ON_THREAT OptionReactionOnThreat : Which REACTION_ON_THREAT is set to the</a> EscortGroup.</li>
+<li><u>String</u> EscortName</li>
+<li><a href="#escort-mode-class">MODE</a> EscortMode : The mode the escort is in.</li>
+<li><a href="#scheduler-class">SCHEDULER</a> FollowScheduler : The instance of the SCHEDULER class.</li>
+<li><u>Number</u> FollowDistance : The current follow distance.</li>
+<li><u>Boolean</u> ReportTargets : If true, nearby targets are reported.</li>
+<li><a href="#ai.option.air.val.reaction_on_threat-class">AI.Option.Air.val.REACTION_ON_THREAT</a> OptionReactionOnThreat : Which REACTION_ON_THREAT is set to the EscortGroup.</li>
 <li><a href="#menu_client-class">MENU_CLIENT</a> EscortMenuResumeMission</li>
 <li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
 </ul>
@@ -166,10 +165,10 @@ BASE
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#client%20escortclient%20:%20the%20client%20escorted%20by%20the-class">CLIENT EscortClient : The client escorted by the</a> EscortGroup.</li>
-<li><a href="#group%20escortgroup%20:%20the%20group%20ai%20escorting%20the-class">GROUP EscortGroup : The group AI escorting the</a> EscortClient.</li>
-<li>string EscortName : Name of the escort.</li>
-<li>string EscortBriefing : A text showing the ESCORT briefing to the player. Note that if no EscortBriefing is provided, the default briefing will be shown.</li>
+<li><a href="#client-class">CLIENT</a> EscortClient : The client escorted by the EscortGroup.</li>
+<li><a href="#group-class">GROUP</a> EscortGroup : The group AI escorting the EscortClient.</li>
+<li><u>String</u> EscortName : Name of the escort.</li>
+<li><u>String</u> EscortBriefing : A text showing the ESCORT briefing to the player. Note that if no EscortBriefing is provided, the default briefing will be shown.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -198,7 +197,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li>boolean SmokeDirection : If true, then the direction vector will be smoked.</li>
+<li><u>Boolean</u> SmokeDirection : If true, then the direction vector will be smoked.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -226,7 +225,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#distance%20distance%20:%20the%20distance%20in%20meters%20that%20the%20escort%20needs%20to%20follow%20the-class">Distance Distance : The distance in meters that the escort needs to follow the</a> client.</li>
+<li><a href="#distance-class">Distance</a> Distance : The distance in meters that the escort needs to follow the client.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -243,9 +242,9 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
-<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
-<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+<li><a href="#distance-class">Distance</a> Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.</li>
+<li><a href="#time-class">Time</a> Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.</li>
+<li><u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -262,9 +261,9 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
-<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
-<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+<li><a href="#distance-class">Distance</a> Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.</li>
+<li><a href="#time-class">Time</a> Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.</li>
+<li><u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -281,9 +280,9 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#distance%20height%20:%20optional%20parameter%20that%20sets%20the%20height%20in%20meters%20to%20let%20the%20escort%20orbit%20at%20the%20current%20location.%20the%20default%20value%20is%2030-class">Distance Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30</a> meters.</li>
-<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20orbit%20at%20the%20current%20position%20for%20a%20specified%20time.%20(not%20implemented%20yet).%20the%20default%20value%20is%200%20seconds,%20meaning,%20that%20the%20escort%20will%20orbit%20forever%20until%20a%20sequent%20command%20is-class">Time Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is</a> given.</li>
-<li>string MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
+<li><a href="#distance-class">Distance</a> Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.</li>
+<li><a href="#time-class">Time</a> Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.</li>
+<li><u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -300,7 +299,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
+<li><u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -317,7 +316,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li>string MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
+<li><u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -334,7 +333,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
-<li><a href="#time%20seconds%20:%20optional%20parameter%20that%20lets%20the%20escort%20report%20their%20current%20detected%20targets%20after%20specified%20time%20interval%20in%20seconds.%20the%20default%20time%20is%2030-class">Time Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30</a> seconds.</li>
+<li><a href="#time-class">Time</a> Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30 seconds.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -433,7 +432,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>table[] self</li>
+<li><u>List[]</u> self</li>
 </ul>
 
 <h2 id="escort-mode-class">ESCORT.MODE Class</h2>
@@ -445,8 +444,8 @@ self</li>
 <h4> Attributes </h4>
 
 <ul>
-<li>number FOLLOW</li>
-<li>number MISSION</li>
+<li><u>Number</u> FOLLOW</li>
+<li><u>Number</u> MISSION</li>
 </ul>
 
 <h2 id="menuparam-class">MENUPARAM Class</h2>
@@ -460,8 +459,7 @@ self</li>
 <ul>
 <li><a href="#escort-class">ESCORT</a>
 ParamSelf</li>
-<li><a href="#d-class">D</a>
-istance ParamDistance</li>
-<li>#function ParamFunction</li>
-<li>string ParamMessage</li>
+<li>#Distance ParamDistance</li>
+<li><u>Function()</u> ParamFunction</li>
+<li><u>String</u> ParamMessage</li>
 </ul>

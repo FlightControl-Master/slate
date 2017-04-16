@@ -2,7 +2,7 @@
 
 <p>This module contains the IDENTIFIABLE class.</p>
 
-<h4 id="1-identifiable-class-extends-object">1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h4>
+<h5 id="1-identifiable-class-extends-object">1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h5>
 
 <p>The <a href="#identifiable-class">IDENTIFIABLE</a> class is a wrapper class to handle the DCS Identifiable objects:</p>
 
@@ -12,7 +12,7 @@
 <li>Manage the &ldquo;state&rdquo; of the DCS Identifiable.</li>
 </ul>
 
-<h4 id="1-1-identifiable-constructor">1.1) IDENTIFIABLE constructor:</h4>
+<h5 id="1-1-identifiable-constructor">1.1) IDENTIFIABLE constructor:</h5>
 
 <p>The IDENTIFIABLE class provides the following functions to construct a IDENTIFIABLE instance:</p>
 
@@ -20,7 +20,7 @@
 <li><a href="#identifiable-new-identifiablename">IDENTIFIABLE:New()</a>: Create a IDENTIFIABLE instance.</li>
 </ul>
 
-<h4 id="1-2-identifiable-methods">1.2) IDENTIFIABLE methods:</h4>
+<h5 id="1-2-identifiable-methods">1.2) IDENTIFIABLE methods:</h5>
 
 <p>The following methods can be used to identify an identifiable object:</p>
 
@@ -45,7 +45,7 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li>string IdentifiableName : The name of the identifiable.</li>
+<li><u>String</u> IdentifiableName : The name of the identifiable.</li>
 </ul>
 
 <h3 id="identifiable-new-identifiablename">IDENTIFIABLE:New(IdentifiableName)</h3>
@@ -77,8 +77,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>boolean true : if Identifiable is alive.</li>
-<li>nil if : the Identifiable is not existing or is not alive.</li>
+<li><u>Boolean</u> true : if Identifiable is alive.</li>
+<li><u>Nil</u> if : the Identifiable is not existing or is not alive.</li>
 </ul>
 
 <h3 id="identifiable-getname">IDENTIFIABLE:GetName()</h3>
@@ -93,8 +93,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : name of the DCS Identifiable.</li>
-<li>nil The : DCS Identifiable is not existing or alive.</li>
+<li><u>String</u> The : name of the DCS Identifiable.</li>
+<li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
 
 <h3 id="identifiable-gettypename">IDENTIFIABLE:GetTypeName()</h3>
@@ -109,8 +109,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : type name of the DCS Identifiable.</li>
-<li>nil The : DCS Identifiable is not existing or alive.</li>
+<li><u>String</u> The : type name of the DCS Identifiable.</li>
+<li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
 
 <h3 id="identifiable-getcategory">IDENTIFIABLE:GetCategory()</h3>
@@ -140,7 +140,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : DCS Identifiable Category Name</li>
+<li><u>String</u> The : DCS Identifiable Category Name</li>
 </ul>
 
 <h3 id="identifiable-getcoalition">IDENTIFIABLE:GetCoalition()</h3>
@@ -156,7 +156,7 @@ self</li>
 
 <ul>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition.side The : side of the coalition.</li>
-<li>nil The : DCS Identifiable is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
 
 <h3 id="identifiable-getcountry">IDENTIFIABLE:GetCountry()</h3>
@@ -171,8 +171,8 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#country.id%20the%20:%20country-class">country.id The : country</a> identifier.</li>
-<li>nil The : DCS Identifiable is not existing or alive.</li>
+<li><a href="#country.id-class">country.id</a> The : country identifier.</li>
+<li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
 
 <h3 id="identifiable-getdesc">IDENTIFIABLE:GetDesc()</h3>
@@ -188,7 +188,7 @@ self</li>
 
 <ul>
 <li>Dcs.DCSWrapper.Identifiable#Identifiable.Desc The : Identifiable descriptor.</li>
-<li>nil The : DCS Identifiable is not existing or alive.</li>
+<li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
 
 <h3 id="identifiable-getcallsign">IDENTIFIABLE:GetCallsign()</h3>
@@ -203,5 +203,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>string The : CallSign of the IDENTIFIABLE.</li>
+<li><u>String</u> The : CallSign of the IDENTIFIABLE.</li>
 </ul>
