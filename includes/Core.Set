@@ -29,13 +29,13 @@
 <li>Trigger events when objects in the SET change a zone presence.</li>
 </ul>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
 <h2 id="set_base-class">SET_BASE Class</h2>
 
@@ -51,11 +51,11 @@ In this way, large loops can be done while not blocking the simulator main proce
 The default <strong>&ldquo;yield interval&rdquo;</strong> is after 10 objects processed.
 The default <strong>&ldquo;time interval&rdquo;</strong> is after 0.001 seconds.</p>
 
-<h4> 1.1) Add or remove objects from the SET</h4>
+<h4 id="1-1-add-or-remove-objects-from-the-set">1.1) Add or remove objects from the SET</h4>
 
 <p>Some key core functions are <a href="#set_base-add-objectname-object">SET_BASE:Add()</a> and <a href="#set_base-remove-objectname">SET_BASE:Remove()</a> to add or remove objects from the SET in your logic.</p>
 
-<h4> 1.2) Define the SET iterator **&ldquo;yield interval&rdquo;** and the **&ldquo;time interval&rdquo;**</h4>
+<h4 id="1-2-define-the-set-iterator-yield-interval-and-the-time-interval">1.2) Define the SET iterator <strong>&ldquo;yield interval&rdquo;</strong> and the <strong>&ldquo;time interval&rdquo;</strong></h4>
 
 <p>Modify the iterator intervals with the SET_BASE-SetInteratorIntervals method.
 You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&ldquo;time interval&rdquo;</strong>. (See above).</p>
@@ -375,7 +375,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4> 2.1) SET_GROUP constructor</h4>
+<h4 id="2-1-set_group-constructor">2.1) SET_GROUP constructor</h4>
 
 <p>Create a new SET_GROUP object with the <a href="#set_group-new">SET_GROUP:New()</a> method:</p>
 
@@ -383,12 +383,12 @@ BASE
 <li><a href="#set_group-new">SET_GROUP:New()</a>: Creates a new SET_GROUP object.</li>
 </ul>
 
-<h4> 2.2) Add or Remove GROUP(s) from SET_GROUP</h4>
+<h4 id="2-2-add-or-remove-group-s-from-set_group">2.2) Add or Remove GROUP(s) from SET_GROUP</h4>
 
 <p>GROUPS can be added and removed using the <a href="#set_group-addgroupsbyname-addgroupnames">SET_GROUP:AddGroupsByName()</a> and <a href="#set_group-removegroupsbyname-removegroupnames">SET_GROUP:RemoveGroupsByName()</a> respectively.
 These methods take a single GROUP name or an array of GROUP names to be added or removed from SET_GROUP.</p>
 
-<h4> 2.3) SET_GROUP filter criteria</h4>
+<h4 id="2-3-set_group-filter-criteria">2.3) SET_GROUP filter criteria</h4>
 
 <p>You can set filter criteria to define the set of groups within the SET_GROUP.
 Filter criteria are defined by:</p>
@@ -412,7 +412,7 @@ Filter criteria are defined by:</p>
 <li>SET_GROUP-FilterZones: Builds the SET_GROUP with the groups within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4> 2.4) SET_GROUP iterators</h4>
+<h4 id="2-4-set_group-iterators">2.4) SET_GROUP iterators</h4>
 
 <p>Once the filters have been defined and the SET_GROUP has been built, you can iterate the SET_GROUP with the available iterator methods.
 The iterator methods will walk the SET_GROUP set, and call for each element within the set a function that you provide.
@@ -714,7 +714,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4> 3.1) SET_UNIT constructor</h4>
+<h4 id="3-1-set_unit-constructor">3.1) SET_UNIT constructor</h4>
 
 <p>Create a new SET_UNIT object with the <a href="#set_unit-new">SET_UNIT:New()</a> method:</p>
 
@@ -722,12 +722,12 @@ BASE
 <li><a href="#set_unit-new">SET_UNIT:New()</a>: Creates a new SET_UNIT object.</li>
 </ul>
 
-<h4> 3.2) Add or Remove UNIT(s) from SET_UNIT</h4>
+<h4 id="3-2-add-or-remove-unit-s-from-set_unit">3.2) Add or Remove UNIT(s) from SET_UNIT</h4>
 
 <p>UNITs can be added and removed using the <a href="#set_unit-addunitsbyname-addunitnames">SET_UNIT:AddUnitsByName()</a> and <a href="#set_unit-removeunitsbyname-removeunitnames">SET_UNIT:RemoveUnitsByName()</a> respectively.
 These methods take a single UNIT name or an array of UNIT names to be added or removed from SET_UNIT.</p>
 
-<h4> 3.3) SET_UNIT filter criteria</h4>
+<h4 id="3-3-set_unit-filter-criteria">3.3) SET_UNIT filter criteria</h4>
 
 <p>You can set filter criteria to define the set of units within the SET_UNIT.
 Filter criteria are defined by:</p>
@@ -752,7 +752,7 @@ Filter criteria are defined by:</p>
 <li>SET_UNIT-FilterZones: Builds the SET_UNIT with the units within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4> 3.4) SET_UNIT iterators</h4>
+<h4 id="3-4-set_unit-iterators">3.4) SET_UNIT iterators</h4>
 
 <p>Once the filters have been defined and the SET_UNIT has been built, you can iterate the SET_UNIT with the available iterator methods.
 The iterator methods will walk the SET_UNIT set, and call for each element within the set a function that you provide.
@@ -772,7 +772,7 @@ The following iterator methods are currently available within the SET_UNIT:</p>
 <li><a href="#set_unit-foreachunitnotinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitNotInZone()</a>: Iterate and call an iterator function for each <strong>alive</strong> UNIT presence not in a <a href="#zone-module">Zone</a>, providing the UNIT and optional parameters to the called function.</li>
 </ul>
 
-<h4> 3.5 ) SET_UNIT atomic methods</h4>
+<h4 id="3-5-set_unit-atomic-methods">3.5 ) SET_UNIT atomic methods</h4>
 
 <p>Various methods exist for a SET_UNIT to perform actions or calculations and retrieve results from the SET_UNIT:</p>
 
@@ -1253,7 +1253,7 @@ BASE
 <li>Starting with certain prefix strings.</li>
 </ul>
 
-<h4> 4.1) SET_CLIENT constructor</h4>
+<h4 id="4-1-set_client-constructor">4.1) SET_CLIENT constructor</h4>
 
 <p>Create a new SET_CLIENT object with the <a href="#set_client-new">SET_CLIENT:New()</a> method:</p>
 
@@ -1261,12 +1261,12 @@ BASE
 <li><a href="#set_client-new">SET_CLIENT:New()</a>: Creates a new SET_CLIENT object.</li>
 </ul>
 
-<h4> 4.2) Add or Remove CLIENT(s) from SET_CLIENT</h4>
+<h4 id="4-2-add-or-remove-client-s-from-set_client">4.2) Add or Remove CLIENT(s) from SET_CLIENT</h4>
 
 <p>CLIENTs can be added and removed using the <a href="#set_client-addclientsbyname-addclientnames">SET_CLIENT:AddClientsByName()</a> and <a href="#set_client-removeclientsbyname-removeclientnames">SET_CLIENT:RemoveClientsByName()</a> respectively.
 These methods take a single CLIENT name or an array of CLIENT names to be added or removed from SET_CLIENT.</p>
 
-<h4> 4.3) SET_CLIENT filter criteria</h4>
+<h4 id="4-3-set_client-filter-criteria">4.3) SET_CLIENT filter criteria</h4>
 
 <p>You can set filter criteria to define the set of clients within the SET_CLIENT.
 Filter criteria are defined by:</p>
@@ -1291,7 +1291,7 @@ Filter criteria are defined by:</p>
 <li>SET_CLIENT-FilterZones: Builds the SET_CLIENT with the clients within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
 
-<h4> 4.4) SET_CLIENT iterators</h4>
+<h4 id="4-4-set_client-iterators">4.4) SET_CLIENT iterators</h4>
 
 <p>Once the filters have been defined and the SET_CLIENT has been built, you can iterate the SET_CLIENT with the available iterator methods.
 The iterator methods will walk the SET_CLIENT set, and call for each element within the set a function that you provide.
@@ -1585,7 +1585,7 @@ BASE
 <li>Coalitions</li>
 </ul>
 
-<h4> 5.1) SET_AIRBASE constructor</h4>
+<h4 id="5-1-set_airbase-constructor">5.1) SET_AIRBASE constructor</h4>
 
 <p>Create a new SET_AIRBASE object with the <a href="#set_airbase-new">SET_AIRBASE:New()</a> method:</p>
 
@@ -1593,12 +1593,12 @@ BASE
 <li><a href="#set_airbase-new">SET_AIRBASE:New()</a>: Creates a new SET_AIRBASE object.</li>
 </ul>
 
-<h4> 5.2) Add or Remove AIRBASEs from SET_AIRBASE</h4>
+<h4 id="5-2-add-or-remove-airbases-from-set_airbase">5.2) Add or Remove AIRBASEs from SET_AIRBASE</h4>
 
 <p>AIRBASEs can be added and removed using the <a href="#set_airbase-addairbasesbyname-addairbasenames">SET_AIRBASE:AddAirbasesByName()</a> and <a href="#set_airbase-removeairbasesbyname-removeairbasenames">SET_AIRBASE:RemoveAirbasesByName()</a> respectively.
 These methods take a single AIRBASE name or an array of AIRBASE names to be added or removed from SET_AIRBASE.</p>
 
-<h4> 5.3) SET_AIRBASE filter criteria</h4>
+<h4 id="5-3-set_airbase-filter-criteria">5.3) SET_AIRBASE filter criteria</h4>
 
 <p>You can set filter criteria to define the set of clients within the SET_AIRBASE.
 Filter criteria are defined by:</p>
@@ -1613,7 +1613,7 @@ Filter criteria are defined by:</p>
 <li><a href="#set_airbase-filterstart">SET_AIRBASE:FilterStart()</a>: Starts the filtering of the airbases within the SET_AIRBASE.</li>
 </ul>
 
-<h4> 5.4) SET_AIRBASE iterators</h4>
+<h4 id="5-4-set_airbase-iterators">5.4) SET_AIRBASE iterators</h4>
 
 <p>Once the filters have been defined and the SET_AIRBASE has been built, you can iterate the SET_AIRBASE with the available iterator methods.
 The iterator methods will walk the SET_AIRBASE set, and call for each airbase within the set a function that you provide.

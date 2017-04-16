@@ -2,14 +2,14 @@
 
 <p><strong>Core</strong> - <strong>POINT_VEC</strong> classes define an <strong>extensive API</strong> to <strong>manage 3D points</strong> in the simulation space.</p>
 
-<h4>1) @{Point#POINT_VEC3} class, extends [BASE](#base-class)</h4>
+<h4 id="1-point-point_vec3-class-extends-base">1) @{Point#POINT_VEC3} class, extends <a href="#base-class">BASE</a></h4>
 
 <p>The @{Point#POINT_VEC3} class defines a 3D point in the simulator.</p>
 
 <p><strong>Important Note:</strong> Most of the functions in this section were taken from MIST, and reworked to OO concepts.
 In order to keep the credibility of the the author, I want to emphasize that the of the MIST framework was created by Grimes, who you can find on the Eagle Dynamics Forums.</p>
 
-<h4> 1.1) POINT_VEC3 constructor</h4>
+<h4 id="1-1-point_vec3-constructor">1.1) POINT_VEC3 constructor</h4>
 
 <p>A new POINT_VEC3 instance can be created with:</p>
 
@@ -18,7 +18,7 @@ In order to keep the credibility of the the author, I want to emphasize that the
 <li>@{Point#POINT_VEC3.NewFromVec3}(): a 3D point created from a @{DCSTypes#Vec3}.</li>
 </ul>
 
-<h4> 1.2) Manupulate the X, Y, Z coordinates of the point</h4>
+<h4 id="1-2-manupulate-the-x-y-z-coordinates-of-the-point">1.2) Manupulate the X, Y, Z coordinates of the point</h4>
 
 <p>A POINT_VEC3 class works in 3D space. It contains internally an X, Y, Z coordinate.
 Methods exist to manupulate these coordinates.</p>
@@ -31,15 +31,15 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <p>local Vec3 = PointVec3:AddX( 100 ):AddZ( 150 ):GetVec3()</p>
 
-<h4> 1.3) Create waypoints for routes</h4>
+<h4 id="1-3-create-waypoints-for-routes">1.3) Create waypoints for routes</h4>
 
 <p>A POINT_VEC3 can prepare waypoints for Ground, Air and Naval groups to be embedded into a Route.</p>
 
-<h4> 1.5) Smoke, flare, explode, illuminate</h4>
+<h4 id="1-5-smoke-flare-explode-illuminate">1.5) Smoke, flare, explode, illuminate</h4>
 
 <p>At the point a smoke, flare, explosion and illumination bomb can be triggered. Use the following methods:</p>
 
-<h4> 1.5.1) Smoke</h4>
+<h4 id="1-5-1-smoke">1.5.1) Smoke</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Smoke}(): To smoke the point in a certain color.</li>
@@ -50,7 +50,7 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{#POINT_VEC3.SmokeGreen}(): To smoke the point in green.</li>
 </ul>
 
-<h4> 1.5.2) Flare</h4>
+<h4 id="1-5-2-flare">1.5.2) Flare</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Flare}(): To flare the point in a certain color.</li>
@@ -60,23 +60,23 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{#POINT_VEC3.FlareGreen}(): To flare the point in green.</li>
 </ul>
 
-<h4> 1.5.3) Explode</h4>
+<h4 id="1-5-3-explode">1.5.3) Explode</h4>
 
 <ul>
 <li>@{#POINT_VEC3.Explosion}(): To explode the point with a certain intensity.</li>
 </ul>
 
-<h4> 1.5.4) Illuminate</h4>
+<h4 id="1-5-4-illuminate">1.5.4) Illuminate</h4>
 
 <ul>
 <li>@{#POINT_VEC3.IlluminationBomb}(): To illuminate the point.</li>
 </ul>
 
-<h4>2) @{Point#POINT_VEC2} class, extends @{Point#POINT_VEC3}</h4>
+<h4 id="2-point-point_vec2-class-extends-point-point_vec3">2) @{Point#POINT_VEC2} class, extends @{Point#POINT_VEC3}</h4>
 
 <p>The @{Point#POINT_VEC2} class defines a 2D point in the simulator. The height coordinate (if needed) will be the land height + an optional added height specified.</p>
 
-<h4>2.1) POINT_VEC2 constructor</h4>
+<h4 id="2-1-point_vec2-constructor">2.1) POINT_VEC2 constructor</h4>
 
 <p>A new POINT_VEC2 instance can be created with:</p>
 
@@ -85,7 +85,7 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>@{Point#POINT_VEC2.NewFromVec2}(): a 2D point created from a @{DCSTypes#Vec2}.</li>
 </ul>
 
-<h4> 1.2) Manupulate the X, Altitude, Y coordinates of the 2D point</h4>
+<h4 id="1-2-manupulate-the-x-altitude-y-coordinates-of-the-2d-point">1.2) Manupulate the X, Altitude, Y coordinates of the 2D point</h4>
 
 <p>A POINT_VEC2 class works in 2D space, with an altitude setting. It contains internally an X, Altitude, Y coordinate.
 Methods exist to manupulate these coordinates.</p>
@@ -126,13 +126,13 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 .</li>
 </ul>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
 <h2 id="point_vec3-class">POINT_VEC3 Class</h2>
 

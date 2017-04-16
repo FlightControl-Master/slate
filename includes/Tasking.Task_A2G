@@ -4,7 +4,7 @@
 
 <p><img src="/includes/Pictures/TASK_A2G/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4> 1) @{Task_A2G#TASK_A2G} class, extends [TASK](#task-class)</h4>
+<h4 id="1-task_a2g-task_a2g-class-extends-task">1) @{Task_A2G#TASK_A2G} class, extends <a href="#task-class">TASK</a></h4>
 
 <p>The @{#TASK_A2G} class defines Air To Ground tasks for a <a href="#set-module">Set</a> of Target Units,
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
@@ -18,7 +18,7 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li><strong>Failed</strong>: The A2G task has failed. This will happen if the player exists the task early, without communicating a possible cancellation to HQ.</li>
 </ul>
 
-<h4> 1.1) Set the scoring of achievements in an A2G attack.</h4>
+<h4 id="1-1-set-the-scoring-of-achievements-in-an-a2g-attack">1.1) Set the scoring of achievements in an A2G attack.</h4>
 
 <p>Scoring or penalties can be given in the following circumstances:</p>
 
@@ -28,19 +28,19 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li>@{#TASK_A2G.SetPenaltyOnFailed}(): Set a penalty when the A2G attack has failed.</li>
 </ul>
 
-<h4> 2) [TASK_SEAD](#task_sead-class) class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4 id="2-task_sead-class-extends-task_a2g-task_a2g">2) <a href="#task_sead-class">TASK_SEAD</a> class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_sead-class">TASK_SEAD</a> class defines a SEAD task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4> 3) [TASK_CAS](#task_cas-class) class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4 id="3-task_cas-class-extends-task_a2g-task_a2g">3) <a href="#task_cas-class">TASK_CAS</a> class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_cas-class">TASK_CAS</a> class defines a CAS task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4> 4) [TASK_BAI](#task_bai-class) class, extends @{Task_A2G#TASK_A2G}</h4>
+<h4 id="4-task_bai-class-extends-task_a2g-task_a2g">4) <a href="#task_bai-class">TASK_BAI</a> class, extends @{Task_A2G#TASK_A2G}</h4>
 
 <p>The <a href="#task_bai-class">TASK_BAI</a> class defines a BAI task for a <a href="#set-module">Set</a> of Target Units.</p>
 
-<h4> **API CHANGE HISTORY**</h4>
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -53,15 +53,15 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 
 <p>2017-03-09: Revised version.</p>
 
-<h4> **AUTHORS and CONTRIBUTIONS**</h4>
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
 <ul>
 <li><strong>[WingThor]</strong>: Concept, Advice &amp; Testing.</li>
 </ul>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>

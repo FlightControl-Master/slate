@@ -2,7 +2,7 @@
 
 <p>This module contains the STATIC class.</p>
 
-<h4>1) [STATIC](#static-class) class, extends [POSITIONABLE](#positionable-class)</h4>
+<h4 id="1-static-class-extends-positionable">1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
 
 <p>Statics are <strong>Static Units</strong> defined within the Mission Editor.
 Note that Statics are almost the same as Units, but they don&rsquo;t have a controller.
@@ -14,7 +14,7 @@ The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DC
 <li>Enhance with Static specific APIs not in the DCS API set.</li>
 </ul>
 
-<h4>1.1) STATIC reference methods</h4>
+<h4 id="1-1-static-reference-methods">1.1) STATIC reference methods</h4>
 
 <p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>

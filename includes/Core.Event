@@ -4,7 +4,7 @@
 
 <p><img src="/includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
 
-<h4> 1) Event Handling Overview</h4>
+<h4 id="1-event-handling-overview">1) Event Handling Overview</h4>
 
 <p><img src="/includes/Pictures/EVENT/Dia2.JPG" alt="Objects" /></p>
 
@@ -16,7 +16,7 @@ This module provides a mechanism to dispatch those events occuring within your r
 <p>Objects can subscribe to different events. The Event dispatcher will publish the received DCS events to the subscribed MOOSE objects, in a specified order.
 In this way, the subscribed MOOSE objects are kept in sync with your evolving running mission.</p>
 
-<h4> 1.1) Event Dispatching</h4>
+<h4 id="1-1-event-dispatching">1.1) Event Dispatching</h4>
 
 <p><img src="/includes/Pictures/EVENT/Dia4.JPG" alt="Objects" /></p>
 
@@ -45,7 +45,7 @@ in the correct processing order.</p>
 
 <p>But for some DCS events, the publishing order is reversed. This is due to the fact that objects need to be <strong>erased</strong> instead of added.</p>
 
-<h4> 1.2) Event Handling</h4>
+<h4 id="1-2-event-handling">1.2) Event Handling</h4>
 
 <p><img src="/includes/Pictures/EVENT/Dia8.JPG" alt="Objects" /></p>
 
@@ -57,7 +57,7 @@ The _EVENTDISPATCHER is a component that is quietly working in the background of
 <p>The BASE class provides methods to catch DCS Events. These are events that are triggered from within the DCS simulator,
 and handled through lua scripting. MOOSE provides an encapsulation to handle these events more efficiently.</p>
 
-<h4> 1.2.1 Subscribe / Unsubscribe to DCS Events</h4>
+<h4 id="1-2-1-subscribe-unsubscribe-to-dcs-events">1.2.1 Subscribe / Unsubscribe to DCS Events</h4>
 
 <p>At first, the mission designer will need to <strong>Subscribe</strong> to a specific DCS event for the class.
 So, when the DCS event occurs, the class will be notified of that event.
@@ -75,7 +75,7 @@ Note that for a GROUP, the event will be handled <strong>for all the UNITs in th
 So if a UNIT within the mission has the subscribed event for that object,
 then the object event handler will receive the event for that UNIT!</p>
 
-<h4> 1.3.2 Event Handling of DCS Events</h4>
+<h4 id="1-3-2-event-handling-of-dcs-events">1.3.2 Event Handling of DCS Events</h4>
 
 <p>Once the class is subscribed to the event, an <strong>Event Handling</strong> method on the object or class needs to be written that will be called
 when the DCS event occurs. The Event Handling method receives an <a href="#eventdata-class">EVENTDATA</a> structure, which contains a lot of information
@@ -106,19 +106,19 @@ function Tank2:OnEventDead( EventData )</p>
 <p>self:SmokeBlue()
 end</p>
 
-<h4> 1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h4>
+<h4 id="1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events">1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h4>
 
 <p><img src="/includes/Pictures/EVENT/Dia10.JPG" alt="Objects" /></p>
 
 <p>The following list outlines which EVENTS item in the structure corresponds to which Event Handling method.
 Always ensure that your event handling methods align with the events being subscribed to, or nothing will be executed.</p>
 
-<h4> 2) EVENTS type</h4>
+<h4 id="2-events-type">2) EVENTS type</h4>
 
 <p>The EVENTS structure contains names for all the different DCS events that objects can subscribe to using the
 <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
 
-<h4> 3) EVENTDATA type</h4>
+<h4 id="3-eventdata-type">3) EVENTDATA type</h4>
 
 <p>The <a href="#eventdata-class">EVENTDATA</a> structure contains all the fields that are populated with event information before
 an Event Handler method is being called by the event dispatcher.
@@ -162,7 +162,7 @@ end</p>
 
 <p>When a static object is involved in the event, the Group and Player fields won&rsquo;t be populated.</p>
 
-<h4> **API CHANGE HISTORY**</h4>
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -181,11 +181,11 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li><p>2017-02-07: Did a complete revision of the Event Handing API and underlying mechanisms.</p></li>
 </ul>
 
-<h4> **AUTHORS and CONTRIBUTIONS**</h4>
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>

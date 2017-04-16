@@ -2,7 +2,7 @@
 
 <p>This module contains the AIRBASEPOLICE classes.</p>
 
-<h4>1) [AIRBASEPOLICE_BASE](#airbasepolice_base-class) class, extends [BASE](#base-class)</h4>
+<h4 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h4>
 
 <p>The <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class provides the main methods to monitor CLIENT behaviour at airbases.
 CLIENTS should not be allowed to:</p>
@@ -14,7 +14,7 @@ CLIENTS should not be allowed to:</p>
 <li>Obey ground control orders.</li>
 </ul>
 
-<h4>2) [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)</h4>
+<h4 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
 
 <p>All the airbases on the caucasus map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -41,7 +41,7 @@ The following names can be given:
 * TbilisiLochini
 * Vaziani</p>
 
-<h4>3) [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)</h4>
+<h4 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h4>
 
 <p>All the airbases on the NEVADA map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
@@ -51,9 +51,9 @@ The following names can be given:
 * Creech
 * Groom Lake</p>
 
-<h4> Contributions: Dutch Baron - Concept & Testing</h4>
+<h4 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h4>
 
-<h4> Author: FlightControl - Framework Design &  Programming</h4>
+<h4 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h4>
 
 <h2 id="airbasepolice_base-class">AIRBASEPOLICE_BASE Class</h2>
 

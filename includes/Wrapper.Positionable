@@ -2,7 +2,7 @@
 
 <p>This module contains the POSITIONABLE class.</p>
 
-<h4>1) [POSITIONABLE](#positionable-class) class, extends [IDENTIFIABLE](#identifiable-class)</h4>
+<h4 id="1-positionable-class-extends-identifiable">1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h4>
 
 <p>The <a href="#positionable-class">POSITIONABLE</a> class is a wrapper class to handle the POSITIONABLE objects:</p>
 
@@ -12,7 +12,7 @@
 <li>Manage the &ldquo;state&rdquo; of the POSITIONABLE.</li>
 </ul>
 
-<h4>1.1) POSITIONABLE constructor:</h4>
+<h4 id="1-1-positionable-constructor">1.1) POSITIONABLE constructor:</h4>
 
 <p>The POSITIONABLE class provides the following functions to construct a POSITIONABLE instance:</p>
 
@@ -20,7 +20,7 @@
 <li><a href="#positionable-new-positionablename">POSITIONABLE:New()</a>: Create a POSITIONABLE instance.</li>
 </ul>
 
-<h4>1.2) POSITIONABLE methods:</h4>
+<h4 id="1-2-positionable-methods">1.2) POSITIONABLE methods:</h4>
 
 <p>The following methods can be used to identify an measurable object:</p>
 

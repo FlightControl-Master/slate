@@ -2,7 +2,7 @@
 
 <p>This module contains the IDENTIFIABLE class.</p>
 
-<h4>1) [IDENTIFIABLE](#identifiable-class) class, extends [OBJECT](#object-class)</h4>
+<h4 id="1-identifiable-class-extends-object">1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h4>
 
 <p>The <a href="#identifiable-class">IDENTIFIABLE</a> class is a wrapper class to handle the DCS Identifiable objects:</p>
 
@@ -12,7 +12,7 @@
 <li>Manage the &ldquo;state&rdquo; of the DCS Identifiable.</li>
 </ul>
 
-<h4>1.1) IDENTIFIABLE constructor:</h4>
+<h4 id="1-1-identifiable-constructor">1.1) IDENTIFIABLE constructor:</h4>
 
 <p>The IDENTIFIABLE class provides the following functions to construct a IDENTIFIABLE instance:</p>
 
@@ -20,7 +20,7 @@
 <li><a href="#identifiable-new-identifiablename">IDENTIFIABLE:New()</a>: Create a IDENTIFIABLE instance.</li>
 </ul>
 
-<h4>1.2) IDENTIFIABLE methods:</h4>
+<h4 id="1-2-identifiable-methods">1.2) IDENTIFIABLE methods:</h4>
 
 <p>The following methods can be used to identify an identifiable object:</p>
 

@@ -2,7 +2,7 @@
 
 <p>This module contains the MISSILETRAINER class.</p>
 
-<h4>1) [MISSILETRAINER](#missiletrainer-class) class, extends [BASE](#base-class)</h4>
+<h4 id="1-missiletrainer-class-extends-base">1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h4>
 
 <p>The <a href="#missiletrainer-class">MISSILETRAINER</a> class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
 the class will destroy the missile within a certain range, to avoid damage to your aircraft.
@@ -48,7 +48,7 @@ It suports the following functionality:</p>
 <li><strong>200 meter</strong>: Destroys the missile when the distance to the aircraft is below or equal to 200 meter.</li>
 </ul>
 
-<h4>1.1) MISSILETRAINER construction methods:</h4>
+<h4 id="1-1-missiletrainer-construction-methods">1.1) MISSILETRAINER construction methods:</h4>
 
 <p>Create a new MISSILETRAINER object with the <a href="#missiletrainer-new-distance-briefing">MISSILETRAINER:New()</a> method:</p>
 
@@ -58,7 +58,7 @@ It suports the following functionality:</p>
 
 <p>MISSILETRAINER will collect each unit declared in the mission with a skill level &ldquo;Client&rdquo; and &ldquo;Player&rdquo;, and will monitor the missiles shot at those.</p>
 
-<h4>1.2) MISSILETRAINER initialization methods:</h4>
+<h4 id="1-2-missiletrainer-initialization-methods">1.2) MISSILETRAINER initialization methods:</h4>
 
 <p>A MISSILETRAINER object will behave differently based on the usage of initialization methods:</p>
 

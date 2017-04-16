@@ -2,7 +2,7 @@
 
 <p>This module contains the CONTROLLABLE class.</p>
 
-<h4>1) [CONTROLLABLE](#controllable-class) class, extends [POSITIONABLE](#positionable-class)</h4>
+<h4 id="1-controllable-class-extends-positionable">1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h4>
 
 <p>The <a href="#controllable-class">CONTROLLABLE</a> class is a wrapper class to handle the DCS Controllable objects:</p>
 
@@ -13,7 +13,7 @@
 <li>Manage the &ldquo;state&rdquo; of the DCS Controllable.</li>
 </ul>
 
-<h4>1.1) CONTROLLABLE constructor</h4>
+<h4 id="1-1-controllable-constructor">1.1) CONTROLLABLE constructor</h4>
 
 <p>The CONTROLLABLE class provides the following functions to construct a CONTROLLABLE instance:</p>
 
@@ -21,7 +21,7 @@
 <li><a href="#controllable-new-controllablename">CONTROLLABLE:New()</a>: Create a CONTROLLABLE instance.</li>
 </ul>
 
-<h4>1.2) CONTROLLABLE task methods</h4>
+<h4 id="1-2-controllable-task-methods">1.2) CONTROLLABLE task methods</h4>
 
 <p>Several controllable task methods are available that help you to prepare tasks.
 These methods return a string consisting of the task description, which can then be given to either a <a href="#controllable-pushtask">CONTROLLABLE:PushTask()</a> or @{Controllable#SetTask} method to assign the task to the CONTROLLABLE.
@@ -29,7 +29,7 @@ Tasks are specific for the category of the CONTROLLABLE, more specific, for AIR,
 Each task description where applicable indicates for which controllable category the task is valid.
 There are 2 main subdivisions of tasks: Assigned tasks and EnRoute tasks.</p>
 
-<h4> 1.2.1) Assigned task methods</h4>
+<h4 id="1-2-1-assigned-task-methods">1.2.1) Assigned task methods</h4>
 
 <p>Assigned task methods make the controllable execute the task where the location of the (possible) targets of the task are known before being detected.
 This is different from the EnRoute tasks, where the targets of the task need to be detected before the task can be executed.</p>
@@ -62,7 +62,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-TaskReturnToBase: (AIR) Route the controllable to an airbase.</li>
 </ul>
 
-<h4> 1.2.2) EnRoute task methods</h4>
+<h4 id="1-2-2-enroute-task-methods">1.2.2) EnRoute task methods</h4>
 
 <p>EnRoute tasks require the targets of the task need to be detected by the controllable (using its sensors) before the task can be executed:</p>
 
@@ -76,7 +76,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-enroutetasktanker">CONTROLLABLE:EnRouteTaskTanker()</a>: (AIR) Aircraft will act as a tanker for friendly units. No parameters.</li>
 </ul>
 
-<h4> 1.2.3) Preparation task methods</h4>
+<h4 id="1-2-3-preparation-task-methods">1.2.3) Preparation task methods</h4>
 
 <p>There are certain task methods that allow to tailor the task behaviour:</p>
 
@@ -87,7 +87,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskcontrolled-dcstask-dcsstopcondition">CONTROLLABLE:TaskControlled()</a>: Return a Controlled Task taking a Task and a TaskCondition.</li>
 </ul>
 
-<h4> 1.2.4) Obtain the mission from controllable templates</h4>
+<h4 id="1-2-4-obtain-the-mission-from-controllable-templates">1.2.4) Obtain the mission from controllable templates</h4>
 
 <p>Controllable templates contain complete mission descriptions. Sometimes you want to copy a complete mission from a controllable and assign it to another:</p>
 
@@ -95,7 +95,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskmission-taskmission">CONTROLLABLE:TaskMission()</a>: (AIR + GROUND) Return a mission task from a mission template.</li>
 </ul>
 
-<h4>1.3) CONTROLLABLE Command methods</h4>
+<h4 id="1-3-controllable-command-methods">1.3) CONTROLLABLE Command methods</h4>
 
 <p>Controllable <strong>command methods</strong> prepare the execution of commands using the <a href="#controllable-setcommand-dcscommand">CONTROLLABLE:SetCommand()</a> method:</p>
 
@@ -104,11 +104,11 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-commandswitchwaypoint-fromwaypoint-towaypoint">CONTROLLABLE:CommandSwitchWayPoint()</a>: Perform a switch waypoint command.</li>
 </ul>
 
-<h4>1.4) CONTROLLABLE Option methods</h4>
+<h4 id="1-4-controllable-option-methods">1.4) CONTROLLABLE Option methods</h4>
 
 <p>Controllable <strong>Option methods</strong> change the behaviour of the Controllable while being alive.</p>
 
-<h4> 1.4.1) Rule of Engagement:</h4>
+<h4 id="1-4-1-rule-of-engagement">1.4.1) Rule of Engagement:</h4>
 
 <ul>
 <li><a href="#controllable-optionroeweaponfreepossible">CONTROLLABLE:OptionROEWeaponFreePossible()</a></li>
@@ -126,7 +126,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-OptionROEEvadeFirePossible</li>
 </ul>
 
-<h4> 1.4.2) Rule on thread:</h4>
+<h4 id="1-4-2-rule-on-thread">1.4.2) Rule on thread:</h4>
 
 <ul>
 <li><a href="#controllable-optionrotnoreactionpossible">CONTROLLABLE:OptionROTNoReactionPossible()</a></li>

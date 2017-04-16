@@ -2,7 +2,7 @@
 
 <p>This module contains the DATABASE class, managing the database of mission objects.</p>
 
-<h4>1) [DATABASE](#database-class) class, extends [BASE](#base-class)</h4>
+<h4 id="1-database-class-extends-base">1) <a href="#database-class">DATABASE</a> class, extends <a href="#base-class">BASE</a></h4>
 
 <p>Mission designers can use the DATABASE class to refer to:</p>
 
@@ -20,7 +20,7 @@
 <p>Moose will automatically create one instance of the DATABASE class into the <strong>global</strong> object _DATABASE.
 Moose refers to _DATABASE within the framework extensively, but you can also refer to the _DATABASE object within your missions if required.</p>
 
-<h4>1.1) DATABASE iterators</h4>
+<h4 id="1-1-database-iterators">1.1) DATABASE iterators</h4>
 
 <p>You can iterate the database with the available iterator methods.
 The iterator methods will walk the DATABASE set, and call for each element within the set a function that you provide.

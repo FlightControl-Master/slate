@@ -2,7 +2,7 @@
 
 <p><strong>Tasking</strong> - The TASK_A2G_DISPATCHER creates and manages player TASK_A2G tasks based on detected targets.</p>
 
-<h4> 1) @{#TASK_A2G_DISPATCHER} class, extends [DETECTION_MANAGER](#detection_manager-class)</h4>
+<h4 id="1-task_a2g_dispatcher-class-extends-detection_manager">1) @{#TASK_A2G_DISPATCHER} class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h4>
 
 <p>The @{#TASK_A2G_DISPATCHER} class implements the dynamic dispatching of tasks upon groups of detected units determined a <a href="#set-module">Set</a> of FAC (groups).
 The FAC will detect units, will group them, and will dispatch <a href="#task-module">Task</a>s to groups. Depending on the type of target detected, different tasks will be dispatched.
@@ -16,11 +16,11 @@ Find a summary below describing for which situation a task type is created:</p>
 
 <p>Other task types will follow&hellip;</p>
 
-<h4>3.1) TASK_A2G_DISPATCHER constructor:</h4>
+<h4 id="3-1-task_a2g_dispatcher-constructor">3.1) TASK_A2G_DISPATCHER constructor:</h4>
 
 <p>The @{#TASK_A2G_DISPATCHER.New}() method creates a new TASK_A2G_DISPATCHER instance.</p>
 
-<h4> **API CHANGE HISTORY**</h4>
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -33,11 +33,11 @@ Find a summary below describing for which situation a task type is created:</p>
 
 <p>2017-03-09: Initial class and API.</p>
 
-<h4> **AUTHORS and CONTRIBUTIONS**</h4>
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>

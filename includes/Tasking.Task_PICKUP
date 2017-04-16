@@ -2,7 +2,7 @@
 
 <p>This module contains the TASK_PICKUP classes.</p>
 
-<h4>1) [TASK_PICKUP](#task_pickup-class) class, extends [TASK](#task-class)</h4>
+<h4 id="1-task_pickup-class-extends-task">1) <a href="#task_pickup-class">TASK_PICKUP</a> class, extends <a href="#task-class">TASK</a></h4>
 
 <p>The <a href="#task_pickup-class">TASK_PICKUP</a> class defines a pickup task of a <a href="#set-module">Set</a> of <a href="#cargo-module">CARGO</a> objects defined within the mission.
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
@@ -16,7 +16,7 @@ The TASK_PICKUP is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, a
 <li><strong>Failed</strong>: The SEAD task has failed. This will happen if the player exists the task early, without communicating a possible cancellation to HQ.</li>
 </ul>
 
-<h4> Authors: FlightControl - Design and Programming</h4>
+<h4 id="authors-flightcontrol-design-and-programming">Authors: FlightControl - Design and Programming</h4>
 
 <h2 id="task_pickup-class">TASK_PICKUP Class</h2>
 

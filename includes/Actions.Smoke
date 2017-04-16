@@ -2,16 +2,16 @@
 
 <p>(SP) (MP) (FSM) Route AI or players through waypoints or to zones.</p>
 
-<h4> [ACT_ASSIST](#act_assist-class) FSM class, extends [FSM_PROCESS](#fsm_process-class)</h4>
+<h4 id="act_assist-fsm-class-extends-fsm_process"><a href="#act_assist-class">ACT_ASSIST</a> FSM class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h4>
 
-<h4> ACT_ASSIST state machine:</h4>
+<h4 id="act_assist-state-machine">ACT_ASSIST state machine:</h4>
 
 <p>This class is a state machine: it manages a process that is triggered by events causing state transitions to occur.
 All derived classes from this class will start with the class name, followed by a _. See the relevant derived class descriptions below.
 Each derived class follows exactly the same process, using the same events and following the same state transitions,
 but will have <strong>different implementation behaviour</strong> upon each event or state transition.</p>
 
-<h4> ACT_ASSIST **Events**:</h4>
+<h4 id="act_assist-events">ACT_ASSIST <strong>Events</strong>:</h4>
 
 <p>These are the events defined in this class:</p>
 
@@ -20,7 +20,7 @@ but will have <strong>different implementation behaviour</strong> upon each even
 <li><strong>Next</strong>: The process is smoking the targets in the given zone.</li>
 </ul>
 
-<h4> ACT_ASSIST **Event methods**:</h4>
+<h4 id="act_assist-event-methods">ACT_ASSIST <strong>Event methods</strong>:</h4>
 
 <p>Event methods are available (dynamically allocated by the state machine), that accomodate for state transitions occurring in the process.
 There are two types of event methods, which you can use to influence the normal mechanisms in the state machine:</p>
@@ -30,7 +30,7 @@ There are two types of event methods, which you can use to influence the normal 
 <li><strong>Delayed</strong>: The event method starts with a __ + the name of the event. The first parameter of the event method is a number value, expressing the delay in seconds when the event will be executed.</li>
 </ul>
 
-<h4> ACT_ASSIST **States**:</h4>
+<h4 id="act_assist-states">ACT_ASSIST <strong>States</strong>:</h4>
 
 <ul>
 <li><strong>None</strong>: The controllable did not receive route commands.</li>
@@ -41,7 +41,7 @@ There are two types of event methods, which you can use to influence the normal 
 
 <p>(*) End states of the process.</p>
 
-<h4> ACT_ASSIST state transition methods:</h4>
+<h4 id="act_assist-state-transition-methods">ACT_ASSIST state transition methods:</h4>
 
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
@@ -57,13 +57,13 @@ The state transition method needs to start with the name <strong>OnAfter + the n
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
 
-<h4> 1) [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class) class, extends [ACT_ASSIST](#act_assist-class)</h4>
+<h4 id="1-act_assist_smoke_targets_zone-class-extends-act_assist">1) <a href="#act_assist_smoke_targets_zone-class">ACT_ASSIST_SMOKE_TARGETS_ZONE</a> class, extends <a href="#act_assist-class">ACT_ASSIST</a></h4>
 
 <p>The ACT_ASSIST_SMOKE_TARGETS_ZONE class implements the core functions to smoke targets in a <a href="#zone-module">Zone</a>.
 The targets are smoked within a certain range around each target, simulating a realistic smoking behaviour.
 At random intervals, a new target is smoked.</p>
 
-<h4> 1.1) ACT_ASSIST_SMOKE_TARGETS_ZONE constructor:</h4>
+<h4 id="1-1-act_assist_smoke_targets_zone-constructor">1.1) ACT_ASSIST_SMOKE_TARGETS_ZONE constructor:</h4>
 
 <ul>
 <li><a href="#act_assist_smoke_targets_zone-new-targetsetunit-targetzone">ACT_ASSIST_SMOKE_TARGETS_ZONE:New()</a>: Creates a new ACT_ASSIST_SMOKE_TARGETS_ZONE object.</li>

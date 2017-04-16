@@ -12,7 +12,7 @@
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>: Perform a CAS in a zone.</li>
 </ul>
 
-<h4> **API CHANGE HISTORY**</h4>
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -25,9 +25,9 @@
 
 <p>2017-01-15: Initial class and API.</p>
 
-<h4> **AUTHORS and CONTRIBUTIONS**</h4>
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
@@ -35,7 +35,7 @@
 <li><strong><a href="http://forums.eagle.ru:8080/member.php?u=75036">Gunterlund</a></strong>: Test case revision.</li>
 </ul>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
@@ -110,17 +110,17 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia12.JPG" alt="Engage Event" /></p>
 
-<h4> 1.1) AI_CAS_ZONE constructor</h4>
+<h4 id="1-1-ai_cas_zone-constructor">1.1) AI_CAS_ZONE constructor</h4>
 
 <ul>
 <li><a href="#ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype">AI_CAS_ZONE:New()</a>: Creates a new AI_CAS_ZONE object.</li>
 </ul>
 
-<h4> 1.2) AI_CAS_ZONE is a FSM</h4>
+<h4 id="1-2-ai_cas_zone-is-a-fsm">1.2) AI_CAS_ZONE is a FSM</h4>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia2.JPG" alt="Process" /></p>
 
-<h4> 1.2.1) AI_CAS_ZONE States</h4>
+<h4 id="1-2-1-ai_cas_zone-states">1.2.1) AI_CAS_ZONE States</h4>
 
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
@@ -129,7 +129,7 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
 
-<h4> 1.2.2) AI_CAS_ZONE Events</h4>
+<h4 id="1-2-2-ai_cas_zone-events">1.2.2) AI_CAS_ZONE Events</h4>
 
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>

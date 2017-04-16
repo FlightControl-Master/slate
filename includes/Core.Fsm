@@ -44,7 +44,7 @@ Each of these FSM implementation classes start either with:</p>
 
 <p>Detailed explanations and API specifics are further below clarified and FSM derived class specifics are described in those class documentation sections.</p>
 
-<h4>__Dislaimer:__</h4>
+<h4 id="dislaimer"><strong>Dislaimer:</strong></h4>
 
 <p>The FSM class development is based on a finite state machine implementation made by Conroy Kyle.
 The state machine can be found on <a href="https://github.com/kyleconroy/lua-state-machine">github</a>
@@ -61,7 +61,7 @@ Additionally, I&rsquo;ve added extendability and created an API that allows seam
 for multiple objects or the position of the state machine in the process.</li>
 </ul>
 
-<h4> **API CHANGE HISTORY**</h4>
+<h4 id="api-change-history"><strong>API CHANGE HISTORY</strong></h4>
 
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
@@ -79,15 +79,15 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li>2016-12-18: Released.</li>
 </ul>
 
-<h4> **AUTHORS and CONTRIBUTIONS**</h4>
+<h4 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h4>
 
-<h4> Contributions:</h4>
+<h4 id="contributions">Contributions:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=62835"><strong>Pikey</strong></a>: Review of documentation &amp; advice for improvements.</li>
 </ul>
 
-<h4> Authors:</h4>
+<h4 id="authors">Authors:</h4>
 
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
@@ -123,13 +123,13 @@ Most of the time, these Event Triggers are used within the Transition Handler me
 <p>As explained above, a FSM supports <strong>Linear State Transitions</strong> and <strong>Hierarchical State Transitions</strong>, and both can be mixed to make a comprehensive FSM implementation.
 The below documentation has a seperate chapter explaining both transition modes, taking into account the <strong>Transition Rules</strong>, <strong>Transition Handlers</strong> and <strong>Event Triggers</strong>.</p>
 
-<h4> 1.1) FSM Linear Transitions</h4>
+<h4 id="1-1-fsm-linear-transitions">1.1) FSM Linear Transitions</h4>
 
 <p>Linear Transitions are Transition Rules allowing an FSM to transition from one or multiple possible <strong>From</strong> state(s) towards a <strong>To</strong> state upon a Triggered <strong>Event</strong>.
 The Lineair transition rule evaluation will always be done from the <strong>current state</strong> of the FSM.
 If no valid Transition Rule can be found in the FSM, the FSM will log an error and stop.</p>
 
-<h4> 1.1.1) FSM Transition Rules</h4>
+<h4 id="1-1-1-fsm-transition-rules">1.1.1) FSM Transition Rules</h4>
 
 <p>The FSM has transition rules that it follows and validates, as it walks the process.
 These rules define when an FSM can transition from a specific state towards an other specific state upon a triggered event.</p>
@@ -157,7 +157,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 <li>Note that once the Switch is <strong>On</strong> or <strong>Middle</strong>, it can only be switched <strong>Off</strong>.</li>
 </ul>
 
-<h4> Some additional comments:</h4>
+<h4 id="some-additional-comments">Some additional comments:</h4>
 
 <p>Note that Linear Transition Rules <strong>can be declared in a few variations</strong>:</p>
 
@@ -170,7 +170,7 @@ FsmSwitch:AddTransition( &ldquo;Middle&rdquo;, &ldquo;SwitchOff&rdquo;, &ldquo;O
 
 <p>FsmSwitch:AddTransition( { &ldquo;On&rdquo;,  &ldquo;Middle&rdquo; }, &ldquo;SwitchOff&rdquo;, &ldquo;Off&rdquo; )</p>
 
-<h4> 1.1.2) Transition Handling</h4>
+<h4 id="1-1-2-transition-handling">1.1.2) Transition Handling</h4>
 
 <p><img src="/includes/Pictures/FSM/Dia4.JPG" alt="Transition Handlers" /></p>
 
@@ -196,7 +196,7 @@ These parameters are on the correct order: From, Event, To:</p>
 
 <p>On top, each of these methods can have a variable amount of parameters passed. See the example in section <a href="#1.1.3)-event-triggers">1.1.3</a>.</p>
 
-<h4> 1.1.3) Event Triggers</h4>
+<h4 id="1-1-3-event-triggers">1.1.3) Event Triggers</h4>
 
 <p><img src="/includes/Pictures/FSM/Dia5.JPG" alt="Event Triggers" /></p>
 
@@ -238,7 +238,7 @@ Event will be processed after 5 seconds, and Amount is given as a parameter.</p>
 
 <p>Because &hellip; When Event was asynchronously processed after 5 seconds, Amount was set to 2. So be careful when processing and passing values and objects in asynchronous processing!</p>
 
-<h4> 1.1.4) Linear Transition Example</h4>
+<h4 id="1-1-4-linear-transition-example">1.1.4) Linear Transition Example</h4>
 
 <p>This example is fully implemented in the MOOSE test mission on GITHUB: <a href="https://github.com/FlightControl-Master/MOOSE/blob/master/Moose%20Test%20Missions/FSM%20-%20Finite%20State%20Machine/FSM-100%20-%20Transition%20Explanation/FSM-100%20-%20Transition%20Explanation.lua">FSM-100 - Transition Explanation</a></p>
 
@@ -322,7 +322,7 @@ FsmDemo:AddTransition( { &ldquo;Red&rdquo;, &ldquo;Green&rdquo; }, &ldquo;Stop&r
 <p>So&hellip; When FsmDemo:Stop() is being triggered, the state of FsmDemo will transition from Red or Green to Stopped.
 And there is no transition handling method defined for that transition, thus, no new event is being triggered causing the FsmDemo process flow to halt.</p>
 
-<h4> 1.5) FSM Hierarchical Transitions</h4>
+<h4 id="1-5-fsm-hierarchical-transitions">1.5) FSM Hierarchical Transitions</h4>
 
 <p>Hierarchical Transitions allow to re-use readily available and implemented FSMs.
 This becomes in very useful for mission building, where mission designers build complex processes and workflows,
