@@ -1,239 +1,103 @@
 ---
-title: API Reference
-
-language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+title: Moose API Reference
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='http://flightcontrol-master.github.io/MOOSE/'>Moose Main Website</a>
+  - <a href='https://github.com/FlightControl-Master/MOOSE/releases'>Download Latest Release</a>
+  - <a href='https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases'>Download Test Missions</a>
+  - <a href='https://www.youtube.com/channel/UCjrA9j5LQoWsG4SpS8i79Qg'>Moose on Youtube</a>
+  - <a href='https://flightcontrol.slack.com/'>Moose on Slack.com</a>
+  - <a href='https://github.com/FlightControl-Master/MOOSE'>Moose on GitHub</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - errors
+  - Actions.Account
+  - Actions.Assign
+  - Actions.Process_JTAC
+  - Actions.Process_Pickup
+  - Actions.Route
+  - Actions.Smoke
+  - AI.AI_Balancer
+  - AI.AI_Cap
+  - AI.AI_Cas
+  - AI.AI_Patrol
+  - AI.Cargo
+  - Core.Base
+  - Core.Database
+  - Core.Event
+  - Core.Fsm
+  - Core.Menu
+  - Core.Message
+  - Core.Point
+  - Core.Radio
+  - Core.ScheduleDispatcher
+  - Core.Scheduler
+  - Core.Set
+  - Core.SpawnStatic
+  - Core.Zone
+  - Functional.AirbasePolice
+  - Functional.CleanUp
+  - Functional.Detection
+  - Functional.Escort
+  - Functional.MissileTrainer
+  - Functional.Movement
+  - Functional.Scoring
+  - Functional.Sead
+  - Functional.Spawn
+  - Tasking.CommandCenter
+  - Tasking.DetectionManager
+  - Tasking.Mission
+  - Tasking.Task
+  - Tasking.Task_A2G
+  - Tasking.Task_A2G_Dispatcher
+  - Tasking.Task_PICKUP
+  - Utilities.routines
+  - Utilities.Utils
+  - Wrapper.
+  - Wrapper.Airbase
+  - Wrapper.Client
+  - Wrapper.Controllable
+  - Wrapper.Group
+  - Wrapper.Identifiable
+  - Wrapper.Object
+  - Wrapper.Positionable
+  - Wrapper.Scenery
+  - Wrapper.Static
+  - Wrapper.Unit
 
 search: true
 ---
 
-# Introduction
+# MOOSE framework
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+MOOSE is a **M**ission **O**bject **O**riented **S**cripting **E**nvironment, and is meant for mission designers and mission hosters.
+It allows to quickly setup complex missions using pre-scripted scenarios using the available classes within the MOOSE Framework.
+MOOSE works with DCS world 1.5. and 2.0.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+#### MOOSE Framework Goal
 
-# Authentication
+The goal of MOOSE is to allow mission designers to enhance their scripting with mission orchestration objects, which can be instantiated from defined classes within the framework. This will allow to write mission scripts with minimal code embedded. Of course, the richness of the framework will determine the richness of the misson scenarios. 
+The MOOSE is a service that is produced while being consumed ... , it will evolve further as more classes are developed for the framework, and as more users are using it.
+MOOSE is not a one-man show, it is a collaborative effort and meant to evolve within a growing community around the framework.
+Within the community, key users will start supporting, documenting, explaining and even creating new classes for the framework.
+It is the ambition to grow this framework as a de-facto standard for mission designers to use.
 
-> To authorize, use this code:
+#### MOOSE Main Site
 
-```ruby
-require 'kittn'
+[Click on this link to browse to the MOOSE main web page.](http://flightcontrol-master.github.io/MOOSE)
+Documentation on the MOOSE class hierarchy, usage guides and background information can be found here for normal users, beta testers and contributors.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+#### MOOSE Missions
 
-```python
-import kittn
+MOOSE comes with [demonstration missions](https://github.com/FlightControl-Master/MOOSE_MISSIONS) that you can use to understand the mechanisms how to use the classes within MOOSE.
 
-api = kittn.authorize('meowmeowmeow')
-```
+#### MOOSE Youtube Channel
 
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+MOOSE has a [broadcast and training channel on YouTube](https://www.youtube.com/channel/UCjrA9j5LQoWsG4SpS8i79Qg) with various channels that you can watch.
 
-```javascript
-const kittn = require('kittn');
+#### MOOSE on [Slack.Com](https://flightcontrol.slack.com)
 
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+MOOSE has a living (chat and video) community of users, beta testers and contributors. The gathering point is a service provided by slack.com.
+If you want to join this community, send an email to flightcontrol_moose@outlook.com. You'll receive the invitation from slack, follow the process
+and you'll be on board in no time.
