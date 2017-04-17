@@ -91,7 +91,7 @@ self
 
 ## AIRBASEPOLICE_BASE.AirbaseNames Class
 <pre>
-**The AIRBASEPOLICE_BASE.AirbaseNames class does not inherit**
+The AIRBASEPOLICE_BASE.AirbaseNames class does not inherit
 </pre>
 
 ## AIRBASEPOLICE_CAUCASUS Class

@@ -280,7 +280,7 @@ Radio
 
 ## DCSPositionable Class
 <pre>
-**The DCSPositionable class does not inherit**
+The DCSPositionable class does not inherit
 </pre>
 
 <h4> Attributes </h4>

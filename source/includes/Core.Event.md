@@ -386,6 +386,24 @@ self
 self
 
 
+### EVENT:CreateEventNewCargo(Cargo)
+
+<h4> Parameters </h4>
+* [EVENT](#event-class)
+self
+* [AI_CARGO](#ai_cargo-class) Cargo : The Cargo created.
+
+<h4> Returns </h4>
+
+### EVENT:CreateEventDeleteCargo(Cargo)
+
+<h4> Parameters </h4>
+* [EVENT](#event-class)
+self
+* [AI_CARGO](#ai_cargo-class) Cargo : The Cargo created.
+
+<h4> Returns </h4>
+
 ### EVENT:onEvent(Event)
 
 <h4> Parameters </h4>
@@ -398,14 +416,14 @@ Event
 
 ## EVENTS Class
 <pre>
-**The EVENTS class does not inherit**
+The EVENTS class does not inherit
 </pre>
 Use this structure to subscribe to events using the [BASE:HandleEvent()](#base-handleevent-event-eventfunction) method.
 
 
 ## EVENTDATA Class
 <pre>
-**The EVENTDATA class does not inherit**
+The EVENTDATA class does not inherit
 </pre>
 Note that at the beginning of each field description, there is an indication which field will be populated depending on the object type involved in the Event:
 
@@ -452,7 +470,7 @@ Note that at the beginning of each field description, there is an indication whi
 
 ## EVENT.Events Class
 <pre>
-**The EVENT.Events class does not inherit**
+The EVENT.Events class does not inherit
 </pre>
 
 <h4> Attributes </h4>

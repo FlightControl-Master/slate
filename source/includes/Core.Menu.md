@@ -28,100 +28,13 @@ There are basically two different MENU class types that you need to use:
 
 
 
-The above menus classes **are derived** from 2 main **abstract** classes defined within the MOOSE framework (so don't use these):
+#####  **AUTHORS and CONTRIBUTIONS**
 
-##### 1) MENU_ BASE abstract base classes (don't use them)
+#####  Contributions:
 
-The underlying base menu classes are **NOT** to be used within your missions.
-These are simply abstract base classes defining a couple of fields that are used by the
-derived MENU_ classes to manage menus.
+#####  Authors:
 
-##### 1.1) [MENU_BASE](#menu_base-class) class, extends [BASE](#base-class)
-
-The [MENU_BASE](#menu_base-class) class defines the main MENU class where other MENU classes are derived from.
-
-##### 1.2) [MENU_COMMAND_BASE](#menu_command_base-class) class, extends [BASE](#base-class)
-
-The [MENU_COMMAND_BASE](#menu_command_base-class) class defines the main MENU class where other MENU COMMAND_ classes are derived from, in order to set commands.
-
-
-
-**The next menus define the MENU classes that you can use within your missions.**
-
-##### 2) MENU MISSION classes
-
-The underlying classes manage the menus for a complete mission file.
-
-##### 2.1) [MENU_MISSION](#menu_mission-class) class, extends [MENU_BASE](#menu_base-class)
-
-The [MENU_MISSION](#menu_mission-class) class manages the main menus for a complete mission.
-You can add menus with the [MENU_MISSION:New()](#menu_mission-new-menutext-parentmenu) method, which constructs a MENU_MISSION object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_MISSION:RemoveSubMenus()](#menu_mission-removesubmenus).
-
-##### 2.2) [MENU_MISSION_COMMAND](#menu_mission_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)
-
-The [MENU_MISSION_COMMAND](#menu_mission_command-class) class manages the command menus for a complete mission, which allow players to execute functions during mission execution.
-You can add menus with the [MENU_MISSION_COMMAND:New()](#menu_mission_command-new-menutext-parentmenu-a-an) method, which constructs a MENU_MISSION_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_MISSION_COMMAND:Remove()](#menu_mission_command-remove).
-
-
-
-##### 3) MENU COALITION classes
-
-The underlying classes manage the menus for whole coalitions.
-
-##### 3.1) [MENU_COALITION](#menu_coalition-class) class, extends [MENU_BASE](#menu_base-class)
-
-The [MENU_COALITION](#menu_coalition-class) class manages the main menus for coalitions.
-You can add menus with the [MENU_COALITION:New()](#menu_coalition-new-coalition-menutext-parentmenu) method, which constructs a MENU_COALITION object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_COALITION:RemoveSubMenus()](#menu_coalition-removesubmenus).
-
-##### 3.2) [MENU_COALITION_COMMAND](#menu_coalition_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)
-
-The [MENU_COALITION_COMMAND](#menu_coalition_command-class) class manages the command menus for coalitions, which allow players to execute functions during mission execution.
-You can add menus with the [MENU_COALITION_COMMAND:New()](#menu_coalition_command-new-coalition-menutext-parentmenu-a-an) method, which constructs a MENU_COALITION_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_COALITION_COMMAND:Remove()](#menu_coalition_command-remove).
-
-
-
-##### 4) MENU GROUP classes
-
-The underlying classes manage the menus for groups. Note that groups can be inactive, alive or can be destroyed.
-
-##### 4.1) [MENU_GROUP](#menu_group-class) class, extends [MENU_BASE](#menu_base-class)
-
-The [MENU_GROUP](#menu_group-class) class manages the main menus for coalitions.
-You can add menus with the [MENU_GROUP:New()](#menu_group-new-menugroup-menutext-parentmenu) method, which constructs a MENU_GROUP object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_GROUP:RemoveSubMenus()](#menu_group-removesubmenus-self).
-
-##### 4.2) [MENU_GROUP_COMMAND](#menu_group_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)
-
-The [MENU_GROUP_COMMAND](#menu_group_command-class) class manages the command menus for coalitions, which allow players to execute functions during mission execution.
-You can add menus with the [MENU_GROUP_COMMAND:New()](#menu_group_command-new-menugroup-the-the-a-an) method, which constructs a MENU_GROUP_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_GROUP_COMMAND:Remove()](#menu_group_command-remove-self).
-
-
-
-##### 5) MENU CLIENT classes
-
-The underlying classes manage the menus for units with skill level client or player.
-
-##### 5.1) [MENU_CLIENT](#menu_client-class) class, extends [MENU_BASE](#menu_base-class)
-
-The [MENU_CLIENT](#menu_client-class) class manages the main menus for coalitions.
-You can add menus with the [MENU_CLIENT:New()](#menu_client-new-client-menutext-parentmenu) method, which constructs a MENU_CLIENT object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_CLIENT:RemoveSubMenus()](#menu_client-removesubmenus).
-
-##### 5.2) [MENU_CLIENT_COMMAND](#menu_client_command-class) class, extends [MENU_COMMAND_BASE](#menu_command_base-class)
-
-The [MENU_CLIENT_COMMAND](#menu_client_command-class) class manages the command menus for coalitions, which allow players to execute functions during mission execution.
-You can add menus with the [MENU_CLIENT_COMMAND:New()](#menu_client_command-new-client-menutext-parentmenu-a) method, which constructs a MENU_CLIENT_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_CLIENT_COMMAND:Remove()](#menu_client_command-remove).
-
-
-
-#####  Contributions: -
-#####  Authors: FlightControl : Design & Programming
+* **FlightControl**: Design & Programming
 
 ## MENU_BASE Class
 <pre>
@@ -129,6 +42,9 @@ Inheritance : The MENU_BASE Class inherits from the following parents :
 BASE
 	`-- MENU_BASE
 </pre>
+The MENU_BASE class defines the main MENU class where other MENU classes are derived from.
+This is an abstract class, so don't use it.
+
 
 
 ### MENU_BASE:New()
@@ -186,6 +102,10 @@ BASE
 		`-- MENU_COMMAND_BASE
 </pre>
 
+The MENU_COMMAND_BASE class defines the main MENU class where other MENU COMMAND_
+classes are derived from, in order to set commands.
+
+
 <h4> Attributes </h4>
 
 * <u>Function()</u> MenuCallHandler
@@ -209,6 +129,11 @@ BASE
 	`-- MENU_BASE
 		`-- MENU_MISSION
 </pre>
+
+The MENU_MISSION class manages the main menus for a complete mission.
+You can add menus with the [MENU_MISSION:New()](#menu_mission-new-menutext-parentmenu) method, which constructs a MENU_MISSION object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_MISSION:RemoveSubMenus()](#menu_mission-removesubmenus).
+
 
 
 ### MENU_MISSION:New(MenuText, ParentMenu)
@@ -254,6 +179,12 @@ BASE
 			`-- MENU_MISSION_COMMAND
 </pre>
 
+The MENU_MISSION_COMMAND class manages the command menus for a complete mission, which allow players to execute functions during mission execution.
+You can add menus with the [MENU_MISSION_COMMAND:New()](#menu_mission_command-new-menutext-parentmenu-a-an) method, which constructs a MENU_MISSION_COMMAND object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_MISSION_COMMAND:Remove()](#menu_mission_command-remove).
+
+
+
 
 ### MENU_MISSION_COMMAND:New(MenuText, ParentMenu, A, An)
 
@@ -287,6 +218,50 @@ BASE
 	`-- MENU_BASE
 		`-- MENU_COALITION
 </pre>
+
+The [MENU_COALITION](#menu_coalition-class) class manages the main menus for coalitions.
+You can add menus with the [MENU_COALITION:New()](#menu_coalition-new-coalition-menutext-parentmenu) method, which constructs a MENU_COALITION object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_COALITION:RemoveSubMenus()](#menu_coalition-removesubmenus).
+
+
+@usage
+-- This demo creates a menu structure for the planes within the red coalition.
+-- To test, join the planes, then look at the other radio menus (Option F10).
+-- Then switch planes and check if the menu is still there.
+
+local Plane1 = CLIENT:FindByName( "Plane 1" )
+local Plane2 = CLIENT:FindByName( "Plane 2" )
+
+
+-- This would create a menu for the red coalition under the main DCS "Others" menu.
+local MenuCoalitionRed = MENU_COALITION:New( coalition.side.RED, "Manage Menus" )
+
+
+local function ShowStatus( StatusText, Coalition )
+
+MESSAGE:New( Coalition, 15 ):ToRed()
+Plane1:Message( StatusText, 15 )
+Plane2:Message( StatusText, 15 )
+end
+
+local MenuStatus -- Menu#MENU_COALITION
+local MenuStatusShow -- Menu#MENU_COALITION_COMMAND
+
+local function RemoveStatusMenu()
+MenuStatus:Remove()
+end
+
+local function AddStatusMenu()
+
+-- This would create a menu for the red coalition under the MenuCoalitionRed menu object.
+MenuStatus = MENU_COALITION:New( coalition.side.RED, "Status for Planes" )
+MenuStatusShow = MENU_COALITION_COMMAND:New( coalition.side.RED, "Show Status", MenuStatus, ShowStatus, "Status of planes is ok!", "Message to Red Coalition" )
+end
+
+local MenuAdd = MENU_COALITION_COMMAND:New( coalition.side.RED, "Add Status Menu", MenuCoalitionRed, AddStatusMenu )
+local MenuRemove = MENU_COALITION_COMMAND:New( coalition.side.RED, "Remove Status Menu", MenuCoalitionRed, RemoveStatusMenu )
+
+
 
 
 ### MENU_COALITION:New(Coalition, MenuText, ParentMenu)
@@ -333,6 +308,12 @@ BASE
 			`-- MENU_COALITION_COMMAND
 </pre>
 
+The MENU_COALITION_COMMAND class manages the command menus for coalitions, which allow players to execute functions during mission execution.
+You can add menus with the [MENU_COALITION_COMMAND:New()](#menu_coalition_command-new-coalition-menutext-parentmenu-a-an) method, which constructs a MENU_COALITION_COMMAND object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_COALITION_COMMAND:Remove()](#menu_coalition_command-remove).
+
+
+
 
 ### MENU_COALITION_COMMAND:New(Coalition, MenuText, ParentMenu, A, An)
 
@@ -367,6 +348,63 @@ BASE
 	`-- MENU_BASE
 		`-- MENU_CLIENT
 </pre>
+
+The MENU_CLIENT class manages the main menus for coalitions.
+You can add menus with the [MENU_CLIENT:New()](#menu_client-new-client-menutext-parentmenu) method, which constructs a MENU_CLIENT object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_CLIENT:RemoveSubMenus()](#menu_client-removesubmenus).
+
+@usage
+-- This demo creates a menu structure for the two clients of planes.
+-- Each client will receive a different menu structure.
+-- To test, join the planes, then look at the other radio menus (Option F10).
+-- Then switch planes and check if the menu is still there.
+-- And play with the Add and Remove menu options.
+
+-- Note that in multi player, this will only work after the DCS clients bug is solved.
+
+local function ShowStatus( PlaneClient, StatusText, Coalition )
+
+MESSAGE:New( Coalition, 15 ):ToRed()
+PlaneClient:Message( StatusText, 15 )
+end
+
+local MenuStatus = {}
+
+local function RemoveStatusMenu( MenuClient )
+local MenuClientName = MenuClient:GetName()
+MenuStatus[MenuClientName]:Remove()
+end
+
+ @param [CLIENT](#client-class) MenuClient
+local function AddStatusMenu( MenuClient )
+local MenuClientName = MenuClient:GetName()
+-- This would create a menu for the red coalition under the MenuCoalitionRed menu object.
+MenuStatus[MenuClientName] = MENU_CLIENT:New( MenuClient, "Status for Planes" )
+MENU_CLIENT_COMMAND:New( MenuClient, "Show Status", MenuStatus[MenuClientName], ShowStatus, MenuClient, "Status of planes is ok!", "Message to Red Coalition" )
+end
+
+SCHEDULER:New( nil,
+function()
+local PlaneClient = CLIENT:FindByName( "Plane 1" )
+if PlaneClient and PlaneClient:IsAlive() then
+local MenuManage = MENU_CLIENT:New( PlaneClient, "Manage Menus" )
+MENU_CLIENT_COMMAND:New( PlaneClient, "Add Status Menu Plane 1", MenuManage, AddStatusMenu, PlaneClient )
+MENU_CLIENT_COMMAND:New( PlaneClient, "Remove Status Menu Plane 1", MenuManage, RemoveStatusMenu, PlaneClient )
+end
+end, {}, 10, 10 )
+
+SCHEDULER:New( nil,
+function()
+local PlaneClient = CLIENT:FindByName( "Plane 2" )
+if PlaneClient and PlaneClient:IsAlive() then
+local MenuManage = MENU_CLIENT:New( PlaneClient, "Manage Menus" )
+MENU_CLIENT_COMMAND:New( PlaneClient, "Add Status Menu Plane 2", MenuManage, AddStatusMenu, PlaneClient )
+MENU_CLIENT_COMMAND:New( PlaneClient, "Remove Status Menu Plane 2", MenuManage, RemoveStatusMenu, PlaneClient )
+end
+end, {}, 10, 10 )
+
+
+MENU_COALITION constructor. Creates a new radio command item for a coalition, which can invoke a function with parameters.
 
 
 ### MENU_CLIENT:New(Client, MenuText, ParentMenu)
@@ -411,6 +449,12 @@ ERROR !
 	`-- MENU_CLIENT_COMMAND
 </pre>
 
+The MENU_CLIENT_COMMAND class manages the command menus for coalitions, which allow players to execute functions during mission execution.
+You can add menus with the [MENU_CLIENT_COMMAND:New()](#menu_client_command-new-client-menutext-parentmenu-a) method, which constructs a MENU_CLIENT_COMMAND object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_CLIENT_COMMAND:Remove()](#menu_client_command-remove).
+
+
+
 
 ### MENU_CLIENT_COMMAND:New(Client, MenuText, ParentMenu, A)
 
@@ -444,6 +488,62 @@ BASE
 	`-- MENU_BASE
 		`-- MENU_GROUP
 </pre>
+
+The MENU_GROUP class manages the main menus for coalitions.
+You can add menus with the [MENU_GROUP:New()](#menu_group-new-menugroup-menutext-parentmenu) method, which constructs a MENU_GROUP object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_GROUP:RemoveSubMenus()](#menu_group-removesubmenus-self).
+
+@usage
+-- This demo creates a menu structure for the two groups of planes.
+-- Each group will receive a different menu structure.
+-- To test, join the planes, then look at the other radio menus (Option F10).
+-- Then switch planes and check if the menu is still there.
+-- And play with the Add and Remove menu options.
+
+-- Note that in multi player, this will only work after the DCS groups bug is solved.
+
+local function ShowStatus( PlaneGroup, StatusText, Coalition )
+
+MESSAGE:New( Coalition, 15 ):ToRed()
+PlaneGroup:Message( StatusText, 15 )
+end
+
+local MenuStatus = {}
+
+local function RemoveStatusMenu( MenuGroup )
+local MenuGroupName = MenuGroup:GetName()
+MenuStatus[MenuGroupName]:Remove()
+end
+
+ @param [GROUP](#group-class) MenuGroup
+local function AddStatusMenu( MenuGroup )
+local MenuGroupName = MenuGroup:GetName()
+-- This would create a menu for the red coalition under the MenuCoalitionRed menu object.
+MenuStatus[MenuGroupName] = MENU_GROUP:New( MenuGroup, "Status for Planes" )
+MENU_GROUP_COMMAND:New( MenuGroup, "Show Status", MenuStatus[MenuGroupName], ShowStatus, MenuGroup, "Status of planes is ok!", "Message to Red Coalition" )
+end
+
+SCHEDULER:New( nil,
+function()
+local PlaneGroup = GROUP:FindByName( "Plane 1" )
+if PlaneGroup and PlaneGroup:IsAlive() then
+local MenuManage = MENU_GROUP:New( PlaneGroup, "Manage Menus" )
+MENU_GROUP_COMMAND:New( PlaneGroup, "Add Status Menu Plane 1", MenuManage, AddStatusMenu, PlaneGroup )
+MENU_GROUP_COMMAND:New( PlaneGroup, "Remove Status Menu Plane 1", MenuManage, RemoveStatusMenu, PlaneGroup )
+end
+end, {}, 10, 10 )
+
+SCHEDULER:New( nil,
+function()
+local PlaneGroup = GROUP:FindByName( "Plane 2" )
+if PlaneGroup and PlaneGroup:IsAlive() then
+local MenuManage = MENU_GROUP:New( PlaneGroup, "Manage Menus" )
+MENU_GROUP_COMMAND:New( PlaneGroup, "Add Status Menu Plane 2", MenuManage, AddStatusMenu, PlaneGroup )
+MENU_GROUP_COMMAND:New( PlaneGroup, "Remove Status Menu Plane 2", MenuManage, RemoveStatusMenu, PlaneGroup )
+end
+end, {}, 10, 10 )
+
+
 
 
 ### MENU_GROUP:New(MenuGroup, MenuText, ParentMenu)
@@ -490,6 +590,12 @@ BASE
 	`-- MENU_BASE
 		`-- MENU_GROUP_COMMAND
 </pre>
+
+The [MENU_GROUP_COMMAND](#menu_group_command-class) class manages the command menus for coalitions, which allow players to execute functions during mission execution.
+You can add menus with the [MENU_GROUP_COMMAND:New()](#menu_group_command-new-menugroup-the-the-a-an) method, which constructs a MENU_GROUP_COMMAND object and returns you the object reference.
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with [MENU_GROUP_COMMAND:Remove()](#menu_group_command-remove-self).
+
+
 
 
 ### MENU_GROUP_COMMAND:New(MenuGroup, The, The, A, An)

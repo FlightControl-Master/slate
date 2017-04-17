@@ -7,59 +7,19 @@ even when there are hardly any players in the mission.**
 
 
 
-#####  1) [AI_BALANCER](#ai_balancer-class) class, extends [FSM_SET](#fsm_set-class)
+#####  Demo Missions
 
-The [AI_BALANCER](#ai_balancer-class) class monitors and manages as many replacement AI groups as there are
-CLIENTS in a SET_CLIENT collection, which are not occupied by human players.
-In other words, use AI_BALANCER to simulate human behaviour by spawning in replacement AI in multi player missions.
+#####  [AI_BALANCER Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/AIB%20-%20AI%20Balancing)
 
-The parent class [FSM_SET](#fsm_set-class) manages the functionality to control the Finite State Machine (FSM).
-The mission designer can tailor the behaviour of the AI_BALANCER, by defining event and state transition methods.
-An explanation about state and event transition methods can be found in the [FSM](#fsm-module) module documentation.
+#####  [AI_BALANCER Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/AIB%20-%20AI%20Balancing)
 
-The mission designer can tailor the AI_BALANCER behaviour, by implementing a state or event handling method for the following:
+#####  [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)
 
-* **AI_BALANCER-OnAfterSpawned**( AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.
 
-#####  1.1) AI_BALANCER construction
 
-Create a new AI_BALANCER object with the [AI_BALANCER:New()](#ai_balancer-new-setclient-spawnai) method:
+#####  YouTube Channel
 
-#####  1.2) AI_BALANCER is a FSM
-
-![Process](/includes/Pictures/AI_Balancer/Dia13.JPG)
-
-#####  1.2.1) AI_BALANCER States
-
-* **Monitoring** ( Set ): Monitoring the Set if all AI is spawned for the Clients.
-* **Spawning** ( Set, ClientName ): There is a new AI group spawned with ClientName as the name of reference.
-* **Spawned** ( Set, AIGroup ): A new AI has been spawned. You can handle this event to customize the AI behaviour with other AI FSMs or own processes.
-* **Destroying** ( Set, AIGroup ): The AI is being destroyed.
-* **Returning** ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods. Handle this state to customize the return behaviour of the AI, if any.
-
-#####  1.2.2) AI_BALANCER Events
-
-* **Monitor** ( Set ): Every 10 seconds, the Monitor event is triggered to monitor the Set.
-* **Spawn** ( Set, ClientName ): Triggers when there is a new AI group to be spawned with ClientName as the name of reference.
-* **Spawned** ( Set, AIGroup ): Triggers when a new AI has been spawned. You can handle this event to customize the AI behaviour with other AI FSMs or own processes.
-* **Destroy** ( Set, AIGroup ): The AI is being destroyed.
-* **Return** ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods.
-
-#####  1.3) AI_BALANCER spawn interval for replacement AI
-
-Use the method [AI_BALANCER:InitSpawnInterval()](#ai_balancer-initspawninterval-earliest-latest) to set the earliest and latest interval in seconds that is waited until a new replacement AI is spawned.
-
-#####  1.4) AI_BALANCER returns AI to Airbases
-
-By default, When a human player joins a slot that is AI_BALANCED, the AI group will be destroyed by default.
-However, there are 2 additional options that you can use to customize the destroy behaviour.
-When a human player joins a slot, you can configure to let the AI return to:
-
-* [AI_BALANCER:ReturnToHomeAirbase()](#ai_balancer-returntohomeairbase-returntresholdrange): Returns the AI to the **home** [AIRBASE](#airbase-class).
-* [AI_BALANCER:ReturnToNearestAirbases()](#ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset): Returns the AI to the **nearest friendly** [AIRBASE](#airbase-class).
-
-Note that when AI returns to an airbase, the AI_BALANCER will trigger the **Return** event and the AI will return,
-otherwise the AI_BALANCER will trigger a **Destroy** event, and the AI will be destroyed.
+#####  [AI_BALANCER YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl2CJVIrL1TdAumuVS8n64B7)
 
 
 
@@ -97,6 +57,60 @@ BASE
 		`-- FSM_SET
 			`-- AI_BALANCER
 </pre>
+
+The AI_BALANCER class monitors and manages as many replacement AI groups as there are
+CLIENTS in a SET_CLIENT collection, which are not occupied by human players.
+In other words, use AI_BALANCER to simulate human behaviour by spawning in replacement AI in multi player missions.
+
+The parent class [FSM_SET](#fsm_set-class) manages the functionality to control the Finite State Machine (FSM).
+The mission designer can tailor the behaviour of the AI_BALANCER, by defining event and state transition methods.
+An explanation about state and event transition methods can be found in the [FSM](#fsm-module) module documentation.
+
+The mission designer can tailor the AI_BALANCER behaviour, by implementing a state or event handling method for the following:
+
+* AI_BALANCER-OnAfterSpawned AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.
+
+#####  1. AI_BALANCER construction
+
+Create a new AI_BALANCER object with the [AI_BALANCER:New()](#ai_balancer-new-setclient-spawnai) method:
+
+#####  2. AI_BALANCER is a FSM
+
+![Process](/includes/Pictures/AI_Balancer/Dia13.JPG)
+
+#####  2.1. AI_BALANCER States
+
+* **Monitoring** ( Set ): Monitoring the Set if all AI is spawned for the Clients.
+* **Spawning** ( Set, ClientName ): There is a new AI group spawned with ClientName as the name of reference.
+* **Spawned** ( Set, AIGroup ): A new AI has been spawned. You can handle this event to customize the AI behaviour with other AI FSMs or own processes.
+* **Destroying** ( Set, AIGroup ): The AI is being destroyed.
+* **Returning** ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods. Handle this state to customize the return behaviour of the AI, if any.
+
+#####  2.2. AI_BALANCER Events
+
+* **Monitor** ( Set ): Every 10 seconds, the Monitor event is triggered to monitor the Set.
+* **Spawn** ( Set, ClientName ): Triggers when there is a new AI group to be spawned with ClientName as the name of reference.
+* **Spawned** ( Set, AIGroup ): Triggers when a new AI has been spawned. You can handle this event to customize the AI behaviour with other AI FSMs or own processes.
+* **Destroy** ( Set, AIGroup ): The AI is being destroyed.
+* **Return** ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods.
+
+#####  3. AI_BALANCER spawn interval for replacement AI
+
+Use the method [AI_BALANCER:InitSpawnInterval()](#ai_balancer-initspawninterval-earliest-latest) to set the earliest and latest interval in seconds that is waited until a new replacement AI is spawned.
+
+#####  4. AI_BALANCER returns AI to Airbases
+
+By default, When a human player joins a slot that is AI_BALANCED, the AI group will be destroyed by default.
+However, there are 2 additional options that you can use to customize the destroy behaviour.
+When a human player joins a slot, you can configure to let the AI return to:
+
+* [AI_BALANCER:ReturnToHomeAirbase()](#ai_balancer-returntohomeairbase-returntresholdrange): Returns the AI to the **home** [AIRBASE](#airbase-class).
+* [AI_BALANCER:ReturnToNearestAirbases()](#ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset): Returns the AI to the **nearest friendly** [AIRBASE](#airbase-class).
+
+Note that when AI returns to an airbase, the AI_BALANCER will trigger the **Return** event and the AI will return,
+otherwise the AI_BALANCER will trigger a **Destroy** event, and the AI will be destroyed.
+
+
 
 <h4> Attributes </h4>
 

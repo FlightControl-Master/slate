@@ -35,7 +35,7 @@ The Schedule() method returns the CallID that is the reference ID for each plann
 
 ## SCHEDULEDISPATCHER Class
 <pre>
-**The SCHEDULEDISPATCHER class does not inherit**
+The SCHEDULEDISPATCHER class does not inherit
 </pre>
 
 

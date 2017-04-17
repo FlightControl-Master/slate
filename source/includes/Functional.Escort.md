@@ -344,7 +344,7 @@ self
 
 ## ESCORT.MODE Class
 <pre>
-**The ESCORT.MODE class does not inherit**
+The ESCORT.MODE class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -355,7 +355,7 @@ self
 
 ## MENUPARAM Class
 <pre>
-**The MENUPARAM class does not inherit**
+The MENUPARAM class does not inherit
 </pre>
 
 <h4> Attributes </h4>

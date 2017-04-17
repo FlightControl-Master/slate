@@ -136,7 +136,7 @@ self
 
 ## SPAWNSTATIC.SpawnZoneTable Class
 <pre>
-**The SPAWNSTATIC.SpawnZoneTable class does not inherit**
+The SPAWNSTATIC.SpawnZoneTable class does not inherit
 </pre>
 <h4> Attributes </h4>
 

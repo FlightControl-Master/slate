@@ -494,7 +494,7 @@ self
 
 ## Unit.SensorType Class
 <pre>
-**The Unit.SensorType class does not inherit**
+The Unit.SensorType class does not inherit
 </pre>
 
 <h4> Attributes </h4>

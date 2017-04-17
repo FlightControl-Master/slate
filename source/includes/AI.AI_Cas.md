@@ -13,6 +13,22 @@ There are the following types of CAS classes defined:
 
 
 
+#####  Demo Missions
+
+#####  [AI_CAS Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/CAS%20-%20Close%20Air%20Support)
+
+#####  [AI_CAS Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/CAS%20-%20Close%20Air%20Support)
+
+#####  [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)
+
+
+
+#####  YouTube Channel
+
+#####  [AI_CAS YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3JBO1WDqqpyYRRmIkR2ir2)
+
+
+
 #####  **API CHANGE HISTORY**
 
 The underlying change log documents the API changes. Please read this carefully. The following notation is used:
@@ -48,9 +64,9 @@ BASE
 				`-- AI_CAS_ZONE
 </pre>
 
-[AI_CAS_ZONE](#ai_cas_zone-class) derives from the [AI_PATROL_ZONE](#ai_patrol_zone-class), inheriting its methods and behaviour.
+AI_CAS_ZONE derives from the [AI_PATROL_ZONE](#ai_patrol_zone-class), inheriting its methods and behaviour.
 
-The [AI_CAS_ZONE](#ai_cas_zone-class) class implements the core functions to provide Close Air Support in an Engage [Zone](#zone-module) by an AIR [Controllable](#controllable-module) or [Group](#group-module).
+The AI_CAS_ZONE class implements the core functions to provide Close Air Support in an Engage [Zone](#zone-module) by an AIR [Controllable](#controllable-module) or [Group](#group-module).
 The AI_CAS_ZONE runs a process. It holds an AI in a Patrol Zone and when the AI is commanded to engage, it will fly to an Engage Zone.
 
 ![HoldAndEngage](/includes/Pictures/AI_CAS/Dia3.JPG)
@@ -104,22 +120,22 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 
 ![Engage Event](/includes/Pictures/AI_CAS/Dia12.JPG)
 
-#####  1.1) AI_CAS_ZONE constructor
+#####  1. AI_CAS_ZONE constructor
 
 * [AI_CAS_ZONE:New()](#ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype): Creates a new AI_CAS_ZONE object.
 
-#####  1.2) AI_CAS_ZONE is a FSM
+#####  2. AI_CAS_ZONE is a FSM
 
 ![Process](/includes/Pictures/AI_CAS/Dia2.JPG)
 
-#####  1.2.1) AI_CAS_ZONE States
+#####  2.1. AI_CAS_ZONE States
 
 * **None** ( Group ): The process is not started yet.
 * **Patrolling** ( Group ): The AI is patrolling the Patrol Zone.
 * **Engaging** ( Group ): The AI is engaging the targets in the Engage Zone, executing CAS.
 * **Returning** ( Group ): The AI is returning to Base..
 
-#####  1.2.2) AI_CAS_ZONE Events
+#####  2.2. AI_CAS_ZONE Events
 
 * **[AI_PATROL_ZONE:Start()](#ai_patrol_zone-start)**: Start the process.
 * **[AI_PATROL_ZONE:Route()](#ai_patrol_zone-route)**: Route the AI to a new random 3D point within the Patrol Zone.
@@ -131,7 +147,6 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 * **[AI_CAS_ZONE:Destroy()](#ai_cas_zone-destroy)**: The AI has destroyed a target [Unit](#unit-module).
 * **AI_CAS_ZONE-Destroyed**: The AI has destroyed all target [Unit](#unit-module)s assigned in the CAS task.
 * **Status**: The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.
-
 
 
 

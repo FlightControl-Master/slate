@@ -4,19 +4,24 @@
 ![Banner Image](/includes/Pictures/MESSAGE/Dia1.JPG)
 
 
-
-#####  1) [MESSAGE](#message-class) class, extends [BASE](#base-class)
+
+## MESSAGE Class
+<pre>
+Inheritance : The MESSAGE Class inherits from the following parents :
+BASE
+	`-- MESSAGE
+</pre>
 
 Message System to display Messages to Clients, Coalitions or All.
 Messages are shown on the display panel for an amount of seconds, and will then disappear.
 Messages can contain a category which is indicating the category of the message.
 
-#####  1.1) MESSAGE construction
+#####  MESSAGE construction
 
 Messages are created with [MESSAGE:New()](#message-new-messagetext-messageduration-messagecategory). Note that when the MESSAGE object is created, no message is sent yet.
 To send messages, you need to use the To functions.
 
-#####  1.2) Send messages to an audience
+#####  Send messages to an audience
 
 Messages are sent:
 
@@ -27,20 +32,15 @@ Messages are sent:
 * To the blue coalition using [MESSAGE:ToBlue()](#message-toblue).
 * To all Players using [MESSAGE:ToAll()](#message-toall).
 
-#####  1.3) Send conditionally to an audience
+#####  Send conditionally to an audience
 
 Messages can be sent conditionally to an audience (when a condition is true):
 
 * To all players using [MESSAGE:ToAllIf()](#message-toallif).
 * To a coalition using [MESSAGE:ToCoalitionIf()](#message-tocoalitionif-needs).
 
-
-## MESSAGE Class
-<pre>
-Inheritance : The MESSAGE Class inherits from the following parents :
-BASE
-	`-- MESSAGE
-</pre>
+
+The MESSAGE class
 
 
 ### MESSAGE:New(MessageText, MessageDuration, MessageCategory)

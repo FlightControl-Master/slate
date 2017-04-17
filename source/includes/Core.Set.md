@@ -1340,3 +1340,236 @@ self
 self
 
 
+## SET_CARGO Class
+<pre>
+Inheritance : The SET_CARGO Class inherits from the following parents :
+BASE
+	`-- SET_BASE
+		`-- SET_CARGO
+</pre>
+
+Mission designers can use the [SET_CARGO](#set_cargo-class) class to build sets of cargos optionally belonging to certain:
+
+* Coalitions
+* Types
+* Name or Prefix
+
+#####  SET_CARGO constructor
+
+Create a new SET_CARGO object with the [SET_CARGO:New()](#set_cargo-new) method:
+
+* [SET_CARGO:New()](#set_cargo-new): Creates a new SET_CARGO object.
+
+#####  Add or Remove CARGOs from SET_CARGO
+
+CARGOs can be added and removed using the [SET_CARGO:AddCargosByName()](#set_cargo-addcargosbyname-addcargonames) and [SET_CARGO:RemoveCargosByName()](#set_cargo-removecargosbyname-removecargonames) respectively.
+These methods take a single CARGO name or an array of CARGO names to be added or removed from SET_CARGO.
+
+#####  SET_CARGO filter criteria
+
+You can set filter criteria to automatically maintain the SET_CARGO contents.
+Filter criteria are defined by:
+
+* [SET_CARGO:FilterCoalitions()](#set_cargo-filtercoalitions-coalitions): Builds the SET_CARGO with the cargos belonging to the coalition(s).
+* [SET_CARGO:FilterPrefixes()](#set_cargo-filterprefixes-prefixes): Builds the SET_CARGO with the cargos containing the prefix string(s).
+* [SET_CARGO:FilterTypes()](#set_cargo-filtertypes-types): Builds the SET_CARGO with the cargos belonging to the cargo type(s).
+* [SET_CARGO:FilterCountries()](#set_cargo-filtercountries-countries): Builds the SET_CARGO with the cargos belonging to the country(ies).
+
+Once the filter criteria have been set for the SET_CARGO, you can start filtering using:
+
+* [SET_CARGO:FilterStart()](#set_cargo-filterstart): Starts the filtering of the cargos within the SET_CARGO.
+
+#####  SET_CARGO iterators
+
+Once the filters have been defined and the SET_CARGO has been built, you can iterate the SET_CARGO with the available iterator methods.
+The iterator methods will walk the SET_CARGO set, and call for each cargo within the set a function that you provide.
+The following iterator methods are currently available within the SET_CARGO:
+
+* [SET_CARGO:ForEachCargo()](#set_cargo-foreachcargo-iteratorfunction): Calls a function for each cargo it finds within the SET_CARGO.
+
+
+
+
+
+### SET_CARGO:New()
+``` lua
+-- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.
+DatabaseSet = SET_CARGO:New()
+```
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:AddCargosByName(AddCargoNames)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class) self
+* <u>String</u> AddCargoNames : A single name or an array of CARGO names.
+
+<h4> Returns </h4>
+* self self
+
+
+### SET_CARGO:RemoveCargosByName(RemoveCargoNames)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class) self
+* [CARGO](#cargo-class) RemoveCargoNames : A single name or an array of CARGO names.
+
+<h4> Returns </h4>
+* self self
+
+
+### SET_CARGO:FindCargo(CargoName)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>String</u> CargoName
+
+<h4> Returns </h4>
+* [CARGO](#cargo-class) The : found Cargo.
+
+
+### SET_CARGO:FilterCoalitions(Coalitions)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>String</u> Coalitions : Can take the following values: "red", "blue", "neutral".
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:FilterTypes(Types)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>String</u> Types : Can take those type strings known within DCS world.
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:FilterCountries(Countries)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>String</u> Countries : Can take those country strings known within DCS world.
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:FilterPrefixes(Prefixes)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>String</u> Prefixes : The prefix of which the cargo name starts with.
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:FilterStart()
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:AddInDatabase(Event)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [EVENTDATA](#eventdata-class) Event
+
+<h4> Returns </h4>
+* <u>String</u> The : name of the CARGO
+* <u>List[]</u> The : CARGO
+
+
+### SET_CARGO:FindInDatabase(Event)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [EVENTDATA](#eventdata-class) Event
+
+<h4> Returns </h4>
+* <u>String</u> The : name of the CARGO
+* <u>List[]</u> The : CARGO
+
+
+### SET_CARGO:ForEachCargo(IteratorFunction)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* <u>Function()</u> IteratorFunction : The function that will be called when there is an alive CARGO in the SET_CARGO. The function needs to accept a CARGO parameter.
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [POINT_VEC2](#point_vec2-class) PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest [CARGO](#cargo-class).
+
+<h4> Returns </h4>
+* [CARGO](#cargo-class) The : closest [CARGO](#cargo-class).
+
+
+### SET_CARGO:IsIncludeObject(MCargo)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [AI_CARGO](#ai_cargo-class) MCargo
+
+<h4> Returns </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+
+
+### SET_CARGO:OnEventNewCargo(EventData)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [EVENTDATA](#eventdata-class) EventData
+
+<h4> Returns </h4>
+
+### SET_CARGO:OnEventDeleteCargo(EventData)
+
+<h4> Parameters </h4>
+* [SET_CARGO](#set_cargo-class)
+self
+* [EVENTDATA](#eventdata-class) EventData
+
+<h4> Returns </h4>
+

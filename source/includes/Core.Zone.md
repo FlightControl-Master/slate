@@ -73,38 +73,43 @@ BASE
 
 This class is an abstract BASE class for derived classes, and is not meant to be instantiated.
 
-#####  1.1) Each zone has a name:
+#####  Each zone has a name:
 
 * [ZONE_BASE:GetName()](#zone_base-getname): Returns the name of the zone.
 
-#####  1.2) Each zone implements two polymorphic functions defined in [ZONE_BASE](#zone_base-class):
+#####  Each zone implements two polymorphic functions defined in [ZONE_BASE](#zone_base-class):
 
-* [ZONE_BASE:IsVec2InZone()](#zone_base-isvec2inzone-vec2): Returns if a Vec2 is within the zone.
-* [ZONE_BASE:IsVec3InZone()](#zone_base-isvec3inzone-vec3): Returns if a Vec3 is within the zone.
+* [ZONE_BASE:IsVec2InZone()](#zone_base-isvec2inzone-vec2): Returns if a 2D vector is within the zone.
+* [ZONE_BASE:IsVec3InZone()](#zone_base-isvec3inzone-vec3): Returns if a 3D vector is within the zone.
+* [ZONE_BASE:IsPointVec2InZone()](#zone_base-ispointvec2inzone-pointvec2): Returns if a 2D point vector is within the zone.
+* [ZONE_BASE:IsPointVec3InZone()](#zone_base-ispointvec3inzone-pointvec3): Returns if a 3D point vector is within the zone.
 
-#####  1.3) A zone has a probability factor that can be set to randomize a selection between zones:
+#####  A zone has a probability factor that can be set to randomize a selection between zones:
 
-* ZONE_BASE-SetRandomizeProbability: Set the randomization probability of a zone to be selected, taking a value between 0 and 1 ( 0 = 0%, 1 = 100% )
-* ZONE_BASE-GetRandomizeProbability: Get the randomization probability of a zone to be selected, passing a value between 0 and 1 ( 0 = 0%, 1 = 100% )
+* [ZONE_BASE:SetZoneProbability()](#zone_base-setzoneprobability-a): Set the randomization probability of a zone to be selected, taking a value between 0 and 1 ( 0 = 0%, 1 = 100% )
+* [ZONE_BASE:GetZoneProbability()](#zone_base-getzoneprobability): Get the randomization probability of a zone to be selected, passing a value between 0 and 1 ( 0 = 0%, 1 = 100% )
 * [ZONE_BASE:GetZoneMaybe()](#zone_base-getzonemaybe): Get the zone taking into account the randomization probability. nil is returned if this zone is not a candidate.
 
-#####  1.4) A zone manages Vectors:
+#####  A zone manages vectors:
 
-* [ZONE_BASE:GetVec2()](#zone_base-getvec2): Returns the @{DCSTypes#Vec2} coordinate of the zone.
-* [ZONE_BASE:GetRandomVec2()](#zone_base-getrandomvec2): Define a random @{DCSTypes#Vec2} within the zone.
+* [ZONE_BASE:GetVec2()](#zone_base-getvec2): Returns the 2D vector coordinate of the zone.
+* [ZONE_BASE:GetVec3()](#zone_base-getvec3-height): Returns the 3D vector coordinate of the zone.
+* [ZONE_BASE:GetPointVec2()](#zone_base-getpointvec2-height): Returns the 2D point vector coordinate of the zone.
+* [ZONE_BASE:GetPointVec3()](#zone_base-getpointvec3-height): Returns the 3D point vector coordinate of the zone.
+* [ZONE_BASE:GetRandomVec2()](#zone_base-getrandomvec2): Define a random 2D vector within the zone.
+* [ZONE_BASE:GetRandomPointVec2()](#zone_base-getrandompointvec2): Define a random 2D point vector within the zone.
+* [ZONE_BASE:GetRandomPointVec3()](#zone_base-getrandompointvec3): Define a random 3D point vector within the zone.
 
-#####  1.5) A zone has a bounding square:
+#####  A zone has a bounding square:
 
 * [ZONE_BASE:GetBoundingSquare()](#zone_base-getboundingsquare): Get the outer most bounding square of the zone.
 
-#####  1.6) A zone can be marked:
+#####  A zone can be marked:
 
 * [ZONE_BASE:SmokeZone()](#zone_base-smokezone-smokecolor): Smokes the zone boundaries in a color.
 * ZONE_BASE-FlareZone: Flares the zone boundaries in a color.
 
 
-
-The ZONE_BASE class
 
 <h4> Attributes </h4>
 
@@ -139,10 +144,10 @@ self
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class)
 self
-* [Vec2](#vec2-class) Vec2 : The location to test.
+* [Vec2](#vec2-class) Vec2 : The Vec2 to test.
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if the location is within the zone.
+* <u>Boolean</u> true : if the Vec2 is within the zone.
 
 
 ### ZONE_BASE:IsVec3InZone(Vec3)
@@ -153,7 +158,29 @@ self
 * [Vec3](#vec3-class) Vec3 : The point to test.
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if the point is within the zone.
+* <u>Boolean</u> true : if the Vec3 is within the zone.
+
+
+### ZONE_BASE:IsPointVec2InZone(PointVec2)
+
+<h4> Parameters </h4>
+* [ZONE_BASE](#zone_base-class)
+self
+* [POINT_VEC2](#point_vec2-class) PointVec2 : The PointVec2 to test.
+
+<h4> Returns </h4>
+* <u>Boolean</u> true : if the PointVec2 is within the zone.
+
+
+### ZONE_BASE:IsPointVec3InZone(PointVec3)
+
+<h4> Parameters </h4>
+* [ZONE_BASE](#zone_base-class)
+self
+* [POINT_VEC3](#point_vec3-class) PointVec3 : The PointVec3 to test.
+
+<h4> Returns </h4>
+* <u>Boolean</u> true : if the PointVec3 is within the zone.
 
 
 ### ZONE_BASE:GetVec2()
@@ -289,7 +316,7 @@ The : zone is selected taking into account the randomization probability factor.
 
 ## ZONE_BASE.BoundingSquare Class
 <pre>
-**The ZONE_BASE.BoundingSquare class does not inherit**
+The ZONE_BASE.BoundingSquare class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -311,31 +338,28 @@ BASE
 The ZONE_RADIUS class defined by a zone name, a location and a radius.
 This class implements the inherited functions from [ZONE_BASE](#zone_base-class) taking into account the own zone format and properties.
 
-#####  2.1) [ZONE_RADIUS](#zone_radius-class) constructor
+#####  ZONE_RADIUS constructor
 
 * [ZONE_RADIUS:New()](#zone_radius-new-zonename-vec2-radius): Constructor.
 
-#####  2.2) Manage the radius of the zone
+#####  Manage the radius of the zone
 
 * [ZONE_RADIUS:SetRadius()](#zone_radius-setradius-radius): Sets the radius of the zone.
 * [ZONE_RADIUS:GetRadius()](#zone_radius-getradius): Returns the radius of the zone.
 
-#####  2.3) Manage the location of the zone
+#####  Manage the location of the zone
 
 * [ZONE_RADIUS:SetVec2()](#zone_radius-setvec2-vec2): Sets the @{DCSTypes#Vec2} of the zone.
 * [ZONE_RADIUS:GetVec2()](#zone_radius-getvec2): Returns the @{DCSTypes#Vec2} of the zone.
 * [ZONE_RADIUS:GetVec3()](#zone_radius-getvec3-height): Returns the @{DCSTypes#Vec3} of the zone, taking an additional height parameter.
 
-#####  2.4) Zone point randomization
+#####  Zone point randomization
 
 Various functions exist to find random points within the zone.
 
 * [ZONE_RADIUS:GetRandomVec2()](#zone_radius-getrandomvec2-inner-outer): Gets a random 2D point in the zone.
 * [ZONE_RADIUS:GetRandomPointVec2()](#zone_radius-getrandompointvec2-inner-outer): Gets a @{Point#POINT_VEC2} object representing a random 2D point in the zone.
 * [ZONE_RADIUS:GetRandomPointVec3()](#zone_radius-getrandompointvec3-inner-outer): Gets a @{Point#POINT_VEC3} object representing a random 3D point in the zone. Note that the height of the point is at landheight.
-
-
-
 
 
 The ZONE_RADIUS class, defined by a zone name, a location and a radius.
@@ -526,9 +550,6 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 
-
-
-
 ### ZONE:New(ZoneName)
 
 <h4> Parameters </h4>
@@ -554,10 +575,6 @@ The ZONE_UNIT class defined by a zone around a [UNIT](#unit-class) with a radius
 This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-class) taking into account the own zone format and properties.
 
 
-
-
-
-The ZONE_UNIT class defined by a zone around a [UNIT](#unit-class) with a radius.
 
 <h4> Attributes </h4>
 
@@ -624,13 +641,6 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 
-
-
-<h4> Attributes </h4>
-
-* [GROUP](#group-class) ZoneGROUP
-
-
 ### ZONE_GROUP:New(ZoneName, ZoneGROUP, Radius)
 
 <h4> Parameters </h4>
@@ -677,16 +687,13 @@ The ZONE_POLYGON_BASE class defined by a sequence of [GROUP](#group-class) waypo
 This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-class) taking into account the own zone format and properties.
 This class is an abstract BASE class for derived classes, and is not meant to be instantiated.
 
-#####  6.1) Zone point randomization
+#####  Zone point randomization
 
 Various functions exist to find random points within the zone.
 
 * [ZONE_POLYGON_BASE:GetRandomVec2()](#zone_polygon_base-getrandomvec2): Gets a random 2D point in the zone.
 * [ZONE_POLYGON_BASE:GetRandomPointVec2()](#zone_polygon_base-getrandompointvec2): Return a @{Point#POINT_VEC2} object representing a random 2D point within the zone.
 * [ZONE_POLYGON_BASE:GetRandomPointVec3()](#zone_polygon_base-getrandompointvec3): Return a @{Point#POINT_VEC3} object representing a random 3D point at landheight within the zone.
-
-
-
 
 
 
@@ -706,6 +713,16 @@ self
 <h4> Returns </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class)
 self
+
+
+### ZONE_POLYGON_BASE:GetVec2()
+
+<h4> Parameters </h4>
+* [ZONE_GROUP](#zone_group-class)
+self
+
+<h4> Returns </h4>
+* [Vec2](#vec2-class) The : location of the zone based on the [Group](#group-module) location.
 
 
 ### ZONE_POLYGON_BASE:Flush()
@@ -796,7 +813,7 @@ self
 
 ## ZONE_POLYGON_BASE.ListVec2 Class
 <pre>
-**The ZONE_POLYGON_BASE.ListVec2 class does not inherit**
+The ZONE_POLYGON_BASE.ListVec2 class does not inherit
 </pre>
 
 
@@ -811,9 +828,6 @@ BASE
 
 The ZONE_POLYGON class defined by a sequence of [GROUP](#group-class) waypoints within the Mission Editor, forming a polygon.
 This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-class) taking into account the own zone format and properties.
-
-
-
 
 
 

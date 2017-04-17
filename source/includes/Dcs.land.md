@@ -1,0 +1,47 @@
+# Dcs.land Module
+
+
+## land Class
+<pre>
+Inheritance : The land Class inherits from the following parents :
+ERROR !
+	`-- land
+</pre>
+<h4> Attributes </h4>
+
+* #land.SurfaceType SurfaceType
+
+
+### getHeight()
+Returns altitude MSL of the point.
+
+<h4> Parameters </h4>
+* #Vec2 point : point on the ground.
+
+<h4> Returns </h4>
+* [Distance](#distance-class) self
+
+
+### getSurfaceType()
+returns surface type at the given point.
+
+<h4> Parameters </h4>
+* #Vec2 point : Point on the land.
+
+<h4> Returns </h4>
+* #land.SurfaceType self
+
+
+## land.SurfaceType Class
+<pre>
+The land.SurfaceType class does not inherit
+</pre>
+<h4> Attributes </h4>
+
+* LAND self
+* SHALLOW_WATER self
+* WATER self
+* ROAD self
+* RUNWAY self
+
+

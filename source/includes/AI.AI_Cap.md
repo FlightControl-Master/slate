@@ -13,6 +13,22 @@ There are the following types of CAP classes defined:
 
 
 
+#####  Demo Missions
+
+#####  [AI_CAP Demo Missions source code](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/CAP%20-%20Combat%20Air%20Patrol)
+
+#####  [AI_CAP Demo Missions, only for beta testers](https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/CAP%20-%20Combat%20Air%20Patrol)
+
+#####  [ALL Demo Missions pack of the last release](https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases)
+
+
+
+#####  YouTube Channel
+
+#####  [AI_CAP YouTube Channel](https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1YCyPxJgoZn-CfhwyeW65L)
+
+
+
 #####  **API CHANGE HISTORY**
 
 The underlying change log documents the API changes. Please read this carefully. The following notation is used:
@@ -50,7 +66,7 @@ BASE
 				`-- AI_CAP_ZONE
 </pre>
 
-The [AI_CAP_ZONE](#ai_cap_zone-class) class implements the core functions to patrol a [Zone](#zone-module) by an AI [Controllable](#controllable-module) or [Group](#group-module)
+The AI_CAP_ZONE class implements the core functions to patrol a [Zone](#zone-module) by an AI [Controllable](#controllable-module) or [Group](#group-module)
 and automatically engage any airborne enemies that are within a certain range or within a certain zone.
 
 ![Process](/includes/Pictures/AI_CAP/Dia3.JPG)
@@ -81,22 +97,22 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 
 ![Process](/includes/Pictures/AI_CAP/Dia13.JPG)
 
-#####  1.1) AI_CAP_ZONE constructor
+#####  1. AI_CAP_ZONE constructor
 
 * [AI_CAP_ZONE:New()](#ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype): Creates a new AI_CAP_ZONE object.
 
-#####  1.2) AI_CAP_ZONE is a FSM
+#####  2. AI_CAP_ZONE is a FSM
 
 ![Process](/includes/Pictures/AI_CAP/Dia2.JPG)
 
-#####  1.2.1) AI_CAP_ZONE States
+#####  2.1 AI_CAP_ZONE States
 
 * **None** ( Group ): The process is not started yet.
 * **Patrolling** ( Group ): The AI is patrolling the Patrol Zone.
 * **Engaging** ( Group ): The AI is engaging the bogeys.
 * **Returning** ( Group ): The AI is returning to Base..
 
-#####  1.2.2) AI_CAP_ZONE Events
+#####  2.2 AI_CAP_ZONE Events
 
 * **[AI_PATROL_ZONE:Start()](#ai_patrol_zone-start)**: Start the process.
 * **[AI_PATROL_ZONE:Route()](#ai_patrol_zone-route)**: Route the AI to a new random 3D point within the Patrol Zone.
@@ -109,7 +125,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 * **AI_CAP_ZONE-Destroyed**: The AI has destroyed all bogeys [Unit](#unit-module)s assigned in the CAS task.
 * **Status** ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.
 
-#####  1.3) Set the Range of Engagement
+#####  3. Set the Range of Engagement
 
 ![Range](/includes/Pictures/AI_CAP/Dia11.JPG)
 
@@ -119,14 +135,13 @@ The range can be beyond or smaller than the range of the Patrol Zone.
 The range is applied at the position of the AI.
 Use the method [AI_CAP_ZONE:SetEngageRange()](#ai_cap_zone-setengagerange-engagerange) to define that range.
 
-#####  1.4) Set the Zone of Engagement
+#####  4. Set the Zone of Engagement
 
 ![Zone](/includes/Pictures/AI_CAP/Dia12.JPG)
 
 An optional [Zone](#zone-module) can be set,
 that will define when the AI will engage with the detected airborne enemy targets.
 Use the method [AI_CAP_ZONE:SetEngageZone()](#ai_cap_zone-setengagezone-engagezone) to define that Zone.
-
 
 
 

@@ -943,12 +943,12 @@ self
 
 ## DETECTION_BASE.DetectedObjects Class
 <pre>
-**The DETECTION_BASE.DetectedObjects class does not inherit**
+The DETECTION_BASE.DetectedObjects class does not inherit
 </pre>
 
 ## DETECTION_BASE.DetectedObject Class
 <pre>
-**The DETECTION_BASE.DetectedObject class does not inherit**
+The DETECTION_BASE.DetectedObject class does not inherit
 </pre>
 <h4> Attributes </h4>
 
@@ -961,12 +961,12 @@ self
 
 ## DETECTION_BASE.DetectedItems Class
 <pre>
-**The DETECTION_BASE.DetectedItems class does not inherit**
+The DETECTION_BASE.DetectedItems class does not inherit
 </pre>
 
 ## DETECTION_BASE.DetectedItem Class
 <pre>
-**The DETECTION_BASE.DetectedItem class does not inherit**
+The DETECTION_BASE.DetectedItem class does not inherit
 </pre>
 <h4> Attributes </h4>
 

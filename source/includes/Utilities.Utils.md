@@ -12,7 +12,7 @@ which are excellent tools to be reused in an OO environment!.
 
 ## SMOKECOLOR Class
 <pre>
-**The SMOKECOLOR class does not inherit**
+The SMOKECOLOR class does not inherit
 </pre>
 <h4> Attributes </h4>
 
@@ -25,7 +25,7 @@ which are excellent tools to be reused in an OO environment!.
 
 ## FLARECOLOR Class
 <pre>
-**The FLARECOLOR class does not inherit**
+The FLARECOLOR class does not inherit
 </pre>
 <h4> Attributes </h4>
 
@@ -37,7 +37,7 @@ which are excellent tools to be reused in an OO environment!.
 
 ## UTILS Class
 <pre>
-**The UTILS class does not inherit**
+The UTILS class does not inherit
 </pre>
 
 

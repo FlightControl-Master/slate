@@ -1,0 +1,3 @@
+# Dcs.DCSStaticObject Module
+
+

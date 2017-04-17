@@ -229,7 +229,7 @@ Groups can be spawned at different times and methods:
 * [SPAWN:SpawnFromUnit()](#spawn-spawnfromunit-hostunit-spawnindex): Spawn a new group taking the position of a [Unit](#unit-module).
 * [SPAWN:SpawnInZone()](#spawn-spawninzone-zone-randomizegroup-spawnindex): Spawn a new group in a [Zone](#zone-module).
 
-Note that [UNIT:ReSpawn()](#unit-respawn-spawnvec3-heading) and [SPAWN:ReSpawn()](#spawn-respawn-spawnindex) return a [MENU_GROUP:New()](#menu_group-new-menugroup-menutext-parentmenu) object, that contains a reference to the DCSGroup object.
+Note that [UNIT:ReSpawn()](#unit-respawn-spawnvec3-heading) and [SPAWN:ReSpawn()](#spawn-respawn-spawnindex) return a [CARGO_GROUP:New()](#cargo_group-new-cargogroup-type-name-reportradius-nearradius) object, that contains a reference to the DCSGroup object.
 You can use the [GROUP](#group-module) object to do further actions with the DCSGroup.
 
 #####  **Scheduled** spawning methods
@@ -868,10 +868,10 @@ self
 
 ## SPAWN.SpawnZoneTable Class
 <pre>
-**The SPAWN.SpawnZoneTable class does not inherit**
+The SPAWN.SpawnZoneTable class does not inherit
 </pre>
 <h4> Attributes </h4>
 
-* <u>List[]</u>[[ZONE_BASE](#zone_base-class)] SpawnZone
+* <u>List[]</u>[Core.Zone#ZONE_BASE] SpawnZone
 
 

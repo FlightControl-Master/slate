@@ -6,6 +6,8 @@ are design patterns allowing efficient (long-lasting) processes and workflows.
 
 
 
+A Finite State Machine (FSM) models a process flow that transitions between various **States** through triggered **Events**.
+
 A FSM can only be in one of a finite number of states.
 The machine is in only one state at a time; the state it is in at any given time is called the **current state**.
 It can change from one state to another when initiated by an **__internal__ or __external__ triggering event**, which is called a **transition**.
@@ -90,6 +92,41 @@ BASE
 	`-- FSM
 </pre>
 
+A Finite State Machine (FSM) models a process flow that transitions between various **States** through triggered **Events**.
+
+A FSM can only be in one of a finite number of states.
+The machine is in only one state at a time; the state it is in at any given time is called the **current state**.
+It can change from one state to another when initiated by an **__internal__ or __external__ triggering event**, which is called a **transition**.
+An **FSM implementation** is defined by **a list of its states**, **its initial state**, and **the triggering events** for **each possible transition**.
+An FSM implementation is composed out of **two parts**, a set of **state transition rules**, and an implementation set of **state transition handlers**, implementing those transitions.
+
+The FSM class supports a **hierarchical implementation of a Finite State Machine**,
+that is, it allows to **embed existing FSM implementations in a master FSM**.
+FSM hierarchies allow for efficient FSM re-use, **not having to re-invent the wheel every time again** when designing complex processes.
+
+![Workflow Example](/includes/Pictures/FSM/Dia2.JPG)
+
+The above diagram shows a graphical representation of a FSM implementation for a **Task**, which guides a Human towards a Zone,
+orders him to destroy x targets and account the results.
+Other examples of ready made FSM could be:
+
+* route a plane to a zone flown by a human
+* detect targets by an AI and report to humans
+* account for destroyed targets by human players
+* handle AI infantry to deploy from or embark to a helicopter or airplane or vehicle
+* let an AI patrol a zone
+
+The **MOOSE framework** uses extensively the FSM class and derived FSM\_ classes,
+because **the goal of MOOSE is to simplify mission design complexity for mission building**.
+By efficiently utilizing the FSM class and derived classes, MOOSE allows mission designers to quickly build processes.
+**Ready made FSM-based implementations classes** exist within the MOOSE framework that **can easily be re-used,
+and tailored** by mission designers through **the implementation of Transition Handlers**.
+Each of these FSM implementation classes start either with:
+
+* an acronym **AI\_**, which indicates an FSM implementation directing **AI controlled** [GROUP](#group-module) and/or [UNIT](#unit-module). These AI\_ classes derive the [FSM_CONTROLLABLE](#fsm_controllable-class) class.
+* an acronym **TASK\_**, which indicates an FSM implementation executing a [TASK](#task-module) executed by Groups of players. These TASK\_ classes derive the [FSM_TASK](#fsm_task-class) class.
+* an acronym **ACT\_**, which indicates an Sub-FSM implementation, directing **Humans actions** that need to be done in a [TASK](#task-module), seated in a [CLIENT](#client-module) (slot) or a [UNIT](#unit-module) (CA join). These ACT\_ classes derive the [FSM_PROCESS](#fsm_process-class) class.
+
 ![Transition Rules and Transition Handlers and Event Triggers](/includes/Pictures/FSM/Dia3.JPG)
 
 The FSM class is the base class of all FSM\_ derived classes. It implements the main functionality to define and execute Finite State Machines.
@@ -112,13 +149,13 @@ Most of the time, these Event Triggers are used within the Transition Handler me
 As explained above, a FSM supports **Linear State Transitions** and **Hierarchical State Transitions**, and both can be mixed to make a comprehensive FSM implementation.
 The below documentation has a seperate chapter explaining both transition modes, taking into account the **Transition Rules**, **Transition Handlers** and **Event Triggers**.
 
-#####  1.1) FSM Linear Transitions
+#####  FSM Linear Transitions
 
 Linear Transitions are Transition Rules allowing an FSM to transition from one or multiple possible **From** state(s) towards a **To** state upon a Triggered **Event**.
 The Lineair transition rule evaluation will always be done from the **current state** of the FSM.
 If no valid Transition Rule can be found in the FSM, the FSM will log an error and stop.
 
-#####  1.1.1) FSM Transition Rules
+#####  FSM Transition Rules
 
 The FSM has transition rules that it follows and validates, as it walks the process.
 These rules define when an FSM can transition from a specific state towards an other specific state upon a triggered event.
@@ -154,7 +191,7 @@ The below code snippet shows how the two last lines can be rewritten and consens
 
 FsmSwitch:AddTransition( { "On",  "Middle" }, "SwitchOff", "Off" )
 
-#####  1.1.2) Transition Handling
+#####  Transition Handling
 
 ![Transition Handlers](/includes/Pictures/FSM/Dia4.JPG)
 
@@ -176,7 +213,7 @@ These parameters are on the correct order: From, Event, To:
 
 On top, each of these methods can have a variable amount of parameters passed. See the example in section [1.1.3](#1.1.3\)-event-triggers).
 
-#####  1.1.3) Event Triggers
+#####  Event Triggers
 
 ![Event Triggers](/includes/Pictures/FSM/Dia5.JPG)
 
@@ -214,7 +251,7 @@ The output of this little code fragment will be:
 
 Because ... When Event was asynchronously processed after 5 seconds, Amount was set to 2. So be careful when processing and passing values and objects in asynchronous processing!
 
-#####  1.1.4) Linear Transition Example
+#####  Linear Transition Example
 
 This example is fully implemented in the MOOSE test mission on GITHUB: [FSM-100 - Transition Explanation](https://github.com/FlightControl-Master/MOOSE/blob/master/Moose%20Test%20Missions/FSM%20-%20Finite%20State%20Machine/FSM-100%20-%20Transition%20Explanation/FSM-100%20-%20Transition%20Explanation.lua)
 
@@ -296,7 +333,7 @@ FsmDemo:AddTransition( "*", "Stop", "Stopped" )
 So... When FsmDemo:Stop() is being triggered, the state of FsmDemo will transition from Red or Green to Stopped.
 And there is no transition handling method defined for that transition, thus, no new event is being triggered causing the FsmDemo process flow to halt.
 
-#####  1.5) FSM Hierarchical Transitions
+#####  FSM Hierarchical Transitions
 
 Hierarchical Transitions allow to re-use readily available and implemented FSMs.
 This becomes in very useful for mission building, where mission designers build complex processes and workflows,

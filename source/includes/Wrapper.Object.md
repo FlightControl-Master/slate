@@ -69,7 +69,7 @@ self
 
 ## DCSObject Class
 <pre>
-**The DCSObject class does not inherit**
+The DCSObject class does not inherit
 </pre>
 
 <h4> Attributes </h4>

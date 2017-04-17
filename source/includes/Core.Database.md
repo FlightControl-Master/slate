@@ -7,12 +7,14 @@ This module contains the DATABASE class, managing the database of mission object
 
 Mission designers can use the DATABASE class to refer to:
 
+* STATICS
 * UNITS
 * GROUPS
 * CLIENTS
-* AIRPORTS
+* AIRBASES
 * PLAYERSJOINED
 * PLAYERS
+* CARGOS
 
 On top, for internal MOOSE administration purposes, the DATBASE administers the Unit and Group TEMPLATES as defined within the Mission Editor.
 
@@ -111,19 +113,21 @@ self
 * [STATIC](#static-class) The : found STATIC.
 
 
-### DATABASE:AddAirbase()
+### DATABASE:AddAirbase(AirbaseName)
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
+* <u>String</u> AirbaseName : The name of the airbase
 
 <h4> Returns </h4>
 
-### DATABASE:DeleteAirbase()
+### DATABASE:DeleteAirbase(AirbaseName)
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
+* <u>String</u> AirbaseName : The name of the airbase
 
 <h4> Returns </h4>
 
@@ -136,6 +140,35 @@ self
 
 <h4> Returns </h4>
 * [AIRBASE](#airbase-class) The : found AIRBASE.
+
+
+### DATABASE:AddCargo(CargoName)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* <u>String</u> CargoName : The name of the airbase
+
+<h4> Returns </h4>
+
+### DATABASE:DeleteCargo(CargoName)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* <u>String</u> CargoName : The name of the airbase
+
+<h4> Returns </h4>
+
+### DATABASE:FindCargo(CargoName)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* <u>String</u> CargoName
+
+<h4> Returns </h4>
+* [CARGO](#cargo-class) The : found CARGO.
 
 
 ### DATABASE:FindClient(ClientName)
@@ -239,7 +272,7 @@ self
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
-* <u>Function()</u> IteratorFunction : The function that will be called when there is an alive UNIT in the database. The function needs to accept a UNIT parameter.
+* <u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.
 
 <h4> Returns </h4>
 * [DATABASE](#database-class)
@@ -251,7 +284,7 @@ self
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
-* <u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the database. The function needs to accept a GROUP parameter.
+* <u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a GROUP parameter.
 
 <h4> Returns </h4>
 * [DATABASE](#database-class)
@@ -263,7 +296,7 @@ self
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
-* <u>Function()</u> IteratorFunction : The function that will be called when there is an player in the database. The function needs to accept the player name.
+* <u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept the player name.
 
 <h4> Returns </h4>
 * [DATABASE](#database-class)
@@ -275,7 +308,7 @@ self
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
-* <u>Function()</u> IteratorFunction : The function that will be called when there is was a player in the database. The function needs to accept a UNIT parameter.
+* <u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.
 
 <h4> Returns </h4>
 * [DATABASE](#database-class)
@@ -287,10 +320,40 @@ self
 <h4> Parameters </h4>
 * [DATABASE](#database-class)
 self
-* <u>Function()</u> IteratorFunction : The function that will be called when there is an alive player in the database. The function needs to accept a CLIENT parameter.
+* <u>Function()</u> IteratorFunction : The function that will be called object in the database. The function needs to accept a CLIENT parameter.
 
 <h4> Returns </h4>
 * [DATABASE](#database-class)
 self
 
+
+### DATABASE:ForEachCargo(IteratorFunction)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* <u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a CLIENT parameter.
+
+<h4> Returns </h4>
+* [DATABASE](#database-class)
+self
+
+
+### DATABASE:OnEventNewCargo(EventData)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* [EVENTDATA](#eventdata-class) EventData
+
+<h4> Returns </h4>
+
+### DATABASE:OnEventDeleteCargo(EventData)
+
+<h4> Parameters </h4>
+* [DATABASE](#database-class)
+self
+* [EVENTDATA](#eventdata-class) EventData
+
+<h4> Returns </h4>
 

@@ -35,7 +35,7 @@ Hereby the change log:
 
 ## BASE Class
 <pre>
-**The BASE class does not inherit**
+The BASE class does not inherit
 </pre>
 <h4> Attributes </h4>
 
@@ -600,7 +600,7 @@ self
 
 ## FORMATION Class
 <pre>
-**The FORMATION class does not inherit**
+The FORMATION class does not inherit
 </pre>
 
 <h4> Attributes </h4>
