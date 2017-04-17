@@ -26,7 +26,7 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 </ul>
 <h2 id='base-class'>BASE Class</h2>
 <pre>
-**The BASE class does not inherit**
+The BASE class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -692,7 +692,7 @@ self</li>
 <h4> Returns </h4>
 <h2 id='formation-class'>FORMATION Class</h2>
 <pre>
-**The FORMATION class does not inherit**
+The FORMATION class does not inherit
 </pre>
 
 <h4> Attributes </h4>

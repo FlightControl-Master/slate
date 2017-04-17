@@ -4,7 +4,7 @@
 <p><img src="/includes/Pictures/SPAWN/SPAWN.JPG" alt="Banner Image" /></p>
 
 <p>The documentation of the SPAWN class can be found further in this document.</p>
-<h5 id='demo-missions-3'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-2'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-3'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-11'><strong>API CHANGE HISTORY</strong></h5>
+<h5 id='demo-missions-10'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-9'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-10'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-11'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -42,12 +42,12 @@
 2016-08-14: SPAWN.<strong>Init</strong>RandomizeRoute( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ) replaces SPAWN.<em>RandomizeRoute</em>( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ).
 2016-08-14: SPAWN.<strong>Init</strong>RandomizeTemplate( SpawnTemplatePrefixTable ) replaces SPAWN.<em>RandomizeTemplate</em>( SpawnTemplatePrefixTable ).
 2016-08-14: SPAWN.<strong>Init</strong>UnControlled() replaces SPAWN.<em>UnControlled</em>().</p>
-<h5 id='strong-authors-and-contributions-strong-10'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-16'>Contributions:</h5>
+<h5 id='strong-authors-and-contributions-strong-11'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-16'>Contributions:</h5>
 <ul>
 <li><strong>Aaron</strong>: Posed the idea for Group position randomization at SpawnInZone and make the Unit randomization separate from the Group randomization.</li>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>
 </ul>
-<h5 id='authors-14'>Authors:</h5>
+<h5 id='authors-15'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
 </ul>
@@ -203,7 +203,7 @@ So in principle, the group list will contain all parameters and configurations a
 <li><a href="#spawn-spawninzone-zone-randomizegroup-spawnindex">SPAWN:SpawnInZone()</a>: Spawn a new group in a <a href="#zone-module">Zone</a>.</li>
 </ul>
 
-<p>Note that <a href="#unit-respawn-spawnvec3-heading">UNIT:ReSpawn()</a> and <a href="#spawn-respawn-spawnindex">SPAWN:ReSpawn()</a> return a <a href="#menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New()</a> object, that contains a reference to the DCSGroup object.
+<p>Note that <a href="#unit-respawn-spawnvec3-heading">UNIT:ReSpawn()</a> and <a href="#spawn-respawn-spawnindex">SPAWN:ReSpawn()</a> return a <a href="#cargo_group-new-cargogroup-type-name-reportradius-nearradius">CARGO_GROUP:New()</a> object, that contains a reference to the DCSGroup object.
 You can use the <a href="#group-module">GROUP</a> object to do further actions with the DCSGroup.</p>
 <h5 id='strong-scheduled-strong-spawning-methods'><strong>Scheduled</strong> spawning methods</h5>
 <ul>
@@ -917,11 +917,11 @@ self</li>
 <h4> Returns </h4>
 <h2 id='spawn-spawnzonetable-class'>SPAWN.SpawnZoneTable Class</h2>
 <pre>
-**The SPAWN.SpawnZoneTable class does not inherit**
+The SPAWN.SpawnZoneTable class does not inherit
 </pre>
 
 <h4> Attributes </h4>
 
 <ul>
-<li><u>List[]</u>[<a href="#zone_base-class">ZONE_BASE</a>] SpawnZone</li>
+<li><u>List[]</u>[Core.Zone#ZONE_BASE] SpawnZone</li>
 </ul>

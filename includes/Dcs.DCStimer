@@ -1,0 +1,80 @@
+<h1 id='dcs-dcstimer-module'>Dcs.DCStimer Module</h1><h2 id='timer-class'>timer Class</h2>
+<pre>
+The timer class does not inherit
+</pre>
+<h3 id='timer-gettime'>timer.getTime(()</h3>
+<p>Returns model time in seconds.</p>
+
+<h4> Parameters </h4>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Time self</li>
+</ul>
+<h3 id='timer-getabstime'>timer.getAbsTime(()</h3>
+<p>Returns mission time in seconds.</p>
+
+<h4> Parameters </h4>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Time self</li>
+</ul>
+<h3 id='timer-gettime0'>timer.getTime0(()</h3>
+<p>Returns mission start time in seconds.</p>
+
+<h4> Parameters </h4>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Time self</li>
+</ul>
+<h3 id='schedulefunction-function-time'>scheduleFunction(Function, time)</h3>
+<p>Schedules function to call at desired model time.
+Time function FunctionToCall(any argument, Time time)</p>
+
+<p>...</p>
+
+<p>return ...</p>
+
+<p>end</p>
+
+<p>Must return model time of next call or nil. Note that the DCS scheduler calls the function in protected mode and any Lua errors in the called function will be trapped and not reported. If the function triggers a Lua error then it will be terminated and not scheduled to run again.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><u>Function()</u>ToCall functionToCall : Lua-function to call. Must have prototype of FunctionToCall.</li>
+<li>functionArgument Function : argument of any type to pass to functionToCall.</li>
+<li>#Time time : Model time of the function call.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>functionId self</li>
+</ul>
+<h3 id='setfunctiontime-time'>setFunctionTime(time)</h3>
+<p>Re-schedules function to call at another model time.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>functionId Lua-function : to call. Must have prototype of FunctionToCall.</li>
+<li>#Time time : Model time of the function call.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='removefunction'>removeFunction()</h3>
+<p>Removes the function from schedule.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>functionId Function : identifier to remove from schedule</li>
+</ul>
+
+<h4> Returns </h4>

@@ -10,7 +10,7 @@
 <ul>
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>: Perform a CAS in a zone.</li>
 </ul>
-<h5 id='strong-api-change-history-strong-3'><strong>API CHANGE HISTORY</strong></h5>
+<h5 id='demo-missions-3'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-cas-20-20close-20air-20support-ai_cas-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-cas-20-20close-20air-20support-ai_cas-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-3'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-3'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3jbo1wdqqpyyrrmikr2ir2-ai_cas-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3JBO1WDqqpyYRRmIkR2ir2">AI_CAS YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-3'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -41,9 +41,9 @@ BASE
                 `-- AI_CAS_ZONE
 </pre>
 
-<p><a href="#ai_cas_zone-class">AI_CAS_ZONE</a> derives from the <a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>, inheriting its methods and behaviour.</p>
+<p>AI_CAS_ZONE derives from the <a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>, inheriting its methods and behaviour.</p>
 
-<p>The <a href="#ai_cas_zone-class">AI_CAS_ZONE</a> class implements the core functions to provide Close Air Support in an Engage <a href="#zone-module">Zone</a> by an AIR <a href="#controllable-module">Controllable</a> or <a href="#group-module">Group</a>.
+<p>The AI_CAS_ZONE class implements the core functions to provide Close Air Support in an Engage <a href="#zone-module">Zone</a> by an AIR <a href="#controllable-module">Controllable</a> or <a href="#group-module">Group</a>.
 The AI_CAS_ZONE runs a process. It holds an AI in a Patrol Zone and when the AI is commanded to engage, it will fly to an Engage Zone.</p>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia3.JPG" alt="HoldAndEngage" /></p>
@@ -98,20 +98,20 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 <p>When the fuel treshold has been reached, the airplane will fly towards the nearest friendly airbase and will land.</p>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia12.JPG" alt="Engage Event" /></p>
-<h5 id='1-1-ai_cas_zone-constructor'>1.1) AI_CAS_ZONE constructor</h5>
+<h5 id='1-ai_cas_zone-constructor'>1. AI_CAS_ZONE constructor</h5>
 <ul>
 <li><a href="#ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype">AI_CAS_ZONE:New()</a>: Creates a new AI_CAS_ZONE object.</li>
 </ul>
-<h5 id='1-2-ai_cas_zone-is-a-fsm'>1.2) AI_CAS_ZONE is a FSM</h5>
+<h5 id='2-ai_cas_zone-is-a-fsm'>2. AI_CAS_ZONE is a FSM</h5>
 <p><img src="/includes/Pictures/AI_CAS/Dia2.JPG" alt="Process" /></p>
-<h5 id='1-2-1-ai_cas_zone-states'>1.2.1) AI_CAS_ZONE States</h5>
+<h5 id='2-1-ai_cas_zone-states'>2.1. AI_CAS_ZONE States</h5>
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
 <li><strong>Patrolling</strong> ( Group ): The AI is patrolling the Patrol Zone.</li>
 <li><strong>Engaging</strong> ( Group ): The AI is engaging the targets in the Engage Zone, executing CAS.</li>
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
-<h5 id='1-2-2-ai_cas_zone-events'>1.2.2) AI_CAS_ZONE Events</h5>
+<h5 id='2-2-ai_cas_zone-events'>2.2. AI_CAS_ZONE Events</h5>
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
 <li><strong><a href="#ai_patrol_zone-route">AI_PATROL_ZONE:Route()</a></strong>: Route the AI to a new random 3D point within the Patrol Zone.</li>

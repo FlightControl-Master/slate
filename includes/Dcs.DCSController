@@ -1,0 +1,191 @@
+<h1 id='dcs-dcscontroller-module'>Dcs.DCSController Module</h1><h2 id='controller-class'>Controller Class</h2>
+<pre>
+The Controller class does not inherit
+</pre>
+
+<p>This class has 2 types of functions:</p>
+
+<ul>
+<li>Tasks</li>
+<li>Commands: Commands are instant actions those required zero time to perform. Commands may be used both for control unit/group behavior and control game mechanics.</li>
+</ul>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Controller.Detection Detection : Enum contains identifiers of surface types.</li>
+</ul>
+<h3 id='controller-setonoff-value'>Controller:setOnOff(value)</h3>
+<p>Enables and disables the controller.
+Note: Now it works only for ground / naval groups!</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li><u>Boolean</u> value : Enable / Disable.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-settask-task'>Controller:setTask(task)</h3>
+<p>Resets current task and then sets the task to the controller. Task is a table that contains task identifier and task parameters.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li>#Task task</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-resettask'>Controller:resetTask()</h3>
+<p>Resets current task of the controller.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-pushtask-task'>Controller:pushTask(task)</h3>
+<p>Pushes the task to the front of the queue and makes the task active. Further call of function Controller.setTask() function will stop current task, clear the queue and set the new task active. If the task queue is empty the function will work like function Controller.setTask() function.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li>#Task task</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-poptask'>Controller:popTask()</h3>
+<p>Pops current (front) task from the queue and makes active next task in the queue (if exists). If no more tasks in the queue the function works like function Controller.resetTask() function. Does nothing if the queue is empty.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-hastask'>Controller:hasTask()</h3>
+<p>Returns true if the controller has a task.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<h3 id='controller-setcommand-command'>Controller:setCommand(command)</h3>
+<p>Sets the command to perform by controller.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li>#Command command : Table that contains command identifier and command parameters.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-setoption-optionid-optionvalue'>Controller:setOption(optionId, optionValue)</h3>
+<p>Sets the option to the controller.
+Option is a pair of identifier and value. Behavior options are global parameters those affect controller behavior in all tasks it performs.
+Option identifiers and values are stored in table AI.Option in subtables Air, Ground and Naval.</p>
+
+<p>OptionId = @{#AI.Option.Air.id} or @{#AI.Option.Ground.id} or @{#AI.Option.Naval.id}
+OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] or AI.Option.Naval.val[optionName]</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li>#OptionId optionId : Option identifier.</li>
+<li>#OptionValue optionValue : Value of the option.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='controller-istargetdetected-target-detection'>Controller:isTargetDetected(target, detection)</h3>
+<p>Checks if the target is detected or not. If one or more detection method is specified the function will return true if the target is detected by at least one of these methods. If no detection methods are specified the function will return true if the target is detected by any method.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li><a href="#object-class">Object</a> target : Target to check</li>
+<li>#Controller.Detection detection : Controller.Detection detection1, Controller.Detection detection2, ... Controller.Detection detectionN</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> detected : True if the target is detected.</li>
+<li><u>Boolean</u> visible : Has effect only if detected is true. True if the target is visible now.</li>
+<li>#ModelTime lastTime : Has effect only if visible is false. Last time when target was seen.</li>
+<li><u>Boolean</u> type : Has effect only if detected is true. True if the target type is known.</li>
+<li><u>Boolean</u> distance : Has effect only if detected is true. True if the distance to the target is known.</li>
+<li>#Vec3 lastPos : Has effect only if visible is false. Last position of the target when it was seen.</li>
+<li>#Vec3 lastVel : Has effect only if visible is false. Last velocity of the target when it was seen.</li>
+</ul>
+<h3 id='controller-getdetectedtargets-detection'>Controller:getDetectedTargets(detection)</h3>
+<p>Returns list of detected targets. If one or more detection method is specified the function will return targets which were detected by at least one of these methods. If no detection methods are specified the function will return targets which were detected by any method.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li>#Controller.Detection detection : Controller.Detection detection1, Controller.Detection detection2, ... Controller.Detection detectionN</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#list&lt;#DetectedTarget&gt; array : of DetectedTarget</li>
+</ul>
+<h3 id='controller-knowtarget-object-type-distance'>Controller:knowTarget(object, type, distance)</h3>
+<p>Know a target.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>self self</li>
+<li><a href="#object-class">Object</a> object : The target.</li>
+<li><u>Boolean</u> type : Target type is known.</li>
+<li><u>Boolean</u> distance : Distance to target is known.</li>
+</ul>
+
+<h4> Returns </h4>
+<h2 id='controller-detection-class'>Controller.Detection Class</h2>
+<pre>
+The Controller.Detection class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>VISUAL self</li>
+<li>OPTIC self</li>
+<li>RADAR self</li>
+<li>IRST self</li>
+<li>RWR self</li>
+<li>DLINK self</li>
+</ul>
+<h2 id='detectedtarget-class'>DetectedTarget Class</h2>
+<pre>
+The DetectedTarget class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><a href="#object-class">Object</a> object : The target</li>
+<li><u>Boolean</u> visible : The target is visible</li>
+<li><u>Boolean</u> type : The target type is known</li>
+<li><u>Boolean</u> distance : Distance to the target is known</li>
+</ul>

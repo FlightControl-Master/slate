@@ -1,0 +1,63 @@
+<h1 id='dcs-staticobject-module'>Dcs.StaticObject Module</h1><h2 id='staticobject-class'>StaticObject Class</h2>
+<pre>
+Inheritance : The StaticObject Class inherits from the following parents :
+ERROR !
+    `-- StaticObject
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#StaticObject.ID ID : Identifier of a StaticObject. It assigned to an StaticObject by the Mission Editor automatically.</li>
+<li>#StaticObject.Desc Desc : Descriptor of StaticObject and Unit are equal. StaticObject is just a passive variant of Unit.</li>
+</ul>
+<h3 id='getbyname-4'>getByName()</h3>
+<p>Returns static object by its name. If no static object found nil will be returned.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><u>String</u> name : Name of static object to find.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#StaticObject self</li>
+</ul>
+<h3 id='staticobject-getid'>StaticObject:getID()</h3>
+<p>returns identifier of the static object.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#StaticObject self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#StaticObject.ID self</li>
+</ul>
+<h3 id='staticobject-getdesc'>StaticObject:getDesc()</h3>
+<p>Returns descriptor of the StaticObject.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#StaticObject self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#StaticObject.Desc self</li>
+</ul>
+<h2 id='staticobject-desc-class'>StaticObject.Desc Class</h2>
+<pre>
+Inheritance : The StaticObject.Desc Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- StaticObject.Desc
+</pre>

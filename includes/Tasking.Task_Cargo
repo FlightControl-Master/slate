@@ -1,0 +1,383 @@
+<h1 id='tasking-task_cargo-module'>Tasking.Task_Cargo Module</h1>
+<p><strong>Tasking (Release 2.1)</strong> -- The TASK_CARGO models tasks for players to transport <a href="#cargo-module">Cargo</a>.</p>
+
+<p><img src="/includes/Pictures/TASK_CARGO/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>The Moose framework provides various CARGO classes that allow DCS phisical or logical objects to be transported or sling loaded by Carriers.
+The CARGO_ classes, as part of the moose core, are able to Board, Load, UnBoard and UnLoad cargo between Carrier units.</p>
+
+<p>This collection of classes in this module define tasks for human players to handle these cargo objects.
+Cargo can be transported, picked-up, deployed and sling-loaded from and to other places.</p>
+
+<p>The following classes are important to consider:</p>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>: Defines a task for a human player to transport a set of cargo between various zones.</li>
+</ul>
+
+<p>==</p>
+<h5 id='strong-api-change-history-strong-14'><strong>API CHANGE HISTORY</strong></h5>
+<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
+
+<ul>
+<li><strong>Added</strong> parts are expressed in bold type face.</li>
+<li><em>Removed</em> parts are expressed in italic type face.</li>
+</ul>
+
+<p>Hereby the change log:</p>
+
+<p>2017-03-09: Revised version.</p>
+<h5 id='strong-authors-and-contributions-strong-14'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-19'>Contributions:</h5><h5 id='authors-18'>Authors:</h5>
+<ul>
+<li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
+</ul>
+<h2 id='task_cargo-class'>TASK_CARGO Class</h2>
+<pre>
+Inheritance : The TASK_CARGO Class inherits from the following parents :
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_CARGO
+</pre>
+<h3 id='task_cargo-new-mission-setgroup-taskname-setcargo-tasktype'>TASK_CARGO:New(Mission, SetGroup, TaskName, SetCargo, TaskType)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
+<li><u>String</u> TaskName : The name of the Task.</li>
+<li><a href="#set_cargo-class">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
+<li><u>String</u> TaskType : The type of Cargo task.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-getplannedmenutext'>TASK_CARGO:GetPlannedMenuText()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='task_cargo-getcargoset'>TASK_CARGO:GetCargoSet()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#set_cargo-class">SET_CARGO</a> The : Cargo Set.</li>
+</ul>
+<h3 id='task_cargo-getdeployzones'>TASK_CARGO:GetDeployZones()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#list<Core.Zone#ZONE_BASE> The : Deployment Zones.</li>
+</ul>
+<h3 id='task_cargo-setcargopickup-cargo-taskunit'>TASK_CARGO:SetCargoPickup(Cargo, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#ai_cargo-class">AI_CARGO</a> Cargo : The cargo.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-setdeployzone-deployzone-taskunit'>TASK_CARGO:SetDeployZone(DeployZone, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#zone-class">ZONE</a> DeployZone</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-adddeployzone-deployzone-taskunit'>TASK_CARGO:AddDeployZone(DeployZone, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#zone-class">ZONE</a> DeployZone</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-removedeployzone-deployzone-taskunit'>TASK_CARGO:RemoveDeployZone(DeployZone, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#zone-class">ZONE</a> DeployZone</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-setdeployzones-deployzones-taskunit'>TASK_CARGO:SetDeployZones(DeployZones, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li>@list<Core.Zone#ZONE> DeployZones</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-gettargetzone-taskunit'>TASK_CARGO:GetTargetZone(TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#zone_base-class">ZONE_BASE</a> The : Zone object where the Target is located on the map.</li>
+</ul>
+<h3 id='task_cargo-setscoreondestroy-text-score-taskunit'>TASK_CARGO:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><u>String</u> Text : The text to display to the player, when the target has been destroyed.</li>
+<li><u>Number</u> Score : The score in points.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-setscoreonsuccess-text-score-taskunit'>TASK_CARGO:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><u>String</u> Text : The text to display to the player, when all targets hav been destroyed.</li>
+<li><u>Number</u> Score : The score in points.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h3 id='task_cargo-setpenaltyonfailed-text-penalty-taskunit'>TASK_CARGO:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+<li><u>String</u> Text : The text to display to the player, when the A2G attack has failed.</li>
+<li><u>Number</u> Penalty : The penalty in points.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo-class">TASK_CARGO</a>
+self</li>
+</ul>
+<h2 id='task_cargo_transport-class'>TASK_CARGO_TRANSPORT Class</h2>
+<pre>
+Inheritance : The TASK_CARGO_TRANSPORT Class inherits from the following parents :
+BASE
+    `-- FSM
+        `-- FSM_TASK
+            `-- TASK
+                `-- TASK_CARGO
+                    `-- TASK_CARGO_TRANSPORT
+</pre>
+<h3 id='task_cargo_transport-new-mission-setgroup-taskname-setcargo'>TASK_CARGO_TRANSPORT:New(Mission, SetGroup, TaskName, SetCargo)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
+<li><u>String</u> TaskName : The name of the Task.</li>
+<li><a href="#set_cargo-class">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+</ul>
+<h3 id='task_cargo_transport-onbeforecargopickedup-from-event-to-taskunit-cargo'>TASK_CARGO_TRANSPORT:OnBeforeCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
+<p>OnBefore Transition Handler for Event CargoPickedUp.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
+</ul>
+<h3 id='task_cargo_transport-onaftercargopickedup-from-event-to-taskunit-cargo'>TASK_CARGO_TRANSPORT:OnAfterCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
+<p>OnAfter Transition Handler for Event CargoPickedUp.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='task_cargo_transport-cargopickedup-taskunit-cargo'>TASK_CARGO_TRANSPORT:CargoPickedUp(TaskUnit, Cargo)</h3>
+<p>Synchronous Event Trigger for Event CargoPickedUp.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='task_cargo_transport-onbeforecargodeployed-from-event-to-taskunit-cargo-deployzone'>TASK_CARGO_TRANSPORT:OnBeforeCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)</h3>
+<p>OnBefore Transition Handler for Event CargoDeployed.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> Return : false to cancel Transition.</li>
+</ul>
+<h3 id='task_cargo_transport-onaftercargodeployed-from-event-to-taskunit-cargo-deployzone'>TASK_CARGO_TRANSPORT:OnAfterCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)</h3>
+<p>OnAfter Transition Handler for Event CargoDeployed.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><u>String</u> From : The From State string.</li>
+<li><u>String</u> Event : The Event string.</li>
+<li><u>String</u> To : The To State string.</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='task_cargo_transport-cargodeployed-taskunit-cargo-deployzone'>TASK_CARGO_TRANSPORT:CargoDeployed(TaskUnit, Cargo, DeployZone)</h3>
+<p>Synchronous Event Trigger for Event CargoDeployed.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='task_cargo_transport-isallcargotransported'>TASK_CARGO_TRANSPORT:IsAllCargoTransported()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>

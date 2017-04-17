@@ -2,14 +2,20 @@
 <p><strong>Core</strong> - MESSAGE class takes are of the <strong>real-time notifications</strong> and <strong>messages to players</strong> during a simulation.</p>
 
 <p><img src="/includes/Pictures/MESSAGE/Dia1.JPG" alt="Banner Image" /></p>
-<h5 id='1-a-href-message-class-message-a-class-extends-a-href-base-class-base-a'>1) <a href="#message-class">MESSAGE</a> class, extends <a href="#base-class">BASE</a></h5>
+<h2 id='message-class'>MESSAGE Class</h2>
+<pre>
+Inheritance : The MESSAGE Class inherits from the following parents :
+BASE
+    `-- MESSAGE
+</pre>
+
 <p>Message System to display Messages to Clients, Coalitions or All.
 Messages are shown on the display panel for an amount of seconds, and will then disappear.
 Messages can contain a category which is indicating the category of the message.</p>
-<h5 id='1-1-message-construction'>1.1) MESSAGE construction</h5>
+<h5 id='message-construction'>MESSAGE construction</h5>
 <p>Messages are created with <a href="#message-new-messagetext-messageduration-messagecategory">MESSAGE:New()</a>. Note that when the MESSAGE object is created, no message is sent yet.
 To send messages, you need to use the To functions.</p>
-<h5 id='1-2-send-messages-to-an-audience'>1.2) Send messages to an audience</h5>
+<h5 id='send-messages-to-an-audience'>Send messages to an audience</h5>
 <p>Messages are sent:</p>
 
 <ul>
@@ -20,19 +26,15 @@ To send messages, you need to use the To functions.</p>
 <li>To the blue coalition using <a href="#message-toblue">MESSAGE:ToBlue()</a>.</li>
 <li>To all Players using <a href="#message-toall">MESSAGE:ToAll()</a>.</li>
 </ul>
-<h5 id='1-3-send-conditionally-to-an-audience'>1.3) Send conditionally to an audience</h5>
+<h5 id='send-conditionally-to-an-audience'>Send conditionally to an audience</h5>
 <p>Messages can be sent conditionally to an audience (when a condition is true):</p>
 
 <ul>
 <li>To all players using <a href="#message-toallif">MESSAGE:ToAllIf()</a>.</li>
 <li>To a coalition using <a href="#message-tocoalitionif-needs">MESSAGE:ToCoalitionIf()</a>.</li>
 </ul>
-<h2 id='message-class'>MESSAGE Class</h2>
-<pre>
-Inheritance : The MESSAGE Class inherits from the following parents :
-BASE
-    `-- MESSAGE
-</pre>
+
+<p>The MESSAGE class</p>
 <h3 id='message-new-messagetext-messageduration-messagecategory'>MESSAGE:New(MessageText, MessageDuration, MessageCategory)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Create a series of new Messages.</span>
 <span class="c1">-- MessageAll is meant to be sent to all players, for 25 seconds, and is classified as "Score".</span>
 <span class="c1">-- MessageRED is meant to be sent to the RED players only, for 10 seconds, and is classified as "End of Mission", with ID "Win".</span>

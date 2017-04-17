@@ -4,7 +4,7 @@
 <p><img src="/includes/Pictures/SPAWNSTATIC/Dia1.JPG" alt="Banner Image" /></p>
 
 <p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
-<h5 id='demo-missions'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sps-20-20spawning-20statics-spawnstatic-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sps-20-20spawning-20statics-spawnstatic-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel'>YouTube Channel</h5><h5 id='a-href-spawnstatic-youtube-channel-a'><a href="#">SPAWNSTATIC YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-8'><strong>API CHANGE HISTORY</strong></h5>
+<h5 id='demo-missions-8'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sps-20-20spawning-20statics-spawnstatic-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sps-20-20spawning-20statics-spawnstatic-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-8'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-8'>YouTube Channel</h5><h5 id='a-href-spawnstatic-youtube-channel-a-2'><a href="#">SPAWNSTATIC YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-8'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -13,7 +13,7 @@
 </ul>
 
 <p>Hereby the change log:</p>
-<h5 id='strong-authors-and-contributions-strong-8'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-13'>Contributions:</h5><h5 id='authors-11'>Authors:</h5>
+<h5 id='strong-authors-and-contributions-strong-9'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-13'>Contributions:</h5><h5 id='authors-12'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
 </ul>
@@ -117,7 +117,7 @@ self</li>
 </ul>
 <h2 id='spawnstatic-spawnzonetable-class'>SPAWNSTATIC.SpawnZoneTable Class</h2>
 <pre>
-**The SPAWNSTATIC.SpawnZoneTable class does not inherit**
+The SPAWNSTATIC.SpawnZoneTable class does not inherit
 </pre>
 
 <h4> Attributes </h4>

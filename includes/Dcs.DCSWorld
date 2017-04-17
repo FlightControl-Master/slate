@@ -1,0 +1,10 @@
+<h1 id='dcs-dcsworld-module'>Dcs.DCSWorld Module</h1><h2 id='world-class'>world Class</h2>
+<pre>
+The world class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#world.event event</li>
+</ul>

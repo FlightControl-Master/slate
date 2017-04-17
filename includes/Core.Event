@@ -405,6 +405,26 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
+<h3 id='event-createeventnewcargo-cargo'>EVENT:CreateEventNewCargo(Cargo)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#ai_cargo-class">AI_CARGO</a> Cargo : The Cargo created.</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='event-createeventdeletecargo-cargo'>EVENT:CreateEventDeleteCargo(Cargo)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#event-class">EVENT</a>
+self</li>
+<li><a href="#ai_cargo-class">AI_CARGO</a> Cargo : The Cargo created.</li>
+</ul>
+
+<h4> Returns </h4>
 <h3 id='event-onevent-event'>EVENT:onEvent(Event)</h3>
 <h4> Parameters </h4>
 
@@ -418,13 +438,13 @@ Event</li>
 <h4> Returns </h4>
 <h2 id='events-class'>EVENTS Class</h2>
 <pre>
-**The EVENTS class does not inherit**
+The EVENTS class does not inherit
 </pre>
 
 <p>Use this structure to subscribe to events using the <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
 <h2 id='eventdata-class'>EVENTDATA Class</h2>
 <pre>
-**The EVENTDATA class does not inherit**
+The EVENTDATA class does not inherit
 </pre>
 
 <p>Note that at the beginning of each field description, there is an indication which field will be populated depending on the object type involved in the Event:</p>
@@ -473,7 +493,7 @@ Event</li>
 </ul>
 <h2 id='event-events-class'>EVENT.Events Class</h2>
 <pre>
-**The EVENT.Events class does not inherit**
+The EVENT.Events class does not inherit
 </pre>
 
 <h4> Attributes </h4>

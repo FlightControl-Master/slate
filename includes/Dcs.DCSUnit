@@ -1,0 +1,521 @@
+<h1 id='dcs-dcsunit-module'>Dcs.DCSUnit Module</h1><h2 id='unit-class'>Unit Class</h2>
+<pre>
+Inheritance : The Unit Class inherits from the following parents :
+ERROR !
+    `-- Unit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>ID Identifier : of an unit. It assigned to an unit by the Mission Editor automatically.</li>
+<li>#Unit.Category Category</li>
+<li>#Unit.RefuelingSystem RefuelingSystem</li>
+<li>#Unit.SensorType SensorType</li>
+<li>#Unit.OpticType OpticType</li>
+<li>#Unit.RadarType RadarType</li>
+<li>#Unit.Desc Desc</li>
+<li>#Unit.DescAircraft DescAircraft</li>
+<li>#Unit.DescAirplane DescAirplane</li>
+<li>#Unit.DescHelicopter DescHelicopter</li>
+<li>#Unit.DescVehicle DescVehicle</li>
+<li>#Unit.DescShip DescShip</li>
+<li>#Unit.AmmoItem AmmoItem</li>
+<li>#list&lt;#Unit.AmmoItem&gt; Ammo</li>
+<li>#Unit.Sensor Sensor</li>
+<li>#Unit.Optic Optic</li>
+<li>#Unit.Radar Radar</li>
+<li>#Unit.IRST IRST</li>
+</ul>
+<h3 id='getbyname-3'>getByName()</h3>
+<p>Returns unit object by the name assigned to the unit in Mission Editor. If there is unit with such name or the unit is destroyed the function will return nil. The function provides access to non-activated units too.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><u>String</u> name</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+<h3 id='unit-isactive'>Unit:isActive()</h3>
+<p>Returns if the unit is activated.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<h3 id='unit-getplayername'>Unit:getPlayerName()</h3>
+<p>Returns name of the player that control the unit or nil if the unit is controlled by A.I.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> self</li>
+</ul>
+<h3 id='unit-getid'>Unit:getID()</h3>
+<p>returns the unit&#39;s unique identifier.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Unit.ID self</li>
+</ul>
+<h3 id='unit-getnumber'>Unit:getNumber()</h3>
+<p>Returns the unit&#39;s number in the group. The number is the same number the unit has in ME. It may not be changed during the mission. If any unit in the group is destroyed, the numbers of another units will not be changed.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u> self</li>
+</ul>
+<h3 id='unit-getcontroller'>Unit:getController()</h3>
+<p>Returns controller of the unit if it exist and nil otherwise</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Controller self</li>
+</ul>
+<h3 id='unit-getgroup'>Unit:getGroup()</h3>
+<p>Returns the unit&#39;s group if it exist and nil otherwise</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>Dcs.DCSWrapper.Group#Group self</li>
+</ul>
+<h3 id='unit-getcallsign'>Unit:getCallsign()</h3>
+<p>Returns the unit&#39;s callsign - the localized string.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> self</li>
+</ul>
+<h3 id='unit-getlife'>Unit:getLife()</h3>
+<p>Returns the unit&#39;s health. Dead units has health &lt;= 1.0</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u> self</li>
+</ul>
+<h3 id='unit-getlife0'>Unit:getLife0()</h3>
+<p>returns the unit&#39;s initial health.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u> self</li>
+</ul>
+<h3 id='unit-getfuel'>Unit:getFuel()</h3>
+<p>Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal tanks. If there are additional fuel tanks the value may be greater than 1.0.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u> self</li>
+</ul>
+<h3 id='unit-getammo'>Unit:getAmmo()</h3>
+<p>Returns the unit ammunition.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Unit.Ammo self</li>
+</ul>
+<h3 id='unit-getsensors'>Unit:getSensors()</h3>
+<p>Returns the unit sensors.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Unit.Sensors self</li>
+</ul>
+<h3 id='unit-hassensors-sensortype-additional'>Unit:hasSensors(sensorType, Additional)</h3><pre class="highlight lua tab-lua"><code><span class="n">If</span> <span class="n">sensorType</span> <span class="n">is</span> <span class="n">Unit</span><span class="p">.</span><span class="n">SensorType</span><span class="p">.</span><span class="n">OPTIC</span><span class="p">,</span> <span class="n">additional</span> <span class="n">parameters</span> <span class="n">are</span> <span class="n">optic</span> <span class="n">sensor</span> <span class="n">types</span><span class="p">.</span> <span class="n">Following</span> <span class="n">example</span> <span class="n">checks</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">has</span> <span class="n">LLTV</span> <span class="ow">or</span> <span class="n">IR</span> <span class="n">optics</span><span class="p">:</span>
+<span class="n">unit</span><span class="p">:</span><span class="n">hasSensors</span><span class="p">(</span><span class="n">Unit</span><span class="p">.</span><span class="n">SensorType</span><span class="p">.</span><span class="n">OPTIC</span><span class="p">,</span> <span class="n">Unit</span><span class="p">.</span><span class="n">OpticType</span><span class="p">.</span><span class="n">LLTV</span><span class="p">,</span> <span class="n">Unit</span><span class="p">.</span><span class="n">OpticType</span><span class="p">.</span><span class="n">IR</span><span class="p">)</span>
+<span class="n">If</span> <span class="n">sensorType</span> <span class="n">is</span> <span class="n">Unit</span><span class="p">.</span><span class="n">SensorType</span><span class="p">.</span><span class="n">RADAR</span><span class="p">,</span> <span class="n">additional</span> <span class="n">parameters</span> <span class="n">are</span> <span class="n">radar</span> <span class="n">types</span><span class="p">.</span> <span class="n">Following</span> <span class="n">example</span> <span class="n">checks</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">has</span> <span class="n">air</span> <span class="n">search</span> <span class="n">radars</span><span class="p">:</span>
+<span class="n">unit</span><span class="p">:</span><span class="n">hasSensors</span><span class="p">(</span><span class="n">Unit</span><span class="p">.</span><span class="n">SensorType</span><span class="p">.</span><span class="n">RADAR</span><span class="p">,</span> <span class="n">Unit</span><span class="p">.</span><span class="n">RadarType</span><span class="p">.</span><span class="n">AS</span><span class="p">)</span>
+<span class="n">If</span> <span class="n">no</span> <span class="n">additional</span> <span class="n">parameters</span> <span class="n">are</span> <span class="n">specified</span> <span class="n">the</span> <span class="k">function</span> <span class="nf">returns</span> <span class="kc">true</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">has</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span> <span class="n">sensor</span> <span class="n">of</span> <span class="n">specified</span> <span class="nb">type</span><span class="p">.</span>
+<span class="n">If</span> <span class="n">sensor</span> <span class="nb">type</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">specified</span> <span class="n">the</span> <span class="k">function</span> <span class="nf">returns</span> <span class="kc">true</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">has</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span> <span class="n">sensor</span> <span class="n">of</span> <span class="n">any</span> <span class="nb">type</span><span class="p">.</span>
+
+</code></pre>
+<p>Returns true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&#39;t want to get information about all the unit&#39;s sensors, and just want to check if the unit has specified types of sensors.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+<li>#Unit.SensorType sensorType : (= nil) Sensor type.</li>
+<li>... Additional : parameters.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<h3 id='unit-getradar'>Unit:getRadar()</h3>
+<p>returns two values:
+First value indicates if at least one of the unit&#39;s radar(s) is on.
+Second value is the object of the radar&#39;s interest. Not nil only if at least one radar of the unit is tracking a target.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>, Wrapper.Object#Object</li>
+</ul>
+<h3 id='unit-getdesc'>Unit:getDesc()</h3>
+<p>Returns unit descriptor. Descriptor type depends on unit category.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li>#Unit self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li>#Unit.Desc self</li>
+</ul>
+<h2 id='unit-category-class'>Unit.Category Class</h2>
+<pre>
+The Unit.Category class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>AIRPLANE self</li>
+<li>HELICOPTER self</li>
+<li>GROUND_UNIT self</li>
+<li>SHIP self</li>
+<li>STRUCTURE self</li>
+</ul>
+<h2 id='unit-refuelingsystem-class'>Unit.RefuelingSystem Class</h2>
+<pre>
+The Unit.RefuelingSystem class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>BOOM_AND_RECEPTACLE self</li>
+<li>PROBE_AND_DROGUE self</li>
+</ul>
+<h2 id='unit-sensortype-class'>Unit.SensorType Class</h2>
+<pre>
+The Unit.SensorType class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>OPTIC self</li>
+<li>RADAR self</li>
+<li>IRST self</li>
+<li>RWR self</li>
+</ul>
+<h2 id='unit-optictype-class'>Unit.OpticType Class</h2>
+<pre>
+The Unit.OpticType class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>TV TV-sensor</li>
+<li>LLTV Low-level : TV-sensor</li>
+<li>IR Infra-Red : optic sensor</li>
+</ul>
+<h2 id='unit-radartype-class'>Unit.RadarType Class</h2>
+<pre>
+The Unit.RadarType class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>AS air : search radar</li>
+<li>SS surface/land : search radar</li>
+</ul>
+<h2 id='unit-desc-class'>Unit.Desc Class</h2>
+<pre>
+Inheritance : The Unit.Desc Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Unit.Category category : Unit Category</li>
+<li>#Mass massEmpty : mass of empty unit</li>
+<li><u>Number</u> speedMax : istance / Time, --maximal velocity</li>
+</ul>
+<h2 id='unit-descaircraft-class'>Unit.DescAircraft Class</h2>
+<pre>
+Inheritance : The Unit.DescAircraft Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- Unit.DescAircraft
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Mass fuelMassMax : maximal inner fuel mass</li>
+<li>#Distance range : Operational range</li>
+<li>#Distance Hmax : Ceiling</li>
+<li><u>Number</u> VyMax :  #Distance / #Time, --maximal climb rate</li>
+<li><u>Number</u> NyMin : minimal safe acceleration</li>
+<li><u>Number</u> NyMax : maximal safe acceleration</li>
+<li>#Unit.RefuelingSystem tankerType : refueling system type</li>
+</ul>
+<h2 id='unit-descairplane-class'>Unit.DescAirplane Class</h2>
+<pre>
+Inheritance : The Unit.DescAirplane Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- Unit.DescAircraft
+                `-- Unit.DescAirplane
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>Number</u> speedMax0 : Distance / Time maximal TAS at ground level</li>
+<li><u>Number</u> speedMax10K : Distance / Time maximal TAS at altitude of 10 km</li>
+</ul>
+<h2 id='unit-deschelicopter-class'>Unit.DescHelicopter Class</h2>
+<pre>
+Inheritance : The Unit.DescHelicopter Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- Unit.DescAircraft
+                `-- Unit.DescHelicopter
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Distance HmaxStat : static ceiling</li>
+</ul>
+<h2 id='unit-descvehicle-class'>Unit.DescVehicle Class</h2>
+<pre>
+Inheritance : The Unit.DescVehicle Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- Unit.DescVehicle
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Angle maxSlopeAngle : maximal slope angle</li>
+<li><u>Boolean</u> riverCrossing : can the vehicle cross a rivers</li>
+</ul>
+<h2 id='unit-descship-class'>Unit.DescShip Class</h2>
+<pre>
+Inheritance : The Unit.DescShip Class inherits from the following parents :
+Desc
+    `-- Object.Desc
+        `-- Unit.Desc
+            `-- Unit.DescShip
+</pre>
+<h2 id='unit-ammoitem-class'>Unit.AmmoItem Class</h2>
+<pre>
+The Unit.AmmoItem class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Weapon.Desc desc : ammunition descriptor</li>
+<li><u>Number</u> count : ammunition count</li>
+</ul>
+<h2 id='unit-sensor-class'>Unit.Sensor Class</h2>
+<pre>
+The Unit.Sensor class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#TypeName typeName</li>
+<li>#Unit.SensorType type</li>
+</ul>
+<h2 id='unit-optic-class'>Unit.Optic Class</h2>
+<pre>
+Inheritance : The Unit.Optic Class inherits from the following parents :
+Unit.Sensor
+    `-- Unit.Optic
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Unit.OpticType opticType</li>
+</ul>
+<h2 id='unit-radar-class'>Unit.Radar Class</h2>
+<pre>
+Inheritance : The  Unit.Radar Class inherits from the following parents :
+Unit.Sensor
+    `--  Unit.Radar
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Distance detectionDistanceRBM : detection distance for RCS=1m^2 in real-beam mapping mode, nil if radar doesn&#39;t support surface/land search</li>
+<li>#Distance detectionDistanceHRM : detection distance for RCS=1m^2 in high-resolution mapping mode, nil if radar has no HRM</li>
+<li>#Unit.Radar.detectionDistanceAir detectionDistanceAir : detection distance for RCS=1m^2 airborne target, nil if radar doesn&#39;t support air search</li>
+</ul>
+<h2 id='unit-radar-detectiondistanceair-class'>Unit.Radar.detectionDistanceAir Class</h2>
+<pre>
+The Unit.Radar.detectionDistanceAir class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Unit.Radar.detectionDistanceAir.upperHemisphere upperHemisphere</li>
+<li>#Unit.Radar.detectionDistanceAir.lowerHemisphere lowerHemisphere</li>
+</ul>
+<h2 id='unit-radar-detectiondistanceair-upperhemisphere-class'>Unit.Radar.detectionDistanceAir.upperHemisphere Class</h2>
+<pre>
+The Unit.Radar.detectionDistanceAir.upperHemisphere class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Distance headOn</li>
+<li>#Distance tailOn</li>
+</ul>
+<h2 id='unit-radar-detectiondistanceair-lowerhemisphere-class'>Unit.Radar.detectionDistanceAir.lowerHemisphere Class</h2>
+<pre>
+The Unit.Radar.detectionDistanceAir.lowerHemisphere class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Distance headOn</li>
+<li>#Distance tailOn</li>
+</ul>
+<h2 id='a-href-unit-irst-class-unit-irst-a-class'><a href="#unit.irst-class">Unit.IRST</a> Class</h2>
+<pre>
+Inheritance : The [Unit.IRST](#unit.irst-class) Class inherits from the following parents :
+Unit.Sensor
+    `-- Wrapper.Unit#Unit.IRST
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li>#Distance detectionDistanceIdle : detection of tail-on target with heat signature = 1 in upper hemisphere, engines are in idle</li>
+<li>#Distance detectionDistanceMaximal : ..., engines are in maximal mode</li>
+<li>#Distance detectionDistanceAfterburner : ..., engines are in afterburner mode</li>
+</ul>
+<h2 id='unit-rwr-class'>Unit.RWR Class</h2>
+<pre>
+Inheritance : The Unit.RWR Class inherits from the following parents :
+Unit.Sensor
+    `-- Unit.RWR
+</pre>
+<h2 id='sensors-class'>Sensors Class</h2>
+<pre>
+The Sensors class does not inherit
+</pre>
+
+<p>TODO </p>

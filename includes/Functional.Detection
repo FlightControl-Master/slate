@@ -7,11 +7,11 @@
 DETECTION uses the in-built detection capabilities of DCS World, but adds new functionalities.</p>
 
 <p>Find the DETECTION classes documentation further in this document in the globals section.</p>
-<h5 id='demo-missions-2'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-det-20-20detection-detection-demo-missions-and-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-det-20-20detection-detection-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-latest-release-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h5><h5 id='youtube-channel-2'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3cf5jpi6bs0sbovwk__tji-detection-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h5><h5 id='contributions-14'>Contributions:</h5>
+<h5 id='demo-missions-9'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-det-20-20detection-detection-demo-missions-and-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/DET%20-%20Detection">DETECTION Demo Missions and Source Code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-det-20-20detection-detection-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/DET%20-%20Detection">DETECTION Demo Missions, only for Beta Testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-latest-release-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the Latest Release</a></h5><h5 id='youtube-channel-9'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3cf5jpi6bs0sbovwk__tji-detection-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3Cf5jpI6BS0sBOVWK__tji">DETECTION YouTube Channel</a></h5><h5 id='contributions-14'>Contributions:</h5>
 <ul>
 <li>Mechanist : Early concept of DETECTION_AREAS.</li>
 </ul>
-<h5 id='authors-12'>Authors:</h5>
+<h5 id='authors-13'>Authors:</h5>
 <ul>
 <li>FlightControl : Analysis, Design, Programming, Testing</li>
 </ul>
@@ -1055,11 +1055,11 @@ self</li>
 </ul>
 <h2 id='detection_base-detectedobjects-class'>DETECTION_BASE.DetectedObjects Class</h2>
 <pre>
-**The DETECTION_BASE.DetectedObjects class does not inherit**
+The DETECTION_BASE.DetectedObjects class does not inherit
 </pre>
 <h2 id='detection_base-detectedobject-class'>DETECTION_BASE.DetectedObject Class</h2>
 <pre>
-**The DETECTION_BASE.DetectedObject class does not inherit**
+The DETECTION_BASE.DetectedObject class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -1073,11 +1073,11 @@ self</li>
 </ul>
 <h2 id='detection_base-detecteditems-class'>DETECTION_BASE.DetectedItems Class</h2>
 <pre>
-**The DETECTION_BASE.DetectedItems class does not inherit**
+The DETECTION_BASE.DetectedItems class does not inherit
 </pre>
 <h2 id='detection_base-detecteditem-class'>DETECTION_BASE.DetectedItem Class</h2>
 <pre>
-**The DETECTION_BASE.DetectedItem class does not inherit**
+The DETECTION_BASE.DetectedItem class does not inherit
 </pre>
 
 <h4> Attributes </h4>

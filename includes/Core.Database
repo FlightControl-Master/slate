@@ -4,12 +4,14 @@
 <p>Mission designers can use the DATABASE class to refer to:</p>
 
 <ul>
+<li>STATICS</li>
 <li>UNITS</li>
 <li>GROUPS</li>
 <li>CLIENTS</li>
-<li>AIRPORTS</li>
+<li>AIRBASES</li>
 <li>PLAYERSJOINED</li>
 <li>PLAYERS</li>
+<li>CARGOS</li>
 </ul>
 
 <p>On top, for internal MOOSE administration purposes, the DATBASE administers the Unit and Group TEMPLATES as defined within the Mission Editor.</p>
@@ -115,21 +117,23 @@ self</li>
 <ul>
 <li><a href="#static-class">STATIC</a> The : found STATIC.</li>
 </ul>
-<h3 id='database-addairbase'>DATABASE:AddAirbase()</h3>
+<h3 id='database-addairbase-airbasename'>DATABASE:AddAirbase(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
+<li><u>String</u> AirbaseName : The name of the airbase</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='database-deleteairbase'>DATABASE:DeleteAirbase()</h3>
+<h3 id='database-deleteairbase-airbasename'>DATABASE:DeleteAirbase(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
+<li><u>String</u> AirbaseName : The name of the airbase</li>
 </ul>
 
 <h4> Returns </h4>
@@ -146,6 +150,40 @@ self</li>
 
 <ul>
 <li><a href="#airbase-class">AIRBASE</a> The : found AIRBASE.</li>
+</ul>
+<h3 id='database-addcargo-cargoname'>DATABASE:AddCargo(CargoName)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><u>String</u> CargoName : The name of the airbase</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='database-deletecargo-cargoname'>DATABASE:DeleteCargo(CargoName)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><u>String</u> CargoName : The name of the airbase</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='database-findcargo-cargoname'>DATABASE:FindCargo(CargoName)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><u>String</u> CargoName</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#cargo-class">CARGO</a> The : found CARGO.</li>
 </ul>
 <h3 id='database-findclient-clientname'>DATABASE:FindClient(ClientName)</h3>
 <h4> Parameters </h4>
@@ -264,7 +302,7 @@ self</li>
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive UNIT in the database. The function needs to accept a UNIT parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -279,7 +317,7 @@ self</li>
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the database. The function needs to accept a GROUP parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a GROUP parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -294,7 +332,7 @@ self</li>
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is an player in the database. The function needs to accept the player name.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept the player name.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -309,7 +347,7 @@ self</li>
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is was a player in the database. The function needs to accept a UNIT parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -324,7 +362,7 @@ self</li>
 <ul>
 <li><a href="#database-class">DATABASE</a>
 self</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive player in the database. The function needs to accept a CLIENT parameter.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called object in the database. The function needs to accept a CLIENT parameter.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -333,3 +371,38 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
+<h3 id='database-foreachcargo-iteratorfunction'>DATABASE:ForEachCargo(IteratorFunction)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a CLIENT parameter.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+</ul>
+<h3 id='database-oneventnewcargo-eventdata'>DATABASE:OnEventNewCargo(EventData)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='database-oneventdeletecargo-eventdata'>DATABASE:OnEventDeleteCargo(EventData)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#database-class">DATABASE</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+</ul>
+
+<h4> Returns </h4>

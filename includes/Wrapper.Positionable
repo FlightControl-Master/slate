@@ -327,7 +327,7 @@ Radio</li>
 </ul>
 <h2 id='dcspositionable-class'>DCSPositionable Class</h2>
 <pre>
-**The DCSPositionable class does not inherit**
+The DCSPositionable class does not inherit
 </pre>
 
 <h4> Attributes </h4>

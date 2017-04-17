@@ -1,6 +1,6 @@
 <h1 id='tasking-task-module'>Tasking.Task Module</h1>
 <p><strong>Tasking</strong> -- This module contains the TASK class.</p>
-<h5 id='authors-flightcontrol-design-and-programming'>Authors: FlightControl - Design and Programming</h5><h2 id='task-class'>TASK Class</h2>
+<h5 id='authors-flightcontrol-design-and-programming'>Authors: FlightControl - Design and Programming</h5><h2 id='task-class-2'>TASK Class</h2>
 <pre>
 Inheritance : The TASK Class inherits from the following parents :
 BASE

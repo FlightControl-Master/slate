@@ -1,17 +1,17 @@
 <h1 id='utilities-utils-module'>Utilities.Utils Module</h1>
 <p>This module contains derived utilities taken from the MIST framework,
 which are excellent tools to be reused in an OO environment!.</p>
-<h5 id='authors-17'>Authors:</h5>
+<h5 id='authors-19'>Authors:</h5>
 <ul>
 <li>Grimes : Design &amp; Programming of the MIST framework.</li>
 </ul>
-<h5 id='contributions-19'>Contributions:</h5>
+<h5 id='contributions-20'>Contributions:</h5>
 <ul>
 <li>FlightControl : Rework to OO framework</li>
 </ul>
 <h2 id='smokecolor-class'>SMOKECOLOR Class</h2>
 <pre>
-**The SMOKECOLOR class does not inherit**
+The SMOKECOLOR class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -25,7 +25,7 @@ which are excellent tools to be reused in an OO environment!.</p>
 </ul>
 <h2 id='flarecolor-class'>FLARECOLOR Class</h2>
 <pre>
-**The FLARECOLOR class does not inherit**
+The FLARECOLOR class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -38,5 +38,5 @@ which are excellent tools to be reused in an OO environment!.</p>
 </ul>
 <h2 id='utils-class'>UTILS Class</h2>
 <pre>
-**The UTILS class does not inherit**
+The UTILS class does not inherit
 </pre>

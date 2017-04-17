@@ -35,7 +35,7 @@ is implemented in the AIRBASE class as AIRBASE-GetName.</p>
 <p>More functions will be added</p>
 
 <p>During the MOOSE development, more functions will be added.</p>
-<h2 id='airbase-class'>AIRBASE Class</h2>
+<h2 id='airbase-class-2'>AIRBASE Class</h2>
 <pre>
 Inheritance : The AIRBASE Class inherits from the following parents :
 BASE

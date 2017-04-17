@@ -1,0 +1,11 @@
+<h1 id='dcs-dcscommand-module'>Dcs.DCSCommand Module</h1><h2 id='command-class'>Command Class</h2>
+<pre>
+The Command class does not inherit
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>String</u> id</li>
+<li>#Command.params params</li>
+</ul>

@@ -10,7 +10,7 @@
 <ul>
 <li><a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a>: Perform a PATROL in a zone.</li>
 </ul>
-<h5 id='strong-open-issues-strong'><strong>OPEN ISSUES</strong></h5>
+<h5 id='demo-missions-4'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-pat-20-20patrolling-ai_patrol-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/PAT%20-%20Patrolling">AI_PATROL Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-pat-20-20patrolling-ai_patrol-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/PAT%20-%20Patrolling">AI_PATROL Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-4'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-4'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul35hvyzka6g22wmt7ii3zky-ai_patrol-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl35HvYZKA6G22WMt7iI3zky">AI_PATROL YouTube Channel</a></h5><h5 id='strong-open-issues-strong'><strong>OPEN ISSUES</strong></h5>
 <p>2017-01-17: When Spawned AI is located at an airbase, it will be routed first back to the airbase after take-off.</p>
 
 <p>2016-01-17:
@@ -50,7 +50,7 @@ BASE
             `-- AI_PATROL_ZONE
 </pre>
 
-<p>The <a href="#ai_patrol_zone-class">AI_PATROL_ZONE</a> class implements the core functions to patrol a <a href="#zone-module">Zone</a> by an AI <a href="#controllable-module">Controllable</a> or <a href="#group-module">Group</a>.</p>
+<p>The AI_PATROL_ZONE class implements the core functions to patrol a <a href="#zone-module">Zone</a> by an AI <a href="#controllable-module">Controllable</a> or <a href="#group-module">Group</a>.</p>
 
 <p><img src="/includes/Pictures/AI_PATROL/Dia3.JPG" alt="Process" /></p>
 
@@ -80,13 +80,13 @@ use derived AI_ classes to model AI offensive or defensive behaviour.</p>
 When the fuel treshold has been reached, the airplane will fly towards the nearest friendly airbase and will land.</p>
 
 <p><img src="/includes/Pictures/AI_PATROL/Dia11.JPG" alt="Process" /></p>
-<h5 id='1-1-ai_patrol_zone-constructor'>1.1) AI_PATROL_ZONE constructor</h5>
+<h5 id='1-ai_patrol_zone-constructor'>1. AI_PATROL_ZONE constructor</h5>
 <ul>
 <li><a href="#ai_patrol_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_PATROL_ZONE:New()</a>: Creates a new AI_PATROL_ZONE object.</li>
 </ul>
-<h5 id='1-2-ai_patrol_zone-is-a-fsm'>1.2) AI_PATROL_ZONE is a FSM</h5>
+<h5 id='2-ai_patrol_zone-is-a-fsm'>2. AI_PATROL_ZONE is a FSM</h5>
 <p><img src="/includes/Pictures/AI_PATROL/Dia2.JPG" alt="Process" /></p>
-<h5 id='1-2-1-ai_patrol_zone-states'>1.2.1) AI_PATROL_ZONE States</h5>
+<h5 id='2-1-ai_patrol_zone-states'>2.1. AI_PATROL_ZONE States</h5>
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
 <li><strong>Patrolling</strong> ( Group ): The AI is patrolling the Patrol Zone.</li>
@@ -94,7 +94,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Stopped</strong> ( Group ): The process is stopped.</li>
 <li><strong>Crashed</strong> ( Group ): The AI has crashed or is dead.</li>
 </ul>
-<h5 id='1-2-2-ai_patrol_zone-events'>1.2.2) AI_PATROL_ZONE Events</h5>
+<h5 id='2-2-ai_patrol_zone-events'>2.2. AI_PATROL_ZONE Events</h5>
 <ul>
 <li><strong>Start</strong> ( Group ): Start the process.</li>
 <li><strong>Stop</strong> ( Group ): Stop the process.</li>
@@ -104,17 +104,17 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>Detected</strong> ( Group ): The AI has detected new targets.</li>
 <li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
 </ul>
-<h5 id='1-3-set-or-get-the-ai-controllable'>1.3) Set or Get the AI controllable</h5>
+<h5 id='3-set-or-get-the-ai-controllable'>3. Set or Get the AI controllable</h5>
 <ul>
 <li>AI_PATROL_ZONE-SetControllable: Set the AIControllable.</li>
 <li>AI_PATROL_ZONE-GetControllable: Get the AIControllable.</li>
 </ul>
-<h5 id='1-4-set-the-speed-and-altitude-boundaries-of-the-ai-controllable'>1.4) Set the Speed and Altitude boundaries of the AI controllable</h5>
+<h5 id='4-set-the-speed-and-altitude-boundaries-of-the-ai-controllable'>4. Set the Speed and Altitude boundaries of the AI controllable</h5>
 <ul>
 <li><a href="#ai_patrol_zone-setspeed-self-self">AI_PATROL_ZONE:SetSpeed()</a>: Set the patrol speed boundaries of the AI, for the next patrol.</li>
 <li><a href="#ai_patrol_zone-setaltitude-patrolflooraltitude-patrolceilingaltitude">AI_PATROL_ZONE:SetAltitude()</a>: Set altitude boundaries of the AI, for the next patrol.</li>
 </ul>
-<h5 id='1-5-manage-the-detection-process-of-the-ai-controllable'>1.5) Manage the detection process of the AI controllable</h5>
+<h5 id='5-manage-the-detection-process-of-the-ai-controllable'>5. Manage the detection process of the AI controllable</h5>
 <p>The detection process of the AI controllable can be manipulated.
 Detection requires an amount of CPU power, which has an impact on your mission performance.
 Only put detection on when absolutely necessary, and the frequency of the detection can also be set.</p>
@@ -131,14 +131,14 @@ Use the method <a href="#ai_patrol_zone-getdetectedunits">AI_PATROL_ZONE:GetDete
 Use the method <a href="#ai_patrol_zone-setdetectionzone-detectionzone">AI_PATROL_ZONE:SetDetectionZone()</a> to set the zone where targets need to be detected.
 Note that when the zone is too far away, or the AI is not heading towards the zone, or the AI is too high, no targets may be detected
 according the weather conditions.</p>
-<h5 id='1-6-manage-the-quot-out-of-fuel-quot-in-the-ai_patrol_zone'>1.6) Manage the &quot;out of fuel&quot; in the AI_PATROL_ZONE</h5>
+<h5 id='6-manage-the-quot-out-of-fuel-quot-in-the-ai_patrol_zone'>6. Manage the &quot;out of fuel&quot; in the AI_PATROL_ZONE</h5>
 <p>When the AI is out of fuel, it is required that a new AI is started, before the old AI can return to the home base.
 Therefore, with a parameter and a calculation of the distance to the home base, the fuel treshold is calculated.
 When the fuel treshold is reached, the AI will continue for a given time its patrol task in orbit,
 while a new AI is targetted to the AI_PATROL_ZONE.
 Once the time is finished, the old AI will return to the base.
 Use the method <a href="#ai_patrol_zone-managefuel-patrolfueltresholdpercentage-patroloutoffuelorbittime">AI_PATROL_ZONE:ManageFuel()</a> to have this proces in place.</p>
-<h5 id='1-7-manage-quot-damage-quot-behaviour-of-the-ai-in-the-ai_patrol_zone'>1.7) Manage &quot;damage&quot; behaviour of the AI in the AI_PATROL_ZONE</h5>
+<h5 id='7-manage-quot-damage-quot-behaviour-of-the-ai-in-the-ai_patrol_zone'>7. Manage &quot;damage&quot; behaviour of the AI in the AI_PATROL_ZONE</h5>
 <p>When the AI is damaged, it is required that a new AIControllable is started. However, damage cannon be foreseen early on.
 Therefore, when the damage treshold is reached, the AI will return immediately to the home base (RTB).
 Use the method <a href="#ai_patrol_zone-managedamage-patroldamagetreshold">AI_PATROL_ZONE:ManageDamage()</a> to have this proces in place.</p>

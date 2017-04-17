@@ -1,0 +1,17 @@
+<h1 id='dcs-dcstask-module'>Dcs.DCSTask Module</h1><h2 id='task-class'>Task Class</h2>
+<pre>
+Inheritance : The Task Class inherits from the following parents :
+ERROR !
+    `-- Task
+</pre>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>String</u> id</li>
+<li>#Task.param param</li>
+</ul>
+<h2 id='task-param-class'>Task.param Class</h2>
+<pre>
+The Task.param class does not inherit
+</pre>

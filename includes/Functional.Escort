@@ -399,7 +399,7 @@ self</li>
 </ul>
 <h2 id='escort-mode-class'>ESCORT.MODE Class</h2>
 <pre>
-**The ESCORT.MODE class does not inherit**
+The ESCORT.MODE class does not inherit
 </pre>
 
 <h4> Attributes </h4>
@@ -410,7 +410,7 @@ self</li>
 </ul>
 <h2 id='menuparam-class'>MENUPARAM Class</h2>
 <pre>
-**The MENUPARAM class does not inherit**
+The MENUPARAM class does not inherit
 </pre>
 
 <h4> Attributes </h4>
