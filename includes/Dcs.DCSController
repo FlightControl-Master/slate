@@ -1,4 +1,4 @@
-<h1 id='dcs-dcscontroller-module'>Dcs.DCSController Module</h1><h2 id='controller-class'>Controller Class</h2>
+<span id=dcs-dcscontroller-module></span><h1 id='dcs-dcscontroller-module-'>Dcs.DCSController Module</h1><span id=controller-class></span><h2 id='controller-class-'>Controller Class</h2>
 <pre>
 The Controller class does not inherit
 </pre>
@@ -15,7 +15,7 @@ The Controller class does not inherit
 <ul>
 <li>#Controller.Detection Detection : Enum contains identifiers of surface types.</li>
 </ul>
-<h3 id='controller-setonoff-value'>Controller:setOnOff(value)</h3>
+<span id=controller-setonoff-value></span><h3 id='controller-setonoff-value-'>Controller:setOnOff(value)</h3>
 <p>Enables and disables the controller.
 Note: Now it works only for ground / naval groups!</p>
 
@@ -27,7 +27,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-settask-task'>Controller:setTask(task)</h3>
+<span id=controller-settask-task></span><h3 id='controller-settask-task-'>Controller:setTask(task)</h3>
 <p>Resets current task and then sets the task to the controller. Task is a table that contains task identifier and task parameters.</p>
 
 <h4> Parameters </h4>
@@ -38,7 +38,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-resettask'>Controller:resetTask()</h3>
+<span id=controller-resettask></span><h3 id='controller-resettask-'>Controller:resetTask()</h3>
 <p>Resets current task of the controller.</p>
 
 <h4> Parameters </h4>
@@ -48,7 +48,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-pushtask-task'>Controller:pushTask(task)</h3>
+<span id=controller-pushtask-task></span><h3 id='controller-pushtask-task-'>Controller:pushTask(task)</h3>
 <p>Pushes the task to the front of the queue and makes the task active. Further call of function Controller.setTask() function will stop current task, clear the queue and set the new task active. If the task queue is empty the function will work like function Controller.setTask() function.</p>
 
 <h4> Parameters </h4>
@@ -59,7 +59,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-poptask'>Controller:popTask()</h3>
+<span id=controller-poptask></span><h3 id='controller-poptask-'>Controller:popTask()</h3>
 <p>Pops current (front) task from the queue and makes active next task in the queue (if exists). If no more tasks in the queue the function works like function Controller.resetTask() function. Does nothing if the queue is empty.</p>
 
 <h4> Parameters </h4>
@@ -69,7 +69,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-hastask'>Controller:hasTask()</h3>
+<span id=controller-hastask></span><h3 id='controller-hastask-'>Controller:hasTask()</h3>
 <p>Returns true if the controller has a task.</p>
 
 <h4> Parameters </h4>
@@ -83,7 +83,7 @@ Note: Now it works only for ground / naval groups!</p>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controller-setcommand-command'>Controller:setCommand(command)</h3>
+<span id=controller-setcommand-command></span><h3 id='controller-setcommand-command-'>Controller:setCommand(command)</h3>
 <p>Sets the command to perform by controller.</p>
 
 <h4> Parameters </h4>
@@ -94,7 +94,7 @@ Note: Now it works only for ground / naval groups!</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-setoption-optionid-optionvalue'>Controller:setOption(optionId, optionValue)</h3>
+<span id=controller-setoption-optionid-optionvalue></span><h3 id='controller-setoption-optionid-optionvalue-'>Controller:setOption(optionId, optionValue)</h3>
 <p>Sets the option to the controller.
 Option is a pair of identifier and value. Behavior options are global parameters those affect controller behavior in all tasks it performs.
 Option identifiers and values are stored in table AI.Option in subtables Air, Ground and Naval.</p>
@@ -111,7 +111,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controller-istargetdetected-target-detection'>Controller:isTargetDetected(target, detection)</h3>
+<span id=controller-istargetdetected-target-detection></span><h3 id='controller-istargetdetected-target-detection-'>Controller:isTargetDetected(target, detection)</h3>
 <p>Checks if the target is detected or not. If one or more detection method is specified the function will return true if the target is detected by at least one of these methods. If no detection methods are specified the function will return true if the target is detected by any method.</p>
 
 <h4> Parameters </h4>
@@ -133,7 +133,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 <li>#Vec3 lastPos : Has effect only if visible is false. Last position of the target when it was seen.</li>
 <li>#Vec3 lastVel : Has effect only if visible is false. Last velocity of the target when it was seen.</li>
 </ul>
-<h3 id='controller-getdetectedtargets-detection'>Controller:getDetectedTargets(detection)</h3>
+<span id=controller-getdetectedtargets-detection></span><h3 id='controller-getdetectedtargets-detection-'>Controller:getDetectedTargets(detection)</h3>
 <p>Returns list of detected targets. If one or more detection method is specified the function will return targets which were detected by at least one of these methods. If no detection methods are specified the function will return targets which were detected by any method.</p>
 
 <h4> Parameters </h4>
@@ -148,7 +148,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 <ul>
 <li>#list&lt;#DetectedTarget&gt; array : of DetectedTarget</li>
 </ul>
-<h3 id='controller-knowtarget-object-type-distance'>Controller:knowTarget(object, type, distance)</h3>
+<span id=controller-knowtarget-object-type-distance></span><h3 id='controller-knowtarget-object-type-distance-'>Controller:knowTarget(object, type, distance)</h3>
 <p>Know a target.</p>
 
 <h4> Parameters </h4>
@@ -161,7 +161,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 </ul>
 
 <h4> Returns </h4>
-<h2 id='controller-detection-class'>Controller.Detection Class</h2>
+<span id=controller-detection-class></span><h2 id='controller-detection-class-'>Controller.Detection Class</h2>
 <pre>
 The Controller.Detection class does not inherit
 </pre>
@@ -176,7 +176,7 @@ The Controller.Detection class does not inherit
 <li>RWR self</li>
 <li>DLINK self</li>
 </ul>
-<h2 id='detectedtarget-class'>DetectedTarget Class</h2>
+<span id=detectedtarget-class></span><h2 id='detectedtarget-class-'>DetectedTarget Class</h2>
 <pre>
 The DetectedTarget class does not inherit
 </pre>

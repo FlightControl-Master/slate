@@ -1,8 +1,8 @@
-<h1 id='tasking-task_a2g-module'>Tasking.Task_A2G Module</h1>
+<span id=tasking-task_a2g-module></span><h1 id='tasking-task_a2g-module-'>Tasking.Task_A2G Module</h1>
 <p><strong>Tasking</strong> - The TASK_A2G models tasks for players in Air to Ground engagements.</p>
 
 <p><img src="/includes/Pictures/TASK_A2G/Dia1.JPG" alt="Banner Image" /></p>
-<h5 id='1-task_a2g-task_a2g-class-extends-a-href-task-class-task-a'>1) @{Task_A2G#TASK_A2G} class, extends <a href="#task-class">TASK</a></h5>
+<span id=1-task_a2g-task_a2g-class-extends-a-href-task-class-task-a></span><h5 id='1-task_a2g-task_a2g-class-extends-a-href-task-class-task-a-'>1) @{Task_A2G#TASK_A2G} class, extends <a href="#task-class">TASK</a></h5>
 <p>The @{#TASK_A2G} class defines Air To Ground tasks for a <a href="#set-module">Set</a> of Target Units,
 based on the tasking capabilities defined in <a href="#task-class">TASK</a>.
 The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and has the following statuses:</p>
@@ -14,7 +14,7 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li><strong>Success</strong>: The A2G task is successfully completed.</li>
 <li><strong>Failed</strong>: The A2G task has failed. This will happen if the player exists the task early, without communicating a possible cancellation to HQ.</li>
 </ul>
-<h5 id='1-1-set-the-scoring-of-achievements-in-an-a2g-attack'>1.1) Set the scoring of achievements in an A2G attack.</h5>
+<span id=1-1-set-the-scoring-of-achievements-in-an-a2g-attack></span><h5 id='1-1-set-the-scoring-of-achievements-in-an-a2g-attack-'>1.1) Set the scoring of achievements in an A2G attack.</h5>
 <p>Scoring or penalties can be given in the following circumstances:</p>
 
 <ul>
@@ -22,13 +22,13 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <li>@{#TASK_A2G.SetScoreOnSuccess}(): Set a score when all the targets in scope of the A2G attack, have been destroyed.</li>
 <li>@{#TASK_A2G.SetPenaltyOnFailed}(): Set a penalty when the A2G attack has failed.</li>
 </ul>
-<h5 id='2-a-href-task_sead-class-task_sead-a-class-extends-task_a2g-task_a2g'>2) <a href="#task_sead-class">TASK_SEAD</a> class, extends @{Task_A2G#TASK_A2G}</h5>
+<span id=2-a-href-task_sead-class-task_sead-a-class-extends-task_a2g-task_a2g></span><h5 id='2-a-href-task_sead-class-task_sead-a-class-extends-task_a2g-task_a2g-'>2) <a href="#task_sead-class">TASK_SEAD</a> class, extends @{Task_A2G#TASK_A2G}</h5>
 <p>The <a href="#task_sead-class">TASK_SEAD</a> class defines a SEAD task for a <a href="#set-module">Set</a> of Target Units.</p>
-<h5 id='3-a-href-task_cas-class-task_cas-a-class-extends-task_a2g-task_a2g'>3) <a href="#task_cas-class">TASK_CAS</a> class, extends @{Task_A2G#TASK_A2G}</h5>
+<span id=3-a-href-task_cas-class-task_cas-a-class-extends-task_a2g-task_a2g></span><h5 id='3-a-href-task_cas-class-task_cas-a-class-extends-task_a2g-task_a2g-'>3) <a href="#task_cas-class">TASK_CAS</a> class, extends @{Task_A2G#TASK_A2G}</h5>
 <p>The <a href="#task_cas-class">TASK_CAS</a> class defines a CAS task for a <a href="#set-module">Set</a> of Target Units.</p>
-<h5 id='4-a-href-task_bai-class-task_bai-a-class-extends-task_a2g-task_a2g'>4) <a href="#task_bai-class">TASK_BAI</a> class, extends @{Task_A2G#TASK_A2G}</h5>
+<span id=4-a-href-task_bai-class-task_bai-a-class-extends-task_a2g-task_a2g></span><h5 id='4-a-href-task_bai-class-task_bai-a-class-extends-task_a2g-task_a2g-'>4) <a href="#task_bai-class">TASK_BAI</a> class, extends @{Task_A2G#TASK_A2G}</h5>
 <p>The <a href="#task_bai-class">TASK_BAI</a> class defines a BAI task for a <a href="#set-module">Set</a> of Target Units.</p>
-<h5 id='strong-api-change-history-strong-12'><strong>API CHANGE HISTORY</strong></h5>
+<span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -39,15 +39,15 @@ The TASK_A2G is implemented using a <a href="#fsm_task-class">FSM_TASK</a>, and 
 <p>Hereby the change log:</p>
 
 <p>2017-03-09: Revised version.</p>
-<h5 id='strong-authors-and-contributions-strong-12'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-17'>Contributions:</h5>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li><strong>[WingThor]</strong>: Concept, Advice &amp; Testing.</li>
 </ul>
-<h5 id='authors-16'>Authors:</h5>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
 </ul>
-<h2 id='task_a2g-class'>TASK_A2G Class</h2>
+<span id=task_a2g-class></span><h2 id='task_a2g-class-'>TASK_A2G Class</h2>
 <pre>
 Inheritance : The TASK_A2G Class inherits from the following parents :
 BASE
@@ -62,7 +62,7 @@ BASE
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
-<h3 id='task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone'>TASK_A2G:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<span id=task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_A2G:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -80,7 +80,7 @@ BASE
 <ul>
 <li>#TASK_A2G self</li>
 </ul>
-<h3 id='task_a2g-getplannedmenutext'>TASK_A2G:GetPlannedMenuText()</h3>
+<span id=task_a2g-getplannedmenutext></span><h3 id='task_a2g-getplannedmenutext-'>TASK_A2G:GetPlannedMenuText()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -88,7 +88,7 @@ BASE
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task_a2g-setrendezvouspointvec2-rendezvouspointvec2-rendezvousrange-taskunit'>TASK_A2G:SetRendezVousPointVec2(RendezVousPointVec2, RendezVousRange, TaskUnit)</h3>
+<span id=task_a2g-setrendezvouspointvec2-rendezvouspointvec2-rendezvousrange-taskunit></span><h3 id='task_a2g-setrendezvouspointvec2-rendezvouspointvec2-rendezvousrange-taskunit-'>TASK_A2G:SetRendezVousPointVec2(RendezVousPointVec2, RendezVousRange, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -99,7 +99,7 @@ BASE
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task_a2g-getrendezvouspointvec2-taskunit'>TASK_A2G:GetRendezVousPointVec2(TaskUnit)</h3>
+<span id=task_a2g-getrendezvouspointvec2-taskunit></span><h3 id='task_a2g-getrendezvouspointvec2-taskunit-'>TASK_A2G:GetRendezVousPointVec2(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -113,7 +113,7 @@ BASE
 <li><a href="#point_vec2-class">POINT_VEC2</a> The : PointVec2 object referencing to the 2D point where the RendezVous point is located on the map.</li>
 <li><u>Number</u> The : RendezVousRange that defines when the player is considered to have arrived at the RendezVous point.</li>
 </ul>
-<h3 id='task_a2g-setrendezvouszone-rendezvouszone-taskunit'>TASK_A2G:SetRendezVousZone(RendezVousZone, TaskUnit)</h3>
+<span id=task_a2g-setrendezvouszone-rendezvouszone-taskunit></span><h3 id='task_a2g-setrendezvouszone-rendezvouszone-taskunit-'>TASK_A2G:SetRendezVousZone(RendezVousZone, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -123,7 +123,7 @@ BASE
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task_a2g-getrendezvouszone-taskunit'>TASK_A2G:GetRendezVousZone(TaskUnit)</h3>
+<span id=task_a2g-getrendezvouszone-taskunit></span><h3 id='task_a2g-getrendezvouszone-taskunit-'>TASK_A2G:GetRendezVousZone(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -136,7 +136,7 @@ BASE
 <ul>
 <li><a href="#zone_base-class">ZONE_BASE</a> The : Zone object where the RendezVous is located on the map.</li>
 </ul>
-<h3 id='task_a2g-settargetpointvec2-targetpointvec2-taskunit'>TASK_A2G:SetTargetPointVec2(TargetPointVec2, TaskUnit)</h3>
+<span id=task_a2g-settargetpointvec2-targetpointvec2-taskunit></span><h3 id='task_a2g-settargetpointvec2-targetpointvec2-taskunit-'>TASK_A2G:SetTargetPointVec2(TargetPointVec2, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -146,7 +146,7 @@ BASE
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task_a2g-gettargetpointvec2-taskunit'>TASK_A2G:GetTargetPointVec2(TaskUnit)</h3>
+<span id=task_a2g-gettargetpointvec2-taskunit></span><h3 id='task_a2g-gettargetpointvec2-taskunit-'>TASK_A2G:GetTargetPointVec2(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -159,7 +159,7 @@ BASE
 <ul>
 <li><a href="#point_vec2-class">POINT_VEC2</a> The : PointVec2 object where the Target is located on the map.</li>
 </ul>
-<h3 id='task_a2g-settargetzone-targetzone-taskunit'>TASK_A2G:SetTargetZone(TargetZone, TaskUnit)</h3>
+<span id=task_a2g-settargetzone-targetzone-taskunit></span><h3 id='task_a2g-settargetzone-targetzone-taskunit-'>TASK_A2G:SetTargetZone(TargetZone, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -169,7 +169,7 @@ BASE
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task_a2g-gettargetzone-taskunit'>TASK_A2G:GetTargetZone(TaskUnit)</h3>
+<span id=task_a2g-gettargetzone-taskunit></span><h3 id='task_a2g-gettargetzone-taskunit-'>TASK_A2G:GetTargetZone(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -182,7 +182,7 @@ BASE
 <ul>
 <li><a href="#zone_base-class">ZONE_BASE</a> The : Zone object where the Target is located on the map.</li>
 </ul>
-<h3 id='task_a2g-setscoreondestroy-text-score-taskunit'>TASK_A2G:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
+<span id=task_a2g-setscoreondestroy-text-score-taskunit></span><h3 id='task_a2g-setscoreondestroy-text-score-taskunit-'>TASK_A2G:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -197,7 +197,7 @@ BASE
 <ul>
 <li>#TASK_A2G self</li>
 </ul>
-<h3 id='task_a2g-setscoreonsuccess-text-score-taskunit'>TASK_A2G:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
+<span id=task_a2g-setscoreonsuccess-text-score-taskunit></span><h3 id='task_a2g-setscoreonsuccess-text-score-taskunit-'>TASK_A2G:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -212,7 +212,7 @@ BASE
 <ul>
 <li>#TASK_A2G self</li>
 </ul>
-<h3 id='task_a2g-setpenaltyonfailed-text-penalty-taskunit'>TASK_A2G:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
+<span id=task_a2g-setpenaltyonfailed-text-penalty-taskunit></span><h3 id='task_a2g-setpenaltyonfailed-text-penalty-taskunit-'>TASK_A2G:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -227,7 +227,7 @@ BASE
 <ul>
 <li>#TASK_A2G self</li>
 </ul>
-<h2 id='task_sead-class'>TASK_SEAD Class</h2>
+<span id=task_sead-class></span><h2 id='task_sead-class-'>TASK_SEAD Class</h2>
 <pre>
 Inheritance : The TASK_SEAD Class inherits from the following parents :
 BASE
@@ -242,7 +242,7 @@ BASE
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
-<h3 id='task_sead-new-mission-setgroup-taskname-targetsetunit'>TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)</h3>
+<span id=task_sead-new-mission-setgroup-taskname-targetsetunit></span><h3 id='task_sead-new-mission-setgroup-taskname-targetsetunit-'>TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -260,7 +260,7 @@ self</li>
 <li><a href="#task_sead-class">TASK_SEAD</a>
 self</li>
 </ul>
-<h2 id='task_bai-class'>TASK_BAI Class</h2>
+<span id=task_bai-class></span><h2 id='task_bai-class-'>TASK_BAI Class</h2>
 <pre>
 Inheritance : The TASK_BAI Class inherits from the following parents :
 BASE
@@ -275,7 +275,7 @@ BASE
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
-<h3 id='task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone'>TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<span id=task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -295,7 +295,7 @@ self</li>
 <li><a href="#task_bai-class">TASK_BAI</a>
 self</li>
 </ul>
-<h2 id='task_cas-class'>TASK_CAS Class</h2>
+<span id=task_cas-class></span><h2 id='task_cas-class-'>TASK_CAS Class</h2>
 <pre>
 Inheritance : The TASK_CAS Class inherits from the following parents :
 BASE
@@ -310,7 +310,7 @@ BASE
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
-<h3 id='task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone'>TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<span id=task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
 <h4> Parameters </h4>
 
 <ul>

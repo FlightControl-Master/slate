@@ -1,4 +1,4 @@
-<h1 id='wrapper-unit-module'>Wrapper.Unit Module</h1>
+<span id=wrapper-unit-module></span><h1 id='wrapper-unit-module-'>Wrapper.Unit Module</h1>
 <p><strong>Wrapper</strong> - UNIT is a wrapper class for the DCS Class Unit.</p>
 
 <p>The <a href="#unit-class">UNIT</a> class is a wrapper class to handle the DCS Unit objects:</p>
@@ -9,7 +9,7 @@
 <li>Handle local Unit Controller.</li>
 <li>Manage the &quot;state&quot; of the DCS Unit.</li>
 </ul>
-<h2 id='unit-class-2'>UNIT Class</h2>
+<span id=unit-class></span><h2 id='unit-class-'>UNIT Class</h2>
 <pre>
 Inheritance : The UNIT Class inherits from the following parents :
 BASE
@@ -19,7 +19,7 @@ BASE
                 `-- CONTROLLABLE
                     `-- UNIT
 </pre>
-<h3 id='unit-register-unitname'>UNIT:Register(UnitName)</h3>
+<span id=unit-register-unitname></span><h3 id='unit-register-unitname-'>UNIT:Register(UnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -34,7 +34,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h3 id='unit-find-dcsunit'>UNIT:Find(DCSUnit)</h3>
+<span id=unit-find-dcsunit></span><h3 id='unit-find-dcsunit-'>UNIT:Find(DCSUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -49,7 +49,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h3 id='unit-findbyname-unitname'>UNIT:FindByName(UnitName)</h3>
+<span id=unit-findbyname-unitname></span><h3 id='unit-findbyname-unitname-'>UNIT:FindByName(UnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -64,7 +64,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h3 id='unit-name'>UNIT:Name()</h3>
+<span id=unit-name></span><h3 id='unit-name-'>UNIT:Name()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -77,7 +77,7 @@ self</li>
 <ul>
 <li><u>String</u> The : UNIT name.</li>
 </ul>
-<h3 id='unit-getdcsobject'>UNIT:GetDCSObject()</h3>
+<span id=unit-getdcsobject></span><h3 id='unit-getdcsobject-'>UNIT:GetDCSObject()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -90,7 +90,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit self</li>
 </ul>
-<h3 id='unit-respawn-spawnvec3-heading'>UNIT:ReSpawn(SpawnVec3, Heading)</h3>
+<span id=unit-respawn-spawnvec3-heading></span><h3 id='unit-respawn-spawnvec3-heading-'>UNIT:ReSpawn(SpawnVec3, Heading)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -101,7 +101,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-isactive-2'>UNIT:IsActive()</h3>
+<span id=unit-isactive></span><h3 id='unit-isactive-'>UNIT:IsActive()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -115,7 +115,7 @@ self</li>
 <li><u>Boolean</u> true : if Unit is activated.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-isalive'>UNIT:IsAlive()</h3>
+<span id=unit-isalive></span><h3 id='unit-isalive-'>UNIT:IsAlive()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -130,7 +130,7 @@ self</li>
 <li><u>Boolean</u> false : if Unit is alive but not active.</li>
 <li><u>Nil</u> if : the Unit is not existing or is not alive.</li>
 </ul>
-<h3 id='unit-getcallsign-2'>UNIT:GetCallsign()</h3>
+<span id=unit-getcallsign></span><h3 id='unit-getcallsign-'>UNIT:GetCallsign()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -144,7 +144,7 @@ self</li>
 <li><u>String</u> The : Callsign of the Unit.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getplayername-2'>UNIT:GetPlayerName()</h3>
+<span id=unit-getplayername></span><h3 id='unit-getplayername-'>UNIT:GetPlayerName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -158,7 +158,7 @@ self</li>
 <li><u>String</u> Player : Name</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getnumber-2'>UNIT:GetNumber()</h3>
+<span id=unit-getnumber></span><h3 id='unit-getnumber-'>UNIT:GetNumber()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -172,7 +172,7 @@ self</li>
 <li><u>Number</u> The : Unit number.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getgroup-2'>UNIT:GetGroup()</h3>
+<span id=unit-getgroup></span><h3 id='unit-getgroup-'>UNIT:GetGroup()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -185,7 +185,7 @@ self</li>
 <li><a href="#group-class">GROUP</a> The : Group of the Unit.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getprefix'>UNIT:GetPrefix()</h3>
+<span id=unit-getprefix></span><h3 id='unit-getprefix-'>UNIT:GetPrefix()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -199,7 +199,7 @@ self</li>
 <li><u>String</u> The : name of the DCS Unit.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getammo-2'>UNIT:GetAmmo()</h3>
+<span id=unit-getammo></span><h3 id='unit-getammo-'>UNIT:GetAmmo()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -213,7 +213,7 @@ self</li>
 <li>Dcs.DCSWrapper.Unit#Unit.Ammo self</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getsensors-2'>UNIT:GetSensors()</h3>
+<span id=unit-getsensors></span><h3 id='unit-getsensors-'>UNIT:GetSensors()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -227,7 +227,7 @@ self</li>
 <li>Dcs.DCSWrapper.Unit#Unit.Sensors self</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-hassensors'>UNIT:HasSensors()</h3>
+<span id=unit-hassensors></span><h3 id='unit-hassensors-'>UNIT:HasSensors()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -241,7 +241,7 @@ self</li>
 <li><u>Boolean</u> returns : true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&#39;t want to get information about all the unit&#39;s sensors, and just want to check if the unit has specified types of sensors.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-hassead'>UNIT:HasSEAD()</h3>
+<span id=unit-hassead></span><h3 id='unit-hassead-'>UNIT:HasSEAD()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -255,7 +255,7 @@ self</li>
 <li><u>Boolean</u> returns : true if the unit is SEADable.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getradar-2'>UNIT:GetRadar()</h3>
+<span id=unit-getradar></span><h3 id='unit-getradar-'>UNIT:GetRadar()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -270,7 +270,7 @@ self</li>
 <li>Dcs.DCSWrapper.Object#Object The : object of the radar&#39;s interest. Not nil only if at least one radar of the unit is tracking a target.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getfuel-2'>UNIT:GetFuel()</h3>
+<span id=unit-getfuel></span><h3 id='unit-getfuel-'>UNIT:GetFuel()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -284,7 +284,7 @@ self</li>
 <li><u>Number</u> The : relative amount of fuel (from 0.0 to 1.0).</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getunits'>UNIT:GetUnits()</h3>
+<span id=unit-getunits></span><h3 id='unit-getunits-'>UNIT:GetUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -297,7 +297,7 @@ self</li>
 <ul>
 <li>#list<Wrapper.Unit#UNIT> The : UNITs wrappers.</li>
 </ul>
-<h3 id='unit-getlife-2'>UNIT:GetLife()</h3>
+<span id=unit-getlife></span><h3 id='unit-getlife-'>UNIT:GetLife()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -311,7 +311,7 @@ self</li>
 <li><u>Number</u> The : Unit&#39;s health value.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getlife0-2'>UNIT:GetLife0()</h3>
+<span id=unit-getlife0></span><h3 id='unit-getlife0-'>UNIT:GetLife0()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -325,7 +325,7 @@ self</li>
 <li><u>Number</u> The : Unit&#39;s initial health value.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-getcategoryname'>UNIT:GetCategoryName()</h3>
+<span id=unit-getcategoryname></span><h3 id='unit-getcategoryname-'>UNIT:GetCategoryName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -338,7 +338,7 @@ self</li>
 <ul>
 <li><u>String</u> Category : name = Helicopter, Airplane, Ground Unit, Ship</li>
 </ul>
-<h3 id='unit-getthreatlevel'>UNIT:GetThreatLevel()</h3>
+<span id=unit-getthreatlevel></span><h3 id='unit-getthreatlevel-'>UNIT:GetThreatLevel()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -347,7 +347,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-isinzone-zone'>UNIT:IsInZone(Zone)</h3>
+<span id=unit-isinzone-zone></span><h3 id='unit-isinzone-zone-'>UNIT:IsInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -361,7 +361,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Returns : true if the unit is within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
-<h3 id='unit-isnotinzone-zone'>UNIT:IsNotInZone(Zone)</h3>
+<span id=unit-isnotinzone-zone></span><h3 id='unit-isnotinzone-zone-'>UNIT:IsNotInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -375,7 +375,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Returns : true if the unit is not within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
-<h3 id='unit-otherunitinradius-awaitunit-the'>UNIT:OtherUnitInRadius(AwaitUnit, The)</h3>
+<span id=unit-otherunitinradius-awaitunit-the></span><h3 id='unit-otherunitinradius-awaitunit-the-'>UNIT:OtherUnitInRadius(AwaitUnit, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -392,7 +392,7 @@ AwaitUnit : The other UNIT wrapper object.</li>
 <li>true If : the other DCS Unit is within the radius of the 2D point of the DCS Unit.</li>
 <li><u>Nil</u> The : DCS Unit is not existing or alive.</li>
 </ul>
-<h3 id='unit-flare-flarecolor'>UNIT:Flare(FlareColor)</h3>
+<span id=unit-flare-flarecolor></span><h3 id='unit-flare-flarecolor-'>UNIT:Flare(FlareColor)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -402,7 +402,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-flarewhite'>UNIT:FlareWhite()</h3>
+<span id=unit-flarewhite></span><h3 id='unit-flarewhite-'>UNIT:FlareWhite()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -411,7 +411,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-flareyellow'>UNIT:FlareYellow()</h3>
+<span id=unit-flareyellow></span><h3 id='unit-flareyellow-'>UNIT:FlareYellow()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -420,7 +420,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-flaregreen'>UNIT:FlareGreen()</h3>
+<span id=unit-flaregreen></span><h3 id='unit-flaregreen-'>UNIT:FlareGreen()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -429,7 +429,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-flarered'>UNIT:FlareRed()</h3>
+<span id=unit-flarered></span><h3 id='unit-flarered-'>UNIT:FlareRed()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -438,7 +438,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smoke'>UNIT:Smoke()</h3>
+<span id=unit-smoke></span><h3 id='unit-smoke-'>UNIT:Smoke()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -447,7 +447,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smokegreen'>UNIT:SmokeGreen()</h3>
+<span id=unit-smokegreen></span><h3 id='unit-smokegreen-'>UNIT:SmokeGreen()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -456,7 +456,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smokered'>UNIT:SmokeRed()</h3>
+<span id=unit-smokered></span><h3 id='unit-smokered-'>UNIT:SmokeRed()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -465,7 +465,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smokewhite'>UNIT:SmokeWhite()</h3>
+<span id=unit-smokewhite></span><h3 id='unit-smokewhite-'>UNIT:SmokeWhite()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -474,7 +474,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smokeorange'>UNIT:SmokeOrange()</h3>
+<span id=unit-smokeorange></span><h3 id='unit-smokeorange-'>UNIT:SmokeOrange()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -483,7 +483,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-smokeblue'>UNIT:SmokeBlue()</h3>
+<span id=unit-smokeblue></span><h3 id='unit-smokeblue-'>UNIT:SmokeBlue()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -492,7 +492,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='unit-isair'>UNIT:IsAir()</h3>
+<span id=unit-isair></span><h3 id='unit-isair-'>UNIT:IsAir()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -505,7 +505,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Air : category evaluation result.</li>
 </ul>
-<h3 id='unit-isground'>UNIT:IsGround()</h3>
+<span id=unit-isground></span><h3 id='unit-isground-'>UNIT:IsGround()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -518,7 +518,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Ground : category evaluation result.</li>
 </ul>
-<h3 id='unit-isfriendly'>UNIT:IsFriendly()</h3>
+<span id=unit-isfriendly></span><h3 id='unit-isfriendly-'>UNIT:IsFriendly()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -531,7 +531,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> IsFriendly : evaluation result.</li>
 </ul>
-<h3 id='unit-isship'>UNIT:IsShip()</h3>
+<span id=unit-isship></span><h3 id='unit-isship-'>UNIT:IsShip()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -544,7 +544,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Ship : category evaluation result.</li>
 </ul>
-<h3 id='unit-inair'>UNIT:InAir()</h3>
+<span id=unit-inair></span><h3 id='unit-inair-'>UNIT:InAir()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -557,7 +557,7 @@ self</li>
 <li><u>Boolean</u> true : if in the air.</li>
 <li><u>Nil</u> The : UNIT is not existing or alive.</li>
 </ul>
-<h3 id='unit-handleevent-event-eventfunction'>UNIT:HandleEvent(Event, EventFunction)</h3>
+<span id=unit-handleevent-event-eventfunction></span><h3 id='unit-handleevent-event-eventfunction-'>UNIT:HandleEvent(Event, EventFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -573,7 +573,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h3 id='unit-unhandleevent-event'>UNIT:UnHandleEvent(Event)</h3>
+<span id=unit-unhandleevent-event></span><h3 id='unit-unhandleevent-event-'>UNIT:UnHandleEvent(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -588,7 +588,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h3 id='unit-resetevents'>UNIT:ResetEvents()</h3>
+<span id=unit-resetevents></span><h3 id='unit-resetevents-'>UNIT:ResetEvents()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -602,7 +602,7 @@ self</li>
 <li><a href="#unit-class">UNIT</a>
 self</li>
 </ul>
-<h2 id='unit-sensortype-class-2'>Unit.SensorType Class</h2>
+<span id=unit-sensortype-class></span><h2 id='unit-sensortype-class-'>Unit.SensorType Class</h2>
 <pre>
 The Unit.SensorType class does not inherit
 </pre>

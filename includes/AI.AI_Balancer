@@ -1,10 +1,10 @@
-<h1 id='ai-ai_balancer-module'>AI.AI_Balancer Module</h1>
+<span id=ai-ai_balancer-module></span><h1 id='ai-ai_balancer-module-'>AI.AI_Balancer Module</h1>
 <p>Single-Player:<strong>No</strong> / Multi-Player:<strong>Yes</strong> / AI:<strong>Yes</strong> / Human:<strong>No</strong> / Types:<strong>All</strong> -- <strong>AI Balancing will replace in multi player missions
 non-occupied human slots with AI groups, in order to provide an engaging simulation environment,
 even when there are hardly any players in the mission.</strong></p>
 
 <p><img src="/includes/Pictures/AI_Balancer/Dia1.JPG" alt="Banner Image" /></p>
-<h5 id='demo-missions'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-aib-20-20ai-20balancing-ai_balancer-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/AIB%20-%20AI%20Balancing">AI_BALANCER Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-aib-20-20ai-20balancing-ai_balancer-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/AIB%20-%20AI%20Balancing">AI_BALANCER Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul2cjvirl1tdaumuvs8n64b7-ai_balancer-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl2CJVIrL1TdAumuVS8n64B7">AI_BALANCER YouTube Channel</a></h5><h5 id='strong-api-change-history-strong'><strong>API CHANGE HISTORY</strong></h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-aib-20-20ai-20balancing-ai_balancer-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-aib-20-20ai-20balancing-ai_balancer-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/AIB%20-%20AI%20Balancing">AI_BALANCER Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-aib-20-20ai-20balancing-ai_balancer-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-aib-20-20ai-20balancing-ai_balancer-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/AIB%20-%20AI%20Balancing">AI_BALANCER Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul2cjvirl1tdaumuvs8n64b7-ai_balancer-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul2cjvirl1tdaumuvs8n64b7-ai_balancer-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl2CJVIrL1TdAumuVS8n64B7">AI_BALANCER YouTube Channel</a></h5><span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -17,16 +17,16 @@ even when there are hardly any players in the mission.</strong></p>
 <p>2017-01-17: There is still a problem with AI being destroyed, but not respawned. Need to check further upon that.</p>
 
 <p>2017-01-08: AI_BALANCER:<strong>InitSpawnInterval( Earliest, Latest )</strong> added.</p>
-<h5 id='strong-authors-and-contributions-strong'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions'>Contributions:</h5>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=112075">Dutch_Baron</a></strong>: Working together with James has resulted in the creation of the AI_BALANCER class. James has shared his ideas on balancing AI with air units, and together we made a first design which you can use now :-)</li>
 <li><strong>SNAFU</strong>: Had a couple of mails with the guys to validate, if the same concept in the GCI/CAP script could be reworked within MOOSE. None of the script code has been used however within the new AI_BALANCER moose class.</li>
 </ul>
-<h5 id='authors'>Authors:</h5>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
 <li>FlightControl: Framework Design &amp;  Programming and Documentation.</li>
 </ul>
-<h2 id='ai_balancer-class'>AI_BALANCER Class</h2>
+<span id=ai_balancer-class></span><h2 id='ai_balancer-class-'>AI_BALANCER Class</h2>
 <pre>
 Inheritance : The AI_BALANCER Class inherits from the following parents :
 BASE
@@ -48,11 +48,11 @@ An explanation about state and event transition methods can be found in the <a h
 <ul>
 <li>AI_BALANCER-OnAfterSpawned AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.</li>
 </ul>
-<h5 id='1-ai_balancer-construction'>1. AI_BALANCER construction</h5>
+<span id=1-ai_balancer-construction></span><h5 id='1-ai_balancer-construction-'>1. AI_BALANCER construction</h5>
 <p>Create a new AI_BALANCER object with the <a href="#ai_balancer-new-setclient-spawnai">AI_BALANCER:New()</a> method:</p>
-<h5 id='2-ai_balancer-is-a-fsm'>2. AI_BALANCER is a FSM</h5>
+<span id=2-ai_balancer-is-a-fsm></span><h5 id='2-ai_balancer-is-a-fsm-'>2. AI_BALANCER is a FSM</h5>
 <p><img src="/includes/Pictures/AI_Balancer/Dia13.JPG" alt="Process" /></p>
-<h5 id='2-1-ai_balancer-states'>2.1. AI_BALANCER States</h5>
+<span id=2-1-ai_balancer-states></span><h5 id='2-1-ai_balancer-states-'>2.1. AI_BALANCER States</h5>
 <ul>
 <li><strong>Monitoring</strong> ( Set ): Monitoring the Set if all AI is spawned for the Clients.</li>
 <li><strong>Spawning</strong> ( Set, ClientName ): There is a new AI group spawned with ClientName as the name of reference.</li>
@@ -60,7 +60,7 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Destroying</strong> ( Set, AIGroup ): The AI is being destroyed.</li>
 <li><strong>Returning</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods. Handle this state to customize the return behaviour of the AI, if any.</li>
 </ul>
-<h5 id='2-2-ai_balancer-events'>2.2. AI_BALANCER Events</h5>
+<span id=2-2-ai_balancer-events></span><h5 id='2-2-ai_balancer-events-'>2.2. AI_BALANCER Events</h5>
 <ul>
 <li><strong>Monitor</strong> ( Set ): Every 10 seconds, the Monitor event is triggered to monitor the Set.</li>
 <li><strong>Spawn</strong> ( Set, ClientName ): Triggers when there is a new AI group to be spawned with ClientName as the name of reference.</li>
@@ -68,9 +68,9 @@ An explanation about state and event transition methods can be found in the <a h
 <li><strong>Destroy</strong> ( Set, AIGroup ): The AI is being destroyed.</li>
 <li><strong>Return</strong> ( Set, AIGroup ): The AI is returning to the airbase specified by the ReturnToAirbase methods.</li>
 </ul>
-<h5 id='3-ai_balancer-spawn-interval-for-replacement-ai'>3. AI_BALANCER spawn interval for replacement AI</h5>
+<span id=3-ai_balancer-spawn-interval-for-replacement-ai></span><h5 id='3-ai_balancer-spawn-interval-for-replacement-ai-'>3. AI_BALANCER spawn interval for replacement AI</h5>
 <p>Use the method <a href="#ai_balancer-initspawninterval-earliest-latest">AI_BALANCER:InitSpawnInterval()</a> to set the earliest and latest interval in seconds that is waited until a new replacement AI is spawned.</p>
-<h5 id='4-ai_balancer-returns-ai-to-airbases'>4. AI_BALANCER returns AI to Airbases</h5>
+<span id=4-ai_balancer-returns-ai-to-airbases></span><h5 id='4-ai_balancer-returns-ai-to-airbases-'>4. AI_BALANCER returns AI to Airbases</h5>
 <p>By default, When a human player joins a slot that is AI_BALANCED, the AI group will be destroyed by default.
 However, there are 2 additional options that you can use to customize the destroy behaviour.
 When a human player joins a slot, you can configure to let the AI return to:</p>
@@ -90,7 +90,7 @@ otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the
 <li><a href="#spawn-class">SPAWN</a> SpawnAI</li>
 <li><a href="#group-class">GROUP</a> Test</li>
 </ul>
-<h3 id='ai_balancer-new-setclient-spawnai'>AI_BALANCER:New(SetClient, SpawnAI)</h3>
+<span id=ai_balancer-new-setclient-spawnai></span><h3 id='ai_balancer-new-setclient-spawnai-'>AI_BALANCER:New(SetClient, SpawnAI)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -106,7 +106,7 @@ self</li>
 <li><a href="#ai_balancer-class">AI_BALANCER</a>
 self</li>
 </ul>
-<h3 id='ai_balancer-initspawninterval-earliest-latest'>AI_BALANCER:InitSpawnInterval(Earliest, Latest)</h3>
+<span id=ai_balancer-initspawninterval-earliest-latest></span><h3 id='ai_balancer-initspawninterval-earliest-latest-'>AI_BALANCER:InitSpawnInterval(Earliest, Latest)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -121,7 +121,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-<h3 id='ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset'>AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)</h3>
+<span id=ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset></span><h3 id='ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset-'>AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -132,7 +132,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_balancer-returntohomeairbase-returntresholdrange'>AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)</h3>
+<span id=ai_balancer-returntohomeairbase-returntresholdrange></span><h3 id='ai_balancer-returntohomeairbase-returntresholdrange-'>AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -142,7 +142,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_balancer-onenterspawning-setgroup-clientname-aigroup'>AI_BALANCER:onenterSpawning(SetGroup, ClientName, AIGroup)</h3>
+<span id=ai_balancer-onenterspawning-setgroup-clientname-aigroup></span><h3 id='ai_balancer-onenterspawning-setgroup-clientname-aigroup-'>AI_BALANCER:onenterSpawning(SetGroup, ClientName, AIGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -154,7 +154,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_balancer-onenterdestroying-setgroup-aigroup'>AI_BALANCER:onenterDestroying(SetGroup, AIGroup)</h3>
+<span id=ai_balancer-onenterdestroying-setgroup-aigroup></span><h3 id='ai_balancer-onenterdestroying-setgroup-aigroup-'>AI_BALANCER:onenterDestroying(SetGroup, AIGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -165,7 +165,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_balancer-onenterreturning-setgroup-aigroup'>AI_BALANCER:onenterReturning(SetGroup, AIGroup)</h3>
+<span id=ai_balancer-onenterreturning-setgroup-aigroup></span><h3 id='ai_balancer-onenterreturning-setgroup-aigroup-'>AI_BALANCER:onenterReturning(SetGroup, AIGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -176,7 +176,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_balancer-onentermonitoring'>AI_BALANCER:onenterMonitoring()</h3>
+<span id=ai_balancer-onentermonitoring></span><h3 id='ai_balancer-onentermonitoring-'>AI_BALANCER:onenterMonitoring()</h3>
 <h4> Parameters </h4>
 
 <ul>

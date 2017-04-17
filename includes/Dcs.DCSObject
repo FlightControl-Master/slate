@@ -1,4 +1,4 @@
-<h1 id='dcs-dcsobject-module'>Dcs.DCSObject Module</h1><h2 id='object-class'>Object Class</h2>
+<span id=dcs-dcsobject-module></span><h1 id='dcs-dcsobject-module-'>Dcs.DCSObject Module</h1><span id=object-class></span><h2 id='object-class-'>Object Class</h2>
 <pre>
 Inheritance : The Object Class inherits from the following parents :
 ERROR !
@@ -11,7 +11,7 @@ ERROR !
 <li>#Object.Category Category</li>
 <li>#Object.Desc Desc</li>
 </ul>
-<h3 id='object-isexist'>Object:isExist()</h3>
+<span id=object-isexist></span><h3 id='object-isexist-'>Object:isExist()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -23,7 +23,7 @@ ERROR !
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='object-destroy'>Object:destroy()</h3>
+<span id=object-destroy></span><h3 id='object-destroy-'>Object:destroy()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -31,7 +31,7 @@ ERROR !
 </ul>
 
 <h4> Returns </h4>
-<h3 id='object-getcategory'>Object:getCategory()</h3>
+<span id=object-getcategory></span><h3 id='object-getcategory-'>Object:getCategory()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -43,7 +43,7 @@ ERROR !
 <ul>
 <li>#Object.Category self</li>
 </ul>
-<h3 id='object-gettypename'>Object:getTypeName()</h3>
+<span id=object-gettypename></span><h3 id='object-gettypename-'>Object:getTypeName()</h3>
 <p>Returns type name of the Object.</p>
 
 <h4> Parameters </h4>
@@ -57,7 +57,7 @@ ERROR !
 <ul>
 <li><u>String</u> self</li>
 </ul>
-<h3 id='object-getdesc'>Object:getDesc()</h3>
+<span id=object-getdesc></span><h3 id='object-getdesc-'>Object:getDesc()</h3>
 <p>Returns object descriptor.</p>
 
 <h4> Parameters </h4>
@@ -71,7 +71,7 @@ ERROR !
 <ul>
 <li>#Object.Desc self</li>
 </ul>
-<h3 id='object-hasattribute-attributename'>Object:hasAttribute(attributeName)</h3>
+<span id=object-hasattribute-attributename></span><h3 id='object-hasattribute-attributename-'>Object:hasAttribute(attributeName)</h3>
 <p>Returns true if the object belongs to the category.</p>
 
 <h4> Parameters </h4>
@@ -86,7 +86,7 @@ ERROR !
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='object-getname'>Object:getName()</h3>
+<span id=object-getname></span><h3 id='object-getname-'>Object:getName()</h3>
 <p>Returns name of the object. This is the name that is assigned to the object in the Mission Editor.</p>
 
 <h4> Parameters </h4>
@@ -100,7 +100,7 @@ ERROR !
 <ul>
 <li><u>String</u> self</li>
 </ul>
-<h3 id='object-getpoint'>Object:getPoint()</h3>
+<span id=object-getpoint></span><h3 id='object-getpoint-'>Object:getPoint()</h3>
 <p>Returns object coordinates for current time.</p>
 
 <h4> Parameters </h4>
@@ -114,7 +114,7 @@ ERROR !
 <ul>
 <li>#Vec3 self</li>
 </ul>
-<h3 id='object-getposition'>Object:getPosition()</h3>
+<span id=object-getposition></span><h3 id='object-getposition-'>Object:getPosition()</h3>
 <p>Returns object position for current time.</p>
 
 <h4> Parameters </h4>
@@ -128,7 +128,7 @@ ERROR !
 <ul>
 <li>#Position3 self</li>
 </ul>
-<h3 id='object-getvelocity'>Object:getVelocity()</h3>
+<span id=object-getvelocity></span><h3 id='object-getvelocity-'>Object:getVelocity()</h3>
 <p>Returns the unit&#39;s velocity vector.</p>
 
 <h4> Parameters </h4>
@@ -142,7 +142,7 @@ ERROR !
 <ul>
 <li>#Vec3 self</li>
 </ul>
-<h3 id='object-inair'>Object:inAir()</h3>
+<span id=object-inair></span><h3 id='object-inair-'>Object:inAir()</h3>
 <p>Returns true if the unit is in air.</p>
 
 <h4> Parameters </h4>
@@ -156,7 +156,7 @@ ERROR !
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h2 id='object-category-class'>Object.Category Class</h2>
+<span id=object-category-class></span><h2 id='object-category-class-'>Object.Category Class</h2>
 <pre>
 The Object.Category class does not inherit
 </pre>
@@ -170,7 +170,7 @@ The Object.Category class does not inherit
 <li>SCENERY self</li>
 <li>BASE self</li>
 </ul>
-<h2 id='object-desc-class'>Object.Desc Class</h2>
+<span id=object-desc-class></span><h2 id='object-desc-class-'>Object.Desc Class</h2>
 <pre>
 Inheritance : The Object.Desc Class inherits from the following parents :
 Desc

@@ -1,8 +1,8 @@
-<h1 id='dcs-dcstimer-module'>Dcs.DCStimer Module</h1><h2 id='timer-class'>timer Class</h2>
+<span id=dcs-dcstimer-module></span><h1 id='dcs-dcstimer-module-'>Dcs.DCStimer Module</h1><span id=timer-class></span><h2 id='timer-class-'>timer Class</h2>
 <pre>
 The timer class does not inherit
 </pre>
-<h3 id='timer-gettime'>timer.getTime(()</h3>
+<span id=timer-gettime></span><h3 id='timer-gettime-'>timer.getTime(()</h3>
 <p>Returns model time in seconds.</p>
 
 <h4> Parameters </h4>
@@ -12,7 +12,7 @@ The timer class does not inherit
 <ul>
 <li>#Time self</li>
 </ul>
-<h3 id='timer-getabstime'>timer.getAbsTime(()</h3>
+<span id=timer-getabstime></span><h3 id='timer-getabstime-'>timer.getAbsTime(()</h3>
 <p>Returns mission time in seconds.</p>
 
 <h4> Parameters </h4>
@@ -22,7 +22,7 @@ The timer class does not inherit
 <ul>
 <li>#Time self</li>
 </ul>
-<h3 id='timer-gettime0'>timer.getTime0(()</h3>
+<span id=timer-gettime0></span><h3 id='timer-gettime0-'>timer.getTime0(()</h3>
 <p>Returns mission start time in seconds.</p>
 
 <h4> Parameters </h4>
@@ -32,7 +32,7 @@ The timer class does not inherit
 <ul>
 <li>#Time self</li>
 </ul>
-<h3 id='schedulefunction-function-time'>scheduleFunction(Function, time)</h3>
+<span id=schedulefunction-function-time></span><h3 id='schedulefunction-function-time-'>scheduleFunction(Function, time)</h3>
 <p>Schedules function to call at desired model time.
 Time function FunctionToCall(any argument, Time time)</p>
 
@@ -57,7 +57,7 @@ Time function FunctionToCall(any argument, Time time)</p>
 <ul>
 <li>functionId self</li>
 </ul>
-<h3 id='setfunctiontime-time'>setFunctionTime(time)</h3>
+<span id=setfunctiontime-time></span><h3 id='setfunctiontime-time-'>setFunctionTime(time)</h3>
 <p>Re-schedules function to call at another model time.</p>
 
 <h4> Parameters </h4>
@@ -68,7 +68,7 @@ Time function FunctionToCall(any argument, Time time)</p>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='removefunction'>removeFunction()</h3>
+<span id=removefunction></span><h3 id='removefunction-'>removeFunction()</h3>
 <p>Removes the function from schedule.</p>
 
 <h4> Parameters </h4>

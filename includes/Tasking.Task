@@ -1,6 +1,6 @@
-<h1 id='tasking-task-module'>Tasking.Task Module</h1>
+<span id=tasking-task-module></span><h1 id='tasking-task-module-'>Tasking.Task Module</h1>
 <p><strong>Tasking</strong> -- This module contains the TASK class.</p>
-<h5 id='authors-flightcontrol-design-and-programming'>Authors: FlightControl - Design and Programming</h5><h2 id='task-class-2'>TASK Class</h2>
+<span id=authors-flightcontrol-design-and-programming></span><h5 id='authors-flightcontrol-design-and-programming-'>Authors: FlightControl - Design and Programming</h5><span id=task-class></span><h2 id='task-class-'>TASK Class</h2>
 <pre>
 Inheritance : The TASK Class inherits from the following parents :
 BASE
@@ -19,7 +19,7 @@ BASE
 <li><a href="#mission-class">MISSION</a> Mission</li>
 <li><a href="#commandcenter-class">COMMANDCENTER</a> CommandCenter</li>
 </ul>
-<h3 id='task-onafterplayeraborted-playerunit-playername'>TASK:OnAfterPlayerAborted(PlayerUnit, PlayerName)</h3>
+<span id=task-onafterplayeraborted-playerunit-playername></span><h3 id='task-onafterplayeraborted-playerunit-playername-'>TASK:OnAfterPlayerAborted(PlayerUnit, PlayerName)</h3>
 <p>FSM PlayerAborted event handler prototype for TASK.</p>
 
 <h4> Parameters </h4>
@@ -32,7 +32,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onafterplayercrashed-playerunit-playername'>TASK:OnAfterPlayerCrashed(PlayerUnit, PlayerName)</h3>
+<span id=task-onafterplayercrashed-playerunit-playername></span><h3 id='task-onafterplayercrashed-playerunit-playername-'>TASK:OnAfterPlayerCrashed(PlayerUnit, PlayerName)</h3>
 <p>FSM PlayerCrashed event handler prototype for TASK.</p>
 
 <h4> Parameters </h4>
@@ -45,7 +45,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onafterplayerdead-playerunit-playername'>TASK:OnAfterPlayerDead(PlayerUnit, PlayerName)</h3>
+<span id=task-onafterplayerdead-playerunit-playername></span><h3 id='task-onafterplayerdead-playerunit-playername-'>TASK:OnAfterPlayerDead(PlayerUnit, PlayerName)</h3>
 <p>FSM PlayerDead event handler prototype for TASK.</p>
 
 <h4> Parameters </h4>
@@ -58,7 +58,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-fail'>TASK:Fail()</h3>
+<span id=task-fail></span><h3 id='task-fail-'>TASK:Fail()</h3>
 <p>FSM Fail synchronous event function for TASK.
 Use this event to Fail the Task.</p>
 
@@ -70,7 +70,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-abort'>TASK:Abort()</h3>
+<span id=task-abort></span><h3 id='task-abort-'>TASK:Abort()</h3>
 <p>FSM Abort synchronous event function for TASK.
 Use this event to Abort the Task.</p>
 
@@ -82,7 +82,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-success'>TASK:Success()</h3>
+<span id=task-success></span><h3 id='task-success-'>TASK:Success()</h3>
 <p>FSM Success synchronous event function for TASK.
 Use this event to make the Task a Success.</p>
 
@@ -94,7 +94,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-cancel'>TASK:Cancel()</h3>
+<span id=task-cancel></span><h3 id='task-cancel-'>TASK:Cancel()</h3>
 <p>FSM Cancel synchronous event function for TASK.
 Use this event to Cancel the Task.</p>
 
@@ -106,7 +106,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-replan'>TASK:Replan()</h3>
+<span id=task-replan></span><h3 id='task-replan-'>TASK:Replan()</h3>
 <p>FSM Replan synchronous event function for TASK.
 Use this event to Replan the Task.</p>
 
@@ -118,7 +118,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-new-mission-setgroupassign-taskname-tasktype'>TASK:New(Mission, SetGroupAssign, TaskName, TaskType)</h3>
+<span id=task-new-mission-setgroupassign-taskname-tasktype></span><h3 id='task-new-mission-setgroupassign-taskname-tasktype-'>TASK:New(Mission, SetGroupAssign, TaskName, TaskType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -136,7 +136,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-getunitprocess'>TASK:GetUnitProcess()</h3>
+<span id=task-getunitprocess></span><h3 id='task-getunitprocess-'>TASK:GetUnitProcess()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -149,7 +149,7 @@ self</li>
 <ul>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
 </ul>
-<h3 id='task-setunitprocess-self'>TASK:SetUnitProcess(self)</h3>
+<span id=task-setunitprocess-self></span><h3 id='task-setunitprocess-self-'>TASK:SetUnitProcess(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -159,7 +159,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-joinunit-playerunit-playergroup'>TASK:JoinUnit(PlayerUnit, PlayerGroup)</h3>
+<span id=task-joinunit-playerunit-playergroup></span><h3 id='task-joinunit-playerunit-playergroup-'>TASK:JoinUnit(PlayerUnit, PlayerGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -174,7 +174,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
-<h3 id='task-abortunit-playerunit'>TASK:AbortUnit(PlayerUnit)</h3>
+<span id=task-abortunit-playerunit></span><h3 id='task-abortunit-playerunit-'>TASK:AbortUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -188,7 +188,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
-<h3 id='task-crashunit-playerunit'>TASK:CrashUnit(PlayerUnit)</h3>
+<span id=task-crashunit-playerunit></span><h3 id='task-crashunit-playerunit-'>TASK:CrashUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -202,7 +202,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if Unit is part of the Task.</li>
 </ul>
-<h3 id='task-getmission'>TASK:GetMission()</h3>
+<span id=task-getmission></span><h3 id='task-getmission-'>TASK:GetMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -215,7 +215,7 @@ self</li>
 <ul>
 <li><a href="#mission-class">MISSION</a> self</li>
 </ul>
-<h3 id='task-getgroups'>TASK:GetGroups()</h3>
+<span id=task-getgroups></span><h3 id='task-getgroups-'>TASK:GetGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -228,7 +228,7 @@ self</li>
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a> self</li>
 </ul>
-<h3 id='task-assigntogroup-taskgroup'>TASK:AssignToGroup(TaskGroup)</h3>
+<span id=task-assigntogroup-taskgroup></span><h3 id='task-assigntogroup-taskgroup-'>TASK:AssignToGroup(TaskGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -243,7 +243,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-hasgroup-findgroup'>TASK:HasGroup(FindGroup)</h3>
+<span id=task-hasgroup-findgroup></span><h3 id='task-hasgroup-findgroup-'>TASK:HasGroup(FindGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -257,7 +257,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='task-assigntounit-taskunit'>TASK:AssignToUnit(TaskUnit)</h3>
+<span id=task-assigntounit-taskunit></span><h3 id='task-assigntounit-taskunit-'>TASK:AssignToUnit(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -272,7 +272,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-unassignfromunit-taskunit'>TASK:UnAssignFromUnit(TaskUnit)</h3>
+<span id=task-unassignfromunit-taskunit></span><h3 id='task-unassignfromunit-taskunit-'>TASK:UnAssignFromUnit(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -287,7 +287,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-settimeout-timer'>TASK:SetTimeOut (Timer)</h3>
+<span id=task-settimeout-timer></span><h3 id='task-settimeout-timer-'>TASK:SetTimeOut (Timer)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -302,7 +302,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-messagetogroups'>TASK:MessageToGroups()</h3>
+<span id=task-messagetogroups></span><h3 id='task-messagetogroups-'>TASK:MessageToGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -311,7 +311,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-sendbriefingtoassignedgroups'>TASK:SendBriefingToAssignedGroups()</h3>
+<span id=task-sendbriefingtoassignedgroups></span><h3 id='task-sendbriefingtoassignedgroups-'>TASK:SendBriefingToAssignedGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -320,7 +320,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-unassignfromgroups'>TASK:UnAssignFromGroups()</h3>
+<span id=task-unassignfromgroups></span><h3 id='task-unassignfromgroups-'>TASK:UnAssignFromGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -329,7 +329,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-unassignfromgroup'>TASK:UnAssignFromGroup()</h3>
+<span id=task-unassignfromgroup></span><h3 id='task-unassignfromgroup-'>TASK:UnAssignFromGroup()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -338,7 +338,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isassignedtogroup-taskgroup'>TASK:IsAssignedToGroup(TaskGroup)</h3>
+<span id=task-isassignedtogroup-taskgroup></span><h3 id='task-isassignedtogroup-taskgroup-'>TASK:IsAssignedToGroup(TaskGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -352,7 +352,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='task-hasaliveunits'>TASK:HasAliveUnits()</h3>
+<span id=task-hasaliveunits></span><h3 id='task-hasaliveunits-'>TASK:HasAliveUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -365,7 +365,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='task-setmenu-menutime'>TASK:SetMenu(MenuTime)</h3>
+<span id=task-setmenu-menutime></span><h3 id='task-setmenu-menutime-'>TASK:SetMenu(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -380,7 +380,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-setmenuforgroup-menutime'>TASK:SetMenuForGroup(MenuTime)</h3>
+<span id=task-setmenuforgroup-menutime></span><h3 id='task-setmenuforgroup-menutime-'>TASK:SetMenuForGroup(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -395,7 +395,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-setplannedmenuforgroup-taskgroup-menutext-menutime'>TASK:SetPlannedMenuForGroup(TaskGroup, MenuText, MenuTime)</h3>
+<span id=task-setplannedmenuforgroup-taskgroup-menutext-menutime></span><h3 id='task-setplannedmenuforgroup-taskgroup-menutext-menutime-'>TASK:SetPlannedMenuForGroup(TaskGroup, MenuText, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -412,7 +412,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-setassignedmenuforgroup-taskgroup-menutime'>TASK:SetAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
+<span id=task-setassignedmenuforgroup-taskgroup-menutime></span><h3 id='task-setassignedmenuforgroup-taskgroup-menutime-'>TASK:SetAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -428,7 +428,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-removemenu-menutime'>TASK:RemoveMenu(MenuTime)</h3>
+<span id=task-removemenu-menutime></span><h3 id='task-removemenu-menutime-'>TASK:RemoveMenu(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -443,7 +443,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-removeplannedmenuforgroup-taskgroup-menutime'>TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)</h3>
+<span id=task-removeplannedmenuforgroup-taskgroup-menutime></span><h3 id='task-removeplannedmenuforgroup-taskgroup-menutime-'>TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -459,7 +459,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-removeassignedmenuforgroup-taskgroup-menutime'>TASK:RemoveAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
+<span id=task-removeassignedmenuforgroup-taskgroup-menutime></span><h3 id='task-removeassignedmenuforgroup-taskgroup-menutime-'>TASK:RemoveAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -475,7 +475,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-menutaskstatus'>TASK:MenuTaskStatus()</h3>
+<span id=task-menutaskstatus></span><h3 id='task-menutaskstatus-'>TASK:MenuTaskStatus()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -484,7 +484,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-menutaskabort'>TASK:MenuTaskAbort()</h3>
+<span id=task-menutaskabort></span><h3 id='task-menutaskabort-'>TASK:MenuTaskAbort()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -493,7 +493,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-gettaskname'>TASK:GetTaskName()</h3>
+<span id=task-gettaskname></span><h3 id='task-gettaskname-'>TASK:GetTaskName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -506,7 +506,7 @@ self</li>
 <ul>
 <li><u>String</u> TaskName</li>
 </ul>
-<h3 id='task-getprocesstemplate-processname'>TASK:GetProcessTemplate(ProcessName)</h3>
+<span id=task-getprocesstemplate-processname></span><h3 id='task-getprocesstemplate-processname-'>TASK:GetProcessTemplate(ProcessName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -520,7 +520,7 @@ self</li>
 <ul>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
 </ul>
-<h3 id='task-failprocesses-taskunitname'>TASK:FailProcesses(TaskUnitName)</h3>
+<span id=task-failprocesses-taskunitname></span><h3 id='task-failprocesses-taskunitname-'>TASK:FailProcesses(TaskUnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -535,7 +535,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-setstatemachine-taskunit-fsm'>TASK:SetStateMachine(TaskUnit, Fsm)</h3>
+<span id=task-setstatemachine-taskunit-fsm></span><h3 id='task-setstatemachine-taskunit-fsm-'>TASK:SetStateMachine(TaskUnit, Fsm)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -551,7 +551,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-getstatemachine-taskunit'>TASK:GetStateMachine(TaskUnit)</h3>
+<span id=task-getstatemachine-taskunit></span><h3 id='task-getstatemachine-taskunit-'>TASK:GetStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -565,7 +565,7 @@ self</li>
 <ul>
 <li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
 </ul>
-<h3 id='task-removestatemachine-taskunit'>TASK:RemoveStateMachine(TaskUnit)</h3>
+<span id=task-removestatemachine-taskunit></span><h3 id='task-removestatemachine-taskunit-'>TASK:RemoveStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -580,7 +580,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-hasstatemachine-taskunit'>TASK:HasStateMachine(TaskUnit)</h3>
+<span id=task-hasstatemachine-taskunit></span><h3 id='task-hasstatemachine-taskunit-'>TASK:HasStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -595,7 +595,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-getscoring'>TASK:GetScoring()</h3>
+<span id=task-getscoring></span><h3 id='task-getscoring-'>TASK:GetScoring()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -608,7 +608,7 @@ self</li>
 <ul>
 <li><a href="#scoring-class">SCORING</a> Scoring</li>
 </ul>
-<h3 id='task-gettaskindex'>TASK:GetTaskIndex()</h3>
+<span id=task-gettaskindex></span><h3 id='task-gettaskindex-'>TASK:GetTaskIndex()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -621,7 +621,7 @@ self</li>
 <ul>
 <li><u>String</u> The : Task ID</li>
 </ul>
-<h3 id='task-setname-taskname'>TASK:SetName(TaskName)</h3>
+<span id=task-setname-taskname></span><h3 id='task-setname-taskname-'>TASK:SetName(TaskName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -631,7 +631,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-getname'>TASK:GetName()</h3>
+<span id=task-getname></span><h3 id='task-getname-'>TASK:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -644,7 +644,7 @@ self</li>
 <ul>
 <li><u>String</u> The : Task Name</li>
 </ul>
-<h3 id='task-settype-tasktype'>TASK:SetType(TaskType)</h3>
+<span id=task-settype-tasktype></span><h3 id='task-settype-tasktype-'>TASK:SetType(TaskType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -654,7 +654,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-gettype'>TASK:GetType()</h3>
+<span id=task-gettype></span><h3 id='task-gettype-'>TASK:GetType()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -667,7 +667,7 @@ self</li>
 <ul>
 <li><u>String</u> TaskType</li>
 </ul>
-<h3 id='task-setid-taskid'>TASK:SetID(TaskID)</h3>
+<span id=task-setid-taskid></span><h3 id='task-setid-taskid-'>TASK:SetID(TaskID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -677,7 +677,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-getid'>TASK:GetID()</h3>
+<span id=task-getid></span><h3 id='task-getid-'>TASK:GetID()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -690,7 +690,7 @@ self</li>
 <ul>
 <li><u>String</u> TaskID</li>
 </ul>
-<h3 id='task-statesuccess'>TASK:StateSuccess()</h3>
+<span id=task-statesuccess></span><h3 id='task-statesuccess-'>TASK:StateSuccess()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -699,7 +699,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstatesuccess'>TASK:IsStateSuccess()</h3>
+<span id=task-isstatesuccess></span><h3 id='task-isstatesuccess-'>TASK:IsStateSuccess()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -708,7 +708,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-statefailed'>TASK:StateFailed()</h3>
+<span id=task-statefailed></span><h3 id='task-statefailed-'>TASK:StateFailed()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -717,7 +717,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstatefailed'>TASK:IsStateFailed()</h3>
+<span id=task-isstatefailed></span><h3 id='task-isstatefailed-'>TASK:IsStateFailed()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -726,7 +726,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-stateplanned'>TASK:StatePlanned()</h3>
+<span id=task-stateplanned></span><h3 id='task-stateplanned-'>TASK:StatePlanned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -735,7 +735,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstateplanned'>TASK:IsStatePlanned()</h3>
+<span id=task-isstateplanned></span><h3 id='task-isstateplanned-'>TASK:IsStatePlanned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -744,7 +744,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-stateaborted'>TASK:StateAborted()</h3>
+<span id=task-stateaborted></span><h3 id='task-stateaborted-'>TASK:StateAborted()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -753,7 +753,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstateaborted'>TASK:IsStateAborted()</h3>
+<span id=task-isstateaborted></span><h3 id='task-isstateaborted-'>TASK:IsStateAborted()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -762,7 +762,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-statecancelled'>TASK:StateCancelled()</h3>
+<span id=task-statecancelled></span><h3 id='task-statecancelled-'>TASK:StateCancelled()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -771,7 +771,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstatecancelled'>TASK:IsStateCancelled()</h3>
+<span id=task-isstatecancelled></span><h3 id='task-isstatecancelled-'>TASK:IsStateCancelled()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -780,7 +780,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-stateassigned'>TASK:StateAssigned()</h3>
+<span id=task-stateassigned></span><h3 id='task-stateassigned-'>TASK:StateAssigned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -789,7 +789,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstateassigned'>TASK:IsStateAssigned()</h3>
+<span id=task-isstateassigned></span><h3 id='task-isstateassigned-'>TASK:IsStateAssigned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -798,7 +798,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-statehold'>TASK:StateHold()</h3>
+<span id=task-statehold></span><h3 id='task-statehold-'>TASK:StateHold()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -807,7 +807,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstatehold'>TASK:IsStateHold()</h3>
+<span id=task-isstatehold></span><h3 id='task-isstatehold-'>TASK:IsStateHold()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -816,7 +816,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-statereplanned'>TASK:StateReplanned()</h3>
+<span id=task-statereplanned></span><h3 id='task-statereplanned-'>TASK:StateReplanned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -825,7 +825,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-isstatereplanned'>TASK:IsStateReplanned()</h3>
+<span id=task-isstatereplanned></span><h3 id='task-isstatereplanned-'>TASK:IsStateReplanned()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -834,7 +834,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-getstatestring'>TASK:GetStateString()</h3>
+<span id=task-getstatestring></span><h3 id='task-getstatestring-'>TASK:GetStateString()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -843,7 +843,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-setbriefing-taskbriefing'>TASK:SetBriefing(TaskBriefing)</h3>
+<span id=task-setbriefing-taskbriefing></span><h3 id='task-setbriefing-taskbriefing-'>TASK:SetBriefing(TaskBriefing)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -858,7 +858,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-onenterassigned-event-from-to'>TASK:onenterAssigned(Event, From, To)</h3>
+<span id=task-onenterassigned-event-from-to></span><h3 id='task-onenterassigned-event-from-to-'>TASK:onenterAssigned(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -870,7 +870,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onentersuccess-event-from-to'>TASK:onenterSuccess(Event, From, To)</h3>
+<span id=task-onentersuccess-event-from-to></span><h3 id='task-onentersuccess-event-from-to-'>TASK:onenterSuccess(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -882,7 +882,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onenteraborted-from-event-to'>TASK:onenterAborted(From, Event, To)</h3>
+<span id=task-onenteraborted-from-event-to></span><h3 id='task-onenteraborted-from-event-to-'>TASK:onenterAborted(From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -894,7 +894,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onafterreplan-from-event-to'>TASK:onafterReplan(From, Event, To)</h3>
+<span id=task-onafterreplan-from-event-to></span><h3 id='task-onafterreplan-from-event-to-'>TASK:onafterReplan(From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -906,7 +906,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onenterfailed-from-event-to'>TASK:onenterFailed(From, Event, To)</h3>
+<span id=task-onenterfailed-from-event-to></span><h3 id='task-onenterfailed-from-event-to-'>TASK:onenterFailed(From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -918,7 +918,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onstatechange-event-from-to'>TASK:onstatechange(Event, From, To)</h3>
+<span id=task-onstatechange-event-from-to></span><h3 id='task-onstatechange-event-from-to-'>TASK:onstatechange(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -930,7 +930,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onenterplanned-event-from-to'>TASK:onenterPlanned(Event, From, To)</h3>
+<span id=task-onenterplanned-event-from-to></span><h3 id='task-onenterplanned-event-from-to-'>TASK:onenterPlanned(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -942,7 +942,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-onbeforetimeout-event-from-to'>TASK:onbeforeTimeOut(Event, From, To)</h3>
+<span id=task-onbeforetimeout-event-from-to></span><h3 id='task-onbeforetimeout-event-from-to-'>TASK:onbeforeTimeOut(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -954,7 +954,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='task-setdispatcher-dispatcher'>TASK:SetDispatcher(Dispatcher)</h3>
+<span id=task-setdispatcher-dispatcher></span><h3 id='task-setdispatcher-dispatcher-'>TASK:SetDispatcher(Dispatcher)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -969,7 +969,7 @@ self</li>
 <li><a href="#task-class">TASK</a>
 self</li>
 </ul>
-<h3 id='task-reportsummary'>TASK:ReportSummary()</h3>
+<span id=task-reportsummary></span><h3 id='task-reportsummary-'>TASK:ReportSummary()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -982,7 +982,7 @@ self</li>
 <ul>
 <li><u>String</u> self</li>
 </ul>
-<h3 id='task-reportdetails'>TASK:ReportDetails()</h3>
+<span id=task-reportdetails></span><h3 id='task-reportdetails-'>TASK:ReportDetails()</h3>
 <h4> Parameters </h4>
 
 <ul>

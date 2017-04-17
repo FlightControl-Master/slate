@@ -1,4 +1,4 @@
-<h1 id='dcs-dcsairbase-module'>Dcs.DCSAirbase Module</h1><h2 id='airbase-class'>Airbase Class</h2>
+<span id=dcs-dcsairbase-module></span><h1 id='dcs-dcsairbase-module-'>Dcs.DCSAirbase Module</h1><span id=airbase-class></span><h2 id='airbase-class-'>Airbase Class</h2>
 <pre>
 Inheritance : The Airbase Class inherits from the following parents :
 ERROR !
@@ -12,7 +12,7 @@ ERROR !
 <li>#Airbase.Category Category : enum contains identifiers of airbase categories.</li>
 <li>#Airbase.Desc Desc : Airbase descriptor. Airdromes are unique and their types are unique, but helipads and ships are not always unique and may have the same type.</li>
 </ul>
-<h3 id='getbyname'>getByName()</h3>
+<span id=getbyname></span><h3 id='getbyname-'>getByName()</h3>
 <p>Returns airbase by its name. If no airbase found the function will return nil.</p>
 
 <h4> Parameters </h4>
@@ -26,7 +26,7 @@ ERROR !
 <ul>
 <li>#Airbase self</li>
 </ul>
-<h3 id='getdescbyname'>getDescByName()</h3>
+<span id=getdescbyname></span><h3 id='getdescbyname-'>getDescByName()</h3>
 <p>Returns airbase descriptor by type name. If no descriptor is found the function will return nil.</p>
 
 <h4> Parameters </h4>
@@ -40,7 +40,7 @@ ERROR !
 <ul>
 <li>#Airbase.Desc self</li>
 </ul>
-<h3 id='airbase-getunit'>Airbase:getUnit()</h3>
+<span id=airbase-getunit></span><h3 id='airbase-getunit-'>Airbase:getUnit()</h3>
 <p>Returns Unit that is corresponded to the airbase. Works only for ships.</p>
 
 <h4> Parameters </h4>
@@ -54,7 +54,7 @@ ERROR !
 <ul>
 <li><a href="#unit-class">Unit</a> self</li>
 </ul>
-<h3 id='airbase-getid'>Airbase:getID()</h3>
+<span id=airbase-getid></span><h3 id='airbase-getid-'>Airbase:getID()</h3>
 <p>Returns identifier of the airbase.</p>
 
 <h4> Parameters </h4>
@@ -68,7 +68,7 @@ ERROR !
 <ul>
 <li>#Airbase.ID self</li>
 </ul>
-<h3 id='airbase-getcallsign'>Airbase:getCallsign()</h3>
+<span id=airbase-getcallsign></span><h3 id='airbase-getcallsign-'>Airbase:getCallsign()</h3>
 <p>Returns the airbase&#39;s callsign - the localized string.</p>
 
 <h4> Parameters </h4>
@@ -82,7 +82,7 @@ ERROR !
 <ul>
 <li><u>String</u> self</li>
 </ul>
-<h3 id='airbase-getdesc'>Airbase:getDesc()</h3>
+<span id=airbase-getdesc></span><h3 id='airbase-getdesc-'>Airbase:getDesc()</h3>
 <p>Returns descriptor of the airbase.</p>
 
 <h4> Parameters </h4>
@@ -96,7 +96,7 @@ ERROR !
 <ul>
 <li>#Airbase.Desc self</li>
 </ul>
-<h2 id='airbase-category-class'>Airbase.Category Class</h2>
+<span id=airbase-category-class></span><h2 id='airbase-category-class-'>Airbase.Category Class</h2>
 <pre>
 The Airbase.Category class does not inherit
 </pre>
@@ -108,7 +108,7 @@ The Airbase.Category class does not inherit
 <li>HELIPAD self</li>
 <li>SHIP self</li>
 </ul>
-<h2 id='airbase-desc-class'>Airbase.Desc Class</h2>
+<span id=airbase-desc-class></span><h2 id='airbase-desc-class-'>Airbase.Desc Class</h2>
 <pre>
 Inheritance : The Airbase.Desc Class inherits from the following parents :
 Desc

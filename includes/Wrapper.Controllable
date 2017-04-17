@@ -1,6 +1,6 @@
-<h1 id='wrapper-controllable-module'>Wrapper.Controllable Module</h1>
+<span id=wrapper-controllable-module></span><h1 id='wrapper-controllable-module-'>Wrapper.Controllable Module</h1>
 <p>This module contains the CONTROLLABLE class.</p>
-<h5 id='1-a-href-controllable-class-controllable-a-class-extends-a-href-positionable-class-positionable-a'>1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
+<span id=1-a-href-controllable-class-controllable-a-class-extends-a-href-positionable-class-positionable-a></span><h5 id='1-a-href-controllable-class-controllable-a-class-extends-a-href-positionable-class-positionable-a-'>1) <a href="#controllable-class">CONTROLLABLE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
 <p>The <a href="#controllable-class">CONTROLLABLE</a> class is a wrapper class to handle the DCS Controllable objects:</p>
 
 <ul>
@@ -9,19 +9,19 @@
 <li>Handle local Controllable Controller.</li>
 <li>Manage the &quot;state&quot; of the DCS Controllable.</li>
 </ul>
-<h5 id='1-1-controllable-constructor'>1.1) CONTROLLABLE constructor</h5>
+<span id=1-1-controllable-constructor></span><h5 id='1-1-controllable-constructor-'>1.1) CONTROLLABLE constructor</h5>
 <p>The CONTROLLABLE class provides the following functions to construct a CONTROLLABLE instance:</p>
 
 <ul>
 <li><a href="#controllable-new-controllablename">CONTROLLABLE:New()</a>: Create a CONTROLLABLE instance.</li>
 </ul>
-<h5 id='1-2-controllable-task-methods'>1.2) CONTROLLABLE task methods</h5>
+<span id=1-2-controllable-task-methods></span><h5 id='1-2-controllable-task-methods-'>1.2) CONTROLLABLE task methods</h5>
 <p>Several controllable task methods are available that help you to prepare tasks.
 These methods return a string consisting of the task description, which can then be given to either a <a href="#controllable-pushtask">CONTROLLABLE:PushTask()</a> or @{Controllable#SetTask} method to assign the task to the CONTROLLABLE.
 Tasks are specific for the category of the CONTROLLABLE, more specific, for AIR, GROUND or AIR and GROUND.
 Each task description where applicable indicates for which controllable category the task is valid.
 There are 2 main subdivisions of tasks: Assigned tasks and EnRoute tasks.</p>
-<h5 id='1-2-1-assigned-task-methods'>1.2.1) Assigned task methods</h5>
+<span id=1-2-1-assigned-task-methods></span><h5 id='1-2-1-assigned-task-methods-'>1.2.1) Assigned task methods</h5>
 <p>Assigned task methods make the controllable execute the task where the location of the (possible) targets of the task are known before being detected.
 This is different from the EnRoute tasks, where the targets of the task need to be detected before the task can be executed.</p>
 
@@ -52,7 +52,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskroutetozone-zone-randomize-speed-formation">CONTROLLABLE:TaskRouteToZone()</a>: (AIR + GROUND) Route the controllable to a given zone.</li>
 <li>CONTROLLABLE-TaskReturnToBase: (AIR) Route the controllable to an airbase.</li>
 </ul>
-<h5 id='1-2-2-enroute-task-methods'>1.2.2) EnRoute task methods</h5>
+<span id=1-2-2-enroute-task-methods></span><h5 id='1-2-2-enroute-task-methods-'>1.2.2) EnRoute task methods</h5>
 <p>EnRoute tasks require the targets of the task need to be detected by the controllable (using its sensors) before the task can be executed:</p>
 
 <ul>
@@ -64,7 +64,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li>CONTROLLABLE-EnRouteTaskFAC_EngageControllable: (AIR + GROUND) The task makes the controllable/unit a FAC and lets the FAC to choose the target (enemy ground controllable) as well as other assigned targets.</li>
 <li><a href="#controllable-enroutetasktanker">CONTROLLABLE:EnRouteTaskTanker()</a>: (AIR) Aircraft will act as a tanker for friendly units. No parameters.</li>
 </ul>
-<h5 id='1-2-3-preparation-task-methods'>1.2.3) Preparation task methods</h5>
+<span id=1-2-3-preparation-task-methods></span><h5 id='1-2-3-preparation-task-methods-'>1.2.3) Preparation task methods</h5>
 <p>There are certain task methods that allow to tailor the task behaviour:</p>
 
 <ul>
@@ -73,22 +73,22 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-taskcondition-time-userflag-userflagvalue-condition-duration-lastwaypoint">CONTROLLABLE:TaskCondition()</a>: Return a condition section for a controlled task.</li>
 <li><a href="#controllable-taskcontrolled-dcstask-dcsstopcondition">CONTROLLABLE:TaskControlled()</a>: Return a Controlled Task taking a Task and a TaskCondition.</li>
 </ul>
-<h5 id='1-2-4-obtain-the-mission-from-controllable-templates'>1.2.4) Obtain the mission from controllable templates</h5>
+<span id=1-2-4-obtain-the-mission-from-controllable-templates></span><h5 id='1-2-4-obtain-the-mission-from-controllable-templates-'>1.2.4) Obtain the mission from controllable templates</h5>
 <p>Controllable templates contain complete mission descriptions. Sometimes you want to copy a complete mission from a controllable and assign it to another:</p>
 
 <ul>
 <li><a href="#controllable-taskmission-taskmission">CONTROLLABLE:TaskMission()</a>: (AIR + GROUND) Return a mission task from a mission template.</li>
 </ul>
-<h5 id='1-3-controllable-command-methods'>1.3) CONTROLLABLE Command methods</h5>
+<span id=1-3-controllable-command-methods></span><h5 id='1-3-controllable-command-methods-'>1.3) CONTROLLABLE Command methods</h5>
 <p>Controllable <strong>command methods</strong> prepare the execution of commands using the <a href="#controllable-setcommand-dcscommand">CONTROLLABLE:SetCommand()</a> method:</p>
 
 <ul>
 <li><a href="#controllable-commanddoscript-doscript">CONTROLLABLE:CommandDoScript()</a>: Do Script command.</li>
 <li><a href="#controllable-commandswitchwaypoint-fromwaypoint-towaypoint">CONTROLLABLE:CommandSwitchWayPoint()</a>: Perform a switch waypoint command.</li>
 </ul>
-<h5 id='1-4-controllable-option-methods'>1.4) CONTROLLABLE Option methods</h5>
+<span id=1-4-controllable-option-methods></span><h5 id='1-4-controllable-option-methods-'>1.4) CONTROLLABLE Option methods</h5>
 <p>Controllable <strong>Option methods</strong> change the behaviour of the Controllable while being alive.</p>
-<h5 id='1-4-1-rule-of-engagement'>1.4.1) Rule of Engagement:</h5>
+<span id=1-4-1-rule-of-engagement></span><h5 id='1-4-1-rule-of-engagement-'>1.4.1) Rule of Engagement:</h5>
 <ul>
 <li><a href="#controllable-optionroeweaponfreepossible">CONTROLLABLE:OptionROEWeaponFreePossible()</a></li>
 <li><a href="#controllable-optionroeopenfirepossible">CONTROLLABLE:OptionROEOpenFirePossible()</a></li>
@@ -104,7 +104,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-optionroereturnfirepossible">CONTROLLABLE:OptionROEReturnFirePossible()</a></li>
 <li>CONTROLLABLE-OptionROEEvadeFirePossible</li>
 </ul>
-<h5 id='1-4-2-rule-on-thread'>1.4.2) Rule on thread:</h5>
+<span id=1-4-2-rule-on-thread></span><h5 id='1-4-2-rule-on-thread-'>1.4.2) Rule on thread:</h5>
 <ul>
 <li><a href="#controllable-optionrotnoreactionpossible">CONTROLLABLE:OptionROTNoReactionPossible()</a></li>
 <li><a href="#controllable-optionrotpassivedefensepossible">CONTROLLABLE:OptionROTPassiveDefensePossible()</a></li>
@@ -120,7 +120,7 @@ This is different from the EnRoute tasks, where the targets of the task need to 
 <li><a href="#controllable-optionrotevadefirepossible">CONTROLLABLE:OptionROTEvadeFirePossible()</a></li>
 <li><a href="#controllable-optionrotverticalpossible">CONTROLLABLE:OptionROTVerticalPossible()</a></li>
 </ul>
-<h2 id='controllable-class'>CONTROLLABLE Class</h2>
+<span id=controllable-class></span><h2 id='controllable-class-'>CONTROLLABLE Class</h2>
 <pre>
 Inheritance : The CONTROLLABLE Class inherits from the following parents :
 BASE
@@ -136,7 +136,7 @@ BASE
 <li>Dcs.DCSWrapper.Controllable#Controllable DCSControllable : The DCS controllable class.</li>
 <li><u>String</u> ControllableName : The name of the controllable.</li>
 </ul>
-<h3 id='controllable-new-controllablename'>CONTROLLABLE:New(ControllableName)</h3>
+<span id=controllable-new-controllablename></span><h3 id='controllable-new-controllablename-'>CONTROLLABLE:New(ControllableName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -151,7 +151,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-getunits'>CONTROLLABLE:GetUnits()</h3>
+<span id=controllable-getunits></span><h3 id='controllable-getunits-'>CONTROLLABLE:GetUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -164,7 +164,7 @@ self</li>
 <ul>
 <li>#list<Wrapper.Unit#UNIT> The : UNITs wrappers.</li>
 </ul>
-<h3 id='controllable-getlife'>CONTROLLABLE:GetLife()</h3>
+<span id=controllable-getlife></span><h3 id='controllable-getlife-'>CONTROLLABLE:GetLife()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -178,7 +178,7 @@ self</li>
 <li><u>Number</u> The : controllable health value (unit or group average).</li>
 <li><u>Nil</u> The : controllable is not existing or alive.</li>
 </ul>
-<h3 id='controllable-cleartasks'>CONTROLLABLE:ClearTasks()</h3>
+<span id=controllable-cleartasks></span><h3 id='controllable-cleartasks-'>CONTROLLABLE:ClearTasks()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -192,20 +192,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-popcurrenttask'>CONTROLLABLE:PopCurrentTask()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a> self</li>
-</ul>
-<h3 id='controllable-pushtask'>CONTROLLABLE:PushTask()</h3>
+<span id=controllable-popcurrenttask></span><h3 id='controllable-popcurrenttask-'>CONTROLLABLE:PopCurrentTask()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -218,7 +205,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a> self</li>
 </ul>
-<h3 id='controllable-settask'>CONTROLLABLE:SetTask()</h3>
+<span id=controllable-pushtask></span><h3 id='controllable-pushtask-'>CONTROLLABLE:PushTask()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -231,7 +218,20 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a> self</li>
 </ul>
-<h3 id='controllable-taskcondition-time-userflag-userflagvalue-condition-duration-lastwaypoint'>CONTROLLABLE:TaskCondition(time, userFlag, userFlagValue, condition, duration, lastWayPoint)</h3>
+<span id=controllable-settask></span><h3 id='controllable-settask-'>CONTROLLABLE:SetTask()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a> self</li>
+</ul>
+<span id=controllable-taskcondition-time-userflag-userflagvalue-condition-duration-lastwaypoint></span><h3 id='controllable-taskcondition-time-userflag-userflagvalue-condition-duration-lastwaypoint-'>CONTROLLABLE:TaskCondition(time, userFlag, userFlagValue, condition, duration, lastWayPoint)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -246,7 +246,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controllable-taskcontrolled-dcstask-dcsstopcondition'>CONTROLLABLE:TaskControlled(DCSTask, DCSStopCondition)</h3>
+<span id=controllable-taskcontrolled-dcstask-dcsstopcondition></span><h3 id='controllable-taskcontrolled-dcstask-dcsstopcondition-'>CONTROLLABLE:TaskControlled(DCSTask, DCSStopCondition)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -261,7 +261,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-taskcombo-dcstasks'>CONTROLLABLE:TaskCombo(DCSTasks)</h3>
+<span id=controllable-taskcombo-dcstasks></span><h3 id='controllable-taskcombo-dcstasks-'>CONTROLLABLE:TaskCombo(DCSTasks)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -275,7 +275,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-taskwrappedaction-dcscommand'>CONTROLLABLE:TaskWrappedAction(DCSCommand)</h3>
+<span id=controllable-taskwrappedaction-dcscommand></span><h3 id='controllable-taskwrappedaction-dcscommand-'>CONTROLLABLE:TaskWrappedAction(DCSCommand)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -289,7 +289,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-setcommand-dcscommand'>CONTROLLABLE:SetCommand(DCSCommand)</h3>
+<span id=controllable-setcommand-dcscommand></span><h3 id='controllable-setcommand-dcscommand-'>CONTROLLABLE:SetCommand(DCSCommand)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -304,7 +304,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-commandswitchwaypoint-fromwaypoint-towaypoint'>CONTROLLABLE:CommandSwitchWayPoint(FromWayPoint, ToWayPoint)</h3><pre class="highlight lua tab-lua"><code> <span class="n">This</span> <span class="n">test</span> <span class="n">demonstrates</span> <span class="n">the</span> <span class="n">use</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">of</span> <span class="n">the</span> <span class="n">SwitchWayPoint</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GROUP</span> <span class="n">class</span><span class="p">.</span>
+<span id=controllable-commandswitchwaypoint-fromwaypoint-towaypoint></span><h3 id='controllable-commandswitchwaypoint-fromwaypoint-towaypoint-'>CONTROLLABLE:CommandSwitchWayPoint(FromWayPoint, ToWayPoint)</h3><pre class="highlight lua tab-lua"><code> <span class="n">This</span> <span class="n">test</span> <span class="n">demonstrates</span> <span class="n">the</span> <span class="n">use</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">of</span> <span class="n">the</span> <span class="n">SwitchWayPoint</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">GROUP</span> <span class="n">class</span><span class="p">.</span>
 <span class="n">HeliGroup</span> <span class="o">=</span> <span class="n">GROUP</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s2">"Helicopter"</span> <span class="p">)</span>
 
  <span class="n">Route</span> <span class="n">the</span> <span class="n">helicopter</span> <span class="n">back</span> <span class="n">to</span> <span class="n">the</span> <span class="n">FARP</span> <span class="n">after</span> <span class="mi">60</span> <span class="n">seconds</span><span class="p">.</span>
@@ -330,7 +330,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-commandstoproute-stoproute'>CONTROLLABLE:CommandStopRoute(StopRoute)</h3>
+<span id=controllable-commandstoproute-stoproute></span><h3 id='controllable-commandstoproute-stoproute-'>CONTROLLABLE:CommandStopRoute(StopRoute)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -344,7 +344,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-taskattackgroup-attackgroup-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit'>CONTROLLABLE:TaskAttackGroup(AttackGroup, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)</h3>
+<span id=controllable-taskattackgroup-attackgroup-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit></span><h3 id='controllable-taskattackgroup-attackgroup-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit-'>CONTROLLABLE:TaskAttackGroup(AttackGroup, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -364,7 +364,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskattackunit-attackunit-groupattack-weaponexpend-attackqty-direction-altitude-visible-weapontype'>CONTROLLABLE:TaskAttackUnit(AttackUnit, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, WeaponType)</h3>
+<span id=controllable-taskattackunit-attackunit-groupattack-weaponexpend-attackqty-direction-altitude-visible-weapontype></span><h3 id='controllable-taskattackunit-attackunit-groupattack-weaponexpend-attackqty-direction-altitude-visible-weapontype-'>CONTROLLABLE:TaskAttackUnit(AttackUnit, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, WeaponType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -385,7 +385,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskbombing-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack'>CONTROLLABLE:TaskBombing(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
+<span id=controllable-taskbombing-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack></span><h3 id='controllable-taskbombing-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack-'>CONTROLLABLE:TaskBombing(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -404,7 +404,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskorbitcircleatvec2-point-altitude-speed'>CONTROLLABLE:TaskOrbitCircleAtVec2(Point, Altitude, Speed)</h3>
+<span id=controllable-taskorbitcircleatvec2-point-altitude-speed></span><h3 id='controllable-taskorbitcircleatvec2-point-altitude-speed-'>CONTROLLABLE:TaskOrbitCircleAtVec2(Point, Altitude, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -421,7 +421,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-taskorbitcircle-altitude-speed'>CONTROLLABLE:TaskOrbitCircle(Altitude, Speed)</h3>
+<span id=controllable-taskorbitcircle-altitude-speed></span><h3 id='controllable-taskorbitcircle-altitude-speed-'>CONTROLLABLE:TaskOrbitCircle(Altitude, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -437,7 +437,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-taskholdposition-duration'>CONTROLLABLE:TaskHoldPosition(Duration)</h3>
+<span id=controllable-taskholdposition-duration></span><h3 id='controllable-taskholdposition-duration-'>CONTROLLABLE:TaskHoldPosition(Duration)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -452,7 +452,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-taskattackmapobject-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack'>CONTROLLABLE:TaskAttackMapObject(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
+<span id=controllable-taskattackmapobject-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack></span><h3 id='controllable-taskattackmapobject-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack-'>CONTROLLABLE:TaskAttackMapObject(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -471,7 +471,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskbombingrunway-airbase-weapontype-weaponexpend-attackqty-direction-controllableattack'>CONTROLLABLE:TaskBombingRunway(Airbase, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
+<span id=controllable-taskbombingrunway-airbase-weapontype-weaponexpend-attackqty-direction-controllableattack></span><h3 id='controllable-taskbombingrunway-airbase-weapontype-weaponexpend-attackqty-direction-controllableattack-'>CONTROLLABLE:TaskBombingRunway(Airbase, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -490,7 +490,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskrefueling'>CONTROLLABLE:TaskRefueling()</h3>
+<span id=controllable-taskrefueling></span><h3 id='controllable-taskrefueling-'>CONTROLLABLE:TaskRefueling()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -503,7 +503,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-tasklandatvec2-point-duration'>CONTROLLABLE:TaskLandAtVec2(Point, Duration)</h3>
+<span id=controllable-tasklandatvec2-point-duration></span><h3 id='controllable-tasklandatvec2-point-duration-'>CONTROLLABLE:TaskLandAtVec2(Point, Duration)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -519,7 +519,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-tasklandatzone-zone-duration'>CONTROLLABLE:TaskLandAtZone(Zone, Duration)</h3>
+<span id=controllable-tasklandatzone-zone-duration></span><h3 id='controllable-tasklandatzone-zone-duration-'>CONTROLLABLE:TaskLandAtZone(Zone, Duration)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -535,7 +535,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-taskfollow-followcontrollable-vec3-lastwaypointindex'>CONTROLLABLE:TaskFollow(FollowControllable, Vec3, LastWaypointIndex)</h3>
+<span id=controllable-taskfollow-followcontrollable-vec3-lastwaypointindex></span><h3 id='controllable-taskfollow-followcontrollable-vec3-lastwaypointindex-'>CONTROLLABLE:TaskFollow(FollowControllable, Vec3, LastWaypointIndex)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -551,7 +551,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskescort-escortcontrollable-vec3-lastwaypointindex-engagementdistancemax-targettypes'>CONTROLLABLE:TaskEscort(EscortControllable, Vec3, LastWaypointIndex, EngagementDistanceMax, TargetTypes)</h3>
+<span id=controllable-taskescort-escortcontrollable-vec3-lastwaypointindex-engagementdistancemax-targettypes></span><h3 id='controllable-taskescort-escortcontrollable-vec3-lastwaypointindex-engagementdistancemax-targettypes-'>CONTROLLABLE:TaskEscort(EscortControllable, Vec3, LastWaypointIndex, EngagementDistanceMax, TargetTypes)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -569,7 +569,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskfireatpoint-vec2-radius-ammocount'>CONTROLLABLE:TaskFireAtPoint(Vec2, Radius, AmmoCount)</h3>
+<span id=controllable-taskfireatpoint-vec2-radius-ammocount></span><h3 id='controllable-taskfireatpoint-vec2-radius-ammocount-'>CONTROLLABLE:TaskFireAtPoint(Vec2, Radius, AmmoCount)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -585,7 +585,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskhold'>CONTROLLABLE:TaskHold()</h3>
+<span id=controllable-taskhold></span><h3 id='controllable-taskhold-'>CONTROLLABLE:TaskHold()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -598,7 +598,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskfac_attackgroup-attackgroup-weapontype-designation-datalink'>CONTROLLABLE:TaskFAC_AttackGroup(AttackGroup, WeaponType, Designation, Datalink)</h3>
+<span id=controllable-taskfac_attackgroup-attackgroup-weapontype-designation-datalink></span><h3 id='controllable-taskfac_attackgroup-attackgroup-weapontype-designation-datalink-'>CONTROLLABLE:TaskFAC_AttackGroup(AttackGroup, WeaponType, Designation, Datalink)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -615,7 +615,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskengagetargets-distance-targettypes-priority'>CONTROLLABLE:EnRouteTaskEngageTargets(Distance, TargetTypes, Priority)</h3>
+<span id=controllable-enroutetaskengagetargets-distance-targettypes-priority></span><h3 id='controllable-enroutetaskengagetargets-distance-targettypes-priority-'>CONTROLLABLE:EnRouteTaskEngageTargets(Distance, TargetTypes, Priority)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -631,7 +631,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskengagetargets-vec2-radius-targettypes-priority'>CONTROLLABLE:EnRouteTaskEngageTargets(Vec2, Radius, TargetTypes, Priority)</h3>
+<span id=controllable-enroutetaskengagetargets-vec2-radius-targettypes-priority></span><h3 id='controllable-enroutetaskengagetargets-vec2-radius-targettypes-priority-'>CONTROLLABLE:EnRouteTaskEngageTargets(Vec2, Radius, TargetTypes, Priority)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -648,7 +648,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskengagegroup-attackgroup-priority-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit'>CONTROLLABLE:EnRouteTaskEngageGroup(AttackGroup, Priority, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)</h3>
+<span id=controllable-enroutetaskengagegroup-attackgroup-priority-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit></span><h3 id='controllable-enroutetaskengagegroup-attackgroup-priority-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit-'>CONTROLLABLE:EnRouteTaskEngageGroup(AttackGroup, Priority, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -669,7 +669,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskengageunit-engageunit-priority-groupattack-weaponexpend-attackqty-direction-altitude-visible-controllableattack'>CONTROLLABLE:EnRouteTaskEngageUnit(EngageUnit, Priority, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, ControllableAttack)</h3>
+<span id=controllable-enroutetaskengageunit-engageunit-priority-groupattack-weaponexpend-attackqty-direction-altitude-visible-controllableattack></span><h3 id='controllable-enroutetaskengageunit-engageunit-priority-groupattack-weaponexpend-attackqty-direction-altitude-visible-controllableattack-'>CONTROLLABLE:EnRouteTaskEngageUnit(EngageUnit, Priority, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, ControllableAttack)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -691,7 +691,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskawacs'>CONTROLLABLE:EnRouteTaskAWACS()</h3>
+<span id=controllable-enroutetaskawacs></span><h3 id='controllable-enroutetaskawacs-'>CONTROLLABLE:EnRouteTaskAWACS()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -704,7 +704,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetasktanker'>CONTROLLABLE:EnRouteTaskTanker()</h3>
+<span id=controllable-enroutetasktanker></span><h3 id='controllable-enroutetasktanker-'>CONTROLLABLE:EnRouteTaskTanker()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -717,7 +717,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskewr'>CONTROLLABLE:EnRouteTaskEWR()</h3>
+<span id=controllable-enroutetaskewr></span><h3 id='controllable-enroutetaskewr-'>CONTROLLABLE:EnRouteTaskEWR()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -730,7 +730,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskfac_engagegroup-attackgroup-priority-weapontype-designation-datalink'>CONTROLLABLE:EnRouteTaskFAC_EngageGroup(AttackGroup, Priority, WeaponType, Designation, Datalink)</h3>
+<span id=controllable-enroutetaskfac_engagegroup-attackgroup-priority-weapontype-designation-datalink></span><h3 id='controllable-enroutetaskfac_engagegroup-attackgroup-priority-weapontype-designation-datalink-'>CONTROLLABLE:EnRouteTaskFAC_EngageGroup(AttackGroup, Priority, WeaponType, Designation, Datalink)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -748,7 +748,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-enroutetaskfac-radius-priority'>CONTROLLABLE:EnRouteTaskFAC(Radius, Priority)</h3>
+<span id=controllable-enroutetaskfac-radius-priority></span><h3 id='controllable-enroutetaskfac-radius-priority-'>CONTROLLABLE:EnRouteTaskFAC(Radius, Priority)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -763,7 +763,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskembarking-point-duration-embarkingcontrollable'>CONTROLLABLE:TaskEmbarking(Point, Duration, EmbarkingControllable)</h3>
+<span id=controllable-taskembarking-point-duration-embarkingcontrollable></span><h3 id='controllable-taskembarking-point-duration-embarkingcontrollable-'>CONTROLLABLE:TaskEmbarking(Point, Duration, EmbarkingControllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -780,7 +780,7 @@ EmbarkingControllable : The controllable to be embarked.</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure</li>
 </ul>
-<h3 id='controllable-taskembarktotransport-point-radius'>CONTROLLABLE:TaskEmbarkToTransport(Point, Radius)</h3>
+<span id=controllable-taskembarktotransport-point-radius></span><h3 id='controllable-taskembarktotransport-point-radius-'>CONTROLLABLE:TaskEmbarkToTransport(Point, Radius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -795,7 +795,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task The : DCS task structure.</li>
 </ul>
-<h3 id='controllable-taskmission-taskmission'>CONTROLLABLE:TaskMission(TaskMission)</h3>
+<span id=controllable-taskmission-taskmission></span><h3 id='controllable-taskmission-taskmission-'>CONTROLLABLE:TaskMission(TaskMission)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -809,7 +809,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-taskroute-points'>CONTROLLABLE:TaskRoute(Points)</h3>
+<span id=controllable-taskroute-points></span><h3 id='controllable-taskroute-points-'>CONTROLLABLE:TaskRoute(Points)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -823,7 +823,7 @@ self</li>
 <ul>
 <li>Dcs.DCSTasking.Task#Task self</li>
 </ul>
-<h3 id='controllable-routetovec2-point-speed'>CONTROLLABLE:RouteToVec2(Point, Speed)</h3>
+<span id=controllable-routetovec2-point-speed></span><h3 id='controllable-routetovec2-point-speed-'>CONTROLLABLE:RouteToVec2(Point, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -839,7 +839,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-routetovec3-point-speed'>CONTROLLABLE:RouteToVec3(Point, Speed)</h3>
+<span id=controllable-routetovec3-point-speed></span><h3 id='controllable-routetovec3-point-speed-'>CONTROLLABLE:RouteToVec3(Point, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -855,7 +855,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-route-gopoints'>CONTROLLABLE:Route(GoPoints)</h3>
+<span id=controllable-route-gopoints></span><h3 id='controllable-route-gopoints-'>CONTROLLABLE:Route(GoPoints)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -870,7 +870,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-taskroutetozone-zone-randomize-speed-formation'>CONTROLLABLE:TaskRouteToZone(Zone, Randomize, Speed, Formation)</h3>
+<span id=controllable-taskroutetozone-zone-randomize-speed-formation></span><h3 id='controllable-taskroutetozone-zone-randomize-speed-formation-'>CONTROLLABLE:TaskRouteToZone(Zone, Randomize, Speed, Formation)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -883,7 +883,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controllable-commanddoscript-doscript'>CONTROLLABLE:CommandDoScript(DoScript)</h3>
+<span id=controllable-commanddoscript-doscript></span><h3 id='controllable-commanddoscript-doscript-'>CONTROLLABLE:CommandDoScript(DoScript)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -897,7 +897,7 @@ self</li>
 <ul>
 <li>#DCSCommand self</li>
 </ul>
-<h3 id='controllable-gettaskmission'>CONTROLLABLE:GetTaskMission()</h3>
+<span id=controllable-gettaskmission></span><h3 id='controllable-gettaskmission-'>CONTROLLABLE:GetTaskMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -910,7 +910,7 @@ self</li>
 <ul>
 <li><u>List[]</u> The : MissionTemplate</li>
 </ul>
-<h3 id='controllable-gettaskroute'>CONTROLLABLE:GetTaskRoute()</h3>
+<span id=controllable-gettaskroute></span><h3 id='controllable-gettaskroute-'>CONTROLLABLE:GetTaskRoute()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -923,7 +923,7 @@ self</li>
 <ul>
 <li><u>List[]</u> The : mission route defined by points.</li>
 </ul>
-<h3 id='controllable-copyroute-begin-end-randomize-radius'>CONTROLLABLE:CopyRoute(Begin, End, Randomize, Radius)</h3>
+<span id=controllable-copyroute-begin-end-randomize-radius></span><h3 id='controllable-copyroute-begin-end-randomize-radius-'>CONTROLLABLE:CopyRoute(Begin, End, Randomize, Radius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -936,7 +936,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='controllable-getdetectedtargets-detectvisual-detectoptical-detectradar-detectirst-detectrwr-detectdlink'>CONTROLLABLE:GetDetectedTargets(DetectVisual, DetectOptical, DetectRadar, DetectIRST, DetectRWR, DetectDLINK)</h3>
+<span id=controllable-getdetectedtargets-detectvisual-detectoptical-detectradar-detectirst-detectrwr-detectdlink></span><h3 id='controllable-getdetectedtargets-detectvisual-detectoptical-detectradar-detectirst-detectrwr-detectdlink-'>CONTROLLABLE:GetDetectedTargets(DetectVisual, DetectOptical, DetectRadar, DetectIRST, DetectRWR, DetectDLINK)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -954,7 +954,7 @@ self</li>
 <ul>
 <li><u>List[]</u> DetectedTargets</li>
 </ul>
-<h3 id='controllable-optionroeholdfirepossible'>CONTROLLABLE:OptionROEHoldFirePossible()</h3>
+<span id=controllable-optionroeholdfirepossible></span><h3 id='controllable-optionroeholdfirepossible-'>CONTROLLABLE:OptionROEHoldFirePossible()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -967,7 +967,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controllable-optionroeholdfire'>CONTROLLABLE:OptionROEHoldFire()</h3>
+<span id=controllable-optionroeholdfire></span><h3 id='controllable-optionroeholdfire-'>CONTROLLABLE:OptionROEHoldFire()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -979,7 +979,7 @@ self</li>
 <ul>
 <li><a href="#controllable-class">CONTROLLABLE</a> self</li>
 </ul>
-<h3 id='controllable-optionroereturnfirepossible'>CONTROLLABLE:OptionROEReturnFirePossible()</h3>
+<span id=controllable-optionroereturnfirepossible></span><h3 id='controllable-optionroereturnfirepossible-'>CONTROLLABLE:OptionROEReturnFirePossible()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -992,7 +992,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controllable-optionroereturnfire'>CONTROLLABLE:OptionROEReturnFire()</h3>
+<span id=controllable-optionroereturnfire></span><h3 id='controllable-optionroereturnfire-'>CONTROLLABLE:OptionROEReturnFire()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1006,34 +1006,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-optionroeopenfirepossible'>CONTROLLABLE:OptionROEOpenFirePossible()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-<h3 id='controllable-optionroeopenfire'>CONTROLLABLE:OptionROEOpenFire()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-<h3 id='controllable-optionroeweaponfreepossible'>CONTROLLABLE:OptionROEWeaponFreePossible()</h3>
+<span id=controllable-optionroeopenfirepossible></span><h3 id='controllable-optionroeopenfirepossible-'>CONTROLLABLE:OptionROEOpenFirePossible()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1046,7 +1019,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controllable-optionroeweaponfree'>CONTROLLABLE:OptionROEWeaponFree()</h3>
+<span id=controllable-optionroeopenfire></span><h3 id='controllable-optionroeopenfire-'>CONTROLLABLE:OptionROEOpenFire()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1060,34 +1033,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-optionrotnoreactionpossible'>CONTROLLABLE:OptionROTNoReactionPossible()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-<h3 id='controllable-optionrotnoreaction'>CONTROLLABLE:OptionROTNoReaction()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-<h3 id='controllable-optionrotpassivedefensepossible'>CONTROLLABLE:OptionROTPassiveDefensePossible()</h3>
+<span id=controllable-optionroeweaponfreepossible></span><h3 id='controllable-optionroeweaponfreepossible-'>CONTROLLABLE:OptionROEWeaponFreePossible()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1100,7 +1046,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controllable-optionrotpassivedefense'>CONTROLLABLE:OptionROTPassiveDefense()</h3>
+<span id=controllable-optionroeweaponfree></span><h3 id='controllable-optionroeweaponfree-'>CONTROLLABLE:OptionROEWeaponFree()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1114,34 +1060,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-optionrotevadefirepossible'>CONTROLLABLE:OptionROTEvadeFirePossible()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-<h3 id='controllable-optionrotevadefire'>CONTROLLABLE:OptionROTEvadeFire()</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#controllable-class">CONTROLLABLE</a>
-self</li>
-</ul>
-<h3 id='controllable-optionrotverticalpossible'>CONTROLLABLE:OptionROTVerticalPossible()</h3>
+<span id=controllable-optionrotnoreactionpossible></span><h3 id='controllable-optionrotnoreactionpossible-'>CONTROLLABLE:OptionROTNoReactionPossible()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1154,7 +1073,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='controllable-optionrotvertical'>CONTROLLABLE:OptionROTVertical()</h3>
+<span id=controllable-optionrotnoreaction></span><h3 id='controllable-optionrotnoreaction-'>CONTROLLABLE:OptionROTNoReaction()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1168,7 +1087,88 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-waypointinitialize-waypoints'>CONTROLLABLE:WayPointInitialize(WayPoints)</h3>
+<span id=controllable-optionrotpassivedefensepossible></span><h3 id='controllable-optionrotpassivedefensepossible-'>CONTROLLABLE:OptionROTPassiveDefensePossible()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<span id=controllable-optionrotpassivedefense></span><h3 id='controllable-optionrotpassivedefense-'>CONTROLLABLE:OptionROTPassiveDefense()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+<span id=controllable-optionrotevadefirepossible></span><h3 id='controllable-optionrotevadefirepossible-'>CONTROLLABLE:OptionROTEvadeFirePossible()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<span id=controllable-optionrotevadefire></span><h3 id='controllable-optionrotevadefire-'>CONTROLLABLE:OptionROTEvadeFire()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+<span id=controllable-optionrotverticalpossible></span><h3 id='controllable-optionrotverticalpossible-'>CONTROLLABLE:OptionROTVerticalPossible()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<span id=controllable-optionrotvertical></span><h3 id='controllable-optionrotvertical-'>CONTROLLABLE:OptionROTVertical()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#controllable-class">CONTROLLABLE</a>
+self</li>
+</ul>
+<span id=controllable-waypointinitialize-waypoints></span><h3 id='controllable-waypointinitialize-waypoints-'>CONTROLLABLE:WayPointInitialize(WayPoints)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1183,7 +1183,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-getwaypoints'>CONTROLLABLE:GetWayPoints()</h3>
+<span id=controllable-getwaypoints></span><h3 id='controllable-getwaypoints-'>CONTROLLABLE:GetWayPoints()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1196,7 +1196,7 @@ self</li>
 <ul>
 <li><u>List[]</u> WayPoints : If WayPoints is given, then return the WayPoints structure.</li>
 </ul>
-<h3 id='controllable-waypointfunction-waypoint-waypointindex-waypointfunction'>CONTROLLABLE:WayPointFunction(WayPoint, WayPointIndex, WayPointFunction)</h3>
+<span id=controllable-waypointfunction-waypoint-waypointindex-waypointfunction></span><h3 id='controllable-waypointfunction-waypoint-waypointindex-waypointfunction-'>CONTROLLABLE:WayPointFunction(WayPoint, WayPointIndex, WayPointFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1213,7 +1213,7 @@ self</li>
 <li><a href="#controllable-class">CONTROLLABLE</a>
 self</li>
 </ul>
-<h3 id='controllable-waypointexecute-waypoint-waittime'>CONTROLLABLE:WayPointExecute(WayPoint, WaitTime)</h3>
+<span id=controllable-waypointexecute-waypoint-waittime></span><h3 id='controllable-waypointexecute-waypoint-waittime-'>CONTROLLABLE:WayPointExecute(WayPoint, WaitTime)</h3>
 <h4> Parameters </h4>
 
 <ul>

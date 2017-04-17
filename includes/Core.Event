@@ -1,8 +1,8 @@
-<h1 id='core-event-module'>Core.Event Module</h1>
+<span id=core-event-module></span><h1 id='core-event-module-'>Core.Event Module</h1>
 <p><strong>Core</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
 
 <p><img src="/includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
-<h5 id='1-event-handling-overview'>1) Event Handling Overview</h5>
+<span id=1-event-handling-overview></span><h5 id='1-event-handling-overview-'>1) Event Handling Overview</h5>
 <p><img src="/includes/Pictures/EVENT/Dia2.JPG" alt="Objects" /></p>
 
 <p>Within a running mission, various DCS events occur. Units are dynamically created, crash, die, shoot stuff, get hit etc.
@@ -12,7 +12,7 @@ This module provides a mechanism to dispatch those events occuring within your r
 
 <p>Objects can subscribe to different events. The Event dispatcher will publish the received DCS events to the subscribed MOOSE objects, in a specified order.
 In this way, the subscribed MOOSE objects are kept in sync with your evolving running mission.</p>
-<h5 id='1-1-event-dispatching'>1.1) Event Dispatching</h5>
+<span id=1-1-event-dispatching></span><h5 id='1-1-event-dispatching-'>1.1) Event Dispatching</h5>
 <p><img src="/includes/Pictures/EVENT/Dia4.JPG" alt="Objects" /></p>
 
 <p>The _EVENTDISPATCHER object is automatically created within MOOSE,
@@ -39,7 +39,7 @@ in the correct processing order.</p>
 <p><img src="/includes/Pictures/EVENT/Dia7.JPG" alt="Objects" /></p>
 
 <p>But for some DCS events, the publishing order is reversed. This is due to the fact that objects need to be <strong>erased</strong> instead of added.</p>
-<h5 id='1-2-event-handling'>1.2) Event Handling</h5>
+<span id=1-2-event-handling></span><h5 id='1-2-event-handling-'>1.2) Event Handling</h5>
 <p><img src="/includes/Pictures/EVENT/Dia8.JPG" alt="Objects" /></p>
 
 <p>The actual event subscribing and handling is not facilitated through the _EVENTDISPATCHER, but it is done through the <a href="#base-module">BASE</a> class, <a href="#unit-module">UNIT</a> class and <a href="#group-module">GROUP</a> class.
@@ -49,7 +49,7 @@ The _EVENTDISPATCHER is a component that is quietly working in the background of
 
 <p>The BASE class provides methods to catch DCS Events. These are events that are triggered from within the DCS simulator,
 and handled through lua scripting. MOOSE provides an encapsulation to handle these events more efficiently.</p>
-<h5 id='1-2-1-subscribe-unsubscribe-to-dcs-events'>1.2.1 Subscribe / Unsubscribe to DCS Events</h5>
+<span id=1-2-1-subscribe-unsubscribe-to-dcs-events></span><h5 id='1-2-1-subscribe-unsubscribe-to-dcs-events-'>1.2.1 Subscribe / Unsubscribe to DCS Events</h5>
 <p>At first, the mission designer will need to <strong>Subscribe</strong> to a specific DCS event for the class.
 So, when the DCS event occurs, the class will be notified of that event.
 There are two functions which you use to subscribe to or unsubscribe from an event.</p>
@@ -65,7 +65,7 @@ Note that for a GROUP, the event will be handled <strong>for all the UNITs in th
 <p>For all objects of other classes, the subscribed events will be handled for <strong>all UNITs within the Mission</strong>!
 So if a UNIT within the mission has the subscribed event for that object,
 then the object event handler will receive the event for that UNIT!</p>
-<h5 id='1-3-2-event-handling-of-dcs-events'>1.3.2 Event Handling of DCS Events</h5>
+<span id=1-3-2-event-handling-of-dcs-events></span><h5 id='1-3-2-event-handling-of-dcs-events-'>1.3.2 Event Handling of DCS Events</h5>
 <p>Once the class is subscribed to the event, an <strong>Event Handling</strong> method on the object or class needs to be written that will be called
 when the DCS event occurs. The Event Handling method receives an <a href="#eventdata-class">EVENTDATA</a> structure, which contains a lot of information
 about the event that occurred.</p>
@@ -94,15 +94,15 @@ function Tank2:OnEventDead( EventData )</p>
 
 <p>self:SmokeBlue()
 end</p>
-<h5 id='1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events'>1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h5>
+<span id=1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events></span><h5 id='1-3-3-event-handling-methods-that-are-automatically-called-upon-subscribed-dcs-events-'>1.3.3 Event Handling methods that are automatically called upon subscribed DCS events</h5>
 <p><img src="/includes/Pictures/EVENT/Dia10.JPG" alt="Objects" /></p>
 
 <p>The following list outlines which EVENTS item in the structure corresponds to which Event Handling method.
 Always ensure that your event handling methods align with the events being subscribed to, or nothing will be executed.</p>
-<h5 id='2-events-type'>2) EVENTS type</h5>
+<span id=2-events-type></span><h5 id='2-events-type-'>2) EVENTS type</h5>
 <p>The EVENTS structure contains names for all the different DCS events that objects can subscribe to using the
 <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
-<h5 id='3-eventdata-type'>3) EVENTDATA type</h5>
+<span id=3-eventdata-type></span><h5 id='3-eventdata-type-'>3) EVENTDATA type</h5>
 <p>The <a href="#eventdata-class">EVENTDATA</a> structure contains all the fields that are populated with event information before
 an Event Handler method is being called by the event dispatcher.
 The Event Handler received the EVENTDATA object as a parameter, and can be used to investigate further the different events.
@@ -144,7 +144,7 @@ if Event.IniObjectCategory == Object.Category.STATIC then
 end</p>
 
 <p>When a static object is involved in the event, the Group and Player fields won&#39;t be populated.</p>
-<h5 id='strong-api-change-history-strong-6'><strong>API CHANGE HISTORY</strong></h5>
+<span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -161,11 +161,11 @@ YYYY-MM-DD: CLASS:<strong>NewFunction( Params )</strong> added</p>
 <li><p>2017-03-07: Added the correct event dispatching in case the event is subscribed by a GROUP.</p></li>
 <li><p>2017-02-07: Did a complete revision of the Event Handing API and underlying mechanisms.</p></li>
 </ul>
-<h5 id='strong-authors-and-contributions-strong-6'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-6'>Contributions:</h5><h5 id='authors-6'>Authors:</h5>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5><span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=89536"><strong>FlightControl</strong></a>: Design &amp; Programming &amp; documentation.</li>
 </ul>
-<h2 id='event-class'>EVENT Class</h2>
+<span id=event-class></span><h2 id='event-class-'>EVENT Class</h2>
 <pre>
 Inheritance : The EVENT Class inherits from the following parents :
 BASE
@@ -177,7 +177,7 @@ BASE
 <ul>
 <li><a href="#event-events-class">Events</a> Events</li>
 </ul>
-<h3 id='event-init-eventid-eventclass'>EVENT:Init(EventID, EventClass)</h3>
+<span id=event-init-eventid-eventclass></span><h3 id='event-init-eventid-eventclass-'>EVENT:Init(EventID, EventClass)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -192,7 +192,7 @@ self</li>
 <ul>
 <li><a href="#event-events-class">Events</a> self</li>
 </ul>
-<h3 id='event-remove-eventclass-eventid'>EVENT:Remove(EventClass, EventID)</h3>
+<span id=event-remove-eventclass-eventid></span><h3 id='event-remove-eventclass-eventid-'>EVENT:Remove(EventClass, EventID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -207,7 +207,7 @@ self</li>
 <ul>
 <li><a href="#event-events-class">Events</a> self</li>
 </ul>
-<h3 id='event-reset-eventclass-eventid'>EVENT:Reset(EventClass, EventID)</h3>
+<span id=event-reset-eventclass-eventid></span><h3 id='event-reset-eventclass-eventid-'>EVENT:Reset(EventClass, EventID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -222,7 +222,7 @@ self</li>
 <ul>
 <li><a href="#event-events-class">Events</a> self</li>
 </ul>
-<h3 id='event-removeall-eventobject'>EVENT:RemoveAll(EventObject)</h3>
+<span id=event-removeall-eventobject></span><h3 id='event-removeall-eventobject-'>EVENT:RemoveAll(EventObject)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -232,7 +232,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction'>EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)</h3>
+<span id=event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction></span><h3 id='event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction-'>EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -250,7 +250,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-oneventgeneric-eventfunction-eventclass-self'>EVENT:OnEventGeneric(EventFunction, EventClass, self)</h3>
+<span id=event-oneventgeneric-eventfunction-eventclass-self></span><h3 id='event-oneventgeneric-eventfunction-eventclass-self-'>EVENT:OnEventGeneric(EventFunction, EventClass, self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -267,7 +267,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-oneventforunit-unitname-eventfunction-eventclass-self'>EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)</h3>
+<span id=event-oneventforunit-unitname-eventfunction-eventclass-self></span><h3 id='event-oneventforunit-unitname-eventfunction-eventclass-self-'>EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -285,7 +285,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-oneventforgroup-groupname-eventfunction-eventclass-self'>EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)</h3>
+<span id=event-oneventforgroup-groupname-eventfunction-eventclass-self></span><h3 id='event-oneventforgroup-groupname-eventfunction-eventclass-self-'>EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -303,7 +303,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-onbirthfortemplate-eventgroup-eventfunction-the'>EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)</h3>
+<span id=event-onbirthfortemplate-eventgroup-eventfunction-the></span><h3 id='event-onbirthfortemplate-eventgroup-eventfunction-the-'>EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -320,7 +320,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-oncrashfortemplate-eventgroup-eventfunction-the'>EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)</h3>
+<span id=event-oncrashfortemplate-eventgroup-eventfunction-the></span><h3 id='event-oncrashfortemplate-eventgroup-eventfunction-the-'>EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -337,7 +337,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-ondeadfortemplate-eventgroup-eventfunction-the'>EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)</h3>
+<span id=event-ondeadfortemplate-eventgroup-eventfunction-the></span><h3 id='event-ondeadfortemplate-eventgroup-eventfunction-the-'>EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -354,7 +354,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-onlandfortemplate-eventtemplate-eventfunction-the'>EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)</h3>
+<span id=event-onlandfortemplate-eventtemplate-eventfunction-the></span><h3 id='event-onlandfortemplate-eventtemplate-eventfunction-the-'>EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -371,7 +371,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-ontakeofffortemplate-eventtemplate-eventfunction-the'>EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)</h3>
+<span id=event-ontakeofffortemplate-eventtemplate-eventfunction-the></span><h3 id='event-ontakeofffortemplate-eventtemplate-eventfunction-the-'>EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -388,7 +388,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-onengineshutdownfortemplate-eventtemplate-eventfunction-the'>EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)</h3>
+<span id=event-onengineshutdownfortemplate-eventtemplate-eventfunction-the></span><h3 id='event-onengineshutdownfortemplate-eventtemplate-eventfunction-the-'>EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -405,7 +405,7 @@ self</li>
 <li><a href="#event-class">EVENT</a>
 self</li>
 </ul>
-<h3 id='event-createeventnewcargo-cargo'>EVENT:CreateEventNewCargo(Cargo)</h3>
+<span id=event-createeventnewcargo-cargo></span><h3 id='event-createeventnewcargo-cargo-'>EVENT:CreateEventNewCargo(Cargo)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -415,7 +415,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='event-createeventdeletecargo-cargo'>EVENT:CreateEventDeleteCargo(Cargo)</h3>
+<span id=event-createeventdeletecargo-cargo></span><h3 id='event-createeventdeletecargo-cargo-'>EVENT:CreateEventDeleteCargo(Cargo)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -425,7 +425,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='event-onevent-event'>EVENT:onEvent(Event)</h3>
+<span id=event-onevent-event></span><h3 id='event-onevent-event-'>EVENT:onEvent(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -436,13 +436,13 @@ Event</li>
 </ul>
 
 <h4> Returns </h4>
-<h2 id='events-class'>EVENTS Class</h2>
+<span id=events-class></span><h2 id='events-class-'>EVENTS Class</h2>
 <pre>
 The EVENTS class does not inherit
 </pre>
 
 <p>Use this structure to subscribe to events using the <a href="#base-handleevent-event-eventfunction">BASE:HandleEvent()</a> method.</p>
-<h2 id='eventdata-class'>EVENTDATA Class</h2>
+<span id=eventdata-class></span><h2 id='eventdata-class-'>EVENTDATA Class</h2>
 <pre>
 The EVENTDATA class does not inherit
 </pre>
@@ -491,7 +491,7 @@ The EVENTDATA class does not inherit
 <li>WeaponName self</li>
 <li>WeaponTgtDCSUnit self</li>
 </ul>
-<h2 id='event-events-class'>EVENT.Events Class</h2>
+<span id=event-events-class></span><h2 id='event-events-class-'>EVENT.Events Class</h2>
 <pre>
 The EVENT.Events class does not inherit
 </pre>
@@ -501,13 +501,13 @@ The EVENT.Events class does not inherit
 <ul>
 <li><u>Number</u> IniUnit</li>
 </ul>
-<h2 id='eventhandler-class'>EVENTHANDLER Class</h2>
+<span id=eventhandler-class></span><h2 id='eventhandler-class-'>EVENTHANDLER Class</h2>
 <pre>
 Inheritance : The EVENTHANDLER Class inherits from the following parents :
 BASE
     `-- EVENTHANDLER
 </pre>
-<h3 id='eventhandler-new'>EVENTHANDLER:New()</h3>
+<span id=eventhandler-new></span><h3 id='eventhandler-new-'>EVENTHANDLER:New()</h3>
 <h4> Parameters </h4>
 
 <ul>

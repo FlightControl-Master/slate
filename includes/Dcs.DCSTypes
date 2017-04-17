@@ -1,46 +1,46 @@
-<h1 id='dcs-dcstypes-module'>Dcs.DCSTypes Module</h1><h2 id='time-class'>Time Class</h2>
+<span id=dcs-dcstypes-module></span><h1 id='dcs-dcstypes-module-'>Dcs.DCSTypes Module</h1><span id=time-class></span><h2 id='time-class-'>Time Class</h2>
 <pre>
 Inheritance : The Time Class inherits from the following parents :
 ERROR !
     `-- Time
 </pre>
-<h2 id='modeltime-class-2'>ModelTime Class</h2>
+<span id=modeltime-class></span><h2 id='modeltime-class-'>ModelTime Class</h2>
 <pre>
 Inheritance : The ModelTime Class inherits from the following parents :
 ERROR !
     `-- ModelTime
 </pre>
-<h2 id='missiontime-class'>MissionTime Class</h2>
+<span id=missiontime-class></span><h2 id='missiontime-class-'>MissionTime Class</h2>
 <pre>
 Inheritance : The MissionTime Class inherits from the following parents :
 ERROR !
     `-- MissionTime
 </pre>
-<h2 id='distance-class'>Distance Class</h2>
+<span id=distance-class></span><h2 id='distance-class-'>Distance Class</h2>
 <pre>
 Inheritance : The Distance Class inherits from the following parents :
 ERROR !
     `-- Distance
 </pre>
-<h2 id='angle-class'>Angle Class</h2>
+<span id=angle-class></span><h2 id='angle-class-'>Angle Class</h2>
 <pre>
 Inheritance : The Angle Class inherits from the following parents :
 ERROR !
     `-- Angle
 </pre>
-<h2 id='azimuth-class'>Azimuth Class</h2>
+<span id=azimuth-class></span><h2 id='azimuth-class-'>Azimuth Class</h2>
 <pre>
 Inheritance : The Azimuth Class inherits from the following parents :
 ERROR !
     `-- Azimuth
 </pre>
-<h2 id='mass-class'>Mass Class</h2>
+<span id=mass-class></span><h2 id='mass-class-'>Mass Class</h2>
 <pre>
 Inheritance : The Mass Class inherits from the following parents :
 ERROR !
     `-- Mass
 </pre>
-<h2 id='vec3-class'>Vec3 Class</h2>
+<span id=vec3-class></span><h2 id='vec3-class-'>Vec3 Class</h2>
 <pre>
 The Vec3 class does not inherit
 </pre>
@@ -54,7 +54,7 @@ The Vec3 class does not inherit
 <li>#Distance z : is directed to the east</li>
 <li>#Distance y : is directed up</li>
 </ul>
-<h2 id='vec2-class'>Vec2 Class</h2>
+<span id=vec2-class></span><h2 id='vec2-class-'>Vec2 Class</h2>
 <pre>
 The Vec2 class does not inherit
 </pre>
@@ -65,7 +65,7 @@ The Vec2 class does not inherit
 <li>#Distance x : Vec2.x = Vec3.x</li>
 <li>#Distance y : Vec2.y = Vec3.z</li>
 </ul>
-<h2 id='position3-class'>Position3 Class</h2>
+<span id=position3-class></span><h2 id='position3-class-'>Position3 Class</h2>
 <pre>
 The Position3 class does not inherit
 </pre>
@@ -78,7 +78,7 @@ The Position3 class does not inherit
 <li>#Vec3 y</li>
 <li>#Vec3 z</li>
 </ul>
-<h2 id='box3-class'>Box3 Class</h2>
+<span id=box3-class></span><h2 id='box3-class-'>Box3 Class</h2>
 <pre>
 The Box3 class does not inherit
 </pre>
@@ -89,13 +89,13 @@ The Box3 class does not inherit
 <li>#Vec3 min</li>
 <li>#Vec3 max</li>
 </ul>
-<h2 id='typename-class'>TypeName Class</h2>
+<span id=typename-class></span><h2 id='typename-class-'>TypeName Class</h2>
 <pre>
 Inheritance : The TypeName Class inherits from the following parents :
 ERROR !
     `-- TypeName
 </pre>
-<h2 id='attributename-class'>AttributeName Class</h2>
+<span id=attributename-class></span><h2 id='attributename-class-'>AttributeName Class</h2>
 <pre>
 Inheritance : The AttributeName Class inherits from the following parents :
 ERROR !
@@ -105,11 +105,11 @@ ERROR !
 <p>Each object type may have attributes.
 Attributes are enlisted in ./Scripts/Database/db_attributes.Lua.
 To know what attributes the object type has, look for the unit type script in sub-directories planes/, helicopter/s, vehicles, navy/ of ./Scripts/Database/ directory.</p>
-<h2 id='attributenamearray-class'>AttributeNameArray Class</h2>
+<span id=attributenamearray-class></span><h2 id='attributenamearray-class-'>AttributeNameArray Class</h2>
 <pre>
 The AttributeNameArray class does not inherit
 </pre>
-<h2 id='ai-class'>AI Class</h2>
+<span id=ai-class></span><h2 id='ai-class-'>AI Class</h2>
 <pre>
 The AI class does not inherit
 </pre>
@@ -121,7 +121,7 @@ The AI class does not inherit
 <li><a href="#ai-task-class">Task</a> Task</li>
 <li><a href="#ai-option-class">Option</a> Option</li>
 </ul>
-<h2 id='ai-skill-class'>AI.Skill Class</h2>
+<span id=ai-skill-class></span><h2 id='ai-skill-class-'>AI.Skill Class</h2>
 <pre>
 The AI.Skill class does not inherit
 </pre>
@@ -136,7 +136,7 @@ The AI.Skill class does not inherit
 <li>PLAYER self</li>
 <li>CLIENT self</li>
 </ul>
-<h2 id='ai-task-class'>AI.Task Class</h2>
+<span id=ai-task-class></span><h2 id='ai-task-class-'>AI.Task Class</h2>
 <pre>
 The AI.Task class does not inherit
 </pre>
@@ -152,7 +152,7 @@ The AI.Task class does not inherit
 <li>#AI.Task.AltitudeType AltitudeType</li>
 <li>#AI.Task.VehicleFormation VehicleFormation</li>
 </ul>
-<h2 id='ai-task-weaponexpend-class'>AI.Task.WeaponExpend Class</h2>
+<span id=ai-task-weaponexpend-class></span><h2 id='ai-task-weaponexpend-class-'>AI.Task.WeaponExpend Class</h2>
 <pre>
 The AI.Task.WeaponExpend class does not inherit
 </pre>
@@ -167,7 +167,7 @@ The AI.Task.WeaponExpend class does not inherit
 <li>HALF self</li>
 <li>ALL self</li>
 </ul>
-<h2 id='ai-task-orbitpattern-class'>AI.Task.OrbitPattern Class</h2>
+<span id=ai-task-orbitpattern-class></span><h2 id='ai-task-orbitpattern-class-'>AI.Task.OrbitPattern Class</h2>
 <pre>
 The AI.Task.OrbitPattern class does not inherit
 </pre>
@@ -178,7 +178,7 @@ The AI.Task.OrbitPattern class does not inherit
 <li>CIRCLE self</li>
 <li>RACE_TRACK self</li>
 </ul>
-<h2 id='ai-task-designation-class'>AI.Task.Designation Class</h2>
+<span id=ai-task-designation-class></span><h2 id='ai-task-designation-class-'>AI.Task.Designation Class</h2>
 <pre>
 The AI.Task.Designation class does not inherit
 </pre>
@@ -192,7 +192,7 @@ The AI.Task.Designation class does not inherit
 <li>IR_POINTER self</li>
 <li>LASER self</li>
 </ul>
-<h2 id='ai-task-waypointtype-class'>AI.Task.WaypointType Class</h2>
+<span id=ai-task-waypointtype-class></span><h2 id='ai-task-waypointtype-class-'>AI.Task.WaypointType Class</h2>
 <pre>
 The AI.Task.WaypointType class does not inherit
 </pre>
@@ -205,7 +205,7 @@ The AI.Task.WaypointType class does not inherit
 <li>TURNING_POINT self</li>
 <li>LAND self</li>
 </ul>
-<h2 id='ai-task-turnmethod-class'>AI.Task.TurnMethod Class</h2>
+<span id=ai-task-turnmethod-class></span><h2 id='ai-task-turnmethod-class-'>AI.Task.TurnMethod Class</h2>
 <pre>
 The AI.Task.TurnMethod class does not inherit
 </pre>
@@ -216,7 +216,7 @@ The AI.Task.TurnMethod class does not inherit
 <li>FLY_OVER_POINT self</li>
 <li>FIN_POINT self</li>
 </ul>
-<h2 id='ai-task-altitudetype-class'>AI.Task.AltitudeType Class</h2>
+<span id=ai-task-altitudetype-class></span><h2 id='ai-task-altitudetype-class-'>AI.Task.AltitudeType Class</h2>
 <pre>
 The AI.Task.AltitudeType class does not inherit
 </pre>
@@ -227,7 +227,7 @@ The AI.Task.AltitudeType class does not inherit
 <li>BARO self</li>
 <li>RADIO self</li>
 </ul>
-<h2 id='ai-task-vehicleformation-class'>AI.Task.VehicleFormation Class</h2>
+<span id=ai-task-vehicleformation-class></span><h2 id='ai-task-vehicleformation-class-'>AI.Task.VehicleFormation Class</h2>
 <pre>
 The AI.Task.VehicleFormation class does not inherit
 </pre>
@@ -244,7 +244,7 @@ The AI.Task.VehicleFormation class does not inherit
 <li>ECHELON_LEFT self</li>
 <li>ECHELON_RIGHT self</li>
 </ul>
-<h2 id='ai-option-class'>AI.Option Class</h2>
+<span id=ai-option-class></span><h2 id='ai-option-class-'>AI.Option Class</h2>
 <pre>
 The AI.Option class does not inherit
 </pre>
@@ -256,7 +256,7 @@ The AI.Option class does not inherit
 <li>#AI.Option.Ground self :                      Ground</li>
 <li>#AI.Option.Naval self :                       Naval</li>
 </ul>
-<h2 id='ai-option-air-class'>AI.Option.Air Class</h2>
+<span id=ai-option-air-class></span><h2 id='ai-option-air-class-'>AI.Option.Air Class</h2>
 <pre>
 The AI.Option.Air class does not inherit
 </pre>
@@ -267,7 +267,7 @@ The AI.Option.Air class does not inherit
 <li>#AI.Option.Air.id self :                      id</li>
 <li>#AI.Option.Air.val self :                     val</li>
 </ul>
-<h2 id='ai-option-ground-class'>AI.Option.Ground Class</h2>
+<span id=ai-option-ground-class></span><h2 id='ai-option-ground-class-'>AI.Option.Ground Class</h2>
 <pre>
 The AI.Option.Ground class does not inherit
 </pre>
@@ -278,7 +278,7 @@ The AI.Option.Ground class does not inherit
 <li>#AI.Option.Ground.id self :                   id</li>
 <li>#AI.Option.Ground.val self :                  val</li>
 </ul>
-<h2 id='ai-option-naval-class'>AI.Option.Naval Class</h2>
+<span id=ai-option-naval-class></span><h2 id='ai-option-naval-class-'>AI.Option.Naval Class</h2>
 <pre>
 The AI.Option.Naval class does not inherit
 </pre>
@@ -289,7 +289,7 @@ The AI.Option.Naval class does not inherit
 <li>#AI.Option.Naval.id self :                    id</li>
 <li>#AI.Option.Naval.val self :                   val</li>
 </ul>
-<h2 id='ai-option-air-id-class'>AI.Option.Air.id Class</h2>
+<span id=ai-option-air-id-class></span><h2 id='ai-option-air-id-class-'>AI.Option.Air.id Class</h2>
 <pre>
 The AI.Option.Air.id class does not inherit
 </pre>
@@ -306,7 +306,7 @@ The AI.Option.Air.id class does not inherit
 <li>RTB_ON_BINGO self</li>
 <li>SILENCE self</li>
 </ul>
-<h2 id='ai-option-air-val-class'>AI.Option.Air.val Class</h2>
+<span id=ai-option-air-val-class></span><h2 id='ai-option-air-val-class-'>AI.Option.Air.val Class</h2>
 <pre>
 The AI.Option.Air.val class does not inherit
 </pre>
@@ -319,7 +319,7 @@ The AI.Option.Air.val class does not inherit
 <li>#AI.Option.Air.val.RADAR_USING RADAR_USING</li>
 <li>#AI.Option.Air.val.FLARE_USING FLARE_USING</li>
 </ul>
-<h2 id='ai-option-air-val-roe-class'>AI.Option.Air.val.ROE Class</h2>
+<span id=ai-option-air-val-roe-class></span><h2 id='ai-option-air-val-roe-class-'>AI.Option.Air.val.ROE Class</h2>
 <pre>
 The AI.Option.Air.val.ROE class does not inherit
 </pre>
@@ -333,7 +333,7 @@ The AI.Option.Air.val.ROE class does not inherit
 <li>RETURN_FIRE self</li>
 <li>WEAPON_HOLD self</li>
 </ul>
-<h2 id='ai-option-air-val-reaction_on_threat-class'>AI.Option.Air.val.REACTION_ON_THREAT Class</h2>
+<span id=ai-option-air-val-reaction_on_threat-class></span><h2 id='ai-option-air-val-reaction_on_threat-class-'>AI.Option.Air.val.REACTION_ON_THREAT Class</h2>
 <pre>
 The AI.Option.Air.val.REACTION_ON_THREAT class does not inherit
 </pre>
@@ -347,7 +347,7 @@ The AI.Option.Air.val.REACTION_ON_THREAT class does not inherit
 <li>BYPASS_AND_ESCAPE self</li>
 <li>ALLOW_ABORT_MISSION self</li>
 </ul>
-<h2 id='ai-option-air-val-radar_using-class'>AI.Option.Air.val.RADAR_USING Class</h2>
+<span id=ai-option-air-val-radar_using-class></span><h2 id='ai-option-air-val-radar_using-class-'>AI.Option.Air.val.RADAR_USING Class</h2>
 <pre>
 The AI.Option.Air.val.RADAR_USING class does not inherit
 </pre>
@@ -360,7 +360,7 @@ The AI.Option.Air.val.RADAR_USING class does not inherit
 <li>FOR_SEARCH_IF_REQUIRED self</li>
 <li>FOR_CONTINUOUS_SEARCH self</li>
 </ul>
-<h2 id='ai-option-air-val-flare_using-class'>AI.Option.Air.val.FLARE_USING Class</h2>
+<span id=ai-option-air-val-flare_using-class></span><h2 id='ai-option-air-val-flare_using-class-'>AI.Option.Air.val.FLARE_USING Class</h2>
 <pre>
 The AI.Option.Air.val.FLARE_USING class does not inherit
 </pre>
@@ -373,7 +373,7 @@ The AI.Option.Air.val.FLARE_USING class does not inherit
 <li>WHEN_FLYING_IN_SAM_WEZ self</li>
 <li>WHEN_FLYING_NEAR_ENEMIES self</li>
 </ul>
-<h2 id='ai-option-ground-id-class'>AI.Option.Ground.id Class</h2>
+<span id=ai-option-ground-id-class></span><h2 id='ai-option-ground-id-class-'>AI.Option.Ground.id Class</h2>
 <pre>
 The AI.Option.Ground.id class does not inherit
 </pre>
@@ -386,7 +386,7 @@ The AI.Option.Ground.id class does not inherit
 <li>DISPERSE_ON_ATTACK true : or false</li>
 <li>ALARM_STATE @{#AI.Option.Ground.val.ALARM_STATE}</li>
 </ul>
-<h2 id='ai-option-ground-val-class'>AI.Option.Ground.val Class</h2>
+<span id=ai-option-ground-val-class></span><h2 id='ai-option-ground-val-class-'>AI.Option.Ground.val Class</h2>
 <pre>
 The AI.Option.Ground.val class does not inherit
 </pre>
@@ -397,7 +397,7 @@ The AI.Option.Ground.val class does not inherit
 <li>#AI.Option.Ground.val.ROE self :              ROE</li>
 <li>#AI.Option.Ground.val.ALARM_STATE self :      ALARM_STATE</li>
 </ul>
-<h2 id='ai-option-ground-val-roe-class'>AI.Option.Ground.val.ROE Class</h2>
+<span id=ai-option-ground-val-roe-class></span><h2 id='ai-option-ground-val-roe-class-'>AI.Option.Ground.val.ROE Class</h2>
 <pre>
 The AI.Option.Ground.val.ROE class does not inherit
 </pre>
@@ -409,7 +409,7 @@ The AI.Option.Ground.val.ROE class does not inherit
 <li>RETURN_FIRE self</li>
 <li>WEAPON_HOLD self</li>
 </ul>
-<h2 id='ai-option-ground-val-alarm_state-class'>AI.Option.Ground.val.ALARM_STATE Class</h2>
+<span id=ai-option-ground-val-alarm_state-class></span><h2 id='ai-option-ground-val-alarm_state-class-'>AI.Option.Ground.val.ALARM_STATE Class</h2>
 <pre>
 The AI.Option.Ground.val.ALARM_STATE class does not inherit
 </pre>
@@ -421,7 +421,7 @@ The AI.Option.Ground.val.ALARM_STATE class does not inherit
 <li>GREEN self</li>
 <li>RED self</li>
 </ul>
-<h2 id='ai-option-naval-id-class'>AI.Option.Naval.id Class</h2>
+<span id=ai-option-naval-id-class></span><h2 id='ai-option-naval-id-class-'>AI.Option.Naval.id Class</h2>
 <pre>
 The AI.Option.Naval.id class does not inherit
 </pre>
@@ -432,7 +432,7 @@ The AI.Option.Naval.id class does not inherit
 <li>NO_OPTION self</li>
 <li>ROE self</li>
 </ul>
-<h2 id='ai-option-naval-val-class'>AI.Option.Naval.val Class</h2>
+<span id=ai-option-naval-val-class></span><h2 id='ai-option-naval-val-class-'>AI.Option.Naval.val Class</h2>
 <pre>
 The AI.Option.Naval.val class does not inherit
 </pre>
@@ -442,7 +442,7 @@ The AI.Option.Naval.val class does not inherit
 <ul>
 <li>#AI.Option.Naval.val.ROE ROE</li>
 </ul>
-<h2 id='ai-option-naval-val-roe-class'>AI.Option.Naval.val.ROE Class</h2>
+<span id=ai-option-naval-val-roe-class></span><h2 id='ai-option-naval-val-roe-class-'>AI.Option.Naval.val.ROE Class</h2>
 <pre>
 The AI.Option.Naval.val.ROE class does not inherit
 </pre>
@@ -454,7 +454,7 @@ The AI.Option.Naval.val.ROE class does not inherit
 <li>RETURN_FIRE self</li>
 <li>WEAPON_HOLD self</li>
 </ul>
-<h2 id='desc-class'>Desc Class</h2>
+<span id=desc-class></span><h2 id='desc-class-'>Desc Class</h2>
 <pre>
 The Desc class does not inherit
 </pre>
@@ -466,7 +466,7 @@ The Desc class does not inherit
 <li><u>String</u> displayName : localized display name</li>
 <li><u>List[]</u> attributes : object type attributes</li>
 </ul>
-<h2 id='distance-class-2'>Distance Class</h2>
+<span id=distance-class></span><h2 id='distance-class-'>Distance Class</h2>
 <pre>
 Inheritance : The Distance Class inherits from the following parents :
 ERROR !

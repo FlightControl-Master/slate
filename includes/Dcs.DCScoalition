@@ -1,4 +1,4 @@
-<h1 id='dcs-dcscoalition-module'>Dcs.DCScoalition Module</h1><h2 id='coalition-class'>coalition Class</h2>
+<span id=dcs-dcscoalition-module></span><h1 id='dcs-dcscoalition-module-'>Dcs.DCScoalition Module</h1><span id=coalition-class></span><h2 id='coalition-class-'>coalition Class</h2>
 <pre>
 The coalition class does not inherit
 </pre>
@@ -8,7 +8,7 @@ The coalition class does not inherit
 <ul>
 <li>#coalition.side side</li>
 </ul>
-<h3 id='getcountrycoalition'>getCountryCoalition()</h3>
+<span id=getcountrycoalition></span><h3 id='getcountrycoalition-'>getCountryCoalition()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -20,7 +20,7 @@ The coalition class does not inherit
 <ul>
 <li><u>Number</u> coalitionId</li>
 </ul>
-<h2 id='coalition-side-class'>coalition.side Class</h2>
+<span id=coalition-side-class></span><h2 id='coalition-side-class-'>coalition.side Class</h2>
 <pre>
 The coalition.side class does not inherit
 </pre>

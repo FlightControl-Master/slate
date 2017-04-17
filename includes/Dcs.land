@@ -1,4 +1,4 @@
-<h1 id='dcs-land-module'>Dcs.land Module</h1><h2 id='land-class'>land Class</h2>
+<span id=dcs-land-module></span><h1 id='dcs-land-module-'>Dcs.land Module</h1><span id=land-class></span><h2 id='land-class-'>land Class</h2>
 <pre>
 Inheritance : The land Class inherits from the following parents :
 ERROR !
@@ -10,7 +10,7 @@ ERROR !
 <ul>
 <li>#land.SurfaceType SurfaceType</li>
 </ul>
-<h3 id='getheight'>getHeight()</h3>
+<span id=getheight></span><h3 id='getheight-'>getHeight()</h3>
 <p>Returns altitude MSL of the point.</p>
 
 <h4> Parameters </h4>
@@ -24,7 +24,7 @@ ERROR !
 <ul>
 <li><a href="#distance-class">Distance</a> self</li>
 </ul>
-<h3 id='getsurfacetype'>getSurfaceType()</h3>
+<span id=getsurfacetype></span><h3 id='getsurfacetype-'>getSurfaceType()</h3>
 <p>returns surface type at the given point.</p>
 
 <h4> Parameters </h4>
@@ -38,7 +38,7 @@ ERROR !
 <ul>
 <li>#land.SurfaceType self</li>
 </ul>
-<h2 id='land-surfacetype-class'>land.SurfaceType Class</h2>
+<span id=land-surfacetype-class></span><h2 id='land-surfacetype-class-'>land.SurfaceType Class</h2>
 <pre>
 The land.SurfaceType class does not inherit
 </pre>

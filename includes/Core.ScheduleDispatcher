@@ -1,4 +1,4 @@
-<h1 id='core-scheduledispatcher-module'>Core.ScheduleDispatcher Module</h1>
+<span id=core-scheduledispatcher-module></span><h1 id='core-scheduledispatcher-module-'>Core.ScheduleDispatcher Module</h1>
 <p>This module defines the SCHEDULEDISPATCHER class, which is used by a central object called _SCHEDULEDISPATCHER.</p>
 
 <p>Takes care of the creation and dispatching of scheduled functions for SCHEDULER objects.</p>
@@ -25,11 +25,11 @@ these will not be executed anymore when the SCHEDULER object has been destroyed.
 The SCHEDULER object therefore keeps a table of &quot;CallID&#39;s&quot;, which are returned after each planning of a new scheduled function by the SCHEDULEDISPATCHER.
 The SCHEDULER object plans new scheduled functions through the <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> method.
 The Schedule() method returns the CallID that is the reference ID for each planned schedule.</p>
-<h5 id='contributions-10'>Contributions: -</h5><h5 id='authors-flightcontrol-design-amp-programming'>Authors: FlightControl : Design &amp; Programming</h5><h2 id='scheduledispatcher-class'>SCHEDULEDISPATCHER Class</h2>
+<span id=contributions></span><h5 id='contributions-'>Contributions: -</h5><span id=authors-flightcontrol-design-amp-programming></span><h5 id='authors-flightcontrol-design-amp-programming-'>Authors: FlightControl : Design &amp; Programming</h5><span id=scheduledispatcher-class></span><h2 id='scheduledispatcher-class-'>SCHEDULEDISPATCHER Class</h2>
 <pre>
 The SCHEDULEDISPATCHER class does not inherit
 </pre>
-<h3 id='scheduledispatcher-addschedule-scheduler'>SCHEDULEDISPATCHER:AddSchedule(Scheduler)</h3>
+<span id=scheduledispatcher-addschedule-scheduler></span><h3 id='scheduledispatcher-addschedule-scheduler-'>SCHEDULEDISPATCHER:AddSchedule(Scheduler)</h3>
 <h4> Parameters </h4>
 
 <ul>

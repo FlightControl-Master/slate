@@ -1,4 +1,4 @@
-<h1 id='core-cargo-module'>Core.Cargo Module</h1>
+<span id=core-cargo-module></span><h1 id='core-cargo-module-'>Core.Cargo Module</h1>
 <p><strong>Core</strong> -- Management of CARGO logistics, that can be transported from and to transportation carriers.</p>
 
 <p><img src="/includes/Pictures/CARGO/Dia1.JPG" alt="Banner Image" /></p>
@@ -9,9 +9,9 @@
 <li>CARGO_UNIT, represented by a <a href="#unit-module">Unit</a> in a singleton <a href="#group-module">Group</a>: Cargo can be represented by a Unit in a Group. a CARGO_UNIT is representable...</li>
 <li>CARGO_GROUP, represented by a <a href="#group-module">Group</a>. A CARGO_GROUP is reportable...</li>
 </ul>
-<h5 id='demo-missions-5'>Demo Missions</h5><h5 id='a-href-cargo-demo-missions-source-code-a'><a href="#">CARGO Demo Missions source code</a></h5><h5 id='a-href-cargo-demo-missions-only-for-beta-testers-a'><a href="#">CARGO Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-5'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-5'>YouTube Channel</h5><h5 id='a-href-spawnstatic-youtube-channel-a'><a href="#">SPAWNSTATIC YouTube Channel</a></h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-cargo-demo-missions-source-code-a></span><h5 id='a-href-cargo-demo-missions-source-code-a-'><a href="#">CARGO Demo Missions source code</a></h5><span id=a-href-cargo-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-cargo-demo-missions-only-for-beta-testers-a-'><a href="#">CARGO Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spawnstatic-youtube-channel-a></span><h5 id='a-href-spawnstatic-youtube-channel-a-'><a href="#">SPAWNSTATIC YouTube Channel</a></h5>
 <p>This module is still under construction, but is described above works already, and will keep working ...</p>
-<h2 id='cargo-class'>CARGO Class</h2>
+<span id=cargo-class></span><h2 id='cargo-class-'>CARGO Class</h2>
 <pre>
 Inheritance : The CARGO Class inherits from the following parents :
 BASE
@@ -26,7 +26,7 @@ A cargo is a logical object defined that is available for transport, and has a l
 
 <p>The CARGO is a state machine: it manages the different events and states of the cargo.
 All derived classes from CARGO follow the same state machine, expose the same cargo event functions, and provide the same cargo states.</p>
-<h5 id='cargo-events'>CARGO Events:</h5>
+<span id=cargo-events></span><h5 id='cargo-events-'>CARGO Events:</h5>
 <ul>
 <li><a href="#cargo-board-tocarrier-nearradius">CARGO:Board()</a> ToCarrier ):  Boards the cargo to a carrier.</li>
 <li><a href="#cargo-load-tocarrier">CARGO:Load()</a> ToCarrier ): Loads the cargo into a carrier, regardless of its position.</li>
@@ -34,7 +34,7 @@ All derived classes from CARGO follow the same state machine, expose the same ca
 <li><a href="#cargo-unload-topointvec2">CARGO:UnLoad()</a> ToPointVec2 ): UnLoads the cargo from a carrier.</li>
 <li>CARGO-Dead Controllable ): The cargo is dead. The cargo process will be ended.</li>
 </ul>
-<h5 id='cargo-states'>CARGO States:</h5>
+<span id=cargo-states></span><h5 id='cargo-states-'>CARGO States:</h5>
 <ul>
 <li><strong>UnLoaded</strong>: The cargo is unloaded from a carrier.</li>
 <li><strong>Boarding</strong>: The cargo is currently boarding (= running) into a carrier.</li>
@@ -43,7 +43,7 @@ All derived classes from CARGO follow the same state machine, expose the same ca
 <li><strong>Dead</strong>: The cargo is dead ...</li>
 <li><strong>End</strong>: The process has come to an end.</li>
 </ul>
-<h5 id='cargo-state-transition-methods'>CARGO state transition methods:</h5>
+<span id=cargo-state-transition-methods></span><h5 id='cargo-state-transition-methods-'>CARGO state transition methods:</h5>
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
 
@@ -72,7 +72,7 @@ These state transition methods need to provide a return value, which is specifie
 <li><u>Boolean</u> Representable : This flag defines if the cargo can be represented by a DCS Unit.</li>
 <li><u>Boolean</u> Containable : This flag defines if the cargo can be contained within a DCS Unit.</li>
 </ul>
-<h3 id='cargo-board-tocarrier-nearradius'>CARGO:Board(ToCarrier, NearRadius)</h3>
+<span id=cargo-board-tocarrier-nearradius></span><h3 id='cargo-board-tocarrier-nearradius-'>CARGO:Board(ToCarrier, NearRadius)</h3>
 <p>Boards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo to the Carrier.
 The cargo must be in the <strong>UnLoaded</strong> state.</p>
 
@@ -86,7 +86,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-unboard-topointvec2'>CARGO:UnBoard(ToPointVec2)</h3>
+<span id=cargo-unboard-topointvec2></span><h3 id='cargo-unboard-topointvec2-'>CARGO:UnBoard(ToPointVec2)</h3>
 <p>UnBoards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo from the Carrier.
 The cargo must be in the <strong>Loaded</strong> state.</p>
 
@@ -99,7 +99,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-load-tocarrier'>CARGO:Load(ToCarrier)</h3>
+<span id=cargo-load-tocarrier></span><h3 id='cargo-load-tocarrier-'>CARGO:Load(ToCarrier)</h3>
 <p>Loads the cargo to a Carrier. The event will load the cargo into the Carrier regardless of its position. There will be no movement simulated of the cargo loading.
 The cargo must be in the <strong>UnLoaded</strong> state.</p>
 
@@ -112,7 +112,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-unload-topointvec2'>CARGO:UnLoad(ToPointVec2)</h3>
+<span id=cargo-unload-topointvec2></span><h3 id='cargo-unload-topointvec2-'>CARGO:UnLoad(ToPointVec2)</h3>
 <p>UnLoads the cargo to a Carrier. The event will unload the cargo from the Carrier. There will be no movement simulated of the cargo loading.
 The cargo must be in the <strong>Loaded</strong> state.</p>
 
@@ -125,7 +125,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-onleaveunloaded-controllable'>CARGO:OnLeaveUnLoaded(Controllable)</h3>
+<span id=cargo-onleaveunloaded-controllable></span><h3 id='cargo-onleaveunloaded-controllable-'>CARGO:OnLeaveUnLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -139,7 +139,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo-onenterunloaded-controllable'>CARGO:OnEnterUnLoaded(Controllable)</h3>
+<span id=cargo-onenterunloaded-controllable></span><h3 id='cargo-onenterunloaded-controllable-'>CARGO:OnEnterUnLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -149,31 +149,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-onleaveloaded-controllable'>CARGO:OnLeaveLoaded(Controllable)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo-class">CARGO</a>
-self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-<h3 id='cargo-onenterloaded-controllable'>CARGO:OnEnterLoaded(Controllable)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo-class">CARGO</a>
-self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
-</ul>
-
-<h4> Returns </h4>
-<h3 id='cargo-onleaveboarding-controllable'>CARGO:OnLeaveBoarding(Controllable)</h3>
+<span id=cargo-onleaveloaded-controllable></span><h3 id='cargo-onleaveloaded-controllable-'>CARGO:OnLeaveLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -187,7 +163,31 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo-onenterboarding-controllable-nearradius'>CARGO:OnEnterBoarding(Controllable, NearRadius)</h3>
+<span id=cargo-onenterloaded-controllable></span><h3 id='cargo-onenterloaded-controllable-'>CARGO:OnEnterLoaded(Controllable)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo-class">CARGO</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo-onleaveboarding-controllable></span><h3 id='cargo-onleaveboarding-controllable-'>CARGO:OnLeaveBoarding(Controllable)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo-class">CARGO</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<span id=cargo-onenterboarding-controllable-nearradius></span><h3 id='cargo-onenterboarding-controllable-nearradius-'>CARGO:OnEnterBoarding(Controllable, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -198,7 +198,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-onleaveunboarding-controllable'>CARGO:OnLeaveUnBoarding(Controllable)</h3>
+<span id=cargo-onleaveunboarding-controllable></span><h3 id='cargo-onleaveunboarding-controllable-'>CARGO:OnLeaveUnBoarding(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -212,7 +212,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo-onenterunboarding-controllable'>CARGO:OnEnterUnBoarding(Controllable)</h3>
+<span id=cargo-onenterunboarding-controllable></span><h3 id='cargo-onenterunboarding-controllable-'>CARGO:OnEnterUnBoarding(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -222,7 +222,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo-new-type-name-weight-nearradius'>CARGO:New(Type, Name, Weight, NearRadius)</h3>
+<span id=cargo-new-type-name-weight-nearradius></span><h3 id='cargo-new-type-name-weight-nearradius-'>CARGO:New(Type, Name, Weight, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -240,7 +240,7 @@ self</li>
 <li><a href="#cargo-class">CARGO</a>
 self</li>
 </ul>
-<h3 id='cargo-getname'>CARGO:GetName()</h3>
+<span id=cargo-getname></span><h3 id='cargo-getname-'>CARGO:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -253,7 +253,7 @@ self</li>
 <ul>
 <li><u>String</u> The : name of the Cargo.</li>
 </ul>
-<h3 id='cargo-gettype'>CARGO:GetType()</h3>
+<span id=cargo-gettype></span><h3 id='cargo-gettype-'>CARGO:GetType()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -266,7 +266,7 @@ self</li>
 <ul>
 <li><u>String</u> The : type of the Cargo.</li>
 </ul>
-<h3 id='cargo-isloaded'>CARGO:IsLoaded()</h3>
+<span id=cargo-isloaded></span><h3 id='cargo-isloaded-'>CARGO:IsLoaded()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -279,7 +279,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if loaded</li>
 </ul>
-<h3 id='cargo-isunloaded'>CARGO:IsUnLoaded()</h3>
+<span id=cargo-isunloaded></span><h3 id='cargo-isunloaded-'>CARGO:IsUnLoaded()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -292,7 +292,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if unloaded</li>
 </ul>
-<h3 id='cargo-spawn'>CARGO:Spawn()</h3>
+<span id=cargo-spawn></span><h3 id='cargo-spawn-'>CARGO:Spawn()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -306,7 +306,7 @@ self</li>
 <li><a href="#cargo-class">CARGO</a>
 self</li>
 </ul>
-<h3 id='cargo-isinzone-zone'>CARGO:IsInZone(Zone)</h3>
+<span id=cargo-isinzone-zone></span><h3 id='cargo-isinzone-zone-'>CARGO:IsInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -320,7 +320,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> <strong>true</strong> : if cargo is in the Zone, <strong>false</strong> if cargo is not in the Zone.</li>
 </ul>
-<h3 id='cargo-isnear-pointvec2-nearradius'>CARGO:IsNear(PointVec2, NearRadius)</h3>
+<span id=cargo-isnear-pointvec2-nearradius></span><h3 id='cargo-isnear-pointvec2-nearradius-'>CARGO:IsNear(PointVec2, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -335,7 +335,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo-getpointvec2'>CARGO:GetPointVec2()</h3>
+<span id=cargo-getpointvec2></span><h3 id='cargo-getpointvec2-'>CARGO:GetPointVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -348,7 +348,7 @@ self</li>
 <ul>
 <li><a href="#point_vec2-class">POINT_VEC2</a> self</li>
 </ul>
-<h3 id='cargo-setweight-weight'>CARGO:SetWeight(Weight)</h3>
+<span id=cargo-setweight-weight></span><h3 id='cargo-setweight-weight-'>CARGO:SetWeight(Weight)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -363,11 +363,11 @@ self</li>
 <li><a href="#cargo-class">CARGO</a>
 self</li>
 </ul>
-<h2 id='cargo-cargoobjects-class'>CARGO.CargoObjects Class</h2>
+<span id=cargo-cargoobjects-class></span><h2 id='cargo-cargoobjects-class-'>CARGO.CargoObjects Class</h2>
 <pre>
 The CARGO.CargoObjects class does not inherit
 </pre>
-<h2 id='cargo_representable-class'>CARGO_REPRESENTABLE Class</h2>
+<span id=cargo_representable-class></span><h2 id='cargo_representable-class-'>CARGO_REPRESENTABLE Class</h2>
 <pre>
 Inheritance : The CARGO_REPRESENTABLE Class inherits from the following parents :
 BASE
@@ -383,7 +383,7 @@ BASE
 <ul>
 <li>test self</li>
 </ul>
-<h3 id='cargo_representable-new-type-name-weight-reportradius-nearradius'>CARGO_REPRESENTABLE:New(Type, Name, Weight, ReportRadius, NearRadius)</h3>
+<span id=cargo_representable-new-type-name-weight-reportradius-nearradius></span><h3 id='cargo_representable-new-type-name-weight-reportradius-nearradius-'>CARGO_REPRESENTABLE:New(Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -402,7 +402,7 @@ self</li>
 <li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
 self</li>
 </ul>
-<h3 id='cargo_representable-routeto-topointvec2-speed'>CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)</h3>
+<span id=cargo_representable-routeto-topointvec2-speed></span><h3 id='cargo_representable-routeto-topointvec2-speed-'>CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -418,7 +418,7 @@ self</li>
 <li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
 self</li>
 </ul>
-<h2 id='cargo_reportable-class'>CARGO_REPORTABLE Class</h2>
+<span id=cargo_reportable-class></span><h2 id='cargo_reportable-class-'>CARGO_REPORTABLE Class</h2>
 <pre>
 Inheritance : The CARGO_REPORTABLE Class inherits from the following parents :
 BASE
@@ -428,7 +428,7 @@ BASE
                 `-- CARGO
                     `-- CARGO_REPORTABLE
 </pre>
-<h3 id='cargo_reportable-new-cargoobject-type-name-weight-reportradius-nearradius'>CARGO_REPORTABLE:New(CargoObject, Type, Name, Weight, ReportRadius, NearRadius)</h3>
+<span id=cargo_reportable-new-cargoobject-type-name-weight-reportradius-nearradius></span><h3 id='cargo_reportable-new-cargoobject-type-name-weight-reportradius-nearradius-'>CARGO_REPORTABLE:New(CargoObject, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -448,7 +448,7 @@ self</li>
 <li><a href="#cargo_reportable-class">CARGO_REPORTABLE</a>
 self</li>
 </ul>
-<h3 id='cargo_reportable-isinradius-pointvec2'>CARGO_REPORTABLE:IsInRadius(PointVec2)</h3>
+<span id=cargo_reportable-isinradius-pointvec2></span><h3 id='cargo_reportable-isinradius-pointvec2-'>CARGO_REPORTABLE:IsInRadius(PointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -462,7 +462,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo_reportable-messagetogroup-message-taskgroup-name'>CARGO_REPORTABLE:MessageToGroup(Message, TaskGroup, Name)</h3>
+<span id=cargo_reportable-messagetogroup-message-taskgroup-name></span><h3 id='cargo_reportable-messagetogroup-message-taskgroup-name-'>CARGO_REPORTABLE:MessageToGroup(Message, TaskGroup, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -474,7 +474,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_reportable-getboardingrange'>CARGO_REPORTABLE:GetBoardingRange()</h3>
+<span id=cargo_reportable-getboardingrange></span><h3 id='cargo_reportable-getboardingrange-'>CARGO_REPORTABLE:GetBoardingRange()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -487,7 +487,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : range till cargo will board.</li>
 </ul>
-<h2 id='cargo_unit-class'>CARGO_UNIT Class</h2>
+<span id=cargo_unit-class></span><h2 id='cargo_unit-class-'>CARGO_UNIT Class</h2>
 <pre>
 Inheritance : The CARGO_UNIT Class inherits from the following parents :
 BASE
@@ -498,7 +498,7 @@ BASE
                     `-- CARGO_REPRESENTABLE
                         `-- CARGO_UNIT
 </pre>
-<h3 id='cargo_unit-new-cargounit-type-name-weight-reportradius-nearradius'>CARGO_UNIT:New(CargoUnit, Type, Name, Weight, ReportRadius, NearRadius)</h3>
+<span id=cargo_unit-new-cargounit-type-name-weight-reportradius-nearradius></span><h3 id='cargo_unit-new-cargounit-type-name-weight-reportradius-nearradius-'>CARGO_UNIT:New(CargoUnit, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -518,7 +518,7 @@ self</li>
 <li><a href="#cargo_unit-class">CARGO_UNIT</a>
 self</li>
 </ul>
-<h3 id='cargo_unit-destroy'>CARGO_UNIT:Destroy()</h3>
+<span id=cargo_unit-destroy></span><h3 id='cargo_unit-destroy-'>CARGO_UNIT:Destroy()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -532,20 +532,7 @@ self</li>
 <li><a href="#cargo_unit-class">CARGO_UNIT</a>
 self</li>
 </ul>
-<h3 id='cargo_unit-onenterunboarding-event-from-to-topointvec2'>CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
-<li><u>String</u> Event</li>
-<li><u>String</u> From</li>
-<li><u>String</u> To</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
-</ul>
-
-<h4> Returns </h4>
-<h3 id='cargo_unit-onleaveunboarding-event-from-to-topointvec2'>CARGO_UNIT:onleaveUnBoarding(Event, From, To, ToPointVec2)</h3>
+<span id=cargo_unit-onenterunboarding-event-from-to-topointvec2></span><h3 id='cargo_unit-onenterunboarding-event-from-to-topointvec2-'>CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -558,7 +545,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onafterunboarding-event-from-to-topointvec2'>CARGO_UNIT:onafterUnBoarding(Event, From, To, ToPointVec2)</h3>
+<span id=cargo_unit-onleaveunboarding-event-from-to-topointvec2></span><h3 id='cargo_unit-onleaveunboarding-event-from-to-topointvec2-'>CARGO_UNIT:onleaveUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -571,7 +558,20 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onenterunloaded-event-from-to-self'>CARGO_UNIT:onenterUnLoaded(Event, From, To, self)</h3>
+<span id=cargo_unit-onafterunboarding-event-from-to-topointvec2></span><h3 id='cargo_unit-onafterunboarding-event-from-to-topointvec2-'>CARGO_UNIT:onafterUnBoarding(Event, From, To, ToPointVec2)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+self</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
+<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo_unit-onenterunloaded-event-from-to-self></span><h3 id='cargo_unit-onenterunloaded-event-from-to-self-'>CARGO_UNIT:onenterUnLoaded(Event, From, To, self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -584,7 +584,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onenterboarding-event-from-to-cargocarrier'>CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
+<span id=cargo_unit-onenterboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -597,7 +597,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onleaveboarding-event-from-to-cargocarrier'>CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
+<span id=cargo_unit-onleaveboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onleaveboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -610,7 +610,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onenterloaded-event-from-to-cargocarrier'>CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
+<span id=cargo_unit-onenterloaded-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterloaded-event-from-to-cargocarrier-'>CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -623,7 +623,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_unit-onafterboard-event-from-to'>CARGO_UNIT:onafterBoard(Event, From, To)</h3>
+<span id=cargo_unit-onafterboard-event-from-to></span><h3 id='cargo_unit-onafterboard-event-from-to-'>CARGO_UNIT:onafterBoard(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -635,7 +635,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h2 id='cargo_package-class'>CARGO_PACKAGE Class</h2>
+<span id=cargo_package-class></span><h2 id='cargo_package-class-'>CARGO_PACKAGE Class</h2>
 <pre>
 Inheritance : The CARGO_PACKAGE Class inherits from the following parents :
 BASE
@@ -646,7 +646,7 @@ BASE
                     `-- CARGO_REPRESENTABLE
                         `-- CARGO_PACKAGE
 </pre>
-<h3 id='cargo_package-new-cargocarrier-type-name-weight-reportradius-nearradius'>CARGO_PACKAGE:New(CargoCarrier, Type, Name, Weight, ReportRadius, NearRadius)</h3>
+<span id=cargo_package-new-cargocarrier-type-name-weight-reportradius-nearradius></span><h3 id='cargo_package-new-cargocarrier-type-name-weight-reportradius-nearradius-'>CARGO_PACKAGE:New(CargoCarrier, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -666,7 +666,7 @@ self</li>
 <li><a href="#cargo_package-class">CARGO_PACKAGE</a>
 self</li>
 </ul>
-<h3 id='cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle'>CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)</h3>
+<span id=cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle></span><h3 id='cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle-'>CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -682,7 +682,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_package-isnear-cargocarrier'>CARGO_PACKAGE:IsNear(CargoCarrier)</h3>
+<span id=cargo_package-isnear-cargocarrier></span><h3 id='cargo_package-isnear-cargocarrier-'>CARGO_PACKAGE:IsNear(CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -696,7 +696,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='cargo_package-onafteronboarded-event-from-to-cargocarrier'>CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)</h3>
+<span id=cargo_package-onafteronboarded-event-from-to-cargocarrier></span><h3 id='cargo_package-onafteronboarded-event-from-to-cargocarrier-'>CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -709,7 +709,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_package-onafterunboard-event-from-to-speed-unloaddistance-unboarddistance-radius-angle'>CARGO_PACKAGE:onafterUnBoard(Event, From, To, Speed, UnLoadDistance, UnBoardDistance, Radius, Angle)</h3>
+<span id=cargo_package-onafterunboard-event-from-to-speed-unloaddistance-unboarddistance-radius-angle></span><h3 id='cargo_package-onafterunboard-event-from-to-speed-unloaddistance-unboarddistance-radius-angle-'>CARGO_PACKAGE:onafterUnBoard(Event, From, To, Speed, UnLoadDistance, UnBoardDistance, Radius, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -726,7 +726,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_package-onafterunboarded-event-from-to-cargocarrier'>CARGO_PACKAGE:onafterUnBoarded(Event, From, To, CargoCarrier)</h3>
+<span id=cargo_package-onafterunboarded-event-from-to-cargocarrier></span><h3 id='cargo_package-onafterunboarded-event-from-to-cargocarrier-'>CARGO_PACKAGE:onafterUnBoarded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -739,7 +739,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_package-onafterload-event-from-to-cargocarrier-speed-loaddistance-angle'>CARGO_PACKAGE:onafterLoad(Event, From, To, CargoCarrier, Speed, LoadDistance, Angle)</h3>
+<span id=cargo_package-onafterload-event-from-to-cargocarrier-speed-loaddistance-angle></span><h3 id='cargo_package-onafterload-event-from-to-cargocarrier-speed-loaddistance-angle-'>CARGO_PACKAGE:onafterLoad(Event, From, To, CargoCarrier, Speed, LoadDistance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -755,7 +755,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_package-onafterunload-event-from-to-distance-angle'>CARGO_PACKAGE:onafterUnLoad(Event, From, To, Distance, Angle)</h3>
+<span id=cargo_package-onafterunload-event-from-to-distance-angle></span><h3 id='cargo_package-onafterunload-event-from-to-distance-angle-'>CARGO_PACKAGE:onafterUnLoad(Event, From, To, Distance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -769,7 +769,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h2 id='cargo_group-class'>CARGO_GROUP Class</h2>
+<span id=cargo_group-class></span><h2 id='cargo_group-class-'>CARGO_GROUP Class</h2>
 <pre>
 Inheritance : The CARGO_GROUP Class inherits from the following parents :
 BASE
@@ -780,7 +780,7 @@ BASE
                     `-- CARGO_REPORTABLE
                         `-- CARGO_GROUP
 </pre>
-<h3 id='cargo_group-new-cargogroup-type-name-reportradius-nearradius'>CARGO_GROUP:New(CargoGroup, Type, Name, ReportRadius, NearRadius)</h3>
+<span id=cargo_group-new-cargogroup-type-name-reportradius-nearradius></span><h3 id='cargo_group-new-cargogroup-type-name-reportradius-nearradius-'>CARGO_GROUP:New(CargoGroup, Type, Name, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -799,7 +799,7 @@ self</li>
 <li><a href="#cargo_group-class">CARGO_GROUP</a>
 self</li>
 </ul>
-<h3 id='cargo_group-onenterboarding-cargocarrier-event-from-to'>CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)</h3>
+<span id=cargo_group-onenterboarding-cargocarrier-event-from-to></span><h3 id='cargo_group-onenterboarding-cargocarrier-event-from-to-'>CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -812,7 +812,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onenterloaded-cargocarrier-event-from-to'>CARGO_GROUP:onenterLoaded(CargoCarrier, Event, From, To)</h3>
+<span id=cargo_group-onenterloaded-cargocarrier-event-from-to></span><h3 id='cargo_group-onenterloaded-cargocarrier-event-from-to-'>CARGO_GROUP:onenterLoaded(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -825,7 +825,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onleaveboarding-cargocarrier-event-from-to'>CARGO_GROUP:onleaveBoarding(CargoCarrier, Event, From, To)</h3>
+<span id=cargo_group-onleaveboarding-cargocarrier-event-from-to></span><h3 id='cargo_group-onleaveboarding-cargocarrier-event-from-to-'>CARGO_GROUP:onleaveBoarding(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -838,7 +838,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onenterunboarding-topointvec2-event-from-to'>CARGO_GROUP:onenterUnBoarding(ToPointVec2, Event, From, To)</h3>
+<span id=cargo_group-onenterunboarding-topointvec2-event-from-to></span><h3 id='cargo_group-onenterunboarding-topointvec2-event-from-to-'>CARGO_GROUP:onenterUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -851,7 +851,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onleaveunboarding-topointvec2-event-from-to'>CARGO_GROUP:onleaveUnBoarding(ToPointVec2, Event, From, To)</h3>
+<span id=cargo_group-onleaveunboarding-topointvec2-event-from-to></span><h3 id='cargo_group-onleaveunboarding-topointvec2-event-from-to-'>CARGO_GROUP:onleaveUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -864,7 +864,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onafterunboarding-topointvec2-event-from-to'>CARGO_GROUP:onafterUnBoarding(ToPointVec2, Event, From, To)</h3>
+<span id=cargo_group-onafterunboarding-topointvec2-event-from-to></span><h3 id='cargo_group-onafterunboarding-topointvec2-event-from-to-'>CARGO_GROUP:onafterUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -877,7 +877,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='cargo_group-onenterunloaded-self-event-from-to'>CARGO_GROUP:onenterUnLoaded(self, Event, From, To)</h3>
+<span id=cargo_group-onenterunloaded-self-event-from-to></span><h3 id='cargo_group-onenterunloaded-self-event-from-to-'>CARGO_GROUP:onenterUnLoaded(self, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>

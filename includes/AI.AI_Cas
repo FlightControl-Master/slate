@@ -1,4 +1,4 @@
-<h1 id='ai-ai_cas-module'>AI.AI_Cas Module</h1>
+<span id=ai-ai_cas-module></span><h1 id='ai-ai_cas-module-'>AI.AI_Cas Module</h1>
 <p><strong>AI</strong> -- <strong>Provide Close Air Support to friendly ground troops.</strong></p>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia1.JPG" alt="Banner Image" /></p>
@@ -10,7 +10,7 @@
 <ul>
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>: Perform a CAS in a zone.</li>
 </ul>
-<h5 id='demo-missions-3'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-cas-20-20close-20air-20support-ai_cas-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-cas-20-20close-20air-20support-ai_cas-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-3'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-3'>YouTube Channel</h5><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3jbo1wdqqpyyrrmikr2ir2-ai_cas-youtube-channel-a'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3JBO1WDqqpyYRRmIkR2ir2">AI_CAS YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-3'><strong>API CHANGE HISTORY</strong></h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-cas-20-20close-20air-20support-ai_cas-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-cas-20-20close-20air-20support-ai_cas-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-cas-20-20close-20air-20support-ai_cas-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-cas-20-20close-20air-20support-ai_cas-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/CAS%20-%20Close%20Air%20Support">AI_CAS Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3jbo1wdqqpyyrrmikr2ir2-ai_cas-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul3jbo1wdqqpyyrrmikr2ir2-ai_cas-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl3JBO1WDqqpyYRRmIkR2ir2">AI_CAS YouTube Channel</a></h5><span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -21,17 +21,17 @@
 <p>Hereby the change log:</p>
 
 <p>2017-01-15: Initial class and API.</p>
-<h5 id='strong-authors-and-contributions-strong-3'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-3'>Contributions:</h5>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=62835">Pikey</a></strong>: Concept, Advice &amp; Testing.</li>
 <li><strong><a href="http://forums.eagle.ru:8080/member.php?u=75036">Gunterlund</a></strong>: Test case revision.</li>
 </ul>
-<h5 id='authors-3'>Authors:</h5>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
 </ul>
-<h2 id='ai_cas_zone-class'>AI_CAS_ZONE Class</h2>
+<span id=ai_cas_zone-class></span><h2 id='ai_cas_zone-class-'>AI_CAS_ZONE Class</h2>
 <pre>
 Inheritance : The AI_CAS_ZONE Class inherits from the following parents :
 BASE
@@ -98,20 +98,20 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 <p>When the fuel treshold has been reached, the airplane will fly towards the nearest friendly airbase and will land.</p>
 
 <p><img src="/includes/Pictures/AI_CAS/Dia12.JPG" alt="Engage Event" /></p>
-<h5 id='1-ai_cas_zone-constructor'>1. AI_CAS_ZONE constructor</h5>
+<span id=1-ai_cas_zone-constructor></span><h5 id='1-ai_cas_zone-constructor-'>1. AI_CAS_ZONE constructor</h5>
 <ul>
 <li><a href="#ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype">AI_CAS_ZONE:New()</a>: Creates a new AI_CAS_ZONE object.</li>
 </ul>
-<h5 id='2-ai_cas_zone-is-a-fsm'>2. AI_CAS_ZONE is a FSM</h5>
+<span id=2-ai_cas_zone-is-a-fsm></span><h5 id='2-ai_cas_zone-is-a-fsm-'>2. AI_CAS_ZONE is a FSM</h5>
 <p><img src="/includes/Pictures/AI_CAS/Dia2.JPG" alt="Process" /></p>
-<h5 id='2-1-ai_cas_zone-states'>2.1. AI_CAS_ZONE States</h5>
+<span id=2-1-ai_cas_zone-states></span><h5 id='2-1-ai_cas_zone-states-'>2.1. AI_CAS_ZONE States</h5>
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
 <li><strong>Patrolling</strong> ( Group ): The AI is patrolling the Patrol Zone.</li>
 <li><strong>Engaging</strong> ( Group ): The AI is engaging the targets in the Engage Zone, executing CAS.</li>
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
-<h5 id='2-2-ai_cas_zone-events'>2.2. AI_CAS_ZONE Events</h5>
+<span id=2-2-ai_cas_zone-events></span><h5 id='2-2-ai_cas_zone-events-'>2.2. AI_CAS_ZONE Events</h5>
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
 <li><strong><a href="#ai_patrol_zone-route">AI_PATROL_ZONE:Route()</a></strong>: Route the AI to a new random 3D point within the Patrol Zone.</li>
@@ -133,7 +133,7 @@ It can be notified to go RTB through the <strong>RTB</strong> event.</p>
 <li><a href="#controllable-class">CONTROLLABLE</a> AIControllable : The <a href="#controllable-module">Controllable</a> patrolling.</li>
 <li><a href="#zone_base-class">ZONE_BASE</a> TargetZone : The <a href="#zone-module">Zone</a> where the patrol needs to be executed.</li>
 </ul>
-<h3 id='ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype'>AI_CAS_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, EngageZone, PatrolAltType)</h3>
+<span id=ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype></span><h3 id='ai_cas_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-engagezone-patrolalttype-'>AI_CAS_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, EngageZone, PatrolAltType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -154,7 +154,7 @@ self</li>
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>
 self</li>
 </ul>
-<h3 id='ai_cas_zone-onbeforeengage-controllable-from-event-to'>AI_CAS_ZONE:OnBeforeEngage(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforeengage-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforeengage-controllable-from-event-to-'>AI_CAS_ZONE:OnBeforeEngage(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -169,7 +169,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onafterengage-controllable-from-event-to'>AI_CAS_ZONE:OnAfterEngage(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterengage-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterengage-controllable-from-event-to-'>AI_CAS_ZONE:OnAfterEngage(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -184,7 +184,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-engage-engagespeed-engagealtitude-engageweaponexpend-engageattackqty-engagedirection'>AI_CAS_ZONE:Engage(EngageSpeed, EngageAltitude, EngageWeaponExpend, EngageAttackQty, EngageDirection)</h3>
+<span id=ai_cas_zone-engage-engagespeed-engagealtitude-engageweaponexpend-engageattackqty-engagedirection></span><h3 id='ai_cas_zone-engage-engagespeed-engagealtitude-engageweaponexpend-engageattackqty-engagedirection-'>AI_CAS_ZONE:Engage(EngageSpeed, EngageAltitude, EngageWeaponExpend, EngageAttackQty, EngageDirection)</h3>
 <p>Synchronous Event Trigger for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -200,7 +200,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onleaveengaging-controllable-from-event-to'>AI_CAS_ZONE:OnLeaveEngaging(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onleaveengaging-controllable-from-event-to></span><h3 id='ai_cas_zone-onleaveengaging-controllable-from-event-to-'>AI_CAS_ZONE:OnLeaveEngaging(Controllable, From, Event, To)</h3>
 <p>OnLeave Transition Handler for State Engaging.</p>
 
 <h4> Parameters </h4>
@@ -219,7 +219,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-<h3 id='ai_cas_zone-onenterengaging-controllable-from-event-to'>AI_CAS_ZONE:OnEnterEngaging(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onenterengaging-controllable-from-event-to></span><h3 id='ai_cas_zone-onenterengaging-controllable-from-event-to-'>AI_CAS_ZONE:OnEnterEngaging(Controllable, From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Engaging.</p>
 
 <h4> Parameters </h4>
@@ -234,7 +234,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onbeforefired-controllable-from-event-to'>AI_CAS_ZONE:OnBeforeFired(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforefired-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforefired-controllable-from-event-to-'>AI_CAS_ZONE:OnBeforeFired(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -253,7 +253,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-<h3 id='ai_cas_zone-onafterfired-controllable-from-event-to'>AI_CAS_ZONE:OnAfterFired(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterfired-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterfired-controllable-from-event-to-'>AI_CAS_ZONE:OnAfterFired(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -268,7 +268,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-fired'>AI_CAS_ZONE:Fired()</h3>
+<span id=ai_cas_zone-fired></span><h3 id='ai_cas_zone-fired-'>AI_CAS_ZONE:Fired()</h3>
 <p>Synchronous Event Trigger for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -279,7 +279,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onbeforedestroy-controllable-from-event-to'>AI_CAS_ZONE:OnBeforeDestroy(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforedestroy-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforedestroy-controllable-from-event-to-'>AI_CAS_ZONE:OnBeforeDestroy(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -298,7 +298,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-<h3 id='ai_cas_zone-onafterdestroy-controllable-from-event-to'>AI_CAS_ZONE:OnAfterDestroy(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterdestroy-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterdestroy-controllable-from-event-to-'>AI_CAS_ZONE:OnAfterDestroy(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -313,7 +313,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-destroy'>AI_CAS_ZONE:Destroy()</h3>
+<span id=ai_cas_zone-destroy></span><h3 id='ai_cas_zone-destroy-'>AI_CAS_ZONE:Destroy()</h3>
 <p>Synchronous Event Trigger for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -324,7 +324,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onbeforeabort-controllable-from-event-to'>AI_CAS_ZONE:OnBeforeAbort(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforeabort-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforeabort-controllable-from-event-to-'>AI_CAS_ZONE:OnBeforeAbort(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -343,7 +343,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-<h3 id='ai_cas_zone-onafterabort-controllable-from-event-to'>AI_CAS_ZONE:OnAfterAbort(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterabort-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterabort-controllable-from-event-to-'>AI_CAS_ZONE:OnAfterAbort(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -358,7 +358,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-abort'>AI_CAS_ZONE:Abort()</h3>
+<span id=ai_cas_zone-abort></span><h3 id='ai_cas_zone-abort-'>AI_CAS_ZONE:Abort()</h3>
 <p>Synchronous Event Trigger for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -369,7 +369,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onbeforeaccomplish-controllable-from-event-to'>AI_CAS_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforeaccomplish-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforeaccomplish-controllable-from-event-to-'>AI_CAS_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -388,7 +388,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-<h3 id='ai_cas_zone-onafteraccomplish-controllable-from-event-to'>AI_CAS_ZONE:OnAfterAccomplish(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafteraccomplish-controllable-from-event-to></span><h3 id='ai_cas_zone-onafteraccomplish-controllable-from-event-to-'>AI_CAS_ZONE:OnAfterAccomplish(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -403,7 +403,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-accomplish'>AI_CAS_ZONE:Accomplish()</h3>
+<span id=ai_cas_zone-accomplish></span><h3 id='ai_cas_zone-accomplish-'>AI_CAS_ZONE:Accomplish()</h3>
 <p>Synchronous Event Trigger for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -414,7 +414,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-setengagezone-engagezone'>AI_CAS_ZONE:SetEngageZone(EngageZone)</h3>
+<span id=ai_cas_zone-setengagezone-engagezone></span><h3 id='ai_cas_zone-setengagezone-engagezone-'>AI_CAS_ZONE:SetEngageZone(EngageZone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -429,7 +429,7 @@ self</li>
 <li><a href="#ai_cas_zone-class">AI_CAS_ZONE</a>
 self</li>
 </ul>
-<h3 id='ai_cas_zone-onafterstart-controllable-from-event-to'>AI_CAS_ZONE:onafterStart(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterstart-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterstart-controllable-from-event-to-'>AI_CAS_ZONE:onafterStart(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -442,7 +442,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onbeforeengage-controllable-from-event-to-2'>AI_CAS_ZONE:onbeforeEngage(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onbeforeengage-controllable-from-event-to></span><h3 id='ai_cas_zone-onbeforeengage-controllable-from-event-to-'>AI_CAS_ZONE:onbeforeEngage(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -455,7 +455,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onaftertarget-controllable-from-event-to'>AI_CAS_ZONE:onafterTarget(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onaftertarget-controllable-from-event-to></span><h3 id='ai_cas_zone-onaftertarget-controllable-from-event-to-'>AI_CAS_ZONE:onafterTarget(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -468,7 +468,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onafterabort-controllable-from-event-to-2'>AI_CAS_ZONE:onafterAbort(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafterabort-controllable-from-event-to></span><h3 id='ai_cas_zone-onafterabort-controllable-from-event-to-'>AI_CAS_ZONE:onafterAbort(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -481,7 +481,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onafteraccomplish-controllable-from-event-to-2'>AI_CAS_ZONE:onafterAccomplish(Controllable, From, Event, To)</h3>
+<span id=ai_cas_zone-onafteraccomplish-controllable-from-event-to></span><h3 id='ai_cas_zone-onafteraccomplish-controllable-from-event-to-'>AI_CAS_ZONE:onafterAccomplish(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -494,7 +494,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-onafterdestroy-controllable-from-event-to-eventdata'>AI_CAS_ZONE:onafterDestroy(Controllable, From, Event, To, EventData)</h3>
+<span id=ai_cas_zone-onafterdestroy-controllable-from-event-to-eventdata></span><h3 id='ai_cas_zone-onafterdestroy-controllable-from-event-to-eventdata-'>AI_CAS_ZONE:onafterDestroy(Controllable, From, Event, To, EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -508,7 +508,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='ai_cas_zone-oneventdead-eventdata'>AI_CAS_ZONE:OnEventDead(EventData)</h3>
+<span id=ai_cas_zone-oneventdead-eventdata></span><h3 id='ai_cas_zone-oneventdead-eventdata-'>AI_CAS_ZONE:OnEventDead(EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>

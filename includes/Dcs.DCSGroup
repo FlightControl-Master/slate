@@ -1,4 +1,4 @@
-<h1 id='dcs-dcsgroup-module'>Dcs.DCSGroup Module</h1><h2 id='group-class'>Group Class</h2>
+<span id=dcs-dcsgroup-module></span><h1 id='dcs-dcsgroup-module-'>Dcs.DCSGroup Module</h1><span id=group-class></span><h2 id='group-class-'>Group Class</h2>
 <pre>
 Inheritance : The Group Class inherits from the following parents :
 ERROR !
@@ -12,7 +12,7 @@ ERROR !
 ID : Identifier of a group. It is assigned to a group by Mission Editor automatically.</li>
 <li>#Group.Category Category : Enum contains identifiers of group types.</li>
 </ul>
-<h3 id='getbyname-2'>getByName()</h3>
+<span id=getbyname></span><h3 id='getbyname-'>getByName()</h3>
 <p>Returns group by the name assigned to the group in Mission Editor.</p>
 
 <h4> Parameters </h4>
@@ -26,7 +26,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <ul>
 <li>#Group self</li>
 </ul>
-<h3 id='group-isexist'>Group:isExist()</h3>
+<span id=group-isexist></span><h3 id='group-isexist-'>Group:isExist()</h3>
 <p>returns true if the group exist or false otherwise.</p>
 
 <h4> Parameters </h4>
@@ -40,7 +40,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-<h3 id='group-destroy'>Group:destroy()</h3>
+<span id=group-destroy></span><h3 id='group-destroy-'>Group:destroy()</h3>
 <p>Destroys the group and all of its units.</p>
 
 <h4> Parameters </h4>
@@ -50,7 +50,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 </ul>
 
 <h4> Returns </h4>
-<h3 id='group-getcategory'>Group:getCategory()</h3>
+<span id=group-getcategory></span><h3 id='group-getcategory-'>Group:getCategory()</h3>
 <p>Returns category of the group.</p>
 
 <h4> Parameters </h4>
@@ -64,7 +64,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <ul>
 <li>#Group.Category self</li>
 </ul>
-<h3 id='group-getcoalition'>Group:getCoalition()</h3>
+<span id=group-getcoalition></span><h3 id='group-getcoalition-'>Group:getCoalition()</h3>
 <p>Returns the coalition of the group.</p>
 
 <h4> Parameters </h4>
@@ -78,7 +78,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <ul>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition.side self</li>
 </ul>
-<h3 id='group-getname'>Group:getName()</h3>
+<span id=group-getname></span><h3 id='group-getname-'>Group:getName()</h3>
 <p>Returns the group&#39;s name. This is the same name assigned to the group in Mission Editor.</p>
 
 <h4> Parameters </h4>
@@ -92,7 +92,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <ul>
 <li><u>String</u> self</li>
 </ul>
-<h3 id='group-getid'>Group:getID()</h3>
+<span id=group-getid></span><h3 id='group-getid-'>Group:getID()</h3>
 <p>Returns the group identifier.</p>
 
 <h4> Parameters </h4>
@@ -107,7 +107,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <li><a href="#id-class">ID</a>
 self</li>
 </ul>
-<h3 id='group-getunit-unitnumber'>Group:getUnit(unitNumber)</h3>
+<span id=group-getunit-unitnumber></span><h3 id='group-getunit-unitnumber-'>Group:getUnit(unitNumber)</h3>
 <p>Returns the unit with number unitNumber. If the unit is not exists the function will return nil.</p>
 
 <h4> Parameters </h4>
@@ -122,7 +122,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit self</li>
 </ul>
-<h3 id='group-getsize'>Group:getSize()</h3>
+<span id=group-getsize></span><h3 id='group-getsize-'>Group:getSize()</h3>
 <p>Returns current size of the group. If some of the units will be destroyed, As units are destroyed the size of the group will be changed.</p>
 
 <h4> Parameters </h4>
@@ -136,7 +136,7 @@ self</li>
 <ul>
 <li><u>Number</u> self</li>
 </ul>
-<h3 id='group-getinitialsize'>Group:getInitialSize()</h3>
+<span id=group-getinitialsize></span><h3 id='group-getinitialsize-'>Group:getInitialSize()</h3>
 <p>Returns initial size of the group. If some of the units will be destroyed, initial size of the group will not be changed. Initial size limits the unitNumber parameter for Group.getUnit() function.</p>
 
 <h4> Parameters </h4>
@@ -150,7 +150,7 @@ self</li>
 <ul>
 <li><u>Number</u> self</li>
 </ul>
-<h3 id='group-getunits'>Group:getUnits()</h3>
+<span id=group-getunits></span><h3 id='group-getunits-'>Group:getUnits()</h3>
 <p>Returns array of the units present in the group now. Destroyed units will not be enlisted at all.</p>
 
 <h4> Parameters </h4>
@@ -164,7 +164,7 @@ self</li>
 <ul>
 <li>#list<Dcs.DCSWrapper.Unit#Unit> array : of Units</li>
 </ul>
-<h3 id='group-getcontroller'>Group:getController()</h3>
+<span id=group-getcontroller></span><h3 id='group-getcontroller-'>Group:getController()</h3>
 <p>Returns controller of the group.</p>
 
 <h4> Parameters </h4>
@@ -178,7 +178,7 @@ self</li>
 <ul>
 <li><a href="#controller-class">Controller</a> self</li>
 </ul>
-<h2 id='group-category-class'>Group.Category Class</h2>
+<span id=group-category-class></span><h2 id='group-category-class-'>Group.Category Class</h2>
 <pre>
 The Group.Category class does not inherit
 </pre>

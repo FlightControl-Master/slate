@@ -1,4 +1,4 @@
-<h1 id='functional-escort-module'>Functional.Escort Module</h1>
+<span id=functional-escort-module></span><h1 id='functional-escort-module-'>Functional.Escort Module</h1>
 <p>Taking the lead of AI escorting your flight.</p>
 
 <p><a href="#escort-class">ESCORT</a> class</p>
@@ -125,7 +125,7 @@ local EscortGroup = GROUP:FindByName( &quot;Group Name&quot; ) -- The Group Name
 
 <p>-- Now use these 2 objects to construct the new EscortPlanes object.
 EscortPlanes = ESCORT:New( EscortClient, EscortGroup, &quot;Desert&quot;, &quot;Welcome to the mission. You are escorted by a plane with code name &#39;Desert&#39;, which can be instructed through the F10 radio menu.&quot; )</p>
-<h2 id='escort-class'>ESCORT Class</h2>
+<span id=escort-class></span><h2 id='escort-class-'>ESCORT Class</h2>
 <pre>
 Inheritance : The ESCORT Class inherits from the following parents :
 BASE
@@ -146,7 +146,7 @@ BASE
 <li><a href="#menu_client-class">MENU_CLIENT</a> EscortMenuResumeMission</li>
 <li><a href="#detection_base-class">DETECTION_BASE</a> Detection</li>
 </ul>
-<h3 id='escort-new-escortclient-escortgroup-escortname-escortbriefing'>ESCORT:New(EscortClient, EscortGroup, EscortName, EscortBriefing)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Declare a new EscortPlanes object as follows:</span>
+<span id=escort-new-escortclient-escortgroup-escortname-escortbriefing></span><h3 id='escort-new-escortclient-escortgroup-escortname-escortbriefing-'>ESCORT:New(EscortClient, EscortGroup, EscortName, EscortBriefing)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Declare a new EscortPlanes object as follows:</span>
 
 <span class="c1">-- First find the GROUP object and the CLIENT object.</span>
 <span class="kd">local</span> <span class="n">EscortClient</span> <span class="o">=</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s2">"Unit Name"</span> <span class="p">)</span> <span class="c1">-- The Unit Name is the name of the unit flagged with the skill Client in the mission editor.</span>
@@ -172,7 +172,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-setdetection-detection'>ESCORT:SetDetection(Detection)</h3>
+<span id=escort-setdetection-detection></span><h3 id='escort-setdetection-detection-'>ESCORT:SetDetection(Detection)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -182,7 +182,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='escort-testsmokedirectionvector-smokedirection'>ESCORT:TestSmokeDirectionVector(SmokeDirection)</h3>
+<span id=escort-testsmokedirectionvector-smokedirection></span><h3 id='escort-testsmokedirectionvector-smokedirection-'>ESCORT:TestSmokeDirectionVector(SmokeDirection)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -192,7 +192,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='escort-menus'>ESCORT:Menus()</h3>
+<span id=escort-menus></span><h3 id='escort-menus-'>ESCORT:Menus()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -206,7 +206,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menufollowat-distance'>ESCORT:MenuFollowAt(Distance)</h3>
+<span id=escort-menufollowat-distance></span><h3 id='escort-menufollowat-distance-'>ESCORT:MenuFollowAt(Distance)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -221,7 +221,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuholdatescortposition-height-seconds-menutextformat'>ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)</h3>
+<span id=escort-menuholdatescortposition-height-seconds-menutextformat></span><h3 id='escort-menuholdatescortposition-height-seconds-menutextformat-'>ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -238,7 +238,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuholdatleaderposition-height-seconds-menutextformat'>ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)</h3>
+<span id=escort-menuholdatleaderposition-height-seconds-menutextformat></span><h3 id='escort-menuholdatleaderposition-height-seconds-menutextformat-'>ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -255,7 +255,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuscanfortargets-height-seconds-menutextformat'>ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)</h3>
+<span id=escort-menuscanfortargets-height-seconds-menutextformat></span><h3 id='escort-menuscanfortargets-height-seconds-menutextformat-'>ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -272,7 +272,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuflare-menutextformat'>ESCORT:MenuFlare(MenuTextFormat)</h3>
+<span id=escort-menuflare-menutextformat></span><h3 id='escort-menuflare-menutextformat-'>ESCORT:MenuFlare(MenuTextFormat)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -287,7 +287,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menusmoke-menutextformat'>ESCORT:MenuSmoke(MenuTextFormat)</h3>
+<span id=escort-menusmoke-menutextformat></span><h3 id='escort-menusmoke-menutextformat-'>ESCORT:MenuSmoke(MenuTextFormat)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -302,7 +302,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menureporttargets-seconds'>ESCORT:MenuReportTargets(Seconds)</h3>
+<span id=escort-menureporttargets-seconds></span><h3 id='escort-menureporttargets-seconds-'>ESCORT:MenuReportTargets(Seconds)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -317,7 +317,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuassistedattack'>ESCORT:MenuAssistedAttack()</h3>
+<span id=escort-menuassistedattack></span><h3 id='escort-menuassistedattack-'>ESCORT:MenuAssistedAttack()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -331,7 +331,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuroe'>ESCORT:MenuROE()</h3>
+<span id=escort-menuroe></span><h3 id='escort-menuroe-'>ESCORT:MenuROE()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -345,7 +345,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuevasion'>ESCORT:MenuEvasion()</h3>
+<span id=escort-menuevasion></span><h3 id='escort-menuevasion-'>ESCORT:MenuEvasion()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -359,7 +359,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-menuresumemission'>ESCORT:MenuResumeMission()</h3>
+<span id=escort-menuresumemission></span><h3 id='escort-menuresumemission-'>ESCORT:MenuResumeMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -373,7 +373,7 @@ self</li>
 <li><a href="#escort-class">ESCORT</a>
 self</li>
 </ul>
-<h3 id='escort-joinupandfollow-escortgroup-escortclient-distance'>ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)</h3>
+<span id=escort-joinupandfollow-escortgroup-escortclient-distance></span><h3 id='escort-joinupandfollow-escortgroup-escortclient-distance-'>ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -384,7 +384,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='escort-registerroute'>ESCORT:RegisterRoute()</h3>
+<span id=escort-registerroute></span><h3 id='escort-registerroute-'>ESCORT:RegisterRoute()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -397,7 +397,7 @@ self</li>
 <ul>
 <li><u>List[]</u> self</li>
 </ul>
-<h2 id='escort-mode-class'>ESCORT.MODE Class</h2>
+<span id=escort-mode-class></span><h2 id='escort-mode-class-'>ESCORT.MODE Class</h2>
 <pre>
 The ESCORT.MODE class does not inherit
 </pre>
@@ -408,7 +408,7 @@ The ESCORT.MODE class does not inherit
 <li><u>Number</u> FOLLOW</li>
 <li><u>Number</u> MISSION</li>
 </ul>
-<h2 id='menuparam-class'>MENUPARAM Class</h2>
+<span id=menuparam-class></span><h2 id='menuparam-class-'>MENUPARAM Class</h2>
 <pre>
 The MENUPARAM class does not inherit
 </pre>

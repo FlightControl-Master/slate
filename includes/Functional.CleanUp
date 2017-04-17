@@ -1,12 +1,12 @@
-<h1 id='functional-cleanup-module'>Functional.CleanUp Module</h1>
+<span id=functional-cleanup-module></span><h1 id='functional-cleanup-module-'>Functional.CleanUp Module</h1>
 <p>The CLEANUP class keeps an area clean of crashing or colliding airplanes. It also prevents airplanes from firing within this area.</p>
-<h2 id='cleanup-class'>CLEANUP Class</h2>
+<span id=cleanup-class></span><h2 id='cleanup-class-'>CLEANUP Class</h2>
 <pre>
 Inheritance : The CLEANUP Class inherits from the following parents :
 BASE
     `-- CLEANUP
 </pre>
-<h3 id='cleanup-new-zonenames-timeinterval'>CLEANUP:New(ZoneNames, TimeInterval)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Clean these Zones.</span>
+<span id=cleanup-new-zonenames-timeinterval></span><h3 id='cleanup-new-zonenames-timeinterval-'>CLEANUP:New(ZoneNames, TimeInterval)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Clean these Zones.</span>
 <span class="n">CleanUpAirports</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'CLEAN Tbilisi'</span><span class="p">,</span> <span class="s1">'CLEAN Kutaisi'</span> <span class="p">},</span> <span class="mi">150</span> <span class="p">)</span>
 <span class="ow">or</span>
 <span class="n">CleanUpTbilisi</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'CLEAN Tbilisi'</span><span class="p">,</span> <span class="mi">150</span> <span class="p">)</span>

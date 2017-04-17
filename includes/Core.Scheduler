@@ -1,4 +1,4 @@
-<h1 id='core-scheduler-module'>Core.Scheduler Module</h1>
+<span id=core-scheduler-module></span><h1 id='core-scheduler-module-'>Core.Scheduler Module</h1>
 <p><strong>Core</strong> - SCHEDULER prepares and handles the <strong>execution of functions over scheduled time (intervals)</strong>.</p>
 
 <p><img src="/includes/Pictures/SCHEDULER/Dia1.JPG" alt="Banner Image" /></p>
@@ -11,15 +11,15 @@
 <li>optionally <strong>randomizing</strong> with a specified time interval randomization factor,</li>
 <li>optionally <strong>stop</strong> the repeating after a specified time interval.</li>
 </ul>
-<h5 id='demo-missions-7'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sch-20-20scheduler-scheduler-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SCH%20-%20Scheduler">SCHEDULER Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sch-20-20scheduler-scheduler-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SCH%20-%20Scheduler">SCHEDULER Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-7'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel-7'>YouTube Channel</h5><h5 id='a-href-scheduler-youtube-channel-none-a'><a href="#">SCHEDULER YouTube Channel (none)</a></h5><h5 id='contributions-11'>Contributions:</h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sch-20-20scheduler-scheduler-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sch-20-20scheduler-scheduler-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SCH%20-%20Scheduler">SCHEDULER Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sch-20-20scheduler-scheduler-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sch-20-20scheduler-scheduler-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SCH%20-%20Scheduler">SCHEDULER Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-scheduler-youtube-channel-none-a></span><h5 id='a-href-scheduler-youtube-channel-none-a-'><a href="#">SCHEDULER YouTube Channel (none)</a></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li>FlightControl : Concept &amp; Testing</li>
 </ul>
-<h5 id='authors-10'>Authors:</h5>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
-<h2 id='scheduler-class'>SCHEDULER Class</h2>
+<span id=scheduler-class></span><h2 id='scheduler-class-'>SCHEDULER Class</h2>
 <pre>
 Inheritance : The SCHEDULER Class inherits from the following parents :
 BASE
@@ -32,7 +32,7 @@ BASE
 The ScheduleID is returned when the method <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> is called.
 It is recommended to store the ScheduleID in a variable, as it is used in the methods <a href="#start-module">Start</a>() and <a href="#stop-module">Stop</a>(),
 which can start and stop specific repeating schedules respectively within a SCHEDULER object.</p>
-<h5 id='scheduler-constructor'>SCHEDULER constructor</h5>
+<span id=scheduler-constructor></span><h5 id='scheduler-constructor-'>SCHEDULER constructor</h5>
 <p>The SCHEDULER class is quite easy to use, but note that the New constructor has variable parameters:</p>
 
 <p>The <a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> method returns 2 variables:</p>
@@ -43,7 +43,7 @@ which can start and stop specific repeating schedules respectively within a SCHE
 </ol>
 
 <p>To clarify the different appliances, lets have a look at the following examples:</p>
-<h5 id='construct-a-scheduler-object-without-a-persistent-schedule'>Construct a SCHEDULER object without a persistent schedule.</h5>
+<span id=construct-a-scheduler-object-without-a-persistent-schedule></span><h5 id='construct-a-scheduler-object-without-a-persistent-schedule-'>Construct a SCHEDULER object without a persistent schedule.</h5>
 <ul>
 <li><a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> nil ): Setup a new SCHEDULER object, which is persistently executed after garbage collection.</li>
 </ul>
@@ -53,7 +53,7 @@ SchedulerID = SchedulerObject:Schedule( nil, ScheduleFunction, {} )</p>
 
 <p>The above example creates a new SchedulerObject, but does not schedule anything.
 A separate schedule is created by using the SchedulerObject using the method :Schedule..., which returns a ScheduleID</p>
-<h5 id='construct-a-scheduler-object-without-a-volatile-schedule-but-volatile-to-the-object-existence'>Construct a SCHEDULER object without a volatile schedule, but volatile to the Object existence...</h5>
+<span id=construct-a-scheduler-object-without-a-volatile-schedule-but-volatile-to-the-object-existence></span><h5 id='construct-a-scheduler-object-without-a-volatile-schedule-but-volatile-to-the-object-existence-'>Construct a SCHEDULER object without a volatile schedule, but volatile to the Object existence...</h5>
 <ul>
 <li><a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> Object ): Setup a new SCHEDULER object, which is linked to the Object. When the Object is nillified or destroyed, the SCHEDULER object will also be destroyed and stopped after garbage collection.</li>
 </ul>
@@ -69,7 +69,7 @@ garbagecollect()</p>
 A separate schedule is created by using the SchedulerObject using the method :Schedule()..., which returns a ScheduleID
 Later in the logic, the ZoneObject is put to nil, and garbage is collected.
 As a result, the ScheduleObject will cancel any planned schedule.</p>
-<h5 id='construct-a-scheduler-object-with-a-persistent-schedule'>Construct a SCHEDULER object with a persistent schedule.</h5>
+<span id=construct-a-scheduler-object-with-a-persistent-schedule></span><h5 id='construct-a-scheduler-object-with-a-persistent-schedule-'>Construct a SCHEDULER object with a persistent schedule.</h5>
 <ul>
 <li><a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> nil, Function, FunctionArguments, Start, ... ): Setup a new persistent SCHEDULER object, and start a new schedule for the Function with the defined FunctionArguments according the Start and sequent parameters.</li>
 </ul>
@@ -78,7 +78,7 @@ As a result, the ScheduleObject will cancel any planned schedule.</p>
 
 <p>The above example creates a new SchedulerObject, and does schedule the first schedule as part of the call.
 Note that 2 variables are returned here: SchedulerObject, ScheduleID...</p>
-<h5 id='construct-a-scheduler-object-without-a-schedule-but-volatile-to-the-object-existence'>Construct a SCHEDULER object without a schedule, but volatile to the Object existence...</h5>
+<span id=construct-a-scheduler-object-without-a-schedule-but-volatile-to-the-object-existence></span><h5 id='construct-a-scheduler-object-without-a-schedule-but-volatile-to-the-object-existence-'>Construct a SCHEDULER object without a schedule, but volatile to the Object existence...</h5>
 <ul>
 <li><a href="#scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:New()</a> Object, Function, FunctionArguments, Start, ... ): Setup a new SCHEDULER object, linked to Object, and start a new schedule for the Function with the defined FunctionArguments according the Start and sequent parameters.</li>
 </ul>
@@ -95,7 +95,7 @@ and is bound to the existence of ZoneObject, which is a ZONE object (ZoneObject)
 Both a ScheduleObject and a SchedulerID variable are returned.
 Later in the logic, the ZoneObject is put to nil, and garbage is collected.
 As a result, the ScheduleObject will cancel the planned schedule.</p>
-<h5 id='scheduler-timer-stopping-and-re-starting'>SCHEDULER timer stopping and (re-)starting.</h5>
+<span id=scheduler-timer-stopping-and-re-starting></span><h5 id='scheduler-timer-stopping-and-re-starting-'>SCHEDULER timer stopping and (re-)starting.</h5>
 <p>The SCHEDULER can be stopped and restarted with the following methods:</p>
 
 <ul>
@@ -115,7 +115,7 @@ SchedulerObject:Start( SchedulerID )</p>
 Note that 2 variables are returned here: SchedulerObject, ScheduleID...
 Later in the logic, the repeating schedule with SchedulerID is stopped.
 A bit later, the repeating schedule with SchedulerId is (re)-started.</p>
-<h5 id='create-a-new-schedule'>Create a new schedule</h5>
+<span id=create-a-new-schedule></span><h5 id='create-a-new-schedule-'>Create a new schedule</h5>
 <p>With the method <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> a new time event can be scheduled.
 This method is used by the :New() constructor when a new schedule is planned.</p>
 
@@ -125,20 +125,20 @@ This method is used by the :New() constructor when a new schedule is planned.</p
 SchedulerObject = SCHEDULER:New( ZoneObject )</p>
 
 <p>Several parameters can be specified that influence the behaviour of a Schedule.</p>
-<h5 id='a-single-schedule-immediately-executed'>A single schedule, immediately executed</h5>
+<span id=a-single-schedule-immediately-executed></span><h5 id='a-single-schedule-immediately-executed-'>A single schedule, immediately executed</h5>
 <p>SchedulerID = SchedulerObject:Schedule( ZoneObject, ScheduleFunction, {} )</p>
 
 <p>The above example schedules a new ScheduleFunction call to be executed asynchronously, within milleseconds ...</p>
-<h5 id='a-single-schedule-planned-over-time'>A single schedule, planned over time</h5>
+<span id=a-single-schedule-planned-over-time></span><h5 id='a-single-schedule-planned-over-time-'>A single schedule, planned over time</h5>
 <p>SchedulerID = SchedulerObject:Schedule( ZoneObject, ScheduleFunction, {}, 10 )</p>
 
 <p>The above example schedules a new ScheduleFunction call to be executed asynchronously, within 10 seconds ...</p>
-<h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time'>A schedule with a repeating time interval, planned over time</h5>
+<span id=a-schedule-with-a-repeating-time-interval-planned-over-time></span><h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time-'>A schedule with a repeating time interval, planned over time</h5>
 <p>SchedulerID = SchedulerObject:Schedule( ZoneObject, ScheduleFunction, {}, 10, 60 )</p>
 
 <p>The above example schedules a new ScheduleFunction call to be executed asynchronously, within 10 seconds,
 and repeating 60 every seconds ...</p>
-<h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization'>A schedule with a repeating time interval, planned over time, with time interval randomization</h5>
+<span id=a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization></span><h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization-'>A schedule with a repeating time interval, planned over time, with time interval randomization</h5>
 <p>SchedulerID = SchedulerObject:Schedule( ZoneObject, ScheduleFunction, {}, 10, 60, 0.5 )</p>
 
 <p>The above example schedules a new ScheduleFunction call to be executed asynchronously, within 10 seconds,
@@ -146,7 +146,7 @@ and repeating 60 seconds, with a 50% time interval randomization ...
 So the repeating time interval will be randomized using the <strong>0.5</strong>,
 and will calculate between <strong>60 - ( 60 * 0.5 )</strong> and <strong>60 + ( 60 * 0.5 )</strong> for each repeat,
 which is in this example between <strong>30</strong> and <strong>90</strong> seconds.</p>
-<h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization-and-stop-after-a-time-interval'>A schedule with a repeating time interval, planned over time, with time interval randomization, and stop after a time interval</h5>
+<span id=a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization-and-stop-after-a-time-interval></span><h5 id='a-schedule-with-a-repeating-time-interval-planned-over-time-with-time-interval-randomization-and-stop-after-a-time-interval-'>A schedule with a repeating time interval, planned over time, with time interval randomization, and stop after a time interval</h5>
 <p>SchedulerID = SchedulerObject:Schedule( ZoneObject, ScheduleFunction, {}, 10, 60, 0.5, 300 )</p>
 
 <p>The above example schedules a new ScheduleFunction call to be executed asynchronously, within 10 seconds,
@@ -163,7 +163,7 @@ The schedule will stop after <strong>300</strong> seconds.</p>
 <ul>
 <li><u>Number</u> ScheduleID : the ID of the scheduler.</li>
 </ul>
-<h3 id='scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop'>SCHEDULER:New(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
+<span id=scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop></span><h3 id='scheduler-new-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop-'>SCHEDULER:New(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -185,7 +185,7 @@ self</li>
 self.</li>
 <li><u>Number</u> The : ScheduleID of the planned schedule.</li>
 </ul>
-<h3 id='scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop'>SCHEDULER:Schedule(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
+<span id=scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop></span><h3 id='scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop-'>SCHEDULER:Schedule(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -205,7 +205,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : ScheduleID of the planned schedule.</li>
 </ul>
-<h3 id='scheduler-start-scheduleid'>SCHEDULER:Start(ScheduleID)</h3>
+<span id=scheduler-start-scheduleid></span><h3 id='scheduler-start-scheduleid-'>SCHEDULER:Start(ScheduleID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -215,7 +215,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='scheduler-stop-scheduleid'>SCHEDULER:Stop(ScheduleID)</h3>
+<span id=scheduler-stop-scheduleid></span><h3 id='scheduler-stop-scheduleid-'>SCHEDULER:Stop(ScheduleID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -225,7 +225,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='scheduler-remove-scheduleid'>SCHEDULER:Remove(ScheduleID)</h3>
+<span id=scheduler-remove-scheduleid></span><h3 id='scheduler-remove-scheduleid-'>SCHEDULER:Remove(ScheduleID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -235,7 +235,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='scheduler-clear'>SCHEDULER:Clear()</h3>
+<span id=scheduler-clear></span><h3 id='scheduler-clear-'>SCHEDULER:Clear()</h3>
 <h4> Parameters </h4>
 
 <ul>

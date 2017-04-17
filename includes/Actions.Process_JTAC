@@ -1,4 +1,4 @@
-<h1 id='actions-process_jtac-module'>Actions.Process_JTAC Module</h1><h2 id='process_jtac-class'>PROCESS_JTAC Class</h2>
+<span id=actions-process_jtac-module></span><h1 id='actions-process_jtac-module-'>Actions.Process_JTAC Module</h1><span id=process_jtac-class></span><h2 id='process_jtac-class-'>PROCESS_JTAC Class</h2>
 <pre>
 Inheritance : The PROCESS_JTAC Class inherits from the following parents :
 BASE
@@ -14,7 +14,7 @@ BASE
 <li><a href="#unit-class">UNIT</a> ProcessUnit</li>
 <li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
 </ul>
-<h3 id='process_jtac-new-task-processunit-targetsetunit-facunit'>PROCESS_JTAC:New(Task, ProcessUnit, TargetSetUnit, FACUnit)</h3>
+<span id=process_jtac-new-task-processunit-targetsetunit-facunit></span><h3 id='process_jtac-new-task-processunit-targetsetunit-facunit-'>PROCESS_JTAC:New(Task, ProcessUnit, TargetSetUnit, FACUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -32,7 +32,7 @@ self</li>
 <li><a href="#process_jtac-class">PROCESS_JTAC</a>
 self</li>
 </ul>
-<h3 id='process_jtac-onstart-fsm-event-from-to'>PROCESS_JTAC:OnStart(Fsm, Event, From, To)</h3>
+<span id=process_jtac-onstart-fsm-event-from-to></span><h3 id='process_jtac-onstart-fsm-event-from-to-'>PROCESS_JTAC:OnStart(Fsm, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -45,7 +45,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='process_jtac-onjtacmenuupdate-fsm-event-from-to'>PROCESS_JTAC:OnJTACMenuUpdate(Fsm, Event, From, To)</h3>
+<span id=process_jtac-onjtacmenuupdate-fsm-event-from-to></span><h3 id='process_jtac-onjtacmenuupdate-fsm-event-from-to-'>PROCESS_JTAC:OnJTACMenuUpdate(Fsm, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -58,7 +58,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='process_jtac-onjtacmenuawait-fsm-event-from-to'>PROCESS_JTAC:OnJTACMenuAwait(Fsm, Event, From, To)</h3>
+<span id=process_jtac-onjtacmenuawait-fsm-event-from-to></span><h3 id='process_jtac-onjtacmenuawait-fsm-event-from-to-'>PROCESS_JTAC:OnJTACMenuAwait(Fsm, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -71,7 +71,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='process_jtac-onjtacmenuspot-fsm-event-from-to-targetunit'>PROCESS_JTAC:OnJTACMenuSpot(Fsm, Event, From, To, TargetUnit)</h3>
+<span id=process_jtac-onjtacmenuspot-fsm-event-from-to-targetunit></span><h3 id='process_jtac-onjtacmenuspot-fsm-event-from-to-targetunit-'>PROCESS_JTAC:OnJTACMenuSpot(Fsm, Event, From, To, TargetUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -85,7 +85,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='process_jtac-onjtacmenucancel-fsm-event-from-to-targetunit'>PROCESS_JTAC:OnJTACMenuCancel(Fsm, Event, From, To, TargetUnit)</h3>
+<span id=process_jtac-onjtacmenucancel-fsm-event-from-to-targetunit></span><h3 id='process_jtac-onjtacmenucancel-fsm-event-from-to-targetunit-'>PROCESS_JTAC:OnJTACMenuCancel(Fsm, Event, From, To, TargetUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>

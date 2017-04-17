@@ -1,4 +1,4 @@
-<h1 id='dcs-dcstask-module'>Dcs.DCSTask Module</h1><h2 id='task-class'>Task Class</h2>
+<span id=dcs-dcstask-module></span><h1 id='dcs-dcstask-module-'>Dcs.DCSTask Module</h1><span id=task-class></span><h2 id='task-class-'>Task Class</h2>
 <pre>
 Inheritance : The Task Class inherits from the following parents :
 ERROR !
@@ -11,7 +11,7 @@ ERROR !
 <li><u>String</u> id</li>
 <li>#Task.param param</li>
 </ul>
-<h2 id='task-param-class'>Task.param Class</h2>
+<span id=task-param-class></span><h2 id='task-param-class-'>Task.param Class</h2>
 <pre>
 The Task.param class does not inherit
 </pre>

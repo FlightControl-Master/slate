@@ -1,6 +1,6 @@
-<h1 id='wrapper-positionable-module'>Wrapper.Positionable Module</h1>
+<span id=wrapper-positionable-module></span><h1 id='wrapper-positionable-module-'>Wrapper.Positionable Module</h1>
 <p>This module contains the POSITIONABLE class.</p>
-<h5 id='1-a-href-positionable-class-positionable-a-class-extends-a-href-identifiable-class-identifiable-a'>1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h5>
+<span id=1-a-href-positionable-class-positionable-a-class-extends-a-href-identifiable-class-identifiable-a></span><h5 id='1-a-href-positionable-class-positionable-a-class-extends-a-href-identifiable-class-identifiable-a-'>1) <a href="#positionable-class">POSITIONABLE</a> class, extends <a href="#identifiable-class">IDENTIFIABLE</a></h5>
 <p>The <a href="#positionable-class">POSITIONABLE</a> class is a wrapper class to handle the POSITIONABLE objects:</p>
 
 <ul>
@@ -8,20 +8,20 @@
 <li>Enhance with POSITIONABLE specific APIs not in the DCS API set.</li>
 <li>Manage the &quot;state&quot; of the POSITIONABLE.</li>
 </ul>
-<h5 id='1-1-positionable-constructor'>1.1) POSITIONABLE constructor:</h5>
+<span id=1-1-positionable-constructor></span><h5 id='1-1-positionable-constructor-'>1.1) POSITIONABLE constructor:</h5>
 <p>The POSITIONABLE class provides the following functions to construct a POSITIONABLE instance:</p>
 
 <ul>
 <li><a href="#positionable-new-positionablename">POSITIONABLE:New()</a>: Create a POSITIONABLE instance.</li>
 </ul>
-<h5 id='1-2-positionable-methods'>1.2) POSITIONABLE methods:</h5>
+<span id=1-2-positionable-methods></span><h5 id='1-2-positionable-methods-'>1.2) POSITIONABLE methods:</h5>
 <p>The following methods can be used to identify an measurable object:</p>
 
 <ul>
 <li>POSITIONABLE-GetID: Returns the ID of the measurable object.</li>
 <li>POSITIONABLE-GetName: Returns the name of the measurable object.</li>
 </ul>
-<h2 id='positionable-class'>POSITIONABLE Class</h2>
+<span id=positionable-class></span><h2 id='positionable-class-'>POSITIONABLE Class</h2>
 <pre>
 Inheritance : The POSITIONABLE Class inherits from the following parents :
 BASE
@@ -35,7 +35,7 @@ BASE
 <ul>
 <li><u>String</u> PositionableName : The name of the measurable.</li>
 </ul>
-<h3 id='positionable-new-positionablename'>POSITIONABLE:New(PositionableName)</h3>
+<span id=positionable-new-positionablename></span><h3 id='positionable-new-positionablename-'>POSITIONABLE:New(PositionableName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -50,7 +50,7 @@ self</li>
 <li><a href="#positionable-class">POSITIONABLE</a>
 self</li>
 </ul>
-<h3 id='positionable-getpositionvec3'>POSITIONABLE:GetPositionVec3()</h3>
+<span id=positionable-getpositionvec3></span><h3 id='positionable-getpositionvec3-'>POSITIONABLE:GetPositionVec3()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -63,7 +63,7 @@ self</li>
 <li><a href="#position-class">Position</a> The : 3D position vectors of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getvec2'>POSITIONABLE:GetVec2()</h3>
+<span id=positionable-getvec2></span><h3 id='positionable-getvec2-'>POSITIONABLE:GetVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -76,7 +76,7 @@ self</li>
 <li><a href="#vec2-class">Vec2</a> The : 2D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getpointvec2'>POSITIONABLE:GetPointVec2()</h3>
+<span id=positionable-getpointvec2></span><h3 id='positionable-getpointvec2-'>POSITIONABLE:GetPointVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -89,7 +89,7 @@ self</li>
 <li><a href="#point_vec2-class">POINT_VEC2</a> The : 2D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getpointvec3'>POSITIONABLE:GetPointVec3()</h3>
+<span id=positionable-getpointvec3></span><h3 id='positionable-getpointvec3-'>POSITIONABLE:GetPointVec3()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -102,7 +102,7 @@ self</li>
 <li><a href="#point_vec3-class">POINT_VEC3</a> The : 3D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getrandomvec3-radius'>POSITIONABLE:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class) of first UNIT of the GROUP</span>
+<span id=positionable-getrandomvec3-radius></span><h3 id='positionable-getrandomvec3-radius-'>POSITIONABLE:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class) of first UNIT of the GROUP</span>
 </code></pre>
 <h4> Parameters </h4>
 
@@ -117,7 +117,7 @@ self</li>
 <li><a href="#vec3-class">Vec3</a> The : 3D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getvec3'>POSITIONABLE:GetVec3()</h3>
+<span id=positionable-getvec3></span><h3 id='positionable-getvec3-'>POSITIONABLE:GetVec3()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -130,7 +130,7 @@ self</li>
 <li><a href="#vec3-class">Vec3</a> The : 3D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getaltitude'>POSITIONABLE:GetAltitude()</h3>
+<span id=positionable-getaltitude></span><h3 id='positionable-getaltitude-'>POSITIONABLE:GetAltitude()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -143,7 +143,7 @@ self</li>
 <li><a href="#distance-class">Distance</a> The : altitude of the POSITIONABLE.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-isaboverunway'>POSITIONABLE:IsAboveRunway()</h3>
+<span id=positionable-isaboverunway></span><h3 id='positionable-isaboverunway-'>POSITIONABLE:IsAboveRunway()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -156,7 +156,7 @@ self</li>
 <li><u>Boolean</u> true : if Positionable is above a runway.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getheading'>POSITIONABLE:GetHeading()</h3>
+<span id=positionable-getheading></span><h3 id='positionable-getheading-'>POSITIONABLE:GetHeading()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -169,7 +169,7 @@ self</li>
 <li><u>Number</u> The : POSTIONABLE heading</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-inair'>POSITIONABLE:InAir()</h3>
+<span id=positionable-inair></span><h3 id='positionable-inair-'>POSITIONABLE:InAir()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -182,7 +182,7 @@ self</li>
 <li><u>Boolean</u> true : if in the air.</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getvelocity'>POSITIONABLE:GetVelocity()</h3>
+<span id=positionable-getvelocity></span><h3 id='positionable-getvelocity-'>POSITIONABLE:GetVelocity()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -195,7 +195,7 @@ self</li>
 <li><a href="#vec3-class">Vec3</a> The : velocity vector</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getvelocitykmh'>POSITIONABLE:GetVelocityKMH()</h3>
+<span id=positionable-getvelocitykmh></span><h3 id='positionable-getvelocitykmh-'>POSITIONABLE:GetVelocityKMH()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -208,7 +208,7 @@ self</li>
 <li><u>Number</u> The : velocity in km/h</li>
 <li><u>Nil</u> The : POSITIONABLE is not existing or alive.</li>
 </ul>
-<h3 id='positionable-getmessage-message-duration-name'>POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
+<span id=positionable-getmessage-message-duration-name></span><h3 id='positionable-getmessage-message-duration-name-'>POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -224,7 +224,7 @@ self</li>
 <ul>
 <li><a href="#message-class">MESSAGE</a> self</li>
 </ul>
-<h3 id='positionable-messagetoall-message-duration-name'>POSITIONABLE:MessageToAll(Message, Duration, Name)</h3>
+<span id=positionable-messagetoall-message-duration-name></span><h3 id='positionable-messagetoall-message-duration-name-'>POSITIONABLE:MessageToAll(Message, Duration, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -236,7 +236,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-messagetocoalition-message-duration-messagecoalition-name'>POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition, Name)</h3>
+<span id=positionable-messagetocoalition-message-duration-messagecoalition-name></span><h3 id='positionable-messagetocoalition-message-duration-messagecoalition-name-'>POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -249,7 +249,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-messagetored-message-duration-name'>POSITIONABLE:MessageToRed(Message, Duration, Name)</h3>
+<span id=positionable-messagetored-message-duration-name></span><h3 id='positionable-messagetored-message-duration-name-'>POSITIONABLE:MessageToRed(Message, Duration, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -261,7 +261,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-messagetoblue-message-duration-name'>POSITIONABLE:MessageToBlue(Message, Duration, Name)</h3>
+<span id=positionable-messagetoblue-message-duration-name></span><h3 id='positionable-messagetoblue-message-duration-name-'>POSITIONABLE:MessageToBlue(Message, Duration, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -273,7 +273,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-messagetoclient-message-duration-client-name'>POSITIONABLE:MessageToClient(Message, Duration, Client, Name)</h3>
+<span id=positionable-messagetoclient-message-duration-client-name></span><h3 id='positionable-messagetoclient-message-duration-client-name-'>POSITIONABLE:MessageToClient(Message, Duration, Client, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -286,7 +286,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-messagetogroup-message-duration-messagegroup-name'>POSITIONABLE:MessageToGroup(Message, Duration, MessageGroup, Name)</h3>
+<span id=positionable-messagetogroup-message-duration-messagegroup-name></span><h3 id='positionable-messagetogroup-message-duration-messagegroup-name-'>POSITIONABLE:MessageToGroup(Message, Duration, MessageGroup, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -299,7 +299,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-message-message-duration-name'>POSITIONABLE:Message(Message, Duration, Name)</h3>
+<span id=positionable-message-message-duration-name></span><h3 id='positionable-message-message-duration-name-'>POSITIONABLE:Message(Message, Duration, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -311,7 +311,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<h3 id='positionable-getradio'>POSITIONABLE:GetRadio()</h3>
+<span id=positionable-getradio></span><h3 id='positionable-getradio-'>POSITIONABLE:GetRadio()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -325,7 +325,7 @@ self</li>
 <li><a href="#radio-class">RADIO</a>
 Radio</li>
 </ul>
-<h2 id='dcspositionable-class'>DCSPositionable Class</h2>
+<span id=dcspositionable-class></span><h2 id='dcspositionable-class-'>DCSPositionable Class</h2>
 <pre>
 The DCSPositionable class does not inherit
 </pre>

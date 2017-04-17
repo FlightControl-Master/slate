@@ -1,11 +1,11 @@
-<h1 id='dcs-dcscoalitionobject-module'>Dcs.DCSCoalitionObject Module</h1><h2 id='coalitionobject-class'>CoalitionObject Class</h2>
+<span id=dcs-dcscoalitionobject-module></span><h1 id='dcs-dcscoalitionobject-module-'>Dcs.DCSCoalitionObject Module</h1><span id=coalitionobject-class></span><h2 id='coalitionobject-class-'>CoalitionObject Class</h2>
 <pre>
 Inheritance : The CoalitionObject Class inherits from the following parents :
 ERROR !
     `-- Object
         `-- CoalitionObject
 </pre>
-<h3 id='coalitionobject-getcoalition'>CoalitionObject:getCoalition()</h3>
+<span id=coalitionobject-getcoalition></span><h3 id='coalitionobject-getcoalition-'>CoalitionObject:getCoalition()</h3>
 <p>Returns coalition of the object.</p>
 
 <h4> Parameters </h4>
@@ -19,7 +19,7 @@ ERROR !
 <ul>
 <li><a href="#coalition.side-class">coalition.side</a> self</li>
 </ul>
-<h3 id='coalitionobject-getcountry'>CoalitionObject:getCountry()</h3>
+<span id=coalitionobject-getcountry></span><h3 id='coalitionobject-getcountry-'>CoalitionObject:getCountry()</h3>
 <p>Returns object country.</p>
 
 <h4> Parameters </h4>
