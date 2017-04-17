@@ -1,130 +1,87 @@
-<h1 id="core-menu-module">Core.Menu Module</h1>
-
-<p><strong>Core</strong> &ndash; MENU_ classes model the definition of <strong>hierarchical menu structures</strong> and <strong>commands for players</strong> within a mission.</p>
+<h1 id='core-menu-module'>Core.Menu Module</h1>
+<p><strong>Core</strong> -- MENU_ classes model the definition of <strong>hierarchical menu structures</strong> and <strong>commands for players</strong> within a mission.</p>
 
 <p>DCS Menus can be managed using the MENU classes.
 The advantage of using MENU classes is that it hides the complexity of dealing with menu management in more advanced scanerios where you need to
-set menus and later remove them, and later set them again. You&rsquo;ll find while using use normal DCS scripting functions, that setting and removing
+set menus and later remove them, and later set them again. You&#39;ll find while using use normal DCS scripting functions, that setting and removing
 menus is not a easy feat if you have complex menu hierarchies defined.
 Using the MOOSE menu classes, the removal and refreshing of menus are nicely being handled within these classes, and becomes much more easy.
 On top, MOOSE implements <strong>variable parameter</strong> passing for command menus.</p>
 
 <p>There are basically two different MENU class types that you need to use:</p>
-
-<h5 id="to-manage-main-menus-the-classes-begin-with-menu_">To manage <strong>main menus</strong>, the classes begin with <strong>MENU_</strong>:</h5>
-
+<h5 id='to-manage-strong-main-menus-strong-the-classes-begin-with-strong-menu_-strong'>To manage <strong>main menus</strong>, the classes begin with <strong>MENU_</strong>:</h5>
 <ul>
 <li><a href="#menu_mission-class">MENU_MISSION</a>: Manages main menus for whole mission file.</li>
 <li><a href="#menu_coalition-class">MENU_COALITION</a>: Manages main menus for whole coalition.</li>
 <li><a href="#menu_group-class">MENU_GROUP</a>: Manages main menus for GROUPs.</li>
-<li><a href="#menu_client-class">MENU_CLIENT</a>: Manages main menus for CLIENTs. This manages menus for units with the skill level &ldquo;Client&rdquo;.</li>
+<li><a href="#menu_client-class">MENU_CLIENT</a>: Manages main menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
 </ul>
-
-<h5 id="to-manage-command-menus-which-are-menus-that-allow-the-player-to-issue-functions-the-classes-begin-with-menu_command_">To manage <strong>command menus</strong>, which are menus that allow the player to issue <strong>functions</strong>, the classes begin with <strong>MENU_COMMAND_</strong>:</h5>
-
+<h5 id='to-manage-strong-command-menus-strong-which-are-menus-that-allow-the-player-to-issue-strong-functions-strong-the-classes-begin-with-strong-menu_command_-strong'>To manage <strong>command menus</strong>, which are menus that allow the player to issue <strong>functions</strong>, the classes begin with <strong>MENU_COMMAND_</strong>:</h5>
 <ul>
 <li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>: Manages command menus for whole mission file.</li>
 <li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>: Manages command menus for whole coalition.</li>
 <li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>: Manages command menus for GROUPs.</li>
-<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a>: Manages command menus for CLIENTs. This manages menus for units with the skill level &ldquo;Client&rdquo;.</li>
+<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a>: Manages command menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
 </ul>
 
-<p>The above menus classes <strong>are derived</strong> from 2 main <strong>abstract</strong> classes defined within the MOOSE framework (so don&rsquo;t use these):</p>
-
-<h5 id="1-menu_-base-abstract-base-classes-dont-use-them">1) MENU_ BASE abstract base classes (don&rsquo;t use them)</h5>
-
+<p>The above menus classes <strong>are derived</strong> from 2 main <strong>abstract</strong> classes defined within the MOOSE framework (so don&#39;t use these):</p>
+<h5 id='1-menu_-base-abstract-base-classes-don-39-t-use-them'>1) MENU_ BASE abstract base classes (don&#39;t use them)</h5>
 <p>The underlying base menu classes are <strong>NOT</strong> to be used within your missions.
 These are simply abstract base classes defining a couple of fields that are used by the
 derived MENU_ classes to manage menus.</p>
-
-<h5 id="1-1-menu_base-class-extends-base">1.1) <a href="#menu_base-class">MENU_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
-
+<h5 id='1-1-a-href-menu_base-class-menu_base-a-class-extends-a-href-base-class-base-a'>1.1) <a href="#menu_base-class">MENU_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
 <p>The <a href="#menu_base-class">MENU_BASE</a> class defines the main MENU class where other MENU classes are derived from.</p>
-
-<h5 id="1-2-menu_command_base-class-extends-base">1.2) <a href="#menu_command_base-class">MENU_COMMAND_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
-
+<h5 id='1-2-a-href-menu_command_base-class-menu_command_base-a-class-extends-a-href-base-class-base-a'>1.2) <a href="#menu_command_base-class">MENU_COMMAND_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
 <p>The <a href="#menu_command_base-class">MENU_COMMAND_BASE</a> class defines the main MENU class where other MENU COMMAND_ classes are derived from, in order to set commands.</p>
 
 <p><strong>The next menus define the MENU classes that you can use within your missions.</strong></p>
-
-<h5 id="2-menu-mission-classes">2) MENU MISSION classes</h5>
-
+<h5 id='2-menu-mission-classes'>2) MENU MISSION classes</h5>
 <p>The underlying classes manage the menus for a complete mission file.</p>
-
-<h5 id="2-1-menu_mission-class-extends-menu_base">2.1) <a href="#menu_mission-class">MENU_MISSION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
-
+<h5 id='2-1-a-href-menu_mission-class-menu_mission-a-class-extends-a-href-menu_base-class-menu_base-a'>2.1) <a href="#menu_mission-class">MENU_MISSION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
 <p>The <a href="#menu_mission-class">MENU_MISSION</a> class manages the main menus for a complete mission.
 You can add menus with the <a href="#menu_mission-new-menutext-parentmenu">MENU_MISSION:New()</a> method, which constructs a MENU_MISSION object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission-removesubmenus">MENU_MISSION:RemoveSubMenus()</a>.</p>
-
-<h5 id="2-2-menu_mission_command-class-extends-menu_command_base">2.2) <a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
-
+<h5 id='2-2-a-href-menu_mission_command-class-menu_mission_command-a-class-extends-a-href-menu_command_base-class-menu_command_base-a'>2.2) <a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
 <p>The <a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a> class manages the command menus for a complete mission, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_mission_command-new-menutext-parentmenu-a-an">MENU_MISSION_COMMAND:New()</a> method, which constructs a MENU_MISSION_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission_command-remove">MENU_MISSION_COMMAND:Remove()</a>.</p>
-
-<h5 id="3-menu-coalition-classes">3) MENU COALITION classes</h5>
-
+<h5 id='3-menu-coalition-classes'>3) MENU COALITION classes</h5>
 <p>The underlying classes manage the menus for whole coalitions.</p>
-
-<h5 id="3-1-menu_coalition-class-extends-menu_base">3.1) <a href="#menu_coalition-class">MENU_COALITION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
-
+<h5 id='3-1-a-href-menu_coalition-class-menu_coalition-a-class-extends-a-href-menu_base-class-menu_base-a'>3.1) <a href="#menu_coalition-class">MENU_COALITION</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
 <p>The <a href="#menu_coalition-class">MENU_COALITION</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_coalition-new-coalition-menutext-parentmenu">MENU_COALITION:New()</a> method, which constructs a MENU_COALITION object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition-removesubmenus">MENU_COALITION:RemoveSubMenus()</a>.</p>
-
-<h5 id="3-2-menu_coalition_command-class-extends-menu_command_base">3.2) <a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
-
+<h5 id='3-2-a-href-menu_coalition_command-class-menu_coalition_command-a-class-extends-a-href-menu_command_base-class-menu_command_base-a'>3.2) <a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
 <p>The <a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_coalition_command-new-coalition-menutext-parentmenu-a-an">MENU_COALITION_COMMAND:New()</a> method, which constructs a MENU_COALITION_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition_command-remove">MENU_COALITION_COMMAND:Remove()</a>.</p>
-
-<h5 id="4-menu-group-classes">4) MENU GROUP classes</h5>
-
+<h5 id='4-menu-group-classes'>4) MENU GROUP classes</h5>
 <p>The underlying classes manage the menus for groups. Note that groups can be inactive, alive or can be destroyed.</p>
-
-<h5 id="4-1-menu_group-class-extends-menu_base">4.1) <a href="#menu_group-class">MENU_GROUP</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
-
+<h5 id='4-1-a-href-menu_group-class-menu_group-a-class-extends-a-href-menu_base-class-menu_base-a'>4.1) <a href="#menu_group-class">MENU_GROUP</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
 <p>The <a href="#menu_group-class">MENU_GROUP</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New()</a> method, which constructs a MENU_GROUP object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group-removesubmenus-self">MENU_GROUP:RemoveSubMenus()</a>.</p>
-
-<h5 id="4-2-menu_group_command-class-extends-menu_command_base">4.2) <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
-
+<h5 id='4-2-a-href-menu_group_command-class-menu_group_command-a-class-extends-a-href-menu_command_base-class-menu_command_base-a'>4.2) <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
 <p>The <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_group_command-new-menugroup-the-the-a-an">MENU_GROUP_COMMAND:New()</a> method, which constructs a MENU_GROUP_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group_command-remove-self">MENU_GROUP_COMMAND:Remove()</a>.</p>
-
-<h5 id="5-menu-client-classes">5) MENU CLIENT classes</h5>
-
+<h5 id='5-menu-client-classes'>5) MENU CLIENT classes</h5>
 <p>The underlying classes manage the menus for units with skill level client or player.</p>
-
-<h5 id="5-1-menu_client-class-extends-menu_base">5.1) <a href="#menu_client-class">MENU_CLIENT</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
-
+<h5 id='5-1-a-href-menu_client-class-menu_client-a-class-extends-a-href-menu_base-class-menu_base-a'>5.1) <a href="#menu_client-class">MENU_CLIENT</a> class, extends <a href="#menu_base-class">MENU_BASE</a></h5>
 <p>The <a href="#menu_client-class">MENU_CLIENT</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_client-new-client-menutext-parentmenu">MENU_CLIENT:New()</a> method, which constructs a MENU_CLIENT object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client-removesubmenus">MENU_CLIENT:RemoveSubMenus()</a>.</p>
-
-<h5 id="5-2-menu_client_command-class-extends-menu_command_base">5.2) <a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
-
+<h5 id='5-2-a-href-menu_client_command-class-menu_client_command-a-class-extends-a-href-menu_command_base-class-menu_command_base-a'>5.2) <a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> class, extends <a href="#menu_command_base-class">MENU_COMMAND_BASE</a></h5>
 <p>The <a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_client_command-new-client-menutext-parentmenu-a">MENU_CLIENT_COMMAND:New()</a> method, which constructs a MENU_CLIENT_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client_command-remove">MENU_CLIENT_COMMAND:Remove()</a>.</p>
-
-<h5 id="contributions">Contributions: -</h5>
-
-<h5 id="authors-flightcontrol-design-programming">Authors: FlightControl : Design &amp; Programming</h5>
-
-<h2 id="menu_base-class">MENU_BASE Class</h2>
-
+<h5 id='contributions-8'>Contributions: -</h5><h5 id='authors-flightcontrol-design-amp-programming'>Authors: FlightControl : Design &amp; Programming</h5><h2 id='menu_base-class'>MENU_BASE Class</h2>
 <pre>
 Inheritance : The MENU_BASE Class inherits from the following parents :
 BASE
     `-- MENU_BASE
 </pre>
-
-<h3 id="menu_base-new">MENU_BASE:New()</h3>
-
+<h3 id='menu_base-new'>MENU_BASE:New()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -138,9 +95,7 @@ self</li>
 <li><a href="#menu_base-class">MENU_BASE</a>
 self</li>
 </ul>
-
-<h3 id="menu_base-getmenu-menutext">MENU_BASE:GetMenu(MenuText)</h3>
-
+<h3 id='menu_base-getmenu-menutext'>MENU_BASE:GetMenu(MenuText)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -155,9 +110,7 @@ self</li>
 <li><a href="#menu_base-class">MENU_BASE</a>
 self</li>
 </ul>
-
-<h3 id="menu_base-setremoveparent-removeparent">MENU_BASE:SetRemoveParent(RemoveParent)</h3>
-
+<h3 id='menu_base-setremoveparent-removeparent'>MENU_BASE:SetRemoveParent(RemoveParent)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -172,9 +125,7 @@ self</li>
 <li><a href="#menu_base-class">MENU_BASE</a>
 self</li>
 </ul>
-
-<h3 id="menu_base-settime-self">MENU_BASE:SetTime(self)</h3>
-
+<h3 id='menu_base-settime-self'>MENU_BASE:SetTime(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -189,9 +140,7 @@ self</li>
 <li><a href="#menu_base-class">MENU_BASE</a>
 self</li>
 </ul>
-
-<h2 id="menu_command_base-class">MENU_COMMAND_BASE Class</h2>
-
+<h2 id='menu_command_base-class'>MENU_COMMAND_BASE Class</h2>
 <pre>
 Inheritance : The MENU_COMMAND_BASE Class inherits from the following parents :
 BASE
@@ -204,9 +153,7 @@ BASE
 <ul>
 <li><u>Function()</u> MenuCallHandler</li>
 </ul>
-
-<h3 id="menu_command_base-new">MENU_COMMAND_BASE:New()</h3>
-
+<h3 id='menu_command_base-new'>MENU_COMMAND_BASE:New()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -220,18 +167,14 @@ self</li>
 <li><a href="#menu_command_base-class">MENU_COMMAND_BASE</a>
 self</li>
 </ul>
-
-<h2 id="menu_mission-class">MENU_MISSION Class</h2>
-
+<h2 id='menu_mission-class'>MENU_MISSION Class</h2>
 <pre>
 Inheritance : The MENU_MISSION Class inherits from the following parents :
 BASE
     `-- MENU_BASE
         `-- MENU_MISSION
 </pre>
-
-<h3 id="menu_mission-new-menutext-parentmenu">MENU_MISSION:New(MenuText, ParentMenu)</h3>
-
+<h3 id='menu_mission-new-menutext-parentmenu'>MENU_MISSION:New(MenuText, ParentMenu)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -247,9 +190,7 @@ self</li>
 <li><a href="#menu_mission-class">MENU_MISSION</a>
 self</li>
 </ul>
-
-<h3 id="menu_mission-removesubmenus">MENU_MISSION:RemoveSubMenus()</h3>
-
+<h3 id='menu_mission-removesubmenus'>MENU_MISSION:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -263,9 +204,7 @@ self</li>
 <li><a href="#menu_mission-class">MENU_MISSION</a>
 self</li>
 </ul>
-
-<h3 id="menu_mission-remove">MENU_MISSION:Remove()</h3>
-
+<h3 id='menu_mission-remove'>MENU_MISSION:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -278,9 +217,7 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_mission_command-class">MENU_MISSION_COMMAND Class</h2>
-
+<h2 id='menu_mission_command-class'>MENU_MISSION_COMMAND Class</h2>
 <pre>
 Inheritance : The MENU_MISSION_COMMAND Class inherits from the following parents :
 BASE
@@ -288,9 +225,7 @@ BASE
         `-- MENU_COMMAND_BASE
             `-- MENU_MISSION_COMMAND
 </pre>
-
-<h3 id="menu_mission_command-new-menutext-parentmenu-a-an">MENU_MISSION_COMMAND:New(MenuText, ParentMenu, A, An)</h3>
-
+<h3 id='menu_mission_command-new-menutext-parentmenu-a-an'>MENU_MISSION_COMMAND:New(MenuText, ParentMenu, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -308,9 +243,7 @@ self</li>
 <li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>
 self</li>
 </ul>
-
-<h3 id="menu_mission_command-remove">MENU_MISSION_COMMAND:Remove()</h3>
-
+<h3 id='menu_mission_command-remove'>MENU_MISSION_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -323,18 +256,14 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_coalition-class">MENU_COALITION Class</h2>
-
+<h2 id='menu_coalition-class'>MENU_COALITION Class</h2>
 <pre>
 Inheritance : The MENU_COALITION Class inherits from the following parents :
 BASE
     `-- MENU_BASE
         `-- MENU_COALITION
 </pre>
-
-<h3 id="menu_coalition-new-coalition-menutext-parentmenu">MENU_COALITION:New(Coalition, MenuText, ParentMenu)</h3>
-
+<h3 id='menu_coalition-new-coalition-menutext-parentmenu'>MENU_COALITION:New(Coalition, MenuText, ParentMenu)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -351,9 +280,7 @@ self</li>
 <li><a href="#menu_coalition-class">MENU_COALITION</a>
 self</li>
 </ul>
-
-<h3 id="menu_coalition-removesubmenus">MENU_COALITION:RemoveSubMenus()</h3>
-
+<h3 id='menu_coalition-removesubmenus'>MENU_COALITION:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -367,9 +294,7 @@ self</li>
 <li><a href="#menu_coalition-class">MENU_COALITION</a>
 self</li>
 </ul>
-
-<h3 id="menu_coalition-remove">MENU_COALITION:Remove()</h3>
-
+<h3 id='menu_coalition-remove'>MENU_COALITION:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -382,9 +307,7 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_coalition_command-class">MENU_COALITION_COMMAND Class</h2>
-
+<h2 id='menu_coalition_command-class'>MENU_COALITION_COMMAND Class</h2>
 <pre>
 Inheritance : The MENU_COALITION_COMMAND Class inherits from the following parents :
 BASE
@@ -392,9 +315,7 @@ BASE
         `-- MENU_COMMAND_BASE
             `-- MENU_COALITION_COMMAND
 </pre>
-
-<h3 id="menu_coalition_command-new-coalition-menutext-parentmenu-a-an">MENU_COALITION_COMMAND:New(Coalition, MenuText, ParentMenu, A, An)</h3>
-
+<h3 id='menu_coalition_command-new-coalition-menutext-parentmenu-a-an'>MENU_COALITION_COMMAND:New(Coalition, MenuText, ParentMenu, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -413,9 +334,7 @@ self</li>
 <li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>
 self</li>
 </ul>
-
-<h3 id="menu_coalition_command-remove">MENU_COALITION_COMMAND:Remove()</h3>
-
+<h3 id='menu_coalition_command-remove'>MENU_COALITION_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -428,18 +347,14 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_client-class">MENU_CLIENT Class</h2>
-
+<h2 id='menu_client-class'>MENU_CLIENT Class</h2>
 <pre>
 Inheritance : The MENU_CLIENT Class inherits from the following parents :
 BASE
     `-- MENU_BASE
         `-- MENU_CLIENT
 </pre>
-
-<h3 id="menu_client-new-client-menutext-parentmenu">MENU_CLIENT:New(Client, MenuText, ParentMenu)</h3>
-
+<h3 id='menu_client-new-client-menutext-parentmenu'>MENU_CLIENT:New(Client, MenuText, ParentMenu)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -456,9 +371,7 @@ self</li>
 <li><a href="#menu_client-class">MENU_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="menu_client-removesubmenus">MENU_CLIENT:RemoveSubMenus()</h3>
-
+<h3 id='menu_client-removesubmenus'>MENU_CLIENT:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -472,9 +385,7 @@ self</li>
 <li><a href="#menu_client-class">MENU_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="menu_client-remove">MENU_CLIENT:Remove()</h3>
-
+<h3 id='menu_client-remove'>MENU_CLIENT:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -487,17 +398,13 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_client_command-class">MENU_CLIENT_COMMAND Class</h2>
-
+<h2 id='menu_client_command-class'>MENU_CLIENT_COMMAND Class</h2>
 <pre>
 Inheritance : The MENU_CLIENT_COMMAND Class inherits from the following parents :
 ERROR !
     `-- MENU_CLIENT_COMMAND
 </pre>
-
-<h3 id="menu_client_command-new-client-menutext-parentmenu-a">MENU_CLIENT_COMMAND:New(Client, MenuText, ParentMenu, A)</h3>
-
+<h3 id='menu_client_command-new-client-menutext-parentmenu-a'>MENU_CLIENT_COMMAND:New(Client, MenuText, ParentMenu, A)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -515,9 +422,7 @@ ParentMenu : The parent menu.</li>
 <ul>
 <li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> self</li>
 </ul>
-
-<h3 id="menu_client_command-remove">MENU_CLIENT_COMMAND:Remove()</h3>
-
+<h3 id='menu_client_command-remove'>MENU_CLIENT_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -530,18 +435,14 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_group-class">MENU_GROUP Class</h2>
-
+<h2 id='menu_group-class'>MENU_GROUP Class</h2>
 <pre>
 Inheritance : The MENU_GROUP Class inherits from the following parents :
 BASE
     `-- MENU_BASE
         `-- MENU_GROUP
 </pre>
-
-<h3 id="menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New(MenuGroup, MenuText, ParentMenu)</h3>
-
+<h3 id='menu_group-new-menugroup-menutext-parentmenu'>MENU_GROUP:New(MenuGroup, MenuText, ParentMenu)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -558,9 +459,7 @@ self</li>
 <li><a href="#menu_group-class">MENU_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="menu_group-removesubmenus-self">MENU_GROUP:RemoveSubMenus(self)</h3>
-
+<h3 id='menu_group-removesubmenus-self'>MENU_GROUP:RemoveSubMenus(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -575,9 +474,7 @@ self</li>
 <li><a href="#menu_group-class">MENU_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="menu_group-remove-self">MENU_GROUP:Remove(self)</h3>
-
+<h3 id='menu_group-remove-self'>MENU_GROUP:Remove(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -591,18 +488,14 @@ self</li>
 <ul>
 <li><u>Nil</u> self</li>
 </ul>
-
-<h2 id="menu_group_command-class">MENU_GROUP_COMMAND Class</h2>
-
+<h2 id='menu_group_command-class'>MENU_GROUP_COMMAND Class</h2>
 <pre>
 Inheritance : The MENU_GROUP_COMMAND Class inherits from the following parents :
 BASE
     `-- MENU_BASE
         `-- MENU_GROUP_COMMAND
 </pre>
-
-<h3 id="menu_group_command-new-menugroup-the-the-a-an">MENU_GROUP_COMMAND:New(MenuGroup, The, The, A, An)</h3>
-
+<h3 id='menu_group_command-new-menugroup-the-the-a-an'>MENU_GROUP_COMMAND:New(MenuGroup, The, The, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -621,9 +514,7 @@ self</li>
 <li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>
 self</li>
 </ul>
-
-<h3 id="menu_group_command-remove-self">MENU_GROUP_COMMAND:Remove(self)</h3>
-
+<h3 id='menu_group_command-remove-self'>MENU_GROUP_COMMAND:Remove(self)</h3>
 <h4> Parameters </h4>
 
 <ul>

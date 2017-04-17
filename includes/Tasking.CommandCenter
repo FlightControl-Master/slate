@@ -1,18 +1,13 @@
-<h1 id="tasking-commandcenter-module">Tasking.CommandCenter Module</h1>
-
+<h1 id='tasking-commandcenter-module'>Tasking.CommandCenter Module</h1>
 <p>A COMMANDCENTER is the owner of multiple missions within MOOSE.
 A COMMANDCENTER governs multiple missions, the tasking and the reporting.</p>
-
-<h2 id="report-class">REPORT Class</h2>
-
+<h2 id='report-class'>REPORT Class</h2>
 <pre>
 Inheritance : The REPORT Class inherits from the following parents :
 BASE
     `-- REPORT
 </pre>
-
-<h3 id="report-new-title">REPORT:New(Title)</h3>
-
+<h3 id='report-new-title'>REPORT:New(Title)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -27,9 +22,7 @@ self</li>
 <li><a href="#report-class">REPORT</a>
 self</li>
 </ul>
-
-<h3 id="report-add-text">REPORT:Add(Text)</h3>
-
+<h3 id='report-add-text'>REPORT:Add(Text)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -44,9 +37,7 @@ self</li>
 <li><a href="#report-class">REPORT</a>
 self</li>
 </ul>
-
-<h3 id="report-text-delimiter">REPORT:Text(Delimiter)</h3>
-
+<h3 id='report-text-delimiter'>REPORT:Text(Delimiter)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -60,9 +51,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report text.</li>
 </ul>
-
-<h2 id="commandcenter-class">COMMANDCENTER Class</h2>
-
+<h2 id='commandcenter-class'>COMMANDCENTER Class</h2>
 <pre>
 Inheritance : The COMMANDCENTER Class inherits from the following parents :
 BASE
@@ -75,9 +64,7 @@ BASE
 <li><a href="#group-class">GROUP</a> HQ</li>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition CommandCenterCoalition</li>
 </ul>
-
-<h3 id="commandcenter-new-commandcenterpositionable-commandcentername">COMMANDCENTER:New(CommandCenterPositionable, CommandCenterName)</h3>
-
+<h3 id='commandcenter-new-commandcenterpositionable-commandcentername'>COMMANDCENTER:New(CommandCenterPositionable, CommandCenterName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -93,9 +80,7 @@ self</li>
 <li><a href="#commandcenter-class">COMMANDCENTER</a>
 self</li>
 </ul>
-
-<h3 id="commandcenter-getname">COMMANDCENTER:GetName()</h3>
-
+<h3 id='commandcenter-getname'>COMMANDCENTER:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -108,9 +93,7 @@ self</li>
 <ul>
 <li><u>String</u> self</li>
 </ul>
-
-<h3 id="commandcenter-getpositionable">COMMANDCENTER:GetPositionable()</h3>
-
+<h3 id='commandcenter-getpositionable'>COMMANDCENTER:GetPositionable()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -123,9 +106,7 @@ self</li>
 <ul>
 <li><a href="#positionable-class">POSITIONABLE</a> self</li>
 </ul>
-
-<h3 id="commandcenter-getmissions">COMMANDCENTER:GetMissions()</h3>
-
+<h3 id='commandcenter-getmissions'>COMMANDCENTER:GetMissions()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -138,9 +119,7 @@ self</li>
 <ul>
 <li>#list<Tasking.Mission#MISSION> self</li>
 </ul>
-
-<h3 id="commandcenter-addmission-mission">COMMANDCENTER:AddMission(Mission)</h3>
-
+<h3 id='commandcenter-addmission-mission'>COMMANDCENTER:AddMission(Mission)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -154,9 +133,7 @@ self</li>
 <ul>
 <li><a href="#mission-class">MISSION</a> self</li>
 </ul>
-
-<h3 id="commandcenter-removemission-mission">COMMANDCENTER:RemoveMission(Mission)</h3>
-
+<h3 id='commandcenter-removemission-mission'>COMMANDCENTER:RemoveMission(Mission)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -170,9 +147,7 @@ self</li>
 <ul>
 <li><a href="#mission-class">MISSION</a> self</li>
 </ul>
-
-<h3 id="commandcenter-setmenu">COMMANDCENTER:SetMenu()</h3>
-
+<h3 id='commandcenter-setmenu'>COMMANDCENTER:SetMenu()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -181,9 +156,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="commandcenter-getmenu">COMMANDCENTER:GetMenu()</h3>
-
+<h3 id='commandcenter-getmenu'>COMMANDCENTER:GetMenu()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -196,9 +169,7 @@ self</li>
 <ul>
 <li><a href="#menu_coalition-class">MENU_COALITION</a> self</li>
 </ul>
-
-<h3 id="commandcenter-hasgroup-self">COMMANDCENTER:HasGroup(self)</h3>
-
+<h3 id='commandcenter-hasgroup-self'>COMMANDCENTER:HasGroup(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -212,9 +183,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="commandcenter-messagetoall">COMMANDCENTER:MessageToAll()</h3>
-
+<h3 id='commandcenter-messagetoall'>COMMANDCENTER:MessageToAll()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -223,9 +192,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="commandcenter-messagetogroup-message-taskgroup-name">COMMANDCENTER:MessageToGroup(Message, TaskGroup, Name)</h3>
-
+<h3 id='commandcenter-messagetogroup-message-taskgroup-name'>COMMANDCENTER:MessageToGroup(Message, TaskGroup, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -237,9 +204,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="commandcenter-messagetocoalition">COMMANDCENTER:MessageToCoalition()</h3>
-
+<h3 id='commandcenter-messagetocoalition'>COMMANDCENTER:MessageToCoalition()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -248,9 +213,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="commandcenter-reportsummary">COMMANDCENTER:ReportSummary()</h3>
-
+<h3 id='commandcenter-reportsummary'>COMMANDCENTER:ReportSummary()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -259,9 +222,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="commandcenter-reportdetails">COMMANDCENTER:ReportDetails()</h3>
-
+<h3 id='commandcenter-reportdetails'>COMMANDCENTER:ReportDetails()</h3>
 <h4> Parameters </h4>
 
 <ul>

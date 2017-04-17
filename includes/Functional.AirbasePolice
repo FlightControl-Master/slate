@@ -1,21 +1,16 @@
-<h1 id="functional-airbasepolice-module">Functional.AirbasePolice Module</h1>
-
+<h1 id='functional-airbasepolice-module'>Functional.AirbasePolice Module</h1>
 <p>This module contains the AIRBASEPOLICE classes.</p>
-
-<h5 id="1-airbasepolice_base-class-extends-base">1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
-
+<h5 id='1-a-href-airbasepolice_base-class-airbasepolice_base-a-class-extends-a-href-base-class-base-a'>1) <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class, extends <a href="#base-class">BASE</a></h5>
 <p>The <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a> class provides the main methods to monitor CLIENT behaviour at airbases.
 CLIENTS should not be allowed to:</p>
 
 <ul>
-<li>Don&rsquo;t taxi faster than 40 km/h.</li>
-<li>Don&rsquo;t take-off on taxiways.</li>
+<li>Don&#39;t taxi faster than 40 km/h.</li>
+<li>Don&#39;t take-off on taxiways.</li>
 <li>Avoid to hit other planes on the airbase.</li>
 <li>Obey ground control orders.</li>
 </ul>
-
-<h5 id="2-airbasepolice_caucasus-class-extends-airbasepolice_base">2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
-
+<h5 id='2-a-href-airbasepolice_caucasus-class-airbasepolice_caucasus-a-class-extends-a-href-airbasepolice_base-class-airbasepolice_base-a'>2) <a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
 <p>All the airbases on the caucasus map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
 The following names can be given:
@@ -40,9 +35,7 @@ The following names can be given:
 * SukhumiBabushara
 * TbilisiLochini
 * Vaziani</p>
-
-<h5 id="3-airbasepolice_nevada-class-extends-airbasepolice_base">3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
-
+<h5 id='3-a-href-airbasepolice_nevada-class-airbasepolice_nevada-a-class-extends-a-href-airbasepolice_base-class-airbasepolice_base-a'>3) <a href="#airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA</a> class, extends <a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a></h5>
 <p>All the airbases on the NEVADA map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the <a href="#airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor()</a> method, which takes a table or airbase names.
 The following names can be given:
@@ -50,13 +43,7 @@ The following names can be given:
 * McCarran
 * Creech
 * Groom Lake</p>
-
-<h5 id="contributions-dutch-baron-concept-testing">Contributions: Dutch Baron - Concept &amp; Testing</h5>
-
-<h5 id="author-flightcontrol-framework-design-programming">Author: FlightControl - Framework Design &amp;  Programming</h5>
-
-<h2 id="airbasepolice_base-class">AIRBASEPOLICE_BASE Class</h2>
-
+<h5 id='contributions-dutch-baron-concept-amp-testing'>Contributions: Dutch Baron - Concept &amp; Testing</h5><h5 id='author-flightcontrol-framework-design-amp-programming'>Author: FlightControl - Framework Design &amp;  Programming</h5><h2 id='airbasepolice_base-class'>AIRBASEPOLICE_BASE Class</h2>
 <pre>
 Inheritance : The AIRBASEPOLICE_BASE Class inherits from the following parents :
 BASE
@@ -68,9 +55,7 @@ BASE
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> SetClient</li>
 </ul>
-
-<h3 id="airbasepolice_base-new-a-a">AIRBASEPOLICE_BASE:New(A, A)</h3>
-
+<h3 id='airbasepolice_base-new-a-a'>AIRBASEPOLICE_BASE:New(A, A)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -86,9 +71,7 @@ self</li>
 <li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
 self</li>
 </ul>
-
-<h3 id="airbasepolice_base-monitor-airbasenames">AIRBASEPOLICE_BASE:Monitor(AirbaseNames)</h3>
-
+<h3 id='airbasepolice_base-monitor-airbasenames'>AIRBASEPOLICE_BASE:Monitor(AirbaseNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -103,15 +86,11 @@ self</li>
 <li><a href="#airbasepolice_base-class">AIRBASEPOLICE_BASE</a>
 self</li>
 </ul>
-
-<h2 id="airbasepolice_base-airbasenames-class">AIRBASEPOLICE_BASE.AirbaseNames Class</h2>
-
+<h2 id='airbasepolice_base-airbasenames-class'>AIRBASEPOLICE_BASE.AirbaseNames Class</h2>
 <pre>
 **The AIRBASEPOLICE_BASE.AirbaseNames class does not inherit**
 </pre>
-
-<h2 id="airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS Class</h2>
-
+<h2 id='airbasepolice_caucasus-class'>AIRBASEPOLICE_CAUCASUS Class</h2>
 <pre>
 Inheritance : The AIRBASEPOLICE_CAUCASUS Class inherits from the following parents :
 BASE
@@ -124,9 +103,7 @@ BASE
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> SetClient</li>
 </ul>
-
-<h3 id="airbasepolice_caucasus-new-a">AIRBASEPOLICE_CAUCASUS:New(A)</h3>
-
+<h3 id='airbasepolice_caucasus-new-a'>AIRBASEPOLICE_CAUCASUS:New(A)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -141,18 +118,14 @@ self</li>
 <li><a href="#airbasepolice_caucasus-class">AIRBASEPOLICE_CAUCASUS</a>
 self</li>
 </ul>
-
-<h2 id="airbasepolice_nevada-class">AIRBASEPOLICE_NEVADA Class</h2>
-
+<h2 id='airbasepolice_nevada-class'>AIRBASEPOLICE_NEVADA Class</h2>
 <pre>
 Inheritance : The AIRBASEPOLICE_NEVADA Class inherits from the following parents :
 BASE
     `-- AIRBASEPOLICE_BASE
         `-- AIRBASEPOLICE_NEVADA
 </pre>
-
-<h3 id="airbasepolice_nevada-new-a">AIRBASEPOLICE_NEVADA:New(A)</h3>
-
+<h3 id='airbasepolice_nevada-new-a'>AIRBASEPOLICE_NEVADA:New(A)</h3>
 <h4> Parameters </h4>
 
 <ul>

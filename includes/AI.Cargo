@@ -1,6 +1,5 @@
-<h1 id="ai-cargo-module">AI.Cargo Module</h1>
-
-<p>Single-Player:<strong>Yes</strong> / Multi-Player:<strong>Yes</strong> / AI:<strong>Yes</strong> / Human:<strong>No</strong> / Types:<strong>Ground</strong> &ndash;
+<h1 id='ai-cargo-module'>AI.Cargo Module</h1>
+<p>Single-Player:<strong>Yes</strong> / Multi-Player:<strong>Yes</strong> / AI:<strong>Yes</strong> / Human:<strong>No</strong> / Types:<strong>Ground</strong> --
 <strong>Management of logical cargo objects, that can be transported from and to transportation carriers.</strong></p>
 
 <p><img src="/includes/Pictures/AI_CARGO/CARGO.JPG" alt="Banner Image" /></p>
@@ -15,17 +14,13 @@
 <li><p>CARGO_SLINGLOAD, represented by a <a href="#cargo-module">Cargo</a> that is transportable: Cargo can be represented by a Cargo object that is transportable. Destruction of the Cargo will mean that the cargo is lost.</p></li>
 <li><p>AI_CARGO_GROUPED, represented by a Group of CARGO_UNITs.</p></li>
 </ul>
-
-<h5 id="1-ai_cargo-class-extends-fsm_process">1) <a href="#ai_cargo-class">AI_CARGO</a> class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h5>
-
+<h5 id='1-a-href-ai_cargo-class-ai_cargo-a-class-extends-a-href-fsm_process-class-fsm_process-a'>1) <a href="#ai_cargo-class">AI_CARGO</a> class, extends <a href="#fsm_process-class">FSM_PROCESS</a></h5>
 <p>The <a href="#ai_cargo-class">AI_CARGO</a> class defines the core functions that defines a cargo object within MOOSE.
 A cargo is a logical object defined that is available for transport, and has a life status within a simulation.</p>
 
 <p>The AI_CARGO is a state machine: it manages the different events and states of the cargo.
 All derived classes from AI_CARGO follow the same state machine, expose the same cargo event functions, and provide the same cargo states.</p>
-
-<h5 id="1-2-1-ai_cargo-events">1.2.1) AI_CARGO Events:</h5>
-
+<h5 id='1-2-1-ai_cargo-events'>1.2.1) AI_CARGO Events:</h5>
 <ul>
 <li><a href="#ai_cargo-board-tocarrier">AI_CARGO:Board()</a> ToCarrier ):  Boards the cargo to a carrier.</li>
 <li><a href="#ai_cargo-load-tocarrier">AI_CARGO:Load()</a> ToCarrier ): Loads the cargo into a carrier, regardless of its position.</li>
@@ -33,20 +28,16 @@ All derived classes from AI_CARGO follow the same state machine, expose the same
 <li><a href="#ai_cargo-unload-topointvec2">AI_CARGO:UnLoad()</a> ToPointVec2 ): UnLoads the cargo from a carrier.</li>
 <li>AI_CARGO-Dead Controllable ): The cargo is dead. The cargo process will be ended.</li>
 </ul>
-
-<h5 id="1-2-2-ai_cargo-states">1.2.2) AI_CARGO States:</h5>
-
+<h5 id='1-2-2-ai_cargo-states'>1.2.2) AI_CARGO States:</h5>
 <ul>
 <li><strong>UnLoaded</strong>: The cargo is unloaded from a carrier.</li>
 <li><strong>Boarding</strong>: The cargo is currently boarding (= running) into a carrier.</li>
 <li><strong>Loaded</strong>: The cargo is loaded into a carrier.</li>
 <li><strong>UnBoarding</strong>: The cargo is currently unboarding (=running) from a carrier.</li>
-<li><strong>Dead</strong>: The cargo is dead &hellip;</li>
+<li><strong>Dead</strong>: The cargo is dead ...</li>
 <li><strong>End</strong>: The process has come to an end.</li>
 </ul>
-
-<h5 id="1-2-3-ai_cargo-state-transition-methods">1.2.3) AI_CARGO state transition methods:</h5>
-
+<h5 id='1-2-3-ai_cargo-state-transition-methods'>1.2.3) AI_CARGO state transition methods:</h5>
 <p>State transition functions can be set <strong>by the mission designer</strong> customizing or improving the behaviour of the state.
 There are 2 moments when state transition methods will be called by the state machine:</p>
 
@@ -55,30 +46,24 @@ There are 2 moments when state transition methods will be called by the state ma
 The state transition method needs to start with the name <strong>OnLeave + the name of the state</strong>.
 If the state transition method returns false, then the processing of the state transition will not be done!
 If you want to change the behaviour of the AIControllable at this event, return false,
-but then you&rsquo;ll need to specify your own logic using the AIControllable!</p></li>
+but then you&#39;ll need to specify your own logic using the AIControllable!</p></li>
 <li><p><strong>Entering</strong> the state.
 The state transition method needs to start with the name <strong>OnEnter + the name of the state</strong>.
 These state transition methods need to provide a return value, which is specified at the function description.</p></li>
 </ul>
-
-<h5 id="2-ai_cargo_unit">2) <a href="#ai_cargo_unit-class">AI_CARGO_UNIT</a></h5>
-
+<h5 id='2-a-href-ai_cargo_unit-class-ai_cargo_unit-a'>2) <a href="#ai_cargo_unit-class">AI_CARGO_UNIT</a></h5>
 <p>class</p>
 
 <p>The AI_CARGO_UNIT class defines a cargo that is represented by a UNIT object within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
-
-<h5 id="5-ai_cargo_grouped">5) <a href="#ai_cargo_grouped-class">AI_CARGO_GROUPED</a></h5>
-
+<h5 id='5-a-href-ai_cargo_grouped-class-ai_cargo_grouped-a'>5) <a href="#ai_cargo_grouped-class">AI_CARGO_GROUPED</a></h5>
 <p>class</p>
 
 <p>The AI_CARGO_GROUPED class defines a cargo that is represented by a group of UNIT objects within the simulator, and can be transported by a carrier.
 Use the event functions as described above to Load, UnLoad, Board, UnBoard the AI_CARGO_UNIT objects to and from carriers.</p>
 
-<p>This module is still under construction, but is described above works already, and will keep working &hellip;</p>
-
-<h2 id="ai_cargo-class">AI_CARGO Class</h2>
-
+<p>This module is still under construction, but is described above works already, and will keep working ...</p>
+<h2 id='ai_cargo-class'>AI_CARGO Class</h2>
 <pre>
 Inheritance : The AI_CARGO Class inherits from the following parents :
 BASE
@@ -96,16 +81,14 @@ BASE
 <li><u>Number</u> Weight : A number defining the weight of the cargo. The weight is expressed in kg.</li>
 <li><u>Number</u> ReportRadius : (optional) A number defining the radius in meters when the cargo is signalling or reporting to a Carrier.</li>
 <li><u>Number</u> NearRadius : (optional) A number defining the radius in meters when the cargo is near to a Carrier, so that it can be loaded.</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> CargoObject : The alive DCS object representing the cargo. This value can be nil, meaning, that the cargo is not represented anywhere&hellip;</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> CargoCarrier : The alive DCS object carrying the cargo. This value can be nil, meaning, that the cargo is not contained anywhere&hellip;</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> CargoObject : The alive DCS object representing the cargo. This value can be nil, meaning, that the cargo is not represented anywhere...</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> CargoCarrier : The alive DCS object carrying the cargo. This value can be nil, meaning, that the cargo is not contained anywhere...</li>
 <li><u>Boolean</u> Slingloadable : This flag defines if the cargo can be slingloaded.</li>
 <li><u>Boolean</u> Moveable : This flag defines if the cargo is moveable.</li>
 <li><u>Boolean</u> Representable : This flag defines if the cargo can be represented by a DCS Unit.</li>
 <li><u>Boolean</u> Containable : This flag defines if the cargo can be contained within a DCS Unit.</li>
 </ul>
-
-<h3 id="ai_cargo-board-tocarrier">AI_CARGO:Board(ToCarrier)</h3>
-
+<h3 id='ai_cargo-board-tocarrier'>AI_CARGO:Board(ToCarrier)</h3>
 <p>Boards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo to the Carrier.
 The cargo must be in the <strong>UnLoaded</strong> state.</p>
 
@@ -118,9 +101,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-unboard-topointvec2">AI_CARGO:UnBoard(ToPointVec2)</h3>
-
+<h3 id='ai_cargo-unboard-topointvec2'>AI_CARGO:UnBoard(ToPointVec2)</h3>
 <p>UnBoards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo from the Carrier.
 The cargo must be in the <strong>Loaded</strong> state.</p>
 
@@ -133,9 +114,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-load-tocarrier">AI_CARGO:Load(ToCarrier)</h3>
-
+<h3 id='ai_cargo-load-tocarrier'>AI_CARGO:Load(ToCarrier)</h3>
 <p>Loads the cargo to a Carrier. The event will load the cargo into the Carrier regardless of its position. There will be no movement simulated of the cargo loading.
 The cargo must be in the <strong>UnLoaded</strong> state.</p>
 
@@ -148,9 +127,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-unload-topointvec2">AI_CARGO:UnLoad(ToPointVec2)</h3>
-
+<h3 id='ai_cargo-unload-topointvec2'>AI_CARGO:UnLoad(ToPointVec2)</h3>
 <p>UnLoads the cargo to a Carrier. The event will unload the cargo from the Carrier. There will be no movement simulated of the cargo loading.
 The cargo must be in the <strong>Loaded</strong> state.</p>
 
@@ -163,9 +140,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-onleaveunloaded-controllable">AI_CARGO:OnLeaveUnLoaded(Controllable)</h3>
-
+<h3 id='ai_cargo-onleaveunloaded-controllable'>AI_CARGO:OnLeaveUnLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -179,9 +154,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="ai_cargo-onenterunloaded-controllable">AI_CARGO:OnEnterUnLoaded(Controllable)</h3>
-
+<h3 id='ai_cargo-onenterunloaded-controllable'>AI_CARGO:OnEnterUnLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -191,37 +164,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-onleaveloaded-controllable">AI_CARGO:OnLeaveLoaded(Controllable)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#ai_cargo-class">AI_CARGO</a>
-self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-
-<h3 id="ai_cargo-onenterloaded-controllable">AI_CARGO:OnEnterLoaded(Controllable)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#ai_cargo-class">AI_CARGO</a>
-self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
-</ul>
-
-<h4> Returns </h4>
-
-<h3 id="ai_cargo-onleaveboarding-controllable">AI_CARGO:OnLeaveBoarding(Controllable)</h3>
-
+<h3 id='ai_cargo-onleaveloaded-controllable'>AI_CARGO:OnLeaveLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -235,9 +178,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="ai_cargo-onenterboarding-controllable">AI_CARGO:OnEnterBoarding(Controllable)</h3>
-
+<h3 id='ai_cargo-onenterloaded-controllable'>AI_CARGO:OnEnterLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -247,9 +188,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo-onleaveunboarding-controllable">AI_CARGO:OnLeaveUnBoarding(Controllable)</h3>
-
+<h3 id='ai_cargo-onleaveboarding-controllable'>AI_CARGO:OnLeaveBoarding(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -263,9 +202,17 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
+<h3 id='ai_cargo-onenterboarding-controllable'>AI_CARGO:OnEnterBoarding(Controllable)</h3>
+<h4> Parameters </h4>
 
-<h3 id="ai_cargo-onenterunboarding-controllable">AI_CARGO:OnEnterUnBoarding(Controllable)</h3>
+<ul>
+<li><a href="#ai_cargo-class">AI_CARGO</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
 
+<h4> Returns </h4>
+<h3 id='ai_cargo-onleaveunboarding-controllable'>AI_CARGO:OnLeaveUnBoarding(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -276,8 +223,20 @@ self</li>
 
 <h4> Returns </h4>
 
-<h3 id="ai_cargo-new-type-name-weight-reportradius-nearradius">AI_CARGO:New(Type, Name, Weight, ReportRadius, NearRadius)</h3>
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<h3 id='ai_cargo-onenterunboarding-controllable'>AI_CARGO:OnEnterUnBoarding(Controllable)</h3>
+<h4> Parameters </h4>
 
+<ul>
+<li><a href="#ai_cargo-class">AI_CARGO</a>
+self</li>
+<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+</ul>
+
+<h4> Returns </h4>
+<h3 id='ai_cargo-new-type-name-weight-reportradius-nearradius'>AI_CARGO:New(Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -296,9 +255,7 @@ self</li>
 <li><a href="#ai_cargo-class">AI_CARGO</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo-spawn">AI_CARGO:Spawn()</h3>
-
+<h3 id='ai_cargo-spawn'>AI_CARGO:Spawn()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -312,9 +269,7 @@ self</li>
 <li><a href="#ai_cargo-class">AI_CARGO</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo-isnear-pointvec2">AI_CARGO:IsNear(PointVec2)</h3>
-
+<h3 id='ai_cargo-isnear-pointvec2'>AI_CARGO:IsNear(PointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -328,15 +283,11 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h2 id="ai_cargo-cargoobjects-class">AI_CARGO.CargoObjects Class</h2>
-
+<h2 id='ai_cargo-cargoobjects-class'>AI_CARGO.CargoObjects Class</h2>
 <pre>
 **The AI_CARGO.CargoObjects class does not inherit**
 </pre>
-
-<h2 id="ai_cargo_representable-class">AI_CARGO_REPRESENTABLE Class</h2>
-
+<h2 id='ai_cargo_representable-class'>AI_CARGO_REPRESENTABLE Class</h2>
 <pre>
 Inheritance : The AI_CARGO_REPRESENTABLE Class inherits from the following parents :
 BASE
@@ -346,9 +297,7 @@ BASE
                 `-- AI_CARGO
                     `-- AI_CARGO_REPRESENTABLE
 </pre>
-
-<h3 id="ai_cargo_representable-new-cargoobject-type-name-weight-reportradius-nearradius">AI_CARGO_REPRESENTABLE:New(CargoObject, Type, Name, Weight, ReportRadius, NearRadius)</h3>
-
+<h3 id='ai_cargo_representable-new-cargoobject-type-name-weight-reportradius-nearradius'>AI_CARGO_REPRESENTABLE:New(CargoObject, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -368,9 +317,7 @@ self</li>
 <li><a href="#ai_cargo_representable-class">AI_CARGO_REPRESENTABLE</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo_representable-routeto-topointvec2-speed">AI_CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)</h3>
-
+<h3 id='ai_cargo_representable-routeto-topointvec2-speed'>AI_CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -386,9 +333,7 @@ self</li>
 <li><a href="#ai_cargo_representable-class">AI_CARGO_REPRESENTABLE</a>
 self</li>
 </ul>
-
-<h2 id="ai_cargo_unit-class">AI_CARGO_UNIT Class</h2>
-
+<h2 id='ai_cargo_unit-class'>AI_CARGO_UNIT Class</h2>
 <pre>
 Inheritance : The AI_CARGO_UNIT Class inherits from the following parents :
 BASE
@@ -399,9 +344,7 @@ BASE
                     `-- AI_CARGO_REPRESENTABLE
                         `-- AI_CARGO_UNIT
 </pre>
-
-<h3 id="ai_cargo_unit-new-cargounit-type-name-weight-reportradius-nearradius">AI_CARGO_UNIT:New(CargoUnit, Type, Name, Weight, ReportRadius, NearRadius)</h3>
-
+<h3 id='ai_cargo_unit-new-cargounit-type-name-weight-reportradius-nearradius'>AI_CARGO_UNIT:New(CargoUnit, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -421,9 +364,7 @@ self</li>
 <li><a href="#ai_cargo_unit-class">AI_CARGO_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo_unit-onenterunboarding-event-from-to-topointvec2">AI_CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)</h3>
-
+<h3 id='ai_cargo_unit-onenterunboarding-event-from-to-topointvec2'>AI_CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -436,9 +377,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onleaveunboarding-event-from-to-topointvec2">AI_CARGO_UNIT:onleaveUnBoarding(Event, From, To, ToPointVec2)</h3>
-
+<h3 id='ai_cargo_unit-onleaveunboarding-event-from-to-topointvec2'>AI_CARGO_UNIT:onleaveUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -451,9 +390,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onafterunboarding-event-from-to-topointvec2">AI_CARGO_UNIT:onafterUnBoarding(Event, From, To, ToPointVec2)</h3>
-
+<h3 id='ai_cargo_unit-onafterunboarding-event-from-to-topointvec2'>AI_CARGO_UNIT:onafterUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -466,9 +403,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onenterunloaded-event-from-to-self">AI_CARGO_UNIT:onenterUnLoaded(Event, From, To, self)</h3>
-
+<h3 id='ai_cargo_unit-onenterunloaded-event-from-to-self'>AI_CARGO_UNIT:onenterUnLoaded(Event, From, To, self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -481,9 +416,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onenterboarding-event-from-to-cargocarrier">AI_CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
-
+<h3 id='ai_cargo_unit-onenterboarding-event-from-to-cargocarrier'>AI_CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -496,9 +429,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onleaveboarding-event-from-to-cargocarrier">AI_CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
-
+<h3 id='ai_cargo_unit-onleaveboarding-event-from-to-cargocarrier'>AI_CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -511,9 +442,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onenterloaded-event-from-to-cargocarrier">AI_CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
-
+<h3 id='ai_cargo_unit-onenterloaded-event-from-to-cargocarrier'>AI_CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -526,9 +455,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_unit-onafterboard-event-from-to">AI_CARGO_UNIT:onafterBoard(Event, From, To)</h3>
-
+<h3 id='ai_cargo_unit-onafterboard-event-from-to'>AI_CARGO_UNIT:onafterBoard(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -540,9 +467,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h2 id="ai_cargo_package-class">AI_CARGO_PACKAGE Class</h2>
-
+<h2 id='ai_cargo_package-class'>AI_CARGO_PACKAGE Class</h2>
 <pre>
 Inheritance : The AI_CARGO_PACKAGE Class inherits from the following parents :
 BASE
@@ -553,9 +478,7 @@ BASE
                     `-- AI_CARGO_REPRESENTABLE
                         `-- AI_CARGO_PACKAGE
 </pre>
-
-<h3 id="ai_cargo_package-new-cargocarrier-type-name-weight-reportradius-nearradius">AI_CARGO_PACKAGE:New(CargoCarrier, Type, Name, Weight, ReportRadius, NearRadius)</h3>
-
+<h3 id='ai_cargo_package-new-cargocarrier-type-name-weight-reportradius-nearradius'>AI_CARGO_PACKAGE:New(CargoCarrier, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -575,9 +498,7 @@ self</li>
 <li><a href="#ai_cargo_package-class">AI_CARGO_PACKAGE</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle">AI_CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)</h3>
-
+<h3 id='ai_cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle'>AI_CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -593,9 +514,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_package-isnear-cargocarrier">AI_CARGO_PACKAGE:IsNear(CargoCarrier)</h3>
-
+<h3 id='ai_cargo_package-isnear-cargocarrier'>AI_CARGO_PACKAGE:IsNear(CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -609,9 +528,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="ai_cargo_package-onafteronboarded-event-from-to-cargocarrier">AI_CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)</h3>
-
+<h3 id='ai_cargo_package-onafteronboarded-event-from-to-cargocarrier'>AI_CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -624,9 +541,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_package-onafterunboard-event-from-to-speed-unloaddistance-unboarddistance-radius-angle">AI_CARGO_PACKAGE:onafterUnBoard(Event, From, To, Speed, UnLoadDistance, UnBoardDistance, Radius, Angle)</h3>
-
+<h3 id='ai_cargo_package-onafterunboard-event-from-to-speed-unloaddistance-unboarddistance-radius-angle'>AI_CARGO_PACKAGE:onafterUnBoard(Event, From, To, Speed, UnLoadDistance, UnBoardDistance, Radius, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -643,9 +558,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_package-onafterunboarded-event-from-to-cargocarrier">AI_CARGO_PACKAGE:onafterUnBoarded(Event, From, To, CargoCarrier)</h3>
-
+<h3 id='ai_cargo_package-onafterunboarded-event-from-to-cargocarrier'>AI_CARGO_PACKAGE:onafterUnBoarded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -658,9 +571,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_package-onafterload-event-from-to-cargocarrier-speed-loaddistance-angle">AI_CARGO_PACKAGE:onafterLoad(Event, From, To, CargoCarrier, Speed, LoadDistance, Angle)</h3>
-
+<h3 id='ai_cargo_package-onafterload-event-from-to-cargocarrier-speed-loaddistance-angle'>AI_CARGO_PACKAGE:onafterLoad(Event, From, To, CargoCarrier, Speed, LoadDistance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -676,9 +587,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_package-onafterunload-event-from-to-distance-angle">AI_CARGO_PACKAGE:onafterUnLoad(Event, From, To, Distance, Angle)</h3>
-
+<h3 id='ai_cargo_package-onafterunload-event-from-to-distance-angle'>AI_CARGO_PACKAGE:onafterUnLoad(Event, From, To, Distance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -692,9 +601,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h2 id="ai_cargo_group-class">AI_CARGO_GROUP Class</h2>
-
+<h2 id='ai_cargo_group-class'>AI_CARGO_GROUP Class</h2>
 <pre>
 Inheritance : The AI_CARGO_GROUP Class inherits from the following parents :
 BASE
@@ -711,9 +618,7 @@ BASE
 <li><a href="#set_base-class">SET_BASE</a> CargoSet : A set of cargo objects.</li>
 <li><u>String</u> Name : A string defining the name of the cargo group. The name is the unique identifier of the cargo.</li>
 </ul>
-
-<h3 id="ai_cargo_group-new-cargoset-type-name-weight-reportradius-nearradius">AI_CARGO_GROUP:New(CargoSet, Type, Name, Weight, ReportRadius, NearRadius)</h3>
-
+<h3 id='ai_cargo_group-new-cargoset-type-name-weight-reportradius-nearradius'>AI_CARGO_GROUP:New(CargoSet, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -733,9 +638,7 @@ self</li>
 <li><a href="#ai_cargo_group-class">AI_CARGO_GROUP</a>
 self</li>
 </ul>
-
-<h2 id="ai_cargo_grouped-class">AI_CARGO_GROUPED Class</h2>
-
+<h2 id='ai_cargo_grouped-class'>AI_CARGO_GROUPED Class</h2>
 <pre>
 Inheritance : The AI_CARGO_GROUPED Class inherits from the following parents :
 BASE
@@ -746,9 +649,7 @@ BASE
                     `-- AI_CARGO_GROUP
                         `-- AI_CARGO_GROUPED
 </pre>
-
-<h3 id="ai_cargo_grouped-new-cargoset-type-name-weight-reportradius-nearradius">AI_CARGO_GROUPED:New(CargoSet, Type, Name, Weight, ReportRadius, NearRadius)</h3>
-
+<h3 id='ai_cargo_grouped-new-cargoset-type-name-weight-reportradius-nearradius'>AI_CARGO_GROUPED:New(CargoSet, Type, Name, Weight, ReportRadius, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -768,9 +669,7 @@ self</li>
 <li><a href="#ai_cargo_grouped-class">AI_CARGO_GROUPED</a>
 self</li>
 </ul>
-
-<h3 id="ai_cargo_grouped-onenterboarding-cargocarrier-event-from-to">AI_CARGO_GROUPED:onenterBoarding(CargoCarrier, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onenterboarding-cargocarrier-event-from-to'>AI_CARGO_GROUPED:onenterBoarding(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -783,9 +682,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onenterloaded-cargocarrier-event-from-to">AI_CARGO_GROUPED:onenterLoaded(CargoCarrier, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onenterloaded-cargocarrier-event-from-to'>AI_CARGO_GROUPED:onenterLoaded(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -798,9 +695,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onleaveboarding-cargocarrier-event-from-to">AI_CARGO_GROUPED:onleaveBoarding(CargoCarrier, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onleaveboarding-cargocarrier-event-from-to'>AI_CARGO_GROUPED:onleaveBoarding(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -813,9 +708,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onenterunboarding-topointvec2-event-from-to">AI_CARGO_GROUPED:onenterUnBoarding(ToPointVec2, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onenterunboarding-topointvec2-event-from-to'>AI_CARGO_GROUPED:onenterUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -828,9 +721,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onleaveunboarding-topointvec2-event-from-to">AI_CARGO_GROUPED:onleaveUnBoarding(ToPointVec2, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onleaveunboarding-topointvec2-event-from-to'>AI_CARGO_GROUPED:onleaveUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -843,9 +734,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onafterunboarding-topointvec2-event-from-to">AI_CARGO_GROUPED:onafterUnBoarding(ToPointVec2, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onafterunboarding-topointvec2-event-from-to'>AI_CARGO_GROUPED:onafterUnBoarding(ToPointVec2, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -858,9 +747,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cargo_grouped-onenterunloaded-self-event-from-to">AI_CARGO_GROUPED:onenterUnLoaded(self, Event, From, To)</h3>
-
+<h3 id='ai_cargo_grouped-onenterunloaded-self-event-from-to'>AI_CARGO_GROUPED:onenterUnLoaded(self, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>

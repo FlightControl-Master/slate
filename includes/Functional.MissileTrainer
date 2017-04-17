@@ -1,9 +1,6 @@
-<h1 id="functional-missiletrainer-module">Functional.MissileTrainer Module</h1>
-
+<h1 id='functional-missiletrainer-module'>Functional.MissileTrainer Module</h1>
 <p>This module contains the MISSILETRAINER class.</p>
-
-<h5 id="1-missiletrainer-class-extends-base">1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h5>
-
+<h5 id='1-a-href-missiletrainer-class-missiletrainer-a-class-extends-a-href-base-class-base-a'>1) <a href="#missiletrainer-class">MISSILETRAINER</a> class, extends <a href="#base-class">BASE</a></h5>
 <p>The <a href="#missiletrainer-class">MISSILETRAINER</a> class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
 the class will destroy the missile within a certain range, to avoid damage to your aircraft.
 It suports the following functionality:</p>
@@ -16,7 +13,7 @@ It suports the following functionality:</p>
 <li>Enable / Disable and Configure the Missile Trainer using the various menu options.</li>
 </ul>
 
-<p>When running a mission where MISSILETRAINER is used, the following radio menu structure ( &lsquo;Radio Menu&rsquo; -&gt; &lsquo;Other (F10)&rsquo; -&gt; &lsquo;MissileTrainer&rsquo; ) options are available for the players:</p>
+<p>When running a mission where MISSILETRAINER is used, the following radio menu structure ( &#39;Radio Menu&#39; -&gt; &#39;Other (F10)&#39; -&gt; &#39;MissileTrainer&#39; ) options are available for the players:</p>
 
 <ul>
 <li><strong>Messages</strong>: Menu to configure all messages.</li>
@@ -47,19 +44,15 @@ It suports the following functionality:</p>
 <li><strong>150 meter</strong>: Destroys the missile when the distance to the aircraft is below or equal to 150 meter.</li>
 <li><strong>200 meter</strong>: Destroys the missile when the distance to the aircraft is below or equal to 200 meter.</li>
 </ul>
-
-<h5 id="1-1-missiletrainer-construction-methods">1.1) MISSILETRAINER construction methods:</h5>
-
+<h5 id='1-1-missiletrainer-construction-methods'>1.1) MISSILETRAINER construction methods:</h5>
 <p>Create a new MISSILETRAINER object with the <a href="#missiletrainer-new-distance-briefing">MISSILETRAINER:New()</a> method:</p>
 
 <ul>
 <li><a href="#missiletrainer-new-distance-briefing">MISSILETRAINER:New()</a>: Creates a new MISSILETRAINER object taking the maximum distance to your aircraft to evaluate when a missile needs to be destroyed.</li>
 </ul>
 
-<p>MISSILETRAINER will collect each unit declared in the mission with a skill level &ldquo;Client&rdquo; and &ldquo;Player&rdquo;, and will monitor the missiles shot at those.</p>
-
-<h5 id="1-2-missiletrainer-initialization-methods">1.2) MISSILETRAINER initialization methods:</h5>
-
+<p>MISSILETRAINER will collect each unit declared in the mission with a skill level &quot;Client&quot; and &quot;Player&quot;, and will monitor the missiles shot at those.</p>
+<h5 id='1-2-missiletrainer-initialization-methods'>1.2) MISSILETRAINER initialization methods:</h5>
 <p>A MISSILETRAINER object will behave differently based on the usage of initialization methods:</p>
 
 <ul>
@@ -81,9 +74,7 @@ It suports the following functionality:</p>
 Working together with Danny has resulted in the MISSILETRAINER class.
 Danny has shared his ideas and together we made a design.
 Together with the <strong>476 virtual team</strong>, we tested the MISSILETRAINER class, and got much positive feedback!</p>
-
-<h2 id="missiletrainer-class">MISSILETRAINER Class</h2>
-
+<h2 id='missiletrainer-class'>MISSILETRAINER Class</h2>
 <pre>
 Inheritance : The MISSILETRAINER Class inherits from the following parents :
 BASE
@@ -95,9 +86,7 @@ BASE
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a> DBClients</li>
 </ul>
-
-<h3 id="missiletrainer-new-distance-briefing">MISSILETRAINER:New(Distance, Briefing)</h3>
-
+<h3 id='missiletrainer-new-distance-briefing'>MISSILETRAINER:New(Distance, Briefing)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -113,9 +102,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initmessagesonoff-messagesonoff">MISSILETRAINER:InitMessagesOnOff(MessagesOnOff)</h3>
-
+<h3 id='missiletrainer-initmessagesonoff-messagesonoff'>MISSILETRAINER:InitMessagesOnOff(MessagesOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -130,9 +117,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-inittrackingtoall-trackingtoall">MISSILETRAINER:InitTrackingToAll(TrackingToAll)</h3>
-
+<h3 id='missiletrainer-inittrackingtoall-trackingtoall'>MISSILETRAINER:InitTrackingToAll(TrackingToAll)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -147,9 +132,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-inittrackingonoff-trackingonoff">MISSILETRAINER:InitTrackingOnOff(TrackingOnOff)</h3>
-
+<h3 id='missiletrainer-inittrackingonoff-trackingonoff'>MISSILETRAINER:InitTrackingOnOff(TrackingOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -164,9 +147,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-inittrackingfrequency-trackingfrequency">MISSILETRAINER:InitTrackingFrequency(TrackingFrequency)</h3>
-
+<h3 id='missiletrainer-inittrackingfrequency-trackingfrequency'>MISSILETRAINER:InitTrackingFrequency(TrackingFrequency)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -181,9 +162,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initalertstoall-alertstoall">MISSILETRAINER:InitAlertsToAll(AlertsToAll)</h3>
-
+<h3 id='missiletrainer-initalertstoall-alertstoall'>MISSILETRAINER:InitAlertsToAll(AlertsToAll)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -198,9 +177,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initalertshitsonoff-alertshitsonoff">MISSILETRAINER:InitAlertsHitsOnOff(AlertsHitsOnOff)</h3>
-
+<h3 id='missiletrainer-initalertshitsonoff-alertshitsonoff'>MISSILETRAINER:InitAlertsHitsOnOff(AlertsHitsOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -215,9 +192,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initalertslaunchesonoff-alertslaunchesonoff">MISSILETRAINER:InitAlertsLaunchesOnOff(AlertsLaunchesOnOff)</h3>
-
+<h3 id='missiletrainer-initalertslaunchesonoff-alertslaunchesonoff'>MISSILETRAINER:InitAlertsLaunchesOnOff(AlertsLaunchesOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -232,9 +207,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initrangeonoff-detailsrangeonoff">MISSILETRAINER:InitRangeOnOff(DetailsRangeOnOff)</h3>
-
+<h3 id='missiletrainer-initrangeonoff-detailsrangeonoff'>MISSILETRAINER:InitRangeOnOff(DetailsRangeOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -249,9 +222,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initbearingonoff-detailsbearingonoff">MISSILETRAINER:InitBearingOnOff(DetailsBearingOnOff)</h3>
-
+<h3 id='missiletrainer-initbearingonoff-detailsbearingonoff'>MISSILETRAINER:InitBearingOnOff(DetailsBearingOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -266,9 +237,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-initmenusonoff-menusonoff">MISSILETRAINER:InitMenusOnOff(MenusOnOff)</h3>
-
+<h3 id='missiletrainer-initmenusonoff-menusonoff'>MISSILETRAINER:InitMenusOnOff(MenusOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -283,9 +252,7 @@ self</li>
 <li><a href="#missiletrainer-class">MISSILETRAINER</a>
 self</li>
 </ul>
-
-<h3 id="missiletrainer-oneventshot-eventdata">MISSILETRAINER:OnEventShot(EventData)</h3>
-
+<h3 id='missiletrainer-oneventshot-eventdata'>MISSILETRAINER:OnEventShot(EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>

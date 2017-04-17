@@ -1,11 +1,8 @@
-<h1 id="wrapper-static-module">Wrapper.Static Module</h1>
-
+<h1 id='wrapper-static-module'>Wrapper.Static Module</h1>
 <p>This module contains the STATIC class.</p>
-
-<h5 id="1-static-class-extends-positionable">1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
-
+<h5 id='1-a-href-static-class-static-a-class-extends-a-href-positionable-class-positionable-a'>1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
 <p>Statics are <strong>Static Units</strong> defined within the Mission Editor.
-Note that Statics are almost the same as Units, but they don&rsquo;t have a controller.
+Note that Statics are almost the same as Units, but they don&#39;t have a controller.
 The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DCS Static objects:</p>
 
 <ul>
@@ -13,16 +10,14 @@ The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DC
 <li>Support all DCS Static APIs.</li>
 <li>Enhance with Static specific APIs not in the DCS API set.</li>
 </ul>
-
-<h5 id="1-1-static-reference-methods">1.1) STATIC reference methods</h5>
-
+<h5 id='1-1-static-reference-methods'>1.1) STATIC reference methods</h5>
 <p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
 
 <p>The STATIC class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
 using the Static Name.</p>
 
-<p>Another thing to know is that STATIC objects do not &ldquo;contain&rdquo; the DCS Static object.
+<p>Another thing to know is that STATIC objects do not &quot;contain&quot; the DCS Static object.
 The STATIc methods will reference the DCS Static object by name when it is needed during API execution.
 If the DCS Static object does not exist or is nil, the STATIC methods will return nil and log an exception in the DCS.log file.</p>
 
@@ -33,9 +28,7 @@ If the DCS Static object does not exist or is nil, the STATIC methods will retur
 </ul>
 
 <p>IMPORTANT: ONE SHOULD NEVER SANATIZE these STATIC OBJECT REFERENCES! (make the STATIC object references nil).</p>
-
-<h2 id="static-class">STATIC Class</h2>
-
+<h2 id='static-class'>STATIC Class</h2>
 <pre>
 Inheritance : The STATIC Class inherits from the following parents :
 BASE
@@ -44,9 +37,7 @@ BASE
             `-- POSITIONABLE
                 `-- STATIC
 </pre>
-
-<h3 id="static-findbyname-staticname-raiseerror">STATIC:FindByName(StaticName, RaiseError)</h3>
-
+<h3 id='static-findbyname-staticname-raiseerror'>STATIC:FindByName(StaticName, RaiseError)</h3>
 <h4> Parameters </h4>
 
 <ul>

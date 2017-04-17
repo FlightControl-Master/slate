@@ -1,5 +1,4 @@
-<h1 id="core-set-module">Core.Set Module</h1>
-
+<h1 id='core-set-module'>Core.Set Module</h1>
 <p><strong>Core</strong> - SET_ classes define <strong>collections</strong> of objects to perform <strong>bulk actions</strong> and logically <strong>group</strong> objects.</p>
 
 <p><img src="/includes/Pictures/SET/Dia1.JPG" alt="Banner Image" /></p>
@@ -7,7 +6,7 @@
 <p>SET_ classes group objects of the same type into a collection, which is either:</p>
 
 <ul>
-<li>Manually managed using the <strong>:Add&hellip;()</strong> or <strong>:Remove&hellip;()</strong> methods. The initial SET can be filtered with the <strong><a href="#set_base-filteronce">SET_BASE:FilterOnce()</a></strong> method</li>
+<li>Manually managed using the <strong>:Add...()</strong> or <strong>:Remove...()</strong> methods. The initial SET can be filtered with the <strong><a href="#set_base-filteronce">SET_BASE:FilterOnce()</a></strong> method</li>
 <li>Dynamically updated when new objects are created or objects are destroyed using the <strong>SET_BASE-FilterStart</strong> method.</li>
 </ul>
 
@@ -28,17 +27,11 @@
 <li>Validate the presence of objects in the SET.</li>
 <li>Trigger events when objects in the SET change a zone presence.</li>
 </ul>
-
-<h5 id="authors">Authors:</h5>
-
+<h5 id='authors-10'>Authors:</h5>
 <ul>
 <li>FlightControl : Design &amp; Programming</li>
 </ul>
-
-<h5 id="contributions">Contributions:</h5>
-
-<h2 id="set_base-class">SET_BASE Class</h2>
-
+<h5 id='contributions-12'>Contributions:</h5><h2 id='set_base-class'>SET_BASE Class</h2>
 <pre>
 Inheritance : The SET_BASE Class inherits from the following parents :
 BASE
@@ -46,19 +39,15 @@ BASE
 </pre>
 
 <p>The <a href="#set_base-class">SET_BASE</a> class defines the core functions that define a collection of objects.
-A SET provides iterators to iterate the SET, but will <strong>temporarily</strong> yield the ForEach interator loop at defined <strong>&ldquo;intervals&rdquo;</strong> to the mail simulator loop.
+A SET provides iterators to iterate the SET, but will <strong>temporarily</strong> yield the ForEach interator loop at defined <strong>&quot;intervals&quot;</strong> to the mail simulator loop.
 In this way, large loops can be done while not blocking the simulator main processing loop.
-The default <strong>&ldquo;yield interval&rdquo;</strong> is after 10 objects processed.
-The default <strong>&ldquo;time interval&rdquo;</strong> is after 0.001 seconds.</p>
-
-<h5 id="1-1-add-or-remove-objects-from-the-set">1.1) Add or remove objects from the SET</h5>
-
+The default <strong>&quot;yield interval&quot;</strong> is after 10 objects processed.
+The default <strong>&quot;time interval&quot;</strong> is after 0.001 seconds.</p>
+<h5 id='1-1-add-or-remove-objects-from-the-set'>1.1) Add or remove objects from the SET</h5>
 <p>Some key core functions are <a href="#set_base-add-objectname-object">SET_BASE:Add()</a> and <a href="#set_base-remove-objectname">SET_BASE:Remove()</a> to add or remove objects from the SET in your logic.</p>
-
-<h5 id="1-2-define-the-set-iterator-yield-interval-and-the-time-interval">1.2) Define the SET iterator <strong>&ldquo;yield interval&rdquo;</strong> and the <strong>&ldquo;time interval&rdquo;</strong></h5>
-
+<h5 id='1-2-define-the-set-iterator-strong-quot-yield-interval-quot-strong-and-the-strong-quot-time-interval-quot-strong'>1.2) Define the SET iterator <strong>&quot;yield interval&quot;</strong> and the <strong>&quot;time interval&quot;</strong></h5>
 <p>Modify the iterator intervals with the SET_BASE-SetInteratorIntervals method.
-You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&ldquo;time interval&rdquo;</strong>. (See above).</p>
+You can set the <strong>&quot;yield interval&quot;</strong>, and the <strong>&quot;time interval&quot;</strong>. (See above).</p>
 
 <h4> Attributes </h4>
 
@@ -68,9 +57,7 @@ You can set the <strong>&ldquo;yield interval&rdquo;</strong>, and the <strong>&
 <li><u>List[]</u> List</li>
 <li><a href="#scheduler-class">SCHEDULER</a> CallScheduler</li>
 </ul>
-
-<h3 id="set_base-new">SET_BASE:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_BASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.</span>
+<h3 id='set_base-new'>SET_BASE:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_BASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_BASE</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -86,9 +73,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-getset">SET_BASE:GetSet()</h3>
-
+<h3 id='set_base-getset'>SET_BASE:GetSet()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -102,9 +87,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-add-objectname-object">SET_BASE:Add(ObjectName, Object)</h3>
-
+<h3 id='set_base-add-objectname-object'>SET_BASE:Add(ObjectName, Object)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -119,9 +102,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> The : added BASE Object.</li>
 </ul>
-
-<h3 id="set_base-addobject-object">SET_BASE:AddObject(Object)</h3>
-
+<h3 id='set_base-addobject-object'>SET_BASE:AddObject(Object)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -135,9 +116,17 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> The : added BASE Object.</li>
 </ul>
+<h3 id='set_base-remove-objectname'>SET_BASE:Remove(ObjectName)</h3>
+<h4> Parameters </h4>
 
-<h3 id="set_base-remove-objectname">SET_BASE:Remove(ObjectName)</h3>
+<ul>
+<li><a href="#set_base-class">SET_BASE</a>
+self</li>
+<li><u>String</u> ObjectName</li>
+</ul>
 
+<h4> Returns </h4>
+<h3 id='set_base-get-objectname'>SET_BASE:Get(ObjectName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -148,24 +137,10 @@ self</li>
 
 <h4> Returns </h4>
 
-<h3 id="set_base-get-objectname">SET_BASE:Get(ObjectName)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#set_base-class">SET_BASE</a>
-self</li>
-<li><u>String</u> ObjectName</li>
-</ul>
-
-<h4> Returns </h4>
-
 <ul>
 <li><a href="#base-class">BASE</a> self</li>
 </ul>
-
-<h3 id="set_base-getfirst">SET_BASE:GetFirst()</h3>
-
+<h3 id='set_base-getfirst'>SET_BASE:GetFirst()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -178,9 +153,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> self</li>
 </ul>
-
-<h3 id="set_base-getlast">SET_BASE:GetLast()</h3>
-
+<h3 id='set_base-getlast'>SET_BASE:GetLast()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -193,9 +166,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> self</li>
 </ul>
-
-<h3 id="set_base-getrandom">SET_BASE:GetRandom()</h3>
-
+<h3 id='set_base-getrandom'>SET_BASE:GetRandom()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -208,9 +179,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> self</li>
 </ul>
-
-<h3 id="set_base-count">SET_BASE:Count()</h3>
-
+<h3 id='set_base-count'>SET_BASE:Count()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -223,9 +192,7 @@ self</li>
 <ul>
 <li><u>Number</u> Count</li>
 </ul>
-
-<h3 id="set_base-setdatabase-baseset">SET_BASE:SetDatabase(BaseSet)</h3>
-
+<h3 id='set_base-setdatabase-baseset'>SET_BASE:SetDatabase(BaseSet)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -241,9 +208,7 @@ BaseSet</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-setiteratorintervals-yieldinterval-timeinterval">SET_BASE:SetIteratorIntervals(YieldInterval, TimeInterval)</h3>
-
+<h3 id='set_base-setiteratorintervals-yieldinterval-timeinterval'>SET_BASE:SetIteratorIntervals(YieldInterval, TimeInterval)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -259,9 +224,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-filteronce">SET_BASE:FilterOnce()</h3>
-
+<h3 id='set_base-filteronce'>SET_BASE:FilterOnce()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -275,9 +238,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-filterstop">SET_BASE:FilterStop()</h3>
-
+<h3 id='set_base-filterstop'>SET_BASE:FilterStop()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -291,9 +252,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-findnearestobjectfrompointvec2-pointvec2">SET_BASE:FindNearestObjectFromPointVec2(PointVec2)</h3>
-
+<h3 id='set_base-findnearestobjectfrompointvec2-pointvec2'>SET_BASE:FindNearestObjectFromPointVec2(PointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -307,9 +266,7 @@ self</li>
 <ul>
 <li><a href="#base-class">BASE</a> The : closest object.</li>
 </ul>
-
-<h3 id="set_base-foreach-iteratorfunction">SET_BASE:ForEach(IteratorFunction)</h3>
-
+<h3 id='set_base-foreach-iteratorfunction'>SET_BASE:ForEach(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -324,9 +281,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-isincludeobject-object">SET_BASE:IsIncludeObject(Object)</h3>
-
+<h3 id='set_base-isincludeobject-object'>SET_BASE:IsIncludeObject(Object)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -341,9 +296,7 @@ self</li>
 <li><a href="#set_base-class">SET_BASE</a>
 self</li>
 </ul>
-
-<h3 id="set_base-flush">SET_BASE:Flush()</h3>
-
+<h3 id='set_base-flush'>SET_BASE:Flush()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -356,9 +309,7 @@ self</li>
 <ul>
 <li><u>String</u> A : string with the names of the objects.</li>
 </ul>
-
-<h2 id="set_group-class">SET_GROUP Class</h2>
-
+<h2 id='set_group-class'>SET_GROUP Class</h2>
 <pre>
 Inheritance : The SET_GROUP Class inherits from the following parents :
 BASE
@@ -374,22 +325,16 @@ BASE
 <li>Countries</li>
 <li>Starting with certain prefix strings.</li>
 </ul>
-
-<h5 id="2-1-set_group-constructor">2.1) SET_GROUP constructor</h5>
-
+<h5 id='2-1-set_group-constructor'>2.1) SET_GROUP constructor</h5>
 <p>Create a new SET_GROUP object with the <a href="#set_group-new">SET_GROUP:New()</a> method:</p>
 
 <ul>
 <li><a href="#set_group-new">SET_GROUP:New()</a>: Creates a new SET_GROUP object.</li>
 </ul>
-
-<h5 id="2-2-add-or-remove-group-s-from-set_group">2.2) Add or Remove GROUP(s) from SET_GROUP</h5>
-
+<h5 id='2-2-add-or-remove-group-s-from-set_group'>2.2) Add or Remove GROUP(s) from SET_GROUP</h5>
 <p>GROUPS can be added and removed using the <a href="#set_group-addgroupsbyname-addgroupnames">SET_GROUP:AddGroupsByName()</a> and <a href="#set_group-removegroupsbyname-removegroupnames">SET_GROUP:RemoveGroupsByName()</a> respectively.
 These methods take a single GROUP name or an array of GROUP names to be added or removed from SET_GROUP.</p>
-
-<h5 id="2-3-set_group-filter-criteria">2.3) SET_GROUP filter criteria</h5>
-
+<h5 id='2-3-set_group-filter-criteria'>2.3) SET_GROUP filter criteria</h5>
 <p>You can set filter criteria to define the set of groups within the SET_GROUP.
 Filter criteria are defined by:</p>
 
@@ -411,9 +356,7 @@ Filter criteria are defined by:</p>
 <ul>
 <li>SET_GROUP-FilterZones: Builds the SET_GROUP with the groups within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
-
-<h5 id="2-4-set_group-iterators">2.4) SET_GROUP iterators</h5>
-
+<h5 id='2-4-set_group-iterators'>2.4) SET_GROUP iterators</h5>
 <p>Once the filters have been defined and the SET_GROUP has been built, you can iterate the SET_GROUP with the available iterator methods.
 The iterator methods will walk the SET_GROUP set, and call for each element within the set a function that you provide.
 The following iterator methods are currently available within the SET_GROUP:</p>
@@ -424,9 +367,7 @@ The following iterator methods are currently available within the SET_GROUP:</p>
 <li><a href="#set_group-foreachgrouppartlyinzone-zoneobject-iteratorfunction">SET_GROUP:ForEachGroupPartlyInZone()</a>: Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP presence partly in a <a href="#zone-module">Zone</a>, providing the GROUP and optional parameters to the called function.</li>
 <li><a href="#set_group-foreachgroupnotinzone-zoneobject-iteratorfunction">SET_GROUP:ForEachGroupNotInZone()</a>: Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP presence not in a <a href="#zone-module">Zone</a>, providing the GROUP and optional parameters to the called function.</li>
 </ul>
-
-<h3 id="set_group-new">SET_GROUP:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_GROUP Object. This DBObject will contain a reference to all alive GROUPS.</span>
+<h3 id='set_group-new'>SET_GROUP:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_GROUP Object. This DBObject will contain a reference to all alive GROUPS.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -442,9 +383,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-addgroupsbyname-addgroupnames">SET_GROUP:AddGroupsByName(AddGroupNames)</h3>
-
+<h3 id='set_group-addgroupsbyname-addgroupnames'>SET_GROUP:AddGroupsByName(AddGroupNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -457,9 +396,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_group-removegroupsbyname-removegroupnames">SET_GROUP:RemoveGroupsByName(RemoveGroupNames)</h3>
-
+<h3 id='set_group-removegroupsbyname-removegroupnames'>SET_GROUP:RemoveGroupsByName(RemoveGroupNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -472,9 +409,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_group-findgroup-groupname">SET_GROUP:FindGroup(GroupName)</h3>
-
+<h3 id='set_group-findgroup-groupname'>SET_GROUP:FindGroup(GroupName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -488,15 +423,13 @@ self</li>
 <ul>
 <li><a href="#group-class">GROUP</a> The : found Group.</li>
 </ul>
-
-<h3 id="set_group-filtercoalitions-coalitions">SET_GROUP:FilterCoalitions(Coalitions)</h3>
-
+<h3 id='set_group-filtercoalitions-coalitions'>SET_GROUP:FilterCoalitions(Coalitions)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &quot;red&quot;, &quot;blue&quot;, &quot;neutral&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -505,15 +438,13 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-filtercategories-categories">SET_GROUP:FilterCategories(Categories)</h3>
-
+<h3 id='set_group-filtercategories-categories'>SET_GROUP:FilterCategories(Categories)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
-<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &quot;plane&quot;, &quot;helicopter&quot;, &quot;ground&quot;, &quot;ship&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -522,9 +453,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-filtercountries-countries">SET_GROUP:FilterCountries(Countries)</h3>
-
+<h3 id='set_group-filtercountries-countries'>SET_GROUP:FilterCountries(Countries)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -539,9 +468,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-filterprefixes-prefixes">SET_GROUP:FilterPrefixes(Prefixes)</h3>
-
+<h3 id='set_group-filterprefixes-prefixes'>SET_GROUP:FilterPrefixes(Prefixes)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -556,9 +483,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-filterstart">SET_GROUP:FilterStart()</h3>
-
+<h3 id='set_group-filterstart'>SET_GROUP:FilterStart()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -572,26 +497,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-addindatabase-event">SET_GROUP:AddInDatabase(Event)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#set_group-class">SET_GROUP</a>
-self</li>
-<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u> The : name of the GROUP</li>
-<li><u>List[]</u> The : GROUP</li>
-</ul>
-
-<h3 id="set_group-findindatabase-event">SET_GROUP:FindInDatabase(Event)</h3>
-
+<h3 id='set_group-addindatabase-event'>SET_GROUP:AddInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -606,9 +512,22 @@ self</li>
 <li><u>String</u> The : name of the GROUP</li>
 <li><u>List[]</u> The : GROUP</li>
 </ul>
+<h3 id='set_group-findindatabase-event'>SET_GROUP:FindInDatabase(Event)</h3>
+<h4> Parameters </h4>
 
-<h3 id="set_group-foreachgroup-iteratorfunction">SET_GROUP:ForEachGroup(IteratorFunction)</h3>
+<ul>
+<li><a href="#set_group-class">SET_GROUP</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
+</ul>
 
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> The : name of the GROUP</li>
+<li><u>List[]</u> The : GROUP</li>
+</ul>
+<h3 id='set_group-foreachgroup-iteratorfunction'>SET_GROUP:ForEachGroup(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -623,27 +542,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-foreachgroupcompletelyinzone-zoneobject-iteratorfunction">SET_GROUP:ForEachGroupCompletelyInZone(ZoneObject, IteratorFunction)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#set_group-class">SET_GROUP</a>
-self</li>
-<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
-<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#set_group-class">SET_GROUP</a>
-self</li>
-</ul>
-
-<h3 id="set_group-foreachgrouppartlyinzone-zoneobject-iteratorfunction">SET_GROUP:ForEachGroupPartlyInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_group-foreachgroupcompletelyinzone-zoneobject-iteratorfunction'>SET_GROUP:ForEachGroupCompletelyInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -659,9 +558,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h3 id="set_group-foreachgroupnotinzone-zoneobject-iteratorfunction">SET_GROUP:ForEachGroupNotInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_group-foreachgrouppartlyinzone-zoneobject-iteratorfunction'>SET_GROUP:ForEachGroupPartlyInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -677,9 +574,23 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
+<h3 id='set_group-foreachgroupnotinzone-zoneobject-iteratorfunction'>SET_GROUP:ForEachGroupNotInZone(ZoneObject, IteratorFunction)</h3>
+<h4> Parameters </h4>
 
-<h3 id="set_group-isincludeobject-moosegroup">SET_GROUP:IsIncludeObject(MooseGroup)</h3>
+<ul>
+<li><a href="#set_group-class">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+<li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive GROUP in the SET_GROUP. The function needs to accept a GROUP parameter.</li>
+</ul>
 
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#set_group-class">SET_GROUP</a>
+self</li>
+</ul>
+<h3 id='set_group-isincludeobject-moosegroup'>SET_GROUP:IsIncludeObject(MooseGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -694,9 +605,7 @@ self</li>
 <li><a href="#set_group-class">SET_GROUP</a>
 self</li>
 </ul>
-
-<h2 id="set_unit-class">SET_UNIT Class</h2>
-
+<h2 id='set_unit-class'>SET_UNIT Class</h2>
 <pre>
 Inheritance : The SET_UNIT Class inherits from the following parents :
 BASE
@@ -713,22 +622,16 @@ BASE
 <li>Unit types</li>
 <li>Starting with certain prefix strings.</li>
 </ul>
-
-<h5 id="3-1-set_unit-constructor">3.1) SET_UNIT constructor</h5>
-
+<h5 id='3-1-set_unit-constructor'>3.1) SET_UNIT constructor</h5>
 <p>Create a new SET_UNIT object with the <a href="#set_unit-new">SET_UNIT:New()</a> method:</p>
 
 <ul>
 <li><a href="#set_unit-new">SET_UNIT:New()</a>: Creates a new SET_UNIT object.</li>
 </ul>
-
-<h5 id="3-2-add-or-remove-unit-s-from-set_unit">3.2) Add or Remove UNIT(s) from SET_UNIT</h5>
-
+<h5 id='3-2-add-or-remove-unit-s-from-set_unit'>3.2) Add or Remove UNIT(s) from SET_UNIT</h5>
 <p>UNITs can be added and removed using the <a href="#set_unit-addunitsbyname-addunitnames">SET_UNIT:AddUnitsByName()</a> and <a href="#set_unit-removeunitsbyname-removeunitnames">SET_UNIT:RemoveUnitsByName()</a> respectively.
 These methods take a single UNIT name or an array of UNIT names to be added or removed from SET_UNIT.</p>
-
-<h5 id="3-3-set_unit-filter-criteria">3.3) SET_UNIT filter criteria</h5>
-
+<h5 id='3-3-set_unit-filter-criteria'>3.3) SET_UNIT filter criteria</h5>
 <p>You can set filter criteria to define the set of units within the SET_UNIT.
 Filter criteria are defined by:</p>
 
@@ -751,9 +654,7 @@ Filter criteria are defined by:</p>
 <ul>
 <li>SET_UNIT-FilterZones: Builds the SET_UNIT with the units within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
-
-<h5 id="3-4-set_unit-iterators">3.4) SET_UNIT iterators</h5>
-
+<h5 id='3-4-set_unit-iterators'>3.4) SET_UNIT iterators</h5>
 <p>Once the filters have been defined and the SET_UNIT has been built, you can iterate the SET_UNIT with the available iterator methods.
 The iterator methods will walk the SET_UNIT set, and call for each element within the set a function that you provide.
 The following iterator methods are currently available within the SET_UNIT:</p>
@@ -771,17 +672,13 @@ The following iterator methods are currently available within the SET_UNIT:</p>
 <li><a href="#set_unit-foreachunitcompletelyinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitCompletelyInZone()</a>: Iterate and call an iterator function for each <strong>alive</strong> UNIT presence completely in a <a href="#zone-module">Zone</a>, providing the UNIT and optional parameters to the called function.</li>
 <li><a href="#set_unit-foreachunitnotinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitNotInZone()</a>: Iterate and call an iterator function for each <strong>alive</strong> UNIT presence not in a <a href="#zone-module">Zone</a>, providing the UNIT and optional parameters to the called function.</li>
 </ul>
-
-<h5 id="3-5-set_unit-atomic-methods">3.5 ) SET_UNIT atomic methods</h5>
-
+<h5 id='3-5-set_unit-atomic-methods'>3.5 ) SET_UNIT atomic methods</h5>
 <p>Various methods exist for a SET_UNIT to perform actions or calculations and retrieve results from the SET_UNIT:</p>
 
 <ul>
 <li><a href="#set_unit-gettypenames-delimiter">SET_UNIT:GetTypeNames()</a>: Retrieve the type names of the <a href="#unit-module">Unit</a>s in the SET, delimited by a comma.</li>
 </ul>
-
-<h3 id="set_unit-new">SET_UNIT:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_UNIT Object. This DBObject will contain a reference to all alive Units.</span>
+<h3 id='set_unit-new'>SET_UNIT:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_UNIT Object. This DBObject will contain a reference to all alive Units.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_UNIT</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -797,9 +694,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-addunit-addunit">SET_UNIT:AddUnit(AddUnit)</h3>
-
+<h3 id='set_unit-addunit-addunit'>SET_UNIT:AddUnit(AddUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -814,9 +709,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-addunitsbyname-addunitnames">SET_UNIT:AddUnitsByName(AddUnitNames)</h3>
-
+<h3 id='set_unit-addunitsbyname-addunitnames'>SET_UNIT:AddUnitsByName(AddUnitNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -831,9 +724,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-removeunitsbyname-removeunitnames">SET_UNIT:RemoveUnitsByName(RemoveUnitNames)</h3>
-
+<h3 id='set_unit-removeunitsbyname-removeunitnames'>SET_UNIT:RemoveUnitsByName(RemoveUnitNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -846,9 +737,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_unit-findunit-unitname">SET_UNIT:FindUnit(UnitName)</h3>
-
+<h3 id='set_unit-findunit-unitname'>SET_UNIT:FindUnit(UnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -862,15 +751,13 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a> The : found Unit.</li>
 </ul>
-
-<h3 id="set_unit-filtercoalitions-coalitions">SET_UNIT:FilterCoalitions(Coalitions)</h3>
-
+<h3 id='set_unit-filtercoalitions-coalitions'>SET_UNIT:FilterCoalitions(Coalitions)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &quot;red&quot;, &quot;blue&quot;, &quot;neutral&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -879,15 +766,13 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filtercategories-categories">SET_UNIT:FilterCategories(Categories)</h3>
-
+<h3 id='set_unit-filtercategories-categories'>SET_UNIT:FilterCategories(Categories)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
-<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &quot;plane&quot;, &quot;helicopter&quot;, &quot;ground&quot;, &quot;ship&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -896,9 +781,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filtertypes-types">SET_UNIT:FilterTypes(Types)</h3>
-
+<h3 id='set_unit-filtertypes-types'>SET_UNIT:FilterTypes(Types)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -913,9 +796,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filtercountries-countries">SET_UNIT:FilterCountries(Countries)</h3>
-
+<h3 id='set_unit-filtercountries-countries'>SET_UNIT:FilterCountries(Countries)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -930,9 +811,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filterprefixes-prefixes">SET_UNIT:FilterPrefixes(Prefixes)</h3>
-
+<h3 id='set_unit-filterprefixes-prefixes'>SET_UNIT:FilterPrefixes(Prefixes)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -947,9 +826,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filterhasradar-radartypes">SET_UNIT:FilterHasRadar(RadarTypes)</h3>
-
+<h3 id='set_unit-filterhasradar-radartypes'>SET_UNIT:FilterHasRadar(RadarTypes)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -964,9 +841,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filterhassead">SET_UNIT:FilterHasSEAD()</h3>
-
+<h3 id='set_unit-filterhassead'>SET_UNIT:FilterHasSEAD()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -980,9 +855,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-filterstart">SET_UNIT:FilterStart()</h3>
-
+<h3 id='set_unit-filterstart'>SET_UNIT:FilterStart()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -996,9 +869,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-addindatabase-event">SET_UNIT:AddInDatabase(Event)</h3>
-
+<h3 id='set_unit-addindatabase-event'>SET_UNIT:AddInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1013,9 +884,7 @@ self</li>
 <li><u>String</u> The : name of the UNIT</li>
 <li><u>List[]</u> The : UNIT</li>
 </ul>
-
-<h3 id="set_unit-findindatabase-event">SET_UNIT:FindInDatabase(Event)</h3>
-
+<h3 id='set_unit-findindatabase-event'>SET_UNIT:FindInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1030,9 +899,7 @@ self</li>
 <li><u>String</u> The : name of the UNIT</li>
 <li><u>List[]</u> The : UNIT</li>
 </ul>
-
-<h3 id="set_unit-foreachunit-iteratorfunction">SET_UNIT:ForEachUnit(IteratorFunction)</h3>
-
+<h3 id='set_unit-foreachunit-iteratorfunction'>SET_UNIT:ForEachUnit(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1047,9 +914,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-foreachunitcompletelyinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitCompletelyInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_unit-foreachunitcompletelyinzone-zoneobject-iteratorfunction'>SET_UNIT:ForEachUnitCompletelyInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1065,9 +930,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-foreachunitnotinzone-zoneobject-iteratorfunction">SET_UNIT:ForEachUnitNotInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_unit-foreachunitnotinzone-zoneobject-iteratorfunction'>SET_UNIT:ForEachUnitNotInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1083,9 +946,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-getunittypes">SET_UNIT:GetUnitTypes()</h3>
-
+<h3 id='set_unit-getunittypes'>SET_UNIT:GetUnitTypes()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1098,9 +959,7 @@ self</li>
 <ul>
 <li>#map&lt;<u>String</u>,<u>Number</u>&gt; A : map of the unit types found. The key is the UnitTypeName and the value is the amount of unit types found.</li>
 </ul>
-
-<h3 id="set_unit-getunittypestext">SET_UNIT:GetUnitTypesText()</h3>
-
+<h3 id='set_unit-getunittypestext'>SET_UNIT:GetUnitTypesText()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1113,9 +972,7 @@ self</li>
 <ul>
 <li><u>String</u> The : unit types string</li>
 </ul>
-
-<h3 id="set_unit-getunitthreatlevels">SET_UNIT:GetUnitThreatLevels()</h3>
-
+<h3 id='set_unit-getunitthreatlevels'>SET_UNIT:GetUnitThreatLevels()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1128,9 +985,7 @@ self</li>
 <ul>
 <li><u>List[]</u>. self</li>
 </ul>
-
-<h3 id="set_unit-calculatethreatlevela2g">SET_UNIT:CalculateThreatLevelA2G()</h3>
-
+<h3 id='set_unit-calculatethreatlevela2g'>SET_UNIT:CalculateThreatLevelA2G()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1139,9 +994,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="set_unit-hasradar-radartype">SET_UNIT:HasRadar(RadarType)</h3>
-
+<h3 id='set_unit-hasradar-radartype'>SET_UNIT:HasRadar(RadarType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1155,9 +1008,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : amount of radars in the Set with the given type</li>
 </ul>
-
-<h3 id="set_unit-hassead">SET_UNIT:HasSEAD()</h3>
-
+<h3 id='set_unit-hassead'>SET_UNIT:HasSEAD()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1170,9 +1021,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : amount of SEADable units in the Set</li>
 </ul>
-
-<h3 id="set_unit-hasgroundunits">SET_UNIT:HasGroundUnits()</h3>
-
+<h3 id='set_unit-hasgroundunits'>SET_UNIT:HasGroundUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1185,9 +1034,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : amount of ground targets in the Set.</li>
 </ul>
-
-<h3 id="set_unit-hasfriendlyunits">SET_UNIT:HasFriendlyUnits()</h3>
-
+<h3 id='set_unit-hasfriendlyunits'>SET_UNIT:HasFriendlyUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1200,9 +1047,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : amount of ground targets in the Set.</li>
 </ul>
-
-<h3 id="set_unit-isincludeobject-munit">SET_UNIT:IsIncludeObject(MUnit)</h3>
-
+<h3 id='set_unit-isincludeobject-munit'>SET_UNIT:IsIncludeObject(MUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1217,9 +1062,7 @@ self</li>
 <li><a href="#set_unit-class">SET_UNIT</a>
 self</li>
 </ul>
-
-<h3 id="set_unit-gettypenames-delimiter">SET_UNIT:GetTypeNames(Delimiter)</h3>
-
+<h3 id='set_unit-gettypenames-delimiter'>SET_UNIT:GetTypeNames(Delimiter)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1233,9 +1076,7 @@ self</li>
 <ul>
 <li><u>String</u> The : types of the <a href="#unit-module">Unit</a>s delimited.</li>
 </ul>
-
-<h2 id="set_client-class">SET_CLIENT Class</h2>
-
+<h2 id='set_client-class'>SET_CLIENT Class</h2>
 <pre>
 Inheritance : The SET_CLIENT Class inherits from the following parents :
 BASE
@@ -1252,22 +1093,16 @@ BASE
 <li>Client types</li>
 <li>Starting with certain prefix strings.</li>
 </ul>
-
-<h5 id="4-1-set_client-constructor">4.1) SET_CLIENT constructor</h5>
-
+<h5 id='4-1-set_client-constructor'>4.1) SET_CLIENT constructor</h5>
 <p>Create a new SET_CLIENT object with the <a href="#set_client-new">SET_CLIENT:New()</a> method:</p>
 
 <ul>
 <li><a href="#set_client-new">SET_CLIENT:New()</a>: Creates a new SET_CLIENT object.</li>
 </ul>
-
-<h5 id="4-2-add-or-remove-client-s-from-set_client">4.2) Add or Remove CLIENT(s) from SET_CLIENT</h5>
-
+<h5 id='4-2-add-or-remove-client-s-from-set_client'>4.2) Add or Remove CLIENT(s) from SET_CLIENT</h5>
 <p>CLIENTs can be added and removed using the <a href="#set_client-addclientsbyname-addclientnames">SET_CLIENT:AddClientsByName()</a> and <a href="#set_client-removeclientsbyname-removeclientnames">SET_CLIENT:RemoveClientsByName()</a> respectively.
 These methods take a single CLIENT name or an array of CLIENT names to be added or removed from SET_CLIENT.</p>
-
-<h5 id="4-3-set_client-filter-criteria">4.3) SET_CLIENT filter criteria</h5>
-
+<h5 id='4-3-set_client-filter-criteria'>4.3) SET_CLIENT filter criteria</h5>
 <p>You can set filter criteria to define the set of clients within the SET_CLIENT.
 Filter criteria are defined by:</p>
 
@@ -1290,9 +1125,7 @@ Filter criteria are defined by:</p>
 <ul>
 <li>SET_CLIENT-FilterZones: Builds the SET_CLIENT with the clients within a <a href="#zone-class">ZONE</a>.</li>
 </ul>
-
-<h5 id="4-4-set_client-iterators">4.4) SET_CLIENT iterators</h5>
-
+<h5 id='4-4-set_client-iterators'>4.4) SET_CLIENT iterators</h5>
 <p>Once the filters have been defined and the SET_CLIENT has been built, you can iterate the SET_CLIENT with the available iterator methods.
 The iterator methods will walk the SET_CLIENT set, and call for each element within the set a function that you provide.
 The following iterator methods are currently available within the SET_CLIENT:</p>
@@ -1300,9 +1133,7 @@ The following iterator methods are currently available within the SET_CLIENT:</p
 <ul>
 <li><a href="#set_client-foreachclient-iteratorfunction">SET_CLIENT:ForEachClient()</a>: Calls a function for each alive client it finds within the SET_CLIENT.</li>
 </ul>
-
-<h3 id="set_client-new">SET_CLIENT:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CLIENT Object. This DBObject will contain a reference to all Clients.</span>
+<h3 id='set_client-new'>SET_CLIENT:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CLIENT Object. This DBObject will contain a reference to all Clients.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_CLIENT</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -1318,9 +1149,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-addclientsbyname-addclientnames">SET_CLIENT:AddClientsByName(AddClientNames)</h3>
-
+<h3 id='set_client-addclientsbyname-addclientnames'>SET_CLIENT:AddClientsByName(AddClientNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1333,9 +1162,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_client-removeclientsbyname-removeclientnames">SET_CLIENT:RemoveClientsByName(RemoveClientNames)</h3>
-
+<h3 id='set_client-removeclientsbyname-removeclientnames'>SET_CLIENT:RemoveClientsByName(RemoveClientNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1348,9 +1175,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_client-findclient-clientname">SET_CLIENT:FindClient(ClientName)</h3>
-
+<h3 id='set_client-findclient-clientname'>SET_CLIENT:FindClient(ClientName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1364,15 +1189,13 @@ self</li>
 <ul>
 <li><a href="#client-class">CLIENT</a> The : found Client.</li>
 </ul>
-
-<h3 id="set_client-filtercoalitions-coalitions">SET_CLIENT:FilterCoalitions(Coalitions)</h3>
-
+<h3 id='set_client-filtercoalitions-coalitions'>SET_CLIENT:FilterCoalitions(Coalitions)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &quot;red&quot;, &quot;blue&quot;, &quot;neutral&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1381,15 +1204,13 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-filtercategories-categories">SET_CLIENT:FilterCategories(Categories)</h3>
-
+<h3 id='set_client-filtercategories-categories'>SET_CLIENT:FilterCategories(Categories)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
-<li><u>String</u> Categories : Can take the following values: &ldquo;plane&rdquo;, &ldquo;helicopter&rdquo;, &ldquo;ground&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &quot;plane&quot;, &quot;helicopter&quot;, &quot;ground&quot;, &quot;ship&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1398,9 +1219,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-filtertypes-types">SET_CLIENT:FilterTypes(Types)</h3>
-
+<h3 id='set_client-filtertypes-types'>SET_CLIENT:FilterTypes(Types)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1415,9 +1234,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-filtercountries-countries">SET_CLIENT:FilterCountries(Countries)</h3>
-
+<h3 id='set_client-filtercountries-countries'>SET_CLIENT:FilterCountries(Countries)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1432,9 +1249,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-filterprefixes-prefixes">SET_CLIENT:FilterPrefixes(Prefixes)</h3>
-
+<h3 id='set_client-filterprefixes-prefixes'>SET_CLIENT:FilterPrefixes(Prefixes)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1449,9 +1264,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-filterstart">SET_CLIENT:FilterStart()</h3>
-
+<h3 id='set_client-filterstart'>SET_CLIENT:FilterStart()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1465,26 +1278,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-addindatabase-event">SET_CLIENT:AddInDatabase(Event)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#set_client-class">SET_CLIENT</a>
-self</li>
-<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u> The : name of the CLIENT</li>
-<li><u>List[]</u> The : CLIENT</li>
-</ul>
-
-<h3 id="set_client-findindatabase-event">SET_CLIENT:FindInDatabase(Event)</h3>
-
+<h3 id='set_client-addindatabase-event'>SET_CLIENT:AddInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1499,9 +1293,22 @@ self</li>
 <li><u>String</u> The : name of the CLIENT</li>
 <li><u>List[]</u> The : CLIENT</li>
 </ul>
+<h3 id='set_client-findindatabase-event'>SET_CLIENT:FindInDatabase(Event)</h3>
+<h4> Parameters </h4>
 
-<h3 id="set_client-foreachclient-iteratorfunction">SET_CLIENT:ForEachClient(IteratorFunction)</h3>
+<ul>
+<li><a href="#set_client-class">SET_CLIENT</a>
+self</li>
+<li><a href="#eventdata-class">EVENTDATA</a> Event</li>
+</ul>
 
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> The : name of the CLIENT</li>
+<li><u>List[]</u> The : CLIENT</li>
+</ul>
+<h3 id='set_client-foreachclient-iteratorfunction'>SET_CLIENT:ForEachClient(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1516,9 +1323,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-foreachclientinzone-zoneobject-iteratorfunction">SET_CLIENT:ForEachClientInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_client-foreachclientinzone-zoneobject-iteratorfunction'>SET_CLIENT:ForEachClientInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1534,9 +1339,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-foreachclientnotinzone-zoneobject-iteratorfunction">SET_CLIENT:ForEachClientNotInZone(ZoneObject, IteratorFunction)</h3>
-
+<h3 id='set_client-foreachclientnotinzone-zoneobject-iteratorfunction'>SET_CLIENT:ForEachClientNotInZone(ZoneObject, IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1552,9 +1355,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h3 id="set_client-isincludeobject-mclient">SET_CLIENT:IsIncludeObject(MClient)</h3>
-
+<h3 id='set_client-isincludeobject-mclient'>SET_CLIENT:IsIncludeObject(MClient)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1569,9 +1370,7 @@ self</li>
 <li><a href="#set_client-class">SET_CLIENT</a>
 self</li>
 </ul>
-
-<h2 id="set_airbase-class">SET_AIRBASE Class</h2>
-
+<h2 id='set_airbase-class'>SET_AIRBASE Class</h2>
 <pre>
 Inheritance : The SET_AIRBASE Class inherits from the following parents :
 BASE
@@ -1584,22 +1383,16 @@ BASE
 <ul>
 <li>Coalitions</li>
 </ul>
-
-<h5 id="5-1-set_airbase-constructor">5.1) SET_AIRBASE constructor</h5>
-
+<h5 id='5-1-set_airbase-constructor'>5.1) SET_AIRBASE constructor</h5>
 <p>Create a new SET_AIRBASE object with the <a href="#set_airbase-new">SET_AIRBASE:New()</a> method:</p>
 
 <ul>
 <li><a href="#set_airbase-new">SET_AIRBASE:New()</a>: Creates a new SET_AIRBASE object.</li>
 </ul>
-
-<h5 id="5-2-add-or-remove-airbases-from-set_airbase">5.2) Add or Remove AIRBASEs from SET_AIRBASE</h5>
-
+<h5 id='5-2-add-or-remove-airbases-from-set_airbase'>5.2) Add or Remove AIRBASEs from SET_AIRBASE</h5>
 <p>AIRBASEs can be added and removed using the <a href="#set_airbase-addairbasesbyname-addairbasenames">SET_AIRBASE:AddAirbasesByName()</a> and <a href="#set_airbase-removeairbasesbyname-removeairbasenames">SET_AIRBASE:RemoveAirbasesByName()</a> respectively.
 These methods take a single AIRBASE name or an array of AIRBASE names to be added or removed from SET_AIRBASE.</p>
-
-<h5 id="5-3-set_airbase-filter-criteria">5.3) SET_AIRBASE filter criteria</h5>
-
+<h5 id='5-3-set_airbase-filter-criteria'>5.3) SET_AIRBASE filter criteria</h5>
 <p>You can set filter criteria to define the set of clients within the SET_AIRBASE.
 Filter criteria are defined by:</p>
 
@@ -1612,9 +1405,7 @@ Filter criteria are defined by:</p>
 <ul>
 <li><a href="#set_airbase-filterstart">SET_AIRBASE:FilterStart()</a>: Starts the filtering of the airbases within the SET_AIRBASE.</li>
 </ul>
-
-<h5 id="5-4-set_airbase-iterators">5.4) SET_AIRBASE iterators</h5>
-
+<h5 id='5-4-set_airbase-iterators'>5.4) SET_AIRBASE iterators</h5>
 <p>Once the filters have been defined and the SET_AIRBASE has been built, you can iterate the SET_AIRBASE with the available iterator methods.
 The iterator methods will walk the SET_AIRBASE set, and call for each airbase within the set a function that you provide.
 The following iterator methods are currently available within the SET_AIRBASE:</p>
@@ -1622,9 +1413,7 @@ The following iterator methods are currently available within the SET_AIRBASE:</
 <ul>
 <li><a href="#set_airbase-foreachairbase-iteratorfunction">SET_AIRBASE:ForEachAirbase()</a>: Calls a function for each airbase it finds within the SET_AIRBASE.</li>
 </ul>
-
-<h3 id="set_airbase-new">SET_AIRBASE:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_AIRBASE Object. The DatabaseSet will contain a reference to all Airbases.</span>
+<h3 id='set_airbase-new'>SET_AIRBASE:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_AIRBASE Object. The DatabaseSet will contain a reference to all Airbases.</span>
 <span class="n">DatabaseSet</span> <span class="o">=</span> <span class="n">SET_AIRBASE</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -1640,9 +1429,7 @@ self</li>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
 </ul>
-
-<h3 id="set_airbase-addairbasesbyname-addairbasenames">SET_AIRBASE:AddAirbasesByName(AddAirbaseNames)</h3>
-
+<h3 id='set_airbase-addairbasesbyname-addairbasenames'>SET_AIRBASE:AddAirbasesByName(AddAirbaseNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1655,9 +1442,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_airbase-removeairbasesbyname-removeairbasenames">SET_AIRBASE:RemoveAirbasesByName(RemoveAirbaseNames)</h3>
-
+<h3 id='set_airbase-removeairbasesbyname-removeairbasenames'>SET_AIRBASE:RemoveAirbasesByName(RemoveAirbaseNames)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1670,9 +1455,7 @@ self</li>
 <ul>
 <li>self self</li>
 </ul>
-
-<h3 id="set_airbase-findairbase-airbasename">SET_AIRBASE:FindAirbase(AirbaseName)</h3>
-
+<h3 id='set_airbase-findairbase-airbasename'>SET_AIRBASE:FindAirbase(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1686,15 +1469,13 @@ self</li>
 <ul>
 <li><a href="#airbase-class">AIRBASE</a> The : found Airbase.</li>
 </ul>
-
-<h3 id="set_airbase-filtercoalitions-coalitions">SET_AIRBASE:FilterCoalitions(Coalitions)</h3>
-
+<h3 id='set_airbase-filtercoalitions-coalitions'>SET_AIRBASE:FilterCoalitions(Coalitions)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li><u>String</u> Coalitions : Can take the following values: &ldquo;red&rdquo;, &ldquo;blue&rdquo;, &ldquo;neutral&rdquo;.</li>
+<li><u>String</u> Coalitions : Can take the following values: &quot;red&quot;, &quot;blue&quot;, &quot;neutral&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1703,15 +1484,13 @@ self</li>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
 </ul>
-
-<h3 id="set_airbase-filtercategories-categories">SET_AIRBASE:FilterCategories(Categories)</h3>
-
+<h3 id='set_airbase-filtercategories-categories'>SET_AIRBASE:FilterCategories(Categories)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
-<li><u>String</u> Categories : Can take the following values: &ldquo;airdrome&rdquo;, &ldquo;helipad&rdquo;, &ldquo;ship&rdquo;.</li>
+<li><u>String</u> Categories : Can take the following values: &quot;airdrome&quot;, &quot;helipad&quot;, &quot;ship&quot;.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -1720,9 +1499,7 @@ self</li>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
 </ul>
-
-<h3 id="set_airbase-filterstart">SET_AIRBASE:FilterStart()</h3>
-
+<h3 id='set_airbase-filterstart'>SET_AIRBASE:FilterStart()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1736,9 +1513,7 @@ self</li>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
 </ul>
-
-<h3 id="set_airbase-addindatabase-event">SET_AIRBASE:AddInDatabase(Event)</h3>
-
+<h3 id='set_airbase-addindatabase-event'>SET_AIRBASE:AddInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1753,9 +1528,7 @@ self</li>
 <li><u>String</u> The : name of the AIRBASE</li>
 <li><u>List[]</u> The : AIRBASE</li>
 </ul>
-
-<h3 id="set_airbase-findindatabase-event">SET_AIRBASE:FindInDatabase(Event)</h3>
-
+<h3 id='set_airbase-findindatabase-event'>SET_AIRBASE:FindInDatabase(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1770,9 +1543,7 @@ self</li>
 <li><u>String</u> The : name of the AIRBASE</li>
 <li><u>List[]</u> The : AIRBASE</li>
 </ul>
-
-<h3 id="set_airbase-foreachairbase-iteratorfunction">SET_AIRBASE:ForEachAirbase(IteratorFunction)</h3>
-
+<h3 id='set_airbase-foreachairbase-iteratorfunction'>SET_AIRBASE:ForEachAirbase(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1787,9 +1558,7 @@ self</li>
 <li><a href="#set_airbase-class">SET_AIRBASE</a>
 self</li>
 </ul>
-
-<h3 id="set_airbase-findnearestairbasefrompointvec2-pointvec2">SET_AIRBASE:FindNearestAirbaseFromPointVec2(PointVec2)</h3>
-
+<h3 id='set_airbase-findnearestairbasefrompointvec2-pointvec2'>SET_AIRBASE:FindNearestAirbaseFromPointVec2(PointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -1803,9 +1572,7 @@ self</li>
 <ul>
 <li><a href="#airbase-class">AIRBASE</a> The : closest <a href="#airbase-class">AIRBASE</a>.</li>
 </ul>
-
-<h3 id="set_airbase-isincludeobject-mairbase">SET_AIRBASE:IsIncludeObject(MAirbase)</h3>
-
+<h3 id='set_airbase-isincludeobject-mairbase'>SET_AIRBASE:IsIncludeObject(MAirbase)</h3>
 <h4> Parameters </h4>
 
 <ul>

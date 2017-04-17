@@ -1,5 +1,4 @@
-<h1 id="ai-ai_cap-module">AI.AI_Cap Module</h1>
-
+<h1 id='ai-ai_cap-module'>AI.AI_Cap Module</h1>
 <p><strong>AI</strong> - <strong>Execute Combat Air Patrol (CAP).</strong></p>
 
 <p><img src="/includes/Pictures/AI_CAP/Dia1.JPG" alt="Banner Image" /></p>
@@ -11,9 +10,7 @@
 <ul>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>: Perform a CAP in a zone.</li>
 </ul>
-
-<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
-
+<h5 id='strong-api-change-history-strong-2'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -24,11 +21,7 @@
 <p>Hereby the change log:</p>
 
 <p>2017-01-15: Initial class and API.</p>
-
-<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
-
-<h5 id="contributions">Contributions:</h5>
-
+<h5 id='strong-authors-and-contributions-strong-2'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-2'>Contributions:</h5>
 <ul>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=90530">Quax</a></strong>: Concept, Advice &amp; Testing.</li>
 <li><strong><a href="https://forums.eagle.ru/member.php?u=62835">Pikey</a></strong>: Concept, Advice &amp; Testing.</li>
@@ -36,15 +29,11 @@
 <li>**<a href="http://forums.eagle.ru/member.php?u=3829">Whisper</a>: Testing.</li>
 <li>**<a href="https://forums.eagle.ru/member.php?u=125166">Delta99</a>: Testing.</li>
 </ul>
-
-<h5 id="authors">Authors:</h5>
-
+<h5 id='authors-2'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
 </ul>
-
-<h2 id="ai_cap_zone-class">AI_CAP_ZONE Class</h2>
-
+<h2 id='ai_cap_zone-class'>AI_CAP_ZONE Class</h2>
 <pre>
 Inheritance : The AI_CAP_ZONE Class inherits from the following parents :
 BASE
@@ -84,28 +73,20 @@ Upon arrival at the 3D point, a new random 3D point will be selected within the 
 When the fuel treshold has been reached, the airplane will fly towards the nearest friendly airbase and will land.</p>
 
 <p><img src="/includes/Pictures/AI_CAP/Dia13.JPG" alt="Process" /></p>
-
-<h5 id="1-1-ai_cap_zone-constructor">1.1) AI_CAP_ZONE constructor</h5>
-
+<h5 id='1-1-ai_cap_zone-constructor'>1.1) AI_CAP_ZONE constructor</h5>
 <ul>
 <li><a href="#ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_CAP_ZONE:New()</a>: Creates a new AI_CAP_ZONE object.</li>
 </ul>
-
-<h5 id="1-2-ai_cap_zone-is-a-fsm">1.2) AI_CAP_ZONE is a FSM</h5>
-
+<h5 id='1-2-ai_cap_zone-is-a-fsm'>1.2) AI_CAP_ZONE is a FSM</h5>
 <p><img src="/includes/Pictures/AI_CAP/Dia2.JPG" alt="Process" /></p>
-
-<h5 id="1-2-1-ai_cap_zone-states">1.2.1) AI_CAP_ZONE States</h5>
-
+<h5 id='1-2-1-ai_cap_zone-states'>1.2.1) AI_CAP_ZONE States</h5>
 <ul>
 <li><strong>None</strong> ( Group ): The process is not started yet.</li>
 <li><strong>Patrolling</strong> ( Group ): The AI is patrolling the Patrol Zone.</li>
 <li><strong>Engaging</strong> ( Group ): The AI is engaging the bogeys.</li>
 <li><strong>Returning</strong> ( Group ): The AI is returning to Base..</li>
 </ul>
-
-<h5 id="1-2-2-ai_cap_zone-events">1.2.2) AI_CAP_ZONE Events</h5>
-
+<h5 id='1-2-2-ai_cap_zone-events'>1.2.2) AI_CAP_ZONE Events</h5>
 <ul>
 <li><strong><a href="#ai_patrol_zone-start">AI_PATROL_ZONE:Start()</a></strong>: Start the process.</li>
 <li><strong><a href="#ai_patrol_zone-route">AI_PATROL_ZONE:Route()</a></strong>: Route the AI to a new random 3D point within the Patrol Zone.</li>
@@ -118,9 +99,7 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 <li><strong>AI_CAP_ZONE-Destroyed</strong>: The AI has destroyed all bogeys <a href="#unit-module">Unit</a>s assigned in the CAS task.</li>
 <li><strong>Status</strong> ( Group ): The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.</li>
 </ul>
-
-<h5 id="1-3-set-the-range-of-engagement">1.3) Set the Range of Engagement</h5>
-
+<h5 id='1-3-set-the-range-of-engagement'>1.3) Set the Range of Engagement</h5>
 <p><img src="/includes/Pictures/AI_CAP/Dia11.JPG" alt="Range" /></p>
 
 <p>An optional range can be set in meters,
@@ -128,9 +107,7 @@ that will define when the AI will engage with the detected airborne enemy target
 The range can be beyond or smaller than the range of the Patrol Zone.
 The range is applied at the position of the AI.
 Use the method <a href="#ai_cap_zone-setengagerange-engagerange">AI_CAP_ZONE:SetEngageRange()</a> to define that range.</p>
-
-<h5 id="1-4-set-the-zone-of-engagement">1.4) Set the Zone of Engagement</h5>
-
+<h5 id='1-4-set-the-zone-of-engagement'>1.4) Set the Zone of Engagement</h5>
 <p><img src="/includes/Pictures/AI_CAP/Dia12.JPG" alt="Zone" /></p>
 
 <p>An optional <a href="#zone-module">Zone</a> can be set,
@@ -143,9 +120,7 @@ Use the method <a href="#ai_cap_zone-setengagezone-engagezone">AI_CAP_ZONE:SetEn
 <li><a href="#controllable-class">CONTROLLABLE</a> AIControllable : The <a href="#controllable-module">Controllable</a> patrolling.</li>
 <li><a href="#zone_base-class">ZONE_BASE</a> TargetZone : The <a href="#zone-module">Zone</a> where the patrol needs to be executed.</li>
 </ul>
-
-<h3 id="ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype">AI_CAP_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, PatrolAltType)</h3>
-
+<h3 id='ai_cap_zone-new-patrolzone-patrolflooraltitude-patrolceilingaltitude-self-self-patrolalttype'>AI_CAP_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, PatrolAltType)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -156,7 +131,7 @@ self</li>
 <li><a href="#altitude-class">Altitude</a> PatrolCeilingAltitude : The highest altitude in meters where to execute the patrol.</li>
 <li><a href="#speed-class">Speed</a> self : PatrolMinSpeed The minimum speed of the <a href="#controllable-module">Controllable</a> in km/h.</li>
 <li><a href="#speed-class">Speed</a> self : PatrolMaxSpeed The maximum speed of the <a href="#controllable-module">Controllable</a> in km/h.</li>
-<li><a href="#altitudetype-class">AltitudeType</a> PatrolAltType : The altitude type (&ldquo;RADIO&rdquo;==&ldquo;AGL&rdquo;, &ldquo;BARO&rdquo;==&ldquo;ASL&rdquo;). Defaults to RADIO</li>
+<li><a href="#altitudetype-class">AltitudeType</a> PatrolAltType : The altitude type (&quot;RADIO&quot;==&quot;AGL&quot;, &quot;BARO&quot;==&quot;ASL&quot;). Defaults to RADIO</li>
 </ul>
 
 <h4> Returns </h4>
@@ -165,9 +140,7 @@ self</li>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
 </ul>
-
-<h3 id="ai_cap_zone-onbeforeengage-controllable-from-event-to">AI_CAP_ZONE:OnBeforeEngage(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforeengage-controllable-from-event-to'>AI_CAP_ZONE:OnBeforeEngage(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -186,9 +159,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafterengage-controllable-from-event-to">AI_CAP_ZONE:OnAfterEngage(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterengage-controllable-from-event-to'>AI_CAP_ZONE:OnAfterEngage(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -203,9 +174,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-engage">AI_CAP_ZONE:Engage()</h3>
-
+<h3 id='ai_cap_zone-engage'>AI_CAP_ZONE:Engage()</h3>
 <p>Synchronous Event Trigger for Event Engage.</p>
 
 <h4> Parameters </h4>
@@ -216,9 +185,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onleaveengaging-controllable-from-event-to">AI_CAP_ZONE:OnLeaveEngaging(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onleaveengaging-controllable-from-event-to'>AI_CAP_ZONE:OnLeaveEngaging(Controllable, From, Event, To)</h3>
 <p>OnLeave Transition Handler for State Engaging.</p>
 
 <h4> Parameters </h4>
@@ -237,9 +204,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onenterengaging-controllable-from-event-to">AI_CAP_ZONE:OnEnterEngaging(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onenterengaging-controllable-from-event-to'>AI_CAP_ZONE:OnEnterEngaging(Controllable, From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Engaging.</p>
 
 <h4> Parameters </h4>
@@ -254,9 +219,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onbeforefired-controllable-from-event-to">AI_CAP_ZONE:OnBeforeFired(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforefired-controllable-from-event-to'>AI_CAP_ZONE:OnBeforeFired(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -275,9 +238,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafterfired-controllable-from-event-to">AI_CAP_ZONE:OnAfterFired(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterfired-controllable-from-event-to'>AI_CAP_ZONE:OnAfterFired(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -292,9 +253,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-fired">AI_CAP_ZONE:Fired()</h3>
-
+<h3 id='ai_cap_zone-fired'>AI_CAP_ZONE:Fired()</h3>
 <p>Synchronous Event Trigger for Event Fired.</p>
 
 <h4> Parameters </h4>
@@ -305,9 +264,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onbeforedestroy-controllable-from-event-to">AI_CAP_ZONE:OnBeforeDestroy(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforedestroy-controllable-from-event-to'>AI_CAP_ZONE:OnBeforeDestroy(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -326,9 +283,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafterdestroy-controllable-from-event-to">AI_CAP_ZONE:OnAfterDestroy(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterdestroy-controllable-from-event-to'>AI_CAP_ZONE:OnAfterDestroy(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -343,9 +298,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-destroy">AI_CAP_ZONE:Destroy()</h3>
-
+<h3 id='ai_cap_zone-destroy'>AI_CAP_ZONE:Destroy()</h3>
 <p>Synchronous Event Trigger for Event Destroy.</p>
 
 <h4> Parameters </h4>
@@ -356,9 +309,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onbeforeabort-controllable-from-event-to">AI_CAP_ZONE:OnBeforeAbort(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforeabort-controllable-from-event-to'>AI_CAP_ZONE:OnBeforeAbort(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -377,9 +328,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafterabort-controllable-from-event-to">AI_CAP_ZONE:OnAfterAbort(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterabort-controllable-from-event-to'>AI_CAP_ZONE:OnAfterAbort(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -394,9 +343,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-abort">AI_CAP_ZONE:Abort()</h3>
-
+<h3 id='ai_cap_zone-abort'>AI_CAP_ZONE:Abort()</h3>
 <p>Synchronous Event Trigger for Event Abort.</p>
 
 <h4> Parameters </h4>
@@ -407,9 +354,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onbeforeaccomplish-controllable-from-event-to">AI_CAP_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforeaccomplish-controllable-from-event-to'>AI_CAP_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -428,9 +373,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Return : false to cancel Transition.</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafteraccomplish-controllable-from-event-to">AI_CAP_ZONE:OnAfterAccomplish(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafteraccomplish-controllable-from-event-to'>AI_CAP_ZONE:OnAfterAccomplish(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -445,9 +388,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-accomplish">AI_CAP_ZONE:Accomplish()</h3>
-
+<h3 id='ai_cap_zone-accomplish'>AI_CAP_ZONE:Accomplish()</h3>
 <p>Synchronous Event Trigger for Event Accomplish.</p>
 
 <h4> Parameters </h4>
@@ -458,9 +399,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-setengagezone-engagezone">AI_CAP_ZONE:SetEngageZone(EngageZone)</h3>
-
+<h3 id='ai_cap_zone-setengagezone-engagezone'>AI_CAP_ZONE:SetEngageZone(EngageZone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -475,9 +414,7 @@ self</li>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
 </ul>
-
-<h3 id="ai_cap_zone-setengagerange-engagerange">AI_CAP_ZONE:SetEngageRange(EngageRange)</h3>
-
+<h3 id='ai_cap_zone-setengagerange-engagerange'>AI_CAP_ZONE:SetEngageRange(EngageRange)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -492,9 +429,7 @@ self</li>
 <li><a href="#ai_cap_zone-class">AI_CAP_ZONE</a>
 self</li>
 </ul>
-
-<h3 id="ai_cap_zone-onafterstart-controllable-from-event-to">AI_CAP_ZONE:onafterStart(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterstart-controllable-from-event-to'>AI_CAP_ZONE:onafterStart(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -507,9 +442,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onbeforeengage-controllable-from-event-to">AI_CAP_ZONE:onbeforeEngage(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onbeforeengage-controllable-from-event-to-2'>AI_CAP_ZONE:onbeforeEngage(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -522,9 +455,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onafterdetected-controllable-from-event-to">AI_CAP_ZONE:onafterDetected(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterdetected-controllable-from-event-to'>AI_CAP_ZONE:onafterDetected(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -537,9 +468,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onafterabort-controllable-from-event-to">AI_CAP_ZONE:onafterAbort(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterabort-controllable-from-event-to-2'>AI_CAP_ZONE:onafterAbort(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -552,9 +481,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onafterengage-controllable-from-event-to">AI_CAP_ZONE:onafterEngage(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafterengage-controllable-from-event-to-2'>AI_CAP_ZONE:onafterEngage(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -567,9 +494,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onafteraccomplish-controllable-from-event-to">AI_CAP_ZONE:onafterAccomplish(Controllable, From, Event, To)</h3>
-
+<h3 id='ai_cap_zone-onafteraccomplish-controllable-from-event-to-2'>AI_CAP_ZONE:onafterAccomplish(Controllable, From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -582,9 +507,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-onafterdestroy-controllable-from-event-to-eventdata">AI_CAP_ZONE:onafterDestroy(Controllable, From, Event, To, EventData)</h3>
-
+<h3 id='ai_cap_zone-onafterdestroy-controllable-from-event-to-eventdata'>AI_CAP_ZONE:onafterDestroy(Controllable, From, Event, To, EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -598,9 +521,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="ai_cap_zone-oneventdead-eventdata">AI_CAP_ZONE:OnEventDead(EventData)</h3>
-
+<h3 id='ai_cap_zone-oneventdead-eventdata'>AI_CAP_ZONE:OnEventDead(EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>

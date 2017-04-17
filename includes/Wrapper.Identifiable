@@ -1,27 +1,20 @@
-<h1 id="wrapper-identifiable-module">Wrapper.Identifiable Module</h1>
-
+<h1 id='wrapper-identifiable-module'>Wrapper.Identifiable Module</h1>
 <p>This module contains the IDENTIFIABLE class.</p>
-
-<h5 id="1-identifiable-class-extends-object">1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h5>
-
+<h5 id='1-a-href-identifiable-class-identifiable-a-class-extends-a-href-object-class-object-a'>1) <a href="#identifiable-class">IDENTIFIABLE</a> class, extends <a href="#object-class">OBJECT</a></h5>
 <p>The <a href="#identifiable-class">IDENTIFIABLE</a> class is a wrapper class to handle the DCS Identifiable objects:</p>
 
 <ul>
 <li>Support all DCS Identifiable APIs.</li>
 <li>Enhance with Identifiable specific APIs not in the DCS Identifiable API set.</li>
-<li>Manage the &ldquo;state&rdquo; of the DCS Identifiable.</li>
+<li>Manage the &quot;state&quot; of the DCS Identifiable.</li>
 </ul>
-
-<h5 id="1-1-identifiable-constructor">1.1) IDENTIFIABLE constructor:</h5>
-
+<h5 id='1-1-identifiable-constructor'>1.1) IDENTIFIABLE constructor:</h5>
 <p>The IDENTIFIABLE class provides the following functions to construct a IDENTIFIABLE instance:</p>
 
 <ul>
 <li><a href="#identifiable-new-identifiablename">IDENTIFIABLE:New()</a>: Create a IDENTIFIABLE instance.</li>
 </ul>
-
-<h5 id="1-2-identifiable-methods">1.2) IDENTIFIABLE methods:</h5>
-
+<h5 id='1-2-identifiable-methods'>1.2) IDENTIFIABLE methods:</h5>
 <p>The following methods can be used to identify an identifiable object:</p>
 
 <ul>
@@ -32,9 +25,7 @@
 <li><a href="#identifiable-getcountry">IDENTIFIABLE:GetCountry()</a>: Returns the country of the Identifiable.</li>
 <li><a href="#identifiable-getdesc">IDENTIFIABLE:GetDesc()</a>: Returns the descriptor structure of the Identifiable.</li>
 </ul>
-
-<h2 id="identifiable-class">IDENTIFIABLE Class</h2>
-
+<h2 id='identifiable-class'>IDENTIFIABLE Class</h2>
 <pre>
 Inheritance : The IDENTIFIABLE Class inherits from the following parents :
 BASE
@@ -47,9 +38,7 @@ BASE
 <ul>
 <li><u>String</u> IdentifiableName : The name of the identifiable.</li>
 </ul>
-
-<h3 id="identifiable-new-identifiablename">IDENTIFIABLE:New(IdentifiableName)</h3>
-
+<h3 id='identifiable-new-identifiablename'>IDENTIFIABLE:New(IdentifiableName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -64,9 +53,7 @@ self</li>
 <li><a href="#identifiable-class">IDENTIFIABLE</a>
 self</li>
 </ul>
-
-<h3 id="identifiable-isalive">IDENTIFIABLE:IsAlive()</h3>
-
+<h3 id='identifiable-isalive'>IDENTIFIABLE:IsAlive()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -80,9 +67,7 @@ self</li>
 <li><u>Boolean</u> true : if Identifiable is alive.</li>
 <li><u>Nil</u> if : the Identifiable is not existing or is not alive.</li>
 </ul>
-
-<h3 id="identifiable-getname">IDENTIFIABLE:GetName()</h3>
-
+<h3 id='identifiable-getname'>IDENTIFIABLE:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -96,9 +81,7 @@ self</li>
 <li><u>String</u> The : name of the DCS Identifiable.</li>
 <li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
-
-<h3 id="identifiable-gettypename">IDENTIFIABLE:GetTypeName()</h3>
-
+<h3 id='identifiable-gettypename'>IDENTIFIABLE:GetTypeName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -112,9 +95,7 @@ self</li>
 <li><u>String</u> The : type name of the DCS Identifiable.</li>
 <li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
-
-<h3 id="identifiable-getcategory">IDENTIFIABLE:GetCategory()</h3>
-
+<h3 id='identifiable-getcategory'>IDENTIFIABLE:GetCategory()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -127,9 +108,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Object#Object.Category The : category ID</li>
 </ul>
-
-<h3 id="identifiable-getcategoryname">IDENTIFIABLE:GetCategoryName()</h3>
-
+<h3 id='identifiable-getcategoryname'>IDENTIFIABLE:GetCategoryName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -142,9 +121,7 @@ self</li>
 <ul>
 <li><u>String</u> The : DCS Identifiable Category Name</li>
 </ul>
-
-<h3 id="identifiable-getcoalition">IDENTIFIABLE:GetCoalition()</h3>
-
+<h3 id='identifiable-getcoalition'>IDENTIFIABLE:GetCoalition()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -158,9 +135,7 @@ self</li>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition.side The : side of the coalition.</li>
 <li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
-
-<h3 id="identifiable-getcountry">IDENTIFIABLE:GetCountry()</h3>
-
+<h3 id='identifiable-getcountry'>IDENTIFIABLE:GetCountry()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -174,9 +149,7 @@ self</li>
 <li><a href="#country.id-class">country.id</a> The : country identifier.</li>
 <li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
-
-<h3 id="identifiable-getdesc">IDENTIFIABLE:GetDesc()</h3>
-
+<h3 id='identifiable-getdesc'>IDENTIFIABLE:GetDesc()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -190,9 +163,7 @@ self</li>
 <li>Dcs.DCSWrapper.Identifiable#Identifiable.Desc The : Identifiable descriptor.</li>
 <li><u>Nil</u> The : DCS Identifiable is not existing or alive.</li>
 </ul>
-
-<h3 id="identifiable-getcallsign">IDENTIFIABLE:GetCallsign()</h3>
-
+<h3 id='identifiable-getcallsign'>IDENTIFIABLE:GetCallsign()</h3>
 <h4> Parameters </h4>
 
 <ul>

@@ -1,9 +1,6 @@
-<h1 id="wrapper-scenery-module">Wrapper.Scenery Module</h1>
-
+<h1 id='wrapper-scenery-module'>Wrapper.Scenery Module</h1>
 <p>This module contains the SCENERY class.</p>
-
-<h5 id="1-scenery-class-extends-positionable">1) <a href="#scenery-class">SCENERY</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
-
+<h5 id='1-a-href-scenery-class-scenery-a-class-extends-a-href-positionable-class-positionable-a'>1) <a href="#scenery-class">SCENERY</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
 <p>Scenery objects are defined on the map.
 The <a href="#scenery-class">SCENERY</a> class is a wrapper class to handle the DCS Scenery objects:</p>
 

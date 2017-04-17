@@ -1,25 +1,10 @@
-<h1 id="core-spawnstatic-module">Core.SpawnStatic Module</h1>
-
-<p><strong>Core</strong> &ndash; Spawn dynamically new STATICs in your missions.</p>
+<h1 id='core-spawnstatic-module'>Core.SpawnStatic Module</h1>
+<p><strong>Core</strong> -- Spawn dynamically new STATICs in your missions.</p>
 
 <p><img src="/includes/Pictures/SPAWNSTATIC/Dia1.JPG" alt="Banner Image" /></p>
 
 <p>SPAWNSTATIC spawns static structures in your missions dynamically. See below the SPAWNSTATIC class documentation.</p>
-
-<h5 id="demo-missions">Demo Missions</h5>
-
-<h5 id="spawnstatic-demo-missions-source-code"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h5>
-
-<h5 id="spawnstatic-demo-missions-only-for-beta-testers"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h5>
-
-<h5 id="all-demo-missions-pack-of-the-last-release"><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5>
-
-<h5 id="youtube-channel">YouTube Channel</h5>
-
-<h5 id="spawnstatic-youtube-channel"><a href="#">SPAWNSTATIC YouTube Channel</a></h5>
-
-<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
-
+<h5 id='demo-missions'>Demo Missions</h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-sps-20-20spawning-20statics-spawnstatic-demo-missions-source-code-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions source code</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-sps-20-20spawning-20statics-spawnstatic-demo-missions-only-for-beta-testers-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPS%20-%20Spawning%20Statics">SPAWNSTATIC Demo Missions, only for beta testers</a></h5><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><h5 id='youtube-channel'>YouTube Channel</h5><h5 id='a-href-spawnstatic-youtube-channel-a'><a href="#">SPAWNSTATIC YouTube Channel</a></h5><h5 id='strong-api-change-history-strong-8'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -28,19 +13,11 @@
 </ul>
 
 <p>Hereby the change log:</p>
-
-<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
-
-<h5 id="contributions">Contributions:</h5>
-
-<h5 id="authors">Authors:</h5>
-
+<h5 id='strong-authors-and-contributions-strong-8'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-13'>Contributions:</h5><h5 id='authors-11'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
 </ul>
-
-<h2 id="spawnstatic-class">SPAWNSTATIC Class</h2>
-
+<h2 id='spawnstatic-class'>SPAWNSTATIC Class</h2>
 <pre>
 Inheritance : The SPAWNSTATIC Class inherits from the following parents :
 BASE
@@ -49,7 +26,7 @@ BASE
 
 <p>The SPAWNSTATIC class allows to spawn dynamically new <a href="#static-module">Static</a>s.
 Through creating a copy of an existing static object template as defined in the Mission Editor (ME),
-SPAWNSTATIC can retireve the properties of the defined static object template (like type, category etc), and &ldquo;copy&rdquo;
+SPAWNSTATIC can retireve the properties of the defined static object template (like type, category etc), and &quot;copy&quot;
 these properties to create a new static object and place it at the desired coordinate.</p>
 
 <p>New spawned <a href="#static-module">Static</a>s get <strong>the same name</strong> as the name of the template Static,
@@ -60,17 +37,13 @@ By default, spawned <a href="#static-module">Static</a>s will follow a naming co
 <li>Spawned <a href="#static-module">Static</a>s will have the name <em>StaticName</em>#<em>nnn</em>, where <em>StaticName</em> is the name of the <strong>Template Static</strong>,
 and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 </ul>
-
-<h5 id="spawnstatic-construction-methods">SPAWNSTATIC construction methods</h5>
-
+<h5 id='spawnstatic-construction-methods'>SPAWNSTATIC construction methods</h5>
 <p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
 
 <ul>
 <li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
 </ul>
-
-<h5 id="spawn-methods"><strong>Spawn</strong> methods</h5>
-
+<h5 id='strong-spawn-strong-methods'><strong>Spawn</strong> methods</h5>
 <p>Groups can be spawned at different times and methods:</p>
 
 <ul>
@@ -78,9 +51,7 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 (The group will be spawned at land height ).</li>
 <li><a href="#spawnstatic-spawnfromzone-zone-heading-(optional)">SPAWNSTATIC:SpawnFromZone()</a>: Spawn a new group in a <a href="#zone-module">Zone</a>.</li>
 </ul>
-
-<h3 id="spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</h3>
-
+<h3 id='spawnstatic-newfromstatic-spawntemplateprefix'>SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -95,9 +66,7 @@ self</li>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
 </ul>
-
-<h3 id="spawnstatic-newfromtype-spawntypename">SPAWNSTATIC:NewFromType(SpawnTypeName)</h3>
-
+<h3 id='spawnstatic-newfromtype-spawntypename'>SPAWNSTATIC:NewFromType(SpawnTypeName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -112,9 +81,7 @@ self</li>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
 </ul>
-
-<h3 id="spawnstatic-spawnfrompointvec2-pointvec2-heading-optional">SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</h3>
-
+<h3 id='spawnstatic-spawnfrompointvec2-pointvec2-heading-optional'>SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -131,9 +98,7 @@ self</li>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
 </ul>
-
-<h3 id="spawnstatic-spawnfromzone-zone-heading-optional">SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</h3>
-
+<h3 id='spawnstatic-spawnfromzone-zone-heading-optional'>SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -150,9 +115,7 @@ self</li>
 <li><a href="#spawnstatic-class">SPAWNSTATIC</a>
 self</li>
 </ul>
-
-<h2 id="spawnstatic-spawnzonetable-class">SPAWNSTATIC.SpawnZoneTable Class</h2>
-
+<h2 id='spawnstatic-spawnzonetable-class'>SPAWNSTATIC.SpawnZoneTable Class</h2>
 <pre>
 **The SPAWNSTATIC.SpawnZoneTable class does not inherit**
 </pre>

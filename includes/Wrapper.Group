@@ -1,6 +1,5 @@
-<h1 id="wrapper-group-module">Wrapper.Group Module</h1>
-
-<p><strong>Wrapper</strong> &ndash; GROUP is a wrapper class for the DCS Class Group.</p>
+<h1 id='wrapper-group-module'>Wrapper.Group Module</h1>
+<p><strong>Wrapper</strong> -- GROUP is a wrapper class for the DCS Class Group.</p>
 
 <p>The <a href="#group-class">GROUP</a> class is a wrapper class to handle the DCS Group objects:</p>
 
@@ -8,15 +7,13 @@
 <li>Support all DCS Group APIs.</li>
 <li>Enhance with Group specific APIs not in the DCS Group API set.</li>
 <li>Handle local Group Controller.</li>
-<li>Manage the &ldquo;state&rdquo; of the DCS Group.</li>
+<li>Manage the &quot;state&quot; of the DCS Group.</li>
 </ul>
 
 <p><strong>IMPORTANT: ONE SHOULD NEVER SANATIZE these GROUP OBJECT REFERENCES! (make the GROUP object references nil).</strong></p>
 
 <p>See the detailed documentation on the GROUP class.</p>
-
-<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
-
+<h5 id='strong-api-change-history-strong-14'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -36,23 +33,15 @@
 <p>2017-01-24: GROUP:<strong>SetAIOn()</strong> added.</p>
 
 <p>2017-01-24: GROUP:<strong>SetAIOff()</strong> added.</p>
-
-<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
-
-<h5 id="contributions">Contributions:</h5>
-
+<h5 id='strong-authors-and-contributions-strong-13'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-20'>Contributions:</h5>
 <ul>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>
 </ul>
-
-<h5 id="authors">Authors:</h5>
-
+<h5 id='authors-18'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Design &amp; Programming</li>
 </ul>
-
-<h2 id="group-class">GROUP Class</h2>
-
+<h2 id='group-class'>GROUP Class</h2>
 <pre>
 Inheritance : The GROUP Class inherits from the following parents :
 BASE
@@ -68,9 +57,7 @@ BASE
 <ul>
 <li><u>String</u> GroupName : The name of the group.</li>
 </ul>
-
-<h3 id="group-register-groupname">GROUP:Register(GroupName)</h3>
-
+<h3 id='group-register-groupname'>GROUP:Register(GroupName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -85,9 +72,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 self</li>
 </ul>
-
-<h3 id="group-find-dcsgroup">GROUP:Find(DCSGroup)</h3>
-
+<h3 id='group-find-dcsgroup'>GROUP:Find(DCSGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -102,9 +87,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 The : GROUP.</li>
 </ul>
-
-<h3 id="group-findbyname-groupname">GROUP:FindByName(GroupName)</h3>
-
+<h3 id='group-findbyname-groupname'>GROUP:FindByName(GroupName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -119,9 +102,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 The : GROUP.</li>
 </ul>
-
-<h3 id="group-getdcsobject">GROUP:GetDCSObject()</h3>
-
+<h3 id='group-getdcsobject'>GROUP:GetDCSObject()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -134,9 +115,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Group#Group The : DCS Group.</li>
 </ul>
-
-<h3 id="group-isalive">GROUP:IsAlive()</h3>
-
+<h3 id='group-isalive'>GROUP:IsAlive()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -151,9 +130,7 @@ self</li>
 <li><u>Boolean</u> false : if the Group is alive but inactive.</li>
 <li><u>Nil</u> if : the group does not exist anymore.</li>
 </ul>
-
-<h3 id="group-destroy">GROUP:Destroy()</h3>
-
+<h3 id='group-destroy'>GROUP:Destroy()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -162,9 +139,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="group-getcategory">GROUP:GetCategory()</h3>
-
+<h3 id='group-getcategory'>GROUP:GetCategory()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -177,9 +152,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Group#Group.Category The : category ID</li>
 </ul>
-
-<h3 id="group-getcategoryname">GROUP:GetCategoryName()</h3>
-
+<h3 id='group-getcategoryname'>GROUP:GetCategoryName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -192,9 +165,7 @@ self</li>
 <ul>
 <li><u>String</u> Category : name = Helicopter, Airplane, Ground Unit, Ship</li>
 </ul>
-
-<h3 id="group-getcoalition">GROUP:GetCoalition()</h3>
-
+<h3 id='group-getcoalition'>GROUP:GetCoalition()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -207,9 +178,7 @@ self</li>
 <ul>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition.side The : coalition side of the DCS Group.</li>
 </ul>
-
-<h3 id="group-getcountry">GROUP:GetCountry()</h3>
-
+<h3 id='group-getcountry'>GROUP:GetCountry()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -223,9 +192,7 @@ self</li>
 <li><a href="#country.id-class">country.id</a> The : country identifier.</li>
 <li><u>Nil</u> The : DCS Group is not existing or alive.</li>
 </ul>
-
-<h3 id="group-getunit-unitnumber">GROUP:GetUnit(UnitNumber)</h3>
-
+<h3 id='group-getunit-unitnumber'>GROUP:GetUnit(UnitNumber)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -239,9 +206,7 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a> The : UNIT wrapper class.</li>
 </ul>
-
-<h3 id="group-getdcsunit-unitnumber">GROUP:GetDCSUnit(UnitNumber)</h3>
-
+<h3 id='group-getdcsunit-unitnumber'>GROUP:GetDCSUnit(UnitNumber)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -255,9 +220,7 @@ self</li>
 <ul>
 <li>Dcs.DCSWrapper.Unit#Unit The : DCS Unit.</li>
 </ul>
-
-<h3 id="group-getsize">GROUP:GetSize()</h3>
-
+<h3 id='group-getsize'>GROUP:GetSize()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -270,9 +233,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : DCS Group size.</li>
 </ul>
-
-<h3 id="group-getinitialsize">GROUP:GetInitialSize()</h3>
-
+<h3 id='group-getinitialsize'>GROUP:GetInitialSize()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -285,9 +246,7 @@ self</li>
 <ul>
 <li><u>Number</u> The : DCS Group initial size.</li>
 </ul>
-
-<h3 id="group-getdcsunits">GROUP:GetDCSUnits()</h3>
-
+<h3 id='group-getdcsunits'>GROUP:GetDCSUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -300,9 +259,7 @@ self</li>
 <ul>
 <li><u>List[]</u> The : DCS Units.</li>
 </ul>
-
-<h3 id="group-activate">GROUP:Activate()</h3>
-
+<h3 id='group-activate'>GROUP:Activate()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -311,9 +268,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="group-gettypename">GROUP:GetTypeName()</h3>
-
+<h3 id='group-gettypename'>GROUP:GetTypeName()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -326,9 +281,7 @@ self</li>
 <ul>
 <li><u>String</u> The : type name of the group.</li>
 </ul>
-
-<h3 id="group-getcallsign">GROUP:GetCallsign()</h3>
-
+<h3 id='group-getcallsign'>GROUP:GetCallsign()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -341,9 +294,7 @@ self</li>
 <ul>
 <li><u>String</u> The : CallSign of the first DCS Unit of the DCS Group.</li>
 </ul>
-
-<h3 id="group-getvec2">GROUP:GetVec2()</h3>
-
+<h3 id='group-getvec2'>GROUP:GetVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -356,9 +307,7 @@ self</li>
 <ul>
 <li><a href="#vec2-class">Vec2</a> Current : Vec2 point of the first DCS Unit of the DCS Group.</li>
 </ul>
-
-<h3 id="group-getvec3">GROUP:GetVec3()</h3>
-
+<h3 id='group-getvec3'>GROUP:GetVec3()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -371,9 +320,7 @@ self</li>
 <ul>
 <li><a href="#vec3-class">Vec3</a> Current : Vec3 of the first DCS Unit of the GROUP.</li>
 </ul>
-
-<h3 id="group-getpointvec2">GROUP:GetPointVec2()</h3>
-
+<h3 id='group-getpointvec2'>GROUP:GetPointVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -387,9 +334,7 @@ self</li>
 <li><a href="#point_vec2-class">POINT_VEC2</a> The : 2D point vector of the first DCS Unit of the GROUP.</li>
 <li><u>Nil</u> The : first UNIT is not existing or alive.</li>
 </ul>
-
-<h3 id="group-getrandomvec3-radius">GROUP:GetRandomVec3(Radius)</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class) of first UNIT of the GROUP</span>
+<h3 id='group-getrandomvec3-radius'>GROUP:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class) of first UNIT of the GROUP</span>
 </code></pre>
 <h4> Parameters </h4>
 
@@ -405,9 +350,7 @@ self</li>
 <li><a href="#vec3-class">Vec3</a> The : random 3D point vector around the first UNIT of the GROUP.</li>
 <li><u>Nil</u> The : GROUP is invalid or empty</li>
 </ul>
-
-<h3 id="group-getheading">GROUP:GetHeading()</h3>
-
+<h3 id='group-getheading'>GROUP:GetHeading()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -421,9 +364,7 @@ self</li>
 <li><u>Number</u> mean : heading of the GROUP</li>
 <li><u>Nil</u> The : first UNIT is not existing or alive.</li>
 </ul>
-
-<h3 id="group-iscompletelyinzone-zone">GROUP:IsCompletelyInZone(Zone)</h3>
-
+<h3 id='group-iscompletelyinzone-zone'>GROUP:IsCompletelyInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -437,9 +378,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Returns : true if the Group is completely within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
-
-<h3 id="group-ispartlyinzone-zone">GROUP:IsPartlyInZone(Zone)</h3>
-
+<h3 id='group-ispartlyinzone-zone'>GROUP:IsPartlyInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -453,9 +392,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Returns : true if the Group is partially within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
-
-<h3 id="group-isnotinzone-zone">GROUP:IsNotInZone(Zone)</h3>
-
+<h3 id='group-isnotinzone-zone'>GROUP:IsNotInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -469,9 +406,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Returns : true if the Group is not within the <a href="#zone_base-class">ZONE_BASE</a></li>
 </ul>
-
-<h3 id="group-isair">GROUP:IsAir()</h3>
-
+<h3 id='group-isair'>GROUP:IsAir()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -484,9 +419,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> Air : category evaluation result.</li>
 </ul>
-
-<h3 id="group-ishelicopter">GROUP:IsHelicopter()</h3>
-
+<h3 id='group-ishelicopter'>GROUP:IsHelicopter()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -499,9 +432,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if DCS Group contains Helicopters.</li>
 </ul>
-
-<h3 id="group-isairplane">GROUP:IsAirPlane()</h3>
-
+<h3 id='group-isairplane'>GROUP:IsAirPlane()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -514,9 +445,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if DCS Group contains AirPlanes.</li>
 </ul>
-
-<h3 id="group-isground">GROUP:IsGround()</h3>
-
+<h3 id='group-isground'>GROUP:IsGround()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -529,9 +458,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if DCS Group contains Ground troops.</li>
 </ul>
-
-<h3 id="group-isship">GROUP:IsShip()</h3>
-
+<h3 id='group-isship'>GROUP:IsShip()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -544,9 +471,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> true : if DCS Group contains Ships.</li>
 </ul>
-
-<h3 id="group-allonground">GROUP:AllOnGround()</h3>
-
+<h3 id='group-allonground'>GROUP:AllOnGround()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -559,9 +484,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> All : units on the ground result.</li>
 </ul>
-
-<h3 id="group-setaionoff-aionoff">GROUP:SetAIOnOff(AIOnOff)</h3>
-
+<h3 id='group-setaionoff-aionoff'>GROUP:SetAIOnOff(AIOnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -576,9 +499,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 The : GROUP.</li>
 </ul>
-
-<h3 id="group-setaion">GROUP:SetAIOn()</h3>
-
+<h3 id='group-setaion'>GROUP:SetAIOn()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -592,9 +513,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 The : GROUP.</li>
 </ul>
-
-<h3 id="group-setaioff">GROUP:SetAIOff()</h3>
-
+<h3 id='group-setaioff'>GROUP:SetAIOff()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -608,9 +527,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 The : GROUP.</li>
 </ul>
-
-<h3 id="group-getmaxvelocity">GROUP:GetMaxVelocity()</h3>
-
+<h3 id='group-getmaxvelocity'>GROUP:GetMaxVelocity()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -623,9 +540,7 @@ self</li>
 <ul>
 <li><u>Number</u> Maximum : velocity found.</li>
 </ul>
-
-<h3 id="group-getminheight">GROUP:GetMinHeight()</h3>
-
+<h3 id='group-getminheight'>GROUP:GetMinHeight()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -638,9 +553,7 @@ self</li>
 <ul>
 <li><u>Number</u> Minimum : height found.</li>
 </ul>
-
-<h3 id="group-getmaxheight">GROUP:GetMaxHeight()</h3>
-
+<h3 id='group-getmaxheight'>GROUP:GetMaxHeight()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -653,9 +566,7 @@ self</li>
 <ul>
 <li><u>Number</u> Maximum : height found.</li>
 </ul>
-
-<h3 id="group-respawn-template">GROUP:Respawn(Template)</h3>
-
+<h3 id='group-respawn-template'>GROUP:Respawn(Template)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -664,9 +575,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="group-gettemplate">GROUP:GetTemplate()</h3>
-
+<h3 id='group-gettemplate'>GROUP:GetTemplate()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -679,9 +588,7 @@ self</li>
 <ul>
 <li><u>List[]</u> self</li>
 </ul>
-
-<h3 id="group-settemplatecontrolled-controlled">GROUP:SetTemplateControlled(Controlled)</h3>
-
+<h3 id='group-settemplatecontrolled-controlled'>GROUP:SetTemplateControlled(Controlled)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -695,9 +602,7 @@ self</li>
 <ul>
 <li><u>List[]</u> self</li>
 </ul>
-
-<h3 id="group-settemplatecountry-countryid">GROUP:SetTemplateCountry(CountryID)</h3>
-
+<h3 id='group-settemplatecountry-countryid'>GROUP:SetTemplateCountry(CountryID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -711,9 +616,7 @@ self</li>
 <ul>
 <li><u>List[]</u> self</li>
 </ul>
-
-<h3 id="group-settemplatecoalition-coalitionid">GROUP:SetTemplateCoalition(CoalitionID)</h3>
-
+<h3 id='group-settemplatecoalition-coalitionid'>GROUP:SetTemplateCoalition(CoalitionID)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -727,9 +630,7 @@ self</li>
 <ul>
 <li><u>List[]</u> self</li>
 </ul>
-
-<h3 id="group-gettaskmission">GROUP:GetTaskMission()</h3>
-
+<h3 id='group-gettaskmission'>GROUP:GetTaskMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -742,9 +643,7 @@ self</li>
 <ul>
 <li><u>List[]</u> The : MissionTemplate</li>
 </ul>
-
-<h3 id="group-gettaskroute">GROUP:GetTaskRoute()</h3>
-
+<h3 id='group-gettaskroute'>GROUP:GetTaskRoute()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -757,9 +656,7 @@ self</li>
 <ul>
 <li><u>List[]</u> The : mission route defined by points.</li>
 </ul>
-
-<h3 id="group-copyroute-begin-end-randomize-radius">GROUP:CopyRoute(Begin, End, Randomize, Radius)</h3>
-
+<h3 id='group-copyroute-begin-end-randomize-radius'>GROUP:CopyRoute(Begin, End, Randomize, Radius)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -772,9 +669,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="group-calculatethreatlevela2g">GROUP:CalculateThreatLevelA2G()</h3>
-
+<h3 id='group-calculatethreatlevela2g'>GROUP:CalculateThreatLevelA2G()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -783,9 +678,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="group-inair">GROUP:InAir()</h3>
-
+<h3 id='group-inair'>GROUP:InAir()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -798,9 +691,7 @@ self</li>
 <li><u>Boolean</u> true : if in the first unit of the group is in the air.</li>
 <li><u>Nil</u> The : GROUP is not existing or not alive.</li>
 </ul>
-
-<h3 id="group-routertb-rtbairbase-speed">GROUP:RouteRTB(RTBAirbase, Speed)</h3>
-
+<h3 id='group-routertb-rtbairbase-speed'>GROUP:RouteRTB(RTBAirbase, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -816,9 +707,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 self</li>
 </ul>
-
-<h3 id="group-handleevent-event-eventfunction">GROUP:HandleEvent(Event, EventFunction)</h3>
-
+<h3 id='group-handleevent-event-eventfunction'>GROUP:HandleEvent(Event, EventFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -834,9 +723,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 self</li>
 </ul>
-
-<h3 id="group-unhandleevent-event">GROUP:UnHandleEvent(Event)</h3>
-
+<h3 id='group-unhandleevent-event'>GROUP:UnHandleEvent(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -851,9 +738,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 self</li>
 </ul>
-
-<h3 id="group-resetevents">GROUP:ResetEvents()</h3>
-
+<h3 id='group-resetevents'>GROUP:ResetEvents()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -867,9 +752,7 @@ self</li>
 <li><a href="#group-class">GROUP</a>
 self</li>
 </ul>
-
-<h3 id="group-getplayernames">GROUP:GetPlayerNames()</h3>
-
+<h3 id='group-getplayernames'>GROUP:GetPlayerNames()</h3>
 <h4> Parameters </h4>
 
 <ul>

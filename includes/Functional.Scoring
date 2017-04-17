@@ -1,6 +1,5 @@
-<h1 id="functional-scoring-module">Functional.Scoring Module</h1>
-
-<p>Single-Player:<strong>Yes</strong> / Multi-Player:<strong>Yes</strong> / Core:<strong>Yes</strong> &ndash; <strong>Administer the scoring of player achievements,
+<h1 id='functional-scoring-module'>Functional.Scoring Module</h1>
+<p>Single-Player:<strong>Yes</strong> / Multi-Player:<strong>Yes</strong> / Core:<strong>Yes</strong> -- <strong>Administer the scoring of player achievements,
 and create a CSV file logging the scoring events for use at team or squadron websites.</strong></p>
 
 <p><img src="/includes/Pictures/SCORING/Dia1.JPG" alt="Banner Image" /></p>
@@ -14,7 +13,7 @@ which can be <a href="#unit-module">Unit</a>, <a href="#static">Static) and @{Sc
 <p>Positive score points are granted when enemy or neutral targets are destroyed.
 Negative score points or penalties are given when a friendly target is hit or destroyed.
 This brings a lot of dynamism in the scoring, where players need to take care to inflict damage on the right target.
-By default, penalties weight heavier in the scoring, to ensure that players don&rsquo;t commit fratricide.
+By default, penalties weight heavier in the scoring, to ensure that players don&#39;t commit fratricide.
 The total score of the player is calculated by <strong>adding the scores minus the penalties</strong>.</p>
 
 <p><img src="/includes/Pictures/SCORING/Dia4.JPG" alt="Banner Image" /></p>
@@ -56,41 +55,33 @@ These CSV files can be used to:</p>
 <p>Scores can be <strong>reported</strong>. <strong>Menu options</strong> are automatically added to <strong>each player group</strong> when a player joins a client slot or a CA unit.
 Use the radio menu F10 to consult the scores while running the mission.
 Scores can be reported for your user, or an overall score can be reported of all players currently active in the mission.</p>
-
-<h5 id="1-scoring-class-extends-base">1) <a href="#scoring-class">SCORING</a> class, extends <a href="#base-class">BASE</a></h5>
-
-<h5 id="1-1-set-the-destroy-score-or-penalty-scale">1.1) Set the destroy score or penalty scale</h5>
-
+<h5 id='1-a-href-scoring-class-scoring-a-class-extends-a-href-base-class-base-a'>1) <a href="#scoring-class">SCORING</a> class, extends <a href="#base-class">BASE</a></h5><h5 id='1-1-set-the-destroy-score-or-penalty-scale'>1.1) Set the destroy score or penalty scale</h5>
 <p>Score scales can be set for scores granted when enemies or friendlies are destroyed.
 Use the method <a href="#scoring-setscaledestroyscore-scale">SCORING:SetScaleDestroyScore()</a> to set the scale of enemy destroys (positive destroys).
 Use the method <a href="#scoring-setscaledestroypenalty-scale">SCORING:SetScaleDestroyPenalty()</a> to set the scale of friendly destroys (negative destroys).</p>
 
-<p>local Scoring = SCORING:New( &ldquo;Scoring File&rdquo; )
+<p>local Scoring = SCORING:New( &quot;Scoring File&quot; )
 Scoring:SetScaleDestroyScore( 10 )
 Scoring:SetScaleDestroyPenalty( 40 )</p>
 
 <p>The above sets the scale for valid scores to 10. So scores will be given in a scale from 0 to 10.
 The penalties will be given in a scale from 0 to 40.</p>
-
-<h5 id="1-2-define-special-targets-that-will-give-extra-scores">1.2) Define special targets that will give extra scores.</h5>
-
+<h5 id='1-2-define-special-targets-that-will-give-extra-scores'>1.2) Define special targets that will give extra scores.</h5>
 <p>Special targets can be set that will give extra scores to the players when these are destroyed.
 Use the methods <a href="#scoring-addunitscore-scoreunit-score">SCORING:AddUnitScore()</a> and <a href="#scoring-removeunitscore-scoreunit">SCORING:RemoveUnitScore()</a> to specify a special additional score for a specific <a href="#unit-module">Unit</a>s.
 Use the methods <a href="#scoring-addstaticscore-scorestatic-score">SCORING:AddStaticScore()</a> and <a href="#scoring-removestaticscore-scorestatic">SCORING:RemoveStaticScore()</a> to specify a special additional score for a specific <a href="#static-module">Static</a>s.
 Use the method SCORING-SetGroupGroup to specify a special additional score for a specific <a href="#group-module">Group</a>s.</p>
 
-<p>local Scoring = SCORING:New( &ldquo;Scoring File&rdquo; )
-Scoring:AddUnitScore( UNIT:FindByName( &ldquo;Unit #001&rdquo; ), 200 )
-Scoring:AddStaticScore( STATIC:FindByName( &ldquo;Static #1&rdquo; ), 100 )</p>
+<p>local Scoring = SCORING:New( &quot;Scoring File&quot; )
+Scoring:AddUnitScore( UNIT:FindByName( &quot;Unit #001&quot; ), 200 )
+Scoring:AddStaticScore( STATIC:FindByName( &quot;Static #1&quot; ), 100 )</p>
 
 <p>The above grants an additional score of 200 points for Unit #001 and an additional 100 points of Static #1 if these are destroyed.
 Note that later in the mission, one can remove these scores set, for example, when the a goal achievement time limit is over.
 For example, this can be done as follows:</p>
 
-<p>Scoring:RemoveUnitScore( UNIT:FindByName( &ldquo;Unit #001&rdquo; ) )</p>
-
-<h5 id="1-3-define-destruction-zones-that-will-give-extra-scores">1.3) Define destruction zones that will give extra scores.</h5>
-
+<p>Scoring:RemoveUnitScore( UNIT:FindByName( &quot;Unit #001&quot; ) )</p>
+<h5 id='1-3-define-destruction-zones-that-will-give-extra-scores'>1.3) Define destruction zones that will give extra scores.</h5>
 <p>Define zones of destruction. Any object destroyed within the zone of the given category will give extra points.
 Use the method <a href="#scoring-addzonescore-scorezone-score">SCORING:AddZoneScore()</a> to add a <a href="#zone-module">Zone</a> for additional scoring.
 Use the method <a href="#scoring-removezonescore-scorezone">SCORING:RemoveZoneScore()</a> to remove a <a href="#zone-module">Zone</a> for additional scoring.
@@ -98,37 +89,27 @@ There are interesting variations that can be achieved with this functionality. F
 then the zone is a moving zone, and anything destroyed within that <a href="#zone-module">Zone</a> will generate points.
 The other implementation could be to designate a scenery target (a building) in the mission editor surrounded by a <a href="#zone-module">Zone</a>,
 just large enough around that building.</p>
-
-<h5 id="1-4-add-extra-goal-scores-upon-an-event-or-a-condition">1.4) Add extra Goal scores upon an event or a condition.</h5>
-
+<h5 id='1-4-add-extra-goal-scores-upon-an-event-or-a-condition'>1.4) Add extra Goal scores upon an event or a condition.</h5>
 <p>A mission has goals and achievements. The scoring system provides an API to set additional scores when a goal or achievement event happens.
 Use the method <a href="#scoring-addgoalscore-playerunit-goaltag-text-score">SCORING:AddGoalScore()</a> to add a score for a Player at any time in your mission.</p>
-
-<h5 id="1-5-configure-fratricide-level">1.5) Configure fratricide level.</h5>
-
+<h5 id='1-5-configure-fratricide-level'>1.5) Configure fratricide level.</h5>
 <p>When a player commits too much damage to friendlies, his penalty score will reach a certain level.
 Use the method <a href="#scoring-setfratricide-fratricide">SCORING:SetFratricide()</a> to define the level when a player gets kicked.
 By default, the fratricide level is the default penalty mutiplier * 2 for the penalty score.</p>
-
-<h5 id="1-6-penalty-score-when-a-player-changes-the-coalition">1.6) Penalty score when a player changes the coalition.</h5>
-
+<h5 id='1-6-penalty-score-when-a-player-changes-the-coalition'>1.6) Penalty score when a player changes the coalition.</h5>
 <p>When a player changes the coalition, he can receive a penalty score.
 Use the method <a href="#scoring-setcoalitionchangepenalty-coalitionchangepenalty">SCORING:SetCoalitionChangePenalty()</a> to define the penalty when a player changes coalition.
 By default, the penalty for changing coalition is the default penalty scale.</p>
-
-<h5 id="1-8-define-output-csv-files">1.8) Define output CSV files.</h5>
-
+<h5 id='1-8-define-output-csv-files'>1.8) Define output CSV files.</h5>
 <p>The CSV file is given the name of the string given in the <a href="#scoring-new-gamename">SCORING:New()</a>{} constructor, followed by the .csv extension.
 The file is incrementally saved in the <strong><User>\Saved Games\DCS\Logs</strong> folder, and has a time stamp indicating each mission run.
 See the following example:</p>
 
-<p>local ScoringFirstMission = SCORING:New( &ldquo;FirstMission&rdquo; )
-local ScoringSecondMission = SCORING:New( &ldquo;SecondMission&rdquo; )</p>
+<p>local ScoringFirstMission = SCORING:New( &quot;FirstMission&quot; )
+local ScoringSecondMission = SCORING:New( &quot;SecondMission&quot; )</p>
 
 <p>The above documents that 2 Scoring objects are created, ScoringFirstMission and ScoringSecondMission.</p>
-
-<h5 id="1-9-configure-messages">1.9) Configure messages.</h5>
-
+<h5 id='1-9-configure-messages'>1.9) Configure messages.</h5>
 <p>When players hit or destroy targets, messages are sent.
 Various methods exist to configure:</p>
 
@@ -136,9 +117,7 @@ Various methods exist to configure:</p>
 <li>Which messages are sent upon the event.</li>
 <li>Which audience receives the message.</li>
 </ul>
-
-<h5 id="1-9-1-configure-the-messages-sent-upon-the-event">1.9.1) Configure the messages sent upon the event.</h5>
-
+<h5 id='1-9-1-configure-the-messages-sent-upon-the-event'>1.9.1) Configure the messages sent upon the event.</h5>
 <p>Use the following methods to configure when to send messages. By default, all messages are sent.</p>
 
 <ul>
@@ -147,18 +126,14 @@ Various methods exist to configure:</p>
 <li>SCORING-SetMessagesAddon: Configure to send messages for additional score, after a target has been destroyed.</li>
 <li><a href="#scoring-setmessageszone-onoff">SCORING:SetMessagesZone()</a>: Configure to send messages for additional score, after a target has been destroyed within a given zone.</li>
 </ul>
-
-<h5 id="1-9-2-configure-the-audience-of-the-messages">1.9.2) Configure the audience of the messages.</h5>
-
+<h5 id='1-9-2-configure-the-audience-of-the-messages'>1.9.2) Configure the audience of the messages.</h5>
 <p>Use the following methods to configure the audience of the messages. By default, the messages are sent to all players in the mission.</p>
 
 <ul>
 <li><a href="#scoring-setmessagestoall">SCORING:SetMessagesToAll()</a>: Configure to send messages to all players.</li>
 <li><a href="#scoring-setmessagestocoalition">SCORING:SetMessagesToCoalition()</a>: Configure to send messages to only those players within the same coalition as the player.</li>
 </ul>
-
-<h5 id="api-change-history"><strong>API CHANGE HISTORY</strong></h5>
-
+<h5 id='strong-api-change-history-strong-10'><strong>API CHANGE HISTORY</strong></h5>
 <p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
 
 <ul>
@@ -169,25 +144,17 @@ Various methods exist to configure:</p>
 <p>Hereby the change log:</p>
 
 <p>2017-02-26: Initial class and API.</p>
-
-<h5 id="authors-and-contributions"><strong>AUTHORS and CONTRIBUTIONS</strong></h5>
-
-<h5 id="contributions">Contributions:</h5>
-
+<h5 id='strong-authors-and-contributions-strong-9'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><h5 id='contributions-15'>Contributions:</h5>
 <ul>
 <li><strong>Wingthor (TAW)</strong>: Testing &amp; Advice.</li>
 <li><strong>Dutch-Baron (TAW)</strong>: Testing &amp; Advice.</li>
 <li>**<a href="http://forums.eagle.ru/member.php?u=3829">Whisper</a>: Testing and Advice.</li>
 </ul>
-
-<h5 id="authors">Authors:</h5>
-
+<h5 id='authors-13'>Authors:</h5>
 <ul>
 <li><strong>FlightControl</strong>: Concept, Design &amp; Programming.</li>
 </ul>
-
-<h2 id="scoring-class">SCORING Class</h2>
-
+<h2 id='scoring-class'>SCORING Class</h2>
 <pre>
 Inheritance : The SCORING Class inherits from the following parents :
 BASE
@@ -199,9 +166,7 @@ BASE
 <ul>
 <li>Players A : collection of the current players that have joined the game.</li>
 </ul>
-
-<h3 id="scoring-new-gamename">SCORING:New(GameName)</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new scoring object for the mission Gori Valley.</span>
+<h3 id='scoring-new-gamename'>SCORING:New(GameName)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new scoring object for the mission Gori Valley.</span>
 <span class="n">ScoringObject</span> <span class="o">=</span> <span class="n">SCORING</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Gori Valley"</span> <span class="p">)</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -218,9 +183,17 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
+<h3 id='scoring-setscaledestroyscore-scale'>SCORING:SetScaleDestroyScore(Scale)</h3>
+<h4> Parameters </h4>
 
-<h3 id="scoring-setscaledestroyscore-scale">SCORING:SetScaleDestroyScore(Scale)</h3>
+<ul>
+<li><a href="#scoring-class">SCORING</a>
+self</li>
+<li><u>Number</u> Scale : The scale of the score given.</li>
+</ul>
 
+<h4> Returns </h4>
+<h3 id='scoring-setscaledestroypenalty-scale'>SCORING:SetScaleDestroyPenalty(Scale)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -231,25 +204,11 @@ self</li>
 
 <h4> Returns </h4>
 
-<h3 id="scoring-setscaledestroypenalty-scale">SCORING:SetScaleDestroyPenalty(Scale)</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#scoring-class">SCORING</a>
-self</li>
-<li><u>Number</u> Scale : The scale of the score given.</li>
-</ul>
-
-<h4> Returns </h4>
-
 <ul>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-addunitscore-scoreunit-score">SCORING:AddUnitScore(ScoreUnit, Score)</h3>
-
+<h3 id='scoring-addunitscore-scoreunit-score'>SCORING:AddUnitScore(ScoreUnit, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -265,9 +224,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-removeunitscore-scoreunit">SCORING:RemoveUnitScore(ScoreUnit)</h3>
-
+<h3 id='scoring-removeunitscore-scoreunit'>SCORING:RemoveUnitScore(ScoreUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -282,9 +239,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-addstaticscore-scorestatic-score">SCORING:AddStaticScore(ScoreStatic, Score)</h3>
-
+<h3 id='scoring-addstaticscore-scorestatic-score'>SCORING:AddStaticScore(ScoreStatic, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -300,9 +255,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-removestaticscore-scorestatic">SCORING:RemoveStaticScore(ScoreStatic)</h3>
-
+<h3 id='scoring-removestaticscore-scorestatic'>SCORING:RemoveStaticScore(ScoreStatic)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -317,9 +270,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-addscoregroup-scoregroup-score">SCORING:AddScoreGroup(ScoreGroup, Score)</h3>
-
+<h3 id='scoring-addscoregroup-scoregroup-score'>SCORING:AddScoreGroup(ScoreGroup, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -335,9 +286,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-addzonescore-scorezone-score">SCORING:AddZoneScore(ScoreZone, Score)</h3>
-
+<h3 id='scoring-addzonescore-scorezone-score'>SCORING:AddZoneScore(ScoreZone, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -353,9 +302,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-removezonescore-scorezone">SCORING:RemoveZoneScore(ScoreZone)</h3>
-
+<h3 id='scoring-removezonescore-scorezone'>SCORING:RemoveZoneScore(ScoreZone)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -370,9 +317,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-setmessageshit-onoff">SCORING:SetMessagesHit(OnOff)</h3>
-
+<h3 id='scoring-setmessageshit-onoff'>SCORING:SetMessagesHit(OnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -387,9 +332,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-ifmessageshit">SCORING:IfMessagesHit()</h3>
-
+<h3 id='scoring-ifmessageshit'>SCORING:IfMessagesHit()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -402,9 +345,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="scoring-setmessagesdestroy-onoff">SCORING:SetMessagesDestroy(OnOff)</h3>
-
+<h3 id='scoring-setmessagesdestroy-onoff'>SCORING:SetMessagesDestroy(OnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -419,9 +360,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-ifmessagesdestroy">SCORING:IfMessagesDestroy()</h3>
-
+<h3 id='scoring-ifmessagesdestroy'>SCORING:IfMessagesDestroy()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -434,9 +373,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="scoring-setmessagesscore-onoff">SCORING:SetMessagesScore(OnOff)</h3>
-
+<h3 id='scoring-setmessagesscore-onoff'>SCORING:SetMessagesScore(OnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -451,9 +388,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-ifmessagesscore">SCORING:IfMessagesScore()</h3>
-
+<h3 id='scoring-ifmessagesscore'>SCORING:IfMessagesScore()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -466,9 +401,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="scoring-setmessageszone-onoff">SCORING:SetMessagesZone(OnOff)</h3>
-
+<h3 id='scoring-setmessageszone-onoff'>SCORING:SetMessagesZone(OnOff)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -483,9 +416,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-ifmessageszone">SCORING:IfMessagesZone()</h3>
-
+<h3 id='scoring-ifmessageszone'>SCORING:IfMessagesZone()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -498,9 +429,7 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
-
-<h3 id="scoring-setmessagestoall">SCORING:SetMessagesToAll()</h3>
-
+<h3 id='scoring-setmessagestoall'>SCORING:SetMessagesToAll()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -514,40 +443,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-ifmessagestoall">SCORING:IfMessagesToAll()</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#scoring-class">SCORING</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u> self</li>
-</ul>
-
-<h3 id="scoring-setmessagestocoalition">SCORING:SetMessagesToCoalition()</h3>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#scoring-class">SCORING</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#scoring-class">SCORING</a>
-self</li>
-</ul>
-
-<h3 id="scoring-ifmessagestocoalition">SCORING:IfMessagesToCoalition()</h3>
-
+<h3 id='scoring-ifmessagestoall'>SCORING:IfMessagesToAll()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -560,9 +456,34 @@ self</li>
 <ul>
 <li><u>Boolean</u> self</li>
 </ul>
+<h3 id='scoring-setmessagestocoalition'>SCORING:SetMessagesToCoalition()</h3>
+<h4> Parameters </h4>
 
-<h3 id="scoring-setfratricide-fratricide">SCORING:SetFratricide(Fratricide)</h3>
+<ul>
+<li><a href="#scoring-class">SCORING</a>
+self</li>
+</ul>
 
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#scoring-class">SCORING</a>
+self</li>
+</ul>
+<h3 id='scoring-ifmessagestocoalition'>SCORING:IfMessagesToCoalition()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#scoring-class">SCORING</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> self</li>
+</ul>
+<h3 id='scoring-setfratricide-fratricide'>SCORING:SetFratricide(Fratricide)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -577,9 +498,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-setcoalitionchangepenalty-coalitionchangepenalty">SCORING:SetCoalitionChangePenalty(CoalitionChangePenalty)</h3>
-
+<h3 id='scoring-setcoalitionchangepenalty-coalitionchangepenalty'>SCORING:SetCoalitionChangePenalty(CoalitionChangePenalty)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -594,9 +513,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-addgoalscore-playerunit-goaltag-text-score">SCORING:AddGoalScore(PlayerUnit, GoalTag, Text, Score)</h3>
-
+<h3 id='scoring-addgoalscore-playerunit-goaltag-text-score'>SCORING:AddGoalScore(PlayerUnit, GoalTag, Text, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -609,9 +526,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-oneventplayerenterunit-event">SCORING:OnEventPlayerEnterUnit(Event)</h3>
-
+<h3 id='scoring-oneventplayerenterunit-event'>SCORING:OnEventPlayerEnterUnit(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -621,9 +536,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-oneventplayerleaveunit-event">SCORING:OnEventPlayerLeaveUnit(Event)</h3>
-
+<h3 id='scoring-oneventplayerleaveunit-event'>SCORING:OnEventPlayerLeaveUnit(Event)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -633,9 +546,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-reportdetailedplayerhits-playername">SCORING:ReportDetailedPlayerHits(PlayerName)</h3>
-
+<h3 id='scoring-reportdetailedplayerhits-playername'>SCORING:ReportDetailedPlayerHits(PlayerName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -649,9 +560,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report.</li>
 </ul>
-
-<h3 id="scoring-reportdetailedplayerdestroys-playername">SCORING:ReportDetailedPlayerDestroys(PlayerName)</h3>
-
+<h3 id='scoring-reportdetailedplayerdestroys-playername'>SCORING:ReportDetailedPlayerDestroys(PlayerName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -665,9 +574,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report.</li>
 </ul>
-
-<h3 id="scoring-reportdetailedplayercoalitionchanges-playername">SCORING:ReportDetailedPlayerCoalitionChanges(PlayerName)</h3>
-
+<h3 id='scoring-reportdetailedplayercoalitionchanges-playername'>SCORING:ReportDetailedPlayerCoalitionChanges(PlayerName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -681,9 +588,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report.</li>
 </ul>
-
-<h3 id="scoring-reportdetailedplayergoals-playername">SCORING:ReportDetailedPlayerGoals(PlayerName)</h3>
-
+<h3 id='scoring-reportdetailedplayergoals-playername'>SCORING:ReportDetailedPlayerGoals(PlayerName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -697,9 +602,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report.</li>
 </ul>
-
-<h3 id="scoring-reportdetailedplayermissions-playername">SCORING:ReportDetailedPlayerMissions(PlayerName)</h3>
-
+<h3 id='scoring-reportdetailedplayermissions-playername'>SCORING:ReportDetailedPlayerMissions(PlayerName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -713,9 +616,7 @@ self</li>
 <ul>
 <li><u>String</u> The : report.</li>
 </ul>
-
-<h3 id="scoring-reportscoregroupsummary-playergroup">SCORING:ReportScoreGroupSummary(PlayerGroup)</h3>
-
+<h3 id='scoring-reportscoregroupsummary-playergroup'>SCORING:ReportScoreGroupSummary(PlayerGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -725,9 +626,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-reportscoregroupdetailed-playergroup">SCORING:ReportScoreGroupDetailed(PlayerGroup)</h3>
-
+<h3 id='scoring-reportscoregroupdetailed-playergroup'>SCORING:ReportScoreGroupDetailed(PlayerGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -737,9 +636,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-reportscoreallsummary-playergroup">SCORING:ReportScoreAllSummary(PlayerGroup)</h3>
-
+<h3 id='scoring-reportscoreallsummary-playergroup'>SCORING:ReportScoreAllSummary(PlayerGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -749,9 +646,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="scoring-opencsv-scoringcsv">SCORING:OpenCSV(ScoringCSV)</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Open a new CSV file to log the scores of the game Gori Valley. Let the name of the CSV file begin with "Player Scores".</span>
+<h3 id='scoring-opencsv-scoringcsv'>SCORING:OpenCSV(ScoringCSV)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Open a new CSV file to log the scores of the game Gori Valley. Let the name of the CSV file begin with "Player Scores".</span>
 <span class="n">ScoringObject</span> <span class="o">=</span> <span class="n">SCORING</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"Gori Valley"</span> <span class="p">)</span>
 <span class="n">ScoringObject</span><span class="p">:</span><span class="n">OpenCSV</span><span class="p">(</span> <span class="s2">"Player Scores"</span> <span class="p">)</span>
 </code></pre>
@@ -769,9 +664,7 @@ self</li>
 <li><a href="#scoring-class">SCORING</a>
 self</li>
 </ul>
-
-<h3 id="scoring-scorecsv-playername-targetplayername-scoretype-scoretimes-scoreamount-playerunitname-playerunitcoalition-playerunitcategory-playerunittype-targetunitname-targetunitcoalition-targetunitcategory-targetunittype">SCORING:ScoreCSV(PlayerName, TargetPlayerName, ScoreType, ScoreTimes, ScoreAmount, PlayerUnitName, PlayerUnitCoalition, PlayerUnitCategory, PlayerUnitType, TargetUnitName, TargetUnitCoalition, TargetUnitCategory, TargetUnitType)</h3>
-
+<h3 id='scoring-scorecsv-playername-targetplayername-scoretype-scoretimes-scoreamount-playerunitname-playerunitcoalition-playerunitcategory-playerunittype-targetunitname-targetunitcoalition-targetunitcategory-targetunittype'>SCORING:ScoreCSV(PlayerName, TargetPlayerName, ScoreType, ScoreTimes, ScoreAmount, PlayerUnitName, PlayerUnitCoalition, PlayerUnitCategory, PlayerUnitType, TargetUnitName, TargetUnitCoalition, TargetUnitCategory, TargetUnitType)</h3>
 <h4> Parameters </h4>
 
 <ul>

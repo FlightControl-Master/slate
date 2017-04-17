@@ -1,33 +1,24 @@
-<h1 id="functional-movement-module">Functional.Movement Module</h1>
-
+<h1 id='functional-movement-module'>Functional.Movement Module</h1>
 <p>Limit the simultaneous movement of Groups within a running Mission.
 This module is defined to improve the performance in missions, and to bring additional realism for GROUND vehicles.
 Performance: If in a DCSRTE there are a lot of moving GROUND units, then in a multi player mission, this WILL create lag if
 the main DCS execution core of your CPU is fully utilized. So, this class will limit the amount of simultaneous moving GROUND units
 on defined intervals (currently every minute).</p>
-
-<h2 id="movement-class">MOVEMENT Class</h2>
-
+<h2 id='movement-class'>MOVEMENT Class</h2>
 <pre>
 Inheritance : The MOVEMENT Class inherits from the following parents :
 BASE
     `-- MOVEMENT
 </pre>
-
-<h3 id="movement-schedulestart">MOVEMENT.ScheduleStart(()</h3>
-
+<h3 id='movement-schedulestart'>MOVEMENT.ScheduleStart(()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-
-<h3 id="movement-schedulestop">MOVEMENT.ScheduleStop(()</h3>
-
+<h3 id='movement-schedulestop'>MOVEMENT.ScheduleStop(()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-
-<h3 id="movement-oneventbirth-self">MOVEMENT:OnEventBirth(self)</h3>
-
+<h3 id='movement-oneventbirth-self'>MOVEMENT:OnEventBirth(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -37,9 +28,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="movement-ondeadorcrash">MOVEMENT.OnDeadOrCrash(()</h3>
-
+<h3 id='movement-ondeadorcrash'>MOVEMENT.OnDeadOrCrash(()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>

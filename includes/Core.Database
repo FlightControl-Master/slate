@@ -1,9 +1,6 @@
-<h1 id="core-database-module">Core.Database Module</h1>
-
+<h1 id='core-database-module'>Core.Database Module</h1>
 <p>This module contains the DATABASE class, managing the database of mission objects.</p>
-
-<h5 id="1-database-class-extends-base">1) <a href="#database-class">DATABASE</a> class, extends <a href="#base-class">BASE</a></h5>
-
+<h5 id='1-a-href-database-class-database-a-class-extends-a-href-base-class-base-a'>1) <a href="#database-class">DATABASE</a> class, extends <a href="#base-class">BASE</a></h5>
 <p>Mission designers can use the DATABASE class to refer to:</p>
 
 <ul>
@@ -19,9 +16,7 @@
 
 <p>Moose will automatically create one instance of the DATABASE class into the <strong>global</strong> object _DATABASE.
 Moose refers to _DATABASE within the framework extensively, but you can also refer to the _DATABASE object within your missions if required.</p>
-
-<h5 id="1-1-database-iterators">1.1) DATABASE iterators</h5>
-
+<h5 id='1-1-database-iterators'>1.1) DATABASE iterators</h5>
 <p>You can iterate the database with the available iterator methods.
 The iterator methods will walk the DATABASE set, and call for each element within the set a function that you provide.
 The following iterator methods are currently available within the DATABASE:</p>
@@ -34,17 +29,13 @@ The following iterator methods are currently available within the DATABASE:</p>
 <li><a href="#database-foreachclient-iteratorfunction">DATABASE:ForEachClient()</a>: Calls a function for each <a href="#client-module">CLIENT</a> it finds within the DATABASE.</li>
 <li>DATABASE-ForEachClientAlive: Calls a function for each alive <a href="#client-module">CLIENT</a> it finds within the DATABASE.</li>
 </ul>
-
-<h2 id="database-class">DATABASE Class</h2>
-
+<h2 id='database-class'>DATABASE Class</h2>
 <pre>
 Inheritance : The DATABASE Class inherits from the following parents :
 BASE
     `-- DATABASE
 </pre>
-
-<h3 id="database-new">DATABASE:New()</h3>
-<pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new DATABASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.</span>
+<h3 id='database-new'>DATABASE:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new DATABASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">DATABASE</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
 <h4> Parameters </h4>
@@ -60,9 +51,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-findunit-unitname">DATABASE:FindUnit(UnitName)</h3>
-
+<h3 id='database-findunit-unitname'>DATABASE:FindUnit(UnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -76,9 +65,7 @@ self</li>
 <ul>
 <li><a href="#unit-class">UNIT</a> The : found Unit.</li>
 </ul>
-
-<h3 id="database-addunit">DATABASE:AddUnit()</h3>
-
+<h3 id='database-addunit'>DATABASE:AddUnit()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -87,9 +74,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-deleteunit">DATABASE:DeleteUnit()</h3>
-
+<h3 id='database-deleteunit'>DATABASE:DeleteUnit()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -98,9 +83,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-addstatic">DATABASE:AddStatic()</h3>
-
+<h3 id='database-addstatic'>DATABASE:AddStatic()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -109,9 +92,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-deletestatic">DATABASE:DeleteStatic()</h3>
-
+<h3 id='database-deletestatic'>DATABASE:DeleteStatic()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -120,9 +101,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-findstatic-staticname">DATABASE:FindStatic(StaticName)</h3>
-
+<h3 id='database-findstatic-staticname'>DATABASE:FindStatic(StaticName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -136,9 +115,7 @@ self</li>
 <ul>
 <li><a href="#static-class">STATIC</a> The : found STATIC.</li>
 </ul>
-
-<h3 id="database-addairbase">DATABASE:AddAirbase()</h3>
-
+<h3 id='database-addairbase'>DATABASE:AddAirbase()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -147,9 +124,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-deleteairbase">DATABASE:DeleteAirbase()</h3>
-
+<h3 id='database-deleteairbase'>DATABASE:DeleteAirbase()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -158,9 +133,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-findairbase-airbasename">DATABASE:FindAirbase(AirbaseName)</h3>
-
+<h3 id='database-findairbase-airbasename'>DATABASE:FindAirbase(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -174,9 +147,7 @@ self</li>
 <ul>
 <li><a href="#airbase-class">AIRBASE</a> The : found AIRBASE.</li>
 </ul>
-
-<h3 id="database-findclient-clientname">DATABASE:FindClient(ClientName)</h3>
-
+<h3 id='database-findclient-clientname'>DATABASE:FindClient(ClientName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -190,9 +161,7 @@ self</li>
 <ul>
 <li><a href="#client-class">CLIENT</a> The : found CLIENT.</li>
 </ul>
-
-<h3 id="database-addclient">DATABASE:AddClient()</h3>
-
+<h3 id='database-addclient'>DATABASE:AddClient()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -201,9 +170,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-findgroup-groupname">DATABASE:FindGroup(GroupName)</h3>
-
+<h3 id='database-findgroup-groupname'>DATABASE:FindGroup(GroupName)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -217,9 +184,7 @@ self</li>
 <ul>
 <li><a href="#group-class">GROUP</a> The : found GROUP.</li>
 </ul>
-
-<h3 id="database-addgroup">DATABASE:AddGroup()</h3>
-
+<h3 id='database-addgroup'>DATABASE:AddGroup()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -228,9 +193,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-addplayer">DATABASE:AddPlayer()</h3>
-
+<h3 id='database-addplayer'>DATABASE:AddPlayer()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -239,9 +202,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-deleteplayer">DATABASE:DeletePlayer()</h3>
-
+<h3 id='database-deleteplayer'>DATABASE:DeletePlayer()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -250,9 +211,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-spawn-spawntemplate">DATABASE:Spawn(SpawnTemplate)</h3>
-
+<h3 id='database-spawn-spawntemplate'>DATABASE:Spawn(SpawnTemplate)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -267,21 +226,15 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-setstatusgroup">DATABASE.SetStatusGroup(()</h3>
-
+<h3 id='database-setstatusgroup'>DATABASE.SetStatusGroup(()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-
-<h3 id="database-getstatusgroup">DATABASE.GetStatusGroup(()</h3>
-
+<h3 id='database-getstatusgroup'>DATABASE.GetStatusGroup(()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-
-<h3 id="database-getstaticunittemplate">DATABASE:GetStaticUnitTemplate()</h3>
-
+<h3 id='database-getstaticunittemplate'>DATABASE:GetStaticUnitTemplate()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -290,9 +243,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-
-<h3 id="database-foreach-iteratorfunction">DATABASE:ForEach(IteratorFunction)</h3>
-
+<h3 id='database-foreach-iteratorfunction'>DATABASE:ForEach(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -307,9 +258,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-foreachunit-iteratorfunction">DATABASE:ForEachUnit(IteratorFunction)</h3>
-
+<h3 id='database-foreachunit-iteratorfunction'>DATABASE:ForEachUnit(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -324,9 +273,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-foreachgroup-iteratorfunction">DATABASE:ForEachGroup(IteratorFunction)</h3>
-
+<h3 id='database-foreachgroup-iteratorfunction'>DATABASE:ForEachGroup(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -341,9 +288,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-foreachplayer-iteratorfunction">DATABASE:ForEachPlayer(IteratorFunction)</h3>
-
+<h3 id='database-foreachplayer-iteratorfunction'>DATABASE:ForEachPlayer(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -358,9 +303,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-foreachplayerjoined-iteratorfunction">DATABASE:ForEachPlayerJoined(IteratorFunction)</h3>
-
+<h3 id='database-foreachplayerjoined-iteratorfunction'>DATABASE:ForEachPlayerJoined(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -375,9 +318,7 @@ self</li>
 <li><a href="#database-class">DATABASE</a>
 self</li>
 </ul>
-
-<h3 id="database-foreachclient-iteratorfunction">DATABASE:ForEachClient(IteratorFunction)</h3>
-
+<h3 id='database-foreachclient-iteratorfunction'>DATABASE:ForEachClient(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
