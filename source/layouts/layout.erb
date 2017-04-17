@@ -56,7 +56,7 @@ under the License.
 		
 		//This does hash-click tracking (inspired by http://stackoverflow.com/a/4813223)
 		$(document).ready(function() {
-			$('.tocify-item a').on('click', function(){
+			$('toc-h1 toc-link').on('click', function(){
 				ga('send', 'pageview', {'page': location.pathname + location.search  + location.hash});
 				// ga('GreyEcho.send', 'pageview', {'page': location.pathname + location.search  + location.hash});
 			});
