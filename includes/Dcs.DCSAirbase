@@ -24,7 +24,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Airbase self</li>
+<li>#Airbase </li>
 </ul>
 <span id=getdescbyname></span><h3 id='getdescbyname-'>getDescByName()</h3>
 <p>Returns airbase descriptor by type name. If no descriptor is found the function will return nil.</p>
@@ -38,7 +38,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Airbase.Desc self</li>
+<li>#Airbase.Desc </li>
 </ul>
 <span id=airbase-getunit></span><h3 id='airbase-getunit-'>Airbase:getUnit()</h3>
 <p>Returns Unit that is corresponded to the airbase. Works only for ships.</p>
@@ -52,7 +52,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#unit-class">Unit</a> self</li>
+<li><a href="#unit-class-">Unit</a> </li>
 </ul>
 <span id=airbase-getid></span><h3 id='airbase-getid-'>Airbase:getID()</h3>
 <p>Returns identifier of the airbase.</p>
@@ -66,7 +66,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Airbase.ID self</li>
+<li>#Airbase.ID </li>
 </ul>
 <span id=airbase-getcallsign></span><h3 id='airbase-getcallsign-'>Airbase:getCallsign()</h3>
 <p>Returns the airbase&#39;s callsign - the localized string.</p>
@@ -80,7 +80,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=airbase-getdesc></span><h3 id='airbase-getdesc-'>Airbase:getDesc()</h3>
 <p>Returns descriptor of the airbase.</p>
@@ -94,7 +94,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Airbase.Desc self</li>
+<li>#Airbase.Desc </li>
 </ul>
 <span id=airbase-category-class></span><h2 id='airbase-category-class-'>Airbase.Category Class</h2>
 <pre>

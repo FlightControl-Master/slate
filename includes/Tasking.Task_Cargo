@@ -1,5 +1,5 @@
 <span id=tasking-task_cargo-module></span><h1 id='tasking-task_cargo-module-'>Tasking.Task_Cargo Module</h1>
-<p><strong>Tasking (Release 2.1)</strong> -- The TASK_CARGO models tasks for players to transport <a href="#cargo-module">Cargo</a>.</p>
+<p><strong>Tasking (Release 2.1)</strong> -- The TASK_CARGO models tasks for players to transport <a href="#cargo-module-">Cargo</a>.</p>
 
 <p><img src="/includes/Pictures/TASK_CARGO/Dia1.JPG" alt="Banner Image" /></p>
 
@@ -12,7 +12,7 @@ Cargo can be transported, picked-up, deployed and sling-loaded from and to other
 <p>The following classes are important to consider:</p>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>: Defines a task for a human player to transport a set of cargo between various zones.</li>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>: Defines a task for a human player to transport a set of cargo between various zones.</li>
 </ul>
 
 <p>==</p>
@@ -44,26 +44,25 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
 <li><u>String</u> TaskName : The name of the Task.</li>
-<li><a href="#set_cargo-class">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
+<li><a href="#set_cargo-class-">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
 <li><u>String</u> TaskType : The type of Cargo task.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-getplannedmenutext></span><h3 id='task_cargo-getplannedmenutext-'>TASK_CARGO:GetPlannedMenuText()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 </ul>
 
@@ -72,172 +71,164 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#set_cargo-class">SET_CARGO</a> The : Cargo Set.</li>
+<li><a href="#set_cargo-class-">SET_CARGO</a>  The Cargo Set.</li>
 </ul>
 <span id=task_cargo-getdeployzones></span><h3 id='task_cargo-getdeployzones-'>TASK_CARGO:GetDeployZones()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>#list<Core.Zone#ZONE_BASE> The : Deployment Zones.</li>
+<li>#list<Core.Zone#ZONE_BASE>  The Deployment Zones.</li>
 </ul>
 <span id=task_cargo-setcargopickup-cargo-taskunit></span><h3 id='task_cargo-setcargopickup-cargo-taskunit-'>TASK_CARGO:SetCargoPickup(Cargo, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#ai_cargo-class">AI_CARGO</a> Cargo : The cargo.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#ai_cargo-class-">AI_CARGO</a> Cargo : The cargo.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setdeployzone-deployzone-taskunit></span><h3 id='task_cargo-setdeployzone-deployzone-taskunit-'>TASK_CARGO:SetDeployZone(DeployZone, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#zone-class">ZONE</a> DeployZone</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-adddeployzone-deployzone-taskunit></span><h3 id='task_cargo-adddeployzone-deployzone-taskunit-'>TASK_CARGO:AddDeployZone(DeployZone, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#zone-class">ZONE</a> DeployZone</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-removedeployzone-deployzone-taskunit></span><h3 id='task_cargo-removedeployzone-deployzone-taskunit-'>TASK_CARGO:RemoveDeployZone(DeployZone, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#zone-class">ZONE</a> DeployZone</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setdeployzones-deployzones-taskunit></span><h3 id='task_cargo-setdeployzones-deployzones-taskunit-'>TASK_CARGO:SetDeployZones(DeployZones, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 <li>@list<Core.Zone#ZONE> DeployZones</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-gettargetzone-taskunit></span><h3 id='task_cargo-gettargetzone-taskunit-'>TASK_CARGO:GetTargetZone(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#zone_base-class">ZONE_BASE</a> The : Zone object where the Target is located on the map.</li>
+<li><a href="#zone_base-class-">ZONE_BASE</a>  The Zone object where the Target is located on the map.</li>
 </ul>
 <span id=task_cargo-setscoreondestroy-text-score-taskunit></span><h3 id='task_cargo-setscoreondestroy-text-score-taskunit-'>TASK_CARGO:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 <li><u>String</u> Text : The text to display to the player, when the target has been destroyed.</li>
 <li><u>Number</u> Score : The score in points.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setscoreonsuccess-text-score-taskunit></span><h3 id='task_cargo-setscoreonsuccess-text-score-taskunit-'>TASK_CARGO:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 <li><u>String</u> Text : The text to display to the player, when all targets hav been destroyed.</li>
 <li><u>Number</u> Score : The score in points.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setpenaltyonfailed-text-penalty-taskunit></span><h3 id='task_cargo-setpenaltyonfailed-text-penalty-taskunit-'>TASK_CARGO:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
+<li><a href="#task_cargo-class-">TASK_CARGO</a>
 self</li>
 <li><u>String</u> Text : The text to display to the player, when the A2G attack has failed.</li>
 <li><u>Number</u> Penalty : The penalty in points.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo-class">TASK_CARGO</a>
-self</li>
+<li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo_transport-class></span><h2 id='task_cargo_transport-class-'>TASK_CARGO_TRANSPORT Class</h2>
 <pre>
@@ -253,19 +244,18 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroup : The set of groups for which the Task can be assigned.</li>
 <li><u>String</u> TaskName : The name of the Task.</li>
-<li><a href="#set_cargo-class">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
+<li><a href="#set_cargo-class-">SET_CARGO</a> SetCargo : The scope of the cargo to be transported.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
-self</li>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a></li>
 </ul>
 <span id=task_cargo_transport-onbeforecargopickedup-from-event-to-taskunit-cargo></span><h3 id='task_cargo_transport-onbeforecargopickedup-from-event-to-taskunit-cargo-'>TASK_CARGO_TRANSPORT:OnBeforeCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
 <p>OnBefore Transition Handler for Event CargoPickedUp.</p>
@@ -273,19 +263,19 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=task_cargo_transport-onaftercargopickedup-from-event-to-taskunit-cargo></span><h3 id='task_cargo_transport-onaftercargopickedup-from-event-to-taskunit-cargo-'>TASK_CARGO_TRANSPORT:OnAfterCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
 <p>OnAfter Transition Handler for Event CargoPickedUp.</p>
@@ -293,13 +283,13 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -309,10 +299,10 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that PickedUp the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -322,20 +312,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
-<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=task_cargo_transport-onaftercargodeployed-from-event-to-taskunit-cargo-deployzone></span><h3 id='task_cargo_transport-onaftercargodeployed-from-event-to-taskunit-cargo-deployzone-'>TASK_CARGO_TRANSPORT:OnAfterCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)</h3>
 <p>OnAfter Transition Handler for Event CargoDeployed.</p>
@@ -343,14 +333,14 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
-<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -360,11 +350,11 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
-<li><a href="#cargo-class">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
-<li><a href="#zone-class">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit : The Unit (Client) that Deployed the cargo. You can use this to retrieve the PlayerName etc.</li>
+<li><a href="#cargo-class-">CARGO</a> Cargo : The Cargo that got PickedUp by the TaskUnit. You can use this to check Cargo Status.</li>
+<li><a href="#zone-class-">ZONE</a> DeployZone : The zone where the Cargo got Deployed or UnBoarded.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -372,12 +362,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task_cargo_transport-class">TASK_CARGO_TRANSPORT</a>
+<li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>

@@ -6,8 +6,8 @@
 <p>Cargo can be of various forms, always are composed out of ONE object ( one unit or one static or one slingload crate ):</p>
 
 <ul>
-<li>CARGO_UNIT, represented by a <a href="#unit-module">Unit</a> in a singleton <a href="#group-module">Group</a>: Cargo can be represented by a Unit in a Group. a CARGO_UNIT is representable...</li>
-<li>CARGO_GROUP, represented by a <a href="#group-module">Group</a>. A CARGO_GROUP is reportable...</li>
+<li>CARGO_UNIT, represented by a <a href="#unit-module-">Unit</a> in a singleton <a href="#group-module-">Group</a>: Cargo can be represented by a Unit in a Group. a CARGO_UNIT is representable...</li>
+<li>CARGO_GROUP, represented by a <a href="#group-module-">Group</a>. A CARGO_GROUP is reportable...</li>
 </ul>
 <span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-cargo-demo-missions-source-code-a></span><h5 id='a-href-cargo-demo-missions-source-code-a-'><a href="#">CARGO Demo Missions source code</a></h5><span id=a-href-cargo-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-cargo-demo-missions-only-for-beta-testers-a-'><a href="#">CARGO Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spawnstatic-youtube-channel-a></span><h5 id='a-href-spawnstatic-youtube-channel-a-'><a href="#">SPAWNSTATIC YouTube Channel</a></h5>
 <p>This module is still under construction, but is described above works already, and will keep working ...</p>
@@ -32,7 +32,7 @@ All derived classes from CARGO follow the same state machine, expose the same ca
 <li><a href="#cargo-load-tocarrier">CARGO:Load()</a> ToCarrier ): Loads the cargo into a carrier, regardless of its position.</li>
 <li><a href="#cargo-unboard-topointvec2">CARGO:UnBoard()</a> ToPointVec2 ): UnBoard the cargo from a carrier. This will trigger a movement of the cargo to the option ToPointVec2.</li>
 <li><a href="#cargo-unload-topointvec2">CARGO:UnLoad()</a> ToPointVec2 ): UnLoads the cargo from a carrier.</li>
-<li>CARGO-Dead Controllable ): The cargo is dead. The cargo process will be ended.</li>
+<li>CARGO-Dead- Controllable ): The cargo is dead. The cargo process will be ended.</li>
 </ul>
 <span id=cargo-states></span><h5 id='cargo-states-'>CARGO States:</h5>
 <ul>
@@ -65,8 +65,8 @@ These state transition methods need to provide a return value, which is specifie
 <li><u>String</u> Name : A string defining the name of the cargo. The name is the unique identifier of the cargo.</li>
 <li><u>Number</u> Weight : A number defining the weight of the cargo. The weight is expressed in kg.</li>
 <li><u>Number</u> NearRadius : (optional) A number defining the radius in meters when the cargo is near to a Carrier, so that it can be loaded.</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> CargoObject : The alive DCS object representing the cargo. This value can be nil, meaning, that the cargo is not represented anywhere...</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> CargoCarrier : The alive DCS object carrying the cargo. This value can be nil, meaning, that the cargo is not contained anywhere...</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> CargoObject : The alive DCS object representing the cargo. This value can be nil, meaning, that the cargo is not represented anywhere...</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> CargoCarrier : The alive DCS object carrying the cargo. This value can be nil, meaning, that the cargo is not contained anywhere...</li>
 <li><u>Boolean</u> Slingloadable : This flag defines if the cargo can be slingloaded.</li>
 <li><u>Boolean</u> Moveable : This flag defines if the cargo is moveable.</li>
 <li><u>Boolean</u> Representable : This flag defines if the cargo can be represented by a DCS Unit.</li>
@@ -79,9 +79,9 @@ The cargo must be in the <strong>UnLoaded</strong> state.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ToCarrier : The Carrier that will hold the cargo.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ToCarrier : The Carrier that will hold the cargo.</li>
 <li><u>Number</u> NearRadius : The radius when the cargo will board the Carrier (to avoid collision).</li>
 </ul>
 
@@ -93,9 +93,9 @@ The cargo must be in the <strong>Loaded</strong> state.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2 : (optional) @{Point#POINT_VEC2) to where the cargo should run after onboarding. If not provided, the cargo will run to 60 meters behind the Carrier location.</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2 : (optional) @{Point#POINT_VEC2) to where the cargo should run after onboarding. If not provided, the cargo will run to 60 meters behind the Carrier location.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -106,9 +106,9 @@ The cargo must be in the <strong>UnLoaded</strong> state.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ToCarrier : The Carrier that will hold the cargo.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ToCarrier : The Carrier that will hold the cargo.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -119,9 +119,9 @@ The cargo must be in the <strong>Loaded</strong> state.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2 : (optional) @{Point#POINT_VEC2) to where the cargo will be placed after unloading. If not provided, the cargo will be placed 60 meters behind the Carrier location.</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2 : (optional) @{Point#POINT_VEC2) to where the cargo will be placed after unloading. If not provided, the cargo will be placed 60 meters behind the Carrier location.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -129,23 +129,23 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo-onenterunloaded-controllable></span><h3 id='cargo-onenterunloaded-controllable-'>CARGO:OnEnterUnLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
@@ -153,23 +153,23 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo-onenterloaded-controllable></span><h3 id='cargo-onenterloaded-controllable-'>CARGO:OnEnterLoaded(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
@@ -177,23 +177,23 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo-onenterboarding-controllable-nearradius></span><h3 id='cargo-onenterboarding-controllable-nearradius-'>CARGO:OnEnterBoarding(Controllable, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 <li><u>Number</u> NearRadius : The radius when the cargo will board the Carrier (to avoid collision).</li>
 </ul>
 
@@ -202,23 +202,23 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo-onenterunboarding-controllable></span><h3 id='cargo-onenterunboarding-controllable-'>CARGO:OnEnterUnBoarding(Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 
 <h4> Returns </h4>
@@ -226,7 +226,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
@@ -237,122 +237,120 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
-self</li>
+<li><a href="#cargo-class-">CARGO</a></li>
 </ul>
 <span id=cargo-getname></span><h3 id='cargo-getname-'>CARGO:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> The : name of the Cargo.</li>
+<li><u>String</u>  The name of the Cargo.</li>
 </ul>
 <span id=cargo-gettype></span><h3 id='cargo-gettype-'>CARGO:GetType()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> The : type of the Cargo.</li>
+<li><u>String</u>  The type of the Cargo.</li>
 </ul>
 <span id=cargo-isloaded></span><h3 id='cargo-isloaded-'>CARGO:IsLoaded()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if loaded</li>
+<li><u>Boolean</u>  true if loaded</li>
 </ul>
 <span id=cargo-isunloaded></span><h3 id='cargo-isunloaded-'>CARGO:IsUnLoaded()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if unloaded</li>
+<li><u>Boolean</u>  true if unloaded</li>
 </ul>
 <span id=cargo-spawn></span><h3 id='cargo-spawn-'>CARGO:Spawn()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
-self</li>
+<li><a href="#cargo-class-">CARGO</a></li>
 </ul>
 <span id=cargo-isinzone-zone></span><h3 id='cargo-isinzone-zone-'>CARGO:IsInZone(Zone)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#zone_base-class">ZONE_BASE</a> Zone</li>
+<li><a href="#zone_base-class-">ZONE_BASE</a> Zone</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> <strong>true</strong> : if cargo is in the Zone, <strong>false</strong> if cargo is not in the Zone.</li>
+<li><u>Boolean</u>  <strong>true</strong> if cargo is in the Zone, <strong>false</strong> if cargo is not in the Zone.</li>
 </ul>
 <span id=cargo-isnear-pointvec2-nearradius></span><h3 id='cargo-isnear-pointvec2-nearradius-'>CARGO:IsNear(PointVec2, NearRadius)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> PointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> PointVec2</li>
 <li><u>Number</u> NearRadius : The radius when the cargo will board the Carrier (to avoid collision).</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo-getpointvec2></span><h3 id='cargo-getpointvec2-'>CARGO:GetPointVec2()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#point_vec2-class">POINT_VEC2</a> self</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> </li>
 </ul>
 <span id=cargo-setweight-weight></span><h3 id='cargo-setweight-weight-'>CARGO:SetWeight(Weight)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 <li><u>Number</u> Weight : The weight in kg.</li>
 </ul>
@@ -360,8 +358,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
-self</li>
+<li><a href="#cargo-class-">CARGO</a></li>
 </ul>
 <span id=cargo-cargoobjects-class></span><h2 id='cargo-cargoobjects-class-'>CARGO.CargoObjects Class</h2>
 <pre>
@@ -387,7 +384,7 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
+<li><a href="#cargo_representable-class-">CARGO_REPRESENTABLE</a>
 self</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
@@ -399,24 +396,22 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
-self</li>
+<li><a href="#cargo_representable-class-">CARGO_REPRESENTABLE</a></li>
 </ul>
 <span id=cargo_representable-routeto-topointvec2-speed></span><h3 id='cargo_representable-routeto-topointvec2-speed-'>CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
+<li><a href="#cargo_representable-class-">CARGO_REPRESENTABLE</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 <li><u>Number</u> Speed</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_representable-class">CARGO_REPRESENTABLE</a>
-self</li>
+<li><a href="#cargo_representable-class-">CARGO_REPRESENTABLE</a></li>
 </ul>
 <span id=cargo_reportable-class></span><h2 id='cargo_reportable-class-'>CARGO_REPORTABLE Class</h2>
 <pre>
@@ -432,9 +427,9 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_reportable-class">CARGO_REPORTABLE</a>
+<li><a href="#cargo_reportable-class-">CARGO_REPORTABLE</a>
 self</li>
-<li><a href="#controllable-class">Controllable</a> CargoObject</li>
+<li><a href="#controllable-class-">Controllable</a> CargoObject</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
 <li><u>Number</u> Weight</li>
@@ -445,31 +440,30 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_reportable-class">CARGO_REPORTABLE</a>
-self</li>
+<li><a href="#cargo_reportable-class-">CARGO_REPORTABLE</a></li>
 </ul>
 <span id=cargo_reportable-isinradius-pointvec2></span><h3 id='cargo_reportable-isinradius-pointvec2-'>CARGO_REPORTABLE:IsInRadius(PointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_reportable-class">CARGO_REPORTABLE</a>
+<li><a href="#cargo_reportable-class-">CARGO_REPORTABLE</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> PointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> PointVec2</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo_reportable-messagetogroup-message-taskgroup-name></span><h3 id='cargo_reportable-messagetogroup-message-taskgroup-name-'>CARGO_REPORTABLE:MessageToGroup(Message, TaskGroup, Name)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 <li><u>String</u> Message</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li>#sring Name : (optional) The name of the Group used as a prefix for the message to the Group. If not provided, there will be nothing shown.</li>
 </ul>
 
@@ -478,14 +472,14 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a>
+<li><a href="#cargo-class-">CARGO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Number</u> The : range till cargo will board.</li>
+<li><u>Number</u>  The range till cargo will board.</li>
 </ul>
 <span id=cargo_unit-class></span><h2 id='cargo_unit-class-'>CARGO_UNIT Class</h2>
 <pre>
@@ -502,9 +496,9 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoUnit</li>
+<li><a href="#unit-class-">UNIT</a> CargoUnit</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
 <li><u>Number</u> Weight</li>
@@ -515,33 +509,31 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a></li>
 </ul>
 <span id=cargo_unit-destroy></span><h3 id='cargo_unit-destroy-'>CARGO_UNIT:Destroy()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a></li>
 </ul>
 <span id=cargo_unit-onenterunboarding-event-from-to-topointvec2></span><h3 id='cargo_unit-onenterunboarding-event-from-to-topointvec2-'>CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 </ul>
 
 <h4> Returns </h4>
@@ -549,12 +541,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 </ul>
 
 <h4> Returns </h4>
@@ -562,12 +554,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 </ul>
 
 <h4> Returns </h4>
@@ -575,51 +567,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> self</li>
-</ul>
-
-<h4> Returns </h4>
-<span id=cargo_unit-onenterboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
-<li><u>String</u> Event</li>
-<li><u>String</u> From</li>
-<li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
-</ul>
-
-<h4> Returns </h4>
-<span id=cargo_unit-onleaveboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onleaveboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
-<li><u>String</u> Event</li>
-<li><u>String</u> From</li>
-<li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
-</ul>
-
-<h4> Returns </h4>
-<span id=cargo_unit-onenterloaded-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterloaded-event-from-to-cargocarrier-'>CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
-self</li>
-<li><u>String</u> Event</li>
-<li><u>String</u> From</li>
-<li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> self</li>
 </ul>
 
 <h4> Returns </h4>
@@ -627,11 +580,64 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_unit-class">CARGO_UNIT</a>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo_unit-onleaveboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onleaveboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
+self</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo_unit-onafterboarding-event-from-to-cargocarrier-nearradius></span><h3 id='cargo_unit-onafterboarding-event-from-to-cargocarrier-nearradius-'>CARGO_UNIT:onafterBoarding(Event, From, To, CargoCarrier, NearRadius)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
+self</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
+<li><u>Number</u> NearRadius</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo_unit-onenterboarding-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterboarding-event-from-to-cargocarrier-'>CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
+self</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=cargo_unit-onenterloaded-event-from-to-cargocarrier></span><h3 id='cargo_unit-onenterloaded-event-from-to-cargocarrier-'>CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#cargo_unit-class-">CARGO_UNIT</a>
+self</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> From</li>
+<li><u>String</u> To</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 </ul>
 
 <h4> Returns </h4>
@@ -650,9 +656,9 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier : The UNIT carrying the package.</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier : The UNIT carrying the package.</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
 <li><u>Number</u> Weight</li>
@@ -663,19 +669,18 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
-self</li>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a></li>
 </ul>
 <span id=cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle></span><h3 id='cargo_package-onafteronboard-event-from-to-cargocarrier-speed-boarddistance-angle-'>CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 <li><u>Number</u> Speed</li>
 <li><u>Number</u> BoardDistance</li>
 <li><u>Number</u> Angle</li>
@@ -686,26 +691,26 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=cargo_package-onafteronboarded-event-from-to-cargocarrier></span><h3 id='cargo_package-onafteronboarded-event-from-to-cargocarrier-'>CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 </ul>
 
 <h4> Returns </h4>
@@ -713,7 +718,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -730,12 +735,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 </ul>
 
 <h4> Returns </h4>
@@ -743,12 +748,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 <li><u>Number</u> Speed</li>
 <li><u>Number</u> LoadDistance</li>
 <li><u>Number</u> Angle</li>
@@ -759,7 +764,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_package-class">CARGO_PACKAGE</a>
+<li><a href="#cargo_package-class-">CARGO_PACKAGE</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -784,9 +789,9 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#group-class">GROUP</a> CargoGroup</li>
+<li><a href="#group-class-">GROUP</a> CargoGroup</li>
 <li><u>String</u> Type</li>
 <li><u>String</u> Name</li>
 <li><u>Number</u> ReportRadius : (optional)</li>
@@ -796,16 +801,15 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
-self</li>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a></li>
 </ul>
 <span id=cargo_group-onenterboarding-cargocarrier-event-from-to></span><h3 id='cargo_group-onenterboarding-cargocarrier-event-from-to-'>CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -816,9 +820,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -829,9 +833,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> CargoCarrier</li>
+<li><a href="#unit-class-">UNIT</a> CargoCarrier</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -842,9 +846,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -855,9 +859,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -868,9 +872,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> ToPointVec2</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> ToPointVec2</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -881,9 +885,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#cargo_group-class">CARGO_GROUP</a>
+<li><a href="#cargo_group-class-">CARGO_GROUP</a>
 self</li>
-<li><a href="#point_vec2-class">POINT_VEC2</a> self</li>
+<li><a href="#point_vec2-class-">POINT_VEC2</a> self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>

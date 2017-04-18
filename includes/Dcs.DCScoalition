@@ -18,7 +18,7 @@ The coalition class does not inherit
 <h4> Returns </h4>
 
 <ul>
-<li><u>Number</u> coalitionId</li>
+<li><u>Number</u> </li>
 </ul>
 <span id=coalition-side-class></span><h2 id='coalition-side-class-'>coalition.side Class</h2>
 <pre>

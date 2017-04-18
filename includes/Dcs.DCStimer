@@ -10,7 +10,7 @@ The timer class does not inherit
 <h4> Returns </h4>
 
 <ul>
-<li>#Time self</li>
+<li>#Time </li>
 </ul>
 <span id=timer-getabstime></span><h3 id='timer-getabstime-'>timer.getAbsTime(()</h3>
 <p>Returns mission time in seconds.</p>
@@ -20,7 +20,7 @@ The timer class does not inherit
 <h4> Returns </h4>
 
 <ul>
-<li>#Time self</li>
+<li>#Time </li>
 </ul>
 <span id=timer-gettime0></span><h3 id='timer-gettime0-'>timer.getTime0(()</h3>
 <p>Returns mission start time in seconds.</p>
@@ -30,7 +30,7 @@ The timer class does not inherit
 <h4> Returns </h4>
 
 <ul>
-<li>#Time self</li>
+<li>#Time </li>
 </ul>
 <span id=schedulefunction-function-time></span><h3 id='schedulefunction-function-time-'>scheduleFunction(Function, time)</h3>
 <p>Schedules function to call at desired model time.
@@ -55,7 +55,7 @@ Time function FunctionToCall(any argument, Time time)</p>
 <h4> Returns </h4>
 
 <ul>
-<li>functionId self</li>
+<li>functionId </li>
 </ul>
 <span id=setfunctiontime-time></span><h3 id='setfunctiontime-time-'>setFunctionTime(time)</h3>
 <p>Re-schedules function to call at another model time.</p>

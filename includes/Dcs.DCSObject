@@ -21,7 +21,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=object-destroy></span><h3 id='object-destroy-'>Object:destroy()</h3>
 <h4> Parameters </h4>
@@ -41,7 +41,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Object.Category self</li>
+<li>#Object.Category </li>
 </ul>
 <span id=object-gettypename></span><h3 id='object-gettypename-'>Object:getTypeName()</h3>
 <p>Returns type name of the Object.</p>
@@ -55,7 +55,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=object-getdesc></span><h3 id='object-getdesc-'>Object:getDesc()</h3>
 <p>Returns object descriptor.</p>
@@ -69,7 +69,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Object.Desc self</li>
+<li>#Object.Desc </li>
 </ul>
 <span id=object-hasattribute-attributename></span><h3 id='object-hasattribute-attributename-'>Object:hasAttribute(attributeName)</h3>
 <p>Returns true if the object belongs to the category.</p>
@@ -84,7 +84,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=object-getname></span><h3 id='object-getname-'>Object:getName()</h3>
 <p>Returns name of the object. This is the name that is assigned to the object in the Mission Editor.</p>
@@ -98,7 +98,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=object-getpoint></span><h3 id='object-getpoint-'>Object:getPoint()</h3>
 <p>Returns object coordinates for current time.</p>
@@ -112,7 +112,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Vec3 self</li>
+<li>#Vec3 </li>
 </ul>
 <span id=object-getposition></span><h3 id='object-getposition-'>Object:getPosition()</h3>
 <p>Returns object position for current time.</p>
@@ -126,7 +126,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Position3 self</li>
+<li>#Position3 </li>
 </ul>
 <span id=object-getvelocity></span><h3 id='object-getvelocity-'>Object:getVelocity()</h3>
 <p>Returns the unit&#39;s velocity vector.</p>
@@ -140,7 +140,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#Vec3 self</li>
+<li>#Vec3 </li>
 </ul>
 <span id=object-inair></span><h3 id='object-inair-'>Object:inAir()</h3>
 <p>Returns true if the unit is in air.</p>
@@ -154,7 +154,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=object-category-class></span><h2 id='object-category-class-'>Object.Category Class</h2>
 <pre>

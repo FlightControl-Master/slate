@@ -117,9 +117,9 @@ The AI class does not inherit
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#ai-skill-class">Skill</a> Skill</li>
-<li><a href="#ai-task-class">Task</a> Task</li>
-<li><a href="#ai-option-class">Option</a> Option</li>
+<li><a href="#ai-skill-class-">Skill</a>Skill</li>
+<li><a href="#ai-task-class-">Task</a>Task</li>
+<li><a href="#ai-option-class-">Option</a>Option</li>
 </ul>
 <span id=ai-skill-class></span><h2 id='ai-skill-class-'>AI.Skill Class</h2>
 <pre>

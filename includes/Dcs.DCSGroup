@@ -8,7 +8,7 @@ ERROR !
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#id-class">ID</a>
+<li><a href="#id-class-">ID</a>
 ID : Identifier of a group. It is assigned to a group by Mission Editor automatically.</li>
 <li>#Group.Category Category : Enum contains identifiers of group types.</li>
 </ul>
@@ -24,7 +24,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li>#Group self</li>
+<li>#Group </li>
 </ul>
 <span id=group-isexist></span><h3 id='group-isexist-'>Group:isExist()</h3>
 <p>returns true if the group exist or false otherwise.</p>
@@ -38,7 +38,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=group-destroy></span><h3 id='group-destroy-'>Group:destroy()</h3>
 <p>Destroys the group and all of its units.</p>
@@ -62,7 +62,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li>#Group.Category self</li>
+<li>#Group.Category </li>
 </ul>
 <span id=group-getcoalition></span><h3 id='group-getcoalition-'>Group:getCoalition()</h3>
 <p>Returns the coalition of the group.</p>
@@ -76,7 +76,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li>Dcs.DCSCoalitionWrapper.Object#coalition.side self</li>
+<li>Dcs.DCSCoalitionWrapper.Object#coalition.side </li>
 </ul>
 <span id=group-getname></span><h3 id='group-getname-'>Group:getName()</h3>
 <p>Returns the group&#39;s name. This is the same name assigned to the group in Mission Editor.</p>
@@ -90,7 +90,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=group-getid></span><h3 id='group-getid-'>Group:getID()</h3>
 <p>Returns the group identifier.</p>
@@ -104,8 +104,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#id-class">ID</a>
-self</li>
+<li><a href="#id-class-">ID</a></li>
 </ul>
 <span id=group-getunit-unitnumber></span><h3 id='group-getunit-unitnumber-'>Group:getUnit(unitNumber)</h3>
 <p>Returns the unit with number unitNumber. If the unit is not exists the function will return nil.</p>
@@ -120,7 +119,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>Dcs.DCSWrapper.Unit#Unit self</li>
+<li>Dcs.DCSWrapper.Unit#Unit </li>
 </ul>
 <span id=group-getsize></span><h3 id='group-getsize-'>Group:getSize()</h3>
 <p>Returns current size of the group. If some of the units will be destroyed, As units are destroyed the size of the group will be changed.</p>
@@ -134,7 +133,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Number</u> self</li>
+<li><u>Number</u> </li>
 </ul>
 <span id=group-getinitialsize></span><h3 id='group-getinitialsize-'>Group:getInitialSize()</h3>
 <p>Returns initial size of the group. If some of the units will be destroyed, initial size of the group will not be changed. Initial size limits the unitNumber parameter for Group.getUnit() function.</p>
@@ -148,7 +147,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Number</u> self</li>
+<li><u>Number</u> </li>
 </ul>
 <span id=group-getunits></span><h3 id='group-getunits-'>Group:getUnits()</h3>
 <p>Returns array of the units present in the group now. Destroyed units will not be enlisted at all.</p>
@@ -162,7 +161,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>#list<Dcs.DCSWrapper.Unit#Unit> array : of Units</li>
+<li>#list<Dcs.DCSWrapper.Unit#Unit>  array of Units</li>
 </ul>
 <span id=group-getcontroller></span><h3 id='group-getcontroller-'>Group:getController()</h3>
 <p>Returns controller of the group.</p>
@@ -176,7 +175,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#controller-class">Controller</a> self</li>
+<li><a href="#controller-class-">Controller</a> </li>
 </ul>
 <span id=group-category-class></span><h2 id='group-category-class-'>Group.Category Class</h2>
 <pre>

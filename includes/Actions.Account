@@ -1,5 +1,5 @@
 <span id=actions-account-module></span><h1 id='actions-account-module-'>Actions.Account Module</h1>
-<p><strong>Actions</strong> - ACT_ACCOUNT_ classes <strong>account for</strong> (detect, count &amp; report) various DCS events occuring on <a href="#unit-module">Unit</a>s.</p>
+<p><strong>Actions</strong> - ACT_ACCOUNT_ classes <strong>account for</strong> (detect, count &amp; report) various DCS events occuring on <a href="#unit-module-">Unit</a>s.</p>
 
 <p><img src="/includes/Pictures/ACT_ACCOUNT/Dia1.JPG" alt="Banner Image" /></p>
 <span id=act_account-class></span><h2 id='act_account-class-'>ACT_ACCOUNT Class</h2>
@@ -55,29 +55,28 @@ These state transition methods need to provide a return value, which is specifie
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=act_account-new></span><h3 id='act_account-new-'>ACT_ACCOUNT:New()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account-class">ACT_ACCOUNT</a>
+<li><a href="#act_account-class-">ACT_ACCOUNT</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#act_account-class">ACT_ACCOUNT</a>
-self</li>
+<li><a href="#act_account-class-">ACT_ACCOUNT</a></li>
 </ul>
 <span id=act_account-onafterstart-processunit-event-from-to></span><h3 id='act_account-onafterstart-processunit-event-from-to-'>ACT_ACCOUNT:onafterStart(ProcessUnit, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account-class">ACT_ACCOUNT</a>
+<li><a href="#act_account-class-">ACT_ACCOUNT</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -88,9 +87,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account-class">ACT_ACCOUNT</a>
+<li><a href="#act_account-class-">ACT_ACCOUNT</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -101,9 +100,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account-class">ACT_ACCOUNT</a>
+<li><a href="#act_account-class-">ACT_ACCOUNT</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -122,7 +121,7 @@ BASE
 </pre>
 
 <p>The ACT_ACCOUNT_DEADS class accounts (detects, counts and reports) successful kills of DCS units.
-The process is given a <a href="#set-module">Set</a> of units that will be tracked upon successful destruction.
+The process is given a <a href="#set-module-">Set</a> of units that will be tracked upon successful destruction.
 The process will end after each target has been successfully destroyed.
 Each successful dead will trigger an Account state transition that can be scored, modified or administered.</p>
 <span id=act_account_deads-constructor></span><h5 id='act_account_deads-constructor-'>ACT_ACCOUNT_DEADS constructor:</h5>
@@ -133,15 +132,15 @@ Each successful dead will trigger an Account state transition that can be scored
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=act_account_deads-new-targetsetunit-taskname></span><h3 id='act_account_deads-new-targetsetunit-taskname-'>ACT_ACCOUNT_DEADS:New(TargetSetUnit, TaskName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
+<li><a href="#act_account_deads-class-">ACT_ACCOUNT_DEADS</a>
 self</li>
-<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit</li>
+<li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 <li><u>String</u> TaskName</li>
 </ul>
 
@@ -150,9 +149,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
+<li><a href="#act_account_deads-class-">ACT_ACCOUNT_DEADS</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -163,9 +162,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
+<li><a href="#act_account_deads-class-">ACT_ACCOUNT_DEADS</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -176,9 +175,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
+<li><a href="#act_account_deads-class-">ACT_ACCOUNT_DEADS</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -189,9 +188,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#act_account_deads-class">ACT_ACCOUNT_DEADS</a>
+<li><a href="#act_account_deads-class-">ACT_ACCOUNT_DEADS</a>
 self</li>
-<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData</li>
 </ul>
 
 <h4> Returns </h4>

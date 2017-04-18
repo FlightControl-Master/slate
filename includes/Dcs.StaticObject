@@ -23,7 +23,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#StaticObject self</li>
+<li>#StaticObject </li>
 </ul>
 <span id=staticobject-getid></span><h3 id='staticobject-getid-'>StaticObject:getID()</h3>
 <p>returns identifier of the static object.</p>
@@ -37,7 +37,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#StaticObject.ID self</li>
+<li>#StaticObject.ID </li>
 </ul>
 <span id=staticobject-getdesc></span><h3 id='staticobject-getdesc-'>StaticObject:getDesc()</h3>
 <p>Returns descriptor of the StaticObject.</p>
@@ -51,7 +51,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#StaticObject.Desc self</li>
+<li>#StaticObject.Desc </li>
 </ul>
 <span id=staticobject-desc-class></span><h2 id='staticobject-desc-class-'>StaticObject.Desc Class</h2>
 <pre>

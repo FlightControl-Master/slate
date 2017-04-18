@@ -1,14 +1,14 @@
 <span id=wrapper-airbase-module></span><h1 id='wrapper-airbase-module-'>Wrapper.Airbase Module</h1>
 <p>This module contains the AIRBASE classes.</p>
-<span id=1-a-href-airbase-class-airbase-a-class-extends-a-href-positionable-class-positionable-a></span><h5 id='1-a-href-airbase-class-airbase-a-class-extends-a-href-positionable-class-positionable-a-'>1) <a href="#airbase-class">AIRBASE</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
-<p>The <a href="#airbase-module">AIRBASE</a> class is a wrapper class to handle the DCS Airbase objects:</p>
+<span id=1-a-href-airbase-class-airbase-a-class-extends-a-href-positionable-class-positionable-a></span><h5 id='1-a-href-airbase-class-airbase-a-class-extends-a-href-positionable-class-positionable-a-'>1) <a href="#airbase-class-">AIRBASE</a> class, extends <a href="#positionable-class-">POSITIONABLE</a></h5>
+<p>The <a href="#airbase-module-">AIRBASE</a> class is a wrapper class to handle the DCS Airbase objects:</p>
 
 <ul>
 <li>Support all DCS Airbase APIs.</li>
 <li>Enhance with Airbase specific APIs not in the DCS Airbase API set.</li>
 </ul>
 <span id=1-1-airbase-reference-methods></span><h5 id='1-1-airbase-reference-methods-'>1.1) AIRBASE reference methods</h5>
-<p>For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _<a href="#database-module">DATABASE</a> object.
+<p>For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _<a href="#database-module-">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
 
 <p>The AIRBASE class <strong>does not contain a :New()</strong> method, rather it provides <strong>:Find()</strong> methods to retrieve the object reference
@@ -30,7 +30,7 @@ If the DCS Airbase object does not exist or is nil, the AIRBASE methods will ret
 <p>The DCS Airbase APIs are used extensively within MOOSE. The AIRBASE class has for each DCS Airbase API a corresponding method.
 To be able to distinguish easily in your code the difference between a AIRBASE API call and a DCS Airbase API call,
 the first letter of the method is also capitalized. So, by example, the DCS Airbase method @{DCSWrapper.Airbase#Airbase.getName}()
-is implemented in the AIRBASE class as AIRBASE-GetName.</p>
+is implemented in the AIRBASE class as AIRBASE-GetName-.</p>
 
 <p>More functions will be added</p>
 
@@ -48,7 +48,7 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a>
+<li><a href="#airbase-class-">AIRBASE</a>
 self</li>
 <li><u>String</u> AirbaseName : The name of the airbase.</li>
 </ul>
@@ -56,13 +56,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a> self</li>
+<li><a href="#airbase-class-">AIRBASE</a> </li>
 </ul>
 <span id=airbase-find-dcsairbase></span><h3 id='airbase-find-dcsairbase-'>AIRBASE:Find(DCSAirbase)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a>
+<li><a href="#airbase-class-">AIRBASE</a>
 self</li>
 <li>Dcs.DCSWrapper.Airbase#Airbase DCSAirbase : An existing DCS Airbase object reference.</li>
 </ul>
@@ -70,13 +70,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a> self</li>
+<li><a href="#airbase-class-">AIRBASE</a> </li>
 </ul>
 <span id=airbase-findbyname-airbasename></span><h3 id='airbase-findbyname-airbasename-'>AIRBASE:FindByName(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a>
+<li><a href="#airbase-class-">AIRBASE</a>
 self</li>
 <li><u>String</u> AirbaseName : The Airbase Name.</li>
 </ul>
@@ -84,5 +84,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a> self</li>
+<li><a href="#airbase-class-">AIRBASE</a> </li>
 </ul>

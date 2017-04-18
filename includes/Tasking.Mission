@@ -1,6 +1,6 @@
 <span id=tasking-mission-module></span><h1 id='tasking-mission-module-'>Tasking.Mission Module</h1>
-<p>A MISSION is the main owner of a Mission orchestration within MOOSE . The Mission framework orchestrates <a href="#client-module">CLIENT</a>s, <a href="#task-module">TASK</a>s, <a href="#stage-module">STAGE</a>s etc.
-A <a href="#client-module">CLIENT</a> needs to be registered within the <a href="#mission-module">MISSION</a> through the function <a href="#addclient-module">AddClient</a>. A <a href="#task-module">TASK</a> needs to be registered within the <a href="#mission-module">MISSION</a> through the function <a href="#addtask-module">AddTask</a>.</p>
+<p>A MISSION is the main owner of a Mission orchestration within MOOSE . The Mission framework orchestrates <a href="#client-module-">CLIENT</a>s, <a href="#task-module-">TASK</a>s, <a href="#stage-module-">STAGE</a>s etc.
+A <a href="#client-module-">CLIENT</a> needs to be registered within the <a href="#mission-module-">MISSION</a> through the function <a href="#addclient-module-">AddClient</a>. A <a href="#task-module-">TASK</a> needs to be registered within the <a href="#mission-module-">MISSION</a> through the function <a href="#addtask-module-">AddTask</a>.</p>
 <span id=mission-class></span><h2 id='mission-class-'>MISSION Class</h2>
 <pre>
 Inheritance : The MISSION Class inherits from the following parents :
@@ -12,28 +12,27 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#mission-clients-class">Clients</a> _Clients</li>
-<li><a href="#menu_coalition-class">MENU_COALITION</a> MissionMenu</li>
+<li><a href="#mission-clients-class-">Clients</a>_Clients</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a> MissionMenu</li>
 <li><u>String</u> MissionBriefing</li>
 </ul>
 <span id=mission-new-commandcenter-missionname-missionpriority-missionbriefing-missioncoalition></span><h3 id='mission-new-commandcenter-missionname-missionpriority-missionbriefing-missioncoalition-'>MISSION:New(CommandCenter, MissionName, MissionPriority, MissionBriefing, MissionCoalition)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#commandcenter-class">COMMANDCENTER</a> CommandCenter</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> CommandCenter</li>
 <li><u>String</u> MissionName : is the name of the mission. This name will be used to reference the status of each mission by the players.</li>
 <li><u>String</u> MissionPriority : is a string indicating the &quot;priority&quot; of the Mission. f.e. &quot;Primary&quot;, &quot;Secondary&quot; or &quot;First&quot;, &quot;Second&quot;. It is free format and up to the Mission designer to choose. There are no rules behind this field.</li>
-<li><u>String</u> MissionBriefing : is a string indicating the mission briefing to be shown when a player joins a <a href="#client-module">CLIENT</a>.</li>
+<li><u>String</u> MissionBriefing : is a string indicating the mission briefing to be shown when a player joins a <a href="#client-module-">CLIENT</a>.</li>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition MissionCoalition : is a string indicating the coalition or party to which this mission belongs to. It is free format and can be chosen freely by the mission designer. Note that this field is not to be confused with the coalition concept of the ME. Examples of a Mission Coalition could be &quot;NATO&quot;, &quot;CCCP&quot;, &quot;Intruders&quot;, &quot;Terrorists&quot;...</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
-self</li>
+<li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIdle(From, Event, To)</h3>
 <p>OnLeave Transition Handler for State Idle.</p>
@@ -41,7 +40,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -51,7 +50,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Idle.</p>
@@ -59,7 +58,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -73,7 +72,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -83,7 +82,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenterongoing-from-event-to></span><h3 id='mission-onenterongoing-from-event-to-'>MISSION:OnEnterOngoing(From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Ongoing.</p>
@@ -91,7 +90,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -105,7 +104,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -115,7 +114,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterstart-from-event-to></span><h3 id='mission-onafterstart-from-event-to-'>MISSION:OnAfterStart(From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Start.</p>
@@ -123,7 +122,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -137,7 +136,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
@@ -148,7 +147,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -158,7 +157,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Idle.</p>
@@ -166,7 +165,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -180,7 +179,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -190,7 +189,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterstop-from-event-to></span><h3 id='mission-onafterstop-from-event-to-'>MISSION:OnAfterStop(From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Stop.</p>
@@ -198,7 +197,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -212,7 +211,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
@@ -223,7 +222,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -233,7 +232,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onentercompleted-from-event-to></span><h3 id='mission-onentercompleted-from-event-to-'>MISSION:OnEnterCompleted(From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Completed.</p>
@@ -241,7 +240,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -255,7 +254,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -265,7 +264,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onaftercomplete-from-event-to></span><h3 id='mission-onaftercomplete-from-event-to-'>MISSION:OnAfterComplete(From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Complete.</p>
@@ -273,7 +272,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -287,7 +286,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
@@ -298,7 +297,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -308,7 +307,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenterfailed-from-event-to></span><h3 id='mission-onenterfailed-from-event-to-'>MISSION:OnEnterFailed(From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Failed.</p>
@@ -316,7 +315,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -330,7 +329,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -340,7 +339,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterfail-from-event-to></span><h3 id='mission-onafterfail-from-event-to-'>MISSION:OnAfterFail(From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Fail.</p>
@@ -348,7 +347,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
@@ -362,7 +361,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
@@ -371,105 +370,102 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
-self</li>
+<li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-joinunit-playerunit-playergroup></span><h3 id='mission-joinunit-playerunit-playergroup-'>MISSION:JoinUnit(PlayerUnit, PlayerGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
-<li><a href="#group-class">GROUP</a> PlayerGroup : The GROUP of the player joining the Mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
+<li><a href="#group-class-">GROUP</a> PlayerGroup : The GROUP of the player joining the Mission.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of a Task in the Mission.</li>
+<li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-abortunit-playerunit></span><h3 id='mission-abortunit-playerunit-'>MISSION:AbortUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of a Task in the Mission.</li>
+<li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-crashunit-playerunit></span><h3 id='mission-crashunit-playerunit-'>MISSION:CrashUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player crashing.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player crashing.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of a Task in the Mission.</li>
+<li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-addscoring></span><h3 id='mission-addscoring-'>MISSION:AddScoring()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
-self</li>
+<li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-getscoring></span><h3 id='mission-getscoring-'>MISSION:GetScoring()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#scoring-class">SCORING</a>
-Scoring</li>
+<li><a href="#scoring-class-">SCORING</a></li>
 </ul>
 <span id=mission-getgroups></span><h3 id='mission-getgroups-'>MISSION:GetGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#set_group-class">SET_GROUP</a> self</li>
+<li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
 <span id=mission-setmenu-menutime></span><h3 id='mission-setmenu-menutime-'>MISSION:SetMenu(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -479,7 +475,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -489,215 +485,214 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a> self</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> </li>
 </ul>
 <span id=mission-removetaskmenu-task></span><h3 id='mission-removetaskmenu-task-'>MISSION:RemoveTaskMenu(Task)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
-self</li>
+<li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-getmenu-taskgroup></span><h3 id='mission-getmenu-taskgroup-'>MISSION:GetMenu(TaskGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a> self</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a> </li>
 </ul>
 <span id=gettask></span><h3 id='gettask-'>GetTask()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><u>String</u> TaskName : The Name of the <a href="#task-module">Task</a> within the <a href="#mission-module">Mission</a>.</li>
+<li><u>String</u> TaskName : The Name of the <a href="#task-module-">Task</a> within the <a href="#mission-module-">Mission</a>.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> The : Task</li>
-<li><u>Nil</u> Returns : nil if no task was found.</li>
+<li><a href="#task-class-">TASK</a>  The Task</li>
+<li><u>Nil</u>  Returns nil if no task was found.</li>
 </ul>
 <span id=mission-addtask-task></span><h3 id='mission-addtask-task-'>MISSION:AddTask(Task)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task : is the <a href="#task-module">Task</a> object.</li>
+<li><a href="#task-class-">TASK</a> Task : is the <a href="#task-module-">Task</a> object.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> The : task added.</li>
+<li><a href="#task-class-">TASK</a>  The task added.</li>
 </ul>
 <span id=mission-removetask-task></span><h3 id='mission-removetask-task-'>MISSION:RemoveTask(Task)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task : is the <a href="#task-module">Task</a> object.</li>
+<li><a href="#task-class-">TASK</a> Task : is the <a href="#task-module-">Task</a> object.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> The : cleaned Task reference.</li>
+<li><u>Nil</u>  The cleaned Task reference.</li>
 </ul>
 <span id=mission-getnexttaskid-task></span><h3 id='mission-getnexttaskid-task-'>MISSION:GetNextTaskID(Task)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task : is the <a href="#task-module">Task</a> object.</li>
+<li><a href="#task-class-">TASK</a> Task : is the <a href="#task-module-">Task</a> object.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> The : task added.</li>
+<li><a href="#task-class-">TASK</a>  The task added.</li>
 </ul>
 <span id=mission-iscompleted></span><h3 id='mission-iscompleted-'>MISSION:IsCompleted()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isidle></span><h3 id='mission-isidle-'>MISSION:IsIdle()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isongoing></span><h3 id='mission-isongoing-'>MISSION:IsOngoing()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isfailed></span><h3 id='mission-isfailed-'>MISSION:IsFailed()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=mission-ishold></span><h3 id='mission-ishold-'>MISSION:IsHold()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=mission-hasgroup></span><h3 id='mission-hasgroup-'>MISSION:HasGroup()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if the Mission has a Group.</li>
+<li><u>Boolean</u>  true if the Mission has a Group.</li>
 </ul>
 <span id=mission-reportsummary></span><h3 id='mission-reportsummary-'>MISSION:ReportSummary()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=mission-reportoverview></span><h3 id='mission-reportoverview-'>MISSION:ReportOverview()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=mission-reportdetails></span><h3 id='mission-reportdetails-'>MISSION:ReportDetails()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a>
+<li><a href="#mission-class-">MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=mission-gettasks></span><h3 id='mission-gettasks-'>MISSION.GetTasks(()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Get Tasks from the Mission.</span>
 <span class="n">Tasks</span> <span class="o">=</span> <span class="n">Mission</span><span class="p">:</span><span class="n">GetTasks</span><span class="p">()</span>
@@ -708,5 +703,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li>{TASK,...} Structure : of TASKS with the <a href="#task-module">TASK</a> number as the key.</li>
+<li>{TASK,...}  Structure of TASKS with the <a href="#task-module-">TASK</a> number as the key.</li>
 </ul>

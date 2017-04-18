@@ -12,12 +12,12 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a> TaskScheduler</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The Set of Groups assigned to the Task</li>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> FsmTemplate</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#commandcenter-class">COMMANDCENTER</a> CommandCenter</li>
+<li><a href="#scheduler-class-">SCHEDULER</a> TaskScheduler</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroup : The Set of Groups assigned to the Task</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> FsmTemplate</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> CommandCenter</li>
 </ul>
 <span id=task-onafterplayeraborted-playerunit-playername></span><h3 id='task-onafterplayeraborted-playerunit-playername-'>TASK:OnAfterPlayerAborted(PlayerUnit, PlayerName)</h3>
 <p>FSM PlayerAborted event handler prototype for TASK.</p>
@@ -25,9 +25,9 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he went back to spectators or left the mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The Unit of the Player when he went back to spectators or left the mission.</li>
 <li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
@@ -38,9 +38,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he crashed in the mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The Unit of the Player when he crashed in the mission.</li>
 <li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
@@ -51,9 +51,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The Unit of the Player when he died in the mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The Unit of the Player when he died in the mission.</li>
 <li><u>String</u> PlayerName : The name of the Player.</li>
 </ul>
 
@@ -65,7 +65,7 @@ Use this event to Fail the Task.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -77,7 +77,7 @@ Use this event to Abort the Task.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -89,7 +89,7 @@ Use this event to make the Task a Success.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -101,7 +101,7 @@ Use this event to Cancel the Task.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -113,7 +113,7 @@ Use this event to Replan the Task.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -122,10 +122,10 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#mission-class">MISSION</a> Mission : The mission wherein the Task is registered.</li>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroupAssign : The set of groups for which the Task can be assigned.</li>
+<li><a href="#mission-class-">MISSION</a> Mission : The mission wherein the Task is registered.</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroupAssign : The set of groups for which the Task can be assigned.</li>
 <li><u>String</u> TaskName : The name of the Task</li>
 <li><u>String</u> TaskType : The type of the Task</li>
 </ul>
@@ -133,29 +133,28 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-getunitprocess></span><h3 id='task-getunitprocess-'>TASK:GetUnitProcess()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> </li>
 </ul>
 <span id=task-setunitprocess-self></span><h3 id='task-setunitprocess-self-'>TASK:SetUnitProcess(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> self</li>
 </ul>
 
 <h4> Returns </h4>
@@ -163,135 +162,132 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
-<li><a href="#group-class">GROUP</a> PlayerGroup : The GROUP of the player joining the Mission.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.</li>
+<li><a href="#group-class-">GROUP</a> PlayerGroup : The GROUP of the player joining the Mission.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of the Task.</li>
+<li><u>Boolean</u>  true if Unit is part of the Task.</li>
 </ul>
 <span id=task-abortunit-playerunit></span><h3 id='task-abortunit-playerunit-'>TASK:AbortUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of the Task.</li>
+<li><u>Boolean</u>  true if Unit is part of the Task.</li>
 </ul>
 <span id=task-crashunit-playerunit></span><h3 id='task-crashunit-playerunit-'>TASK:CrashUnit(PlayerUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
+<li><a href="#unit-class-">UNIT</a> PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> true : if Unit is part of the Task.</li>
+<li><u>Boolean</u>  true if Unit is part of the Task.</li>
 </ul>
 <span id=task-getmission></span><h3 id='task-getmission-'>TASK:GetMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a> self</li>
+<li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=task-getgroups></span><h3 id='task-getgroups-'>TASK:GetGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#set_group-class">SET_GROUP</a> self</li>
+<li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
 <span id=task-assigntogroup-taskgroup></span><h3 id='task-assigntogroup-taskgroup-'>TASK:AssignToGroup(TaskGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-hasgroup-findgroup></span><h3 id='task-hasgroup-findgroup-'>TASK:HasGroup(FindGroup)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> FindGroup</li>
+<li><a href="#group-class-">GROUP</a> FindGroup</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=task-assigntounit-taskunit></span><h3 id='task-assigntounit-taskunit-'>TASK:AssignToUnit(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-unassignfromunit-taskunit></span><h3 id='task-unassignfromunit-taskunit-'>TASK:UnAssignFromUnit(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-settimeout-timer></span><h3 id='task-settimeout-timer-'>TASK:SetTimeOut (Timer)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li>#integer Timer : in seconds</li>
 </ul>
@@ -299,14 +295,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-messagetogroups></span><h3 id='task-messagetogroups-'>TASK:MessageToGroups()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -315,7 +310,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -324,7 +319,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -333,7 +328,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -342,34 +337,34 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=task-hasaliveunits></span><h3 id='task-hasaliveunits-'>TASK:HasAliveUnits()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=task-setmenu-menutime></span><h3 id='task-setmenu-menutime-'>TASK:SetMenu(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -377,14 +372,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-setmenuforgroup-menutime></span><h3 id='task-setmenuforgroup-menutime-'>TASK:SetMenuForGroup(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -392,16 +386,15 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-setplannedmenuforgroup-taskgroup-menutext-menutime></span><h3 id='task-setplannedmenuforgroup-taskgroup-menutext-menutime-'>TASK:SetPlannedMenuForGroup(TaskGroup, MenuText, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li><u>String</u> MenuText : The menu text.</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -409,30 +402,28 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-setassignedmenuforgroup-taskgroup-menutime></span><h3 id='task-setassignedmenuforgroup-taskgroup-menutime-'>TASK:SetAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-removemenu-menutime></span><h3 id='task-removemenu-menutime-'>TASK:RemoveMenu(MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
@@ -440,46 +431,43 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-removeplannedmenuforgroup-taskgroup-menutime></span><h3 id='task-removeplannedmenuforgroup-taskgroup-menutime-'>TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-removeassignedmenuforgroup-taskgroup-menutime></span><h3 id='task-removeassignedmenuforgroup-taskgroup-menutime-'>TASK:RemoveAssignedMenuForGroup(TaskGroup, MenuTime)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li><u>Number</u> MenuTime</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-menutaskstatus></span><h3 id='task-menutaskstatus-'>TASK:MenuTaskStatus()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -488,7 +476,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -497,20 +485,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> TaskName</li>
+<li><u>String</u> </li>
 </ul>
 <span id=task-getprocesstemplate-processname></span><h3 id='task-getprocesstemplate-processname-'>TASK:GetProcessTemplate(ProcessName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> ProcessName</li>
 </ul>
@@ -518,13 +506,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> </li>
 </ul>
 <span id=task-failprocesses-taskunitname></span><h3 id='task-failprocesses-taskunitname-'>TASK:FailProcesses(TaskUnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskUnitName</li>
 </ul>
@@ -532,100 +520,96 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-setstatemachine-taskunit-fsm></span><h3 id='task-setstatemachine-taskunit-fsm-'>TASK:SetStateMachine(TaskUnit, Fsm)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> Fsm</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> Fsm</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-getstatemachine-taskunit></span><h3 id='task-getstatemachine-taskunit-'>TASK:GetStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> </li>
 </ul>
 <span id=task-removestatemachine-taskunit></span><h3 id='task-removestatemachine-taskunit-'>TASK:RemoveStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-hasstatemachine-taskunit></span><h3 id='task-hasstatemachine-taskunit-'>TASK:HasStateMachine(TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-getscoring></span><h3 id='task-getscoring-'>TASK:GetScoring()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#scoring-class">SCORING</a> Scoring</li>
+<li><a href="#scoring-class-">SCORING</a> </li>
 </ul>
 <span id=task-gettaskindex></span><h3 id='task-gettaskindex-'>TASK:GetTaskIndex()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> The : Task ID</li>
+<li><u>String</u>  The Task ID</li>
 </ul>
 <span id=task-setname-taskname></span><h3 id='task-setname-taskname-'>TASK:SetName(TaskName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskName</li>
 </ul>
@@ -635,20 +619,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> The : Task Name</li>
+<li><u>String</u>  The Task Name</li>
 </ul>
 <span id=task-settype-tasktype></span><h3 id='task-settype-tasktype-'>TASK:SetType(TaskType)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskType</li>
 </ul>
@@ -658,20 +642,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> TaskType</li>
+<li><u>String</u> </li>
 </ul>
 <span id=task-setid-taskid></span><h3 id='task-setid-taskid-'>TASK:SetID(TaskID)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskID</li>
 </ul>
@@ -681,20 +665,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> TaskID</li>
+<li><u>String</u> </li>
 </ul>
 <span id=task-statesuccess></span><h3 id='task-statesuccess-'>TASK:StateSuccess()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -703,7 +687,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -712,7 +696,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -721,7 +705,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -730,7 +714,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -739,7 +723,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -748,7 +732,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -757,7 +741,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -766,7 +750,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -775,7 +759,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -784,7 +768,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -793,7 +777,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -802,7 +786,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -811,7 +795,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -820,7 +804,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -829,7 +813,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -838,7 +822,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
@@ -847,7 +831,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskBriefing</li>
 </ul>
@@ -855,14 +839,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-onenterassigned-event-from-to></span><h3 id='task-onenterassigned-event-from-to-'>TASK:onenterAssigned(Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -874,7 +857,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -886,7 +869,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> From</li>
 <li><u>String</u> Event</li>
@@ -898,7 +881,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> From</li>
 <li><u>String</u> Event</li>
@@ -910,7 +893,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> From</li>
 <li><u>String</u> Event</li>
@@ -922,7 +905,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -934,7 +917,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -946,7 +929,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
@@ -958,40 +941,39 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
-<li><a href="#detection_manager-class">DETECTION_MANAGER</a> Dispatcher</li>
+<li><a href="#detection_manager-class-">DETECTION_MANAGER</a> Dispatcher</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
-self</li>
+<li><a href="#task-class-">TASK</a></li>
 </ul>
 <span id=task-reportsummary></span><h3 id='task-reportsummary-'>TASK:ReportSummary()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=task-reportdetails></span><h3 id='task-reportdetails-'>TASK:ReportDetails()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a>
+<li><a href="#task-class-">TASK</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>

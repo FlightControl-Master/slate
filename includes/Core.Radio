@@ -19,11 +19,11 @@
 <li>For simplicty sake, you can <strong>let DCS&#39; Mission Editor add the file</strong> itself, by creating a new Trigger with the action &quot;Sound to Country&quot;, and choosing your sound file and a country you don&#39;t use in your mission.</li>
 </ul>
 
-<p>Due to weird DCS quirks, <strong>radio communications behave differently</strong> if sent by a <a href="#unit-class">UNIT</a> or a <a href="#group-class">GROUP</a> or by any other <a href="#positionable-class">POSITIONABLE</a></p>
+<p>Due to weird DCS quirks, <strong>radio communications behave differently</strong> if sent by a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a> or by any other <a href="#positionable-class-">POSITIONABLE</a></p>
 
 <ul>
-<li>If the transmitter is a <a href="#unit-class">UNIT</a> or a <a href="#group-class">GROUP</a>, DCS will set the power of the transmission  automatically,</li>
-<li>If the transmitter is any other <a href="#positionable-class">POSITIONABLE</a>, the transmisison can&#39;t be subtitled or looped.</li>
+<li>If the transmitter is a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>, DCS will set the power of the transmission  automatically,</li>
+<li>If the transmitter is any other <a href="#positionable-class-">POSITIONABLE</a>, the transmisison can&#39;t be subtitled or looped.</li>
 </ul>
 
 <p>Note that obviously, the <strong>frequency</strong> and the <strong>modulation</strong> of the transmission are important only if the players are piloting an <strong>Advanced System Modelling</strong> enabled aircraft,
@@ -39,12 +39,12 @@ BASE
 <p>There are 3 steps to a successful radio transmission.</p>
 
 <ul>
-<li>First, you need to <strong>&quot;add a <a href="#radio-class">RADIO</a> object</strong> to your <a href="#positionable-class">POSITIONABLE</a>. This is done using the <a href="#positionable-getradio">POSITIONABLE:GetRadio()</a> function,</li>
+<li>First, you need to <strong>&quot;add a <a href="#radio-class-">RADIO</a> object</strong> to your <a href="#positionable-class-">POSITIONABLE</a>. This is done using the POSITIONABLE-GetRadio- function,</li>
 <li>Then, you will <strong>set the relevant parameters</strong> to the transmission (see below),</li>
-<li>When done, you can actually <strong>broadcast the transmission</strong> (i.e. play the sound) with the <a href="#broadcast-module">Broadcast</a>() function.</li>
+<li>When done, you can actually <strong>broadcast the transmission</strong> (i.e. play the sound) with the <a href="#broadcast-module-">Broadcast</a>() function.</li>
 </ul>
 
-<p>Methods to set relevant parameters for both a <a href="#unit-class">UNIT</a> or a <a href="#group-class">GROUP</a> or any other <a href="#positionable-class">POSITIONABLE</a></p>
+<p>Methods to set relevant parameters for both a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a> or any other <a href="#positionable-class-">POSITIONABLE</a></p>
 
 <ul>
 <li><a href="#radio-setfilename-filename">RADIO:SetFileName()</a> : Sets the file name of your sound file (e.g. &quot;Noise.ogg&quot;),</li>
@@ -52,7 +52,7 @@ BASE
 <li><a href="#radio-setmodulation-modulation">RADIO:SetModulation()</a> : Sets the modulation of your transmission.</li>
 </ul>
 
-<p>Additional Methods to set relevant parameters if the transmiter is a <a href="#unit-class">UNIT</a> or a <a href="#group-class">GROUP</a></p>
+<p>Additional Methods to set relevant parameters if the transmiter is a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a></p>
 
 <ul>
 <li><a href="#radio-setloop-loop">RADIO:SetLoop()</a> : Choose if you want the transmission to be looped,</li>
@@ -60,7 +60,7 @@ BASE
 <li><a href="#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop">RADIO:NewUnitTransmission()</a> : Shortcut to set all the relevant parameters in one method call</li>
 </ul>
 
-<p>Additional Methods to set relevant parameters if the transmiter is any other <a href="#positionable-class">POSITIONABLE</a></p>
+<p>Additional Methods to set relevant parameters if the transmiter is any other <a href="#positionable-class-">POSITIONABLE</a></p>
 
 <ul>
 <li><a href="#radio-setpower-power">RADIO:SetPower()</a> : Sets the power of the antenna in Watts</li>
@@ -70,7 +70,7 @@ BASE
 <p>What is this power thing ?</p>
 
 <ul>
-<li>If your transmission is sent by a <a href="#positionable-class">POSITIONABLE</a> other than a <a href="#unit-class">UNIT</a> or a <a href="#group-class">GROUP</a>, you can set the power of the antenna,</li>
+<li>If your transmission is sent by a <a href="#positionable-class-">POSITIONABLE</a> other than a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>, you can set the power of the antenna,</li>
 <li>Otherwise, DCS sets it automatically, depending on what&#39;s available on your Unit,</li>
 <li>If the player gets <strong>too far</strong> from the transmiter, or if the antenna is <strong>too weak</strong>, the transmission will <strong>fade</strong> and <strong>become noisyer</strong>,</li>
 <li>This an automated DCS calculation you have no say on,</li>
@@ -81,7 +81,7 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#positionable-class">POSITIONABLE</a> Positionable : The transmiter</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> Positionable : The transmiter</li>
 <li><u>String</u> FileName : Name of the sound file</li>
 <li><u>Number</u> Frequency : Frequency of the transmission in Hz</li>
 <li><u>Number</u> Modulation : Modulation of the transmission (either radio.modulation.AM or radio.modulation.FM)</li>
@@ -90,28 +90,27 @@ BASE
 <li><u>Number</u> Power : Power of the antenna is Watts</li>
 <li><u>Boolean</u> Loop</li>
 </ul>
-<span id=radio-new-positionable></span><h3 id='radio-new-positionable-'>RADIO:New(Positionable)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If you want to create a RADIO, you probably should use [POSITIONABLE:GetRadio()](#positionable-getradio) instead</span>
+<span id=radio-new-positionable></span><h3 id='radio-new-positionable-'>RADIO:New(Positionable)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If you want to create a RADIO, you probably should use POSITIONABLE-GetRadio- instead</span>
 </code></pre>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
-<li><a href="#positionable-class">POSITIONABLE</a> Positionable : The <a href="#positionable-module">Positionable</a> that will receive radio capabilities.</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> Positionable : The <a href="#positionable-module-">Positionable</a> that will receive radio capabilities.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-Radio</li>
-<li><u>Nil</u> If : Positionable is invalid</li>
+<li><p><a href="#radio-class-">RADIO</a></p></li>
+<li><p><u>Nil</u>  If Positionable is invalid</p></li>
 </ul>
 <span id=radio-setfilename-filename></span><h3 id='radio-setfilename-filename-'>RADIO:SetFileName(FileName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>String</u> FileName : File name of the sound file (i.e. &quot;Noise.ogg&quot;)</li>
 </ul>
@@ -119,14 +118,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-setfrequency-frequency></span><h3 id='radio-setfrequency-frequency-'>RADIO:SetFrequency(Frequency)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>Number</u> Frequency : in MHz (Ranges allowed for radio transmissions in DCS : 30-88 / 108-152 / 225-400MHz)</li>
 </ul>
@@ -134,14 +132,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-setmodulation-modulation></span><h3 id='radio-setmodulation-modulation-'>RADIO:SetModulation(Modulation)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM</li>
 </ul>
@@ -149,14 +146,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-setpower-power></span><h3 id='radio-setpower-power-'>RADIO:SetPower(Power)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>Number</u> Power : in W</li>
 </ul>
@@ -164,14 +160,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-setloop-loop></span><h3 id='radio-setloop-loop-'>RADIO:SetLoop(Loop)</h3><pre class="highlight lua tab-lua"><code></code></pre>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>Boolean</u> Loop</li>
 </ul>
@@ -179,15 +174,14 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-setsubtitle-subtitle-subtitleduration></span><h3 id='radio-setsubtitle-subtitle-subtitleduration-'>RADIO:SetSubtitle(Subtitle, SubtitleDuration)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Both parameters are mandatory, since it wouldn't make much sense to change the Subtitle and not its duration</span>
 </code></pre>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>String</u> Subtitle</li>
 <li><u>Number</u> SubtitleDuration : in s</li>
@@ -196,8 +190,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-newgenerictransmission-filename-frequency-modulation-power></span><h3 id='radio-newgenerictransmission-filename-frequency-modulation-power-'>RADIO:NewGenericTransmission(FileName, Frequency, Modulation, Power)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- In this function the data is especially relevant if the broadcaster is anything but a UNIT or a GROUP,</span>
 <span class="n">but</span> <span class="n">it</span> <span class="n">will</span> <span class="n">work</span> <span class="n">with</span> <span class="n">a</span> <span class="n">UNIT</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">GROUP</span> <span class="n">anyway</span>
@@ -206,7 +199,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>String</u> FileName</li>
 <li><u>Number</u> Frequency : in MHz</li>
@@ -217,8 +210,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop></span><h3 id='radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop-'>RADIO:NewUnitTransmission(FileName, Subtitle, SubtitleDuration, Frequency, Modulation, Loop)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- In this function the data is especially relevant if the broadcaster is a UNIT or a GROUP,</span>
 <span class="n">but</span> <span class="n">it</span> <span class="n">will</span> <span class="n">work</span> <span class="k">for</span> <span class="n">any</span> <span class="n">POSITIONABLE</span>
@@ -227,7 +219,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 <li><u>String</u> FileName</li>
 <li><u>String</u> Subtitle</li>
@@ -240,8 +232,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-broadcast></span><h3 id='radio-broadcast-'>RADIO:Broadcast()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- The Radio has to be populated with the new transmission before broadcasting.</span>
 <span class="c1">-- Please use RADIO setters or either [RADIO:NewGenericTransmission()](#radio-newgenerictransmission-filename-frequency-modulation-power) or [RADIO:NewUnitTransmission()](#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop)</span>
@@ -254,15 +245,14 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=radio-stopbroadcast></span><h3 id='radio-stopbroadcast-'>RADIO:StopBroadcast()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Especially usefull to stop the broadcast of looped transmissions</span>
 <span class="c1">-- Only works with broadcasts from UNIT or GROUP</span>
@@ -270,13 +260,12 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
+<li><a href="#radio-class-">RADIO</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#radio-class">RADIO</a>
-self</li>
+<li><a href="#radio-class-">RADIO</a></li>
 </ul>

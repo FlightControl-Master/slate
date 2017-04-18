@@ -38,9 +38,9 @@ and tailored</strong> by mission designers through <strong>the implementation of
 Each of these FSM implementation classes start either with:</p>
 
 <ul>
-<li>an acronym <strong>AI_</strong>, which indicates an FSM implementation directing <strong>AI controlled</strong> <a href="#group-module">GROUP</a> and/or <a href="#unit-module">UNIT</a>. These AI_ classes derive the <a href="#fsm_controllable-class">FSM_CONTROLLABLE</a> class.</li>
-<li>an acronym <strong>TASK_</strong>, which indicates an FSM implementation executing a <a href="#task-module">TASK</a> executed by Groups of players. These TASK_ classes derive the <a href="#fsm_task-class">FSM_TASK</a> class.</li>
-<li>an acronym <strong>ACT_</strong>, which indicates an Sub-FSM implementation, directing <strong>Humans actions</strong> that need to be done in a <a href="#task-module">TASK</a>, seated in a <a href="#client-module">CLIENT</a> (slot) or a <a href="#unit-module">UNIT</a> (CA join). These ACT_ classes derive the <a href="#fsm_process-class">FSM_PROCESS</a> class.</li>
+<li>an acronym <strong>AI_</strong>, which indicates an FSM implementation directing <strong>AI controlled</strong> <a href="#group-module-">GROUP</a> and/or <a href="#unit-module-">UNIT</a>. These AI_ classes derive the <a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a> class.</li>
+<li>an acronym <strong>TASK_</strong>, which indicates an FSM implementation executing a <a href="#task-module-">TASK</a> executed by Groups of players. These TASK_ classes derive the <a href="#fsm_task-class-">FSM_TASK</a> class.</li>
+<li>an acronym <strong>ACT_</strong>, which indicates an Sub-FSM implementation, directing <strong>Humans actions</strong> that need to be done in a <a href="#task-module-">TASK</a>, seated in a <a href="#client-module-">CLIENT</a> (slot) or a <a href="#unit-module-">UNIT</a> (CA join). These ACT_ classes derive the <a href="#fsm_process-class-">FSM_PROCESS</a> class.</li>
 </ul>
 
 <p>Detailed explanations and API specifics are further below clarified and FSM derived class specifics are described in those class documentation sections.</p>
@@ -53,10 +53,10 @@ Additionally, I&#39;ve added extendability and created an API that allows seamle
 <p>The following derived classes are available in the MOOSE framework, that implement a specialised form of a FSM:</p>
 
 <ul>
-<li><a href="#fsm_task-class">FSM_TASK</a>: Models Finite State Machines for <a href="#task-module">Task</a>s.</li>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>: Models Finite State Machines for <a href="#task-module">Task</a> actions, which control <a href="#client-module">Client</a>s.</li>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>: Models Finite State Machines for <a href="#controllable-module">Controllable</a>s, which are <a href="#group-module">Group</a>s, <a href="#unit-module">Unit</a>s, <a href="#client-module">Client</a>s.</li>
-<li><a href="#fsm_set-class">FSM_SET</a>: Models Finite State Machines for <a href="#set-module">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
+<li><a href="#fsm_task-class-">FSM_TASK</a>: Models Finite State Machines for <a href="#task-module-">Task</a>s.</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>: Models Finite State Machines for <a href="#task-module-">Task</a> actions, which control <a href="#client-module-">Client</a>s.</li>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>: Models Finite State Machines for <a href="#controllable-module-">Controllable</a>s, which are <a href="#group-module-">Group</a>s, <a href="#unit-module-">Unit</a>s, <a href="#client-module-">Client</a>s.</li>
+<li><a href="#fsm_set-class-">FSM_SET</a>: Models Finite State Machines for <a href="#set-module-">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
 for multiple objects or the position of the state machine in the process.</li>
 </ul>
 <span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
@@ -124,9 +124,9 @@ and tailored</strong> by mission designers through <strong>the implementation of
 Each of these FSM implementation classes start either with:</p>
 
 <ul>
-<li>an acronym <strong>AI_</strong>, which indicates an FSM implementation directing <strong>AI controlled</strong> <a href="#group-module">GROUP</a> and/or <a href="#unit-module">UNIT</a>. These AI_ classes derive the <a href="#fsm_controllable-class">FSM_CONTROLLABLE</a> class.</li>
-<li>an acronym <strong>TASK_</strong>, which indicates an FSM implementation executing a <a href="#task-module">TASK</a> executed by Groups of players. These TASK_ classes derive the <a href="#fsm_task-class">FSM_TASK</a> class.</li>
-<li>an acronym <strong>ACT_</strong>, which indicates an Sub-FSM implementation, directing <strong>Humans actions</strong> that need to be done in a <a href="#task-module">TASK</a>, seated in a <a href="#client-module">CLIENT</a> (slot) or a <a href="#unit-module">UNIT</a> (CA join). These ACT_ classes derive the <a href="#fsm_process-class">FSM_PROCESS</a> class.</li>
+<li>an acronym <strong>AI_</strong>, which indicates an FSM implementation directing <strong>AI controlled</strong> <a href="#group-module-">GROUP</a> and/or <a href="#unit-module-">UNIT</a>. These AI_ classes derive the <a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a> class.</li>
+<li>an acronym <strong>TASK_</strong>, which indicates an FSM implementation executing a <a href="#task-module-">TASK</a> executed by Groups of players. These TASK_ classes derive the <a href="#fsm_task-class-">FSM_TASK</a> class.</li>
+<li>an acronym <strong>ACT_</strong>, which indicates an Sub-FSM implementation, directing <strong>Humans actions</strong> that need to be done in a <a href="#task-module-">TASK</a>, seated in a <a href="#client-module-">CLIENT</a> (slot) or a <a href="#unit-module-">UNIT</a> (CA join). These ACT_ classes derive the <a href="#fsm_process-class-">FSM_PROCESS</a> class.</li>
 </ul>
 
 <p><img src="/includes/Pictures/FSM/Dia3.JPG" alt="Transition Rules and Transition Handlers and Event Triggers" /></p>
@@ -347,21 +347,20 @@ Depending upon <strong>which state is returned</strong>, the main FSM can contin
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
-self</li>
+<li><a href="#fsm-class-">FSM</a></li>
 </ul>
 <span id=fsm-setstartstate-state></span><h3 id='fsm-setstartstate-state-'>FSM:SetStartState(State)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 <li><u>String</u> State : A string defining the start state.</li>
 </ul>
@@ -371,20 +370,20 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> A : string containing the start state.</li>
+<li><u>String</u>  A string containing the start state.</li>
 </ul>
 <span id=fsm-addtransition-from-event-to></span><h3 id='fsm-addtransition-from-event-to-'>FSM:AddTransition(From, Event, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 <li><u>List[]</u> From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
 <li><u>String</u> Event : The Event name.</li>
@@ -398,24 +397,24 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>List[]</u> self</li>
+<li><u>List[]</u> </li>
 </ul>
 <span id=fsm-addprocess-from-event-process-returnevents></span><h3 id='fsm-addprocess-from-event-process-returnevents-'>FSM:AddProcess(From, Event, Process, ReturnEvents)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 <li><u>List[]</u> From : Can contain a string indicating the From state or a table of strings containing multiple From states.</li>
 <li><u>String</u> Event : The Event name.</li>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> Process : An sub-process FSM.</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a> Process : An sub-process FSM.</li>
 <li><u>List[]</u> ReturnEvents : A table indicating for which returned events of the SubFSM which Event must be triggered in the FSM.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a> The : SubFSM.</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>  The SubFSM.</li>
 </ul>
 <span id=fsm-getprocesses></span><h3 id='fsm-getprocesses-'>FSM.GetProcesses(()</h3>
 <h4> Parameters </h4>
@@ -423,7 +422,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>List[]</u> self</li>
+<li><u>List[]</u> </li>
 </ul>
 <span id=fsm-addendstate></span><h3 id='fsm-addendstate-'>FSM.AddEndState(()</h3>
 <h4> Parameters </h4>
@@ -437,7 +436,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 <li><u>String</u> State : is the state of the process when the score needs to be given. (See the relevant state descriptions of the process).</li>
 <li><u>String</u> ScoreText : is a text describing the score that is given according the status.</li>
@@ -447,14 +446,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
-self</li>
+<li><a href="#fsm-class-">FSM</a></li>
 </ul>
 <span id=fsm-addscoreprocess-from-event-state-scoretext-score></span><h3 id='fsm-addscoreprocess-from-event-state-scoretext-score-'>FSM:AddScoreProcess(From, Event, State, ScoreText, Score)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
+<li><a href="#fsm-class-">FSM</a>
 self</li>
 <li><u>String</u> From : is the From State of the main process.</li>
 <li><u>String</u> Event : is the Event of the main process.</li>
@@ -466,8 +464,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm-class">FSM</a>
-self</li>
+<li><a href="#fsm-class-">FSM</a></li>
 </ul>
 <span id=fsm-getscores></span><h3 id='fsm-getscores-'>FSM.GetScores(()</h3>
 <h4> Parameters </h4>
@@ -485,28 +482,27 @@ BASE
         `-- FSM_CONTROLLABLE
 </pre>
 
-<p>FSM_CONTROLLABLE class models Finite State Machines for <a href="#controllable-module">Controllable</a>s, which are <a href="#group-module">Group</a>s, <a href="#unit-module">Unit</a>s, <a href="#client-module">Client</a>s.</p>
+<p>FSM_CONTROLLABLE class models Finite State Machines for <a href="#controllable-module-">Controllable</a>s, which are <a href="#group-module-">Group</a>s, <a href="#unit-module-">Unit</a>s, <a href="#client-module-">Client</a>s.</p>
 
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 <span id=fsm_controllable-new-fsmt-controllable></span><h3 id='fsm_controllable-new-fsmt-controllable-'>FSM_CONTROLLABLE:New(FSMT, Controllable)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
 <li><u>List[]</u> FSMT : Finite State Machine Table</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : (optional) The CONTROLLABLE object that the FSM_CONTROLLABLE governs.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : (optional) The CONTROLLABLE object that the FSM_CONTROLLABLE governs.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
-self</li>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a></li>
 </ul>
 <span id=fsm_controllable-onbeforestop-controllable-from-event-to></span><h3 id='fsm_controllable-onbeforestop-controllable-from-event-to-'>FSM_CONTROLLABLE:OnBeforeStop(Controllable, From, Event, To)</h3>
 <p>OnBefore Transition Handler for Event Stop.</p>
@@ -514,9 +510,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
@@ -525,7 +521,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=fsm_controllable-onafterstop-controllable-from-event-to></span><h3 id='fsm_controllable-onafterstop-controllable-from-event-to-'>FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)</h3>
 <p>OnAfter Transition Handler for Event Stop.</p>
@@ -533,9 +529,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
@@ -548,7 +544,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
 </ul>
 
@@ -559,9 +555,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
@@ -570,7 +566,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : false to cancel Transition.</li>
+<li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=fsm_controllable-onenterstopped-controllable-from-event-to></span><h3 id='fsm_controllable-onenterstopped-controllable-from-event-to-'>FSM_CONTROLLABLE:OnEnterStopped(Controllable, From, Event, To)</h3>
 <p>OnEnter Transition Handler for State Stopped.</p>
@@ -578,9 +574,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
@@ -593,9 +589,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> Controllable : The Controllable Object managed by the FSM.</li>
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
@@ -606,29 +602,28 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> FSMControllable</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> FSMControllable</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
-self</li>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a></li>
 </ul>
 <span id=fsm_controllable-getcontrollable></span><h3 id='fsm_controllable-getcontrollable-'>FSM_CONTROLLABLE:GetControllable()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_controllable-class">FSM_CONTROLLABLE</a>
+<li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#controllable-class">CONTROLLABLE</a> self</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> </li>
 </ul>
 <span id=fsm_process-class></span><h2 id='fsm_process-class-'>FSM_PROCESS Class</h2>
 <pre>
@@ -639,114 +634,110 @@ BASE
             `-- FSM_PROCESS
 </pre>
 
-<p>FSM_PROCESS class models Finite State Machines for <a href="#task-module">Task</a> actions, which control <a href="#client-module">Client</a>s.</p>
+<p>FSM_PROCESS class models Finite State Machines for <a href="#task-module-">Task</a> actions, which control <a href="#client-module-">Client</a>s.</p>
 
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 <span id=fsm_process-new></span><h3 id='fsm_process-new-'>FSM_PROCESS:New()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
-self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-copy></span><h3 id='fsm_process-copy-'>FSM_PROCESS:Copy()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
-self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-remove></span><h3 id='fsm_process-remove-'>FSM_PROCESS:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
-self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-settask-task></span><h3 id='fsm_process-settask-task-'>FSM_PROCESS:SetTask(Task)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
-self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-gettask></span><h3 id='fsm_process-gettask-'>FSM_PROCESS:GetTask()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> self</li>
+<li><a href="#task-class-">TASK</a> </li>
 </ul>
 <span id=fsm_process-getmission></span><h3 id='fsm_process-getmission-'>FSM_PROCESS:GetMission()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a> self</li>
+<li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=fsm_process-getcommandcenter></span><h3 id='fsm_process-getcommandcenter-'>FSM_PROCESS:GetCommandCenter()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a> self</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> </li>
 </ul>
 <span id=fsm_process-message></span><h3 id='fsm_process-message-'>FSM_PROCESS:Message()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
 </ul>
 
@@ -755,25 +746,24 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
-<li><a href="#task-class">TASK</a> Task</li>
-<li><a href="#unit-class">UNIT</a> ProcessUnit</li>
+<li><a href="#task-class-">TASK</a> Task</li>
+<li><a href="#unit-class-">UNIT</a> ProcessUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
-self</li>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-onstatechange-processunit-event-from-to></span><h3 id='fsm_process-onstatechange-processunit-event-from-to-'>FSM_PROCESS:onstatechange(ProcessUnit, Event, From, To)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_process-class">FSM_PROCESS</a>
+<li><a href="#fsm_process-class-">FSM_PROCESS</a>
 self</li>
-<li><a href="#controllable-class">CONTROLLABLE</a> ProcessUnit</li>
+<li><a href="#controllable-class-">CONTROLLABLE</a> ProcessUnit</li>
 <li><u>String</u> Event</li>
 <li><u>String</u> From</li>
 <li><u>String</u> To</li>
@@ -788,31 +778,30 @@ BASE
         `-- FSM_TASK
 </pre>
 
-<p>FSM_TASK class models Finite State Machines for <a href="#task-module">Task</a>s.</p>
+<p>FSM_TASK class models Finite State Machines for <a href="#task-module-">Task</a>s.</p>
 
 <p>FSM_TASK class</p>
 
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> Task</li>
+<li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 <span id=fsm_task-new-fsmt-task-taskunit></span><h3 id='fsm_task-new-fsmt-task-taskunit-'>FSM_TASK:New(FSMT, Task, TaskUnit)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_task-class">FSM_TASK</a>
+<li><a href="#fsm_task-class-">FSM_TASK</a>
 self</li>
 <li><u>List[]</u> FSMT</li>
-<li><a href="#task-class">TASK</a> Task</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#task-class-">TASK</a> Task</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_task-class">FSM_TASK</a>
-self</li>
+<li><a href="#fsm_task-class-">FSM_TASK</a></li>
 </ul>
 <span id=fsm_set-class></span><h2 id='fsm_set-class-'>FSM_SET Class</h2>
 <pre>
@@ -822,7 +811,7 @@ BASE
         `-- FSM_SET
 </pre>
 
-<p>FSM_SET class models Finite State Machines for <a href="#set-module">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
+<p>FSM_SET class models Finite State Machines for <a href="#set-module-">Set</a>s. Note that these FSMs control multiple objects!!! So State concerns here
 for multiple objects or the position of the state machine in the process.</p>
 
 <p>FSM_SET class</p>
@@ -830,13 +819,13 @@ for multiple objects or the position of the state machine in the process.</p>
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#set_base-class">SET_BASE</a> Set</li>
+<li><a href="#set_base-class-">SET_BASE</a> Set</li>
 </ul>
 <span id=fsm_set-new-fsmt-fsmset></span><h3 id='fsm_set-new-fsmt-fsmset-'>FSM_SET:New(FSMT, FSMSet)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_set-class">FSM_SET</a>
+<li><a href="#fsm_set-class-">FSM_SET</a>
 self</li>
 <li><u>List[]</u> FSMT : Finite State Machine Table</li>
 <li>Set_SET_BASE FSMSet : (optional) The Set object that the FSM_SET governs.</li>
@@ -845,34 +834,32 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_set-class">FSM_SET</a>
-self</li>
+<li><a href="#fsm_set-class-">FSM_SET</a></li>
 </ul>
 <span id=fsm_set-set-fsmset></span><h3 id='fsm_set-set-fsmset-'>FSM_SET:Set(FSMSet)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_set-class">FSM_SET</a>
+<li><a href="#fsm_set-class-">FSM_SET</a>
 self</li>
-<li><a href="#set_base-class">SET_BASE</a> FSMSet</li>
+<li><a href="#set_base-class-">SET_BASE</a> FSMSet</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#fsm_set-class">FSM_SET</a>
-self</li>
+<li><a href="#fsm_set-class-">FSM_SET</a></li>
 </ul>
 <span id=fsm_set-get></span><h3 id='fsm_set-get-'>FSM_SET:Get()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#fsm_set-class">FSM_SET</a>
+<li><a href="#fsm_set-class-">FSM_SET</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#set_base-class">SET_BASE</a> self</li>
+<li><a href="#set_base-class-">SET_BASE</a> </li>
 </ul>

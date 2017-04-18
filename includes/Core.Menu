@@ -11,17 +11,17 @@ On top, MOOSE implements <strong>variable parameter</strong> passing for command
 <p>There are basically two different MENU class types that you need to use:</p>
 <span id=to-manage-strong-main-menus-strong-the-classes-begin-with-strong-menu_-strong></span><h5 id='to-manage-strong-main-menus-strong-the-classes-begin-with-strong-menu_-strong-'>To manage <strong>main menus</strong>, the classes begin with <strong>MENU_</strong>:</h5>
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>: Manages main menus for whole mission file.</li>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>: Manages main menus for whole coalition.</li>
-<li><a href="#menu_group-class">MENU_GROUP</a>: Manages main menus for GROUPs.</li>
-<li><a href="#menu_client-class">MENU_CLIENT</a>: Manages main menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
+<li><a href="#menu_mission-class-">MENU_MISSION</a>: Manages main menus for whole mission file.</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a>: Manages main menus for whole coalition.</li>
+<li><a href="#menu_group-class-">MENU_GROUP</a>: Manages main menus for GROUPs.</li>
+<li><a href="#menu_client-class-">MENU_CLIENT</a>: Manages main menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
 </ul>
 <span id=to-manage-strong-command-menus-strong-which-are-menus-that-allow-the-player-to-issue-strong-functions-strong-the-classes-begin-with-strong-menu_command_-strong></span><h5 id='to-manage-strong-command-menus-strong-which-are-menus-that-allow-the-player-to-issue-strong-functions-strong-the-classes-begin-with-strong-menu_command_-strong-'>To manage <strong>command menus</strong>, which are menus that allow the player to issue <strong>functions</strong>, the classes begin with <strong>MENU_COMMAND_</strong>:</h5>
 <ul>
-<li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>: Manages command menus for whole mission file.</li>
-<li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>: Manages command menus for whole coalition.</li>
-<li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>: Manages command menus for GROUPs.</li>
-<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a>: Manages command menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
+<li><a href="#menu_mission_command-class-">MENU_MISSION_COMMAND</a>: Manages command menus for whole mission file.</li>
+<li><a href="#menu_coalition_command-class-">MENU_COALITION_COMMAND</a>: Manages command menus for whole coalition.</li>
+<li><a href="#menu_group_command-class-">MENU_GROUP_COMMAND</a>: Manages command menus for GROUPs.</li>
+<li><a href="#menu_client_command-class-">MENU_CLIENT_COMMAND</a>: Manages command menus for CLIENTs. This manages menus for units with the skill level &quot;Client&quot;.</li>
 </ul>
 <span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5><span id=authors></span><h5 id='authors-'>Authors:</h5>
 <ul>
@@ -40,21 +40,20 @@ This is an abstract class, so don&#39;t use it.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
+<li><a href="#menu_base-class-">MENU_BASE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
-self</li>
+<li><a href="#menu_base-class-">MENU_BASE</a></li>
 </ul>
 <span id=menu_base-getmenu-menutext></span><h3 id='menu_base-getmenu-menutext-'>MENU_BASE:GetMenu(MenuText)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
+<li><a href="#menu_base-class-">MENU_BASE</a>
 self</li>
 <li><u>String</u> MenuText : The text of the child menu.</li>
 </ul>
@@ -62,29 +61,27 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
-self</li>
+<li><a href="#menu_base-class-">MENU_BASE</a></li>
 </ul>
 <span id=menu_base-setremoveparent-removeparent></span><h3 id='menu_base-setremoveparent-removeparent-'>MENU_BASE:SetRemoveParent(RemoveParent)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
+<li><a href="#menu_base-class-">MENU_BASE</a>
 self</li>
-<li><u>Boolean</u> RemoveParent : If true, the parent menu is automatically removed when this menu is the last child menu of that parent <a href="#menu-module">Menu</a>.</li>
+<li><u>Boolean</u> RemoveParent : If true, the parent menu is automatically removed when this menu is the last child menu of that parent <a href="#menu-module-">Menu</a>.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
-self</li>
+<li><a href="#menu_base-class-">MENU_BASE</a></li>
 </ul>
 <span id=menu_base-settime-self></span><h3 id='menu_base-settime-self-'>MENU_BASE:SetTime(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
+<li><a href="#menu_base-class-">MENU_BASE</a>
 self</li>
 <li>MenuTime self</li>
 </ul>
@@ -92,8 +89,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_base-class">MENU_BASE</a>
-self</li>
+<li><a href="#menu_base-class-">MENU_BASE</a></li>
 </ul>
 <span id=menu_command_base-class></span><h2 id='menu_command_base-class-'>MENU_COMMAND_BASE Class</h2>
 <pre>
@@ -115,15 +111,14 @@ classes are derived from, in order to set commands.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_command_base-class">MENU_COMMAND_BASE</a>
+<li><a href="#menu_command_base-class-">MENU_COMMAND_BASE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_command_base-class">MENU_COMMAND_BASE</a>
-self</li>
+<li><a href="#menu_command_base-class-">MENU_COMMAND_BASE</a></li>
 </ul>
 <span id=menu_mission-class></span><h2 id='menu_mission-class-'>MENU_MISSION Class</h2>
 <pre>
@@ -135,12 +130,12 @@ BASE
 
 <p>The MENU_MISSION class manages the main menus for a complete mission.
 You can add menus with the <a href="#menu_mission-new-menutext-parentmenu">MENU_MISSION:New()</a> method, which constructs a MENU_MISSION object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission-removesubmenus">MENU_MISSION:RemoveSubMenus()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_MISSION-Remove-.</p>
 <span id=menu_mission-new-menutext-parentmenu></span><h3 id='menu_mission-new-menutext-parentmenu-'>MENU_MISSION:New(MenuText, ParentMenu)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>
+<li><a href="#menu_mission-class-">MENU_MISSION</a>
 self</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
 <li><u>List[]</u> ParentMenu : The parent menu. This parameter can be ignored if you want the menu to be located at the perent menu of DCS world (under F10 other).</li>
@@ -149,35 +144,33 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>
-self</li>
+<li><a href="#menu_mission-class-">MENU_MISSION</a></li>
 </ul>
 <span id=menu_mission-removesubmenus></span><h3 id='menu_mission-removesubmenus-'>MENU_MISSION:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>
+<li><a href="#menu_mission-class-">MENU_MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>
-self</li>
+<li><a href="#menu_mission-class-">MENU_MISSION</a></li>
 </ul>
 <span id=menu_mission-remove></span><h3 id='menu_mission-remove-'>MENU_MISSION:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_mission-class">MENU_MISSION</a>
+<li><a href="#menu_mission-class-">MENU_MISSION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_mission_command-class></span><h2 id='menu_mission_command-class-'>MENU_MISSION_COMMAND Class</h2>
 <pre>
@@ -190,15 +183,15 @@ BASE
 
 <p>The MENU_MISSION_COMMAND class manages the command menus for a complete mission, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_mission_command-new-menutext-parentmenu-a-an">MENU_MISSION_COMMAND:New()</a> method, which constructs a MENU_MISSION_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_mission_command-remove">MENU_MISSION_COMMAND:Remove()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_MISSION_COMMAND-Remove-.</p>
 <span id=menu_mission_command-new-menutext-parentmenu-a-an></span><h3 id='menu_mission_command-new-menutext-parentmenu-a-an-'>MENU_MISSION_COMMAND:New(MenuText, ParentMenu, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>
+<li><a href="#menu_mission_command-class-">MENU_MISSION_COMMAND</a>
 self</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
-<li><a href="#menu_mission-class">MENU_MISSION</a> ParentMenu : The parent menu.</li>
+<li><a href="#menu_mission-class-">MENU_MISSION</a> ParentMenu : The parent menu.</li>
 <li>CommandMenuFunction A : function that is called when the menu key is pressed.</li>
 <li>CommandMenuArgument An : argument for the function. There can only be ONE argument given. So multiple arguments must be wrapped into a table. See the below example how to do this.</li>
 </ul>
@@ -206,21 +199,20 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>
-self</li>
+<li><a href="#menu_mission_command-class-">MENU_MISSION_COMMAND</a></li>
 </ul>
 <span id=menu_mission_command-remove></span><h3 id='menu_mission_command-remove-'>MENU_MISSION_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_mission_command-class">MENU_MISSION_COMMAND</a>
+<li><a href="#menu_mission_command-class-">MENU_MISSION_COMMAND</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_coalition-class></span><h2 id='menu_coalition-class-'>MENU_COALITION Class</h2>
 <pre>
@@ -230,9 +222,9 @@ BASE
         `-- MENU_COALITION
 </pre>
 
-<p>The <a href="#menu_coalition-class">MENU_COALITION</a> class manages the main menus for coalitions.
+<p>The <a href="#menu_coalition-class-">MENU_COALITION</a> class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_coalition-new-coalition-menutext-parentmenu">MENU_COALITION:New()</a> method, which constructs a MENU_COALITION object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition-removesubmenus">MENU_COALITION:RemoveSubMenus()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_COALITION-Remove-.</p>
 
 <p>@usage
 -- This demo creates a menu structure for the planes within the red coalition.
@@ -272,9 +264,9 @@ local MenuRemove = MENU_COALITION_COMMAND:New( coalition.side.RED, &quot;Remove 
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a>
 self</li>
-<li><a href="#coalition.side-class">coalition.side</a> Coalition : The coalition owning the menu.</li>
+<li><a href="#coalition.side-class-">coalition.side</a> Coalition : The coalition owning the menu.</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
 <li><u>List[]</u> ParentMenu : The parent menu. This parameter can be ignored if you want the menu to be located at the perent menu of DCS world (under F10 other).</li>
 </ul>
@@ -282,35 +274,33 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>
-self</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a></li>
 </ul>
 <span id=menu_coalition-removesubmenus></span><h3 id='menu_coalition-removesubmenus-'>MENU_COALITION:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>
-self</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a></li>
 </ul>
 <span id=menu_coalition-remove></span><h3 id='menu_coalition-remove-'>MENU_COALITION:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_coalition_command-class></span><h2 id='menu_coalition_command-class-'>MENU_COALITION_COMMAND Class</h2>
 <pre>
@@ -323,16 +313,16 @@ BASE
 
 <p>The MENU_COALITION_COMMAND class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_coalition_command-new-coalition-menutext-parentmenu-a-an">MENU_COALITION_COMMAND:New()</a> method, which constructs a MENU_COALITION_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_coalition_command-remove">MENU_COALITION_COMMAND:Remove()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_COALITION_COMMAND-Remove-.</p>
 <span id=menu_coalition_command-new-coalition-menutext-parentmenu-a-an></span><h3 id='menu_coalition_command-new-coalition-menutext-parentmenu-a-an-'>MENU_COALITION_COMMAND:New(Coalition, MenuText, ParentMenu, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>
+<li><a href="#menu_coalition_command-class-">MENU_COALITION_COMMAND</a>
 self</li>
-<li><a href="#coalition.side-class">coalition.side</a> Coalition : The coalition owning the menu.</li>
+<li><a href="#coalition.side-class-">coalition.side</a> Coalition : The coalition owning the menu.</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
-<li><a href="#menu_coalition-class">MENU_COALITION</a> ParentMenu : The parent menu.</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a> ParentMenu : The parent menu.</li>
 <li>CommandMenuFunction A : function that is called when the menu key is pressed.</li>
 <li>CommandMenuArgument An : argument for the function. There can only be ONE argument given. So multiple arguments must be wrapped into a table. See the below example how to do this.</li>
 </ul>
@@ -340,21 +330,20 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>
-self</li>
+<li><a href="#menu_coalition_command-class-">MENU_COALITION_COMMAND</a></li>
 </ul>
 <span id=menu_coalition_command-remove></span><h3 id='menu_coalition_command-remove-'>MENU_COALITION_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_coalition_command-class">MENU_COALITION_COMMAND</a>
+<li><a href="#menu_coalition_command-class-">MENU_COALITION_COMMAND</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_client-class></span><h2 id='menu_client-class-'>MENU_CLIENT Class</h2>
 <pre>
@@ -366,7 +355,7 @@ BASE
 
 <p>The MENU_CLIENT class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_client-new-client-menutext-parentmenu">MENU_CLIENT:New()</a> method, which constructs a MENU_CLIENT object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client-removesubmenus">MENU_CLIENT:RemoveSubMenus()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_CLIENT-Remove-.</p>
 
 <p>@usage
 -- This demo creates a menu structure for the two clients of planes.
@@ -390,7 +379,7 @@ local MenuClientName = MenuClient:GetName()
 MenuStatus[MenuClientName]:Remove()
 end</p>
 
-<p>@param <a href="#client-class">CLIENT</a> MenuClient
+<p>@param <a href="#client-class-">CLIENT</a> MenuClient
 local function AddStatusMenu( MenuClient )
 local MenuClientName = MenuClient:GetName()
 -- This would create a menu for the red coalition under the MenuCoalitionRed menu object.
@@ -423,9 +412,9 @@ end, {}, 10, 10 )</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_client-class">MENU_CLIENT</a>
+<li><a href="#menu_client-class-">MENU_CLIENT</a>
 self</li>
-<li><a href="#client-class">CLIENT</a> Client : The Client owning the menu.</li>
+<li><a href="#client-class-">CLIENT</a> Client : The Client owning the menu.</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
 <li><u>List[]</u> ParentMenu : The parent menu.</li>
 </ul>
@@ -433,35 +422,33 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_client-class">MENU_CLIENT</a>
-self</li>
+<li><a href="#menu_client-class-">MENU_CLIENT</a></li>
 </ul>
 <span id=menu_client-removesubmenus></span><h3 id='menu_client-removesubmenus-'>MENU_CLIENT:RemoveSubMenus()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_client-class">MENU_CLIENT</a>
+<li><a href="#menu_client-class-">MENU_CLIENT</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_client-class">MENU_CLIENT</a>
-self</li>
+<li><a href="#menu_client-class-">MENU_CLIENT</a></li>
 </ul>
 <span id=menu_client-remove></span><h3 id='menu_client-remove-'>MENU_CLIENT:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_client-class">MENU_CLIENT</a>
+<li><a href="#menu_client-class-">MENU_CLIENT</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_client_command-class></span><h2 id='menu_client_command-class-'>MENU_CLIENT_COMMAND Class</h2>
 <pre>
@@ -472,16 +459,16 @@ ERROR !
 
 <p>The MENU_CLIENT_COMMAND class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_client_command-new-client-menutext-parentmenu-a">MENU_CLIENT_COMMAND:New()</a> method, which constructs a MENU_CLIENT_COMMAND object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_client_command-remove">MENU_CLIENT_COMMAND:Remove()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with MENU_CLIENT_COMMAND-Remove-.</p>
 <span id=menu_client_command-new-client-menutext-parentmenu-a></span><h3 id='menu_client_command-new-client-menutext-parentmenu-a-'>MENU_CLIENT_COMMAND:New(Client, MenuText, ParentMenu, A)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a>
+<li><a href="#menu_client_command-class-">MENU_CLIENT_COMMAND</a>
 self</li>
-<li><a href="#client-class">CLIENT</a> Client : The Client owning the menu.</li>
+<li><a href="#client-class-">CLIENT</a> Client : The Client owning the menu.</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
-<li><a href="#menu_base-class">MENU_BASE</a>
+<li><a href="#menu_base-class-">MENU_BASE</a>
 ParentMenu : The parent menu.</li>
 <li>CommandMenuFunction A : function that is called when the menu key is pressed.</li>
 </ul>
@@ -489,20 +476,20 @@ ParentMenu : The parent menu.</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a> self</li>
+<li><a href="#menu_client_command-class-">MENU_CLIENT_COMMAND</a> </li>
 </ul>
 <span id=menu_client_command-remove></span><h3 id='menu_client_command-remove-'>MENU_CLIENT_COMMAND:Remove()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_client_command-class">MENU_CLIENT_COMMAND</a>
+<li><a href="#menu_client_command-class-">MENU_CLIENT_COMMAND</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_group-class></span><h2 id='menu_group-class-'>MENU_GROUP Class</h2>
 <pre>
@@ -514,7 +501,7 @@ BASE
 
 <p>The MENU_GROUP class manages the main menus for coalitions.
 You can add menus with the <a href="#menu_group-new-menugroup-menutext-parentmenu">MENU_GROUP:New()</a> method, which constructs a MENU_GROUP object and returns you the object reference.
-Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group-removesubmenus-self">MENU_GROUP:RemoveSubMenus()</a>.</p>
+Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group-remove-self">MENU_GROUP:Remove()</a>.</p>
 
 <p>@usage
 -- This demo creates a menu structure for the two groups of planes.
@@ -538,7 +525,7 @@ local MenuGroupName = MenuGroup:GetName()
 MenuStatus[MenuGroupName]:Remove()
 end</p>
 
-<p>@param <a href="#group-class">GROUP</a> MenuGroup
+<p>@param <a href="#group-class-">GROUP</a> MenuGroup
 local function AddStatusMenu( MenuGroup )
 local MenuGroupName = MenuGroup:GetName()
 -- This would create a menu for the red coalition under the MenuCoalitionRed menu object.
@@ -569,9 +556,9 @@ end, {}, 10, 10 )</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_group-class">MENU_GROUP</a>
+<li><a href="#menu_group-class-">MENU_GROUP</a>
 self</li>
-<li><a href="#group-class">GROUP</a> MenuGroup : The Group owning the menu.</li>
+<li><a href="#group-class-">GROUP</a> MenuGroup : The Group owning the menu.</li>
 <li><u>String</u> MenuText : The text for the menu.</li>
 <li><u>List[]</u> ParentMenu : The parent menu.</li>
 </ul>
@@ -579,14 +566,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_group-class">MENU_GROUP</a>
-self</li>
+<li><a href="#menu_group-class-">MENU_GROUP</a></li>
 </ul>
 <span id=menu_group-removesubmenus-self></span><h3 id='menu_group-removesubmenus-self-'>MENU_GROUP:RemoveSubMenus(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_group-class">MENU_GROUP</a>
+<li><a href="#menu_group-class-">MENU_GROUP</a>
 self</li>
 <li>MenuTime self</li>
 </ul>
@@ -594,14 +580,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_group-class">MENU_GROUP</a>
-self</li>
+<li><a href="#menu_group-class-">MENU_GROUP</a></li>
 </ul>
 <span id=menu_group-remove-self></span><h3 id='menu_group-remove-self-'>MENU_GROUP:Remove(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_group-class">MENU_GROUP</a>
+<li><a href="#menu_group-class-">MENU_GROUP</a>
 self</li>
 <li>MenuTime self</li>
 </ul>
@@ -609,7 +594,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>
 <span id=menu_group_command-class></span><h2 id='menu_group_command-class-'>MENU_GROUP_COMMAND Class</h2>
 <pre>
@@ -619,16 +604,16 @@ BASE
         `-- MENU_GROUP_COMMAND
 </pre>
 
-<p>The <a href="#menu_group_command-class">MENU_GROUP_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
+<p>The <a href="#menu_group_command-class-">MENU_GROUP_COMMAND</a> class manages the command menus for coalitions, which allow players to execute functions during mission execution.
 You can add menus with the <a href="#menu_group_command-new-menugroup-the-the-a-an">MENU_GROUP_COMMAND:New()</a> method, which constructs a MENU_GROUP_COMMAND object and returns you the object reference.
 Using this object reference, you can then remove ALL the menus and submenus underlying automatically with <a href="#menu_group_command-remove-self">MENU_GROUP_COMMAND:Remove()</a>.</p>
 <span id=menu_group_command-new-menugroup-the-the-a-an></span><h3 id='menu_group_command-new-menugroup-the-the-a-an-'>MENU_GROUP_COMMAND:New(MenuGroup, The, The, A, An)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>
+<li><a href="#menu_group_command-class-">MENU_GROUP_COMMAND</a>
 self</li>
-<li><a href="#group-class">GROUP</a> MenuGroup : The Group owning the menu.</li>
+<li><a href="#group-class-">GROUP</a> MenuGroup : The Group owning the menu.</li>
 <li>MenuText The : text for the menu.</li>
 <li>ParentMenu The : parent menu.</li>
 <li>CommandMenuFunction A : function that is called when the menu key is pressed.</li>
@@ -638,14 +623,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>
-self</li>
+<li><a href="#menu_group_command-class-">MENU_GROUP_COMMAND</a></li>
 </ul>
 <span id=menu_group_command-remove-self></span><h3 id='menu_group_command-remove-self-'>MENU_GROUP_COMMAND:Remove(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#menu_group_command-class">MENU_GROUP_COMMAND</a>
+<li><a href="#menu_group_command-class-">MENU_GROUP_COMMAND</a>
 self</li>
 <li>MenuTime self</li>
 </ul>
@@ -653,5 +637,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Nil</u> self</li>
+<li><u>Nil</u> </li>
 </ul>

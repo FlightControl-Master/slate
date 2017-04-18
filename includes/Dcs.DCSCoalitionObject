@@ -17,7 +17,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#coalition.side-class">coalition.side</a> self</li>
+<li><a href="#coalition.side-class-">coalition.side</a> </li>
 </ul>
 <span id=coalitionobject-getcountry></span><h3 id='coalitionobject-getcountry-'>CoalitionObject:getCountry()</h3>
 <p>Returns object country.</p>
@@ -31,5 +31,5 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#country.id self</li>
+<li>#country.id </li>
 </ul>

@@ -30,7 +30,7 @@ BASE
 
 <p>A SCHEDULER can manage <strong>multiple</strong> (repeating) schedules. Each planned or executing schedule has a unique <strong>ScheduleID</strong>.
 The ScheduleID is returned when the method <a href="#scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop">SCHEDULER:Schedule()</a> is called.
-It is recommended to store the ScheduleID in a variable, as it is used in the methods <a href="#start-module">Start</a>() and <a href="#stop-module">Stop</a>(),
+It is recommended to store the ScheduleID in a variable, as it is used in the methods <a href="#start-module-">Start</a>() and <a href="#stop-module-">Stop</a>(),
 which can start and stop specific repeating schedules respectively within a SCHEDULER object.</p>
 <span id=scheduler-constructor></span><h5 id='scheduler-constructor-'>SCHEDULER constructor</h5>
 <p>The SCHEDULER class is quite easy to use, but note that the New constructor has variable parameters:</p>
@@ -167,7 +167,7 @@ The schedule will stop after <strong>300</strong> seconds.</p>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 <li><u>List[]</u> SchedulerObject : Specified for which Moose object the timer is setup. If a value of nil is provided, a scheduler will be setup without an object reference.</li>
 <li><u>Function()</u> SchedulerFunction : The event function to be called when a timer event occurs. The event function needs to accept the parameters specified in SchedulerArguments.</li>
@@ -181,15 +181,14 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
-self.</li>
-<li><u>Number</u> The : ScheduleID of the planned schedule.</li>
+<li><p><a href="#scheduler-class-">SCHEDULER</a></p></li>
+<li><p><u>Number</u>  The ScheduleID of the planned schedule.</p></li>
 </ul>
 <span id=scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop></span><h3 id='scheduler-schedule-schedulerobject-schedulerfunction-schedulerarguments-start-repeat-randomizefactor-stop-'>SCHEDULER:Schedule(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 <li><u>List[]</u> SchedulerObject : Specified for which Moose object the timer is setup. If a value of nil is provided, a scheduler will be setup without an object reference.</li>
 <li><u>Function()</u> SchedulerFunction : The event function to be called when a timer event occurs. The event function needs to accept the parameters specified in SchedulerArguments.</li>
@@ -203,13 +202,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Number</u> The : ScheduleID of the planned schedule.</li>
+<li><u>Number</u>  The ScheduleID of the planned schedule.</li>
 </ul>
 <span id=scheduler-start-scheduleid></span><h3 id='scheduler-start-scheduleid-'>SCHEDULER:Start(ScheduleID)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 <li><u>Number</u> ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
@@ -219,7 +218,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 <li><u>Number</u> ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
@@ -229,7 +228,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 <li><u>Number</u> ScheduleID : (optional) The ScheduleID of the planned (repeating) schedule.</li>
 </ul>
@@ -239,7 +238,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#scheduler-class">SCHEDULER</a>
+<li><a href="#scheduler-class-">SCHEDULER</a>
 self</li>
 </ul>
 

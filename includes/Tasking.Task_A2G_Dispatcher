@@ -1,8 +1,8 @@
 <span id=tasking-task_a2g_dispatcher-module></span><h1 id='tasking-task_a2g_dispatcher-module-'>Tasking.Task_A2G_Dispatcher Module</h1>
 <p><strong>Tasking</strong> - The TASK_A2G_DISPATCHER creates and manages player TASK_A2G tasks based on detected targets.</p>
-<span id=1-task_a2g_dispatcher-class-extends-a-href-detection_manager-class-detection_manager-a></span><h5 id='1-task_a2g_dispatcher-class-extends-a-href-detection_manager-class-detection_manager-a-'>1) @{#TASK_A2G_DISPATCHER} class, extends <a href="#detection_manager-class">DETECTION_MANAGER</a></h5>
-<p>The @{#TASK_A2G_DISPATCHER} class implements the dynamic dispatching of tasks upon groups of detected units determined a <a href="#set-module">Set</a> of FAC (groups).
-The FAC will detect units, will group them, and will dispatch <a href="#task-module">Task</a>s to groups. Depending on the type of target detected, different tasks will be dispatched.
+<span id=1-task_a2g_dispatcher-class-extends-a-href-detection_manager-class-detection_manager-a></span><h5 id='1-task_a2g_dispatcher-class-extends-a-href-detection_manager-class-detection_manager-a-'>1) @{#TASK_A2G_DISPATCHER} class, extends <a href="#detection_manager-class-">DETECTION_MANAGER</a></h5>
+<p>The @{#TASK_A2G_DISPATCHER} class implements the dynamic dispatching of tasks upon groups of detected units determined a <a href="#set-module-">Set</a> of FAC (groups).
+The FAC will detect units, will group them, and will dispatch <a href="#task-module-">Task</a>s to groups. Depending on the type of target detected, different tasks will be dispatched.
 Find a summary below describing for which situation a task type is created:</p>
 
 <ul>
@@ -41,24 +41,24 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The groups to which the FAC will report to.</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a> Detection : The DETECTION_BASE object that is used to report the detected objects.</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroup : The groups to which the FAC will report to.</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection : The DETECTION_BASE object that is used to report the detected objects.</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
 </ul>
 <span id=task_a2g_dispatcher-new-mission-setgroup-detection></span><h3 id='task_a2g_dispatcher-new-mission-setgroup-detection-'>TASK_A2G_DISPATCHER:New(Mission, SetGroup, Detection)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#mission-class">MISSION</a> Mission : The mission for which the task dispatching is done.</li>
-<li><a href="#set_group-class">SET_GROUP</a> SetGroup : The set of groups that can join the tasks within the mission.</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a> Detection : The detection results that are used to dynamically assign new tasks to human players.</li>
+<li><a href="#mission-class-">MISSION</a> Mission : The mission for which the task dispatching is done.</li>
+<li><a href="#set_group-class-">SET_GROUP</a> SetGroup : The set of groups that can join the tasks within the mission.</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection : The detection results that are used to dynamically assign new tasks to human players.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>#TASK_A2G_DISPATCHER self</li>
+<li>#TASK_A2G_DISPATCHER </li>
 </ul>
 <span id=task_a2g_dispatcher-onafterassign-from-event-to-task-taskunit-playername></span><h3 id='task_a2g_dispatcher-onafterassign-from-event-to-task-taskunit-playername-'>TASK_A2G_DISPATCHER:OnAfterAssign(From, Event, To, Task, TaskUnit, PlayerName)</h3>
 <p>OnAfter Transition Handler for Event Assign.</p>
@@ -70,8 +70,8 @@ BASE
 <li><u>String</u> From : The From State string.</li>
 <li><u>String</u> Event : The Event string.</li>
 <li><u>String</u> To : The To State string.</li>
-<li><a href="#task_a2g-class">TASK_A2G</a> Task</li>
-<li><a href="#unit-class">UNIT</a> TaskUnit</li>
+<li><a href="#task_a2g-class-">TASK_A2G</a> Task</li>
+<li><a href="#unit-class-">UNIT</a> TaskUnit</li>
 <li><u>String</u> PlayerName</li>
 </ul>
 
@@ -81,66 +81,66 @@ BASE
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#set_unit-class">SET_UNIT</a> TargetSetUnit: : The target set of units.</li>
-<li><u>Nil</u> If : there are no targets to be set.</li>
+<li><a href="#set_unit-class-">SET_UNIT</a>  TargetSetUnit: The target set of units.</li>
+<li><u>Nil</u>  If there are no targets to be set.</li>
 </ul>
 <span id=task_a2g_dispatcher-evaluatecas-detecteditem></span><h3 id='task_a2g_dispatcher-evaluatecas-detecteditem-'>TASK_A2G_DISPATCHER:EvaluateCAS(DetectedItem)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> self</li>
+<li><a href="#task-class-">TASK</a> </li>
 </ul>
 <span id=task_a2g_dispatcher-evaluatebai-detecteditem></span><h3 id='task_a2g_dispatcher-evaluatebai-detecteditem-'>TASK_A2G_DISPATCHER:EvaluateBAI(DetectedItem)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> self</li>
+<li><a href="#task-class-">TASK</a> </li>
 </ul>
 <span id=task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem></span><h3 id='task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem-'>TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
-<li><a href="#task-class">TASK</a> Task</li>
-<li><a href="#detection_areas.detecteditem-class">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
+<li><a href="#task-class-">TASK</a> Task</li>
+<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#task-class">TASK</a> self</li>
+<li><a href="#task-class-">TASK</a> </li>
 </ul>
 <span id=task_a2g_dispatcher-processdetected-detection></span><h3 id='task_a2g_dispatcher-processdetected-detection-'>TASK_A2G_DISPATCHER:ProcessDetected(Detection)</h3>
 <h4> Parameters </h4>
 
 <ul>
 <li>#TASK_A2G_DISPATCHER self</li>
-<li><a href="#detection_base-class">DETECTION_BASE</a> Detection : The detection created by the <a href="#detection_base-class">DETECTION_BASE</a> derived object.</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection : The detection created by the <a href="#detection_base-class-">DETECTION_BASE</a> derived object.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> Return : true if you want the task assigning to continue... false will cancel the loop.</li>
+<li><u>Boolean</u>  Return true if you want the task assigning to continue... false will cancel the loop.</li>
 </ul>

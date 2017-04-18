@@ -11,7 +11,7 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#report-class">REPORT</a>
+<li><a href="#report-class-">REPORT</a>
 self</li>
 <li><u>String</u> Title</li>
 </ul>
@@ -19,14 +19,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#report-class">REPORT</a>
-self</li>
+<li><a href="#report-class-">REPORT</a></li>
 </ul>
 <span id=report-add-text></span><h3 id='report-add-text-'>REPORT:Add(Text)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#report-class">REPORT</a>
+<li><a href="#report-class-">REPORT</a>
 self</li>
 <li><u>String</u> Text</li>
 </ul>
@@ -34,14 +33,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#report-class">REPORT</a>
-self</li>
+<li><a href="#report-class-">REPORT</a></li>
 </ul>
 <span id=report-text-delimiter></span><h3 id='report-text-delimiter-'>REPORT:Text(Delimiter)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#report-class">REPORT</a>
+<li><a href="#report-class-">REPORT</a>
 self</li>
 <li><u>String</u> Delimiter : (optional) A delimiter text.</li>
 </ul>
@@ -49,7 +47,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> The : report text.</li>
+<li><u>String</u>  The report text.</li>
 </ul>
 <span id=commandcenter-class></span><h2 id='commandcenter-class-'>COMMANDCENTER Class</h2>
 <pre>
@@ -61,97 +59,96 @@ BASE
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#group-class">GROUP</a> HQ</li>
+<li><a href="#group-class-">GROUP</a> HQ</li>
 <li>Dcs.DCSCoalitionWrapper.Object#coalition CommandCenterCoalition</li>
 </ul>
 <span id=commandcenter-new-commandcenterpositionable-commandcentername></span><h3 id='commandcenter-new-commandcenterpositionable-commandcentername-'>COMMANDCENTER:New(CommandCenterPositionable, CommandCenterName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
-<li><a href="#positionable-class">POSITIONABLE</a> CommandCenterPositionable</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> CommandCenterPositionable</li>
 <li><u>String</u> CommandCenterName</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
-self</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a></li>
 </ul>
 <span id=commandcenter-getname></span><h3 id='commandcenter-getname-'>COMMANDCENTER:GetName()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>String</u> self</li>
+<li><u>String</u> </li>
 </ul>
 <span id=commandcenter-getpositionable></span><h3 id='commandcenter-getpositionable-'>COMMANDCENTER:GetPositionable()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#positionable-class">POSITIONABLE</a> self</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> </li>
 </ul>
 <span id=commandcenter-getmissions></span><h3 id='commandcenter-getmissions-'>COMMANDCENTER:GetMissions()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li>#list<Tasking.Mission#MISSION> self</li>
+<li>#list<Tasking.Mission#MISSION> </li>
 </ul>
 <span id=commandcenter-addmission-mission></span><h3 id='commandcenter-addmission-mission-'>COMMANDCENTER:AddMission(Mission)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a> self</li>
+<li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=commandcenter-removemission-mission></span><h3 id='commandcenter-removemission-mission-'>COMMANDCENTER:RemoveMission(Mission)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
-<li><a href="#mission-class">MISSION</a> Mission</li>
+<li><a href="#mission-class-">MISSION</a> Mission</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#mission-class">MISSION</a> self</li>
+<li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=commandcenter-setmenu></span><h3 id='commandcenter-setmenu-'>COMMANDCENTER:SetMenu()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
@@ -160,34 +157,34 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#menu_coalition-class">MENU_COALITION</a> self</li>
+<li><a href="#menu_coalition-class-">MENU_COALITION</a> </li>
 </ul>
 <span id=commandcenter-hasgroup-self></span><h3 id='commandcenter-hasgroup-self-'>COMMANDCENTER:HasGroup(self)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
-<li><a href="#group-class">GROUP</a> self</li>
+<li><a href="#group-class-">GROUP</a> self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=commandcenter-messagetoall></span><h3 id='commandcenter-messagetoall-'>COMMANDCENTER:MessageToAll()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
@@ -196,10 +193,10 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 <li><u>String</u> Message</li>
-<li><a href="#group-class">GROUP</a> TaskGroup</li>
+<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 <li>#sring Name : (optional) The name of the Group used as a prefix for the message to the Group. If not provided, there will be nothing shown.</li>
 </ul>
 
@@ -208,7 +205,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
@@ -217,7 +214,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 
@@ -226,7 +223,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#commandcenter-class">COMMANDCENTER</a>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a>
 self</li>
 </ul>
 

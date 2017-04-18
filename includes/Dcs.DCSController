@@ -81,7 +81,7 @@ Note: Now it works only for ground / naval groups!</p>
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> self</li>
+<li><u>Boolean</u> </li>
 </ul>
 <span id=controller-setcommand-command></span><h3 id='controller-setcommand-command-'>Controller:setCommand(command)</h3>
 <p>Sets the command to perform by controller.</p>
@@ -118,20 +118,20 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 
 <ul>
 <li>self self</li>
-<li><a href="#object-class">Object</a> target : Target to check</li>
+<li><a href="#object-class-">Object</a> target : Target to check</li>
 <li>#Controller.Detection detection : Controller.Detection detection1, Controller.Detection detection2, ... Controller.Detection detectionN</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><u>Boolean</u> detected : True if the target is detected.</li>
-<li><u>Boolean</u> visible : Has effect only if detected is true. True if the target is visible now.</li>
-<li>#ModelTime lastTime : Has effect only if visible is false. Last time when target was seen.</li>
-<li><u>Boolean</u> type : Has effect only if detected is true. True if the target type is known.</li>
-<li><u>Boolean</u> distance : Has effect only if detected is true. True if the distance to the target is known.</li>
-<li>#Vec3 lastPos : Has effect only if visible is false. Last position of the target when it was seen.</li>
-<li>#Vec3 lastVel : Has effect only if visible is false. Last velocity of the target when it was seen.</li>
+<li><u>Boolean</u>  detected True if the target is detected.</li>
+<li><u>Boolean</u>  visible Has effect only if detected is true. True if the target is visible now.</li>
+<li>#ModelTime  lastTime Has effect only if visible is false. Last time when target was seen.</li>
+<li><u>Boolean</u>  type Has effect only if detected is true. True if the target type is known.</li>
+<li><u>Boolean</u>  distance Has effect only if detected is true. True if the distance to the target is known.</li>
+<li>#Vec3  lastPos Has effect only if visible is false. Last position of the target when it was seen.</li>
+<li>#Vec3  lastVel Has effect only if visible is false. Last velocity of the target when it was seen.</li>
 </ul>
 <span id=controller-getdetectedtargets-detection></span><h3 id='controller-getdetectedtargets-detection-'>Controller:getDetectedTargets(detection)</h3>
 <p>Returns list of detected targets. If one or more detection method is specified the function will return targets which were detected by at least one of these methods. If no detection methods are specified the function will return targets which were detected by any method.</p>
@@ -146,7 +146,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 <h4> Returns </h4>
 
 <ul>
-<li>#list&lt;#DetectedTarget&gt; array : of DetectedTarget</li>
+<li>#list&lt;#DetectedTarget&gt;  array of DetectedTarget</li>
 </ul>
 <span id=controller-knowtarget-object-type-distance></span><h3 id='controller-knowtarget-object-type-distance-'>Controller:knowTarget(object, type, distance)</h3>
 <p>Know a target.</p>
@@ -155,7 +155,7 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 
 <ul>
 <li>self self</li>
-<li><a href="#object-class">Object</a> object : The target.</li>
+<li><a href="#object-class-">Object</a> object : The target.</li>
 <li><u>Boolean</u> type : Target type is known.</li>
 <li><u>Boolean</u> distance : Distance to target is known.</li>
 </ul>
@@ -184,7 +184,7 @@ The DetectedTarget class does not inherit
 <h4> Attributes </h4>
 
 <ul>
-<li><a href="#object-class">Object</a> object : The target</li>
+<li><a href="#object-class-">Object</a> object : The target</li>
 <li><u>Boolean</u> visible : The target is visible</li>
 <li><u>Boolean</u> type : The target type is known</li>
 <li><u>Boolean</u> distance : Distance to the target is known</li>

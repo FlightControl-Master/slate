@@ -1,9 +1,9 @@
 <span id=wrapper-static-module></span><h1 id='wrapper-static-module-'>Wrapper.Static Module</h1>
 <p>This module contains the STATIC class.</p>
-<span id=1-a-href-static-class-static-a-class-extends-a-href-positionable-class-positionable-a></span><h5 id='1-a-href-static-class-static-a-class-extends-a-href-positionable-class-positionable-a-'>1) <a href="#static-class">STATIC</a> class, extends <a href="#positionable-class">POSITIONABLE</a></h5>
+<span id=1-a-href-static-class-static-a-class-extends-a-href-positionable-class-positionable-a></span><h5 id='1-a-href-static-class-static-a-class-extends-a-href-positionable-class-positionable-a-'>1) <a href="#static-class-">STATIC</a> class, extends <a href="#positionable-class-">POSITIONABLE</a></h5>
 <p>Statics are <strong>Static Units</strong> defined within the Mission Editor.
 Note that Statics are almost the same as Units, but they don&#39;t have a controller.
-The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DCS Static objects:</p>
+The <a href="#static-class-">STATIC</a> class is a wrapper class to handle the DCS Static objects:</p>
 
 <ul>
 <li>Wraps the DCS Static objects.</li>
@@ -11,7 +11,7 @@ The <a href="#static-class">STATIC</a> class is a wrapper class to handle the DC
 <li>Enhance with Static specific APIs not in the DCS API set.</li>
 </ul>
 <span id=1-1-static-reference-methods></span><h5 id='1-1-static-reference-methods-'>1.1) STATIC reference methods</h5>
-<p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module">DATABASE</a> object.
+<p>For each DCS Static will have a STATIC wrapper object (instance) within the _<a href="#database-module-">DATABASE</a> object.
 This is done at the beginning of the mission (when the mission starts).</p>
 
 <p>The STATIC class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
@@ -41,7 +41,7 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#static-class">STATIC</a>
+<li><a href="#static-class-">STATIC</a>
 self</li>
 <li><u>String</u> StaticName : Name of the DCS <strong>Static</strong> as defined within the Mission Editor.</li>
 <li><u>Boolean</u> RaiseError : Raise an error if not found.</li>
@@ -50,6 +50,5 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#static-class">STATIC</a>
-self</li>
+<li><a href="#static-class-">STATIC</a></li>
 </ul>

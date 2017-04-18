@@ -22,7 +22,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#distance-class">Distance</a> self</li>
+<li><a href="#distance-class-">Distance</a> </li>
 </ul>
 <span id=getsurfacetype></span><h3 id='getsurfacetype-'>getSurfaceType()</h3>
 <p>returns surface type at the given point.</p>
@@ -36,7 +36,7 @@ ERROR !
 <h4> Returns </h4>
 
 <ul>
-<li>#land.SurfaceType self</li>
+<li>#land.SurfaceType </li>
 </ul>
 <span id=land-surfacetype-class></span><h2 id='land-surfacetype-class-'>land.SurfaceType Class</h2>
 <pre>

@@ -1,6 +1,6 @@
 <span id=core-database-module></span><h1 id='core-database-module-'>Core.Database Module</h1>
 <p>This module contains the DATABASE class, managing the database of mission objects.</p>
-<span id=1-a-href-database-class-database-a-class-extends-a-href-base-class-base-a></span><h5 id='1-a-href-database-class-database-a-class-extends-a-href-base-class-base-a-'>1) <a href="#database-class">DATABASE</a> class, extends <a href="#base-class">BASE</a></h5>
+<span id=1-a-href-database-class-database-a-class-extends-a-href-base-class-base-a></span><h5 id='1-a-href-database-class-database-a-class-extends-a-href-base-class-base-a-'>1) <a href="#database-class-">DATABASE</a> class, extends <a href="#base-class-">BASE</a></h5>
 <p>Mission designers can use the DATABASE class to refer to:</p>
 
 <ul>
@@ -24,12 +24,12 @@ The iterator methods will walk the DATABASE set, and call for each element withi
 The following iterator methods are currently available within the DATABASE:</p>
 
 <ul>
-<li><a href="#database-foreachunit-iteratorfunction">DATABASE:ForEachUnit()</a>: Calls a function for each <a href="#unit-module">UNIT</a> it finds within the DATABASE.</li>
-<li><a href="#database-foreachgroup-iteratorfunction">DATABASE:ForEachGroup()</a>: Calls a function for each <a href="#group-module">GROUP</a> it finds within the DATABASE.</li>
+<li><a href="#database-foreachunit-iteratorfunction">DATABASE:ForEachUnit()</a>: Calls a function for each <a href="#unit-module-">UNIT</a> it finds within the DATABASE.</li>
+<li><a href="#database-foreachgroup-iteratorfunction">DATABASE:ForEachGroup()</a>: Calls a function for each <a href="#group-module-">GROUP</a> it finds within the DATABASE.</li>
 <li><a href="#database-foreachplayer-iteratorfunction">DATABASE:ForEachPlayer()</a>: Calls a function for each alive player it finds within the DATABASE.</li>
 <li><a href="#database-foreachplayerjoined-iteratorfunction">DATABASE:ForEachPlayerJoined()</a>: Calls a function for each joined player it finds within the DATABASE.</li>
-<li><a href="#database-foreachclient-iteratorfunction">DATABASE:ForEachClient()</a>: Calls a function for each <a href="#client-module">CLIENT</a> it finds within the DATABASE.</li>
-<li>DATABASE-ForEachClientAlive: Calls a function for each alive <a href="#client-module">CLIENT</a> it finds within the DATABASE.</li>
+<li><a href="#database-foreachclient-iteratorfunction">DATABASE:ForEachClient()</a>: Calls a function for each <a href="#client-module-">CLIENT</a> it finds within the DATABASE.</li>
+<li>DATABASE-ForEachClientAlive-: Calls a function for each alive <a href="#client-module-">CLIENT</a> it finds within the DATABASE.</li>
 </ul>
 <span id=database-class></span><h2 id='database-class-'>DATABASE Class</h2>
 <pre>
@@ -43,21 +43,20 @@ BASE
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-findunit-unitname></span><h3 id='database-findunit-unitname-'>DATABASE:FindUnit(UnitName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> UnitName</li>
 </ul>
@@ -65,13 +64,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#unit-class">UNIT</a> The : found Unit.</li>
+<li><a href="#unit-class-">UNIT</a>  The found Unit.</li>
 </ul>
 <span id=database-addunit></span><h3 id='database-addunit-'>DATABASE:AddUnit()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -80,7 +79,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -89,7 +88,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -98,7 +97,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -107,7 +106,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> StaticName</li>
 </ul>
@@ -115,13 +114,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#static-class">STATIC</a> The : found STATIC.</li>
+<li><a href="#static-class-">STATIC</a>  The found STATIC.</li>
 </ul>
 <span id=database-addairbase-airbasename></span><h3 id='database-addairbase-airbasename-'>DATABASE:AddAirbase(AirbaseName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> AirbaseName : The name of the airbase</li>
 </ul>
@@ -131,7 +130,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> AirbaseName : The name of the airbase</li>
 </ul>
@@ -141,7 +140,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> AirbaseName</li>
 </ul>
@@ -149,13 +148,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#airbase-class">AIRBASE</a> The : found AIRBASE.</li>
+<li><a href="#airbase-class-">AIRBASE</a>  The found AIRBASE.</li>
 </ul>
 <span id=database-addcargo-cargoname></span><h3 id='database-addcargo-cargoname-'>DATABASE:AddCargo(CargoName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> CargoName : The name of the airbase</li>
 </ul>
@@ -165,7 +164,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> CargoName : The name of the airbase</li>
 </ul>
@@ -175,7 +174,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> CargoName</li>
 </ul>
@@ -183,13 +182,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#cargo-class">CARGO</a> The : found CARGO.</li>
+<li><a href="#cargo-class-">CARGO</a>  The found CARGO.</li>
 </ul>
 <span id=database-findclient-clientname></span><h3 id='database-findclient-clientname-'>DATABASE:FindClient(ClientName)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> ClientName</li>
 </ul>
@@ -197,13 +196,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#client-class">CLIENT</a> The : found CLIENT.</li>
+<li><a href="#client-class-">CLIENT</a>  The found CLIENT.</li>
 </ul>
 <span id=database-addclient></span><h3 id='database-addclient-'>DATABASE:AddClient()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -212,7 +211,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>String</u> GroupName</li>
 </ul>
@@ -220,13 +219,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#group-class">GROUP</a> The : found GROUP.</li>
+<li><a href="#group-class-">GROUP</a>  The found GROUP.</li>
 </ul>
 <span id=database-addgroup></span><h3 id='database-addgroup-'>DATABASE:AddGroup()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -235,7 +234,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -244,7 +243,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -253,7 +252,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>List[]</u> SpawnTemplate</li>
 </ul>
@@ -261,8 +260,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-setstatusgroup></span><h3 id='database-setstatusgroup-'>DATABASE.SetStatusGroup(()</h3>
 <h4> Parameters </h4>
@@ -276,7 +274,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 </ul>
 
@@ -285,7 +283,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called when there is an alive player in the database.</li>
 </ul>
@@ -293,14 +291,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachunit-iteratorfunction></span><h3 id='database-foreachunit-iteratorfunction-'>DATABASE:ForEachUnit(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.</li>
 </ul>
@@ -308,14 +305,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachgroup-iteratorfunction></span><h3 id='database-foreachgroup-iteratorfunction-'>DATABASE:ForEachGroup(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a GROUP parameter.</li>
 </ul>
@@ -323,14 +319,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachplayer-iteratorfunction></span><h3 id='database-foreachplayer-iteratorfunction-'>DATABASE:ForEachPlayer(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept the player name.</li>
 </ul>
@@ -338,14 +333,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachplayerjoined-iteratorfunction></span><h3 id='database-foreachplayerjoined-iteratorfunction-'>DATABASE:ForEachPlayerJoined(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a UNIT parameter.</li>
 </ul>
@@ -353,14 +347,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachclient-iteratorfunction></span><h3 id='database-foreachclient-iteratorfunction-'>DATABASE:ForEachClient(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called object in the database. The function needs to accept a CLIENT parameter.</li>
 </ul>
@@ -368,14 +361,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-foreachcargo-iteratorfunction></span><h3 id='database-foreachcargo-iteratorfunction-'>DATABASE:ForEachCargo(IteratorFunction)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
 <li><u>Function()</u> IteratorFunction : The function that will be called for each object in the database. The function needs to accept a CLIENT parameter.</li>
 </ul>
@@ -383,16 +375,15 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
-self</li>
+<li><a href="#database-class-">DATABASE</a></li>
 </ul>
 <span id=database-oneventnewcargo-eventdata></span><h3 id='database-oneventnewcargo-eventdata-'>DATABASE:OnEventNewCargo(EventData)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
-<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData</li>
 </ul>
 
 <h4> Returns </h4>
@@ -400,9 +391,9 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#database-class">DATABASE</a>
+<li><a href="#database-class-">DATABASE</a>
 self</li>
-<li><a href="#eventdata-class">EVENTDATA</a> EventData</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData</li>
 </ul>
 
 <h4> Returns </h4>

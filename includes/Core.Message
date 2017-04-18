@@ -19,18 +19,18 @@ To send messages, you need to use the To functions.</p>
 <p>Messages are sent:</p>
 
 <ul>
-<li>To a <a href="#client-module">Client</a> using <a href="#message-toclient-client">MESSAGE:ToClient()</a>.</li>
-<li>To a <a href="#group-module">Group</a> using <a href="#message-togroup-group">MESSAGE:ToGroup()</a></li>
+<li>To a <a href="#client-module-">Client</a> using <a href="#message-toclient-client">MESSAGE:ToClient()</a>.</li>
+<li>To a <a href="#group-module-">Group</a> using <a href="#message-togroup-group">MESSAGE:ToGroup()</a></li>
 <li>To a coalition using <a href="#message-tocoalition-needs">MESSAGE:ToCoalition()</a>.</li>
-<li>To the red coalition using <a href="#message-tored">MESSAGE:ToRed()</a>.</li>
-<li>To the blue coalition using <a href="#message-toblue">MESSAGE:ToBlue()</a>.</li>
-<li>To all Players using <a href="#message-toall">MESSAGE:ToAll()</a>.</li>
+<li>To the red coalition using MESSAGE-ToRed-.</li>
+<li>To the blue coalition using MESSAGE-ToBlue-.</li>
+<li>To all Players using MESSAGE-ToAll-.</li>
 </ul>
 <span id=send-conditionally-to-an-audience></span><h5 id='send-conditionally-to-an-audience-'>Send conditionally to an audience</h5>
 <p>Messages can be sent conditionally to an audience (when a condition is true):</p>
 
 <ul>
-<li>To all players using <a href="#message-toallif">MESSAGE:ToAllIf()</a>.</li>
+<li>To all players using MESSAGE-ToAllIf-.</li>
 <li>To a coalition using <a href="#message-tocoalitionif-needs">MESSAGE:ToCoalitionIf()</a>.</li>
 </ul>
 
@@ -57,10 +57,9 @@ To send messages, you need to use the To functions.</p>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
-<span id=message-toclient-client></span><h3 id='message-toclient-client-'>MESSAGE:ToClient(Client)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send the 2 messages created with the [New](#new-module) method to the Client Group.</span>
+<span id=message-toclient-client></span><h3 id='message-toclient-client-'>MESSAGE:ToClient(Client)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send the 2 messages created with the [New](#new-module-) method to the Client Group.</span>
 <span class="c1">-- Note that the Message of MessageClient2 is overwriting the Message of MessageClient1.</span>
 <span class="n">ClientGroup</span> <span class="o">=</span> <span class="n">Group</span><span class="p">.</span><span class="n">getByName</span><span class="p">(</span> <span class="s2">"ClientGroup"</span> <span class="p">)</span>
 
@@ -78,33 +77,31 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
-<li><a href="#client-class">CLIENT</a> Client : is the Group of the Client.</li>
+<li><a href="#client-class-">CLIENT</a> Client : is the Group of the Client.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
 <span id=message-togroup-group></span><h3 id='message-togroup-group-'>MESSAGE:ToGroup(Group)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
-<li><a href="#group-class">GROUP</a> Group : is the Group.</li>
+<li><a href="#group-class-">GROUP</a> Group : is the Group.</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
-<span id=message-toblue></span><h3 id='message-toblue-'>MESSAGE:ToBlue()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module) method to the BLUE coalition.</span>
+<span id=message-toblue></span><h3 id='message-toblue-'>MESSAGE:ToBlue()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module-) method to the BLUE coalition.</span>
 <span class="n">MessageBLUE</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the BLUE Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToBlue</span><span class="p">()</span>
 <span class="ow">or</span>
 <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the BLUE Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToBlue</span><span class="p">()</span>
@@ -115,17 +112,16 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
-<span id=message-tored></span><h3 id='message-tored-'>MESSAGE:ToRed()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module) method to the RED coalition.</span>
+<span id=message-tored></span><h3 id='message-tored-'>MESSAGE:ToRed()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module-) method to the RED coalition.</span>
 <span class="n">MessageRED</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToRed</span><span class="p">()</span>
 <span class="ow">or</span>
 <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToRed</span><span class="p">()</span>
@@ -136,17 +132,16 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
-<span id=message-tocoalition-needs></span><h3 id='message-tocoalition-needs-'>MESSAGE:ToCoalition(needs)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module) method to the RED coalition.</span>
+<span id=message-tocoalition-needs></span><h3 id='message-tocoalition-needs-'>MESSAGE:ToCoalition(needs)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created with the [New](#new-module-) method to the RED coalition.</span>
 <span class="n">MessageRED</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToCoalition</span><span class="p">(</span> <span class="n">coalition</span><span class="p">.</span><span class="n">side</span><span class="p">.</span><span class="n">RED</span> <span class="p">)</span>
 <span class="ow">or</span>
 <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To the RED Players: You receive a penalty because you've killed one of your own units"</span><span class="p">,</span> <span class="s2">"Penalty"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Score"</span> <span class="p">):</span><span class="n">ToCoalition</span><span class="p">(</span> <span class="n">coalition</span><span class="p">.</span><span class="n">side</span><span class="p">.</span><span class="n">RED</span> <span class="p">)</span>
@@ -157,7 +152,7 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 <li>CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.</li>
 </ul>
@@ -165,14 +160,13 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
 <span id=message-tocoalitionif-needs></span><h3 id='message-tocoalitionif-needs-'>MESSAGE:ToCoalitionIf(needs)</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 <li>CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.</li>
 </ul>
@@ -180,8 +174,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
 <span id=message-toall></span><h3 id='message-toall-'>MESSAGE:ToAll()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Send a message created to all players.</span>
 <span class="n">MessageAll</span> <span class="o">=</span> <span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s2">"To all Players: BLUE has won! Each player of BLUE wins 50 points!"</span><span class="p">,</span> <span class="s2">"End of Mission"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">"Win"</span> <span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
@@ -194,27 +187,25 @@ self</li>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
 <span id=message-toallif></span><h3 id='message-toallif-'>MESSAGE:ToAllIf()</h3>
 <h4> Parameters </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
+<li><a href="#message-class-">MESSAGE</a>
 self</li>
 </ul>
 
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#message-class">MESSAGE</a>
-self</li>
+<li><a href="#message-class-">MESSAGE</a></li>
 </ul>
