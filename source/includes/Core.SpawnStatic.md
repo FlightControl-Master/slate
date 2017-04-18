@@ -51,16 +51,16 @@ BASE
 	`-- SPAWNSTATIC
 </pre>
 
-The SPAWNSTATIC class allows to spawn dynamically new [Static](#static-module)s.
+The SPAWNSTATIC class allows to spawn dynamically new [Static](#static-module-)s.
 Through creating a copy of an existing static object template as defined in the Mission Editor (ME),
 SPAWNSTATIC can retireve the properties of the defined static object template (like type, category etc), and "copy"
 these properties to create a new static object and place it at the desired coordinate.
 
-New spawned [Static](#static-module)s get **the same name** as the name of the template Static,
+New spawned [Static](#static-module-)s get **the same name** as the name of the template Static,
 or gets the given name when a new name is provided at the Spawn method.
-By default, spawned [Static](#static-module)s will follow a naming convention at run-time:
+By default, spawned [Static](#static-module-)s will follow a naming convention at run-time:
 
-* Spawned [Static](#static-module)s will have the name _StaticName_#_nnn_, where _StaticName_ is the name of the **Template Static**,
+* Spawned [Static](#static-module-)s will have the name _StaticName_#_nnn_, where _StaticName_ is the name of the **Template Static**,
 and _nnn_ is a **counter from 0 to 99999**.
 
 
@@ -76,7 +76,7 @@ Groups can be spawned at different times and methods:
 
 * [SPAWNSTATIC:SpawnFromPointVec2()](#spawnstatic-spawnfrompointvec2-pointvec2-heading-(optional)): Spawn a new group from a POINT_VEC2 coordinate.
 (The group will be spawned at land height ).
-* [SPAWNSTATIC:SpawnFromZone()](#spawnstatic-spawnfromzone-zone-heading-(optional)): Spawn a new group in a [Zone](#zone-module).
+* [SPAWNSTATIC:SpawnFromZone()](#spawnstatic-spawnfromzone-zone-heading-(optional)): Spawn a new group in a [Zone](#zone-module-).
 
 
 
@@ -85,53 +85,53 @@ Groups can be spawned at different times and methods:
 ### SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)
 
 <h4> Parameters </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
+* [SPAWNSTATIC](#spawnstatic-class-)
 self
 * <u>String</u> SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.
 
 <h4> Returns </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
-self
+* [SPAWNSTATIC](#spawnstatic-class-)
+
 
 
 ### SPAWNSTATIC:NewFromType(SpawnTypeName)
 
 <h4> Parameters </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
+* [SPAWNSTATIC](#spawnstatic-class-)
 self
 * <u>String</u> SpawnTypeName : is the name of the type.
 
 <h4> Returns </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
-self
+* [SPAWNSTATIC](#spawnstatic-class-)
+
 
 
 ### SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))
 
 <h4> Parameters </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
+* [SPAWNSTATIC](#spawnstatic-class-)
 self
-* [POINT_VEC2](#point_vec2-class) PointVec2 : The 2D coordinate where to spawn the static.
+* [POINT_VEC2](#point_vec2-class-) PointVec2 : The 2D coordinate where to spawn the static.
 * <u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.
 * <u>String</u> (optional) : The name of the new static.
 
 <h4> Returns </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
-self
+* [SPAWNSTATIC](#spawnstatic-class-)
+
 
 
 ### SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))
 
 <h4> Parameters </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
+* [SPAWNSTATIC](#spawnstatic-class-)
 self
-* [ZONE_BASE](#zone_base-class) Zone : The Zone where to spawn the static.
+* [ZONE_BASE](#zone_base-class-) Zone : The Zone where to spawn the static.
 * <u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.
 * <u>String</u> (optional) : The name of the new static.
 
 <h4> Returns </h4>
-* [SPAWNSTATIC](#spawnstatic-class)
-self
+* [SPAWNSTATIC](#spawnstatic-class-)
+
 
 
 ## SPAWNSTATIC.SpawnZoneTable Class

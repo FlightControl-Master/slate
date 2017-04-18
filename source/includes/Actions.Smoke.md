@@ -3,7 +3,7 @@
 
 
 
-#####  [ACT_ASSIST](#act_assist-class) FSM class, extends [FSM_PROCESS](#fsm_process-class)
+#####  [ACT_ASSIST](#act_assist-class-) FSM class, extends [FSM_PROCESS](#fsm_process-class-)
 
 #####  ACT_ASSIST state machine:
 
@@ -53,9 +53,9 @@ These state transition methods need to provide a return value, which is specifie
 
 
 
-#####  1) [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class) class, extends [ACT_ASSIST](#act_assist-class)
+#####  1) [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-) class, extends [ACT_ASSIST](#act_assist-class-)
 
-The ACT_ASSIST_SMOKE_TARGETS_ZONE class implements the core functions to smoke targets in a [Zone](#zone-module).
+The ACT_ASSIST_SMOKE_TARGETS_ZONE class implements the core functions to smoke targets in a [Zone](#zone-module-).
 The targets are smoked within a certain range around each target, simulating a realistic smoking behaviour.
 At random intervals, a new target is smoked.
 
@@ -79,20 +79,20 @@ BASE
 ### ACT_ASSIST:New()
 
 <h4> Parameters </h4>
-* [ACT_ASSIST](#act_assist-class)
+* [ACT_ASSIST](#act_assist-class-)
 self
 
 <h4> Returns </h4>
-* [ACT_ASSIST](#act_assist-class)
-self
+* [ACT_ASSIST](#act_assist-class-)
+
 
 
 ### ACT_ASSIST:onafterStart(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIST](#act_assist-class)
+* [ACT_ASSIST](#act_assist-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -102,9 +102,9 @@ self
 ### ACT_ASSIST:onafterStop(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIST](#act_assist-class)
+* [ACT_ASSIST](#act_assist-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -124,39 +124,39 @@ BASE
 
 <h4> Attributes </h4>
 
-* [SET_UNIT](#set_unit-class) TargetSetUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:New(TargetSetUnit, TargetZone)
 
 <h4> Parameters </h4>
-* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class)
+* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
 self
-* [SET_UNIT](#set_unit-class) TargetSetUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 <h4> Returns </h4>
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:Init(TargetSetUnit, TargetZone)
 
 <h4> Parameters </h4>
-* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class)
+* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
 self
-* [SET_UNIT](#set_unit-class) TargetSetUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 <h4> Returns </h4>
-* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class)
-self
+* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
+
 
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:onenterSmoking(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class)
+* [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To

@@ -1,5 +1,5 @@
 # Actions.Account Module
-**Actions** - ACT_ACCOUNT_ classes **account for** (detect, count & report) various DCS events occuring on [Unit](#unit-module)s.
+**Actions** - ACT_ACCOUNT_ classes **account for** (detect, count & report) various DCS events occuring on [Unit](#unit-module-)s.
 
 ![Banner Image](/includes/Pictures/ACT_ACCOUNT/Dia1.JPG)
 
@@ -61,26 +61,26 @@ These state transition methods need to provide a return value, which is specifie
 
 <h4> Attributes </h4>
 
-* [SET_UNIT](#set_unit-class) TargetSetUnit
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
 
 
 ### ACT_ACCOUNT:New()
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT](#act_account-class)
+* [ACT_ACCOUNT](#act_account-class-)
 self
 
 <h4> Returns </h4>
-* [ACT_ACCOUNT](#act_account-class)
-self
+* [ACT_ACCOUNT](#act_account-class-)
+
 
 
 ### ACT_ACCOUNT:onafterStart(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT](#act_account-class)
+* [ACT_ACCOUNT](#act_account-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -90,9 +90,9 @@ self
 ### ACT_ACCOUNT:onenterWaiting(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT](#act_account-class)
+* [ACT_ACCOUNT](#act_account-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -102,9 +102,9 @@ self
 ### ACT_ACCOUNT:onafterEvent(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT](#act_account-class)
+* [ACT_ACCOUNT](#act_account-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -123,7 +123,7 @@ BASE
 </pre>
 
 The ACT_ACCOUNT_DEADS class accounts (detects, counts and reports) successful kills of DCS units.
-The process is given a [Set](#set-module) of units that will be tracked upon successful destruction.
+The process is given a [Set](#set-module-) of units that will be tracked upon successful destruction.
 The process will end after each target has been successfully destroyed.
 Each successful dead will trigger an Account state transition that can be scored, modified or administered.
 
@@ -135,15 +135,15 @@ Each successful dead will trigger an Account state transition that can be scored
 
 <h4> Attributes </h4>
 
-* [SET_UNIT](#set_unit-class) TargetSetUnit
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
 
 
 ### ACT_ACCOUNT_DEADS:New(TargetSetUnit, TaskName)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT_DEADS](#act_account_deads-class)
+* [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
 self
-* [SET_UNIT](#set_unit-class) TargetSetUnit
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
 * <u>String</u> TaskName
 
 <h4> Returns </h4>
@@ -151,9 +151,9 @@ self
 ### ACT_ACCOUNT_DEADS:onenterReport(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT_DEADS](#act_account_deads-class)
+* [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -163,9 +163,9 @@ self
 ### ACT_ACCOUNT_DEADS:onenterAccount(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT_DEADS](#act_account_deads-class)
+* [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -175,9 +175,9 @@ self
 ### ACT_ACCOUNT_DEADS:onafterEvent(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT_DEADS](#act_account_deads-class)
+* [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -187,9 +187,9 @@ self
 ### ACT_ACCOUNT_DEADS:onfuncEventDead(EventData)
 
 <h4> Parameters </h4>
-* [ACT_ACCOUNT_DEADS](#act_account_deads-class)
+* [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
 self
-* [EVENTDATA](#eventdata-class) EventData
+* [EVENTDATA](#eventdata-class-) EventData
 
 <h4> Returns </h4>
 

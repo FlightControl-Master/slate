@@ -16,7 +16,7 @@ The coalition class does not inherit
 * <u>Number</u> countryId
 
 <h4> Returns </h4>
-* <u>Number</u> coalitionId
+* <u>Number</u> 
 
 
 ## coalition.side Class

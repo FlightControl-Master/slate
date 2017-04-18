@@ -3,9 +3,9 @@ This module contains the AIRBASEPOLICE classes.
 
 
 
-##### 1) [AIRBASEPOLICE_BASE](#airbasepolice_base-class) class, extends [BASE](#base-class)
+##### 1) [AIRBASEPOLICE_BASE](#airbasepolice_base-class-) class, extends [BASE](#base-class-)
 
-The [AIRBASEPOLICE_BASE](#airbasepolice_base-class) class provides the main methods to monitor CLIENT behaviour at airbases.
+The [AIRBASEPOLICE_BASE](#airbasepolice_base-class-) class provides the main methods to monitor CLIENT behaviour at airbases.
 CLIENTS should not be allowed to:
 
 * Don't taxi faster than 40 km/h.
@@ -13,7 +13,7 @@ CLIENTS should not be allowed to:
 * Avoid to hit other planes on the airbase.
 * Obey ground control orders.
 
-##### 2) [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
+##### 2) [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class-) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
 
 All the airbases on the caucasus map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the [AIRBASEPOLICE_BASE:Monitor()](#airbasepolice_base-monitor-airbasenames) method, which takes a table or airbase names.
@@ -40,7 +40,7 @@ The following names can be given:
 * TbilisiLochini
 * Vaziani
 
-##### 3) [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
+##### 3) [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class-) class, extends [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
 
 All the airbases on the NEVADA map can be monitored using this class.
 If you want to monitor specific airbases, you need to use the [AIRBASEPOLICE_BASE:Monitor()](#airbasepolice_base-monitor-airbasenames) method, which takes a table or airbase names.
@@ -61,32 +61,32 @@ BASE
 </pre>
 <h4> Attributes </h4>
 
-* [SET_CLIENT](#set_client-class) SetClient
+* [SET_CLIENT](#set_client-class-) SetClient
 
 
 ### AIRBASEPOLICE_BASE:New(A, A)
 
 <h4> Parameters </h4>
-* [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
+* [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
 self
 * SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.
 * Airbases A : table of Airbase Names.
 
 <h4> Returns </h4>
-* [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
-self
+* [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
+
 
 
 ### AIRBASEPOLICE_BASE:Monitor(AirbaseNames)
 
 <h4> Parameters </h4>
-* [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
+* [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
 self
-* [AirbaseNames](#airbasepolice_base-airbasenames-class) AirbaseNames : A list of AirbaseNames to monitor. If this parameters is nil, then all airbases will be monitored.
+* [AirbaseNames](#airbasepolice_base-airbasenames-class-)AirbaseNames : A list of AirbaseNames to monitor. If this parameters is nil, then all airbases will be monitored.
 
 <h4> Returns </h4>
-* [AIRBASEPOLICE_BASE](#airbasepolice_base-class)
-self
+* [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
+
 
 
 ## AIRBASEPOLICE_BASE.AirbaseNames Class
@@ -103,19 +103,19 @@ BASE
 </pre>
 <h4> Attributes </h4>
 
-* [SET_CLIENT](#set_client-class) SetClient
+* [SET_CLIENT](#set_client-class-) SetClient
 
 
 ### AIRBASEPOLICE_CAUCASUS:New(A)
 
 <h4> Parameters </h4>
-* [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class)
+* [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class-)
 self
 * SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.
 
 <h4> Returns </h4>
-* [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class)
-self
+* [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class-)
+
 
 
 ## AIRBASEPOLICE_NEVADA Class
@@ -129,12 +129,12 @@ BASE
 ### AIRBASEPOLICE_NEVADA:New(A)
 
 <h4> Parameters </h4>
-* [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class)
+* [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class-)
 self
 * SetClient A : SET_CLIENT object that will contain the CLIENT objects to be monitored if they follow the rules of the airbase.
 
 <h4> Returns </h4>
-* [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class)
-self
+* [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class-)
+
 
 

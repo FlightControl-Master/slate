@@ -17,10 +17,10 @@ How to supply DCS my own Sound Files ?
 * They need to be added in .\l10n\DEFAULT\ in you .miz file (wich can be decompressed like a .zip file),
 * For simplicty sake, you can **let DCS' Mission Editor add the file** itself, by creating a new Trigger with the action "Sound to Country", and choosing your sound file and a country you don't use in your mission.
 
-Due to weird DCS quirks, **radio communications behave differently** if sent by a [UNIT](#unit-class) or a [GROUP](#group-class) or by any other [POSITIONABLE](#positionable-class)
+Due to weird DCS quirks, **radio communications behave differently** if sent by a [UNIT](#unit-class-) or a [GROUP](#group-class-) or by any other [POSITIONABLE](#positionable-class-)
 
-* If the transmitter is a [UNIT](#unit-class) or a [GROUP](#group-class), DCS will set the power of the transmission  automatically,
-* If the transmitter is any other [POSITIONABLE](#positionable-class), the transmisison can't be subtitled or looped.
+* If the transmitter is a [UNIT](#unit-class-) or a [GROUP](#group-class-), DCS will set the power of the transmission  automatically,
+* If the transmitter is any other [POSITIONABLE](#positionable-class-), the transmisison can't be subtitled or looped.
 
 Note that obviously, the **frequency** and the **modulation** of the transmission are important only if the players are piloting an **Advanced System Modelling** enabled aircraft,
 like the A10C or the Mirage 2000C. They will **hear the transmission** if they are tuned on the **right frequency and modulation** (and if they are close enough - more on that below).
@@ -41,30 +41,30 @@ BASE
 
 There are 3 steps to a successful radio transmission.
 
-* First, you need to **"add a [RADIO](#radio-class) object** to your [POSITIONABLE](#positionable-class). This is done using the [POSITIONABLE:GetRadio()](#positionable-getradio) function,
+* First, you need to **"add a [RADIO](#radio-class-) object** to your [POSITIONABLE](#positionable-class-). This is done using the POSITIONABLE-GetRadio- function,
 * Then, you will **set the relevant parameters** to the transmission (see below),
-* When done, you can actually **broadcast the transmission** (i.e. play the sound) with the [Broadcast](#broadcast-module)() function.
+* When done, you can actually **broadcast the transmission** (i.e. play the sound) with the [Broadcast](#broadcast-module-)() function.
 
-Methods to set relevant parameters for both a [UNIT](#unit-class) or a [GROUP](#group-class) or any other [POSITIONABLE](#positionable-class)
+Methods to set relevant parameters for both a [UNIT](#unit-class-) or a [GROUP](#group-class-) or any other [POSITIONABLE](#positionable-class-)
 
 * [RADIO:SetFileName()](#radio-setfilename-filename) : Sets the file name of your sound file (e.g. "Noise.ogg"),
 * [RADIO:SetFrequency()](#radio-setfrequency-frequency) : Sets the frequency of your transmission,
 * [RADIO:SetModulation()](#radio-setmodulation-modulation) : Sets the modulation of your transmission.
 
-Additional Methods to set relevant parameters if the transmiter is a [UNIT](#unit-class) or a [GROUP](#group-class)
+Additional Methods to set relevant parameters if the transmiter is a [UNIT](#unit-class-) or a [GROUP](#group-class-)
 
 * [RADIO:SetLoop()](#radio-setloop-loop) : Choose if you want the transmission to be looped,
 * [RADIO:SetSubtitle()](#radio-setsubtitle-subtitle-subtitleduration) : Set both the subtitle and its duration,
 * [RADIO:NewUnitTransmission()](#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop) : Shortcut to set all the relevant parameters in one method call
 
-Additional Methods to set relevant parameters if the transmiter is any other [POSITIONABLE](#positionable-class)
+Additional Methods to set relevant parameters if the transmiter is any other [POSITIONABLE](#positionable-class-)
 
 * [RADIO:SetPower()](#radio-setpower-power) : Sets the power of the antenna in Watts
 * [RADIO:NewGenericTransmission()](#radio-newgenerictransmission-filename-frequency-modulation-power) : Shortcut to set all the relevant parameters in one method call
 
 What is this power thing ?
 
-* If your transmission is sent by a [POSITIONABLE](#positionable-class) other than a [UNIT](#unit-class) or a [GROUP](#group-class), you can set the power of the antenna,
+* If your transmission is sent by a [POSITIONABLE](#positionable-class-) other than a [UNIT](#unit-class-) or a [GROUP](#group-class-), you can set the power of the antenna,
 * Otherwise, DCS sets it automatically, depending on what's available on your Unit,
 * If the player gets **too far** from the transmiter, or if the antenna is **too weak**, the transmission will **fade** and **become noisyer**,
 * This an automated DCS calculation you have no say on,
@@ -74,7 +74,7 @@ What is this power thing ?
 
 <h4> Attributes </h4>
 
-* [POSITIONABLE](#positionable-class) Positionable : The transmiter
+* [POSITIONABLE](#positionable-class-) Positionable : The transmiter
 * <u>String</u> FileName : Name of the sound file
 * <u>Number</u> Frequency : Frequency of the transmission in Hz
 * <u>Number</u> Modulation : Modulation of the transmission (either radio.modulation.AM or radio.modulation.FM)
@@ -86,66 +86,66 @@ What is this power thing ?
 
 ### RADIO:New(Positionable)
 ``` lua
--- If you want to create a RADIO, you probably should use [POSITIONABLE:GetRadio()](#positionable-getradio) instead
+-- If you want to create a RADIO, you probably should use POSITIONABLE-GetRadio- instead
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
-* [POSITIONABLE](#positionable-class) Positionable : The [Positionable](#positionable-module) that will receive radio capabilities.
+* [POSITIONABLE](#positionable-class-) Positionable : The [Positionable](#positionable-module-) that will receive radio capabilities.
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-Radio
-* <u>Nil</u> If : Positionable is invalid
+* [RADIO](#radio-class-)
+
+* <u>Nil</u>  If Positionable is invalid
 
 
 ### RADIO:SetFileName(FileName)
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>String</u> FileName : File name of the sound file (i.e. "Noise.ogg")
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:SetFrequency(Frequency)
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>Number</u> Frequency : in MHz (Ranges allowed for radio transmissions in DCS : 30-88 / 108-152 / 225-400MHz)
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:SetModulation(Modulation)
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:SetPower(Power)
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>Number</u> Power : in W
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:SetLoop(Loop)
@@ -153,13 +153,13 @@ self
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>Boolean</u> Loop
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:SetSubtitle(Subtitle, SubtitleDuration)
@@ -168,14 +168,14 @@ self
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>String</u> Subtitle
 * <u>Number</u> SubtitleDuration : in s
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:NewGenericTransmission(FileName, Frequency, Modulation, Power)
@@ -186,7 +186,7 @@ but it will work with a UNIT or a GROUP anyway
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>String</u> FileName
 * <u>Number</u> Frequency : in MHz
@@ -194,8 +194,8 @@ self
 * <u>Number</u> Power : in W
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:NewUnitTransmission(FileName, Subtitle, SubtitleDuration, Frequency, Modulation, Loop)
@@ -206,7 +206,7 @@ but it will work for any POSITIONABLE
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 * <u>String</u> FileName
 * <u>String</u> Subtitle
@@ -216,8 +216,8 @@ self
 * <u>Boolean</u> Loop
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:Broadcast()
@@ -232,12 +232,12 @@ self
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 
 ### RADIO:StopBroadcast()
@@ -247,11 +247,11 @@ self
 ```
 
 <h4> Parameters </h4>
-* [RADIO](#radio-class)
+* [RADIO](#radio-class-)
 self
 
 <h4> Returns </h4>
-* [RADIO](#radio-class)
-self
+* [RADIO](#radio-class-)
+
 
 

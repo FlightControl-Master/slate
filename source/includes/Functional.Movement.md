@@ -25,9 +25,9 @@ BASE
 ### MOVEMENT:OnEventBirth(self)
 
 <h4> Parameters </h4>
-* [MOVEMENT](#movement-class)
+* [MOVEMENT](#movement-class-)
 self
-* [EVENTDATA](#eventdata-class) self
+* [EVENTDATA](#eventdata-class-) self
 
 <h4> Returns </h4>
 

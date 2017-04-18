@@ -62,13 +62,13 @@ The AI_BALANCER class monitors and manages as many replacement AI groups as ther
 CLIENTS in a SET_CLIENT collection, which are not occupied by human players.
 In other words, use AI_BALANCER to simulate human behaviour by spawning in replacement AI in multi player missions.
 
-The parent class [FSM_SET](#fsm_set-class) manages the functionality to control the Finite State Machine (FSM).
+The parent class [FSM_SET](#fsm_set-class-) manages the functionality to control the Finite State Machine (FSM).
 The mission designer can tailor the behaviour of the AI_BALANCER, by defining event and state transition methods.
-An explanation about state and event transition methods can be found in the [FSM](#fsm-module) module documentation.
+An explanation about state and event transition methods can be found in the [FSM](#fsm-module-) module documentation.
 
 The mission designer can tailor the AI_BALANCER behaviour, by implementing a state or event handling method for the following:
 
-* AI_BALANCER-OnAfterSpawned AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.
+* AI_BALANCER-OnAfterSpawned- AISet, From, Event, To, AIGroup ): Define to add extra logic when an AI is spawned.
 
 #####  1. AI_BALANCER construction
 
@@ -104,8 +104,8 @@ By default, When a human player joins a slot that is AI_BALANCED, the AI group w
 However, there are 2 additional options that you can use to customize the destroy behaviour.
 When a human player joins a slot, you can configure to let the AI return to:
 
-* [AI_BALANCER:ReturnToHomeAirbase()](#ai_balancer-returntohomeairbase-returntresholdrange): Returns the AI to the **home** [AIRBASE](#airbase-class).
-* [AI_BALANCER:ReturnToNearestAirbases()](#ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset): Returns the AI to the **nearest friendly** [AIRBASE](#airbase-class).
+* [AI_BALANCER:ReturnToHomeAirbase()](#ai_balancer-returntohomeairbase-returntresholdrange): Returns the AI to the **home** [AIRBASE](#airbase-class-).
+* [AI_BALANCER:ReturnToNearestAirbases()](#ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset): Returns the AI to the **nearest friendly** [AIRBASE](#airbase-class-).
 
 Note that when AI returns to an airbase, the AI_BALANCER will trigger the **Return** event and the AI will return,
 otherwise the AI_BALANCER will trigger a **Destroy** event, and the AI will be destroyed.
@@ -114,90 +114,90 @@ otherwise the AI_BALANCER will trigger a **Destroy** event, and the AI will be d
 
 <h4> Attributes </h4>
 
-* [SET_CLIENT](#set_client-class) SetClient
-* [SPAWN](#spawn-class) SpawnAI
-* [GROUP](#group-class) Test
+* [SET_CLIENT](#set_client-class-) SetClient
+* [SPAWN](#spawn-class-) SpawnAI
+* [GROUP](#group-class-) Test
 
 
 ### AI_BALANCER:New(SetClient, SpawnAI)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [SET_CLIENT](#set_client-class) SetClient : A SET\_CLIENT object that will contain the CLIENT objects to be monitored if they are alive or not (joined by a player).
-* [SPAWN](#spawn-class) SpawnAI : The default Spawn object to spawn new AI Groups when needed.
+* [SET_CLIENT](#set_client-class-) SetClient : A SET\_CLIENT object that will contain the CLIENT objects to be monitored if they are alive or not (joined by a player).
+* [SPAWN](#spawn-class-) SpawnAI : The default Spawn object to spawn new AI Groups when needed.
 
 <h4> Returns </h4>
-* [AI_BALANCER](#ai_balancer-class)
-self
+* [AI_BALANCER](#ai_balancer-class-)
+
 
 
 ### AI_BALANCER:InitSpawnInterval(Earliest, Latest)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
 * <u>Number</u> Earliest : The earliest a new AI can be spawned in seconds.
 * <u>Number</u> Latest : The latest a new AI can be spawned in seconds.
 
 <h4> Returns </h4>
-* self self
+* self 
 
 
 ### AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [Distance](#distance-class) ReturnTresholdRange : If there is an enemy [CLIENT](#client-class) within the ReturnTresholdRange given in meters, the AI will not return to the nearest [AIRBASE](#airbase-class).
-* [SET_AIRBASE](#set_airbase-class) ReturnAirbaseSet : The SET of [SET_AIRBASE](#set_airbase-class)s to evaluate where to return to.
+* [Distance](#distance-class-) ReturnTresholdRange : If there is an enemy [CLIENT](#client-class-) within the ReturnTresholdRange given in meters, the AI will not return to the nearest [AIRBASE](#airbase-class-).
+* [SET_AIRBASE](#set_airbase-class-) ReturnAirbaseSet : The SET of [SET_AIRBASE](#set_airbase-class-)s to evaluate where to return to.
 
 <h4> Returns </h4>
 
 ### AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [Distance](#distance-class) ReturnTresholdRange : If there is an enemy [CLIENT](#client-class) within the ReturnTresholdRange given in meters, the AI will not return to the nearest [AIRBASE](#airbase-class).
+* [Distance](#distance-class-) ReturnTresholdRange : If there is an enemy [CLIENT](#client-class-) within the ReturnTresholdRange given in meters, the AI will not return to the nearest [AIRBASE](#airbase-class-).
 
 <h4> Returns </h4>
 
 ### AI_BALANCER:onenterSpawning(SetGroup, ClientName, AIGroup)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [SET_GROUP](#set_group-class) SetGroup
+* [SET_GROUP](#set_group-class-) SetGroup
 * <u>String</u> ClientName
-* [GROUP](#group-class) AIGroup
+* [GROUP](#group-class-) AIGroup
 
 <h4> Returns </h4>
 
 ### AI_BALANCER:onenterDestroying(SetGroup, AIGroup)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [SET_GROUP](#set_group-class) SetGroup
-* [GROUP](#group-class) AIGroup
+* [SET_GROUP](#set_group-class-) SetGroup
+* [GROUP](#group-class-) AIGroup
 
 <h4> Returns </h4>
 
 ### AI_BALANCER:onenterReturning(SetGroup, AIGroup)
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
-* [SET_GROUP](#set_group-class) SetGroup
-* [GROUP](#group-class) AIGroup
+* [SET_GROUP](#set_group-class-) SetGroup
+* [GROUP](#group-class-) AIGroup
 
 <h4> Returns </h4>
 
 ### AI_BALANCER:onenterMonitoring()
 
 <h4> Parameters </h4>
-* [AI_BALANCER](#ai_balancer-class)
+* [AI_BALANCER](#ai_balancer-class-)
 self
 
 <h4> Returns </h4>

@@ -18,21 +18,21 @@ BASE
 </pre>
 <h4> Attributes </h4>
 
-* [SCHEDULER](#scheduler-class) TaskScheduler
-* [MISSION](#mission-class) Mission
-* [SET_GROUP](#set_group-class) SetGroup : The Set of Groups assigned to the Task
-* [FSM_PROCESS](#fsm_process-class) FsmTemplate
-* [MISSION](#mission-class) Mission
-* [COMMANDCENTER](#commandcenter-class) CommandCenter
+* [SCHEDULER](#scheduler-class-) TaskScheduler
+* [MISSION](#mission-class-) Mission
+* [SET_GROUP](#set_group-class-) SetGroup : The Set of Groups assigned to the Task
+* [FSM_PROCESS](#fsm_process-class-) FsmTemplate
+* [MISSION](#mission-class-) Mission
+* [COMMANDCENTER](#commandcenter-class-) CommandCenter
 
 
 ### TASK:OnAfterPlayerAborted(PlayerUnit, PlayerName)
 FSM PlayerAborted event handler prototype for TASK.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The Unit of the Player when he went back to spectators or left the mission.
+* [UNIT](#unit-class-) PlayerUnit : The Unit of the Player when he went back to spectators or left the mission.
 * <u>String</u> PlayerName : The name of the Player.
 
 <h4> Returns </h4>
@@ -41,9 +41,9 @@ self
 FSM PlayerCrashed event handler prototype for TASK.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The Unit of the Player when he crashed in the mission.
+* [UNIT](#unit-class-) PlayerUnit : The Unit of the Player when he crashed in the mission.
 * <u>String</u> PlayerName : The name of the Player.
 
 <h4> Returns </h4>
@@ -52,9 +52,9 @@ self
 FSM PlayerDead event handler prototype for TASK.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The Unit of the Player when he died in the mission.
+* [UNIT](#unit-class-) PlayerUnit : The Unit of the Player when he died in the mission.
 * <u>String</u> PlayerName : The name of the Player.
 
 <h4> Returns </h4>
@@ -64,7 +64,7 @@ FSM Fail synchronous event function for TASK.
 Use this event to Fail the Task.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -74,7 +74,7 @@ FSM Abort synchronous event function for TASK.
 Use this event to Abort the Task.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -84,7 +84,7 @@ FSM Success synchronous event function for TASK.
 Use this event to make the Task a Success.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -94,7 +94,7 @@ FSM Cancel synchronous event function for TASK.
 Use this event to Cancel the Task.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -104,7 +104,7 @@ FSM Replan synchronous event function for TASK.
 Use this event to Replan the Task.
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -112,154 +112,154 @@ self
 ### TASK:New(Mission, SetGroupAssign, TaskName, TaskType)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [MISSION](#mission-class) Mission : The mission wherein the Task is registered.
-* [SET_GROUP](#set_group-class) SetGroupAssign : The set of groups for which the Task can be assigned.
+* [MISSION](#mission-class-) Mission : The mission wherein the Task is registered.
+* [SET_GROUP](#set_group-class-) SetGroupAssign : The set of groups for which the Task can be assigned.
 * <u>String</u> TaskName : The name of the Task
 * <u>String</u> TaskType : The type of the Task
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:GetUnitProcess()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* [FSM_PROCESS](#fsm_process-class) self
+* [FSM_PROCESS](#fsm_process-class-) 
 
 
 ### TASK:SetUnitProcess(self)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [FSM_PROCESS](#fsm_process-class) self
+* [FSM_PROCESS](#fsm_process-class-) self
 
 <h4> Returns </h4>
 
 ### TASK:JoinUnit(PlayerUnit, PlayerGroup)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.
-* [GROUP](#group-class) PlayerGroup : The GROUP of the player joining the Mission.
+* [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.
+* [GROUP](#group-class-) PlayerGroup : The GROUP of the player joining the Mission.
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if Unit is part of the Task.
+* <u>Boolean</u>  true if Unit is part of the Task.
 
 
 ### TASK:AbortUnit(PlayerUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
+* [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if Unit is part of the Task.
+* <u>Boolean</u>  true if Unit is part of the Task.
 
 
 ### TASK:CrashUnit(PlayerUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
+* [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if Unit is part of the Task.
+* <u>Boolean</u>  true if Unit is part of the Task.
 
 
 ### TASK:GetMission()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* [MISSION](#mission-class) self
+* [MISSION](#mission-class-) 
 
 
 ### TASK:GetGroups()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* [SET_GROUP](#set_group-class) self
+* [SET_GROUP](#set_group-class-) 
 
 
 ### TASK:AssignToGroup(TaskGroup)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:HasGroup(FindGroup)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) FindGroup
+* [GROUP](#group-class-) FindGroup
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### TASK:AssignToUnit(TaskUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
+* [UNIT](#unit-class-) TaskUnit
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:UnAssignFromUnit(TaskUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
+* [UNIT](#unit-class-) TaskUnit
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:SetTimeOut (Timer)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * #integer Timer : in seconds
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:MessageToGroups()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -267,7 +267,7 @@ self
 ### TASK:SendBriefingToAssignedGroups()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -275,7 +275,7 @@ self
 ### TASK:UnAssignFromGroups()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -283,7 +283,7 @@ self
 ### TASK:UnAssignFromGroup()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -291,117 +291,117 @@ self
 ### TASK:IsAssignedToGroup(TaskGroup)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### TASK:HasAliveUnits()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### TASK:SetMenu(MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:SetMenuForGroup(MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:SetPlannedMenuForGroup(TaskGroup, MenuText, MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 * <u>String</u> MenuText : The menu text.
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:SetAssignedMenuForGroup(TaskGroup, MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:RemoveMenu(MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:RemoveAssignedMenuForGroup(TaskGroup, MenuTime)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [GROUP](#group-class) TaskGroup
+* [GROUP](#group-class-) TaskGroup
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:MenuTaskStatus()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -409,7 +409,7 @@ self
 ### TASK:MenuTaskAbort()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -417,108 +417,108 @@ self
 ### TASK:GetTaskName()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> TaskName
+* <u>String</u> 
 
 
 ### TASK:GetProcessTemplate(ProcessName)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> ProcessName
 
 <h4> Returns </h4>
-* [FSM_PROCESS](#fsm_process-class) self
+* [FSM_PROCESS](#fsm_process-class-) 
 
 
 ### TASK:FailProcesses(TaskUnitName)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> TaskUnitName
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:SetStateMachine(TaskUnit, Fsm)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
-* [FSM_PROCESS](#fsm_process-class) Fsm
+* [UNIT](#unit-class-) TaskUnit
+* [FSM_PROCESS](#fsm_process-class-) Fsm
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:GetStateMachine(TaskUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
+* [UNIT](#unit-class-) TaskUnit
 
 <h4> Returns </h4>
-* [FSM_PROCESS](#fsm_process-class) self
+* [FSM_PROCESS](#fsm_process-class-) 
 
 
 ### TASK:RemoveStateMachine(TaskUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
+* [UNIT](#unit-class-) TaskUnit
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:HasStateMachine(TaskUnit)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [UNIT](#unit-class) TaskUnit
+* [UNIT](#unit-class-) TaskUnit
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:GetScoring()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class) Scoring
+* [SCORING](#scoring-class-) 
 
 
 ### TASK:GetTaskIndex()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> The : Task ID
+* <u>String</u>  The Task ID
 
 
 ### TASK:SetName(TaskName)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> TaskName
 
@@ -527,17 +527,17 @@ self
 ### TASK:GetName()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> The : Task Name
+* <u>String</u>  The Task Name
 
 
 ### TASK:SetType(TaskType)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> TaskType
 
@@ -546,17 +546,17 @@ self
 ### TASK:GetType()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> TaskType
+* <u>String</u> 
 
 
 ### TASK:SetID(TaskID)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> TaskID
 
@@ -565,17 +565,17 @@ self
 ### TASK:GetID()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> TaskID
+* <u>String</u> 
 
 
 ### TASK:StateSuccess()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -583,7 +583,7 @@ self
 ### TASK:IsStateSuccess()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -591,7 +591,7 @@ self
 ### TASK:StateFailed()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -599,7 +599,7 @@ self
 ### TASK:IsStateFailed()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -607,7 +607,7 @@ self
 ### TASK:StatePlanned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -615,7 +615,7 @@ self
 ### TASK:IsStatePlanned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -623,7 +623,7 @@ self
 ### TASK:StateAborted()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -631,7 +631,7 @@ self
 ### TASK:IsStateAborted()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -639,7 +639,7 @@ self
 ### TASK:StateCancelled()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -647,7 +647,7 @@ self
 ### TASK:IsStateCancelled()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -655,7 +655,7 @@ self
 ### TASK:StateAssigned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -663,7 +663,7 @@ self
 ### TASK:IsStateAssigned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -671,7 +671,7 @@ self
 ### TASK:StateHold()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -679,7 +679,7 @@ self
 ### TASK:IsStateHold()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -687,7 +687,7 @@ self
 ### TASK:StateReplanned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -695,7 +695,7 @@ self
 ### TASK:IsStateReplanned()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -703,7 +703,7 @@ self
 ### TASK:GetStateString()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
@@ -711,19 +711,19 @@ self
 ### TASK:SetBriefing(TaskBriefing)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> TaskBriefing
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:onenterAssigned(Event, From, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> Event
 * <u>String</u> From
@@ -734,7 +734,7 @@ self
 ### TASK:onenterSuccess(Event, From, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> Event
 * <u>String</u> From
@@ -745,7 +745,7 @@ self
 ### TASK:onenterAborted(From, Event, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> From
 * <u>String</u> Event
@@ -756,7 +756,7 @@ self
 ### TASK:onafterReplan(From, Event, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> From
 * <u>String</u> Event
@@ -767,7 +767,7 @@ self
 ### TASK:onenterFailed(From, Event, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> From
 * <u>String</u> Event
@@ -778,7 +778,7 @@ self
 ### TASK:onstatechange(Event, From, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> Event
 * <u>String</u> From
@@ -789,7 +789,7 @@ self
 ### TASK:onenterPlanned(Event, From, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> Event
 * <u>String</u> From
@@ -800,7 +800,7 @@ self
 ### TASK:onbeforeTimeOut(Event, From, To)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 * <u>String</u> Event
 * <u>String</u> From
@@ -811,32 +811,32 @@ self
 ### TASK:SetDispatcher(Dispatcher)
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
-* [DETECTION_MANAGER](#detection_manager-class) Dispatcher
+* [DETECTION_MANAGER](#detection_manager-class-) Dispatcher
 
 <h4> Returns </h4>
-* [TASK](#task-class)
-self
+* [TASK](#task-class-)
+
 
 
 ### TASK:ReportSummary()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### TASK:ReportDetails()
 
 <h4> Parameters </h4>
-* [TASK](#task-class)
+* [TASK](#task-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 

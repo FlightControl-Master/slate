@@ -21,7 +21,7 @@ Returns static object by its name. If no static object found nil will be returne
 * <u>String</u> name : Name of static object to find.
 
 <h4> Returns </h4>
-* #StaticObject self
+* #StaticObject 
 
 
 ### StaticObject:getID()
@@ -31,7 +31,7 @@ returns identifier of the static object.
 * #StaticObject self
 
 <h4> Returns </h4>
-* #StaticObject.ID self
+* #StaticObject.ID 
 
 
 ### StaticObject:getDesc()
@@ -41,7 +41,7 @@ Returns descriptor of the StaticObject.
 * #StaticObject self
 
 <h4> Returns </h4>
-* #StaticObject.Desc self
+* #StaticObject.Desc 
 
 
 ## StaticObject.Desc Class

@@ -3,7 +3,7 @@
 
 
 
-#####  [ACT_ASSIGN](#act_assign-class) FSM template class, extends [FSM_PROCESS](#fsm_process-class)
+#####  [ACT_ASSIGN](#act_assign-class-) FSM template class, extends [FSM_PROCESS](#fsm_process-class-)
 
 #####  ACT_ASSIGN state machine:
 
@@ -55,7 +55,7 @@ These state transition methods need to provide a return value, which is specifie
 
 
 
-#####  1) [ACT_ASSIGN_ACCEPT](#act_assign_accept-class) class, extends [ACT_ASSIGN](#act_assign-class)
+#####  1) [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-) class, extends [ACT_ASSIGN](#act_assign-class-)
 
 The ACT_ASSIGN_ACCEPT class accepts by default a task for a player. No player intervention is allowed to reject the task.
 
@@ -65,7 +65,7 @@ The ACT_ASSIGN_ACCEPT class accepts by default a task for a player. No player in
 
 
 
-#####  2) [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class) class, extends [ACT_ASSIGN](#act_assign-class)
+#####  2) [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-) class, extends [ACT_ASSIGN](#act_assign-class-)
 
 The ACT_ASSIGN_MENU_ACCEPT class accepts a task when the player accepts the task through an added menu option.
 This assignment type is useful to conditionally allow the player to choose whether or not he would accept the task.
@@ -90,20 +90,20 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) Task
-* [UNIT](#unit-class) ProcessUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [TASK](#task-class-) Task
+* [UNIT](#unit-class-) ProcessUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 
 ### ACT_ASSIGN:New()
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN](#act_assign-class)
+* [ACT_ASSIGN](#act_assign-class-)
 self
 
 <h4> Returns </h4>
-* [ACT_ASSIGN](#act_assign-class)
-The : task acceptance process.
+* [ACT_ASSIGN](#act_assign-class-)
+ The task acceptance process.
 
 
 ## ACT_ASSIGN_ACCEPT Class
@@ -119,15 +119,15 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) Task
-* [UNIT](#unit-class) ProcessUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [TASK](#task-class-) Task
+* [UNIT](#unit-class-) ProcessUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 
 ### ACT_ASSIGN_ACCEPT:New(TaskBriefing)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class)
+* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
 self
 * <u>String</u> TaskBriefing
 
@@ -136,9 +136,9 @@ self
 ### ACT_ASSIGN_ACCEPT:onafterStart(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class)
+* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
 self
-* [UNIT](#unit-class) ProcessUnit
+* [UNIT](#unit-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -148,9 +148,9 @@ self
 ### ACT_ASSIGN_ACCEPT:onenterAssigned(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class)
+* [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
 self
-* [UNIT](#unit-class) ProcessUnit
+* [UNIT](#unit-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -170,43 +170,43 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) Task
-* [UNIT](#unit-class) ProcessUnit
-* [ZONE_BASE](#zone_base-class) TargetZone
+* [TASK](#task-class-) Task
+* [UNIT](#unit-class-) ProcessUnit
+* [ZONE_BASE](#zone_base-class-) TargetZone
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:New(TaskName, TaskBriefing)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
 * <u>String</u> TaskName
 * <u>String</u> TaskBriefing
 
 <h4> Returns </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
-self
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
+
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:Init(TaskName, TaskBriefing)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
 * <u>String</u> TaskName
 * <u>String</u> TaskBriefing
 
 <h4> Returns </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
-self
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
+
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:onafterStart(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -216,7 +216,7 @@ self
 ### ACT_ASSIGN_MENU_ACCEPT:MenuAssign()
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
 
 <h4> Returns </h4>
@@ -224,7 +224,7 @@ self
 ### ACT_ASSIGN_MENU_ACCEPT:MenuReject()
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
 
 <h4> Returns </h4>
@@ -232,9 +232,9 @@ self
 ### ACT_ASSIGN_MENU_ACCEPT:onafterAssign(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -244,9 +244,9 @@ self
 ### ACT_ASSIGN_MENU_ACCEPT:onafterReject(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class)
+* [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To

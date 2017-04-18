@@ -1,9 +1,9 @@
 # Wrapper.Object Module
 This module contains the OBJECT class.
 
-##### 1) [OBJECT](#object-class) class, extends [BASE](#base-class)
+##### 1) [OBJECT](#object-class-) class, extends [BASE](#base-class-)
 
-The [OBJECT](#object-class) class is a wrapper class to handle the DCS Object objects:
+The [OBJECT](#object-class-) class is a wrapper class to handle the DCS Object objects:
 
 * Support all DCS Object APIs.
 * Enhance with Object specific APIs not in the DCS Object API set.
@@ -19,7 +19,7 @@ The OBJECT class provides the following functions to construct a OBJECT instance
 
 The following methods can be used to identify an Object object:
 
-* [OBJECT:GetID()](#object-getid): Returns the ID of the Object object.
+* OBJECT-GetID-: Returns the ID of the Object object.
 
 
 
@@ -38,33 +38,33 @@ BASE
 ### OBJECT:New(ObjectName)
 
 <h4> Parameters </h4>
-* [OBJECT](#object-class)
+* [OBJECT](#object-class-)
 self
 * Dcs.DCSWrapper.Object#Object ObjectName : The Object name
 
 <h4> Returns </h4>
-* [OBJECT](#object-class)
-self
+* [OBJECT](#object-class-)
+
 
 
 ### OBJECT:GetID()
 
 <h4> Parameters </h4>
-* [OBJECT](#object-class) self
+* [OBJECT](#object-class-) self
 
 <h4> Returns </h4>
-* Dcs.DCSWrapper.Object#Object.ID ObjectID
-* <u>Nil</u> The : DCS Object is not existing or alive.
+* Dcs.DCSWrapper.Object#Object.ID 
+* <u>Nil</u>  The DCS Object is not existing or alive.
 
 
 ### OBJECT:Destroy()
 
 <h4> Parameters </h4>
-* [OBJECT](#object-class)
+* [OBJECT](#object-class-)
 self
 
 <h4> Returns </h4>
-* <u>Nil</u> The : DCS Unit is not existing or alive.
+* <u>Nil</u>  The DCS Unit is not existing or alive.
 
 
 ## DCSObject Class

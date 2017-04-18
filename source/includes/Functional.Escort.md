@@ -1,9 +1,9 @@
 # Functional.Escort Module
 Taking the lead of AI escorting your flight.
 
-[ESCORT](#escort-class) class
+[ESCORT](#escort-class-) class
 
-The [ESCORT](#escort-class) class allows you to interact with escorting AI on your flight and take the lead.
+The [ESCORT](#escort-class-) class allows you to interact with escorting AI on your flight and take the lead.
 Each escorting group can be commanded with a whole set of radio commands (radio menu in your flight, and then F10).
 
 The radio commands will vary according the category of the group. The richest set of commands are with Helicopters and AirPlanes.
@@ -81,7 +81,7 @@ ESCORT construction methods.
 
 Create a new SPAWN object with the [ESCORT:New()](#escort-new-escortclient-escortgroup-escortname-escortbriefing) method:
 
-* [ESCORT:New()](#escort-new-escortclient-escortgroup-escortname-escortbriefing): Creates a new ESCORT object from a [GROUP](#group-class) for a [CLIENT](#client-class), with an optional briefing text.
+* [ESCORT:New()](#escort-new-escortclient-escortgroup-escortname-escortbriefing): Creates a new ESCORT object from a [GROUP](#group-class-) for a [CLIENT](#client-class-), with an optional briefing text.
 
 ESCORT initialization methods.
 
@@ -94,11 +94,11 @@ The following menus are created within the RADIO MENU (F10) of an active unit ho
 * [ESCORT:MenuFlare()](#escort-menuflare-menutextformat): Creates a menu to disperse flares.
 * [ESCORT:MenuSmoke()](#escort-menusmoke-menutextformat): Creates a menu to disparse smoke.
 * [ESCORT:MenuReportTargets()](#escort-menureporttargets-seconds): Creates a menu so that the escort reports targets.
-* ESCORT-MenuReportPosition: Creates a menu so that the escort reports its current position from bullseye.
+* ESCORT-MenuReportPosition-: Creates a menu so that the escort reports its current position from bullseye.
 * @{#ESCORT.MenuAssistedAttack: Creates a menu so that the escort supportes assisted attack from other escorts with the client.
 * @{#ESCORT.MenuROE: Creates a menu structure to set the rules of engagement of the escort.
 * @{#ESCORT.MenuEvasion: Creates a menu structure to set the evasion techniques when the escort is under threat.
-* [ESCORT:MenuResumeMission()](#escort-menuresumemission): Creates a menu structure so that the escort can resume from a waypoint.
+* ESCORT-MenuResumeMission-: Creates a menu structure so that the escort can resume from a waypoint.
 
 
 @usage
@@ -122,16 +122,16 @@ BASE
 
 <h4> Attributes </h4>
 
-* [CLIENT](#client-class) EscortClient
-* [GROUP](#group-class) EscortGroup
+* [CLIENT](#client-class-) EscortClient
+* [GROUP](#group-class-) EscortGroup
 * <u>String</u> EscortName
-* [MODE](#escort-mode-class) EscortMode : The mode the escort is in.
-* [SCHEDULER](#scheduler-class) FollowScheduler : The instance of the SCHEDULER class.
+* [MODE](#escort-mode-class-)EscortMode : The mode the escort is in.
+* [SCHEDULER](#scheduler-class-) FollowScheduler : The instance of the SCHEDULER class.
 * <u>Number</u> FollowDistance : The current follow distance.
 * <u>Boolean</u> ReportTargets : If true, nearby targets are reported.
-* [AI.Option.Air.val.REACTION_ON_THREAT](#ai.option.air.val.reaction_on_threat-class) OptionReactionOnThreat : Which REACTION_ON_THREAT is set to the EscortGroup.
-* [MENU_CLIENT](#menu_client-class) EscortMenuResumeMission
-* [DETECTION_BASE](#detection_base-class) Detection
+* [AI.Option.Air.val.REACTION_ON_THREAT](#ai.option.air.val.reaction_on_threat-class-) OptionReactionOnThreat : Which REACTION_ON_THREAT is set to the EscortGroup.
+* [MENU_CLIENT](#menu_client-class-) EscortMenuResumeMission
+* [DETECTION_BASE](#detection_base-class-) Detection
 
 
 ### ESCORT:New(EscortClient, EscortGroup, EscortName, EscortBriefing)
@@ -147,31 +147,31 @@ EscortPlanes = ESCORT:New( EscortClient, EscortGroup, "Desert", "Welcome to the 
 ```
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [CLIENT](#client-class) EscortClient : The client escorted by the EscortGroup.
-* [GROUP](#group-class) EscortGroup : The group AI escorting the EscortClient.
+* [CLIENT](#client-class-) EscortClient : The client escorted by the EscortGroup.
+* [GROUP](#group-class-) EscortGroup : The group AI escorting the EscortClient.
 * <u>String</u> EscortName : Name of the escort.
 * <u>String</u> EscortBriefing : A text showing the ESCORT briefing to the player. Note that if no EscortBriefing is provided, the default briefing will be shown.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:SetDetection(Detection)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [DETECTION_BASE](#detection_base-class) Detection
+* [DETECTION_BASE](#detection_base-class-) Detection
 
 <h4> Returns </h4>
 
 ### ESCORT:TestSmokeDirectionVector(SmokeDirection)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 * <u>Boolean</u> SmokeDirection : If true, then the direction vector will be smoked.
 
@@ -180,166 +180,166 @@ self
 ### ESCORT:Menus()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuFollowAt(Distance)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [Distance](#distance-class) Distance : The distance in meters that the escort needs to follow the client.
+* [Distance](#distance-class-) Distance : The distance in meters that the escort needs to follow the client.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [Distance](#distance-class) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
-* [Time](#time-class) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
+* [Distance](#distance-class-) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
+* [Time](#time-class-) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
 * <u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [Distance](#distance-class) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
-* [Time](#time-class) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
+* [Distance](#distance-class-) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
+* [Time](#time-class-) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
 * <u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [Distance](#distance-class) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
-* [Time](#time-class) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
+* [Distance](#distance-class-) Height : Optional parameter that sets the height in meters to let the escort orbit at the current location. The default value is 30 meters.
+* [Time](#time-class-) Seconds : Optional parameter that lets the escort orbit at the current position for a specified time. (not implemented yet). The default value is 0 seconds, meaning, that the escort will orbit forever until a sequent command is given.
 * <u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. The text string is formatted, and should contain one or two %d tokens in the string. The first for the Height, the second for the Time (if given). If no text is given, the default text will be displayed.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuFlare(MenuTextFormat)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 * <u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuSmoke(MenuTextFormat)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 * <u>String</u> MenuTextFormat : Optional parameter that shows the menu option text. If no text is given, the default text will be displayed.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuReportTargets(Seconds)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
-* [Time](#time-class) Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30 seconds.
+* [Time](#time-class-) Seconds : Optional parameter that lets the escort report their current detected targets after specified time interval in seconds. The default time is 30 seconds.
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuAssistedAttack()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuROE()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuEvasion()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:MenuResumeMission()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* [ESCORT](#escort-class)
-self
+* [ESCORT](#escort-class-)
+
 
 
 ### ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class) self
-* [GROUP](#group-class) EscortGroup
-* [CLIENT](#client-class) EscortClient
-* [Distance](#distance-class) Distance
+* [ESCORT](#escort-class-) self
+* [GROUP](#group-class-) EscortGroup
+* [CLIENT](#client-class-) EscortClient
+* [Distance](#distance-class-) Distance
 
 <h4> Returns </h4>
 
 ### ESCORT:RegisterRoute()
 
 <h4> Parameters </h4>
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 self
 
 <h4> Returns </h4>
-* <u>List[]</u> self
+* <u>List[]</u> 
 
 
 ## ESCORT.MODE Class
@@ -360,7 +360,7 @@ The MENUPARAM class does not inherit
 
 <h4> Attributes </h4>
 
-* [ESCORT](#escort-class)
+* [ESCORT](#escort-class-)
 ParamSelf
 * #Distance ParamDistance
 * <u>Function()</u> ParamFunction

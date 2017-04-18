@@ -96,7 +96,7 @@ A POINT_VEC3 can prepare waypoints for Ground and Air groups to be embedded into
 * @{#POINT_VEC3.RoutePointAir}(): Build an air route point.
 * @{#POINT_VEC3.RoutePointGround}(): Build a ground route point.
 
-Route points can be used in the Route methods of the [GROUP](#group-class) class.
+Route points can be used in the Route methods of the [GROUP](#group-class-) class.
 
 
 #####  Smoke, flare, explode, illuminate
@@ -183,8 +183,8 @@ The POINT_VEC3 class
 * <u>Number</u> x : The x coordinate in 3D space.
 * <u>Number</u> y : The y coordinate in 3D space.
 * <u>Number</u> z : The z coordiante in 3D space.
-* [SMOKECOLOR](#smokecolor-class) SmokeColor
-* [FLARECOLOR](#flarecolor-class) FlareColor
+* [SMOKECOLOR](#smokecolor-class-) SmokeColor
+* [FLARECOLOR](#flarecolor-class-) FlareColor
 * #POINT_VEC3.RoutePointAltType RoutePointAltType
 * #POINT_VEC3.RoutePointType RoutePointType
 * #POINT_VEC3.RoutePointAction RoutePointAction
@@ -194,32 +194,32 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) x : The x coordinate of the Vec3 point, pointing to the North.
-* [Distance](#distance-class) y : The y coordinate of the Vec3 point, pointing Upwards.
-* [Distance](#distance-class) z : The z coordinate of the Vec3 point, pointing to the Right.
+* [Distance](#distance-class-) x : The x coordinate of the Vec3 point, pointing to the North.
+* [Distance](#distance-class-) y : The y coordinate of the Vec3 point, pointing Upwards.
+* [Distance](#distance-class-) z : The z coordinate of the Vec3 point, pointing to the Right.
 
 <h4> Returns </h4>
-* [POINT_VEC3](#point_vec3-class) self
+* [POINT_VEC3](#point_vec3-class-) 
 
 
 ### POINT_VEC3:NewFromVec2(Vec2)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Vec2](#vec2-class) Vec2 : The Vec2 point.
+* [Vec2](#vec2-class-) Vec2 : The Vec2 point.
 
 <h4> Returns </h4>
-* [POINT_VEC3](#point_vec3-class) self
+* [POINT_VEC3](#point_vec3-class-) 
 
 
 ### POINT_VEC3:NewFromVec3(Vec3)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Vec3](#vec3-class) Vec3 : The Vec3 point.
+* [Vec3](#vec3-class-) Vec3 : The Vec3 point.
 
 <h4> Returns </h4>
-* [POINT_VEC3](#point_vec3-class) self
+* [POINT_VEC3](#point_vec3-class-) 
 
 
 ### POINT_VEC3:GetVec3()
@@ -228,7 +228,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* [Vec3](#vec3-class) The : Vec3 coodinate.
+* [Vec3](#vec3-class-)  The Vec3 coodinate.
 
 
 ### POINT_VEC3:GetVec2()
@@ -237,7 +237,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* [Vec2](#vec2-class) The : Vec2 coodinate.
+* [Vec2](#vec2-class-)  The Vec2 coodinate.
 
 
 ### POINT_VEC3:GetX()
@@ -246,7 +246,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : x coodinate.
+* <u>Number</u>  The x coodinate.
 
 
 ### POINT_VEC3:GetY()
@@ -255,7 +255,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : y coodinate.
+* <u>Number</u>  The y coodinate.
 
 
 ### POINT_VEC3:GetZ()
@@ -264,7 +264,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : z coodinate.
+* <u>Number</u>  The z coodinate.
 
 
 ### POINT_VEC3:SetX(x)
@@ -274,7 +274,7 @@ The POINT_VEC3 class
 * <u>Number</u> x : The x coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:SetY(y)
@@ -284,7 +284,7 @@ The POINT_VEC3 class
 * <u>Number</u> y : The y coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:SetZ(z)
@@ -294,7 +294,7 @@ The POINT_VEC3 class
 * <u>Number</u> z : The z coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:AddX(x)
@@ -304,7 +304,7 @@ The POINT_VEC3 class
 * <u>Number</u> x : The x coordinate value to add to the current x coodinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:AddY(y)
@@ -314,7 +314,7 @@ The POINT_VEC3 class
 * <u>Number</u> y : The y coordinate value to add to the current y coodinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:AddZ(z)
@@ -324,51 +324,51 @@ The POINT_VEC3 class
 * <u>Number</u> z : The z coordinate value to add to the current z coodinate.
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:GetRandomVec2InRadius(OuterRadius, InnerRadius)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) OuterRadius
-* [Distance](#distance-class) InnerRadius
+* [Distance](#distance-class-) OuterRadius
+* [Distance](#distance-class-) InnerRadius
 
 <h4> Returns </h4>
-* [Vec2](#vec2-class) Vec2
+* [Vec2](#vec2-class-) 
 
 
 ### POINT_VEC3:GetRandomPointVec2InRadius(OuterRadius, InnerRadius)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) OuterRadius
-* [Distance](#distance-class) InnerRadius
+* [Distance](#distance-class-) OuterRadius
+* [Distance](#distance-class-) InnerRadius
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC3:GetRandomVec3InRadius(OuterRadius, InnerRadius)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) OuterRadius
-* [Distance](#distance-class) InnerRadius
+* [Distance](#distance-class-) OuterRadius
+* [Distance](#distance-class-) InnerRadius
 
 <h4> Returns </h4>
-* [Vec3](#vec3-class) Vec3
+* [Vec3](#vec3-class-) 
 
 
 ### POINT_VEC3:GetRandomPointVec3InRadius(OuterRadius, InnerRadius)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) OuterRadius
-* [Distance](#distance-class) InnerRadius
+* [Distance](#distance-class-) OuterRadius
+* [Distance](#distance-class-) InnerRadius
 
 <h4> Returns </h4>
-* #POINT_VEC3 self
+* #POINT_VEC3 
 
 
 ### POINT_VEC3:GetDirectionVec3(TargetPointVec3)
@@ -378,7 +378,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 TargetPointVec3 : The target POINT_VEC3.
 
 <h4> Returns </h4>
-* [Vec3](#vec3-class) DirectionVec3 : The direction vector in Vec3 format.
+* [Vec3](#vec3-class-)  DirectionVec3 The direction vector in Vec3 format.
 
 
 ### POINT_VEC3:GetNorthCorrectionRadians()
@@ -387,27 +387,27 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>Number</u> CorrectionRadians : The correction in radians.
+* <u>Number</u>  CorrectionRadians The correction in radians.
 
 
 ### POINT_VEC3:GetAngleRadians(DirectionVec3)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Vec3](#vec3-class) DirectionVec3 : The direction vector in Vec3 format.
+* [Vec3](#vec3-class-) DirectionVec3 : The direction vector in Vec3 format.
 
 <h4> Returns </h4>
-* <u>Number</u> DirectionRadians : The angle in radians.
+* <u>Number</u>  DirectionRadians The angle in radians.
 
 
 ### POINT_VEC3:GetAngleDegrees(DirectionVec3)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Vec3](#vec3-class) DirectionVec3 : The direction vector in Vec3 format.
+* [Vec3](#vec3-class-) DirectionVec3 : The direction vector in Vec3 format.
 
 <h4> Returns </h4>
-* <u>Number</u> DirectionRadians : The angle in degrees.
+* <u>Number</u>  DirectionRadians The angle in degrees.
 
 
 ### POINT_VEC3:Get2DDistance(TargetPointVec3)
@@ -417,7 +417,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 TargetPointVec3 : The target POINT_VEC3.
 
 <h4> Returns </h4>
-* [Distance](#distance-class) Distance : The distance in meters.
+* [Distance](#distance-class-)  Distance The distance in meters.
 
 
 ### POINT_VEC3:Get3DDistance(TargetPointVec3)
@@ -427,7 +427,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 TargetPointVec3 : The target POINT_VEC3.
 
 <h4> Returns </h4>
-* [Distance](#distance-class) Distance : The distance in meters.
+* [Distance](#distance-class-)  Distance The distance in meters.
 
 
 ### POINT_VEC3:ToStringBR(AngleRadians, Distance)
@@ -438,7 +438,7 @@ The POINT_VEC3 class
 * <u>Number</u> Distance : The distance
 
 <h4> Returns </h4>
-* <u>String</u> The : BR Text
+* <u>String</u>  The BR Text
 
 
 ### POINT_VEC3:ToStringLL(AngleRadians, Distance)
@@ -449,7 +449,7 @@ The POINT_VEC3 class
 * <u>Number</u> Distance : The distance
 
 <h4> Returns </h4>
-* <u>String</u> The : BR Text
+* <u>String</u>  The BR Text
 
 
 ### POINT_VEC3:GetAltitudeText()
@@ -458,7 +458,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>String</u> Altitude : text.
+* <u>String</u>  Altitude text.
 
 
 ### POINT_VEC3:GetBRText(TargetPointVec3)
@@ -468,7 +468,7 @@ The POINT_VEC3 class
 * #POINT_VEC3 TargetPointVec3 : The target POINT_VEC3.
 
 <h4> Returns </h4>
-* <u>String</u> The : BR text.
+* <u>String</u>  The BR text.
 
 
 ### POINT_VEC3:SetMetric(Metric)
@@ -485,18 +485,18 @@ The POINT_VEC3 class
 * #POINT_VEC3 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> Metric : true means metric, false means NM.
+* <u>Boolean</u>  Metric true means metric, false means NM.
 
 
 ### POINT_VEC3:Translate(Distance, Angle)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Distance](#distance-class) Distance : The Distance to be added in meters.
-* [Angle](#angle-class) Angle : The Angle in degrees.
+* [Distance](#distance-class-) Distance : The Distance to be added in meters.
+* [Angle](#angle-class-) Angle : The Angle in degrees.
 
 <h4> Returns </h4>
-* #POINT_VEC3 The : new calculated POINT_VEC3.
+* #POINT_VEC3  The new calculated POINT_VEC3.
 
 
 ### POINT_VEC3:RoutePointAir(AltType, Type, Action, Speed, SpeedLocked)
@@ -506,22 +506,22 @@ The POINT_VEC3 class
 * #POINT_VEC3.RoutePointAltType AltType : The altitude type.
 * #POINT_VEC3.RoutePointType Type : The route point type.
 * #POINT_VEC3.RoutePointAction Action : The route point action.
-* [Speed](#speed-class) Speed : Airspeed in km/h.
+* [Speed](#speed-class-) Speed : Airspeed in km/h.
 * <u>Boolean</u> SpeedLocked : true means the speed is locked.
 
 <h4> Returns </h4>
-* <u>List[]</u> The : route point.
+* <u>List[]</u>  The route point.
 
 
 ### POINT_VEC3:RoutePointGround(Speed, Formation)
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Speed](#speed-class) Speed : Speed in km/h.
+* [Speed](#speed-class-) Speed : Speed in km/h.
 * #POINT_VEC3.RoutePointAction Formation : The route point Formation.
 
 <h4> Returns </h4>
-* <u>List[]</u> The : route point.
+* <u>List[]</u>  The route point.
 
 
 ### POINT_VEC3:Explosion(ExplosionIntensity)
@@ -543,7 +543,7 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [SMOKECOLOR](#smokecolor-class) SmokeColor
+* [SMOKECOLOR](#smokecolor-class-) SmokeColor
 
 <h4> Returns </h4>
 
@@ -586,8 +586,8 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [FLARECOLOR](#flarecolor-class) FlareColor
-* [Azimuth](#azimuth-class) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
+* [FLARECOLOR](#flarecolor-class-) FlareColor
+* [Azimuth](#azimuth-class-) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
 
 <h4> Returns </h4>
 
@@ -595,7 +595,7 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Azimuth](#azimuth-class) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
+* [Azimuth](#azimuth-class-) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
 
 <h4> Returns </h4>
 
@@ -603,7 +603,7 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Azimuth](#azimuth-class) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
+* [Azimuth](#azimuth-class-) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
 
 <h4> Returns </h4>
 
@@ -611,7 +611,7 @@ The POINT_VEC3 class
 
 <h4> Parameters </h4>
 * #POINT_VEC3 self
-* [Azimuth](#azimuth-class) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
+* [Azimuth](#azimuth-class-) (optional) : Azimuth The azimuth of the flare direction. The default azimuth is 0.
 
 <h4> Returns </h4>
 
@@ -658,40 +658,40 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 
 <h4> Attributes </h4>
 
-* [Distance](#distance-class) x : The x coordinate in meters.
-* [Distance](#distance-class) y : the y coordinate in meters.
+* [Distance](#distance-class-) x : The x coordinate in meters.
+* [Distance](#distance-class-) y : the y coordinate in meters.
 
 
 ### POINT_VEC2:New(x, y, LandHeightAdd)
 
 <h4> Parameters </h4>
 * #POINT_VEC2 self
-* [Distance](#distance-class) x : The x coordinate of the Vec3 point, pointing to the North.
-* [Distance](#distance-class) y : The y coordinate of the Vec3 point, pointing to the Right.
-* [Distance](#distance-class) LandHeightAdd : (optional) The default height if required to be evaluated will be the land height of the x, y coordinate. You can specify an extra height to be added to the land height.
+* [Distance](#distance-class-) x : The x coordinate of the Vec3 point, pointing to the North.
+* [Distance](#distance-class-) y : The y coordinate of the Vec3 point, pointing to the Right.
+* [Distance](#distance-class-) LandHeightAdd : (optional) The default height if required to be evaluated will be the land height of the x, y coordinate. You can specify an extra height to be added to the land height.
 
 <h4> Returns </h4>
-* [POINT_VEC2](#point_vec2-class) self
+* [POINT_VEC2](#point_vec2-class-) 
 
 
 ### POINT_VEC2:NewFromVec2(Vec2)
 
 <h4> Parameters </h4>
 * #POINT_VEC2 self
-* [Vec2](#vec2-class) Vec2 : The Vec2 point.
+* [Vec2](#vec2-class-) Vec2 : The Vec2 point.
 
 <h4> Returns </h4>
-* [POINT_VEC2](#point_vec2-class) self
+* [POINT_VEC2](#point_vec2-class-) 
 
 
 ### POINT_VEC2:NewFromVec3(Vec3)
 
 <h4> Parameters </h4>
 * #POINT_VEC2 self
-* [Vec3](#vec3-class) Vec3 : The Vec3 point.
+* [Vec3](#vec3-class-) Vec3 : The Vec3 point.
 
 <h4> Returns </h4>
-* [POINT_VEC2](#point_vec2-class) self
+* [POINT_VEC2](#point_vec2-class-) 
 
 
 ### POINT_VEC2:GetX()
@@ -700,7 +700,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : x coodinate.
+* <u>Number</u>  The x coodinate.
 
 
 ### POINT_VEC2:GetY()
@@ -709,7 +709,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : y coodinate.
+* <u>Number</u>  The y coodinate.
 
 
 ### POINT_VEC2:GetAlt()
@@ -718,7 +718,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : land altitude.
+* <u>Number</u>  The land altitude.
 
 
 ### POINT_VEC2:GetLat()
@@ -727,7 +727,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : x coodinate.
+* <u>Number</u>  The x coodinate.
 
 
 ### POINT_VEC2:GetLon()
@@ -736,7 +736,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : y coodinate.
+* <u>Number</u>  The y coodinate.
 
 
 ### POINT_VEC2:SetX(x)
@@ -746,7 +746,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> x : The x coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:SetY(y)
@@ -756,7 +756,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> y : The y coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:SetLat(x)
@@ -766,7 +766,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> x : The x coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:SetAlt(Altitude)
@@ -776,7 +776,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> Altitude : The land altitude. If nothing (nil) is given, then the current land altitude is set.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:SetLon(y)
@@ -786,7 +786,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> y : The y coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:AddX(x)
@@ -796,7 +796,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> x : The x coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:AddY(y)
@@ -806,7 +806,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> y : The y coordinate.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:AddAlt(Altitude)
@@ -816,7 +816,7 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * <u>Number</u> Altitude : The Altitude to add. If nothing (nil) is given, then the current land altitude is set.
 
 <h4> Returns </h4>
-* #POINT_VEC2 self
+* #POINT_VEC2 
 
 
 ### POINT_VEC2:DistanceFromPointVec2(PointVec2Reference)
@@ -826,17 +826,17 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 PointVec2Reference : The reference @{#POINT_VEC2}.
 
 <h4> Returns </h4>
-* [Distance](#distance-class) The : distance from the reference @{#POINT_VEC2} in meters.
+* [Distance](#distance-class-)  The distance from the reference @{#POINT_VEC2} in meters.
 
 
 ### POINT_VEC2:DistanceFromVec2(Vec2Reference)
 
 <h4> Parameters </h4>
 * #POINT_VEC2 self
-* [Vec2](#vec2-class) Vec2Reference : The reference @{DCSTypes#Vec2}.
+* [Vec2](#vec2-class-) Vec2Reference : The reference @{DCSTypes#Vec2}.
 
 <h4> Returns </h4>
-* [Distance](#distance-class) The : distance from the reference @{DCSTypes#Vec2} in meters.
+* [Distance](#distance-class-)  The distance from the reference @{DCSTypes#Vec2} in meters.
 
 
 ### POINT_VEC2:GetAltitudeText()
@@ -845,18 +845,18 @@ local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
 * #POINT_VEC2 self
 
 <h4> Returns </h4>
-* <u>String</u> Empty : string.
+* <u>String</u>  Empty string.
 
 
 ### POINT_VEC2:Translate(Distance, Angle)
 
 <h4> Parameters </h4>
 * #POINT_VEC2 self
-* [Distance](#distance-class) Distance : The Distance to be added in meters.
-* [Angle](#angle-class) Angle : The Angle in degrees.
+* [Distance](#distance-class-) Distance : The Distance to be added in meters.
+* [Angle](#angle-class-) Angle : The Angle in degrees.
 
 <h4> Returns </h4>
-* #POINT_VEC2 The : new calculated POINT_VEC2.
+* #POINT_VEC2  The new calculated POINT_VEC2.
 
 
 ## POINT_VEC3.RoutePointAltType Class

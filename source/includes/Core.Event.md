@@ -48,7 +48,7 @@ But for some DCS events, the publishing order is reversed. This is due to the fa
 
 ![Objects](/includes/Pictures/EVENT/Dia8.JPG)
 
-The actual event subscribing and handling is not facilitated through the _EVENTDISPATCHER, but it is done through the [BASE](#base-module) class, [UNIT](#unit-module) class and [GROUP](#group-module) class.
+The actual event subscribing and handling is not facilitated through the _EVENTDISPATCHER, but it is done through the [BASE](#base-module-) class, [UNIT](#unit-module-) class and [GROUP](#group-module-) class.
 The _EVENTDISPATCHER is a component that is quietly working in the background of MOOSE.
 
 ![Objects](/includes/Pictures/EVENT/Dia9.JPG)
@@ -75,7 +75,7 @@ then the object event handler will receive the event for that UNIT!
 #####  1.3.2 Event Handling of DCS Events
 
 Once the class is subscribed to the event, an **Event Handling** method on the object or class needs to be written that will be called
-when the DCS event occurs. The Event Handling method receives an [EVENTDATA](#eventdata-class) structure, which contains a lot of information
+when the DCS event occurs. The Event Handling method receives an [EVENTDATA](#eventdata-class-) structure, which contains a lot of information
 about the event that occurred.
 
 Find below an example of the prototype how to write an event handling function for two units:
@@ -88,16 +88,16 @@ Tank1:HandleEvent( EVENTS.Dead )
 Tank2:HandleEvent( EVENTS.Dead )
 
  This function is an Event Handling function that will be called when Tank1 is Dead.
--- @param [UNIT](#unit-class) self
--- @param [EVENTDATA](#eventdata-class) EventData
+-- @param [UNIT](#unit-class-) self
+-- @param [EVENTDATA](#eventdata-class-) EventData
 function Tank1:OnEventDead( EventData )
 
 self:SmokeGreen()
 end
 
  This function is an Event Handling function that will be called when Tank2 is Dead.
--- @param [UNIT](#unit-class) self
--- @param [EVENTDATA](#eventdata-class) EventData
+-- @param [UNIT](#unit-class-) self
+-- @param [EVENTDATA](#eventdata-class-) EventData
 function Tank2:OnEventDead( EventData )
 
 self:SmokeBlue()
@@ -117,7 +117,7 @@ The EVENTS structure contains names for all the different DCS events that object
 
 #####  3) EVENTDATA type
 
-The [EVENTDATA](#eventdata-class) structure contains all the fields that are populated with event information before
+The [EVENTDATA](#eventdata-class-) structure contains all the fields that are populated with event information before
 an Event Handler method is being called by the event dispatcher.
 The Event Handler received the EVENTDATA object as a parameter, and can be used to investigate further the different events.
 There are basically 4 main categories of information stored in the EVENTDATA structure:
@@ -130,8 +130,8 @@ There are basically 4 main categories of information stored in the EVENTDATA str
  This function is an Event Handling function that will be called when Tank1 is Dead.
 -- EventData is an EVENTDATA structure.
 -- We use the EventData.IniUnit to smoke the tank Green.
--- @param [UNIT](#unit-class) self
--- @param [EVENTDATA](#eventdata-class) EventData
+-- @param [UNIT](#unit-class-) self
+-- @param [EVENTDATA](#eventdata-class-) EventData
 function Tank1:OnEventDead( EventData )
 
 EventData.IniUnit:SmokeGreen()
@@ -195,58 +195,58 @@ BASE
 
 <h4> Attributes </h4>
 
-* [Events](#event-events-class) Events
+* [Events](#event-events-class-)Events
 
 
 ### EVENT:Init(EventID, EventClass)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [world.event](#world.event-class) EventID
-* [BASE](#base-class) EventClass
+* [world.event](#world.event-class-) EventID
+* [BASE](#base-class-) EventClass
 
 <h4> Returns </h4>
-* [Events](#event-events-class) self
+* [Events](#event-events-class-)
 
 
 ### EVENT:Remove(EventClass, EventID)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [BASE](#base-class) EventClass : The self instance of the class for which the event is.
-* [world.event](#world.event-class) EventID
+* [BASE](#base-class-) EventClass : The self instance of the class for which the event is.
+* [world.event](#world.event-class-) EventID
 
 <h4> Returns </h4>
-* [Events](#event-events-class) self
+* [Events](#event-events-class-)
 
 
 ### EVENT:Reset(EventClass, EventID)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [BASE](#base-class) EventClass : The self instance of the class for which the event is.
-* [world.event](#world.event-class) EventID
+* [BASE](#base-class-) EventClass : The self instance of the class for which the event is.
+* [world.event](#world.event-class-) EventID
 
 <h4> Returns </h4>
-* [Events](#event-events-class) self
+* [Events](#event-events-class-)
 
 
 ### EVENT:RemoveAll(EventObject)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [BASE](#base-class) EventObject
+* [BASE](#base-class-) EventObject
 
 <h4> Returns </h4>
 
 ### EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>List[]</u> EventTemplate
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
@@ -254,162 +254,162 @@ self
 * <u>Function()</u> OnEventFunction
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnEventGeneric(EventFunction, EventClass, self)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
-* [BASE](#base-class) EventClass : The self instance of the class for which the event is captured. When the event happens, the event process will be called in this class provided.
+* [BASE](#base-class-) EventClass : The self instance of the class for which the event is captured. When the event happens, the event process will be called in this class provided.
 * EventID self
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>String</u> UnitName : The name of the UNIT.
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the GROUP.
-* [BASE](#base-class) EventClass : The self instance of the class for which the event is.
+* [BASE](#base-class-) EventClass : The self instance of the class for which the event is.
 * EventID self
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>String</u> GroupName : The name of the GROUP.
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the GROUP.
-* [BASE](#base-class) EventClass : The self instance of the class for which the event is.
+* [BASE](#base-class-) EventClass : The self instance of the class for which the event is.
 * EventID self
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [GROUP](#group-class) EventGroup
+* [GROUP](#group-class-) EventGroup
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [GROUP](#group-class) EventGroup
+* [GROUP](#group-class-) EventGroup
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [GROUP](#group-class) EventGroup
+* [GROUP](#group-class-) EventGroup
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>List[]</u> EventTemplate
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>List[]</u> EventTemplate
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
 * <u>List[]</u> EventTemplate
 * <u>Function()</u> EventFunction : The function to be called when the event occurs for the unit.
 * EventClass The : self instance of the class for which the event is.
 
 <h4> Returns </h4>
-* [EVENT](#event-class)
-self
+* [EVENT](#event-class-)
+
 
 
 ### EVENT:CreateEventNewCargo(Cargo)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [AI_CARGO](#ai_cargo-class) Cargo : The Cargo created.
+* [AI_CARGO](#ai_cargo-class-) Cargo : The Cargo created.
 
 <h4> Returns </h4>
 
 ### EVENT:CreateEventDeleteCargo(Cargo)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [AI_CARGO](#ai_cargo-class) Cargo : The Cargo created.
+* [AI_CARGO](#ai_cargo-class-) Cargo : The Cargo created.
 
 <h4> Returns </h4>
 
 ### EVENT:onEvent(Event)
 
 <h4> Parameters </h4>
-* [EVENT](#event-class)
+* [EVENT](#event-class-)
 self
-* [EVENTDATA](#eventdata-class)
+* [EVENTDATA](#eventdata-class-)
 Event
 
 <h4> Returns </h4>
@@ -434,33 +434,33 @@ Note that at the beginning of each field description, there is an indication whi
 <h4> Attributes </h4>
 
 * <u>Number</u> id : The identifier of the event.
-* [Unit](#unit-class) initiator : (UNIT/STATIC/SCENERY) The initiating @{Dcs.DCSUnit#Unit} or @{Dcs.DCSStaticObject#StaticObject}.
-* [Object.Category](#object.category-class) IniObjectCategory : (UNIT/STATIC/SCENERY) The initiator object category ( Object.Category.UNIT or Object.Category.STATIC ).
-* [Unit](#unit-class) IniDCSUnit : (UNIT/STATIC) The initiating @{DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
+* [Unit](#unit-class-) initiator : (UNIT/STATIC/SCENERY) The initiating @{Dcs.DCSUnit#Unit} or @{Dcs.DCSStaticObject#StaticObject}.
+* [Object.Category](#object.category-class-) IniObjectCategory : (UNIT/STATIC/SCENERY) The initiator object category ( Object.Category.UNIT or Object.Category.STATIC ).
+* [Unit](#unit-class-) IniDCSUnit : (UNIT/STATIC) The initiating @{DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
 * <u>String</u> IniDCSUnitName : (UNIT/STATIC) The initiating Unit name.
-* [UNIT](#unit-class) IniUnit : (UNIT/STATIC) The initiating MOOSE wrapper [UNIT](#unit-class) of the initiator Unit object.
+* [UNIT](#unit-class-) IniUnit : (UNIT/STATIC) The initiating MOOSE wrapper [UNIT](#unit-class-) of the initiator Unit object.
 * <u>String</u> IniUnitName : (UNIT/STATIC) The initiating UNIT name (same as IniDCSUnitName).
-* [Group](#group-class) IniDCSGroup : (UNIT) The initiating {DCSGroup#Group}.
+* [Group](#group-class-) IniDCSGroup : (UNIT) The initiating {DCSGroup#Group}.
 * <u>String</u> IniDCSGroupName : (UNIT) The initiating Group name.
-* [GROUP](#group-class) IniGroup : (UNIT) The initiating MOOSE wrapper [GROUP](#group-class) of the initiator Group object.
+* [GROUP](#group-class-) IniGroup : (UNIT) The initiating MOOSE wrapper [GROUP](#group-class-) of the initiator Group object.
 * <u>String</u> IniGroupName : UNIT) The initiating GROUP name (same as IniDCSGroupName).
 * <u>String</u> IniPlayerName : (UNIT) The name of the initiating player in case the Unit is a client or player slot.
-* [coalition.side](#coalition.side-class) IniCoalition : (UNIT) The coalition of the initiator.
-* [Unit.Category](#unit.category-class) IniCategory : (UNIT) The category of the initiator.
+* [coalition.side](#coalition.side-class-) IniCoalition : (UNIT) The coalition of the initiator.
+* [Unit.Category](#unit.category-class-) IniCategory : (UNIT) The category of the initiator.
 * <u>String</u> IniTypeName : (UNIT) The type name of the initiator.
-* [Unit](#unit-class) target : (UNIT/STATIC) The target @{Dcs.DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
-* [Object.Category](#object.category-class) TgtObjectCategory : (UNIT/STATIC) The target object category ( Object.Category.UNIT or Object.Category.STATIC ).
-* [Unit](#unit-class) TgtDCSUnit : (UNIT/STATIC) The target @{DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
+* [Unit](#unit-class-) target : (UNIT/STATIC) The target @{Dcs.DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
+* [Object.Category](#object.category-class-) TgtObjectCategory : (UNIT/STATIC) The target object category ( Object.Category.UNIT or Object.Category.STATIC ).
+* [Unit](#unit-class-) TgtDCSUnit : (UNIT/STATIC) The target @{DCSUnit#Unit} or @{DCSStaticObject#StaticObject}.
 * <u>String</u> TgtDCSUnitName : (UNIT/STATIC) The target Unit name.
-* [UNIT](#unit-class) TgtUnit : (UNIT/STATIC) The target MOOSE wrapper [UNIT](#unit-class) of the target Unit object.
+* [UNIT](#unit-class-) TgtUnit : (UNIT/STATIC) The target MOOSE wrapper [UNIT](#unit-class-) of the target Unit object.
 * <u>String</u> TgtUnitName : (UNIT/STATIC) The target UNIT name (same as TgtDCSUnitName).
-* [Group](#group-class) TgtDCSGroup : (UNIT) The target {DCSGroup#Group}.
+* [Group](#group-class-) TgtDCSGroup : (UNIT) The target {DCSGroup#Group}.
 * <u>String</u> TgtDCSGroupName : (UNIT) The target Group name.
-* [GROUP](#group-class) TgtGroup : (UNIT) The target MOOSE wrapper [GROUP](#group-class) of the target Group object.
+* [GROUP](#group-class-) TgtGroup : (UNIT) The target MOOSE wrapper [GROUP](#group-class-) of the target Group object.
 * <u>String</u> TgtGroupName : (UNIT) The target GROUP name (same as TgtDCSGroupName).
 * <u>String</u> TgtPlayerName : (UNIT) The name of the target player in case the Unit is a client or player slot.
-* [coalition.side](#coalition.side-class) TgtCoalition : (UNIT) The coalition of the target.
-* [Unit.Category](#unit.category-class) TgtCategory : (UNIT) The category of the target.
+* [coalition.side](#coalition.side-class-) TgtCoalition : (UNIT) The coalition of the target.
+* [Unit.Category](#unit.category-class-) TgtCategory : (UNIT) The category of the target.
 * <u>String</u> TgtTypeName : (UNIT) The type name of the target.
 * weapon The : weapon used during the event.
 * Weapon self
@@ -489,11 +489,11 @@ BASE
 ### EVENTHANDLER:New()
 
 <h4> Parameters </h4>
-* [EVENTHANDLER](#eventhandler-class)
+* [EVENTHANDLER](#eventhandler-class-)
 self
 
 <h4> Returns </h4>
-* [EVENTHANDLER](#eventhandler-class)
-self
+* [EVENTHANDLER](#eventhandler-class-)
+
 
 

@@ -3,9 +3,9 @@ This module contains the MISSILETRAINER class.
 
 
 
-##### 1) [MISSILETRAINER](#missiletrainer-class) class, extends [BASE](#base-class)
+##### 1) [MISSILETRAINER](#missiletrainer-class-) class, extends [BASE](#base-class-)
 
-The [MISSILETRAINER](#missiletrainer-class) class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
+The [MISSILETRAINER](#missiletrainer-class-) class uses the DCS world messaging system to be alerted of any missiles fired, and when a missile would hit your aircraft,
 the class will destroy the missile within a certain range, to avoid damage to your aircraft.
 It suports the following functionality:
 
@@ -87,148 +87,148 @@ BASE
 
 <h4> Attributes </h4>
 
-* [SET_CLIENT](#set_client-class) DBClients
+* [SET_CLIENT](#set_client-class-) DBClients
 
 
 ### MISSILETRAINER:New(Distance, Briefing)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Number</u> Distance : The distance in meters when a tracked missile needs to be destroyed when close to a player.
 * <u>String</u> Briefing : (Optional) Will show a text to the players when starting their mission. Can be used for briefing purposes.
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitMessagesOnOff(MessagesOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> MessagesOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitTrackingToAll(TrackingToAll)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> TrackingToAll : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitTrackingOnOff(TrackingOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> TrackingOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitTrackingFrequency(TrackingFrequency)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Number</u> TrackingFrequency : Provide a negative or positive value in seconds to incraese or decrease the display frequency.
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitAlertsToAll(AlertsToAll)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> AlertsToAll : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitAlertsHitsOnOff(AlertsHitsOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> AlertsHitsOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitAlertsLaunchesOnOff(AlertsLaunchesOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> AlertsLaunchesOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitRangeOnOff(DetailsRangeOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> DetailsRangeOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitBearingOnOff(DetailsBearingOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> DetailsBearingOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:InitMenusOnOff(MenusOnOff)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
 * <u>Boolean</u> MenusOnOff : true or false
 
 <h4> Returns </h4>
-* [MISSILETRAINER](#missiletrainer-class)
-self
+* [MISSILETRAINER](#missiletrainer-class-)
+
 
 
 ### MISSILETRAINER:OnEventShot(EventData)
 
 <h4> Parameters </h4>
-* [MISSILETRAINER](#missiletrainer-class)
+* [MISSILETRAINER](#missiletrainer-class-)
 self
-* [EVENTDATA](#eventdata-class) EventData
+* [EVENTDATA](#eventdata-class-) EventData
 
 <h4> Returns </h4>
 

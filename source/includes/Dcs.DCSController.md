@@ -67,7 +67,7 @@ Returns true if the controller has a task.
 * self self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Controller:setCommand(command)
@@ -100,17 +100,17 @@ Checks if the target is detected or not. If one or more detection method is spec
 
 <h4> Parameters </h4>
 * self self
-* [Object](#object-class) target : Target to check
+* [Object](#object-class-) target : Target to check
 * #Controller.Detection detection : Controller.Detection detection1, Controller.Detection detection2, ... Controller.Detection detectionN
 
 <h4> Returns </h4>
-* <u>Boolean</u> detected : True if the target is detected.
-* <u>Boolean</u> visible : Has effect only if detected is true. True if the target is visible now.
-* #ModelTime lastTime : Has effect only if visible is false. Last time when target was seen.
-* <u>Boolean</u> type : Has effect only if detected is true. True if the target type is known.
-* <u>Boolean</u> distance : Has effect only if detected is true. True if the distance to the target is known.
-* #Vec3 lastPos : Has effect only if visible is false. Last position of the target when it was seen.
-* #Vec3 lastVel : Has effect only if visible is false. Last velocity of the target when it was seen.
+* <u>Boolean</u>  detected True if the target is detected.
+* <u>Boolean</u>  visible Has effect only if detected is true. True if the target is visible now.
+* #ModelTime  lastTime Has effect only if visible is false. Last time when target was seen.
+* <u>Boolean</u>  type Has effect only if detected is true. True if the target type is known.
+* <u>Boolean</u>  distance Has effect only if detected is true. True if the distance to the target is known.
+* #Vec3  lastPos Has effect only if visible is false. Last position of the target when it was seen.
+* #Vec3  lastVel Has effect only if visible is false. Last velocity of the target when it was seen.
 
 
 ### Controller:getDetectedTargets(detection)
@@ -121,7 +121,7 @@ Returns list of detected targets. If one or more detection method is specified t
 * #Controller.Detection detection : Controller.Detection detection1, Controller.Detection detection2, ... Controller.Detection detectionN
 
 <h4> Returns </h4>
-* #list<#DetectedTarget> array : of DetectedTarget
+* #list<#DetectedTarget>  array of DetectedTarget
 
 
 ### Controller:knowTarget(object, type, distance)
@@ -129,7 +129,7 @@ Know a target.
 
 <h4> Parameters </h4>
 * self self
-* [Object](#object-class) object : The target.
+* [Object](#object-class-) object : The target.
 * <u>Boolean</u> type : Target type is known.
 * <u>Boolean</u> distance : Distance to target is known.
 
@@ -157,7 +157,7 @@ The DetectedTarget class does not inherit
 
 <h4> Attributes </h4>
 
-* [Object](#object-class) object : The target
+* [Object](#object-class-) object : The target
 * <u>Boolean</u> visible : The target is visible
 * <u>Boolean</u> type : The target type is known
 * <u>Boolean</u> distance : Distance to the target is known

@@ -45,7 +45,7 @@ BASE
 </pre>
 
 The DETECTION_BASE class defines the core functions to administer detected objects.
-The DETECTION_BASE class will detect objects within the battle zone for a list of [Group](#group-module)s detecting targets following (a) detection method(s).
+The DETECTION_BASE class will detect objects within the battle zone for a list of [Group](#group-module-)s detecting targets following (a) detection method(s).
 
 #####  DETECTION_BASE constructor
 
@@ -101,8 +101,8 @@ See further the derived DETECTION classes on which grouping methods are currentl
 
 Various methods exist how to retrieve the grouped items from a DETECTION_BASE derived class:
 
-* The method [DETECTION_BASE:GetDetectedItems()](#detection_base-getdetecteditems) retrieves the DetectedItems[] list.
-* A DetectedItem from the DetectedItems[] list can be retrieved using the method [DETECTION_BASE:GetDetectedItems()](#detection_base-getdetecteditems) DetectedItemIndex ).
+* The method DETECTION_BASE-GetDetectedItems- retrieves the DetectedItems[] list.
+* A DetectedItem from the DetectedItems[] list can be retrieved using the method [DETECTION_BASE:GetDetectedItem()](#detection_base-getdetecteditem-index) DetectedItemIndex ).
 Note that this method returns a DetectedItem element from the list, that contains a Set variable and further information
 about the DetectedItem that is set by the DETECTION_BASE derived classes, used to group the DetectedItem.
 * A DetectedSet from the DetectedItems[] list can be retrieved using the method [DETECTION_BASE:GetDetectedSet()](#detection_base-getdetectedset-index) DetectedItemIndex ).
@@ -255,9 +255,9 @@ Various Events and State Transitions can be tailored using DETECTION_BASE.
 
 <h4> Attributes </h4>
 
-* [SET_GROUP](#set_group-class) DetectionSetGroup : The [Set](#set-module) of GROUPs in the Forward Air Controller role.
-* [Distance](#distance-class) DetectionRange : The range till which targets are accepted to be detected.
-* [DetectedObjects](#detection_base-detectedobjects-class) DetectedObjects : The list of detected objects.
+* [SET_GROUP](#set_group-class-) DetectionSetGroup : The [Set](#set-module-) of GROUPs in the Forward Air Controller role.
+* [Distance](#distance-class-) DetectionRange : The range till which targets are accepted to be detected.
+* [DetectedObjects](#detection_base-detectedobjects-class-)DetectedObjects : The list of detected objects.
 * <u>List[]</u> DetectedObjectsIdentified : Map of the DetectedObjects identified.
 * <u>Number</u> DetectionRun
 
@@ -265,34 +265,34 @@ Various Events and State Transitions can be tailored using DETECTION_BASE.
 ### DETECTION_BASE:New(DetectionSetGroup)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [SET_GROUP](#set_group-class) DetectionSetGroup : The [Set](#set-module) of GROUPs in the Forward Air Controller role.
+* [SET_GROUP](#set_group-class-) DetectionSetGroup : The [Set](#set-module-) of GROUPs in the Forward Air Controller role.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:OnLeaveStopped(From, Event, To)
 OnLeave Transition Handler for State Stopped.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnEnterStopped(From, Event, To)
 OnEnter Transition Handler for State Stopped.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -304,21 +304,21 @@ self
 OnBefore Transition Handler for Event Start.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnAfterStart(From, Event, To)
 OnAfter Transition Handler for Event Start.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -330,7 +330,7 @@ self
 Synchronous Event Trigger for Event Start.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -339,21 +339,21 @@ self
 OnLeave Transition Handler for State Detecting.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnEnterDetecting(From, Event, To)
 OnEnter Transition Handler for State Detecting.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -365,21 +365,21 @@ self
 OnBefore Transition Handler for Event Detect.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnAfterDetect(From, Event, To)
 OnAfter Transition Handler for Event Detect.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -391,7 +391,7 @@ self
 Synchronous Event Trigger for Event Detect.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -400,21 +400,21 @@ self
 OnBefore Transition Handler for Event Detected.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnAfterDetected(From, Event, To)
 OnAfter Transition Handler for Event Detected.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -426,7 +426,7 @@ self
 Synchronous Event Trigger for Event Detected.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -435,21 +435,21 @@ self
 OnBefore Transition Handler for Event Stop.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnAfterStop(From, Event, To)
 OnAfter Transition Handler for Event Stop.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -461,7 +461,7 @@ self
 Synchronous Event Trigger for Event Stop.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -470,21 +470,21 @@ self
 OnLeave Transition Handler for State Stopped.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
 
 <h4> Returns </h4>
-* <u>Boolean</u> Return : false to cancel Transition.
+* <u>Boolean</u>  Return false to cancel Transition.
 
 
 ### DETECTION_BASE:OnEnterStopped(From, Event, To)
 OnEnter Transition Handler for State Stopped.
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -495,7 +495,7 @@ self
 ### DETECTION_BASE:onafterStart(From, Event, To)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -506,7 +506,7 @@ self
 ### DETECTION_BASE:onafterDetect(From, Event, To)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
@@ -517,236 +517,236 @@ self
 ### DETECTION_BASE:onafterDetectionGroup(From, Event, To, DetectionGroup)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> From : The From State string.
 * <u>String</u> Event : The Event string.
 * <u>String</u> To : The To State string.
-* [GROUP](#group-class) DetectionGroup : The Group detecting.
+* [GROUP](#group-class-) DetectionGroup : The Group detecting.
 
 <h4> Returns </h4>
 
 ### DETECTION_BASE:InitDetectVisual(DetectVisual)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectVisual
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:InitDetectOptical(DetectOptical)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectOptical
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:InitDetectRadar(DetectRadar)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectRadar
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:InitDetectIRST(DetectIRST)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectIRST
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:InitDetectRWR(DetectRWR)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectRWR
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:InitDetectDLINK(DetectDLINK)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Boolean</u> DetectDLINK
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:FilterCategories(FilterCategories)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * #list<Dcs.DCSUnit#Unit> FilterCategories : The Categories entries
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetDetectionInterval(DetectionInterval)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> DetectionInterval : Interval in seconds.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetAcceptRange(AcceptRange)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> AcceptRange : Accept a detection if the unit is within the AcceptRange in meters.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetAcceptZones(Can)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * AcceptZones Can : be a list or ZONE_BASE objects, or a single ZONE_BASE object.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetRejectZones(Can)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * RejectZones Can : be a list or ZONE_BASE objects, or a single ZONE_BASE object.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetDistanceProbability(The)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * DistanceProbability The : probability factor.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetAlphaAngleProbability(The)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * AlphaAngleProbability The : probability factor.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:SetZoneProbability(Aray)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * ZoneArray Aray : of a The ZONE_BASE object and a ZoneProbability pair..
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:AcceptChanges(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:AddChangeItem(DetectedItem, ChangeCode)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 * <u>String</u> ChangeCode
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:AddChangeUnit(DetectedItem, ChangeCode, ChangeUnitType)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 * <u>String</u> ChangeCode
 * <u>String</u> ChangeUnitType
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:IsFriendliesNearBy()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> trhe : if there are friendlies nearby
+* <u>Boolean</u>  trhe if there are friendlies nearby
 
 
 ### DETECTION_BASE:ReportFriendliesNearBy()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -754,36 +754,36 @@ self
 ### DETECTION_BASE:IsDetectedObjectIdentified(DetectedObject)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedObject](#detection_base-detectedobject-class) DetectedObject
+* [DetectedObject](#detection_base-detectedobject-class-)DetectedObject
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if already identified.
+* <u>Boolean</u>  true if already identified.
 
 
 ### DETECTION_BASE:IdentifyDetectedObject(DetectedObject)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedObject](#detection_base-detectedobject-class) DetectedObject
+* [DetectedObject](#detection_base-detectedobject-class-)DetectedObject
 
 <h4> Returns </h4>
 
 ### DETECTION_BASE:UnIdentifyDetectedObject(DetectedObject)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
-* [DetectedObject](#detection_base-detectedobject-class) DetectedObject
+* [DetectedObject](#detection_base-detectedobject-class-)DetectedObject
 
 <h4> Returns </h4>
 
 ### DETECTION_BASE:UnIdentifyAllDetectedObjects()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
@@ -791,43 +791,43 @@ self
 ### DETECTION_BASE:GetDetectedObject(ObjectName)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> ObjectName
 
 <h4> Returns </h4>
-* [DetectedObject](#detection_base-detectedobject-class) self
+* [DetectedObject](#detection_base-detectedobject-class-)
 
 
 ### DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> DetectedItemIndex : The index of the DetectedItem.
-* [SET_UNIT](#set_unit-class) Set : (optional) The Set of Units to be added.
+* [SET_UNIT](#set_unit-class-) Set : (optional) The Set of Units to be added.
 
 <h4> Returns </h4>
-* [DetectedItem](#detection_base-detecteditem-class) self
+* [DetectedItem](#detection_base-detecteditem-class-)
 
 
 ### DETECTION_BASE:AddDetectedItemZone(DetectedItemIndex, Set, Zone)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>String</u> DetectedItemIndex : The index of the DetectedItem.
-* [SET_UNIT](#set_unit-class) Set : (optional) The Set of Units to be added.
-* [ZONE_UNIT](#zone_unit-class) Zone : (optional) The Zone to be added where the Units are located.
+* [SET_UNIT](#set_unit-class-) Set : (optional) The Set of Units to be added.
+* [ZONE_UNIT](#zone_unit-class-) Zone : (optional) The Zone to be added where the Units are located.
 
 <h4> Returns </h4>
-* [DetectedItem](#detection_base-detecteditem-class) self
+* [DetectedItem](#detection_base-detecteditem-class-)
 
 
 ### DETECTION_BASE:RemoveDetectedItem(DetectedItemIndex)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> DetectedItemIndex : The index or position in the DetectedItems list where the item needs to be removed.
 
@@ -836,109 +836,109 @@ self
 ### DETECTION_BASE:GetDetectedItems()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* [DetectedItems](#detection_base-detecteditems-class) self
+* [DetectedItems](#detection_base-detecteditems-class-)
 
 
 ### DETECTION_BASE:GetDetectedItemsCount()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* <u>Number</u> Count
+* <u>Number</u> 
 
 
 ### DETECTION_BASE:GetDetectedItem(Index)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> Index
 
 <h4> Returns </h4>
-* [DetectedItem](#detection_base-detecteditem-class) self
+* [DetectedItem](#detection_base-detecteditem-class-)
 
 
 ### DETECTION_BASE:GetDetectedSet(Index)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> Index
 
 <h4> Returns </h4>
-* [SET_UNIT](#set_unit-class) DetectedSet
+* [SET_UNIT](#set_unit-class-) 
 
 
 ### DETECTION_BASE:GetDetectedZone(Index)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> Index
 
 <h4> Returns </h4>
-* [ZONE_UNIT](#zone_unit-class) DetectedZone
+* [ZONE_UNIT](#zone_unit-class-) 
 
 
 ### DETECTION_BASE:DetectedItemReportSummary(self)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * Index self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### DETECTION_BASE:DetectedReportDetailed()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### DETECTION_BASE:GetDetectionSetGroup()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* [GROUP](#group-class) self
+* [GROUP](#group-class-) 
 
 
 ### DETECTION_BASE:CreateDetectionSets()
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ### DETECTION_BASE:Schedule(DelayTime, RepeatInterval)
 
 <h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class)
+* [DETECTION_BASE](#detection_base-class-)
 self
 * <u>Number</u> DelayTime : The delay in seconds to wait the reporting.
 * <u>Number</u> RepeatInterval : The repeat interval in seconds for the reporting to happen repeatedly.
 
 <h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class)
-self
+* [DETECTION_BASE](#detection_base-class-)
+
 
 
 ## DETECTION_BASE.DetectedObjects Class
@@ -970,14 +970,14 @@ The DETECTION_BASE.DetectedItem class does not inherit
 </pre>
 <h4> Attributes </h4>
 
-* [SET_UNIT](#set_unit-class) Set
-* [SET_UNIT](#set_unit-class) Set : -- The Set of Units in the detected area.
-* [ZONE_UNIT](#zone_unit-class) Zone : -- The Zone of the detected area.
+* [SET_UNIT](#set_unit-class-) Set
+* [SET_UNIT](#set_unit-class-) Set : -- The Set of Units in the detected area.
+* [ZONE_UNIT](#zone_unit-class-) Zone : -- The Zone of the detected area.
 * <u>Boolean</u> Changed : Documents if the detected area has changes.
 * <u>List[]</u> Changes : A list of the changes reported on the detected area. (It is up to the user of the detected area to consume those changes).
 * <u>Number</u> ItemID : -- The identifier of the detected area.
 * <u>Boolean</u> FriendliesNearBy : Indicates if there are friendlies within the detected area.
-* [UNIT](#unit-class) NearestFAC : The nearest FAC near the Area.
+* [UNIT](#unit-class-) NearestFAC : The nearest FAC near the Area.
 
 
 ## DETECTION_UNITS Class
@@ -990,66 +990,66 @@ BASE
 </pre>
 
 The DETECTION_UNITS class will detect units within the battle zone.
-It will build a DetectedItems list filled with DetectedItems. Each DetectedItem will contain a field Set, which contains a [SET_UNIT](#set_unit-class) containing ONE [UNIT](#unit-module) object reference.
+It will build a DetectedItems list filled with DetectedItems. Each DetectedItem will contain a field Set, which contains a [SET_UNIT](#set_unit-class-) containing ONE [UNIT](#unit-module-) object reference.
 Beware that when the amount of units detected is large, the DetectedItems list will be large also.
 
 
 <h4> Attributes </h4>
 
-* [Distance](#distance-class) DetectionRange : The range till which targets are detected.
+* [Distance](#distance-class-) DetectionRange : The range till which targets are detected.
 
 
 ### DETECTION_UNITS:New(DetectionSetGroup)
 
 <h4> Parameters </h4>
-* [DETECTION_UNITS](#detection_units-class) self
-* [SET_GROUP](#set_group-class) DetectionSetGroup : The [Set](#set-module) of GROUPs in the Forward Air Controller role.
+* [DETECTION_UNITS](#detection_units-class-) self
+* [SET_GROUP](#set_group-class-) DetectionSetGroup : The [Set](#set-module-) of GROUPs in the Forward Air Controller role.
 
 <h4> Returns </h4>
-* [DETECTION_UNITS](#detection_units-class) self
+* [DETECTION_UNITS](#detection_units-class-) 
 
 
 ### DETECTION_UNITS:GetChangeText(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_UNITS](#detection_units-class)
+* [DETECTION_UNITS](#detection_units-class-)
 self
-* [DetectedItem](#detection_units-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_units-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* <u>String</u> The : Changes text
+* <u>String</u>  The Changes text
 
 
 ### DETECTION_UNITS:CreateDetectionSets()
 
 <h4> Parameters </h4>
-* [DETECTION_UNITS](#detection_units-class)
+* [DETECTION_UNITS](#detection_units-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_UNITS](#detection_units-class)
-self
+* [DETECTION_UNITS](#detection_units-class-)
+
 
 
 ### DETECTION_UNITS:DetectedItemReportSummary(self)
 
 <h4> Parameters </h4>
-* [DETECTION_UNITS](#detection_units-class)
+* [DETECTION_UNITS](#detection_units-class-)
 self
 * Index self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### DETECTION_UNITS:DetectedReportDetailed()
 
 <h4> Parameters </h4>
-* [DETECTION_UNITS](#detection_units-class)
+* [DETECTION_UNITS](#detection_units-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ## DETECTION_TYPES Class
@@ -1063,7 +1063,7 @@ BASE
 
 The DETECTION_TYPES class will detect units within the battle zone.
 It will build a DetectedItems[] list filled with DetectedItems, grouped by the type of units detected.
-Each DetectedItem will contain a field Set, which contains a [SET_UNIT](#set_unit-class) containing ONE [UNIT](#unit-module) object reference.
+Each DetectedItem will contain a field Set, which contains a [SET_UNIT](#set_unit-class-) containing ONE [UNIT](#unit-module-) object reference.
 Beware that when the amount of different types detected is large, the DetectedItems[] list will be large also.
 
 
@@ -1071,54 +1071,54 @@ Beware that when the amount of different types detected is large, the DetectedIt
 ### DETECTION_TYPES:New(DetectionSetGroup)
 
 <h4> Parameters </h4>
-* [DETECTION_TYPES](#detection_types-class) self
-* [SET_GROUP](#set_group-class) DetectionSetGroup : The [Set](#set-module) of GROUPs in the Recce role.
+* [DETECTION_TYPES](#detection_types-class-) self
+* [SET_GROUP](#set_group-class-) DetectionSetGroup : The [Set](#set-module-) of GROUPs in the Recce role.
 
 <h4> Returns </h4>
-* [DETECTION_TYPES](#detection_types-class) self
+* [DETECTION_TYPES](#detection_types-class-) 
 
 
 ### DETECTION_TYPES:GetChangeText(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_TYPES](#detection_types-class)
+* [DETECTION_TYPES](#detection_types-class-)
 self
-* [DetectedItem](#detection_types-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_types-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* <u>String</u> The : Changes text
+* <u>String</u>  The Changes text
 
 
 ### DETECTION_TYPES:CreateDetectionSets()
 
 <h4> Parameters </h4>
-* [DETECTION_TYPES](#detection_types-class)
+* [DETECTION_TYPES](#detection_types-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_TYPES](#detection_types-class)
-self
+* [DETECTION_TYPES](#detection_types-class-)
+
 
 
 ### DETECTION_TYPES:DetectedItemReportSummary(self)
 
 <h4> Parameters </h4>
-* [DETECTION_TYPES](#detection_types-class)
+* [DETECTION_TYPES](#detection_types-class-)
 self
 * Index self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### DETECTION_TYPES:DetectedReportDetailed()
 
 <h4> Parameters </h4>
-* [DETECTION_TYPES](#detection_types-class)
+* [DETECTION_TYPES](#detection_types-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ## DETECTION_AREAS Class
@@ -1130,182 +1130,182 @@ BASE
 			`-- DETECTION_AREAS
 </pre>
 
-The DETECTION_AREAS class will detect units within the battle zone for a list of [Group](#group-module)s detecting targets following (a) detection method(s),
-and will build a list (table) of [SET_UNIT](#set_unit-class)s containing the [UNIT](#unit-class)s detected.
+The DETECTION_AREAS class will detect units within the battle zone for a list of [Group](#group-module-)s detecting targets following (a) detection method(s),
+and will build a list (table) of [SET_UNIT](#set_unit-class-)s containing the [UNIT](#unit-class-)s detected.
 The class is group the detected units within zones given a DetectedZoneRange parameter.
 A set with multiple detected zones will be created as there are groups of units detected.
 
 #####  4.1) Retrieve the Detected Unit Sets and Detected Zones
 
-The methods to manage the DetectedItems[].Set(s) are implemented in [DECTECTION_BASE](#dectection_base-class) and
-the methods to manage the DetectedItems[].Zone(s) is implemented in [DETECTION_AREAS](#detection_areas-class).
+The methods to manage the DetectedItems[].Set(s) are implemented in [DECTECTION_BASE](#dectection_base-class-) and
+the methods to manage the DetectedItems[].Zone(s) is implemented in [DETECTION_AREAS](#detection_areas-class-).
 
-Retrieve the DetectedItems[].Set with the method [DETECTION_BASE:GetDetectedSet()](#detection_base-getdetectedset-index). A [SET_UNIT](#set_unit-class) object will be returned.
+Retrieve the DetectedItems[].Set with the method [DETECTION_BASE:GetDetectedSet()](#detection_base-getdetectedset-index). A [SET_UNIT](#set_unit-class-) object will be returned.
 
-Retrieve the formed [Zone@ZONE_UNIT](#zone@zone_unit-module)s as a result of the grouping the detected units within the DetectionZoneRange, use the method DETECTION_BASE-GetDetectionZones.
-To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount.
-If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone with a given index.
+Retrieve the formed [Zone@ZONE_UNIT](#zone@zone_unit-module-)s as a result of the grouping the detected units within the DetectionZoneRange, use the method DETECTION_BASE-GetDetectionZones-.
+To understand the amount of zones created, use the method DETECTION_BASE-GetDetectionZoneCount-.
+If you want to obtain a specific zone from the DetectedZones, use the method DETECTION_BASE-GetDetectionZone- with a given index.
 
 #####  4.4) Flare or Smoke detected units
 
-Use the methods [DETECTION_AREAS:FlareDetectedUnits()](#detection_areas-flaredetectedunits) or [DETECTION_AREAS:SmokeDetectedUnits()](#detection_areas-smokedetectedunits) to flare or smoke the detected units when a new detection has taken place.
+Use the methods DETECTION_AREAS-FlareDetectedUnits- or DETECTION_AREAS-FlareDetectedZones- to flare or smoke the detected units when a new detection has taken place.
 
 #####  4.5) Flare or Smoke or Bound detected zones
 
 Use the methods:
 
-* [DETECTION_AREAS:FlareDetectedZones()](#detection_areas-flaredetectedzones) to flare in a color
-* [DETECTION_AREAS:SmokeDetectedZones()](#detection_areas-smokedetectedzones) to smoke in a color
-* [DETECTION_AREAS:SmokeDetectedZones()](#detection_areas-smokedetectedzones) to bound with a tire with a white flag
+* DETECTION_AREAS-SmokeDetectedZones- to flare in a color
+* DETECTION_AREAS-SmokeDetectedZones- to smoke in a color
+* @{Detection#DETECTION_AREAS.SmokeDetectedZones}() to bound with a tire with a white flag
 
 the detected zones when a new detection has taken place.
 
 
 <h4> Attributes </h4>
 
-* [Distance](#distance-class) DetectionZoneRange : The range till which targets are grouped upon the first detected target.
-* [DetectedItems](#detection_base-detecteditems-class) DetectedItems : A list of areas containing the set of [Unit](#unit-module)s, [Zone](#zone-module)s, the center [Unit](#unit-module) within the zone, and ID of each area that was detected within a DetectionZoneRange.
+* [Distance](#distance-class-) DetectionZoneRange : The range till which targets are grouped upon the first detected target.
+* [DetectedItems](#detection_base-detecteditems-class-)DetectedItems : A list of areas containing the set of [Unit](#unit-module-)s, [Zone](#zone-module-)s, the center [Unit](#unit-module-) within the zone, and ID of each area that was detected within a DetectionZoneRange.
 
 
 ### DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
-* [SET_GROUP](#set_group-class) DetectionSetGroup : The [Set](#set-module) of GROUPs in the Forward Air Controller role.
-* [Distance](#distance-class) DetectionZoneRange : The range till which targets are grouped upon the first detected target.
+* [SET_GROUP](#set_group-class-) DetectionSetGroup : The [Set](#set-module-) of GROUPs in the Forward Air Controller role.
+* [Distance](#distance-class-) DetectionZoneRange : The range till which targets are grouped upon the first detected target.
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:DetectedItemReportSummary(self)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 * Index self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### DETECTION_AREAS:IsFriendliesNearBy()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> trhe : if there are friendlies nearby
+* <u>Boolean</u>  trhe if there are friendlies nearby
 
 
 ### DETECTION_AREAS:CalculateThreatLevelA2G(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
 
 ### DETECTION_AREAS:NearestFAC(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* [UNIT](#unit-class) The : nearest FAC unit
+* [UNIT](#unit-class-)  The nearest FAC unit
 
 
 ### DETECTION_AREAS:GetTreatLevelA2G(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* <u>Number</u> a : scale from 0 to 10.
+* <u>Number</u>  a scale from 0 to 10.
 
 
 ### DETECTION_AREAS:SmokeDetectedUnits()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:FlareDetectedUnits()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:SmokeDetectedZones()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:FlareDetectedZones()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:BoundDetectedZones()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 
 ### DETECTION_AREAS:GetChangeText(DetectedItem)
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
-* [DetectedItem](#detection_base-detecteditem-class) DetectedItem
+* [DetectedItem](#detection_base-detecteditem-class-)DetectedItem
 
 <h4> Returns </h4>
-* <u>String</u> The : Changes text
+* <u>String</u>  The Changes text
 
 
 ### DETECTION_AREAS:CreateDetectionSets()
 
 <h4> Parameters </h4>
-* [DETECTION_AREAS](#detection_areas-class)
+* [DETECTION_AREAS](#detection_areas-class-)
 self
 
 <h4> Returns </h4>
-* [DETECTION_AREAS](#detection_areas-class)
-self
+* [DETECTION_AREAS](#detection_areas-class-)
+
 
 

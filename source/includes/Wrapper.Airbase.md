@@ -3,9 +3,9 @@ This module contains the AIRBASE classes.
 
 
 
-##### 1) [AIRBASE](#airbase-class) class, extends [POSITIONABLE](#positionable-class)
+##### 1) [AIRBASE](#airbase-class-) class, extends [POSITIONABLE](#positionable-class-)
 
-The [AIRBASE](#airbase-module) class is a wrapper class to handle the DCS Airbase objects:
+The [AIRBASE](#airbase-module-) class is a wrapper class to handle the DCS Airbase objects:
 
 * Support all DCS Airbase APIs.
 * Enhance with Airbase specific APIs not in the DCS Airbase API set.
@@ -13,7 +13,7 @@ The [AIRBASE](#airbase-module) class is a wrapper class to handle the DCS Airbas
 
 ##### 1.1) AIRBASE reference methods
 
-For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _[DATABASE](#database-module) object.
+For each DCS Airbase object alive within a running mission, a AIRBASE wrapper object (instance) will be created within the _[DATABASE](#database-module-) object.
 This is done at the beginning of the mission (when the mission starts).
 
 The AIRBASE class **does not contain a :New()** method, rather it provides **:Find()** methods to retrieve the object reference
@@ -35,7 +35,7 @@ IMPORTANT: ONE SHOULD NEVER SANATIZE these AIRBASE OBJECT REFERENCES! (make the 
 The DCS Airbase APIs are used extensively within MOOSE. The AIRBASE class has for each DCS Airbase API a corresponding method.
 To be able to distinguish easily in your code the difference between a AIRBASE API call and a DCS Airbase API call,
 the first letter of the method is also capitalized. So, by example, the DCS Airbase method @{DCSWrapper.Airbase#Airbase.getName}()
-is implemented in the AIRBASE class as AIRBASE-GetName.
+is implemented in the AIRBASE class as AIRBASE-GetName-.
 
 More functions will be added
 
@@ -55,33 +55,33 @@ BASE
 ### AIRBASE:Register(AirbaseName)
 
 <h4> Parameters </h4>
-* [AIRBASE](#airbase-class)
+* [AIRBASE](#airbase-class-)
 self
 * <u>String</u> AirbaseName : The name of the airbase.
 
 <h4> Returns </h4>
-* [AIRBASE](#airbase-class) self
+* [AIRBASE](#airbase-class-) 
 
 
 ### AIRBASE:Find(DCSAirbase)
 
 <h4> Parameters </h4>
-* [AIRBASE](#airbase-class)
+* [AIRBASE](#airbase-class-)
 self
 * Dcs.DCSWrapper.Airbase#Airbase DCSAirbase : An existing DCS Airbase object reference.
 
 <h4> Returns </h4>
-* [AIRBASE](#airbase-class) self
+* [AIRBASE](#airbase-class-) 
 
 
 ### AIRBASE:FindByName(AirbaseName)
 
 <h4> Parameters </h4>
-* [AIRBASE](#airbase-class)
+* [AIRBASE](#airbase-class-)
 self
 * <u>String</u> AirbaseName : The Airbase Name.
 
 <h4> Returns </h4>
-* [AIRBASE](#airbase-class) self
+* [AIRBASE](#airbase-class-) 
 
 

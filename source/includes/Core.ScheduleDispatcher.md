@@ -42,9 +42,9 @@ The SCHEDULEDISPATCHER class does not inherit
 ### SCHEDULEDISPATCHER:AddSchedule(Scheduler)
 
 <h4> Parameters </h4>
-* [SCHEDULEDISPATCHER](#scheduledispatcher-class)
+* [SCHEDULEDISPATCHER](#scheduledispatcher-class-)
 self
-* [SCHEDULER](#scheduler-class) Scheduler
+* [SCHEDULER](#scheduler-class-) Scheduler
 
 <h4> Returns </h4>
 

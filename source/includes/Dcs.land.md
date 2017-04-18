@@ -19,7 +19,7 @@ Returns altitude MSL of the point.
 * #Vec2 point : point on the ground.
 
 <h4> Returns </h4>
-* [Distance](#distance-class) self
+* [Distance](#distance-class-) 
 
 
 ### getSurfaceType()
@@ -29,7 +29,7 @@ returns surface type at the given point.
 * #Vec2 point : Point on the land.
 
 <h4> Returns </h4>
-* #land.SurfaceType self
+* #land.SurfaceType 
 
 
 ## land.SurfaceType Class

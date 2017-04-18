@@ -1,11 +1,11 @@
 # Wrapper.Client Module
 This module contains the CLIENT class.
 
-##### 1) [CLIENT](#client-class) class, extends [UNIT](#unit-class)
+##### 1) [CLIENT](#client-class-) class, extends [UNIT](#unit-class-)
 
 Clients are those **Units** defined within the Mission Editor that have the skillset defined as __Client__ or __Player__.
 Note that clients are NOT the same as Units, they are NOT necessarily alive.
-The [CLIENT](#client-class) class is a wrapper class to handle the DCS Unit objects that have the skillset defined as __Client__ or __Player__:
+The [CLIENT](#client-class-) class is a wrapper class to handle the DCS Unit objects that have the skillset defined as __Client__ or __Player__:
 
 * Wraps the DCS Unit objects with skill level set to Player or Client.
 * Support all DCS Unit APIs.
@@ -14,11 +14,11 @@ The [CLIENT](#client-class) class is a wrapper class to handle the DCS Unit obje
 * Handles messages to players.
 * Manage the "state" of the DCS Unit.
 
-Clients are being used by the [MISSION](#mission-module) class to follow players and register their successes.
+Clients are being used by the [MISSION](#mission-module-) class to follow players and register their successes.
 
 ##### 1.1) CLIENT reference methods
 
-For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _[DATABASE](#database-module) object.
+For each DCS Unit having skill level Player or Client, a CLIENT wrapper object (instance) will be created within the _[DATABASE](#database-module-) object.
 This is done at the beginning of the mission (when the mission starts).
 
 The CLIENT class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
@@ -61,14 +61,14 @@ Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 4' ):Trans
 ```
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> ClientName : Name of the DCS **Unit** as defined within the Mission Editor.
 * <u>String</u> ClientBriefing : Text that describes the briefing of the mission when a Player logs into the Client.
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:FindByName(ClientName, ClientBriefing, Error)
@@ -84,67 +84,67 @@ Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 4' ):Trans
 ```
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> ClientName : Name of the DCS **Unit** as defined within the Mission Editor.
 * <u>String</u> ClientBriefing : Text that describes the briefing of the mission when a Player logs into the Client.
 * <u>Boolean</u> Error : A flag that indicates whether an error should be raised if the CLIENT cannot be found. By default an error will be raised.
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:Transport()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:AddBriefing(ClientBriefing)
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> ClientBriefing : is the text defining the Mission briefing.
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:ShowBriefing()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:ShowMissionBriefing(MissionBriefing)
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> MissionBriefing
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:Reset(ClientName)
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> ClientName : Name of the Group as defined within the Mission Editor. The Group must have a Unit with the type Client.
 
@@ -153,89 +153,89 @@ self
 ### CLIENT:IsMultiSeated()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : if multi-seated.
+* <u>Boolean</u>  true if multi-seated.
 
 
 ### CLIENT:Alive(CallBackFunction)
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>Function()</u> CallBackFunction : Create a function that will be called when a player joins the slot.
 
 <h4> Returns </h4>
-* [CLIENT](#client-class)
-self
+* [CLIENT](#client-class-)
+
 
 
 ### CLIENT:GetDCSGroup()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* Dcs.DCSWrapper.Group#Group self
+* Dcs.DCSWrapper.Group#Group 
 
 
 ### CLIENT:GetClientGroupID()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* [Group.ID](#group.id-class) self
+* [Group.ID](#group.id-class-) 
 
 
 ### CLIENT:GetClientGroupName()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### CLIENT:GetClientGroupUnit()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* [UNIT](#unit-class) self
+* [UNIT](#unit-class-) 
 
 
 ### CLIENT:GetClientGroupDCSUnit()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* [Unit](#unit-class) self
+* [Unit](#unit-class-) 
 
 
 ### CLIENT:IsTransport()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> true : is a transport.
+* <u>Boolean</u>  true is a transport.
 
 
 ### CLIENT:ShowCargo()
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 
 <h4> Returns </h4>
@@ -243,12 +243,12 @@ self
 ### CLIENT:Message(Message, MessageDuration, MessageCategory, MessageInterval, MessageID)
 
 <h4> Parameters </h4>
-* [CLIENT](#client-class)
+* [CLIENT](#client-class-)
 self
 * <u>String</u> Message : is the text describing the message.
 * <u>Number</u> MessageDuration : is the duration in seconds that the Message should be displayed.
 * <u>String</u> MessageCategory : is the category of the message (the title).
-* <u>Number</u> MessageInterval : is the interval in seconds between the display of the [MESSAGE](#message-class) when the CLIENT is in the air.
+* <u>Number</u> MessageInterval : is the interval in seconds between the display of the [MESSAGE](#message-class-) when the CLIENT is in the air.
 * <u>String</u> MessageID : is the identifier of the message when displayed with intervals.
 
 <h4> Returns </h4>

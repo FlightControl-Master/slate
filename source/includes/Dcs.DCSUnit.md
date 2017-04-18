@@ -36,7 +36,7 @@ Returns unit object by the name assigned to the unit in Mission Editor. If there
 * <u>String</u> name
 
 <h4> Returns </h4>
-* #Unit self
+* #Unit 
 
 
 ### Unit:isActive()
@@ -46,7 +46,7 @@ Returns if the unit is activated.
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Unit:getPlayerName()
@@ -56,7 +56,7 @@ Returns name of the player that control the unit or nil if the unit is controlle
 * #Unit self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Unit:getID()
@@ -66,7 +66,7 @@ returns the unit's unique identifier.
 * #Unit self
 
 <h4> Returns </h4>
-* #Unit.ID self
+* #Unit.ID 
 
 
 ### Unit:getNumber()
@@ -76,7 +76,7 @@ Returns the unit's number in the group. The number is the same number the unit h
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Unit:getController()
@@ -86,7 +86,7 @@ Returns controller of the unit if it exist and nil otherwise
 * #Unit self
 
 <h4> Returns </h4>
-* #Controller self
+* #Controller 
 
 
 ### Unit:getGroup()
@@ -96,7 +96,7 @@ Returns the unit's group if it exist and nil otherwise
 * #Unit self
 
 <h4> Returns </h4>
-* Dcs.DCSWrapper.Group#Group self
+* Dcs.DCSWrapper.Group#Group 
 
 
 ### Unit:getCallsign()
@@ -106,7 +106,7 @@ Returns the unit's callsign - the localized string.
 * #Unit self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Unit:getLife()
@@ -116,7 +116,7 @@ Returns the unit's health. Dead units has health <= 1.0
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Unit:getLife0()
@@ -126,7 +126,7 @@ returns the unit's initial health.
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Unit:getFuel()
@@ -136,7 +136,7 @@ Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal t
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Unit:getAmmo()
@@ -146,7 +146,7 @@ Returns the unit ammunition.
 * #Unit self
 
 <h4> Returns </h4>
-* #Unit.Ammo self
+* #Unit.Ammo 
 
 
 ### Unit:getSensors()
@@ -156,7 +156,7 @@ Returns the unit sensors.
 * #Unit self
 
 <h4> Returns </h4>
-* #Unit.Sensors self
+* #Unit.Sensors 
 
 
 ### Unit:hasSensors(sensorType, Additional)
@@ -177,7 +177,7 @@ Returns true if the unit has specified types of sensors. This function is more p
 * ... Additional : parameters.
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Unit:getRadar()
@@ -189,7 +189,7 @@ Second value is the object of the radar's interest. Not nil only if at least one
 * #Unit self
 
 <h4> Returns </h4>
-* <u>Boolean</u>, Wrapper.Object#Object
+* <u>Boolean</u>, 
 
 
 ### Unit:getDesc()
@@ -199,7 +199,7 @@ Returns unit descriptor. Descriptor type depends on unit category.
 * #Unit self
 
 <h4> Returns </h4>
-* #Unit.Desc self
+* #Unit.Desc 
 
 
 ## Unit.Category Class
@@ -432,9 +432,9 @@ The Unit.Radar.detectionDistanceAir.lowerHemisphere class does not inherit
 * #Distance tailOn
 
 
-## [Unit.IRST](#unit.irst-class) Class
+## [Unit.IRST](#unit.irst-class-) Class
 <pre>
-Inheritance : The [Unit.IRST](#unit.irst-class) Class inherits from the following parents :
+Inheritance : The [Unit.IRST](#unit.irst-class-) Class inherits from the following parents :
 Unit.Sensor
 	`-- Wrapper.Unit#Unit.IRST
 </pre>

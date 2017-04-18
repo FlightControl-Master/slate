@@ -22,7 +22,7 @@ Returns airbase by its name. If no airbase found the function will return nil.
 * <u>String</u> name
 
 <h4> Returns </h4>
-* #Airbase self
+* #Airbase 
 
 
 ### getDescByName()
@@ -32,7 +32,7 @@ Returns airbase descriptor by type name. If no descriptor is found the function 
 * #TypeName typeName : Airbase type name.
 
 <h4> Returns </h4>
-* #Airbase.Desc self
+* #Airbase.Desc 
 
 
 ### Airbase:getUnit()
@@ -42,7 +42,7 @@ Returns Unit that is corresponded to the airbase. Works only for ships.
 * self self
 
 <h4> Returns </h4>
-* [Unit](#unit-class) self
+* [Unit](#unit-class-) 
 
 
 ### Airbase:getID()
@@ -52,7 +52,7 @@ Returns identifier of the airbase.
 * self self
 
 <h4> Returns </h4>
-* #Airbase.ID self
+* #Airbase.ID 
 
 
 ### Airbase:getCallsign()
@@ -62,7 +62,7 @@ Returns the airbase's callsign - the localized string.
 * self self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Airbase:getDesc()
@@ -72,7 +72,7 @@ Returns descriptor of the airbase.
 * self self
 
 <h4> Returns </h4>
-* #Airbase.Desc self
+* #Airbase.Desc 
 
 
 ## Airbase.Category Class

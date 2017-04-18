@@ -10,7 +10,7 @@ ERROR !
 
 <h4> Attributes </h4>
 
-* [ID](#id-class)
+* [ID](#id-class-)
 ID : Identifier of a group. It is assigned to a group by Mission Editor automatically.
 * #Group.Category Category : Enum contains identifiers of group types.
 
@@ -22,7 +22,7 @@ Returns group by the name assigned to the group in Mission Editor.
 * <u>String</u> name
 
 <h4> Returns </h4>
-* #Group self
+* #Group 
 
 
 ### Group:isExist()
@@ -32,7 +32,7 @@ returns true if the group exist or false otherwise.
 * #Group self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Group:destroy()
@@ -50,7 +50,7 @@ Returns category of the group.
 * #Group self
 
 <h4> Returns </h4>
-* #Group.Category self
+* #Group.Category 
 
 
 ### Group:getCoalition()
@@ -60,7 +60,7 @@ Returns the coalition of the group.
 * #Group self
 
 <h4> Returns </h4>
-* Dcs.DCSCoalitionWrapper.Object#coalition.side self
+* Dcs.DCSCoalitionWrapper.Object#coalition.side 
 
 
 ### Group:getName()
@@ -70,7 +70,7 @@ Returns the group's name. This is the same name assigned to the group in Mission
 * #Group self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Group:getID()
@@ -80,8 +80,8 @@ Returns the group identifier.
 * #Group self
 
 <h4> Returns </h4>
-* [ID](#id-class)
-self
+* [ID](#id-class-)
+
 
 
 ### Group:getUnit(unitNumber)
@@ -92,7 +92,7 @@ Returns the unit with number unitNumber. If the unit is not exists the function 
 * <u>Number</u> unitNumber
 
 <h4> Returns </h4>
-* Dcs.DCSWrapper.Unit#Unit self
+* Dcs.DCSWrapper.Unit#Unit 
 
 
 ### Group:getSize()
@@ -102,7 +102,7 @@ Returns current size of the group. If some of the units will be destroyed, As un
 * #Group self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Group:getInitialSize()
@@ -112,7 +112,7 @@ Returns initial size of the group. If some of the units will be destroyed, initi
 * #Group self
 
 <h4> Returns </h4>
-* <u>Number</u> self
+* <u>Number</u> 
 
 
 ### Group:getUnits()
@@ -122,7 +122,7 @@ Returns array of the units present in the group now. Destroyed units will not be
 * #Group self
 
 <h4> Returns </h4>
-* #list<Dcs.DCSWrapper.Unit#Unit> array : of Units
+* #list<Dcs.DCSWrapper.Unit#Unit>  array of Units
 
 
 ### Group:getController()
@@ -132,7 +132,7 @@ Returns controller of the group.
 * #Group self
 
 <h4> Returns </h4>
-* [Controller](#controller-class) self
+* [Controller](#controller-class-) 
 
 
 ## Group.Category Class

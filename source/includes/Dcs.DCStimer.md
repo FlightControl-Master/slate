@@ -11,7 +11,7 @@ Returns model time in seconds.
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
-* #Time self
+* #Time 
 
 
 ### timer.getAbsTime(()
@@ -19,7 +19,7 @@ Returns mission time in seconds.
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
-* #Time self
+* #Time 
 
 
 ### timer.getTime0(()
@@ -27,7 +27,7 @@ Returns mission start time in seconds.
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
-* #Time self
+* #Time 
 
 
 ### scheduleFunction(Function, time)
@@ -48,7 +48,7 @@ Must return model time of next call or nil. Note that the DCS scheduler calls th
 * #Time time : Model time of the function call.
 
 <h4> Returns </h4>
-* functionId self
+* functionId 
 
 
 ### setFunctionTime(time)

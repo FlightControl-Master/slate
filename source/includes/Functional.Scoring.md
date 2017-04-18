@@ -6,11 +6,11 @@ and create a CSV file logging the scoring events for use at team or squadron web
 
 
 
-The [SCORING](#scoring-class) class administers the scoring of player achievements,
+The [SCORING](#scoring-class-) class administers the scoring of player achievements,
 and creates a CSV file logging the scoring events and results for use at team or squadron websites.
 
 SCORING automatically calculates the threat level of the objects hit and destroyed by players,
-which can be [Unit](#unit-module), [Static) and @{Scenery](#static) and @{scenery-module) objects.
+which can be [Unit](#unit-module-), [Static) and @{Scenery](#static) and @{scenery-module-) objects.
 
 Positive score points are granted when enemy or neutral targets are destroyed.
 Negative score points or penalties are given when a friendly target is hit or destroyed.
@@ -42,7 +42,7 @@ The default range of the scores granted is a value between 0 and 10. The default
 
 ![Banner Image](/includes/Pictures/SCORING/Dia9.JPG)
 
-Various [Zone](#zone-module)s can be defined for which scores are also granted when objects in that [Zone](#zone-module) are destroyed.
+Various [Zone](#zone-module-)s can be defined for which scores are also granted when objects in that [Zone](#zone-module-) are destroyed.
 This is **specifically useful** to designate **scenery targets on the map** that will generate points when destroyed.
 
 With a small change in MissionScripting.lua, the scoring results can also be logged in a **CSV file**.
@@ -56,7 +56,7 @@ Scores can be **reported**. **Menu options** are automatically added to **each p
 Use the radio menu F10 to consult the scores while running the mission.
 Scores can be reported for your user, or an overall score can be reported of all players currently active in the mission.
 
-#####  1) [SCORING](#scoring-class) class, extends [BASE](#base-class)
+#####  1) [SCORING](#scoring-class-) class, extends [BASE](#base-class-)
 
 #####  1.1) Set the destroy score or penalty scale
 
@@ -74,9 +74,9 @@ The penalties will be given in a scale from 0 to 40.
 #####  1.2) Define special targets that will give extra scores.
 
 Special targets can be set that will give extra scores to the players when these are destroyed.
-Use the methods [SCORING:AddUnitScore()](#scoring-addunitscore-scoreunit-score) and [SCORING:RemoveUnitScore()](#scoring-removeunitscore-scoreunit) to specify a special additional score for a specific [Unit](#unit-module)s.
-Use the methods [SCORING:AddStaticScore()](#scoring-addstaticscore-scorestatic-score) and [SCORING:RemoveStaticScore()](#scoring-removestaticscore-scorestatic) to specify a special additional score for a specific [Static](#static-module)s.
-Use the method SCORING-SetGroupGroup to specify a special additional score for a specific [Group](#group-module)s.
+Use the methods [SCORING:AddUnitScore()](#scoring-addunitscore-scoreunit-score) and [SCORING:RemoveUnitScore()](#scoring-removeunitscore-scoreunit) to specify a special additional score for a specific [Unit](#unit-module-)s.
+Use the methods [SCORING:AddStaticScore()](#scoring-addstaticscore-scorestatic-score) and [SCORING:RemoveStaticScore()](#scoring-removestaticscore-scorestatic) to specify a special additional score for a specific [Static](#static-module-)s.
+Use the method SCORING-SetGroupGroup- to specify a special additional score for a specific [Group](#group-module-)s.
 
 local Scoring = SCORING:New( "Scoring File" )
 Scoring:AddUnitScore( UNIT:FindByName( "Unit #001" ), 200 )
@@ -91,11 +91,11 @@ Scoring:RemoveUnitScore( UNIT:FindByName( "Unit #001" ) )
 #####  1.3) Define destruction zones that will give extra scores.
 
 Define zones of destruction. Any object destroyed within the zone of the given category will give extra points.
-Use the method [SCORING:AddZoneScore()](#scoring-addzonescore-scorezone-score) to add a [Zone](#zone-module) for additional scoring.
-Use the method [SCORING:RemoveZoneScore()](#scoring-removezonescore-scorezone) to remove a [Zone](#zone-module) for additional scoring.
-There are interesting variations that can be achieved with this functionality. For example, if the [Zone](#zone-module) is a [ZONE_UNIT](#zone_unit-class),
-then the zone is a moving zone, and anything destroyed within that [Zone](#zone-module) will generate points.
-The other implementation could be to designate a scenery target (a building) in the mission editor surrounded by a [Zone](#zone-module),
+Use the method [SCORING:AddZoneScore()](#scoring-addzonescore-scorezone-score) to add a [Zone](#zone-module-) for additional scoring.
+Use the method [SCORING:RemoveZoneScore()](#scoring-removezonescore-scorezone) to remove a [Zone](#zone-module-) for additional scoring.
+There are interesting variations that can be achieved with this functionality. For example, if the [Zone](#zone-module-) is a [ZONE_UNIT](#zone_unit-class-),
+then the zone is a moving zone, and anything destroyed within that [Zone](#zone-module-) will generate points.
+The other implementation could be to designate a scenery target (a building) in the mission editor surrounded by a [Zone](#zone-module-),
 just large enough around that building.
 
 #####  1.4) Add extra Goal scores upon an event or a condition.
@@ -140,15 +140,15 @@ Use the following methods to configure when to send messages. By default, all me
 
 * [SCORING:SetMessagesHit()](#scoring-setmessageshit-onoff): Configure to send messages after a target has been hit.
 * [SCORING:SetMessagesDestroy()](#scoring-setmessagesdestroy-onoff): Configure to send messages after a target has been destroyed.
-* SCORING-SetMessagesAddon: Configure to send messages for additional score, after a target has been destroyed.
+* SCORING-SetMessagesAddon-: Configure to send messages for additional score, after a target has been destroyed.
 * [SCORING:SetMessagesZone()](#scoring-setmessageszone-onoff): Configure to send messages for additional score, after a target has been destroyed within a given zone.
 
 #####  1.9.2) Configure the audience of the messages.
 
 Use the following methods to configure the audience of the messages. By default, the messages are sent to all players in the mission.
 
-* [SCORING:SetMessagesToAll()](#scoring-setmessagestoall): Configure to send messages to all players.
-* [SCORING:SetMessagesToCoalition()](#scoring-setmessagestocoalition): Configure to send messages to only those players within the same coalition as the player.
+* SCORING-SetMessagesToAll-: Configure to send messages to all players.
+* SCORING-SetMessagesToCoalition-: Configure to send messages to only those players within the same coalition as the player.
 
 
 
@@ -197,19 +197,19 @@ ScoringObject = SCORING:New( "Gori Valley" )
 ```
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> GameName : The name of the game. This name is also logged in the CSV score file.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:SetScaleDestroyScore(Scale)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Number</u> Scale : The scale of the score given.
 
@@ -218,263 +218,263 @@ self
 ### SCORING:SetScaleDestroyPenalty(Scale)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Number</u> Scale : The scale of the score given.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:AddUnitScore(ScoreUnit, Score)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [UNIT](#unit-class) ScoreUnit : The [Unit](#unit-module) for which the Score needs to be given.
+* [UNIT](#unit-class-) ScoreUnit : The [Unit](#unit-module-) for which the Score needs to be given.
 * <u>Number</u> Score : The Score value.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:RemoveUnitScore(ScoreUnit)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [UNIT](#unit-class) ScoreUnit : The [Unit](#unit-module) for which the Score needs to be given.
+* [UNIT](#unit-class-) ScoreUnit : The [Unit](#unit-module-) for which the Score needs to be given.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:AddStaticScore(ScoreStatic, Score)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [UNIT](#unit-class) ScoreStatic : The [Static](#static-module) for which the Score needs to be given.
+* [UNIT](#unit-class-) ScoreStatic : The [Static](#static-module-) for which the Score needs to be given.
 * <u>Number</u> Score : The Score value.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:RemoveStaticScore(ScoreStatic)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [UNIT](#unit-class) ScoreStatic : The [Static](#static-module) for which the Score needs to be given.
+* [UNIT](#unit-class-) ScoreStatic : The [Static](#static-module-) for which the Score needs to be given.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:AddScoreGroup(ScoreGroup, Score)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [GROUP](#group-class) ScoreGroup : The [Group](#group-module) for which each [Unit](#unit-module) a Score is given.
+* [GROUP](#group-class-) ScoreGroup : The [Group](#group-module-) for which each [Unit](#unit-module-) a Score is given.
 * <u>Number</u> Score : The Score value.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:AddZoneScore(ScoreZone, Score)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [ZONE_BASE](#zone_base-class) ScoreZone : The [Zone](#zone-module) which defines the destruction score perimeters.
+* [ZONE_BASE](#zone_base-class-) ScoreZone : The [Zone](#zone-module-) which defines the destruction score perimeters.
 * <u>Number</u> Score : The Score value.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:RemoveZoneScore(ScoreZone)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [ZONE_BASE](#zone_base-class) ScoreZone : The [Zone](#zone-module) which defines the destruction score perimeters.
+* [ZONE_BASE](#zone_base-class-) ScoreZone : The [Zone](#zone-module-) which defines the destruction score perimeters.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:SetMessagesHit(OnOff)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Boolean</u> OnOff : If true is given, the messages are sent.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesHit()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetMessagesDestroy(OnOff)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Boolean</u> OnOff : If true is given, the messages are sent.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesDestroy()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetMessagesScore(OnOff)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Boolean</u> OnOff : If true is given, the messages are sent.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesScore()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetMessagesZone(OnOff)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Boolean</u> OnOff : If true is given, the messages are sent.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesZone()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetMessagesToAll()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesToAll()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetMessagesToCoalition()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:IfMessagesToCoalition()
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### SCORING:SetFratricide(Fratricide)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Number</u> Fratricide : The amount of maximum penalty that may be inflicted by a friendly player before he gets kicked.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:SetCoalitionChangePenalty(CoalitionChangePenalty)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>Number</u> CoalitionChangePenalty : The amount of penalty that is given.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:AddGoalScore(PlayerUnit, GoalTag, Text, Score)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [UNIT](#unit-class) PlayerUnit : The [Unit](#unit-module) of the Player. Other Properties for the scoring are taken from this PlayerUnit, like coalition, type etc.
+* [UNIT](#unit-class-) PlayerUnit : The [Unit](#unit-module-) of the Player. Other Properties for the scoring are taken from this PlayerUnit, like coalition, type etc.
 * <u>String</u> GoalTag : The string or identifier that is used in the CSV file to identify the goal (sort or group later in Excel).
 * <u>String</u> Text : A free text that is shown to the players.
 * <u>Number</u> Score : The score can be both positive or negative ( Penalty ).
@@ -484,100 +484,100 @@ self
 ### SCORING:OnEventPlayerEnterUnit(Event)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [EVENTDATA](#eventdata-class) Event
+* [EVENTDATA](#eventdata-class-) Event
 
 <h4> Returns </h4>
 
 ### SCORING:OnEventPlayerLeaveUnit(Event)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [EVENTDATA](#eventdata-class) Event
+* [EVENTDATA](#eventdata-class-) Event
 
 <h4> Returns </h4>
 
 ### SCORING:ReportDetailedPlayerHits(PlayerName)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 
 <h4> Returns </h4>
-* <u>String</u> The : report.
+* <u>String</u>  The report.
 
 
 ### SCORING:ReportDetailedPlayerDestroys(PlayerName)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 
 <h4> Returns </h4>
-* <u>String</u> The : report.
+* <u>String</u>  The report.
 
 
 ### SCORING:ReportDetailedPlayerCoalitionChanges(PlayerName)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 
 <h4> Returns </h4>
-* <u>String</u> The : report.
+* <u>String</u>  The report.
 
 
 ### SCORING:ReportDetailedPlayerGoals(PlayerName)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 
 <h4> Returns </h4>
-* <u>String</u> The : report.
+* <u>String</u>  The report.
 
 
 ### SCORING:ReportDetailedPlayerMissions(PlayerName)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 
 <h4> Returns </h4>
-* <u>String</u> The : report.
+* <u>String</u>  The report.
 
 
 ### SCORING:ReportScoreGroupSummary(PlayerGroup)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [GROUP](#group-class) PlayerGroup : The player group.
+* [GROUP](#group-class-) PlayerGroup : The player group.
 
 <h4> Returns </h4>
 
 ### SCORING:ReportScoreGroupDetailed(PlayerGroup)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [GROUP](#group-class) PlayerGroup : The player group.
+* [GROUP](#group-class-) PlayerGroup : The player group.
 
 <h4> Returns </h4>
 
 ### SCORING:ReportScoreAllSummary(PlayerGroup)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
-* [GROUP](#group-class) PlayerGroup : The player group.
+* [GROUP](#group-class-) PlayerGroup : The player group.
 
 <h4> Returns </h4>
 
@@ -589,19 +589,19 @@ ScoringObject:OpenCSV( "Player Scores" )
 ```
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> ScoringCSV
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 
 ### SCORING:ScoreCSV(PlayerName, TargetPlayerName, ScoreType, ScoreTimes, ScoreAmount, PlayerUnitName, PlayerUnitCoalition, PlayerUnitCategory, PlayerUnitType, TargetUnitName, TargetUnitCoalition, TargetUnitCategory, TargetUnitType)
 
 <h4> Parameters </h4>
-* [SCORING](#scoring-class)
+* [SCORING](#scoring-class-)
 self
 * <u>String</u> PlayerName : The name of the player.
 * <u>String</u> TargetPlayerName : The name of the target player.
@@ -618,7 +618,7 @@ self
 * <u>String</u> TargetUnitType : The type of the target unit.
 
 <h4> Returns </h4>
-* [SCORING](#scoring-class)
-self
+* [SCORING](#scoring-class-)
+
 
 

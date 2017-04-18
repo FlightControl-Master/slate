@@ -16,7 +16,7 @@ Returns coalition of the object.
 * #CoalitionObject self
 
 <h4> Returns </h4>
-* [coalition.side](#coalition.side-class) self
+* [coalition.side](#coalition.side-class-) 
 
 
 ### CoalitionObject:getCountry()
@@ -26,6 +26,6 @@ Returns object country.
 * #CoalitionObject self
 
 <h4> Returns </h4>
-* #country.id self
+* #country.id 
 
 

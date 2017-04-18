@@ -25,18 +25,18 @@ To send messages, you need to use the To functions.
 
 Messages are sent:
 
-* To a [Client](#client-module) using [MESSAGE:ToClient()](#message-toclient-client).
-* To a [Group](#group-module) using [MESSAGE:ToGroup()](#message-togroup-group)
+* To a [Client](#client-module-) using [MESSAGE:ToClient()](#message-toclient-client).
+* To a [Group](#group-module-) using [MESSAGE:ToGroup()](#message-togroup-group)
 * To a coalition using [MESSAGE:ToCoalition()](#message-tocoalition-needs).
-* To the red coalition using [MESSAGE:ToRed()](#message-tored).
-* To the blue coalition using [MESSAGE:ToBlue()](#message-toblue).
-* To all Players using [MESSAGE:ToAll()](#message-toall).
+* To the red coalition using MESSAGE-ToRed-.
+* To the blue coalition using MESSAGE-ToBlue-.
+* To all Players using MESSAGE-ToAll-.
 
 #####  Send conditionally to an audience
 
 Messages can be sent conditionally to an audience (when a condition is true):
 
-* To all players using [MESSAGE:ToAllIf()](#message-toallif).
+* To all players using MESSAGE-ToAllIf-.
 * To a coalition using [MESSAGE:ToCoalitionIf()](#message-tocoalitionif-needs).
 
 
@@ -63,13 +63,13 @@ MessageClient2 = MESSAGE:New( "Congratulations, you've just killed a target", 25
 * <u>String</u> MessageCategory : (optional) is a string expressing the "category" of the Message. The category will be shown as the first text in the message followed by a ": ".
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToClient(Client)
 ``` lua
--- Send the 2 messages created with the [New](#new-module) method to the Client Group.
+-- Send the 2 messages created with the [New](#new-module-) method to the Client Group.
 -- Note that the Message of MessageClient2 is overwriting the Message of MessageClient1.
 ClientGroup = Group.getByName( "ClientGroup" )
 
@@ -86,30 +86,30 @@ MessageClient2:ToClient( ClientGroup )
 ```
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
-* [CLIENT](#client-class) Client : is the Group of the Client.
+* [CLIENT](#client-class-) Client : is the Group of the Client.
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToGroup(Group)
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
-* [GROUP](#group-class) Group : is the Group.
+* [GROUP](#group-class-) Group : is the Group.
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToBlue()
 ``` lua
--- Send a message created with the [New](#new-module) method to the BLUE coalition.
+-- Send a message created with the [New](#new-module-) method to the BLUE coalition.
 MessageBLUE = MESSAGE:New( "To the BLUE Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToBlue()
 or
 MESSAGE:New( "To the BLUE Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToBlue()
@@ -119,17 +119,17 @@ MessageBLUE:ToBlue()
 ```
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToRed()
 ``` lua
--- Send a message created with the [New](#new-module) method to the RED coalition.
+-- Send a message created with the [New](#new-module-) method to the RED coalition.
 MessageRED = MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToRed()
 or
 MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToRed()
@@ -139,17 +139,17 @@ MessageRED:ToRed()
 ```
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToCoalition(needs)
 ``` lua
--- Send a message created with the [New](#new-module) method to the RED coalition.
+-- Send a message created with the [New](#new-module-) method to the RED coalition.
 MessageRED = MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToCoalition( coalition.side.RED )
 or
 MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" ):ToCoalition( coalition.side.RED )
@@ -159,25 +159,25 @@ MessageRED:ToCoalition( coalition.side.RED )
 ```
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 * CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToCoalitionIf(needs)
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 * CoalitionSide needs : to be filled out by the defined structure of the standard scripting engine @{coalition.side}.
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToAll()
@@ -192,22 +192,22 @@ MessageAll:ToAll()
 ```
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 
 ### MESSAGE:ToAllIf()
 
 <h4> Parameters </h4>
-* [MESSAGE](#message-class)
+* [MESSAGE](#message-class-)
 self
 
 <h4> Returns </h4>
-* [MESSAGE](#message-class)
-self
+* [MESSAGE](#message-class-)
+
 
 

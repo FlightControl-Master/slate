@@ -3,7 +3,7 @@
 
 
 
-#####  [ACT_ROUTE](#act_route-class) FSM class, extends [FSM_PROCESS](#fsm_process-class)
+#####  [ACT_ROUTE](#act_route-class-) FSM class, extends [FSM_PROCESS](#fsm_process-class-)
 
 #####  ACT_ROUTE state machine:
 
@@ -61,9 +61,9 @@ These state transition methods need to provide a return value, which is specifie
 
 
 
-#####  1) [ACT_ROUTE_ZONE](#act_route_zone-class) class, extends [ACT_ROUTE](#act_route-class)
+#####  1) [ACT_ROUTE_ZONE](#act_route_zone-class-) class, extends [ACT_ROUTE](#act_route-class-)
 
-The ACT_ROUTE_ZONE class implements the core functions to route an AIR [Controllable](#controllable-module) player [Unit](#unit-module) to a [Zone](#zone-module).
+The ACT_ROUTE_ZONE class implements the core functions to route an AIR [Controllable](#controllable-module-) player [Unit](#unit-module-) to a [Zone](#zone-module-).
 The player receives on perioding times messages with the coordinates of the route to follow.
 Upon arrival at the zone, a confirmation of arrival is sent, and the process will be ended.
 
@@ -85,28 +85,28 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) TASK
-* [UNIT](#unit-class) ProcessUnit
-* [ZONE_BASE](#zone_base-class) Zone
+* [TASK](#task-class-) TASK
+* [UNIT](#unit-class-) ProcessUnit
+* [ZONE_BASE](#zone_base-class-) Zone
 
 
 ### ACT_ROUTE:New()
 
 <h4> Parameters </h4>
-* [ACT_ROUTE](#act_route-class)
+* [ACT_ROUTE](#act_route-class-)
 self
 
 <h4> Returns </h4>
-* [ACT_ROUTE](#act_route-class)
-self
+* [ACT_ROUTE](#act_route-class-)
+
 
 
 ### ACT_ROUTE:onafterStart(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE](#act_route-class)
+* [ACT_ROUTE](#act_route-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -116,20 +116,20 @@ self
 ### ACT_ROUTE:onfuncHasArrived(ProcessUnit)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE](#act_route-class)
+* [ACT_ROUTE](#act_route-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### ACT_ROUTE:onbeforeRoute(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE](#act_route-class)
+* [ACT_ROUTE](#act_route-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -149,43 +149,43 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) TASK
+* [TASK](#task-class-) TASK
 
 
 ### ACT_ROUTE_POINT:New(The, Range, Zone)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
-* [POINT_VEC2](#point_vec2-class) The : PointVec2 to Target.
+* [POINT_VEC2](#point_vec2-class-) The : PointVec2 to Target.
 * <u>Number</u> Range : The Distance to Target.
-* [ZONE_BASE](#zone_base-class) Zone
+* [ZONE_BASE](#zone_base-class-) Zone
 
 <h4> Returns </h4>
 
 ### ACT_ROUTE_POINT:SetPointVec2(PointVec2)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
-* [POINT_VEC2](#point_vec2-class) PointVec2 : The PointVec2 to route to.
+* [POINT_VEC2](#point_vec2-class-) PointVec2 : The PointVec2 to route to.
 
 <h4> Returns </h4>
 
 ### ACT_ROUTE_POINT:GetPointVec2()
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
 
 <h4> Returns </h4>
-* [POINT_VEC2](#point_vec2-class) PointVec2 : The PointVec2 to route to.
+* [POINT_VEC2](#point_vec2-class-)  PointVec2 The PointVec2 to route to.
 
 
 ### ACT_ROUTE_POINT:SetRange(Range)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
 * <u>Number</u> Range : The Range to consider the arrival. Default is 10000 meters.
 
@@ -194,30 +194,30 @@ self
 ### ACT_ROUTE_POINT:GetRange()
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
 
 <h4> Returns </h4>
-* <u>Number</u> The : Range to consider the arrival. Default is 10000 meters.
+* <u>Number</u>  The Range to consider the arrival. Default is 10000 meters.
 
 
 ### ACT_ROUTE_POINT:onfuncHasArrived(ProcessUnit)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### ACT_ROUTE_POINT:onenterReporting(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_POINT](#act_route_point-class)
+* [ACT_ROUTE_POINT](#act_route_point-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To
@@ -237,56 +237,56 @@ BASE
 
 <h4> Attributes </h4>
 
-* [TASK](#task-class) TASK
-* [UNIT](#unit-class) ProcessUnit
-* [ZONE_BASE](#zone_base-class) Zone
+* [TASK](#task-class-) TASK
+* [UNIT](#unit-class-) ProcessUnit
+* [ZONE_BASE](#zone_base-class-) Zone
 
 
 ### ACT_ROUTE_ZONE:New(Zone)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_ZONE](#act_route_zone-class)
+* [ACT_ROUTE_ZONE](#act_route_zone-class-)
 self
-* [ZONE_BASE](#zone_base-class) Zone
+* [ZONE_BASE](#zone_base-class-) Zone
 
 <h4> Returns </h4>
 
 ### ACT_ROUTE_ZONE:SetZone(Zone)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_ZONE](#act_route_zone-class)
+* [ACT_ROUTE_ZONE](#act_route_zone-class-)
 self
-* [ZONE_BASE](#zone_base-class) Zone : The Zone object where to route to.
+* [ZONE_BASE](#zone_base-class-) Zone : The Zone object where to route to.
 
 <h4> Returns </h4>
 
 ### ACT_ROUTE_ZONE:GetZone()
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_ZONE](#act_route_zone-class)
+* [ACT_ROUTE_ZONE](#act_route_zone-class-)
 self
 
 <h4> Returns </h4>
-* [ZONE_BASE](#zone_base-class) Zone : The Zone object where to route to.
+* [ZONE_BASE](#zone_base-class-)  Zone The Zone object where to route to.
 
 
 ### ACT_ROUTE_ZONE:onfuncHasArrived(ProcessUnit)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE](#act_route-class)
+* [ACT_ROUTE](#act_route-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### ACT_ROUTE_ZONE:onenterReporting(ProcessUnit, Event, From, To)
 
 <h4> Parameters </h4>
-* [ACT_ROUTE_ZONE](#act_route_zone-class)
+* [ACT_ROUTE_ZONE](#act_route_zone-class-)
 self
-* [CONTROLLABLE](#controllable-class) ProcessUnit
+* [CONTROLLABLE](#controllable-class-) ProcessUnit
 * <u>String</u> Event
 * <u>String</u> From
 * <u>String</u> To

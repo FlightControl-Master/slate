@@ -19,7 +19,7 @@ ERROR !
 * #Object self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Object:destroy()
@@ -35,7 +35,7 @@ ERROR !
 * #Object self
 
 <h4> Returns </h4>
-* #Object.Category self
+* #Object.Category 
 
 
 ### Object:getTypeName()
@@ -45,7 +45,7 @@ Returns type name of the Object.
 * #Object self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Object:getDesc()
@@ -55,7 +55,7 @@ Returns object descriptor.
 * #Object self
 
 <h4> Returns </h4>
-* #Object.Desc self
+* #Object.Desc 
 
 
 ### Object:hasAttribute(attributeName)
@@ -66,7 +66,7 @@ Returns true if the object belongs to the category.
 * #AttributeName attributeName : Attribute name to check.
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ### Object:getName()
@@ -76,7 +76,7 @@ Returns name of the object. This is the name that is assigned to the object in t
 * #Object self
 
 <h4> Returns </h4>
-* <u>String</u> self
+* <u>String</u> 
 
 
 ### Object:getPoint()
@@ -86,7 +86,7 @@ Returns object coordinates for current time.
 * #Object self
 
 <h4> Returns </h4>
-* #Vec3 self
+* #Vec3 
 
 
 ### Object:getPosition()
@@ -96,7 +96,7 @@ Returns object position for current time.
 * #Object self
 
 <h4> Returns </h4>
-* #Position3 self
+* #Position3 
 
 
 ### Object:getVelocity()
@@ -106,7 +106,7 @@ Returns the unit's velocity vector.
 * #Object self
 
 <h4> Returns </h4>
-* #Vec3 self
+* #Vec3 
 
 
 ### Object:inAir()
@@ -116,7 +116,7 @@ Returns true if the unit is in air.
 * #Object self
 
 <h4> Returns </h4>
-* <u>Boolean</u> self
+* <u>Boolean</u> 
 
 
 ## Object.Category Class

@@ -19,13 +19,13 @@ CleanUpKutaisi = CLEANUP:New( 'CLEAN Kutaisi', 600 )
 ```
 
 <h4> Parameters </h4>
-* [CLEANUP](#cleanup-class)
+* [CLEANUP](#cleanup-class-)
 self
 * <u>List[]</u> ZoneNames : Is a table of zone names where the debris should be cleaned. Also a single string can be passed with one zone name.
 * <u>Number</u> TimeInterval : The interval in seconds when the clean activity takes place. The default is 300 seconds, thus every 5 minutes.
 
 <h4> Returns </h4>
-* [CLEANUP](#cleanup-class)
-self
+* [CLEANUP](#cleanup-class-)
+
 
 

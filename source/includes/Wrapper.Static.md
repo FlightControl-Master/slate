@@ -1,11 +1,11 @@
 # Wrapper.Static Module
 This module contains the STATIC class.
 
-##### 1) [STATIC](#static-class) class, extends [POSITIONABLE](#positionable-class)
+##### 1) [STATIC](#static-class-) class, extends [POSITIONABLE](#positionable-class-)
 
 Statics are **Static Units** defined within the Mission Editor.
 Note that Statics are almost the same as Units, but they don't have a controller.
-The [STATIC](#static-class) class is a wrapper class to handle the DCS Static objects:
+The [STATIC](#static-class-) class is a wrapper class to handle the DCS Static objects:
 
 * Wraps the DCS Static objects.
 * Support all DCS Static APIs.
@@ -13,7 +13,7 @@ The [STATIC](#static-class) class is a wrapper class to handle the DCS Static ob
 
 ##### 1.1) STATIC reference methods
 
-For each DCS Static will have a STATIC wrapper object (instance) within the _[DATABASE](#database-module) object.
+For each DCS Static will have a STATIC wrapper object (instance) within the _[DATABASE](#database-module-) object.
 This is done at the beginning of the mission (when the mission starts).
 
 The STATIC class does not contain a :New() method, rather it provides :Find() methods to retrieve the object reference
@@ -43,13 +43,13 @@ BASE
 ### STATIC:FindByName(StaticName, RaiseError)
 
 <h4> Parameters </h4>
-* [STATIC](#static-class)
+* [STATIC](#static-class-)
 self
 * <u>String</u> StaticName : Name of the DCS **Static** as defined within the Mission Editor.
 * <u>Boolean</u> RaiseError : Raise an error if not found.
 
 <h4> Returns </h4>
-* [STATIC](#static-class)
-self
+* [STATIC](#static-class-)
+
 
 

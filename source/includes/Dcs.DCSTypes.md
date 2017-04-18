@@ -136,9 +136,9 @@ The AI class does not inherit
 </pre>
 <h4> Attributes </h4>
 
-* [Skill](#ai-skill-class) Skill
-* [Task](#ai-task-class) Task
-* [Option](#ai-option-class) Option
+* [Skill](#ai-skill-class-)Skill
+* [Task](#ai-task-class-)Task
+* [Option](#ai-option-class-)Option
 
 
 ## AI.Skill Class
