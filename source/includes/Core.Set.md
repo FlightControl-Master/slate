@@ -369,6 +369,17 @@ self
 * [GROUP](#group-class-)  The found Group.
 
 
+### SET_GROUP:FindNearestGroupFromPointVec2(PointVec2)
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [POINT_VEC2](#point_vec2-class-) PointVec2 : A @{Point#POINT_VEC2} object from where to evaluate the closest object in the set.
+
+<h4> Returns </h4>
+* [GROUP](#group-class-)  The closest group.
+
+
 ### SET_GROUP:FilterCoalitions(Coalitions)
 
 <h4> Parameters </h4>

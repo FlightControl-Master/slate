@@ -914,7 +914,7 @@ self
 self
 
 <h4> Returns </h4>
-* [GROUP](#group-class-) 
+* [SET_GROUP](#set_group-class-) 
 
 
 ### DETECTION_BASE:CreateDetectionSets()

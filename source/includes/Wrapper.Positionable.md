@@ -278,6 +278,54 @@ self
 
 
 
+### POSITIONABLE:GetBeacon()
+
+<h4> Parameters </h4>
+* [POSITIONABLE](#positionable-class-)
+self
+
+<h4> Returns </h4>
+* [RADIO](#radio-class-)
+
+
+
+### POSITIONABLE:LaseUnit(Target, LaserCode, Duration)
+
+<h4> Parameters </h4>
+* [POSITIONABLE](#positionable-class-)
+self
+* [POSITIONABLE](#positionable-class-)
+Target
+* <u>Number</u> LaserCode
+* <u>Number</u> Duration
+
+<h4> Returns </h4>
+* [SPOT](#spot-class-) 
+
+
+### POSITIONABLE:LaseOff(Target)
+
+<h4> Parameters </h4>
+* [POSITIONABLE](#positionable-class-)
+self
+* [POSITIONABLE](#positionable-class-)
+Target
+
+<h4> Returns </h4>
+* [POSITIONABLE](#positionable-class-)
+
+
+
+### POSITIONABLE:IsLasing()
+
+<h4> Parameters </h4>
+* [POSITIONABLE](#positionable-class-)
+self
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if it is lasing a target
+
+
 ## DCSPositionable Class
 <pre>
 The DCSPositionable class does not inherit

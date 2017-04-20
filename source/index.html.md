@@ -20,6 +20,7 @@ includes:
   - AI.AI_Balancer
   - AI.AI_Cap
   - AI.AI_Cas
+  - AI.AI_Designate
   - AI.AI_Patrol
   - Core.Base
   - Core.Cargo
@@ -34,6 +35,7 @@ includes:
   - Core.Scheduler
   - Core.Set
   - Core.SpawnStatic
+  - Core.Spot
   - Core.Zone
   - Dcs.DCSAirbase
   - Dcs.DCScoalition
