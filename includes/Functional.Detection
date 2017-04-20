@@ -1003,7 +1003,7 @@ self</li>
 <h4> Returns </h4>
 
 <ul>
-<li><a href="#group-class-">GROUP</a> </li>
+<li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
 <span id=detection_base-createdetectionsets></span><h3 id='detection_base-createdetectionsets-'>DETECTION_BASE:CreateDetectionSets()</h3>
 <h4> Parameters </h4>

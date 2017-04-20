@@ -1,0 +1,86 @@
+<span id=core-spot-module></span><h1 id='core-spot-module-'>Core.Spot Module</h1>
+<p><strong>Core  (Release 2.1)</strong> -- Management of SPOT logistics, that can be transported from and to transportation carriers.</p>
+
+<p><img src="/includes/Pictures/SPOT/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>Spot lases points endlessly or for a duration.</p>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-spot-demo-missions-source-code-a></span><h5 id='a-href-spot-demo-missions-source-code-a-'><a href="#">SPOT Demo Missions source code</a></h5><span id=a-href-spot-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-spot-demo-missions-only-for-beta-testers-a-'><a href="#">SPOT Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spot-youtube-channel-a></span><h5 id='a-href-spot-youtube-channel-a-'><a href="#">SPOT YouTube Channel</a></h5>
+<p>This module is still under construction, but is described above works already, and will keep working ...</p>
+<span id=spot-class></span><h2 id='spot-class-'>SPOT Class</h2>
+<pre>
+Inheritance : The SPOT Class inherits from the following parents :
+BASE
+    `-- SPOT
+</pre>
+<span id=spot-new-recce-lasercode-duration></span><h3 id='spot-new-recce-lasercode-duration-'>SPOT:New(Recce, LaserCode, Duration)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><a href="#unit-class-">UNIT</a> Recce</li>
+<li><u>Number</u> LaserCode</li>
+<li><u>Number</u> Duration</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a></li>
+</ul>
+<span id=spot-onafterlaseon-self-self-self-target-lasercode-duration></span><h3 id='spot-onafterlaseon-self-self-self-target-lasercode-duration-'>SPOT:onafterLaseOn(self, self, self, Target, LaserCode, Duration)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li>From self</li>
+<li>Event self</li>
+<li>To self</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> Target</li>
+<li><u>Number</u> LaserCode</li>
+<li><u>Number</u> Duration</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onafterlasing-self-self-self></span><h3 id='spot-onafterlasing-self-self-self-'>SPOT:onafterLasing(self, self, self)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li>From self</li>
+<li>Event self</li>
+<li>To self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onafterlaseoff-self-self-self></span><h3 id='spot-onafterlaseoff-self-self-self-'>SPOT:onafterLaseOff(self, self, self)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li>From self</li>
+<li>Event self</li>
+<li>To self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a></li>
+</ul>
+<span id=spot-islasing></span><h3 id='spot-islasing-'>SPOT:IsLasing()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if it is lasing</li>
+</ul>

@@ -1,7 +1,9 @@
 <span id=core-radio-module></span><h1 id='core-radio-module-'>Core.Radio Module</h1>
-<p><strong>Core</strong> - The RADIO class is responsible for <strong>transmitting radio communications</strong>.</p>
+<p><strong>Core</strong> - The RADIO Module is responsible for everything that is related to radio transmission and you can hear in DCS, be it TACAN beacons, Radio transmissions...</p>
 
 <p><img src="/includes/Pictures/RADIO/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>The Radio contains 2 classes : RADIO and BEACON</p>
 
 <p>What are radio communications in DCS ?</p>
 
@@ -28,14 +30,15 @@
 
 <p>Note that obviously, the <strong>frequency</strong> and the <strong>modulation</strong> of the transmission are important only if the players are piloting an <strong>Advanced System Modelling</strong> enabled aircraft,
 like the A10C or the Mirage 2000C. They will <strong>hear the transmission</strong> if they are tuned on the <strong>right frequency and modulation</strong> (and if they are close enough - more on that below).
-If a FC3 airacraft is used, it will <strong>hear every communication, whatever the frequency and the modulation</strong> is set to.</p>
+If a FC3 airacraft is used, it will <strong>hear every communication, whatever the frequency and the modulation</strong> is set to. The same is true for TACAN beacons. If your aircaft isn&#39;t compatible,
+you won&#39;t hear/be able to use the TACAN beacon informations.</p>
 <span id=author-hugues-quot-grey_echo-quot-bousquet></span><h5 id='author-hugues-quot-grey_echo-quot-bousquet-'>Author: Hugues &quot;Grey_Echo&quot; Bousquet</h5><span id=radio-class></span><h2 id='radio-class-'>RADIO Class</h2>
 <pre>
 Inheritance : The RADIO Class inherits from the following parents :
 BASE
     `-- RADIO
 </pre>
-<span id=1-1-radio-usage></span><h5 id='1-1-radio-usage-'>1.1) RADIO usage</h5>
+<span id=radio-usage></span><h5 id='radio-usage-'>RADIO usage</h5>
 <p>There are 3 steps to a successful radio transmission.</p>
 
 <ul>
@@ -48,14 +51,14 @@ BASE
 
 <ul>
 <li><a href="#radio-setfilename-filename">RADIO:SetFileName()</a> : Sets the file name of your sound file (e.g. &quot;Noise.ogg&quot;),</li>
-<li><a href="#radio-setfrequency-frequency">RADIO:SetFrequency()</a> : Sets the frequency of your transmission,</li>
+<li><a href="#radio-setfrequency-frequency">RADIO:SetFrequency()</a> : Sets the frequency of your transmission.</li>
 <li><a href="#radio-setmodulation-modulation">RADIO:SetModulation()</a> : Sets the modulation of your transmission.</li>
+<li><a href="#radio-setloop-loop">RADIO:SetLoop()</a> : Choose if you want the transmission to be looped. If you need your transmission to be looped, you might need a <a href="#beacon-class-">BEACON</a> instead...</li>
 </ul>
 
 <p>Additional Methods to set relevant parameters if the transmiter is a <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a></p>
 
 <ul>
-<li><a href="#radio-setloop-loop">RADIO:SetLoop()</a> : Choose if you want the transmission to be looped,</li>
 <li><a href="#radio-setsubtitle-subtitle-subtitleduration">RADIO:SetSubtitle()</a> : Set both the subtitle and its duration,</li>
 <li><a href="#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop">RADIO:NewUnitTransmission()</a> : Shortcut to set all the relevant parameters in one method call</li>
 </ul>
@@ -90,8 +93,7 @@ BASE
 <li><u>Number</u> Power : Power of the antenna is Watts</li>
 <li><u>Boolean</u> Loop</li>
 </ul>
-<span id=radio-new-positionable></span><h3 id='radio-new-positionable-'>RADIO:New(Positionable)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If you want to create a RADIO, you probably should use POSITIONABLE-GetRadio- instead</span>
-</code></pre>
+<span id=radio-new-positionable></span><h3 id='radio-new-positionable-'>RADIO:New(Positionable)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -176,8 +178,13 @@ self</li>
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
-<span id=radio-setsubtitle-subtitle-subtitleduration></span><h3 id='radio-setsubtitle-subtitle-subtitleduration-'>RADIO:SetSubtitle(Subtitle, SubtitleDuration)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Both parameters are mandatory, since it wouldn't make much sense to change the Subtitle and not its duration</span>
-</code></pre>
+<span id=radio-setsubtitle-subtitle-subtitleduration></span><h3 id='radio-setsubtitle-subtitle-subtitleduration-'>RADIO:SetSubtitle(Subtitle, SubtitleDuration)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- create the broadcaster and attaches it a RADIO</span>
+<span class="kd">local</span> <span class="n">MyUnit</span> <span class="o">=</span> <span class="n">UNIT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span><span class="s2">"MyUnit"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MyUnitRadio</span> <span class="o">=</span> <span class="n">MyUnit</span><span class="p">:</span><span class="n">GetRadio</span><span class="p">()</span>
+
+<span class="c1">-- add a subtitle for the next transmission, which will be up for 10s</span>
+<span class="n">MyUnitRadio</span><span class="p">:</span><span class="n">SetSubtitle</span><span class="p">(</span><span class="s2">"My Subtitle, 10)
+</span></code></pre>
 <h4> Parameters </h4>
 
 <ul>
@@ -192,10 +199,7 @@ self</li>
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
-<span id=radio-newgenerictransmission-filename-frequency-modulation-power></span><h3 id='radio-newgenerictransmission-filename-frequency-modulation-power-'>RADIO:NewGenericTransmission(FileName, Frequency, Modulation, Power)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- In this function the data is especially relevant if the broadcaster is anything but a UNIT or a GROUP,</span>
-<span class="n">but</span> <span class="n">it</span> <span class="n">will</span> <span class="n">work</span> <span class="n">with</span> <span class="n">a</span> <span class="n">UNIT</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">GROUP</span> <span class="n">anyway</span>
-<span class="c1">-- Only the RADIO and the Filename are mandatory</span>
-</code></pre>
+<span id=radio-newgenerictransmission-filename-frequency-modulation-power></span><h3 id='radio-newgenerictransmission-filename-frequency-modulation-power-'>RADIO:NewGenericTransmission(FileName, Frequency, Modulation, Power)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -212,10 +216,7 @@ self</li>
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
-<span id=radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop></span><h3 id='radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop-'>RADIO:NewUnitTransmission(FileName, Subtitle, SubtitleDuration, Frequency, Modulation, Loop)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- In this function the data is especially relevant if the broadcaster is a UNIT or a GROUP,</span>
-<span class="n">but</span> <span class="n">it</span> <span class="n">will</span> <span class="n">work</span> <span class="k">for</span> <span class="n">any</span> <span class="n">POSITIONABLE</span>
-<span class="c1">-- Only the RADIO and the Filename are mandatory</span>
-</code></pre>
+<span id=radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop></span><h3 id='radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop-'>RADIO:NewUnitTransmission(FileName, Subtitle, SubtitleDuration, Frequency, Modulation, Loop)</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -234,14 +235,7 @@ self</li>
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
-<span id=radio-broadcast></span><h3 id='radio-broadcast-'>RADIO:Broadcast()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- The Radio has to be populated with the new transmission before broadcasting.</span>
-<span class="c1">-- Please use RADIO setters or either [RADIO:NewGenericTransmission()](#radio-newgenerictransmission-filename-frequency-modulation-power) or [RADIO:NewUnitTransmission()](#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop)</span>
-<span class="c1">-- This class is in fact pretty smart, it determines the right DCS function to use depending on the type of POSITIONABLE</span>
-<span class="c1">-- If the POSITIONABLE is not a UNIT or a GROUP, we use the generic (but limited) trigger.action.radioTransmission()</span>
-<span class="c1">-- If the POSITIONABLE is a UNIT or a GROUP, we use the "TransmitMessage" Command</span>
-<span class="c1">-- If your POSITIONABLE is a UNIT or a GROUP, the Power is ignored.</span>
-<span class="c1">-- If your POSITIONABLE is not a UNIT or a GROUP, the Subtitle, SubtitleDuration and Loop are ignored</span>
-</code></pre>
+<span id=radio-broadcast></span><h3 id='radio-broadcast-'>RADIO:Broadcast()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -254,9 +248,7 @@ self</li>
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
-<span id=radio-stopbroadcast></span><h3 id='radio-stopbroadcast-'>RADIO:StopBroadcast()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Especially usefull to stop the broadcast of looped transmissions</span>
-<span class="c1">-- Only works with broadcasts from UNIT or GROUP</span>
-</code></pre>
+<span id=radio-stopbroadcast></span><h3 id='radio-stopbroadcast-'>RADIO:StopBroadcast()</h3>
 <h4> Parameters </h4>
 
 <ul>
@@ -268,4 +260,111 @@ self</li>
 
 <ul>
 <li><a href="#radio-class-">RADIO</a></li>
+</ul>
+<span id=beacon-class></span><h2 id='beacon-class-'>BEACON Class</h2>
+<pre>
+Inheritance : The BEACON Class inherits from the following parents :
+BASE
+    `-- BEACON
+</pre>
+
+<p>After attaching a <a href="#beacon-class-">BEACON</a> to your <a href="#positionable-class-">POSITIONABLE</a>, you need to select the right function to activate the kind of beacon you want.
+There are two types of BEACONs available : the AA TACAN Beacon and the general purpose Radio Beacon.
+Note that in both case, you can set an optional parameter : the <code>BeaconDuration</code>. This can be very usefull to simulate the battery time if your BEACON is
+attach to a cargo crate, for exemple.</p>
+<span id=aa-tacan-beacon-usage></span><h5 id='aa-tacan-beacon-usage-'>AA TACAN Beacon usage</h5>
+<p>This beacon only works with airborne <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>. Use @{#BEACON:AATACAN}() to set the beacon parameters and start the beacon.
+Use @#BEACON:StopAATACAN}() to stop it.</p>
+<span id=general-purpose-radio-beacon-usage></span><h5 id='general-purpose-radio-beacon-usage-'>General Purpose Radio Beacon usage</h5>
+<p>This beacon will work with any <a href="#positionable-class-">POSITIONABLE</a>, but <strong>it won&#39;t follow the <a href="#positionable-class-">POSITIONABLE</a></strong> ! This means that you should only use it with
+<a href="#positionable-class-">POSITIONABLE</a> that don&#39;t move, or move very slowly. Use @{#BEACON:RadioBeacon}() to set the beacon parameters and start the beacon.
+Use @{#BEACON:StopRadioBeacon}() to stop it.</p>
+<span id=beacon-new-positionable></span><h3 id='beacon-new-positionable-'>BEACON:New(Positionable)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a>
+self</li>
+<li><a href="#positionable-class-">POSITIONABLE</a> Positionable : The <a href="#positionable-module-">Positionable</a> that will receive radio capabilities.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><p><a href="#beacon-class-">BEACON</a></p></li>
+<li><p><u>Nil</u>  If Positionable is invalid</p></li>
+</ul>
+<span id=beacon-aatacan-tacanchannel-message-bearing-beaconduration></span><h3 id='beacon-aatacan-tacanchannel-message-bearing-beaconduration-'>BEACON:AATACAN(TACANChannel, Message, Bearing, BeaconDuration)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Let's create a TACAN Beacon for a tanker</span>
+<span class="kd">local</span> <span class="n">myUnit</span> <span class="o">=</span> <span class="n">UNIT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span><span class="s2">"MyUnit"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">myBeacon</span> <span class="o">=</span> <span class="n">myUnit</span><span class="p">:</span><span class="n">GetBeacon</span><span class="p">()</span> <span class="c1">-- Creates the beacon</span>
+
+<span class="n">myBeacon</span><span class="p">:</span><span class="n">AATACAN</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s2">"TEXACO"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">-- Activate the beacon</span>
+</code></pre>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a>
+self</li>
+<li><u>Number</u> TACANChannel : (the &quot;10&quot; part in &quot;10Y&quot;). Note that AA TACAN are only available on Y Channels</li>
+<li><u>String</u> Message : The Message that is going to be coded in Morse and broadcasted by the beacon</li>
+<li><u>Boolean</u> Bearing : Can the BEACON be homed on ?</li>
+<li><u>Number</u> BeaconDuration : How long will the beacon last in seconds. Omit for forever.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a></li>
+</ul>
+<span id=beacon-stopaatacan></span><h3 id='beacon-stopaatacan-'>BEACON:StopAATACAN()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a></li>
+</ul>
+<span id=beacon-radiobeacon-filename-frequency-modulation-power-beaconduration></span><h3 id='beacon-radiobeacon-filename-frequency-modulation-power-beaconduration-'>BEACON:RadioBeacon(FileName, Frequency, Modulation, Power, BeaconDuration)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Let's create a beacon for a unit in distress.</span>
+<span class="c1">-- Frequency will be 40MHz FM (home-able by a Huey's AN/ARC-131)</span>
+<span class="c1">-- The beacon they use is battery-powered, and only lasts for 5 min</span>
+<span class="kd">local</span> <span class="n">UnitInDistress</span> <span class="o">=</span> <span class="n">UNIT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span><span class="s2">"Unit1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">UnitBeacon</span> <span class="o">=</span> <span class="n">UnitInDistress</span><span class="p">:</span><span class="n">GetBeacon</span><span class="p">()</span>
+
+<span class="c1">-- Set the beacon and start it</span>
+<span class="n">UnitBeacon</span><span class="p">:</span><span class="n">RadioBeacon</span><span class="p">(</span><span class="s2">"MySoundFileSOS.ogg"</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="n">radio</span><span class="p">.</span><span class="n">modulation</span><span class="p">.</span><span class="n">FM</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+</code></pre>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a>
+self</li>
+<li><u>String</u> FileName : The name of the audio file</li>
+<li><u>Number</u> Frequency : in MHz</li>
+<li><u>Number</u> Modulation : either radio.modulation.AM or radio.modulation.FM</li>
+<li><u>Number</u> Power : in W</li>
+<li><u>Number</u> BeaconDuration : How long will the beacon last in seconds. Omit for forever.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a></li>
+</ul>
+<span id=beacon-stopradiobeacon></span><h3 id='beacon-stopradiobeacon-'>BEACON:StopRadioBeacon()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#beacon-class-">BEACON</a></li>
 </ul>

@@ -1,0 +1,250 @@
+<span id=ai-ai_designate-module></span><h1 id='ai-ai_designate-module-'>AI.AI_Designate Module</h1>
+<p><strong>AI (Release 2.1)</strong> -- Management of target designation.</p>
+
+<p>--<img src="/includes/Pictures/DESIGNATE/Dia1.JPG" alt="Banner Image" /></p>
+<span id=ai_designate-class></span><h2 id='ai_designate-class-'>AI_DESIGNATE Class</h2>
+<pre>
+Inheritance : The AI_DESIGNATE Class inherits from the following parents :
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- AI_DESIGNATE
+</pre>
+
+<p>AI_DESIGNATE is orchestrating the designation of potential targets executed by a Recce group,
+and communicates these to a dedicated attacking group of players,
+so that following a dynamically generated menu system,
+each detected set of potential targets can be lased or smoked...</p>
+
+<p>The Recce group is detecting as part of the DETECTION_ class continuously targets.
+Once targets have been detected, they will be reported. The AI_DESIGNATE object will fire the <strong>Detect</strong> event in this case!
+As part of the reporting, the following happens:</p>
+
+<ul>
+<li>A message is sent to each GROUP of the Attack SET_GROUP, containing the threat level and the target composition.</li>
+<li>A menu is created and updated for each GROUP of the Attack SET_GROUP, containing the the treat level and the target composition.</li>
+</ul>
+
+<p>One of the players in one of the Attack GROUPs, can then select a Target Set by selecting one of the menu options.
+Each menu option has two modes:</p>
+
+<ul>
+<li>If the Target Set is not being designated, then the Designate menu for the target Set will provide options to Lase or Smoke the targets.</li>
+<li>If the Target Set is being designated, then the Designate menu will provide an option to cancel the designation.</li>
+</ul>
+
+<p>In this way, the AI can assist players to designate ground targets for a coordinated attack!</p>
+
+<p>Have FUN!</p>
+<span id=1-ai_designate-constructor></span><h5 id='1-ai_designate-constructor-'>1. AI_DESIGNATE constructor</h5>
+<ul>
+<li><a href="#ai_designate-new-detection-groupset">AI_DESIGNATE:New()</a>: Creates a new AI_DESIGNATE object.</li>
+</ul>
+<span id=2-ai_designate-is-a-fsm></span><h5 id='2-ai_designate-is-a-fsm-'>2. AI_DESIGNATE is a FSM</h5>
+<p><img src="/images/%C2%B5" alt="Process" /></p>
+<span id=2-1-ai_designate-states></span><h5 id='2-1-ai_designate-states-'>2.1 AI_DESIGNATE States</h5>
+<ul>
+<li><strong>Designating</strong> ( Group ): The process is not started yet.</li>
+</ul>
+<span id=2-2-ai_designate-events></span><h5 id='2-2-ai_designate-events-'>2.2 AI_DESIGNATE Events</h5>
+<ul>
+<li><strong>AI_DESIGNATE-Detect-</strong>: Detect targets.</li>
+<li><strong>AI_DESIGNATE-LaseOn-</strong>: Lase the targets with the specified Index.</li>
+<li><strong>AI_DESIGNATE-LaseOff-</strong>: Stop lasing the targets with the specified Index.</li>
+<li><strong>AI_DESIGNATE-Smoke-</strong>: Smoke the targets with the specified Index.</li>
+<li><strong>AI_DESIGNATE-Status-</strong>: Report designation status.</li>
+</ul>
+<span id=3-set-laser-codes></span><h5 id='3-set-laser-codes-'>3. Set laser codes</h5>
+<p>An array of laser codes can be provided, that will be used by the AI_DESIGNATE when lasing.
+The laser code is communicated by the Recce when it is lasing a larget.
+Note that the default laser code is 1113.
+Working known laser codes are: 1113,1462,1483,1537,1362,1214,1131,1182,1644,1614,1515,1411,1621,1138,1542,1678,1573,1314,1643,1257,1467,1375,1341,1275,1237</p>
+
+<p>Use the method <a href="#ai_designate-setlasercodes-lasercodes">AI_DESIGNATE:SetLaserCodes()</a> to set the possible laser codes to be selected from.
+One laser code can be given or an sequence of laser codes through an table...</p>
+
+<p>AIDesignate:SetLaserCodes( 1214 )</p>
+
+<p>The above sets one laser code with the value 1214.</p>
+
+<p>AIDesignate:SetLaserCodes( { 1214, 1131, 1614, 1138 } )</p>
+
+<p>The above sets a collection of possible laser codes that can be assigned. <strong>Note the { } notation!</strong></p>
+<span id=ai_designate-new-detection-groupset></span><h3 id='ai_designate-new-detection-groupset-'>AI_DESIGNATE:New(Detection, GroupSet)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection</li>
+<li><a href="#set_group-class-">SET_GROUP</a> GroupSet : The set of groups to designate for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-onbeforedetect-from-event-to></span><h3 id='ai_designate-onbeforedetect-from-event-to-'>AI_DESIGNATE:OnBeforeDetect(From, Event, To)</h3>
+<p>Detect Handler OnBefore for AI_DESIGNATE</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=ai_designate-onafterdetect-from-event-to></span><h3 id='ai_designate-onafterdetect-from-event-to-'>AI_DESIGNATE:OnAfterDetect(From, Event, To)</h3>
+<p>Detect Handler OnAfter for AI_DESIGNATE</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=ai_designate-detect></span><h3 id='ai_designate-detect-'>AI_DESIGNATE:Detect()</h3>
+<p>Detect Trigger for AI_DESIGNATE</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=ai_designate-setlasercodes-lasercodes></span><h3 id='ai_designate-setlasercodes-lasercodes-'>AI_DESIGNATE:SetLaserCodes(LaserCodes)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+<li>#list&lt;<u>Number</u>&gt; LaserCodes</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-onafterdetect></span><h3 id='ai_designate-onafterdetect-'>AI_DESIGNATE:onafterDetect()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-sendstatus></span><h3 id='ai_designate-sendstatus-'>AI_DESIGNATE:SendStatus()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-setdesignatemenu></span><h3 id='ai_designate-setdesignatemenu-'>AI_DESIGNATE:SetDesignateMenu()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-menusmoke></span><h3 id='ai_designate-menusmoke-'>AI_DESIGNATE:MenuSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=ai_designate-menulaseon></span><h3 id='ai_designate-menulaseon-'>AI_DESIGNATE:MenuLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=ai_designate-menulaseoff></span><h3 id='ai_designate-menulaseoff-'>AI_DESIGNATE:MenuLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=ai_designate-onafterlaseon></span><h3 id='ai_designate-onafterlaseon-'>AI_DESIGNATE:onafterLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-onafterlaseoff></span><h3 id='ai_designate-onafterlaseoff-'>AI_DESIGNATE:onafterLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-onaftersmoke></span><h3 id='ai_designate-onaftersmoke-'>AI_DESIGNATE:onafterSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
