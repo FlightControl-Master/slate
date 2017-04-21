@@ -88,6 +88,8 @@ What is this power thing ?
 
 
 ### RADIO:New(Positionable)
+Create a new RADIO Object. This doesn't broadcast a transmission, though, use RADIO-Broadcast- to actually broadcast
+If you want to create a RADIO, you probably should use POSITIONABLE-GetRadio- instead
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -101,6 +103,7 @@ self
 
 
 ### RADIO:SetFileName(FileName)
+Check validity of the filename passed and sets RADIO.FileName
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -113,6 +116,7 @@ self
 
 
 ### RADIO:SetFrequency(Frequency)
+Check validity of the frequency passed and sets RADIO.Frequency
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -125,6 +129,7 @@ self
 
 
 ### RADIO:SetModulation(Modulation)
+Check validity of the frequency passed and sets RADIO.Modulation
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -137,6 +142,7 @@ self
 
 
 ### RADIO:SetPower(Power)
+Check validity of the power passed and sets RADIO.Power
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -151,6 +157,7 @@ self
 ### RADIO:SetLoop(Loop)
 ``` lua
 ```
+Check validity of the loop passed and sets RADIO.Loop
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -171,6 +178,8 @@ local MyUnitRadio = MyUnit:GetRadio()
 -- add a subtitle for the next transmission, which will be up for 10s
 MyUnitRadio:SetSubtitle("My Subtitle, 10)
 ```
+Check validity of the subtitle and the subtitleDuration  passed and sets RADIO.subtitle and RADIO.subtitleDuration
+Both parameters are mandatory, since it wouldn't make much sense to change the Subtitle and not its duration
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -184,6 +193,11 @@ self
 
 
 ### RADIO:NewGenericTransmission(FileName, Frequency, Modulation, Power)
+Create a new transmission, that is to say, populate the RADIO with relevant data
+In this function the data is especially relevant if the broadcaster is anything but a UNIT or a GROUP,
+but it will work with a UNIT or a GROUP anyway.
+Only the [RADIO](#radio-class-)
+and the Filename are mandatory
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -199,6 +213,10 @@ self
 
 
 ### RADIO:NewUnitTransmission(FileName, Subtitle, SubtitleDuration, Frequency, Modulation, Loop)
+Create a new transmission, that is to say, populate the RADIO with relevant data
+In this function the data is especially relevant if the broadcaster is a UNIT or a GROUP,
+but it will work for any [POSITIONABLE](#positionable-class-).
+Only the RADIO and the Filename are mandatory.
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -216,6 +234,14 @@ self
 
 
 ### RADIO:Broadcast()
+Actually Broadcast the transmission
+* The Radio has to be populated with the new transmission before broadcasting.
+* Please use RADIO setters or either [RADIO:NewGenericTransmission()](#radio-newgenerictransmission-filename-frequency-modulation-power) or [RADIO:NewUnitTransmission()](#radio-newunittransmission-filename-subtitle-subtitleduration-frequency-modulation-loop)
+* This class is in fact pretty smart, it determines the right DCS function to use depending on the type of POSITIONABLE
+* If the POSITIONABLE is not a UNIT or a GROUP, we use the generic (but limited) trigger.action.radioTransmission()
+* If the POSITIONABLE is a UNIT or a GROUP, we use the "TransmitMessage" Command
+* If your POSITIONABLE is a UNIT or a GROUP, the Power is ignored.
+* If your POSITIONABLE is not a UNIT or a GROUP, the Subtitle, SubtitleDuration are ignored
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -227,6 +253,8 @@ self
 
 
 ### RADIO:StopBroadcast()
+Stops a transmission
+This function is especially usefull to stop the broadcast of looped transmissions
 
 <h4> Parameters </h4>
 * [RADIO](#radio-class-)
@@ -263,6 +291,8 @@ Use @{#BEACON:StopRadioBeacon}() to stop it.
 
 
 ### BEACON:New(Positionable)
+Create a new BEACON Object. This doesn't activate the beacon, though, use [BEACON:AATACAN()](#beacon-aatacan-tacanchannel-message-bearing-beaconduration) or BEACON-Generic-
+If you want to create a BEACON, you probably should use POSITIONABLE-GetBeacon- instead.
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)
@@ -283,6 +313,7 @@ local myBeacon = myUnit:GetBeacon() -- Creates the beacon
 
 myBeacon:AATACAN(20, "TEXACO", true) -- Activate the beacon
 ```
+Activates a TACAN BEACON on an Aircraft.
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)
@@ -298,6 +329,7 @@ self
 
 
 ### BEACON:StopAATACAN()
+Stops the AA TACAN BEACON
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)
@@ -319,6 +351,16 @@ local UnitBeacon = UnitInDistress:GetBeacon()
 -- Set the beacon and start it
 UnitBeacon:RadioBeacon("MySoundFileSOS.ogg", 40, radio.modulation.FM, 20, 5*60)
 ```
+Activates a general pupose Radio Beacon
+This uses the very generic singleton function "trigger.action.radioTransmission()" provided by DCS to broadcast a sound file on a specific frequency.
+Although any frequency could be used, only 2 DCS Modules can home on radio beacons at the time of writing : the Huey and the Mi-8.
+They can home in on these specific frequencies :
+* **Mi8**
+* R-828 -> 20-60MHz
+* ARKUD -> 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM
+* ARK9 -> 150-1300KHz
+* **Huey**
+* AN/ARC-131 -> 30-76 Mhz FM
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)
@@ -335,6 +377,7 @@ self
 
 
 ### BEACON:StopRadioBeacon()
+Stops the AA TACAN BEACON
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)

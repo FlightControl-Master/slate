@@ -29,6 +29,7 @@ BASE
 
 
 ### TASK_PICKUP:New(Mission, AssignedSetGroup, TaskName, TaskType, UnitSetTargets, TargetZone)
+Instantiates a new TASK_PICKUP.
 
 <h4> Parameters </h4>
 * [TASK_PICKUP](#task_pickup-class-)
@@ -46,6 +47,7 @@ self
 
 
 ### TASK_PICKUP:CleanUp()
+Removes a TASK_PICKUP.
 
 <h4> Parameters </h4>
 * [TASK_PICKUP](#task_pickup-class-)
@@ -56,6 +58,7 @@ self
 
 
 ### TASK_PICKUP:AssignToUnit(TaskUnit)
+Assign the [Task](#task-module-) to a [Unit](#unit-module-).
 
 <h4> Parameters </h4>
 * [TASK_PICKUP](#task_pickup-class-)
@@ -68,6 +71,7 @@ self
 
 
 ### TASK_PICKUP:OnNext(Fsm, Event, From, To, Event)
+StateMachine callback function for a TASK
 
 <h4> Parameters </h4>
 * [TASK_PICKUP](#task_pickup-class-)

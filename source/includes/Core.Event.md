@@ -199,6 +199,7 @@ BASE
 
 
 ### EVENT:Init(EventID, EventClass)
+Initializes the Events structure for the event
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -211,6 +212,7 @@ self
 
 
 ### EVENT:Remove(EventClass, EventID)
+Removes a subscription
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -223,6 +225,7 @@ self
 
 
 ### EVENT:Reset(EventClass, EventID)
+Resets subscriptions
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -235,6 +238,7 @@ self
 
 
 ### EVENT:RemoveAll(EventObject)
+Clears all event subscriptions for a [BASE](#base-class-) derived object.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -244,6 +248,7 @@ self
 <h4> Returns </h4>
 
 ### EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)
+Create an OnDead event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -259,6 +264,7 @@ self
 
 
 ### EVENT:OnEventGeneric(EventFunction, EventClass, self)
+Set a new listener for an S_EVENT_X event independent from a unit or a weapon.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -273,6 +279,7 @@ self
 
 
 ### EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)
+Set a new listener for an S_EVENT_X event for a UNIT.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -288,6 +295,7 @@ self
 
 
 ### EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)
+Set a new listener for an S_EVENT_X event for a GROUP.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -303,6 +311,7 @@ self
 
 
 ### EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)
+Create an OnBirth event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -317,6 +326,7 @@ self
 
 
 ### EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)
+Create an OnCrash event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -331,6 +341,7 @@ self
 
 
 ### EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)
+Create an OnDead event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -345,6 +356,7 @@ self
 
 
 ### EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)
+Create an OnLand event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -359,6 +371,7 @@ self
 
 
 ### EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)
+Create an OnTakeOff event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -373,6 +386,7 @@ self
 
 
 ### EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)
+Create an OnDead event handler for a group
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -387,6 +401,7 @@ self
 
 
 ### EVENT:CreateEventNewCargo(Cargo)
+Creation of a New Cargo Event.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -396,6 +411,7 @@ self
 <h4> Returns </h4>
 
 ### EVENT:CreateEventDeleteCargo(Cargo)
+Creation of a Cargo Deletion Event.
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)
@@ -487,6 +503,7 @@ BASE
 
 
 ### EVENTHANDLER:New()
+The EVENTHANDLER constructor
 
 <h4> Parameters </h4>
 * [EVENTHANDLER](#eventhandler-class-)

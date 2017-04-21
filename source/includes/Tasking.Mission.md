@@ -17,6 +17,7 @@ BASE
 
 
 ### MISSION:New(CommandCenter, MissionName, MissionPriority, MissionBriefing, MissionCoalition)
+This is the main MISSION declaration method. Each Mission is like the master or a Mission orchestration between, Clients, Tasks, Stages etc.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -34,6 +35,7 @@ self
 
 ### MISSION:OnLeaveIdle(From, Event, To)
 OnLeave Transition Handler for State Idle.
+@function [parent=#MISSION] OnLeaveIdle
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -48,6 +50,7 @@ self
 
 ### MISSION:OnEnterIdle(From, Event, To)
 OnEnter Transition Handler for State Idle.
+@function [parent=#MISSION] OnEnterIdle
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -60,6 +63,7 @@ self
 
 ### MISSION:OnLeaveOngoing(From, Event, To)
 OnLeave Transition Handler for State Ongoing.
+@function [parent=#MISSION] OnLeaveOngoing
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -74,6 +78,7 @@ self
 
 ### MISSION:OnEnterOngoing(From, Event, To)
 OnEnter Transition Handler for State Ongoing.
+@function [parent=#MISSION] OnEnterOngoing
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -86,6 +91,7 @@ self
 
 ### MISSION:OnBeforeStart(From, Event, To)
 OnBefore Transition Handler for Event Start.
+@function [parent=#MISSION] OnBeforeStart
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -100,6 +106,7 @@ self
 
 ### MISSION:OnAfterStart(From, Event, To)
 OnAfter Transition Handler for Event Start.
+@function [parent=#MISSION] OnAfterStart
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -112,6 +119,7 @@ self
 
 ### MISSION:Start()
 Synchronous Event Trigger for Event Start.
+@function [parent=#MISSION] Start
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -121,6 +129,7 @@ self
 
 ### MISSION:OnLeaveIdle(From, Event, To)
 OnLeave Transition Handler for State Idle.
+@function [parent=#MISSION] OnLeaveIdle
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -135,6 +144,7 @@ self
 
 ### MISSION:OnEnterIdle(From, Event, To)
 OnEnter Transition Handler for State Idle.
+@function [parent=#MISSION] OnEnterIdle
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -147,6 +157,7 @@ self
 
 ### MISSION:OnBeforeStop(From, Event, To)
 OnBefore Transition Handler for Event Stop.
+@function [parent=#MISSION] OnBeforeStop
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -161,6 +172,7 @@ self
 
 ### MISSION:OnAfterStop(From, Event, To)
 OnAfter Transition Handler for Event Stop.
+@function [parent=#MISSION] OnAfterStop
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -173,6 +185,7 @@ self
 
 ### MISSION:Stop()
 Synchronous Event Trigger for Event Stop.
+@function [parent=#MISSION] Stop
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -182,6 +195,7 @@ self
 
 ### MISSION:OnLeaveCompleted(From, Event, To)
 OnLeave Transition Handler for State Completed.
+@function [parent=#MISSION] OnLeaveCompleted
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -196,6 +210,7 @@ self
 
 ### MISSION:OnEnterCompleted(From, Event, To)
 OnEnter Transition Handler for State Completed.
+@function [parent=#MISSION] OnEnterCompleted
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -208,6 +223,7 @@ self
 
 ### MISSION:OnBeforeComplete(From, Event, To)
 OnBefore Transition Handler for Event Complete.
+@function [parent=#MISSION] OnBeforeComplete
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -222,6 +238,7 @@ self
 
 ### MISSION:OnAfterComplete(From, Event, To)
 OnAfter Transition Handler for Event Complete.
+@function [parent=#MISSION] OnAfterComplete
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -234,6 +251,7 @@ self
 
 ### MISSION:Complete()
 Synchronous Event Trigger for Event Complete.
+@function [parent=#MISSION] Complete
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -243,6 +261,7 @@ self
 
 ### MISSION:OnLeaveFailed(From, Event, To)
 OnLeave Transition Handler for State Failed.
+@function [parent=#MISSION] OnLeaveFailed
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -257,6 +276,7 @@ self
 
 ### MISSION:OnEnterFailed(From, Event, To)
 OnEnter Transition Handler for State Failed.
+@function [parent=#MISSION] OnEnterFailed
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -269,6 +289,7 @@ self
 
 ### MISSION:OnBeforeFail(From, Event, To)
 OnBefore Transition Handler for Event Fail.
+@function [parent=#MISSION] OnBeforeFail
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -283,6 +304,7 @@ self
 
 ### MISSION:OnAfterFail(From, Event, To)
 OnAfter Transition Handler for Event Fail.
+@function [parent=#MISSION] OnAfterFail
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -295,6 +317,7 @@ self
 
 ### MISSION:Fail()
 Synchronous Event Trigger for Event Fail.
+@function [parent=#MISSION] Fail
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -303,6 +326,7 @@ self
 <h4> Returns </h4>
 
 ### MISSION:GetName()
+Gets the mission name.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -314,6 +338,10 @@ self
 
 
 ### MISSION:JoinUnit(PlayerUnit, PlayerGroup)
+Add a Unit to join the Mission.
+For each Task within the Mission, the Unit is joined with the Task.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -326,6 +354,10 @@ self
 
 
 ### MISSION:AbortUnit(PlayerUnit)
+Aborts a PlayerUnit from the Mission.
+For each Task within the Mission, the PlayerUnit is removed from Task where it is assigned.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -337,6 +369,10 @@ self
 
 
 ### MISSION:CrashUnit(PlayerUnit)
+Handles a crash of a PlayerUnit from the Mission.
+For each Task within the Mission, the PlayerUnit is removed from Task where it is assigned.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -348,6 +384,7 @@ self
 
 
 ### MISSION:AddScoring()
+Add a scoring to the mission.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -359,6 +396,7 @@ self
 
 
 ### MISSION:GetScoring()
+Get the scoring object of a mission.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -370,6 +408,7 @@ self
 
 
 ### MISSION:GetGroups()
+Get the groups for which TASKS are given in the mission
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -380,6 +419,7 @@ self
 
 
 ### MISSION:SetMenu(MenuTime)
+Sets the Planned Task menu.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -389,6 +429,7 @@ self
 <h4> Returns </h4>
 
 ### MISSION:RemoveMenu(MenuTime)
+Removes the Planned Task menu.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -398,6 +439,7 @@ self
 <h4> Returns </h4>
 
 ### MISSION:GetCommandCenter()
+Gets the COMMANDCENTER.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -408,6 +450,7 @@ self
 
 
 ### MISSION:RemoveTaskMenu(Task)
+Removes a Task menu.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -420,6 +463,7 @@ self
 
 
 ### MISSION:GetMenu(TaskGroup)
+Gets the mission menu for the coalition.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -431,6 +475,7 @@ self
 
 
 ### GetTask()
+Get the TASK identified by the TaskNumber from the Mission. This function is useful in GoalFunctions.
 
 <h4> Parameters </h4>
 * <u>String</u> TaskName : The Name of the [Task](#task-module-) within the [Mission](#mission-module-).
@@ -441,6 +486,9 @@ self
 
 
 ### MISSION:AddTask(Task)
+Register a [Task](#task-module-) to be completed within the [Mission](#mission-module-).
+Note that there can be multiple [Task](#task-module-)s registered to be completed.
+Each Task can be set a certain Goals. The Mission will not be completed until all Goals are reached.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -452,6 +500,9 @@ self
 
 
 ### MISSION:RemoveTask(Task)
+Removes a [Task](#task-module-) to be completed within the [Mission](#mission-module-).
+Note that there can be multiple [Task](#task-module-)s registered to be completed.
+Each Task can be set a certain Goals. The Mission will not be completed until all Goals are reached.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -463,6 +514,7 @@ self
 
 
 ### MISSION:GetNextTaskID(Task)
+Return the next [Task](#task-module-) ID to be completed within the [Mission](#mission-module-).
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -474,6 +526,7 @@ self
 
 
 ### MISSION:IsCompleted()
+Is the [Mission](#mission-module-) **Completed**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -484,6 +537,7 @@ self
 
 
 ### MISSION:IsIdle()
+Is the [Mission](#mission-module-) **Idle**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -494,6 +548,7 @@ self
 
 
 ### MISSION:IsOngoing()
+Is the [Mission](#mission-module-) **Ongoing**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -504,6 +559,7 @@ self
 
 
 ### MISSION:IsFailed()
+Is the [Mission](#mission-module-) **Failed**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -514,6 +570,7 @@ self
 
 
 ### MISSION:IsHold()
+Is the [Mission](#mission-module-) **Hold**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -524,6 +581,7 @@ self
 
 
 ### MISSION:HasGroup()
+Validates if the Mission has a Group
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -534,6 +592,7 @@ self
 
 
 ### MISSION:ReportSummary()
+Create a summary report of the Mission (one line).
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -544,6 +603,7 @@ self
 
 
 ### MISSION:ReportOverview()
+Create a overview report of the Mission (multiple lines).
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -554,6 +614,7 @@ self
 
 
 ### MISSION:ReportDetails()
+Create a detailed report of the Mission, listing all the details of the Task.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)

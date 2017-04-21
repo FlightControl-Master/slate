@@ -17,6 +17,7 @@ ERROR !
 
 ### getByName()
 Returns airbase by its name. If no airbase found the function will return nil.
+@function [parent=#Airbase] getByName
 
 <h4> Parameters </h4>
 * <u>String</u> name
@@ -27,6 +28,7 @@ Returns airbase by its name. If no airbase found the function will return nil.
 
 ### getDescByName()
 Returns airbase descriptor by type name. If no descriptor is found the function will return nil.
+@function [parent=#Airbase] getDescByName
 
 <h4> Parameters </h4>
 * #TypeName typeName : Airbase type name.
@@ -37,6 +39,7 @@ Returns airbase descriptor by type name. If no descriptor is found the function 
 
 ### Airbase:getUnit()
 Returns Unit that is corresponded to the airbase. Works only for ships.
+@function [parent=#Airbase] getUnit
 
 <h4> Parameters </h4>
 * self self
@@ -47,6 +50,7 @@ Returns Unit that is corresponded to the airbase. Works only for ships.
 
 ### Airbase:getID()
 Returns identifier of the airbase.
+@function [parent=#Airbase] getID
 
 <h4> Parameters </h4>
 * self self
@@ -57,6 +61,7 @@ Returns identifier of the airbase.
 
 ### Airbase:getCallsign()
 Returns the airbase's callsign - the localized string.
+@function [parent=#Airbase] getCallsign
 
 <h4> Parameters </h4>
 * self self
@@ -67,6 +72,7 @@ Returns the airbase's callsign - the localized string.
 
 ### Airbase:getDesc()
 Returns descriptor of the airbase.
+@function [parent=#Airbase] getDesc
 
 <h4> Parameters </h4>
 * self self

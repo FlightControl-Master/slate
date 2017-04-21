@@ -17,6 +17,7 @@ ID : Identifier of a group. It is assigned to a group by Mission Editor automati
 
 ### getByName()
 Returns group by the name assigned to the group in Mission Editor.
+@function [parent=#Group] getByName
 
 <h4> Parameters </h4>
 * <u>String</u> name
@@ -27,6 +28,7 @@ Returns group by the name assigned to the group in Mission Editor.
 
 ### Group:isExist()
 returns true if the group exist or false otherwise.
+@function [parent=#Group] isExist
 
 <h4> Parameters </h4>
 * #Group self
@@ -37,6 +39,7 @@ returns true if the group exist or false otherwise.
 
 ### Group:destroy()
 Destroys the group and all of its units.
+@function [parent=#Group] destroy
 
 <h4> Parameters </h4>
 * #Group self
@@ -45,6 +48,7 @@ Destroys the group and all of its units.
 
 ### Group:getCategory()
 Returns category of the group.
+@function [parent=#Group] getCategory
 
 <h4> Parameters </h4>
 * #Group self
@@ -55,6 +59,7 @@ Returns category of the group.
 
 ### Group:getCoalition()
 Returns the coalition of the group.
+@function [parent=#Group] getCoalition
 
 <h4> Parameters </h4>
 * #Group self
@@ -65,6 +70,7 @@ Returns the coalition of the group.
 
 ### Group:getName()
 Returns the group's name. This is the same name assigned to the group in Mission Editor.
+@function [parent=#Group] getName
 
 <h4> Parameters </h4>
 * #Group self
@@ -75,6 +81,7 @@ Returns the group's name. This is the same name assigned to the group in Mission
 
 ### Group:getID()
 Returns the group identifier.
+@function [parent=#Group] getID
 
 <h4> Parameters </h4>
 * #Group self
@@ -86,6 +93,7 @@ Returns the group identifier.
 
 ### Group:getUnit(unitNumber)
 Returns the unit with number unitNumber. If the unit is not exists the function will return nil.
+@function [parent=#Group] getUnit
 
 <h4> Parameters </h4>
 * #Group self
@@ -97,6 +105,7 @@ Returns the unit with number unitNumber. If the unit is not exists the function 
 
 ### Group:getSize()
 Returns current size of the group. If some of the units will be destroyed, As units are destroyed the size of the group will be changed.
+@function [parent=#Group] getSize
 
 <h4> Parameters </h4>
 * #Group self
@@ -107,6 +116,7 @@ Returns current size of the group. If some of the units will be destroyed, As un
 
 ### Group:getInitialSize()
 Returns initial size of the group. If some of the units will be destroyed, initial size of the group will not be changed. Initial size limits the unitNumber parameter for Group.getUnit() function.
+@function [parent=#Group] getInitialSize
 
 <h4> Parameters </h4>
 * #Group self
@@ -117,6 +127,7 @@ Returns initial size of the group. If some of the units will be destroyed, initi
 
 ### Group:getUnits()
 Returns array of the units present in the group now. Destroyed units will not be enlisted at all.
+@function [parent=#Group] getUnits
 
 <h4> Parameters </h4>
 * #Group self
@@ -127,6 +138,7 @@ Returns array of the units present in the group now. Destroyed units will not be
 
 ### Group:getController()
 Returns controller of the group.
+@function [parent=#Group] getController
 
 <h4> Parameters </h4>
 * #Group self

@@ -160,6 +160,7 @@ AI_CAS_ZONE class
 
 
 ### AI_CAS_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, EngageZone, PatrolAltType)
+Creates a new AI_CAS_ZONE object
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -179,6 +180,7 @@ self
 
 ### AI_CAS_ZONE:OnBeforeEngage(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Engage.
+@function [parent=#AI_CAS_ZONE] OnBeforeEngage
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -192,6 +194,7 @@ self
 
 ### AI_CAS_ZONE:OnAfterEngage(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Engage.
+@function [parent=#AI_CAS_ZONE] OnAfterEngage
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -205,6 +208,7 @@ self
 
 ### AI_CAS_ZONE:Engage(EngageSpeed, EngageAltitude, EngageWeaponExpend, EngageAttackQty, EngageDirection)
 Synchronous Event Trigger for Event Engage.
+@function [parent=#AI_CAS_ZONE] Engage
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -219,6 +223,7 @@ self
 
 ### AI_CAS_ZONE:OnLeaveEngaging(Controllable, From, Event, To)
 OnLeave Transition Handler for State Engaging.
+@function [parent=#AI_CAS_ZONE] OnLeaveEngaging
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -234,6 +239,7 @@ self
 
 ### AI_CAS_ZONE:OnEnterEngaging(Controllable, From, Event, To)
 OnEnter Transition Handler for State Engaging.
+@function [parent=#AI_CAS_ZONE] OnEnterEngaging
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -247,6 +253,7 @@ self
 
 ### AI_CAS_ZONE:OnBeforeFired(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Fired.
+@function [parent=#AI_CAS_ZONE] OnBeforeFired
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -262,6 +269,7 @@ self
 
 ### AI_CAS_ZONE:OnAfterFired(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Fired.
+@function [parent=#AI_CAS_ZONE] OnAfterFired
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -275,6 +283,7 @@ self
 
 ### AI_CAS_ZONE:Fired()
 Synchronous Event Trigger for Event Fired.
+@function [parent=#AI_CAS_ZONE] Fired
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -284,6 +293,7 @@ self
 
 ### AI_CAS_ZONE:OnBeforeDestroy(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Destroy.
+@function [parent=#AI_CAS_ZONE] OnBeforeDestroy
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -299,6 +309,7 @@ self
 
 ### AI_CAS_ZONE:OnAfterDestroy(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Destroy.
+@function [parent=#AI_CAS_ZONE] OnAfterDestroy
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -312,6 +323,7 @@ self
 
 ### AI_CAS_ZONE:Destroy()
 Synchronous Event Trigger for Event Destroy.
+@function [parent=#AI_CAS_ZONE] Destroy
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -321,6 +333,7 @@ self
 
 ### AI_CAS_ZONE:OnBeforeAbort(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Abort.
+@function [parent=#AI_CAS_ZONE] OnBeforeAbort
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -336,6 +349,7 @@ self
 
 ### AI_CAS_ZONE:OnAfterAbort(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Abort.
+@function [parent=#AI_CAS_ZONE] OnAfterAbort
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -349,6 +363,7 @@ self
 
 ### AI_CAS_ZONE:Abort()
 Synchronous Event Trigger for Event Abort.
+@function [parent=#AI_CAS_ZONE] Abort
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -358,6 +373,7 @@ self
 
 ### AI_CAS_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Accomplish.
+@function [parent=#AI_CAS_ZONE] OnBeforeAccomplish
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -373,6 +389,7 @@ self
 
 ### AI_CAS_ZONE:OnAfterAccomplish(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Accomplish.
+@function [parent=#AI_CAS_ZONE] OnAfterAccomplish
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -386,6 +403,7 @@ self
 
 ### AI_CAS_ZONE:Accomplish()
 Synchronous Event Trigger for Event Accomplish.
+@function [parent=#AI_CAS_ZONE] Accomplish
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -394,6 +412,7 @@ self
 <h4> Returns </h4>
 
 ### AI_CAS_ZONE:SetEngageZone(EngageZone)
+Set the Engage Zone where the AI is performing CAS. Note that if the EngageZone is changed, the AI needs to re-detect targets.
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)
@@ -406,6 +425,7 @@ self
 
 
 ### AI_CAS_ZONE:onafterStart(Controllable, From, Event, To)
+onafter State Transition for Event Start.
 
 <h4> Parameters </h4>
 * [AI_CAS_ZONE](#ai_cas_zone-class-)

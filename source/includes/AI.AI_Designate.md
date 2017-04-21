@@ -82,6 +82,7 @@ The above sets a collection of possible laser codes that can be assigned. **Note
 
 
 ### AI_DESIGNATE:New(Detection, GroupSet)
+AI_DESIGNATE Constructor. This class is an abstract class and should not be instantiated.
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -96,6 +97,7 @@ self
 
 ### AI_DESIGNATE:OnBeforeDetect(From, Event, To)
 Detect Handler OnBefore for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] OnBeforeDetect
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -110,6 +112,7 @@ self
 
 ### AI_DESIGNATE:OnAfterDetect(From, Event, To)
 Detect Handler OnAfter for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] OnAfterDetect
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -122,6 +125,7 @@ self
 
 ### AI_DESIGNATE:Detect()
 Detect Trigger for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] Detect
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -130,6 +134,8 @@ self
 <h4> Returns </h4>
 
 ### AI_DESIGNATE:SetLaserCodes(LaserCodes)
+Set an array of possible laser codes.
+Each new lase will select a code from this table.
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -143,6 +149,7 @@ self
 
 ### AI_DESIGNATE:onafterDetect()
 
+
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
 self
@@ -153,6 +160,7 @@ self
 
 
 ### AI_DESIGNATE:SendStatus()
+Sends the status to the Attack Groups.
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -164,6 +172,7 @@ self
 
 
 ### AI_DESIGNATE:SetDesignateMenu()
+Sets the Designate Menu.
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -176,6 +185,7 @@ self
 
 ### AI_DESIGNATE:MenuSmoke()
 
+
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
 self
@@ -183,6 +193,7 @@ self
 <h4> Returns </h4>
 
 ### AI_DESIGNATE:MenuLaseOn()
+
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -192,6 +203,7 @@ self
 
 ### AI_DESIGNATE:MenuLaseOff()
 
+
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
 self
@@ -199,6 +211,19 @@ self
 <h4> Returns </h4>
 
 ### AI_DESIGNATE:onafterLaseOn()
+
+
+<h4> Parameters </h4>
+* [AI_DESIGNATE](#ai_designate-class-)
+self
+
+<h4> Returns </h4>
+* [AI_DESIGNATE](#ai_designate-class-)
+
+
+
+### AI_DESIGNATE:onafterLasing()
+
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
@@ -211,6 +236,7 @@ self
 
 ### AI_DESIGNATE:onafterLaseOff()
 
+
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)
 self
@@ -221,6 +247,7 @@ self
 
 
 ### AI_DESIGNATE:onafterSmoke()
+
 
 <h4> Parameters </h4>
 * [AI_DESIGNATE](#ai_designate-class-)

@@ -14,6 +14,7 @@ ERROR !
 
 
 ### Object:isExist()
+@function [parent=#Object] isExist
 
 <h4> Parameters </h4>
 * #Object self
@@ -23,6 +24,7 @@ ERROR !
 
 
 ### Object:destroy()
+@function [parent=#Object] destroy
 
 <h4> Parameters </h4>
 * #Object self
@@ -30,6 +32,7 @@ ERROR !
 <h4> Returns </h4>
 
 ### Object:getCategory()
+@function [parent=#Object] getCategory
 
 <h4> Parameters </h4>
 * #Object self
@@ -40,6 +43,7 @@ ERROR !
 
 ### Object:getTypeName()
 Returns type name of the Object.
+@function [parent=#Object] getTypeName
 
 <h4> Parameters </h4>
 * #Object self
@@ -50,6 +54,7 @@ Returns type name of the Object.
 
 ### Object:getDesc()
 Returns object descriptor.
+@function [parent=#Object] getDesc
 
 <h4> Parameters </h4>
 * #Object self
@@ -60,6 +65,7 @@ Returns object descriptor.
 
 ### Object:hasAttribute(attributeName)
 Returns true if the object belongs to the category.
+@function [parent=#Object] hasAttribute
 
 <h4> Parameters </h4>
 * #Object self
@@ -71,6 +77,7 @@ Returns true if the object belongs to the category.
 
 ### Object:getName()
 Returns name of the object. This is the name that is assigned to the object in the Mission Editor.
+@function [parent=#Object] getName
 
 <h4> Parameters </h4>
 * #Object self
@@ -81,6 +88,7 @@ Returns name of the object. This is the name that is assigned to the object in t
 
 ### Object:getPoint()
 Returns object coordinates for current time.
+@function [parent=#Object] getPoint
 
 <h4> Parameters </h4>
 * #Object self
@@ -91,6 +99,7 @@ Returns object coordinates for current time.
 
 ### Object:getPosition()
 Returns object position for current time.
+@function [parent=#Object] getPosition
 
 <h4> Parameters </h4>
 * #Object self
@@ -101,6 +110,7 @@ Returns object position for current time.
 
 ### Object:getVelocity()
 Returns the unit's velocity vector.
+@function [parent=#Object] getVelocity
 
 <h4> Parameters </h4>
 * #Object self
@@ -111,6 +121,7 @@ Returns the unit's velocity vector.
 
 ### Object:inAir()
 Returns true if the unit is in air.
+@function [parent=#Object] inAir
 
 <h4> Parameters </h4>
 * #Object self

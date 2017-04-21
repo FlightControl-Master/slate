@@ -83,6 +83,7 @@ Groups can be spawned at different times and methods:
 
 
 ### SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)
+Creates the main object to spawn a [Static](#static-module-) defined in the ME.
 
 <h4> Parameters </h4>
 * [SPAWNSTATIC](#spawnstatic-class-)
@@ -95,6 +96,7 @@ self
 
 
 ### SPAWNSTATIC:NewFromType(SpawnTypeName)
+Creates the main object to spawn a [Static](#static-module-) based on a type name.
 
 <h4> Parameters </h4>
 * [SPAWNSTATIC](#spawnstatic-class-)
@@ -107,6 +109,7 @@ self
 
 
 ### SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))
+Creates a new [Static](#static-module-) from a POINT_VEC2.
 
 <h4> Parameters </h4>
 * [SPAWNSTATIC](#spawnstatic-class-)
@@ -121,6 +124,7 @@ self
 
 
 ### SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))
+Creates a new [Static](#static-module-) from a [Zone](#zone-module-).
 
 <h4> Parameters </h4>
 * [SPAWNSTATIC](#spawnstatic-class-)

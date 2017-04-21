@@ -65,6 +65,7 @@ These state transition methods need to provide a return value, which is specifie
 
 
 ### ACT_ACCOUNT:New()
+Creates a new DESTROY process.
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT](#act_account-class-)
@@ -76,6 +77,7 @@ self
 
 
 ### ACT_ACCOUNT:onafterStart(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT](#act_account-class-)
@@ -88,6 +90,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ACCOUNT:onenterWaiting(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT](#act_account-class-)
@@ -100,6 +103,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ACCOUNT:onafterEvent(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT](#act_account-class-)
@@ -139,6 +143,7 @@ Each successful dead will trigger an Account state transition that can be scored
 
 
 ### ACT_ACCOUNT_DEADS:New(TargetSetUnit, TaskName)
+Creates a new DESTROY process.
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
@@ -149,6 +154,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ACCOUNT_DEADS:onenterReport(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
@@ -161,6 +167,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ACCOUNT_DEADS:onenterAccount(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT_DEADS](#act_account_deads-class-)
@@ -173,6 +180,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ACCOUNT_DEADS:onafterEvent(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ACCOUNT_DEADS](#act_account_deads-class-)

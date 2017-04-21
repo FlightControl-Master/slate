@@ -77,6 +77,7 @@ BASE
 
 
 ### ACT_ASSIST:New()
+Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.
 
 <h4> Parameters </h4>
 * [ACT_ASSIST](#act_assist-class-)
@@ -88,6 +89,7 @@ self
 
 
 ### ACT_ASSIST:onafterStart(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIST](#act_assist-class-)
@@ -100,6 +102,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIST:onafterStop(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIST](#act_assist-class-)
@@ -129,6 +132,7 @@ BASE
 
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:New(TargetSetUnit, TargetZone)
+Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.
 
 <h4> Parameters </h4>
 * [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
@@ -139,6 +143,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:Init(TargetSetUnit, TargetZone)
+Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.
 
 <h4> Parameters </h4>
 * [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)
@@ -152,6 +157,7 @@ self
 
 
 ### ACT_ASSIST_SMOKE_TARGETS_ZONE:onenterSmoking(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIST_SMOKE_TARGETS_ZONE](#act_assist_smoke_targets_zone-class-)

@@ -55,6 +55,7 @@ MessageRED = MESSAGE:New( "To the RED Players: You receive a penalty because you
 MessageClient1 = MESSAGE:New( "Congratulations, you've just hit a target",  25, "Score" )
 MessageClient2 = MESSAGE:New( "Congratulations, you've just killed a target", 25, "Score")
 ```
+Creates a new MESSAGE object. Note that these MESSAGE objects are not yet displayed on the display panel. You must use the functions [ToClient](#toclient-module-) or [ToCoalition](#tocoalition-module-) or [ToAll](#toall-module-) to send these Messages to the respective recipients.
 
 <h4> Parameters </h4>
 * self self
@@ -84,6 +85,7 @@ MessageClient2 = MESSAGE:New( "Congratulations, you've just killed a target", "S
 MessageClient1:ToClient( ClientGroup )
 MessageClient2:ToClient( ClientGroup )
 ```
+Sends a MESSAGE to a Client Group. Note that the Group needs to be defined within the ME with the skillset "Client" or "Player".
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -96,6 +98,7 @@ self
 
 
 ### MESSAGE:ToGroup(Group)
+Sends a MESSAGE to a Group.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -117,6 +120,7 @@ or
 MessageBLUE = MESSAGE:New( "To the BLUE Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" )
 MessageBLUE:ToBlue()
 ```
+Sends a MESSAGE to the Blue coalition.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -137,6 +141,7 @@ or
 MessageRED = MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" )
 MessageRED:ToRed()
 ```
+Sends a MESSAGE to the Red Coalition.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -157,6 +162,7 @@ or
 MessageRED = MESSAGE:New( "To the RED Players: You receive a penalty because you've killed one of your own units", "Penalty", 25, "Score" )
 MessageRED:ToCoalition( coalition.side.RED )
 ```
+Sends a MESSAGE to a Coalition.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -169,6 +175,7 @@ self
 
 
 ### MESSAGE:ToCoalitionIf(needs)
+Sends a MESSAGE to a Coalition if the given Condition is true.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -190,6 +197,7 @@ or
 MessageAll = MESSAGE:New( "To all Players: BLUE has won! Each player of BLUE wins 50 points!", "End of Mission", 25, "Win" )
 MessageAll:ToAll()
 ```
+Sends a MESSAGE to all players.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)
@@ -201,6 +209,7 @@ self
 
 
 ### MESSAGE:ToAllIf()
+Sends a MESSAGE to all players if the given Condition is true.
 
 <h4> Parameters </h4>
 * [MESSAGE](#message-class-)

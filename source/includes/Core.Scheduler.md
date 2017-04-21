@@ -198,6 +198,7 @@ The SCHEDULER class
 
 
 ### SCHEDULER:New(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)
+SCHEDULER constructor.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)
@@ -217,6 +218,7 @@ self
 
 
 ### SCHEDULER:Schedule(SchedulerObject, SchedulerFunction, SchedulerArguments, Start, Repeat, RandomizeFactor, Stop)
+Schedule a new time event. Note that the schedule will only take place if the scheduler is *started*. Even for a single schedule event, the scheduler needs to be started also.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)
@@ -234,6 +236,7 @@ self
 
 
 ### SCHEDULER:Start(ScheduleID)
+(Re-)Starts the schedules or a specific schedule if a valid ScheduleID is provided.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)
@@ -243,6 +246,7 @@ self
 <h4> Returns </h4>
 
 ### SCHEDULER:Stop(ScheduleID)
+Stops the schedules or a specific schedule if a valid ScheduleID is provided.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)
@@ -252,6 +256,7 @@ self
 <h4> Returns </h4>
 
 ### SCHEDULER:Remove(ScheduleID)
+Removes a specific schedule if a valid ScheduleID is provided.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)
@@ -261,6 +266,7 @@ self
 <h4> Returns </h4>
 
 ### SCHEDULER:Clear()
+Clears all pending schedules.
 
 <h4> Parameters </h4>
 * [SCHEDULER](#scheduler-class-)

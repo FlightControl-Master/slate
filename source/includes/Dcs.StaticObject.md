@@ -16,6 +16,7 @@ ERROR !
 
 ### getByName()
 Returns static object by its name. If no static object found nil will be returned.
+@function [parent=#StaticObject] getByName
 
 <h4> Parameters </h4>
 * <u>String</u> name : Name of static object to find.
@@ -26,6 +27,7 @@ Returns static object by its name. If no static object found nil will be returne
 
 ### StaticObject:getID()
 returns identifier of the static object.
+@function [parent=#StaticObject] getID
 
 <h4> Parameters </h4>
 * #StaticObject self
@@ -36,6 +38,7 @@ returns identifier of the static object.
 
 ### StaticObject:getDesc()
 Returns descriptor of the StaticObject.
+@function [parent=#StaticObject] getDesc
 
 <h4> Parameters </h4>
 * #StaticObject self

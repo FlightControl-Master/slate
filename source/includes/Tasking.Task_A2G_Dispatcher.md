@@ -59,6 +59,7 @@ BASE
 
 
 ### TASK_A2G_DISPATCHER:New(Mission, SetGroup, Detection)
+TASK_A2G_DISPATCHER constructor.
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -72,6 +73,7 @@ BASE
 
 ### TASK_A2G_DISPATCHER:OnAfterAssign(From, Event, To, Task, TaskUnit, PlayerName)
 OnAfter Transition Handler for Event Assign.
+@function [parent=#TASK_A2G_DISPATCHER] OnAfterAssign
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -85,6 +87,7 @@ OnAfter Transition Handler for Event Assign.
 <h4> Returns </h4>
 
 ### TASK_A2G_DISPATCHER:EvaluateSEAD(DetectedItem)
+Creates a SEAD task when there are targets for it.
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -96,6 +99,7 @@ OnAfter Transition Handler for Event Assign.
 
 
 ### TASK_A2G_DISPATCHER:EvaluateCAS(DetectedItem)
+Creates a CAS task when there are targets for it.
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -106,6 +110,7 @@ OnAfter Transition Handler for Event Assign.
 
 
 ### TASK_A2G_DISPATCHER:EvaluateBAI(DetectedItem)
+Creates a BAI task when there are targets for it.
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -116,6 +121,8 @@ OnAfter Transition Handler for Event Assign.
 
 
 ### TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)
+Evaluates the removal of the Task from the Mission.
+Can only occur when the DetectedItem is Changed AND the state of the Task is "Planned".
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self
@@ -128,6 +135,7 @@ OnAfter Transition Handler for Event Assign.
 
 
 ### TASK_A2G_DISPATCHER:ProcessDetected(Detection)
+Assigns tasks in relation to the detected items to the [SET_GROUP](#set_group-class-).
 
 <h4> Parameters </h4>
 * #TASK_A2G_DISPATCHER self

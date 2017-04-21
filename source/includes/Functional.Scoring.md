@@ -195,6 +195,7 @@ BASE
 -- Define a new scoring object for the mission Gori Valley.
 ScoringObject = SCORING:New( "Gori Valley" )
 ```
+Creates a new SCORING object to administer the scoring achieved by players.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -207,6 +208,9 @@ self
 
 
 ### SCORING:SetScaleDestroyScore(Scale)
+Set the scale for scoring valid destroys (enemy destroys).
+A default calculated score is a value between 1 and 10.
+The scale magnifies the scores given to the players.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -216,6 +220,9 @@ self
 <h4> Returns </h4>
 
 ### SCORING:SetScaleDestroyPenalty(Scale)
+Set the scale for scoring penalty destroys (friendly destroys).
+A default calculated penalty is a value between 1 and 10.
+The scale magnifies the scores given to the players.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -228,6 +235,9 @@ self
 
 
 ### SCORING:AddUnitScore(ScoreUnit, Score)
+Add a [Unit](#unit-module-) for additional scoring when the [Unit](#unit-module-) is destroyed.
+Note that if there was already a [Unit](#unit-module-) declared within the scoring with the same name,
+then the old [Unit](#unit-module-)  will be replaced with the new [Unit](#unit-module-).
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -241,6 +251,7 @@ self
 
 
 ### SCORING:RemoveUnitScore(ScoreUnit)
+Removes a [Unit](#unit-module-) for additional scoring when the [Unit](#unit-module-) is destroyed.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -253,6 +264,9 @@ self
 
 
 ### SCORING:AddStaticScore(ScoreStatic, Score)
+Add a [Static](#static-module-) for additional scoring when the [Static](#static-module-) is destroyed.
+Note that if there was already a [Static](#static-module-) declared within the scoring with the same name,
+then the old [Static](#static-module-)  will be replaced with the new [Static](#static-module-).
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -266,6 +280,7 @@ self
 
 
 ### SCORING:RemoveStaticScore(ScoreStatic)
+Removes a [Static](#static-module-) for additional scoring when the [Static](#static-module-) is destroyed.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -278,6 +293,7 @@ self
 
 
 ### SCORING:AddScoreGroup(ScoreGroup, Score)
+Specify a special additional score for a [Group](#group-module-).
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -291,6 +307,9 @@ self
 
 
 ### SCORING:AddZoneScore(ScoreZone, Score)
+Add a [Zone](#zone-module-) to define additional scoring when any object is destroyed in that zone.
+Note that if a [Zone](#zone-module-) with the same name is already within the scoring added, the [Zone](#zone-module-) (type) and Score will be replaced!
+This allows for a dynamic destruction zone evolution within your mission.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -304,6 +323,9 @@ self
 
 
 ### SCORING:RemoveZoneScore(ScoreZone)
+Remove a [Zone](#zone-module-) for additional scoring.
+The scoring will search if any [Zone](#zone-module-) is added with the given name, and will remove that zone from the scoring.
+This allows for a dynamic destruction zone evolution within your mission.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -316,6 +338,7 @@ self
 
 
 ### SCORING:SetMessagesHit(OnOff)
+Configure to send messages after a target has been hit.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -328,6 +351,7 @@ self
 
 
 ### SCORING:IfMessagesHit()
+If to send messages after a target has been hit.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -338,6 +362,7 @@ self
 
 
 ### SCORING:SetMessagesDestroy(OnOff)
+Configure to send messages after a target has been destroyed.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -350,6 +375,7 @@ self
 
 
 ### SCORING:IfMessagesDestroy()
+If to send messages after a target has been destroyed.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -360,6 +386,7 @@ self
 
 
 ### SCORING:SetMessagesScore(OnOff)
+Configure to send messages after a target has been destroyed and receives additional scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -372,6 +399,7 @@ self
 
 
 ### SCORING:IfMessagesScore()
+If to send messages after a target has been destroyed and receives additional scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -382,6 +410,7 @@ self
 
 
 ### SCORING:SetMessagesZone(OnOff)
+Configure to send messages after a target has been hit in a zone, and additional score is received.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -394,6 +423,7 @@ self
 
 
 ### SCORING:IfMessagesZone()
+If to send messages after a target has been hit in a zone, and additional score is received.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -404,6 +434,7 @@ self
 
 
 ### SCORING:SetMessagesToAll()
+Configure to send messages to all players.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -415,6 +446,7 @@ self
 
 
 ### SCORING:IfMessagesToAll()
+If to send messages to all players.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -425,6 +457,7 @@ self
 
 
 ### SCORING:SetMessagesToCoalition()
+Configure to send messages to only those players within the same coalition as the player.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -436,6 +469,7 @@ self
 
 
 ### SCORING:IfMessagesToCoalition()
+If to send messages to only those players within the same coalition as the player.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -446,6 +480,9 @@ self
 
 
 ### SCORING:SetFratricide(Fratricide)
+When a player commits too much damage to friendlies, his penalty score will reach a certain level.
+Use this method to define the level when a player gets kicked.
+By default, the fratricide level is the default penalty mutiplier * 2 for the penalty score.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -458,6 +495,9 @@ self
 
 
 ### SCORING:SetCoalitionChangePenalty(CoalitionChangePenalty)
+When a player changes the coalition, he can receive a penalty score.
+Use the method [SCORING:SetCoalitionChangePenalty()](#scoring-setcoalitionchangepenalty-coalitionchangepenalty) to define the penalty when a player changes coalition.
+By default, the penalty for changing coalition is the default penalty scale.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -470,6 +510,11 @@ self
 
 
 ### SCORING:AddGoalScore(PlayerUnit, GoalTag, Text, Score)
+Add a goal score for a player.
+The method takes the PlayerUnit for which the Goal score needs to be set.
+The GoalTag is a string or identifier that is taken into the CSV file scoring log to identify the goal.
+A free text can be given that is shown to the players.
+The Score can be both positive and negative.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -482,6 +527,7 @@ self
 <h4> Returns </h4>
 
 ### SCORING:OnEventPlayerEnterUnit(Event)
+Handles the OnPlayerEnterUnit event for the scoring.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -491,6 +537,7 @@ self
 <h4> Returns </h4>
 
 ### SCORING:OnEventPlayerLeaveUnit(Event)
+Handles the OnPlayerLeaveUnit event for the scoring.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -500,6 +547,7 @@ self
 <h4> Returns </h4>
 
 ### SCORING:ReportDetailedPlayerHits(PlayerName)
+Produce detailed report of player hit scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -511,6 +559,7 @@ self
 
 
 ### SCORING:ReportDetailedPlayerDestroys(PlayerName)
+Produce detailed report of player destroy scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -522,6 +571,7 @@ self
 
 
 ### SCORING:ReportDetailedPlayerCoalitionChanges(PlayerName)
+Produce detailed report of player penalty scores because of changing the coalition.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -533,6 +583,7 @@ self
 
 
 ### SCORING:ReportDetailedPlayerGoals(PlayerName)
+Produce detailed report of player goal scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -544,6 +595,7 @@ self
 
 
 ### SCORING:ReportDetailedPlayerMissions(PlayerName)
+Produce detailed report of player penalty scores because of changing the coalition.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -555,6 +607,7 @@ self
 
 
 ### SCORING:ReportScoreGroupSummary(PlayerGroup)
+Report Group Score Summary
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -564,6 +617,7 @@ self
 <h4> Returns </h4>
 
 ### SCORING:ReportScoreGroupDetailed(PlayerGroup)
+Report Group Score Detailed
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -573,6 +627,7 @@ self
 <h4> Returns </h4>
 
 ### SCORING:ReportScoreAllSummary(PlayerGroup)
+Report all players score
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -587,6 +642,7 @@ self
 ScoringObject = SCORING:New( "Gori Valley" )
 ScoringObject:OpenCSV( "Player Scores" )
 ```
+Opens a score CSV file to log the scores.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)
@@ -599,6 +655,7 @@ self
 
 
 ### SCORING:ScoreCSV(PlayerName, TargetPlayerName, ScoreType, ScoreTimes, ScoreAmount, PlayerUnitName, PlayerUnitCoalition, PlayerUnitCategory, PlayerUnitType, TargetUnitName, TargetUnitCoalition, TargetUnitCategory, TargetUnitType)
+Registers a score for a player.
 
 <h4> Parameters </h4>
 * [SCORING](#scoring-class-)

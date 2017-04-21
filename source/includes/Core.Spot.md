@@ -35,6 +35,7 @@ BASE
 </pre>
 
 ### SPOT:New(Recce, LaserCode, Duration)
+SPOT Constructor.
 
 <h4> Parameters </h4>
 * [SPOT](#spot-class-)
@@ -88,6 +89,7 @@ self
 
 
 ### SPOT:IsLasing()
+Check if the SPOT is lasing
 
 <h4> Parameters </h4>
 * [SPOT](#spot-class-)

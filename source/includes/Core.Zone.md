@@ -118,6 +118,7 @@ This class is an abstract BASE class for derived classes, and is not meant to be
 
 
 ### ZONE_BASE:New(ZoneName)
+ZONE_BASE constructor
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -130,6 +131,7 @@ self
 
 
 ### ZONE_BASE:GetName()
+Returns the name of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -140,6 +142,7 @@ self
 
 
 ### ZONE_BASE:IsVec2InZone(Vec2)
+Returns if a Vec2 is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -151,6 +154,7 @@ self
 
 
 ### ZONE_BASE:IsVec3InZone(Vec3)
+Returns if a Vec3 is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -162,6 +166,7 @@ self
 
 
 ### ZONE_BASE:IsPointVec2InZone(PointVec2)
+Returns if a PointVec2 is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -173,6 +178,7 @@ self
 
 
 ### ZONE_BASE:IsPointVec3InZone(PointVec3)
+Returns if a PointVec3 is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -184,6 +190,7 @@ self
 
 
 ### ZONE_BASE:GetVec2()
+Returns the @{DCSTypes#Vec2} coordinate of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -194,6 +201,7 @@ self
 
 
 ### ZONE_BASE:GetPointVec2(Height)
+Returns a @{Point#POINT_VEC2} of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -205,6 +213,7 @@ self
 
 
 ### ZONE_BASE:GetVec3(Height)
+Returns the @{DCSTypes#Vec3} of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -216,6 +225,7 @@ self
 
 
 ### ZONE_BASE:GetPointVec3(Height)
+Returns a @{Point#POINT_VEC3} of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -227,6 +237,7 @@ self
 
 
 ### ZONE_BASE:GetRandomVec2()
+Define a random @{DCSTypes#Vec2} within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -237,6 +248,7 @@ self
 
 
 ### ZONE_BASE:GetRandomPointVec2()
+Define a random @{Point#POINT_VEC2} within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -247,6 +259,7 @@ self
 
 
 ### ZONE_BASE:GetRandomPointVec3()
+Define a random @{Point#POINT_VEC3} within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -257,6 +270,7 @@ self
 
 
 ### ZONE_BASE:GetBoundingSquare()
+Get the bounding square the zone.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -267,6 +281,7 @@ self
 
 
 ### ZONE_BASE:BoundZone()
+Bound the zone boundaries with a tires.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -275,6 +290,7 @@ self
 <h4> Returns </h4>
 
 ### ZONE_BASE:SmokeZone(SmokeColor)
+Smokes the zone boundaries in a color.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -284,6 +300,7 @@ self
 <h4> Returns </h4>
 
 ### ZONE_BASE:SetZoneProbability(A)
+Set the randomization probability of a zone to be selected.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -293,6 +310,7 @@ self
 <h4> Returns </h4>
 
 ### ZONE_BASE:GetZoneProbability()
+Get the randomization probability of a zone to be selected.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -303,6 +321,7 @@ self
 
 
 ### ZONE_BASE:GetZoneMaybe()
+Get the zone taking into account the randomization probability of a zone to be selected.
 
 <h4> Parameters </h4>
 * [ZONE_BASE](#zone_base-class-)
@@ -371,6 +390,7 @@ The ZONE_RADIUS class, defined by a zone name, a location and a radius.
 
 
 ### ZONE_RADIUS:New(ZoneName, Vec2, Radius)
+Constructor of [ZONE_RADIUS](#zone_radius-class-), taking the zone name, the zone location and a radius.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -385,6 +405,7 @@ self
 
 
 ### ZONE_RADIUS:BoundZone(Points, UnBound)
+Bounds the zone with tires.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -398,6 +419,7 @@ self
 
 
 ### ZONE_RADIUS:SmokeZone(SmokeColor, Points)
+Smokes the zone boundaries in a color.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -411,6 +433,7 @@ self
 
 
 ### ZONE_RADIUS:FlareZone(FlareColor, Points, Azimuth)
+Flares the zone boundaries in a color.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -425,6 +448,7 @@ self
 
 
 ### ZONE_RADIUS:GetRadius()
+Returns the radius of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -435,6 +459,7 @@ self
 
 
 ### ZONE_RADIUS:SetRadius(Radius)
+Sets the radius of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -446,6 +471,7 @@ self
 
 
 ### ZONE_RADIUS:GetVec2()
+Returns the @{DCSTypes#Vec2} of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -456,6 +482,7 @@ self
 
 
 ### ZONE_RADIUS:SetVec2(Vec2)
+Sets the @{DCSTypes#Vec2} of the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -467,6 +494,7 @@ self
 
 
 ### ZONE_RADIUS:GetVec3(Height)
+Returns the @{DCSTypes#Vec3} of the ZONE_RADIUS.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -478,6 +506,7 @@ self
 
 
 ### ZONE_RADIUS:IsVec2InZone(Vec2)
+Returns if a location is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -489,6 +518,7 @@ self
 
 
 ### ZONE_RADIUS:IsVec3InZone(Vec3)
+Returns if a point is within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -500,6 +530,7 @@ self
 
 
 ### ZONE_RADIUS:GetRandomVec2(inner, outer)
+Returns a random Vec2 location within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -512,6 +543,7 @@ self
 
 
 ### ZONE_RADIUS:GetRandomPointVec2(inner, outer)
+Returns a @{Point#POINT_VEC2} object reflecting a random 2D location within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -524,6 +556,7 @@ self
 
 
 ### ZONE_RADIUS:GetRandomPointVec3(inner, outer)
+Returns a @{Point#POINT_VEC3} object reflecting a random 3D location within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_RADIUS](#zone_radius-class-)
@@ -551,6 +584,7 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 ### ZONE:New(ZoneName)
+Constructor of ZONE, taking the zone name.
 
 <h4> Parameters </h4>
 * [ZONE](#zone-class-)
@@ -582,6 +616,7 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 ### ZONE_UNIT:New(ZoneName, ZoneUNIT, Radius)
+Constructor to create a ZONE_UNIT instance, taking the zone name, a zone unit and a radius.
 
 <h4> Parameters </h4>
 * [ZONE_UNIT](#zone_unit-class-)
@@ -596,6 +631,7 @@ self
 
 
 ### ZONE_UNIT:GetVec2()
+Returns the current location of the [UNIT](#unit-class-).
 
 <h4> Parameters </h4>
 * [ZONE_UNIT](#zone_unit-class-)
@@ -606,6 +642,7 @@ self
 
 
 ### ZONE_UNIT:GetRandomVec2()
+Returns a random location within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_UNIT](#zone_unit-class-)
@@ -616,6 +653,7 @@ self
 
 
 ### ZONE_UNIT:GetVec3(Height)
+Returns the @{DCSTypes#Vec3} of the ZONE_UNIT.
 
 <h4> Parameters </h4>
 * [ZONE_UNIT](#zone_unit-class-)
@@ -642,6 +680,7 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 ### ZONE_GROUP:New(ZoneName, ZoneGROUP, Radius)
+Constructor to create a ZONE_GROUP instance, taking the zone name, a zone [GROUP](#group-class-) and a radius.
 
 <h4> Parameters </h4>
 * [ZONE_GROUP](#zone_group-class-)
@@ -656,6 +695,7 @@ self
 
 
 ### ZONE_GROUP:GetVec2()
+Returns the current location of the [Group](#group-module-).
 
 <h4> Parameters </h4>
 * [ZONE_GROUP](#zone_group-class-)
@@ -666,6 +706,7 @@ self
 
 
 ### ZONE_GROUP:GetRandomVec2()
+Returns a random location within the zone of the [Group](#group-module-).
 
 <h4> Parameters </h4>
 * [ZONE_GROUP](#zone_group-class-)
@@ -703,6 +744,8 @@ Various functions exist to find random points within the zone.
 
 
 ### ZONE_POLYGON_BASE:New(ZoneName, PointsArray)
+Constructor to create a ZONE_POLYGON_BASE instance, taking the zone name and an array of @{DCSTypes#Vec2}, forming a polygon.
+The [GROUP](#group-class-) waypoints define the polygon corners. The first and the last point are automatically connected.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -716,6 +759,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:GetVec2()
+Returns the center location of the polygon.
 
 <h4> Parameters </h4>
 * [ZONE_GROUP](#zone_group-class-)
@@ -726,6 +770,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:Flush()
+Flush polygon coordinates as a table in DCS.log.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -737,6 +782,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:BoundZone(UnBound)
+Smokes the zone boundaries in a color.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -749,6 +795,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:SmokeZone(SmokeColor)
+Smokes the zone boundaries in a color.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -761,6 +808,8 @@ self
 
 
 ### ZONE_POLYGON_BASE:IsVec2InZone(Vec2)
+Returns if a location is within the zone.
+Source learned and taken from: https://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -772,6 +821,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:GetRandomVec2()
+Define a random @{DCSTypes#Vec2} within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -782,6 +832,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:GetRandomPointVec2()
+Return a @{Point#POINT_VEC2} object representing a random 2D point at landheight within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -792,6 +843,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:GetRandomPointVec3()
+Return a @{Point#POINT_VEC3} object representing a random 3D point at landheight within the zone.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -802,6 +854,7 @@ self
 
 
 ### ZONE_POLYGON_BASE:GetBoundingSquare()
+Get the bounding square the zone.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON_BASE](#zone_polygon_base-class-)
@@ -833,6 +886,8 @@ This class implements the inherited functions from [ZONE_RADIUS](#zone_radius-cl
 
 
 ### ZONE_POLYGON:New(ZoneName, ZoneGroup)
+Constructor to create a ZONE_POLYGON instance, taking the zone name and the name of the [GROUP](#group-class-) defined within the Mission Editor.
+The [GROUP](#group-class-) waypoints define the polygon corners. The first and the last point are automatically connected by ZONE_POLYGON.
 
 <h4> Parameters </h4>
 * [ZONE_POLYGON](#zone_polygon-class-)

@@ -16,6 +16,7 @@ BASE
 
 
 ### PROCESS_JTAC:New(Task, ProcessUnit, TargetSetUnit, FACUnit)
+Creates a new DESTROY process.
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)
@@ -31,6 +32,7 @@ self
 
 
 ### PROCESS_JTAC:OnStart(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)
@@ -43,6 +45,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_JTAC:OnJTACMenuUpdate(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)
@@ -55,6 +58,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_JTAC:OnJTACMenuAwait(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)
@@ -67,6 +71,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_JTAC:OnJTACMenuSpot(Fsm, Event, From, To, TargetUnit)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)
@@ -80,6 +85,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_JTAC:OnJTACMenuCancel(Fsm, Event, From, To, TargetUnit)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_JTAC](#process_jtac-class-)

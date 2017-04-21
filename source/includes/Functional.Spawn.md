@@ -281,7 +281,7 @@ When using the @{#SPAWN.SpawnScheduled)() method, the default behaviour of this 
 immediately when :SpawnScheduled() is initiated. The methods [SPAWN:InitDelayOnOff()](#spawn-initdelayonoff-delayonoff) and SPAWN-InitDelayOn- can be used to
 activate a delay before the first [Group](#group-module-) is spawned. For completeness, a method SPAWN-InitDelayOff- is also available, that
 can be used to switch off the initial delay. Because there is no delay by default, this method would only be used when a
-SPAWN-SpawnScheduledStop- ; @{#SPAWN.SpawnScheduledStart}() sequence would have been used.
+SPAWN-SpawnScheduledStop- ; [SPAWN:New()](#spawn-new-spawntemplateprefix) sequence would have been used.
 
 
 
@@ -306,6 +306,7 @@ SPAWN Class
 Spawn_BE_KA50 = SPAWN:New( 'BE KA-50@RAMP-Ground Defense' )
 @usage local Plane = SPAWN:New( "Plane" ) -- Creates a new local variable that can initiate new planes with the name "Plane#ddd" using the template "Plane" as defined within the ME.
 ```
+Creates the main object to spawn a [Group](#group-module-) defined in the DCS ME.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -323,6 +324,7 @@ self
 Spawn_BE_KA50 = SPAWN:NewWithAlias( 'BE KA-50@RAMP-Ground Defense', 'Helicopter Attacking a City' )
 @usage local PlaneWithAlias = SPAWN:NewWithAlias( "Plane", "Bomber" ) -- Creates a new local variable that can instantiate new planes with the name "Bomber#ddd" using the template "Plane" as defined within the ME.
 ```
+Creates a new SPAWN instance to create new groups based on the defined template and using a new alias for each new group.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -342,6 +344,10 @@ self
 -- There will be maximum 24 groups spawned during the whole mission lifetime.
 Spawn_BE_KA50 = SPAWN:New( 'BE KA-50@RAMP-Ground Defense' ):InitLimit( 2, 24 )
 ```
+Limits the Maximum amount of Units that can be alive at the same time, and the maximum amount of groups that can be spawned.
+Note that this method is exceptionally important to balance the performance of the mission. Depending on the machine etc, a mission can only process a maximum amount of units.
+If the time interval must be short, but there should not be more Units or Groups alive than a maximum amount of units, then this method should be used...
+When a [SPAWN:New()](#spawn-new-spawntemplateprefix) is executed and the limit of the amount of units alive is reached, then no new spawn will happen of the group, until some of these units of the spawn object will be destroyed.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -355,6 +361,10 @@ self
 
 
 ### SPAWN:InitKeepUnitNames()
+Keeps the unit names as defined within the mission editor,
+but note that anything after a # mark is ignored,
+and any spaces before and after the resulting name are removed.
+IMPORTANT! This method MUST be the first used after :New !!!
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -373,6 +383,7 @@ self
 -- The randomization of waypoint 2 and 3 will take place within a radius of 2000 meters.
 Spawn_BE_KA50 = SPAWN:New( 'BE KA-50@RAMP-Ground Defense' ):InitRandomizeRoute( 2, 2, 2000 )
 ```
+Randomizes the defined route of the SpawnTemplatePrefix group in the ME. This is very useful to define extra variation of the behaviour of groups.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -388,6 +399,7 @@ self
 
 
 ### SPAWN:InitRandomizePosition(RandomizePosition, OuterRadius, InnerRadius)
+Randomizes the position of [Group](#group-module-)s that are spawned within a **radius band**, given an Outer and Inner radius, from the point that the spawn happens.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -409,6 +421,7 @@ self
 -- The randomization of waypoint 2 and 3 will take place within a radius of 2000 meters.
 Spawn_BE_KA50 = SPAWN:New( 'BE KA-50@RAMP-Ground Defense' ):InitRandomizeRoute( 2, 2, 2000 )
 ```
+Randomizes the UNITs that are spawned within a radius band given an Outer and Inner radius.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -436,6 +449,10 @@ Spawn_US_Platoon_Left = SPAWN:New( 'US Tank Platoon Left' ):InitLimit( 12, 150 )
 Spawn_US_Platoon_Middle = SPAWN:New( 'US Tank Platoon Middle' ):InitLimit( 12, 150 ):Schedule( 200, 0.4 ):InitRandomizeTemplate( Spawn_US_Platoon ):InitRandomizeRoute( 3, 3, 2000 )
 Spawn_US_Platoon_Right = SPAWN:New( 'US Tank Platoon Right' ):InitLimit( 12, 150 ):Schedule( 200, 0.4 ):InitRandomizeTemplate( Spawn_US_Platoon ):InitRandomizeRoute( 3, 3, 2000 )
 ```
+This method is rather complicated to understand. But I'll try to explain.
+This method becomes useful when you need to spawn groups with random templates of groups defined within the mission editor,
+but they will all follow the same Template route and have the same prefix name.
+In other words, this method randomizes between a defined set of groups the template to be used for each new spawn of a group.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -452,6 +469,7 @@ self
 -- NATO Tank Platoons invading Gori.
 -- Choose between 3 different zones for each new SPAWN the Group to be executed, regardless of the zone type.
 ```
+This method provides the functionality to randomize the spawning of the Groups at a given list of zones of different types.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -469,6 +487,11 @@ self
 -- Re-SPAWN the Group(s) after each landing and Engine Shut-Down automatically.
 SpawnRU_SU34 = SPAWN:New( 'TF1 RU Su-34 Krymsk@AI - Attack Ships' ):Schedule( 2, 3, 1800, 0.4 ):SpawnUncontrolled():InitRandomizeRoute( 1, 1, 3000 ):RepeatOnEngineShutDown()
 ```
+For planes and helicopters, when these groups go home and land on their home airbases and farps, they normally would taxi to the parking spot, shut-down their engines and wait forever until the Group is removed by the runtime environment.
+This method is used to re-spawn automatically (so no extra call is needed anymore) the same group after it has landed.
+This will enable a spawned group to be re-spawned after it lands, until it is destroyed...
+Note: When the group is respawned, it will re-spawn from the original airbase where it took off.
+So ensure that the routes for groups that respawn, always return to the original airbase, or players may get confused ...
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -480,6 +503,7 @@ self
 
 
 ### SPAWN:InitRepeatOnLanding()
+Respawn group after landing.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -491,6 +515,7 @@ self
 
 
 ### SPAWN:InitRepeatOnEngineShutDown()
+Respawn after landing when its engines have shut down.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -504,6 +529,8 @@ self
 ### SPAWN:InitCleanUp(SpawnCleanUpInterval)
 ``` lua Spawn_Helicopter:CleanUp( 20 )  -- CleanUp the spawning of the helicopters every 20 seconds when they become inactive.
 ```
+CleanUp groups when they are still alive, but inactive.
+When groups are still alive and have become inactive due to damage and are unable to contribute anything, then this group will be removed at defined intervals in seconds.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -520,6 +547,8 @@ self
 -- Define an array of Groups.
 Spawn_BE_Ground = SPAWN:New( 'BE Ground' ):InitLimit( 2, 24 ):InitArray( 90, "Diamond", 10, 100, 50 )
 ```
+Makes the groups visible before start (like a batallion).
+The method will take the position of the group as the first position in the array.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -535,6 +564,7 @@ self
 
 
 ### SPAWN:InitAIOnOff(AIOnOff)
+Turns the AI On or Off for the [Group](#group-module-) when spawning.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -547,6 +577,7 @@ self
 
 
 ### SPAWN:InitAIOn()
+Turns the AI On for the [Group](#group-module-) when spawning.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -558,6 +589,7 @@ self
 
 
 ### SPAWN:InitAIOff()
+Turns the AI Off for the [Group](#group-module-) when spawning.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -569,6 +601,8 @@ self
 
 
 ### SPAWN:InitDelayOnOff(DelayOnOff)
+Turns the Delay On or Off for the first [Group](#group-module-) scheduled spawning.
+The default value is that for scheduled spawning, there is an initial delay when spawning the first [Group](#group-module-).
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -581,6 +615,7 @@ self
 
 
 ### SPAWN:InitDelayOn()
+Turns the Delay On for the [Group](#group-module-) when spawning.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -592,6 +627,7 @@ self
 
 
 ### SPAWN:InitDelayOff()
+Turns the Delay Off for the [Group](#group-module-) when spawning.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -603,6 +639,8 @@ self
 
 
 ### SPAWN:Spawn()
+Will spawn a group based on the internal index.
+Note: Uses [DATABASE](#database-module-) module defined in MOOSE.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -613,6 +651,8 @@ self
 
 
 ### SPAWN:ReSpawn(SpawnIndex)
+Will re-spawn a group based on a given index.
+Note: Uses [DATABASE](#database-module-) module defined in MOOSE.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -624,6 +664,8 @@ self
 
 
 ### SPAWN:SpawnWithIndex(SpawnIndex)
+Will spawn a group with a specified index number.
+Uses [DATABASE](#database-module-) global object defined in MOOSE.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -645,6 +687,8 @@ self
 -- Between these two values, a random amount of seconds will be choosen for each new spawn of the helicopters.
 Spawn_BE_KA50 = SPAWN:New( 'BE KA-50@RAMP-Ground Defense' ):Schedule( 600, 0.5 )
 ```
+Spawns new groups at varying time intervals.
+This is useful if you want to have continuity within your missions of certain (AI) groups to be present (alive) within your missions.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -658,6 +702,8 @@ self
 
 
 ### SPAWN:SpawnScheduleStart()
+Will re-start the spawning scheduler.
+Note: This method is only required to be called when the schedule was stopped.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -669,6 +715,7 @@ self
 
 
 ### SPAWN:SpawnScheduleStop()
+Will stop the scheduled spawning scheduler.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -692,6 +739,9 @@ end
 )
 :SpawnScheduled( 300, 0.3 )
 ```
+Allows to place a CallFunction hook when a new group spawns.
+The provided method will be called when a new group is spawned, including its given parameters.
+The first parameter of the SpawnFunction is the [GROUP](#group-class-) that was spawned.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -705,6 +755,10 @@ self
 
 
 ### SPAWN:SpawnFromVec3(Vec3, SpawnIndex)
+Will spawn a group from a Vec3 in 3D space.
+This method is mostly advisable to be used if you want to simulate spawning units in the air, like helicopters or airplanes.
+Note that each point in the route assigned to the spawning group is reset to the point of the spawn.
+You can use the returned group to further define the route to be followed.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -718,6 +772,10 @@ self
 
 
 ### SPAWN:SpawnFromVec2(Vec2, SpawnIndex)
+Will spawn a group from a Vec2 in 3D space.
+This method is mostly advisable to be used if you want to simulate spawning groups on the ground from air units, like vehicles.
+Note that each point in the route assigned to the spawning group is reset to the point of the spawn.
+You can use the returned group to further define the route to be followed.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -731,6 +789,9 @@ self
 
 
 ### SPAWN:SpawnFromUnit(HostUnit, SpawnIndex)
+Will spawn a group from a hosting unit. This method is mostly advisable to be used if you want to simulate spawning from air units, like helicopters, which are dropping infantry into a defined Landing Zone.
+Note that each point in the route assigned to the spawning group is reset to the point of the spawn.
+You can use the returned group to further define the route to be followed.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -744,6 +805,8 @@ self
 
 
 ### SPAWN:SpawnFromStatic(HostStatic, SpawnIndex)
+Will spawn a group from a hosting static. This method is mostly advisable to be used if you want to simulate spawning from buldings and structures (static buildings).
+You can use the returned group to further define the route to be followed.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -757,6 +820,10 @@ self
 
 
 ### SPAWN:SpawnInZone(Zone, RandomizeGroup, SpawnIndex)
+Will spawn a Group within a given [Zone](#zone-module-).
+The [Zone](#zone-module-) can be of any type derived from [ZONE_BASE](#zone_base-class-).
+Once the [Group](#group-module-) is spawned within the zone, the [Group](#group-module-) will continue on its route.
+The **first waypoint** (where the group is spawned) is replaced with the zone location coordinates.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -771,6 +838,10 @@ self
 
 
 ### SPAWN:InitUnControlled(UnControlled)
+(**AIR**) Will spawn a plane group in UnControlled or Controlled mode...
+This will be similar to the uncontrolled flag setting in the ME.
+You can use UnControlled mode to simulate planes startup and ready for take-off but aren't moving (yet).
+ReSpawn the plane in Controlled mode, and the plane will move...
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -783,6 +854,7 @@ self
 
 
 ### SPAWN:SpawnGroupName(SpawnIndex)
+Will return the SpawnGroupName either with with a specific count number or without any count.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -802,6 +874,7 @@ while GroupPlane ~= nil do
 GroupPlane, Index = SpawnPlanes:GetNextAliveGroup( Index )
 end
 ```
+Will find the first alive [Group](#group-module-) it has spawned, and return the alive [Group](#group-module-) object and the first Index where the first alive [Group](#group-module-) object has been found.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -821,6 +894,7 @@ while GroupPlane ~= nil do
 GroupPlane, Index = SpawnPlanes:GetNextAliveGroup( Index )
 end
 ```
+Will find the next alive [Group](#group-module-) object from a given Index, and return a reference to the alive [Group](#group-module-) object and the next Index where the alive [Group](#group-module-) has been found.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -840,6 +914,7 @@ if GroupPlane then -- GroupPlane can be nil!!!
 -- Do actions with the GroupPlane object.
 end
 ```
+Will find the last alive [Group](#group-module-) object, and will return a reference to the last live [Group](#group-module-) object and the last Index where the last alive [Group](#group-module-) object has been found.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)
@@ -851,6 +926,9 @@ self
 
 
 ### SPAWN:GetGroupFromIndex(SpawnIndex)
+Get the group from an index.
+Returns the group from the SpawnGroups list.
+If no index is given, it will return the first group in the list.
 
 <h4> Parameters </h4>
 * [SPAWN](#spawn-class-)

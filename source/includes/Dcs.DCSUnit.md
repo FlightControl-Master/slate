@@ -31,6 +31,7 @@ ERROR !
 
 ### getByName()
 Returns unit object by the name assigned to the unit in Mission Editor. If there is unit with such name or the unit is destroyed the function will return nil. The function provides access to non-activated units too.
+@function [parent=#Unit] getByName
 
 <h4> Parameters </h4>
 * <u>String</u> name
@@ -41,6 +42,7 @@ Returns unit object by the name assigned to the unit in Mission Editor. If there
 
 ### Unit:isActive()
 Returns if the unit is activated.
+@function [parent=#Unit] isActive
 
 <h4> Parameters </h4>
 * #Unit self
@@ -51,6 +53,7 @@ Returns if the unit is activated.
 
 ### Unit:getPlayerName()
 Returns name of the player that control the unit or nil if the unit is controlled by A.I.
+@function [parent=#Unit] getPlayerName
 
 <h4> Parameters </h4>
 * #Unit self
@@ -61,6 +64,7 @@ Returns name of the player that control the unit or nil if the unit is controlle
 
 ### Unit:getID()
 returns the unit's unique identifier.
+@function [parent=#Unit] getID
 
 <h4> Parameters </h4>
 * #Unit self
@@ -71,6 +75,7 @@ returns the unit's unique identifier.
 
 ### Unit:getNumber()
 Returns the unit's number in the group. The number is the same number the unit has in ME. It may not be changed during the mission. If any unit in the group is destroyed, the numbers of another units will not be changed.
+@function [parent=#Unit] getNumber
 
 <h4> Parameters </h4>
 * #Unit self
@@ -81,6 +86,7 @@ Returns the unit's number in the group. The number is the same number the unit h
 
 ### Unit:getController()
 Returns controller of the unit if it exist and nil otherwise
+@function [parent=#Unit] getController
 
 <h4> Parameters </h4>
 * #Unit self
@@ -91,6 +97,7 @@ Returns controller of the unit if it exist and nil otherwise
 
 ### Unit:getGroup()
 Returns the unit's group if it exist and nil otherwise
+@function [parent=#Unit] getGroup
 
 <h4> Parameters </h4>
 * #Unit self
@@ -101,6 +108,7 @@ Returns the unit's group if it exist and nil otherwise
 
 ### Unit:getCallsign()
 Returns the unit's callsign - the localized string.
+@function [parent=#Unit] getCallsign
 
 <h4> Parameters </h4>
 * #Unit self
@@ -111,6 +119,7 @@ Returns the unit's callsign - the localized string.
 
 ### Unit:getLife()
 Returns the unit's health. Dead units has health <= 1.0
+@function [parent=#Unit] getLife
 
 <h4> Parameters </h4>
 * #Unit self
@@ -121,6 +130,7 @@ Returns the unit's health. Dead units has health <= 1.0
 
 ### Unit:getLife0()
 returns the unit's initial health.
+@function [parent=#Unit] getLife0
 
 <h4> Parameters </h4>
 * #Unit self
@@ -131,6 +141,7 @@ returns the unit's initial health.
 
 ### Unit:getFuel()
 Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal tanks. If there are additional fuel tanks the value may be greater than 1.0.
+@function [parent=#Unit] getFuel
 
 <h4> Parameters </h4>
 * #Unit self
@@ -141,6 +152,7 @@ Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal t
 
 ### Unit:getAmmo()
 Returns the unit ammunition.
+@function [parent=#Unit] getAmmo
 
 <h4> Parameters </h4>
 * #Unit self
@@ -151,6 +163,7 @@ Returns the unit ammunition.
 
 ### Unit:getSensors()
 Returns the unit sensors.
+@function [parent=#Unit] getSensors
 
 <h4> Parameters </h4>
 * #Unit self
@@ -170,6 +183,7 @@ If sensor type is not specified the function returns true if the unit has at lea
 
 ```
 Returns true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don't want to get information about all the unit's sensors, and just want to check if the unit has specified types of sensors.
+@function [parent=#Unit] hasSensors
 
 <h4> Parameters </h4>
 * #Unit self
@@ -184,6 +198,7 @@ Returns true if the unit has specified types of sensors. This function is more p
 returns two values:
 First value indicates if at least one of the unit's radar(s) is on.
 Second value is the object of the radar's interest. Not nil only if at least one radar of the unit is tracking a target.
+@function [parent=#Unit] getRadar
 
 <h4> Parameters </h4>
 * #Unit self
@@ -194,6 +209,7 @@ Second value is the object of the radar's interest. Not nil only if at least one
 
 ### Unit:getDesc()
 Returns unit descriptor. Descriptor type depends on unit category.
+@function [parent=#Unit] getDesc
 
 <h4> Parameters </h4>
 * #Unit self

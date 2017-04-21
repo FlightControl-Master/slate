@@ -56,6 +56,7 @@ BASE
 
 
 ### DETECTION_MANAGER:New(SetGroup, Detection)
+FAC constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -69,6 +70,7 @@ self
 
 
 ### DETECTION_MANAGER:SetReportInterval(ReportInterval)
+Set the reporting time interval.
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -81,6 +83,7 @@ self
 
 
 ### DETECTION_MANAGER:SetReportDisplayTime(ReportDisplayTime)
+Set the reporting message display time.
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -93,6 +96,7 @@ self
 
 
 ### DETECTION_MANAGER:GetReportDisplayTime()
+Get the reporting message display time.
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -103,6 +107,7 @@ self
 
 
 ### DETECTION_MANAGER:ProcessDetected(Detection)
+Reports the detected items to the [SET_GROUP](#set_group-class-).
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -130,6 +135,7 @@ BASE
 
 
 ### DETECTION_REPORTING:New(SetGroup, Detection)
+DETECTION_REPORTING constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_REPORTING](#detection_reporting-class-)
@@ -143,6 +149,7 @@ self
 
 
 ### DETECTION_REPORTING:GetDetectedItemsText(DetectedSet)
+Creates a string of the detected items in a [Detection](#detection-module-).
 
 <h4> Parameters </h4>
 * [DETECTION_MANAGER](#detection_manager-class-)
@@ -155,6 +162,7 @@ self
 
 
 ### DETECTION_REPORTING:ProcessDetected(Group, Detection)
+Reports the detected items to the [SET_GROUP](#set_group-class-).
 
 <h4> Parameters </h4>
 * [DETECTION_REPORTING](#detection_reporting-class-)

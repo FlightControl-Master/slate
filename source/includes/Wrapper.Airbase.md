@@ -53,6 +53,7 @@ BASE
 
 
 ### AIRBASE:Register(AirbaseName)
+Create a new AIRBASE from DCSAirbase.
 
 <h4> Parameters </h4>
 * [AIRBASE](#airbase-class-)
@@ -64,6 +65,7 @@ self
 
 
 ### AIRBASE:Find(DCSAirbase)
+Finds a AIRBASE from the _DATABASE using a DCSAirbase object.
 
 <h4> Parameters </h4>
 * [AIRBASE](#airbase-class-)
@@ -75,6 +77,7 @@ self
 
 
 ### AIRBASE:FindByName(AirbaseName)
+Find a AIRBASE in the _DATABASE using the name of an existing DCS Airbase.
 
 <h4> Parameters </h4>
 * [AIRBASE](#airbase-class-)

@@ -11,6 +11,7 @@ ERROR !
 
 ### CoalitionObject:getCoalition()
 Returns coalition of the object.
+@function [parent=#CoalitionObject] getCoalition
 
 <h4> Parameters </h4>
 * #CoalitionObject self
@@ -21,6 +22,7 @@ Returns coalition of the object.
 
 ### CoalitionObject:getCountry()
 Returns object country.
+@function [parent=#CoalitionObject] getCountry
 
 <h4> Parameters </h4>
 * #CoalitionObject self

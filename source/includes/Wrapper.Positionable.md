@@ -39,6 +39,7 @@ BASE
 
 
 ### POSITIONABLE:New(PositionableName)
+Create a new POSITIONABLE from a DCSPositionable
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -51,6 +52,7 @@ self
 
 
 ### POSITIONABLE:GetPositionVec3()
+Returns the @{DCSTypes#Position3} position vectors indicating the point and direction vectors in 3D of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -61,6 +63,7 @@ self
 
 
 ### POSITIONABLE:GetVec2()
+Returns the @{DCSTypes#Vec2} vector indicating the point in 2D of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -71,6 +74,7 @@ self
 
 
 ### POSITIONABLE:GetPointVec2()
+Returns a POINT_VEC2 object indicating the point in 2D of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -81,6 +85,7 @@ self
 
 
 ### POSITIONABLE:GetPointVec3()
+Returns a POINT_VEC3 object indicating the point in 3D of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -94,6 +99,7 @@ self
 ``` lua
 -- If Radius is ignored, returns the [Vec3](#vec3-class-) of first UNIT of the GROUP
 ```
+Returns a random @{DCSTypes#Vec3} vector within a range, indicating the point in 3D of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -105,6 +111,7 @@ self
 
 
 ### POSITIONABLE:GetVec3()
+Returns the @{DCSTypes#Vec3} vector indicating the 3D vector of the POSITIONABLE within the mission.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -115,6 +122,7 @@ self
 
 
 ### POSITIONABLE:GetAltitude()
+Returns the altitude of the POSITIONABLE.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -125,6 +133,7 @@ self
 
 
 ### POSITIONABLE:IsAboveRunway()
+Returns if the Positionable is located above a runway.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -135,6 +144,7 @@ self
 
 
 ### POSITIONABLE:GetHeading()
+Returns the POSITIONABLE heading in degrees.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -145,6 +155,8 @@ self
 
 
 ### POSITIONABLE:InAir()
+Returns true if the POSITIONABLE is in the air.
+Polymorphic, is overridden in GROUP and UNIT.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -155,6 +167,7 @@ self
 
 
 ### POSITIONABLE:GetVelocity()
+Returns the POSITIONABLE velocity vector.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -165,6 +178,7 @@ self
 
 
 ### POSITIONABLE:GetVelocityKMH()
+Returns the POSITIONABLE velocity in km/h.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-) self
@@ -175,6 +189,7 @@ self
 
 
 ### POSITIONABLE:GetMessage(Message, Duration, Name)
+Returns a message with the callsign embedded (if there is one).
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -188,6 +203,8 @@ self
 
 
 ### POSITIONABLE:MessageToAll(Message, Duration, Name)
+Send a message to all coalitions.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -199,6 +216,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition, Name)
+Send a message to a coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -211,6 +230,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:MessageToRed(Message, Duration, Name)
+Send a message to the red coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -222,6 +243,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:MessageToBlue(Message, Duration, Name)
+Send a message to the blue coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -233,6 +256,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:MessageToClient(Message, Duration, Client, Name)
+Send a message to a client.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -245,6 +270,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:MessageToGroup(Message, Duration, MessageGroup, Name)
+Send a message to a [Group](#group-module-).
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -257,6 +284,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:Message(Message, Duration, Name)
+Send a message to the players in the [Group](#group-module-).
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -268,6 +297,8 @@ self
 <h4> Returns </h4>
 
 ### POSITIONABLE:GetRadio()
+Create a [RADIO](#radio-class-), to allow radio transmission for this POSITIONABLE.
+Set parameters with the methods provided, then use RADIO:Broadcast() to actually broadcast the message
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -279,6 +310,7 @@ self
 
 
 ### POSITIONABLE:GetBeacon()
+Create a [BEACON](#beacon-class-), to allow this POSITIONABLE to broadcast beacon signals
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -290,6 +322,7 @@ self
 
 
 ### POSITIONABLE:LaseUnit(Target, LaserCode, Duration)
+Start Lasing a POSITIONABLE
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -304,6 +337,7 @@ Target
 
 
 ### POSITIONABLE:LaseOff(Target)
+Stop Lasing a POSITIONABLE
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)
@@ -317,6 +351,7 @@ Target
 
 
 ### POSITIONABLE:IsLasing()
+Check if the POSITIONABLE is lasing a target
 
 <h4> Parameters </h4>
 * [POSITIONABLE](#positionable-class-)

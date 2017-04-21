@@ -40,6 +40,10 @@ The SCHEDULEDISPATCHER class does not inherit
 
 
 ### SCHEDULEDISPATCHER:AddSchedule(Scheduler)
+Add a Schedule to the ScheduleDispatcher.
+The development of this method was really tidy.
+It is constructed as such that a garbage collection is executed on the weak tables, when the Scheduler is nillified.
+Nothing of this code should be modified without testing it thoroughly.
 
 <h4> Parameters </h4>
 * [SCHEDULEDISPATCHER](#scheduledispatcher-class-)

@@ -67,6 +67,7 @@ You can set the **"yield interval"**, and the **"time interval"**. (See above).
 -- Define a new SET_BASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.
 DBObject = SET_BASE:New()
 ```
+Creates a new SET_BASE object, building a set of units belonging to a coalitions, categories, countries, types or with defined prefix names.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -78,6 +79,7 @@ self
 
 
 ### SET_BASE:GetSet()
+Gets the Set.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -89,6 +91,7 @@ self
 
 
 ### SET_BASE:Add(ObjectName, Object)
+Adds a [BASE](#base-class-) object in the [SET_BASE](#set_base-class-), using a given ObjectName as the index.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -101,6 +104,7 @@ self
 
 
 ### SET_BASE:AddObject(Object)
+Adds a [BASE](#base-class-) object in the [SET_BASE](#set_base-class-), using the Object Name as the index.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -112,6 +116,7 @@ self
 
 
 ### SET_BASE:Remove(ObjectName)
+Removes a [BASE](#base-class-) object from the [SET_BASE](#set_base-class-) and derived classes, based on the Object Name.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -121,6 +126,7 @@ self
 <h4> Returns </h4>
 
 ### SET_BASE:Get(ObjectName)
+Gets a [BASE](#base-class-) object from the [SET_BASE](#set_base-class-) and derived classes, based on the Object Name.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -132,6 +138,7 @@ self
 
 
 ### SET_BASE:GetFirst()
+Gets the first object from the [SET_BASE](#set_base-class-) and derived classes.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -142,6 +149,7 @@ self
 
 
 ### SET_BASE:GetLast()
+Gets the last object from the [SET_BASE](#set_base-class-) and derived classes.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -152,6 +160,7 @@ self
 
 
 ### SET_BASE:GetRandom()
+Gets a random object from the [SET_BASE](#set_base-class-) and derived classes.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -162,6 +171,7 @@ self
 
 
 ### SET_BASE:Count()
+Retrieves the amount of objects in the [SET_BASE](#set_base-class-) and derived classes.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -172,6 +182,7 @@ self
 
 
 ### SET_BASE:SetDatabase(BaseSet)
+Copies the Filter criteria from a given Set (for rebuilding a new Set based on an existing Set).
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -185,6 +196,7 @@ BaseSet
 
 
 ### SET_BASE:SetIteratorIntervals(YieldInterval, TimeInterval)
+Define the SET iterator **"yield interval"** and the **"time interval"**.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -198,6 +210,7 @@ self
 
 
 ### SET_BASE:FilterOnce()
+Filters for the defined collection.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -209,6 +222,7 @@ self
 
 
 ### SET_BASE:FilterStop()
+Stops the filtering for the defined collection.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -220,6 +234,7 @@ self
 
 
 ### SET_BASE:FindNearestObjectFromPointVec2(PointVec2)
+Iterate the SET_BASE while identifying the nearest object from a @{Point#POINT_VEC2}.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -231,6 +246,7 @@ self
 
 
 ### SET_BASE:ForEach(IteratorFunction)
+Iterate the SET_BASE and derived classes and call an iterator function for the given SET_BASE, providing the Object for each element within the set and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -243,6 +259,7 @@ self
 
 
 ### SET_BASE:IsIncludeObject(Object)
+Decides whether to include the Object
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -255,6 +272,7 @@ self
 
 
 ### SET_BASE:Flush()
+Flushes the current SET_BASE contents in the log ... (for debugging reasons).
 
 <h4> Parameters </h4>
 * [SET_BASE](#set_base-class-)
@@ -328,6 +346,7 @@ The following iterator methods are currently available within the SET_GROUP:
 -- Define a new SET_GROUP Object. This DBObject will contain a reference to all alive GROUPS.
 DBObject = SET_GROUP:New()
 ```
+Creates a new SET_GROUP object, building a set of groups belonging to a coalitions, categories, countries, types or with defined prefix names.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -339,6 +358,7 @@ self
 
 
 ### SET_GROUP:AddGroupsByName(AddGroupNames)
+Add GROUP(s) to SET_GROUP.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-) self
@@ -349,6 +369,7 @@ self
 
 
 ### SET_GROUP:RemoveGroupsByName(RemoveGroupNames)
+Remove GROUP(s) from SET_GROUP.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-) self
@@ -359,6 +380,7 @@ self
 
 
 ### SET_GROUP:FindGroup(GroupName)
+Finds a Group based on the Group Name.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -370,6 +392,7 @@ self
 
 
 ### SET_GROUP:FindNearestGroupFromPointVec2(PointVec2)
+Iterate the SET_GROUP while identifying the nearest object from a @{Point#POINT_VEC2}.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -381,6 +404,8 @@ self
 
 
 ### SET_GROUP:FilterCoalitions(Coalitions)
+Builds a set of groups of coalitions.
+Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -393,6 +418,8 @@ self
 
 
 ### SET_GROUP:FilterCategories(Categories)
+Builds a set of groups out of categories.
+Possible current categories are plane, helicopter, ground, ship.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -405,6 +432,8 @@ self
 
 
 ### SET_GROUP:FilterCountries(Countries)
+Builds a set of groups of defined countries.
+Possible current countries are those known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -417,6 +446,8 @@ self
 
 
 ### SET_GROUP:FilterPrefixes(Prefixes)
+Builds a set of groups of defined GROUP prefixes.
+All the groups starting with the given prefixes will be included within the set.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -429,6 +460,7 @@ self
 
 
 ### SET_GROUP:FilterStart()
+Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -440,6 +472,8 @@ self
 
 
 ### SET_GROUP:AddInDatabase(Event)
+Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -452,6 +486,8 @@ self
 
 
 ### SET_GROUP:FindInDatabase(Event)
+Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -464,6 +500,7 @@ self
 
 
 ### SET_GROUP:ForEachGroup(IteratorFunction)
+Iterate the SET_GROUP and call an iterator function for each **alive** GROUP, providing the GROUP and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -476,6 +513,7 @@ self
 
 
 ### SET_GROUP:ForEachGroupCompletelyInZone(ZoneObject, IteratorFunction)
+Iterate the SET_GROUP and call an iterator function for each **alive** GROUP presence completely in a [Zone](#zone-module-), providing the GROUP and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -489,6 +527,7 @@ self
 
 
 ### SET_GROUP:ForEachGroupPartlyInZone(ZoneObject, IteratorFunction)
+Iterate the SET_GROUP and call an iterator function for each **alive** GROUP presence partly in a [Zone](#zone-module-), providing the GROUP and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -502,6 +541,7 @@ self
 
 
 ### SET_GROUP:ForEachGroupNotInZone(ZoneObject, IteratorFunction)
+Iterate the SET_GROUP and call an iterator function for each **alive** GROUP presence not in a [Zone](#zone-module-), providing the GROUP and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -515,6 +555,7 @@ self
 
 
 ### SET_GROUP:IsIncludeObject(MooseGroup)
+
 
 <h4> Parameters </h4>
 * [SET_GROUP](#set_group-class-)
@@ -603,6 +644,7 @@ Various methods exist for a SET_UNIT to perform actions or calculations and retr
 -- Define a new SET_UNIT Object. This DBObject will contain a reference to all alive Units.
 DBObject = SET_UNIT:New()
 ```
+Creates a new SET_UNIT object, building a set of units belonging to a coalitions, categories, countries, types or with defined prefix names.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -614,6 +656,7 @@ self
 
 
 ### SET_UNIT:AddUnit(AddUnit)
+Add UNIT(s) to SET_UNIT.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -626,6 +669,7 @@ self
 
 
 ### SET_UNIT:AddUnitsByName(AddUnitNames)
+Add UNIT(s) to SET_UNIT.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -638,6 +682,7 @@ self
 
 
 ### SET_UNIT:RemoveUnitsByName(RemoveUnitNames)
+Remove UNIT(s) from SET_UNIT.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-) self
@@ -648,6 +693,7 @@ self
 
 
 ### SET_UNIT:FindUnit(UnitName)
+Finds a Unit based on the Unit Name.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -659,6 +705,8 @@ self
 
 
 ### SET_UNIT:FilterCoalitions(Coalitions)
+Builds a set of units of coalitions.
+Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -671,6 +719,8 @@ self
 
 
 ### SET_UNIT:FilterCategories(Categories)
+Builds a set of units out of categories.
+Possible current categories are plane, helicopter, ground, ship.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -683,6 +733,8 @@ self
 
 
 ### SET_UNIT:FilterTypes(Types)
+Builds a set of units of defined unit types.
+Possible current types are those types known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -695,6 +747,8 @@ self
 
 
 ### SET_UNIT:FilterCountries(Countries)
+Builds a set of units of defined countries.
+Possible current countries are those known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -707,6 +761,8 @@ self
 
 
 ### SET_UNIT:FilterPrefixes(Prefixes)
+Builds a set of units of defined unit prefixes.
+All the units starting with the given prefixes will be included within the set.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -719,6 +775,8 @@ self
 
 
 ### SET_UNIT:FilterHasRadar(RadarTypes)
+Builds a set of units having a radar of give types.
+All the units having a radar of a given type will be included within the set.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -731,6 +789,7 @@ self
 
 
 ### SET_UNIT:FilterHasSEAD()
+Builds a set of SEADable units.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -742,6 +801,7 @@ self
 
 
 ### SET_UNIT:FilterStart()
+Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -753,6 +813,8 @@ self
 
 
 ### SET_UNIT:AddInDatabase(Event)
+Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -765,6 +827,8 @@ self
 
 
 ### SET_UNIT:FindInDatabase(Event)
+Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -777,6 +841,7 @@ self
 
 
 ### SET_UNIT:ForEachUnit(IteratorFunction)
+Iterate the SET_UNIT and call an interator function for each **alive** UNIT, providing the UNIT and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -789,6 +854,7 @@ self
 
 
 ### SET_UNIT:ForEachUnitCompletelyInZone(ZoneObject, IteratorFunction)
+Iterate the SET_UNIT and call an iterator function for each **alive** UNIT presence completely in a [Zone](#zone-module-), providing the UNIT and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -802,6 +868,7 @@ self
 
 
 ### SET_UNIT:ForEachUnitNotInZone(ZoneObject, IteratorFunction)
+Iterate the SET_UNIT and call an iterator function for each **alive** UNIT presence not in a [Zone](#zone-module-), providing the UNIT and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -815,6 +882,7 @@ self
 
 
 ### SET_UNIT:GetUnitTypes()
+Returns map of unit types.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -825,6 +893,7 @@ self
 
 
 ### SET_UNIT:GetUnitTypesText()
+Returns a comma separated string of the unit types with a count in the  [Set](#set-module-).
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -835,6 +904,7 @@ self
 
 
 ### SET_UNIT:GetUnitThreatLevels()
+Returns map of unit threat levels.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -845,6 +915,7 @@ self
 
 
 ### SET_UNIT:CalculateThreatLevelA2G()
+Calculate the maxium A2G threat level of the SET_UNIT.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -853,6 +924,7 @@ self
 <h4> Returns </h4>
 
 ### SET_UNIT:HasRadar(RadarType)
+Returns if the [Set](#set-module-) has targets having a radar (of a given type).
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -864,6 +936,7 @@ self
 
 
 ### SET_UNIT:HasSEAD()
+Returns if the [Set](#set-module-) has targets that can be SEADed.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -874,6 +947,7 @@ self
 
 
 ### SET_UNIT:HasGroundUnits()
+Returns if the [Set](#set-module-) has ground targets.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -884,6 +958,7 @@ self
 
 
 ### SET_UNIT:HasFriendlyUnits()
+Returns if the [Set](#set-module-) has friendly ground units.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -894,6 +969,7 @@ self
 
 
 ### SET_UNIT:IsIncludeObject(MUnit)
+
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -906,6 +982,7 @@ self
 
 
 ### SET_UNIT:GetTypeNames(Delimiter)
+Retrieve the type names of the [Unit](#unit-module-)s in the SET, delimited by an optional delimiter.
 
 <h4> Parameters </h4>
 * [SET_UNIT](#set_unit-class-)
@@ -979,6 +1056,7 @@ The following iterator methods are currently available within the SET_CLIENT:
 -- Define a new SET_CLIENT Object. This DBObject will contain a reference to all Clients.
 DBObject = SET_CLIENT:New()
 ```
+Creates a new SET_CLIENT object, building a set of clients belonging to a coalitions, categories, countries, types or with defined prefix names.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -990,6 +1068,7 @@ self
 
 
 ### SET_CLIENT:AddClientsByName(AddClientNames)
+Add CLIENT(s) to SET_CLIENT.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-) self
@@ -1000,6 +1079,7 @@ self
 
 
 ### SET_CLIENT:RemoveClientsByName(RemoveClientNames)
+Remove CLIENT(s) from SET_CLIENT.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-) self
@@ -1010,6 +1090,7 @@ self
 
 
 ### SET_CLIENT:FindClient(ClientName)
+Finds a Client based on the Client Name.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1021,6 +1102,8 @@ self
 
 
 ### SET_CLIENT:FilterCoalitions(Coalitions)
+Builds a set of clients of coalitions.
+Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1033,6 +1116,8 @@ self
 
 
 ### SET_CLIENT:FilterCategories(Categories)
+Builds a set of clients out of categories.
+Possible current categories are plane, helicopter, ground, ship.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1045,6 +1130,8 @@ self
 
 
 ### SET_CLIENT:FilterTypes(Types)
+Builds a set of clients of defined client types.
+Possible current types are those types known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1057,6 +1144,8 @@ self
 
 
 ### SET_CLIENT:FilterCountries(Countries)
+Builds a set of clients of defined countries.
+Possible current countries are those known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1069,6 +1158,8 @@ self
 
 
 ### SET_CLIENT:FilterPrefixes(Prefixes)
+Builds a set of clients of defined client prefixes.
+All the clients starting with the given prefixes will be included within the set.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1081,6 +1172,7 @@ self
 
 
 ### SET_CLIENT:FilterStart()
+Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1092,6 +1184,8 @@ self
 
 
 ### SET_CLIENT:AddInDatabase(Event)
+Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1104,6 +1198,8 @@ self
 
 
 ### SET_CLIENT:FindInDatabase(Event)
+Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1116,6 +1212,7 @@ self
 
 
 ### SET_CLIENT:ForEachClient(IteratorFunction)
+Iterate the SET_CLIENT and call an interator function for each **alive** CLIENT, providing the CLIENT and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1128,6 +1225,7 @@ self
 
 
 ### SET_CLIENT:ForEachClientInZone(ZoneObject, IteratorFunction)
+Iterate the SET_CLIENT and call an iterator function for each **alive** CLIENT presence completely in a [Zone](#zone-module-), providing the CLIENT and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1141,6 +1239,7 @@ self
 
 
 ### SET_CLIENT:ForEachClientNotInZone(ZoneObject, IteratorFunction)
+Iterate the SET_CLIENT and call an iterator function for each **alive** CLIENT presence not in a [Zone](#zone-module-), providing the CLIENT and optional parameters to the called function.
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1154,6 +1253,7 @@ self
 
 
 ### SET_CLIENT:IsIncludeObject(MClient)
+
 
 <h4> Parameters </h4>
 * [SET_CLIENT](#set_client-class-)
@@ -1216,6 +1316,7 @@ The following iterator methods are currently available within the SET_AIRBASE:
 -- Define a new SET_AIRBASE Object. The DatabaseSet will contain a reference to all Airbases.
 DatabaseSet = SET_AIRBASE:New()
 ```
+Creates a new SET_AIRBASE object, building a set of airbases belonging to a coalitions and categories.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1227,6 +1328,7 @@ self
 
 
 ### SET_AIRBASE:AddAirbasesByName(AddAirbaseNames)
+Add AIRBASEs to SET_AIRBASE.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-) self
@@ -1237,6 +1339,7 @@ self
 
 
 ### SET_AIRBASE:RemoveAirbasesByName(RemoveAirbaseNames)
+Remove AIRBASEs from SET_AIRBASE.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-) self
@@ -1247,6 +1350,7 @@ self
 
 
 ### SET_AIRBASE:FindAirbase(AirbaseName)
+Finds a Airbase based on the Airbase Name.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1258,6 +1362,8 @@ self
 
 
 ### SET_AIRBASE:FilterCoalitions(Coalitions)
+Builds a set of airbases of coalitions.
+Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1270,6 +1376,8 @@ self
 
 
 ### SET_AIRBASE:FilterCategories(Categories)
+Builds a set of airbases out of categories.
+Possible current categories are plane, helicopter, ground, ship.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1282,6 +1390,7 @@ self
 
 
 ### SET_AIRBASE:FilterStart()
+Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1293,6 +1402,8 @@ self
 
 
 ### SET_AIRBASE:AddInDatabase(Event)
+Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1305,6 +1416,8 @@ self
 
 
 ### SET_AIRBASE:FindInDatabase(Event)
+Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1317,6 +1430,7 @@ self
 
 
 ### SET_AIRBASE:ForEachAirbase(IteratorFunction)
+Iterate the SET_AIRBASE and call an interator function for each AIRBASE, providing the AIRBASE and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1329,6 +1443,7 @@ self
 
 
 ### SET_AIRBASE:FindNearestAirbaseFromPointVec2(PointVec2)
+Iterate the SET_AIRBASE while identifying the nearest [AIRBASE](#airbase-class-) from a @{Point#POINT_VEC2}.
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1340,6 +1455,7 @@ self
 
 
 ### SET_AIRBASE:IsIncludeObject(MAirbase)
+
 
 <h4> Parameters </h4>
 * [SET_AIRBASE](#set_airbase-class-)
@@ -1407,6 +1523,7 @@ The following iterator methods are currently available within the SET_CARGO:
 -- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.
 DatabaseSet = SET_CARGO:New()
 ```
+Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1418,6 +1535,7 @@ self
 
 
 ### SET_CARGO:AddCargosByName(AddCargoNames)
+Add CARGOs to SET_CARGO.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-) self
@@ -1428,6 +1546,7 @@ self
 
 
 ### SET_CARGO:RemoveCargosByName(RemoveCargoNames)
+Remove CARGOs from SET_CARGO.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-) self
@@ -1438,6 +1557,7 @@ self
 
 
 ### SET_CARGO:FindCargo(CargoName)
+Finds a Cargo based on the Cargo Name.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1449,6 +1569,8 @@ self
 
 
 ### SET_CARGO:FilterCoalitions(Coalitions)
+Builds a set of cargos of coalitions.
+Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1461,6 +1583,8 @@ self
 
 
 ### SET_CARGO:FilterTypes(Types)
+Builds a set of cargos of defined cargo types.
+Possible current types are those types known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1473,6 +1597,8 @@ self
 
 
 ### SET_CARGO:FilterCountries(Countries)
+Builds a set of cargos of defined countries.
+Possible current countries are those known within DCS world.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1485,6 +1611,8 @@ self
 
 
 ### SET_CARGO:FilterPrefixes(Prefixes)
+Builds a set of cargos of defined cargo prefixes.
+All the cargos starting with the given prefixes will be included within the set.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1497,6 +1625,7 @@ self
 
 
 ### SET_CARGO:FilterStart()
+Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1508,6 +1637,8 @@ self
 
 
 ### SET_CARGO:AddInDatabase(Event)
+Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1520,6 +1651,8 @@ self
 
 
 ### SET_CARGO:FindInDatabase(Event)
+Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1532,6 +1665,7 @@ self
 
 
 ### SET_CARGO:ForEachCargo(IteratorFunction)
+Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1544,6 +1678,7 @@ self
 
 
 ### SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)
+Iterate the SET_CARGO while identifying the nearest [CARGO](#cargo-class-) from a @{Point#POINT_VEC2}.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1556,6 +1691,7 @@ self
 
 ### SET_CARGO:IsIncludeObject(MCargo)
 
+
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
 self
@@ -1567,6 +1703,7 @@ self
 
 
 ### SET_CARGO:OnEventNewCargo(EventData)
+Handles the OnEventNewCargo event for the Set.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1576,6 +1713,7 @@ self
 <h4> Returns </h4>
 
 ### SET_CARGO:OnEventDeleteCargo(EventData)
+Handles the OnDead or OnCrash event for alive units set.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)

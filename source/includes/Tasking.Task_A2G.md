@@ -81,6 +81,7 @@ BASE
 
 
 ### TASK_A2G:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)
+Instantiates a new TASK_A2G.
 
 <h4> Parameters </h4>
 * #TASK_A2G self
@@ -181,6 +182,7 @@ BASE
 
 
 ### TASK_A2G:SetScoreOnDestroy(Text, Score, TaskUnit)
+Set a score when a target in scope of the A2G attack, has been destroyed .
 
 <h4> Parameters </h4>
 * #TASK_A2G self
@@ -193,6 +195,7 @@ BASE
 
 
 ### TASK_A2G:SetScoreOnSuccess(Text, Score, TaskUnit)
+Set a score when all the targets in scope of the A2G attack, have been destroyed.
 
 <h4> Parameters </h4>
 * #TASK_A2G self
@@ -205,6 +208,7 @@ BASE
 
 
 ### TASK_A2G:SetPenaltyOnFailed(Text, Penalty, TaskUnit)
+Set a penalty when the A2G attack has failed.
 
 <h4> Parameters </h4>
 * #TASK_A2G self
@@ -232,6 +236,7 @@ BASE
 
 
 ### TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)
+Instantiates a new TASK_SEAD.
 
 <h4> Parameters </h4>
 * [TASK_SEAD](#task_sead-class-)
@@ -262,6 +267,7 @@ BASE
 
 
 ### TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)
+Instantiates a new TASK_BAI.
 
 <h4> Parameters </h4>
 * [TASK_BAI](#task_bai-class-)
@@ -294,6 +300,7 @@ BASE
 
 
 ### TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)
+Instantiates a new TASK_CAS.
 
 <h4> Parameters </h4>
 * [TASK_CAS](#task_cas-class-)

@@ -263,6 +263,7 @@ Various Events and State Transitions can be tailored using DETECTION_BASE.
 
 
 ### DETECTION_BASE:New(DetectionSetGroup)
+DETECTION constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -276,6 +277,7 @@ self
 
 ### DETECTION_BASE:OnLeaveStopped(From, Event, To)
 OnLeave Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnLeaveStopped
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -290,6 +292,7 @@ self
 
 ### DETECTION_BASE:OnEnterStopped(From, Event, To)
 OnEnter Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnEnterStopped
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -302,6 +305,7 @@ self
 
 ### DETECTION_BASE:OnBeforeStart(From, Event, To)
 OnBefore Transition Handler for Event Start.
+@function [parent=#DETECTION_BASE] OnBeforeStart
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -316,6 +320,7 @@ self
 
 ### DETECTION_BASE:OnAfterStart(From, Event, To)
 OnAfter Transition Handler for Event Start.
+@function [parent=#DETECTION_BASE] OnAfterStart
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -328,6 +333,7 @@ self
 
 ### DETECTION_BASE:Start()
 Synchronous Event Trigger for Event Start.
+@function [parent=#DETECTION_BASE] Start
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -337,6 +343,7 @@ self
 
 ### DETECTION_BASE:OnLeaveDetecting(From, Event, To)
 OnLeave Transition Handler for State Detecting.
+@function [parent=#DETECTION_BASE] OnLeaveDetecting
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -351,6 +358,7 @@ self
 
 ### DETECTION_BASE:OnEnterDetecting(From, Event, To)
 OnEnter Transition Handler for State Detecting.
+@function [parent=#DETECTION_BASE] OnEnterDetecting
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -363,6 +371,7 @@ self
 
 ### DETECTION_BASE:OnBeforeDetect(From, Event, To)
 OnBefore Transition Handler for Event Detect.
+@function [parent=#DETECTION_BASE] OnBeforeDetect
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -377,6 +386,7 @@ self
 
 ### DETECTION_BASE:OnAfterDetect(From, Event, To)
 OnAfter Transition Handler for Event Detect.
+@function [parent=#DETECTION_BASE] OnAfterDetect
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -389,6 +399,7 @@ self
 
 ### DETECTION_BASE:Detect()
 Synchronous Event Trigger for Event Detect.
+@function [parent=#DETECTION_BASE] Detect
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -398,6 +409,7 @@ self
 
 ### DETECTION_BASE:OnBeforeDetected(From, Event, To)
 OnBefore Transition Handler for Event Detected.
+@function [parent=#DETECTION_BASE] OnBeforeDetected
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -412,6 +424,7 @@ self
 
 ### DETECTION_BASE:OnAfterDetected(From, Event, To)
 OnAfter Transition Handler for Event Detected.
+@function [parent=#DETECTION_BASE] OnAfterDetected
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -424,6 +437,7 @@ self
 
 ### DETECTION_BASE:Detected()
 Synchronous Event Trigger for Event Detected.
+@function [parent=#DETECTION_BASE] Detected
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -433,6 +447,7 @@ self
 
 ### DETECTION_BASE:OnBeforeStop(From, Event, To)
 OnBefore Transition Handler for Event Stop.
+@function [parent=#DETECTION_BASE] OnBeforeStop
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -447,6 +462,7 @@ self
 
 ### DETECTION_BASE:OnAfterStop(From, Event, To)
 OnAfter Transition Handler for Event Stop.
+@function [parent=#DETECTION_BASE] OnAfterStop
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -459,6 +475,7 @@ self
 
 ### DETECTION_BASE:Stop()
 Synchronous Event Trigger for Event Stop.
+@function [parent=#DETECTION_BASE] Stop
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -468,6 +485,7 @@ self
 
 ### DETECTION_BASE:OnLeaveStopped(From, Event, To)
 OnLeave Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnLeaveStopped
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -482,6 +500,7 @@ self
 
 ### DETECTION_BASE:OnEnterStopped(From, Event, To)
 OnEnter Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnEnterStopped
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -527,6 +546,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:InitDetectVisual(DetectVisual)
+Detect Visual.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -539,6 +559,7 @@ self
 
 
 ### DETECTION_BASE:InitDetectOptical(DetectOptical)
+Detect Optical.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -551,6 +572,7 @@ self
 
 
 ### DETECTION_BASE:InitDetectRadar(DetectRadar)
+Detect Radar.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -563,6 +585,7 @@ self
 
 
 ### DETECTION_BASE:InitDetectIRST(DetectIRST)
+Detect IRST.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -575,6 +598,7 @@ self
 
 
 ### DETECTION_BASE:InitDetectRWR(DetectRWR)
+Detect RWR.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -587,6 +611,7 @@ self
 
 
 ### DETECTION_BASE:InitDetectDLINK(DetectDLINK)
+Detect DLINK.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -599,6 +624,25 @@ self
 
 
 ### DETECTION_BASE:FilterCategories(FilterCategories)
+Filter the detected units based on Unit.Category
+The different values of Unit.Category can be:
+
+* Unit.Category.AIRPLANE
+* Unit.Category.GROUND_UNIT
+* Unit.Category.HELICOPTER
+* Unit.Category.SHIP
+* Unit.Category.STRUCTURE
+
+Multiple Unit.Category entries can be given as a table and then these will be evaluated as an OR expression.
+
+Example to filter a single category (Unit.Category.AIRPLANE).
+
+DetectionObject:FilterCategories( Unit.Category.AIRPLANE )
+
+Example to filter multiple categories (Unit.Category.AIRPLANE, Unit.Category.HELICOPTER). Note the {}.
+
+DetectionObject:FilterCategories( { Unit.Category.AIRPLANE, Unit.Category.HELICOPTER } )
+
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -611,6 +655,7 @@ self
 
 
 ### DETECTION_BASE:SetDetectionInterval(DetectionInterval)
+Set the detection interval time in seconds.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -623,6 +668,7 @@ self
 
 
 ### DETECTION_BASE:SetAcceptRange(AcceptRange)
+Accept detections if within a range in meters.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -635,6 +681,7 @@ self
 
 
 ### DETECTION_BASE:SetAcceptZones(Can)
+Accept detections if within the specified zone(s).
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -647,6 +694,7 @@ self
 
 
 ### DETECTION_BASE:SetRejectZones(Can)
+Reject detections if within the specified zone(s).
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -659,6 +707,11 @@ self
 
 
 ### DETECTION_BASE:SetDistanceProbability(The)
+Upon a **visual** detection, the further away a detected object is, the less likely it is to be detected properly.
+Also, the speed of accurate detection plays a role.
+A distance probability factor between 0 and 1 can be given, that will model a linear extrapolated probability over 10 km distance.
+For example, if a probability factor of 0.6 (60%) is given, the extrapolated probabilities over 15 kilometers would like like:
+1 km: 96%, 2 km: 92%, 3 km: 88%, 4 km: 84%, 5 km: 80%, 6 km: 76%, 7 km: 72%, 8 km: 68%, 9 km: 64%, 10 km: 60%, 11 km: 56%, 12 km: 52%, 13 km: 48%, 14 km: 44%, 15 km: 40%.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -671,6 +724,13 @@ self
 
 
 ### DETECTION_BASE:SetAlphaAngleProbability(The)
+Upon a **visual** detection, the higher the unit is during the detecting process, the more likely the detected unit is to be detected properly.
+A detection at a 90% alpha angle is the most optimal, a detection at 10% is less and a detection at 0% is less likely to be correct.
+
+A probability factor between 0 and 1 can be given, that will model a progressive extrapolated probability if the target would be detected at a 0° angle.
+
+For example, if a alpha angle probability factor of 0.7 is given, the extrapolated probabilities of the different angles would look like:
+0°: 70%, 10°: 75,21%, 20°: 80,26%, 30°: 85%, 40°: 89,28%, 50°: 92,98%, 60°: 95,98%, 70°: 98,19%, 80°: 99,54%, 90°: 100%
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -683,6 +743,9 @@ self
 
 
 ### DETECTION_BASE:SetZoneProbability(Aray)
+Upon a **visual** detection, the more a detected unit is within a cloudy zone, the less likely the detected unit is to be detected successfully.
+The Cloudy Zones work with the ZONE_BASE derived classes. The mission designer can define within the mission
+zones that reflect cloudy areas where detected units may not be so easily visually detected.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -695,6 +758,7 @@ self
 
 
 ### DETECTION_BASE:AcceptChanges(DetectedItem)
+Accepts changes from the detected item.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -707,6 +771,7 @@ self
 
 
 ### DETECTION_BASE:AddChangeItem(DetectedItem, ChangeCode)
+Add a change to the detected zone.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -720,6 +785,7 @@ self
 
 
 ### DETECTION_BASE:AddChangeUnit(DetectedItem, ChangeCode, ChangeUnitType)
+Add a change to the detected zone.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -734,6 +800,7 @@ self
 
 
 ### DETECTION_BASE:IsFriendliesNearBy()
+Returns if there are friendlies nearby the FAC units ...
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -744,6 +811,7 @@ self
 
 
 ### DETECTION_BASE:ReportFriendliesNearBy()
+Background worker function to determine if there are friendlies nearby ...
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -752,6 +820,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:IsDetectedObjectIdentified(DetectedObject)
+Determines if a detected object has already been identified during detection processing.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -763,6 +832,7 @@ self
 
 
 ### DETECTION_BASE:IdentifyDetectedObject(DetectedObject)
+Identifies a detected object during detection processing.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -772,6 +842,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:UnIdentifyDetectedObject(DetectedObject)
+UnIdentify a detected object during detection processing.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -781,6 +852,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:UnIdentifyAllDetectedObjects()
+UnIdentify all detected objects during detection processing.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -789,6 +861,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:GetDetectedObject(ObjectName)
+Gets a detected object with a given name.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -800,6 +873,8 @@ self
 
 
 ### DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)
+Adds a new DetectedItem to the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -812,6 +887,8 @@ self
 
 
 ### DETECTION_BASE:AddDetectedItemZone(DetectedItemIndex, Set, Zone)
+Adds a new DetectedItem to the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -825,6 +902,8 @@ self
 
 
 ### DETECTION_BASE:RemoveDetectedItem(DetectedItemIndex)
+Removes an existing DetectedItem from the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -834,6 +913,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_BASE:GetDetectedItems()
+Get the detected [SET_BASE](#set_base-class-)s.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -844,6 +924,7 @@ self
 
 
 ### DETECTION_BASE:GetDetectedItemsCount()
+Get the amount of SETs with detected objects.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -854,6 +935,7 @@ self
 
 
 ### DETECTION_BASE:GetDetectedItem(Index)
+Get a detected item using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -865,6 +947,7 @@ self
 
 
 ### DETECTION_BASE:GetDetectedSet(Index)
+Get the [SET_UNIT](#set_unit-class-) of a detecttion area using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -876,6 +959,7 @@ self
 
 
 ### DETECTION_BASE:GetDetectedZone(Index)
+Get the [ZONE_UNIT](#zone_unit-class-) of a detection area using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -887,6 +971,7 @@ self
 
 
 ### DETECTION_BASE:DetectedItemReportSummary(self)
+Report summary of a detected item using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -898,6 +983,7 @@ self
 
 
 ### DETECTION_BASE:DetectedReportDetailed()
+Report detailed of a detectedion result.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -908,6 +994,7 @@ self
 
 
 ### DETECTION_BASE:GetDetectionSetGroup()
+Get the detection Groups.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -918,6 +1005,7 @@ self
 
 
 ### DETECTION_BASE:CreateDetectionSets()
+Make a DetectionSet table. This function will be overridden in the derived clsses.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -929,6 +1017,7 @@ self
 
 
 ### DETECTION_BASE:Schedule(DelayTime, RepeatInterval)
+Schedule the DETECTION construction.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
@@ -1000,6 +1089,7 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 
 
 ### DETECTION_UNITS:New(DetectionSetGroup)
+DETECTION_UNITS constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_UNITS](#detection_units-class-) self
@@ -1010,6 +1100,7 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 
 
 ### DETECTION_UNITS:GetChangeText(DetectedItem)
+Make text documenting the changes of the detected zone.
 
 <h4> Parameters </h4>
 * [DETECTION_UNITS](#detection_units-class-)
@@ -1021,6 +1112,8 @@ self
 
 
 ### DETECTION_UNITS:CreateDetectionSets()
+Create the DetectedItems list from the DetectedObjects table.
+For each DetectedItem, a one field array is created containing the Unit detected.
 
 <h4> Parameters </h4>
 * [DETECTION_UNITS](#detection_units-class-)
@@ -1032,6 +1125,7 @@ self
 
 
 ### DETECTION_UNITS:DetectedItemReportSummary(self)
+Report summary of a DetectedItem using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_UNITS](#detection_units-class-)
@@ -1043,6 +1137,7 @@ self
 
 
 ### DETECTION_UNITS:DetectedReportDetailed()
+Report detailed of a detection result.
 
 <h4> Parameters </h4>
 * [DETECTION_UNITS](#detection_units-class-)
@@ -1069,6 +1164,7 @@ Beware that when the amount of different types detected is large, the DetectedIt
 
 
 ### DETECTION_TYPES:New(DetectionSetGroup)
+DETECTION_TYPES constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_TYPES](#detection_types-class-) self
@@ -1079,6 +1175,7 @@ Beware that when the amount of different types detected is large, the DetectedIt
 
 
 ### DETECTION_TYPES:GetChangeText(DetectedItem)
+Make text documenting the changes of the detected zone.
 
 <h4> Parameters </h4>
 * [DETECTION_TYPES](#detection_types-class-)
@@ -1090,6 +1187,8 @@ self
 
 
 ### DETECTION_TYPES:CreateDetectionSets()
+Create the DetectedItems list from the DetectedObjects table.
+For each DetectedItem, a one field array is created containing the Unit detected.
 
 <h4> Parameters </h4>
 * [DETECTION_TYPES](#detection_types-class-)
@@ -1101,6 +1200,7 @@ self
 
 
 ### DETECTION_TYPES:DetectedItemReportSummary(self)
+Report summary of a DetectedItem using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_TYPES](#detection_types-class-)
@@ -1112,6 +1212,7 @@ self
 
 
 ### DETECTION_TYPES:DetectedReportDetailed()
+Report detailed of a detection result.
 
 <h4> Parameters </h4>
 * [DETECTION_TYPES](#detection_types-class-)
@@ -1168,6 +1269,7 @@ the detected zones when a new detection has taken place.
 
 
 ### DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)
+DETECTION_AREAS constructor.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1181,6 +1283,7 @@ self
 
 
 ### DETECTION_AREAS:DetectedItemReportSummary(self)
+Report summary of a detected item using a given numeric index.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1192,6 +1295,7 @@ self
 
 
 ### DETECTION_AREAS:IsFriendliesNearBy()
+Returns if there are friendlies nearby the FAC units ...
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1202,6 +1306,7 @@ self
 
 
 ### DETECTION_AREAS:CalculateThreatLevelA2G(DetectedItem)
+Calculate the maxium A2G threat level of the DetectedItem.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1211,6 +1316,7 @@ self
 <h4> Returns </h4>
 
 ### DETECTION_AREAS:NearestFAC(DetectedItem)
+Find the nearest FAC of the DetectedItem.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1222,6 +1328,7 @@ self
 
 
 ### DETECTION_AREAS:GetTreatLevelA2G(DetectedItem)
+Returns the A2G threat level of the units in the DetectedItem
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1233,6 +1340,7 @@ self
 
 
 ### DETECTION_AREAS:SmokeDetectedUnits()
+Smoke the detected units
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1244,6 +1352,7 @@ self
 
 
 ### DETECTION_AREAS:FlareDetectedUnits()
+Flare the detected units
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1255,6 +1364,7 @@ self
 
 
 ### DETECTION_AREAS:SmokeDetectedZones()
+Smoke the detected zones
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1266,6 +1376,7 @@ self
 
 
 ### DETECTION_AREAS:FlareDetectedZones()
+Flare the detected zones
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1277,6 +1388,7 @@ self
 
 
 ### DETECTION_AREAS:BoundDetectedZones()
+Bound the detected zones
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1288,6 +1400,7 @@ self
 
 
 ### DETECTION_AREAS:GetChangeText(DetectedItem)
+Make text documenting the changes of the detected zone.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
@@ -1299,6 +1412,7 @@ self
 
 
 ### DETECTION_AREAS:CreateDetectionSets()
+Make a DetectionSet table. This function will be overridden in the derived clsses.
 
 <h4> Parameters </h4>
 * [DETECTION_AREAS](#detection_areas-class-)

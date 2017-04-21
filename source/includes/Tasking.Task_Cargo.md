@@ -49,6 +49,7 @@ BASE
 </pre>
 
 ### TASK_CARGO:New(Mission, SetGroup, TaskName, SetCargo, TaskType)
+Instantiates a new TASK_CARGO.
 
 <h4> Parameters </h4>
 * [TASK_CARGO](#task_cargo-class-)
@@ -169,6 +170,7 @@ self
 
 
 ### TASK_CARGO:SetScoreOnDestroy(Text, Score, TaskUnit)
+Set a score when a target in scope of the A2G attack, has been destroyed .
 
 <h4> Parameters </h4>
 * [TASK_CARGO](#task_cargo-class-)
@@ -183,6 +185,7 @@ self
 
 
 ### TASK_CARGO:SetScoreOnSuccess(Text, Score, TaskUnit)
+Set a score when all the targets in scope of the A2G attack, have been destroyed.
 
 <h4> Parameters </h4>
 * [TASK_CARGO](#task_cargo-class-)
@@ -197,6 +200,7 @@ self
 
 
 ### TASK_CARGO:SetPenaltyOnFailed(Text, Penalty, TaskUnit)
+Set a penalty when the A2G attack has failed.
 
 <h4> Parameters </h4>
 * [TASK_CARGO](#task_cargo-class-)
@@ -223,6 +227,7 @@ BASE
 
 
 ### TASK_CARGO_TRANSPORT:New(Mission, SetGroup, TaskName, SetCargo)
+Instantiates a new TASK_CARGO_TRANSPORT.
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -239,6 +244,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:OnBeforeCargoPickedUp(From, Event, To, TaskUnit, Cargo)
 OnBefore Transition Handler for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] OnBeforeCargoPickedUp
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -255,6 +261,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:OnAfterCargoPickedUp(From, Event, To, TaskUnit, Cargo)
 OnAfter Transition Handler for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] OnAfterCargoPickedUp
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -269,6 +276,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:CargoPickedUp(TaskUnit, Cargo)
 Synchronous Event Trigger for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] CargoPickedUp
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -280,6 +288,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:OnBeforeCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)
 OnBefore Transition Handler for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] OnBeforeCargoDeployed
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -297,6 +306,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:OnAfterCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)
 OnAfter Transition Handler for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] OnAfterCargoDeployed
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -312,6 +322,7 @@ self
 
 ### TASK_CARGO_TRANSPORT:CargoDeployed(TaskUnit, Cargo, DeployZone)
 Synchronous Event Trigger for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] CargoDeployed
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)
@@ -323,6 +334,7 @@ self
 <h4> Returns </h4>
 
 ### TASK_CARGO_TRANSPORT:IsAllCargoTransported()
+
 
 <h4> Parameters </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)

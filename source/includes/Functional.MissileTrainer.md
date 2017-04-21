@@ -91,6 +91,8 @@ BASE
 
 
 ### MISSILETRAINER:New(Distance, Briefing)
+Creates the main object which is handling missile tracking.
+When a missile is fired a SCHEDULER is set off that follows the missile. When near a certain a client player, the missile will be destroyed.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -104,6 +106,7 @@ self
 
 
 ### MISSILETRAINER:InitMessagesOnOff(MessagesOnOff)
+Sets by default the display of any message to be ON or OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -116,6 +119,7 @@ self
 
 
 ### MISSILETRAINER:InitTrackingToAll(TrackingToAll)
+Sets by default the missile tracking report for all players or only for those missiles targetted to you.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -128,6 +132,7 @@ self
 
 
 ### MISSILETRAINER:InitTrackingOnOff(TrackingOnOff)
+Sets by default the display of missile tracking report to be ON or OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -140,6 +145,8 @@ self
 
 
 ### MISSILETRAINER:InitTrackingFrequency(TrackingFrequency)
+Increases, decreases the missile tracking message display frequency with the provided time interval in seconds.
+The default frequency is a 3 second interval, so the Tracking Frequency parameter specifies the increase or decrease from the default 3 seconds or the last frequency update.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -152,6 +159,7 @@ self
 
 
 ### MISSILETRAINER:InitAlertsToAll(AlertsToAll)
+Sets by default the display of alerts to be shown to all players or only to you.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -164,6 +172,7 @@ self
 
 
 ### MISSILETRAINER:InitAlertsHitsOnOff(AlertsHitsOnOff)
+Sets by default the display of hit alerts ON or OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -176,6 +185,7 @@ self
 
 
 ### MISSILETRAINER:InitAlertsLaunchesOnOff(AlertsLaunchesOnOff)
+Sets by default the display of launch alerts ON or OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -188,6 +198,7 @@ self
 
 
 ### MISSILETRAINER:InitRangeOnOff(DetailsRangeOnOff)
+Sets by default the display of range information of missiles ON of OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -200,6 +211,7 @@ self
 
 
 ### MISSILETRAINER:InitBearingOnOff(DetailsBearingOnOff)
+Sets by default the display of bearing information of missiles ON of OFF.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -212,6 +224,7 @@ self
 
 
 ### MISSILETRAINER:InitMenusOnOff(MenusOnOff)
+Enables / Disables the menus.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)
@@ -224,6 +237,7 @@ self
 
 
 ### MISSILETRAINER:OnEventShot(EventData)
+Detects if an SA site was shot with an anti radiation missile. In this case, take evasive actions based on the skill level set within the ME.
 
 <h4> Parameters </h4>
 * [MISSILETRAINER](#missiletrainer-class-)

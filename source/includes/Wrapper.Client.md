@@ -59,6 +59,7 @@ Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 3' ):Trans
 Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*HOT-Deploy Troops 2' ):Transport() )
 Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 4' ):Transport() )
 ```
+Finds a CLIENT from the _DATABASE using the relevant DCS Unit.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -82,6 +83,8 @@ Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 3' ):Trans
 Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*HOT-Deploy Troops 2' ):Transport() )
 Mission:AddClient( CLIENT:FindByName( 'RU MI-8MTV2*RAMP-Deploy Troops 4' ):Transport() )
 ```
+Finds a CLIENT from the _DATABASE using the relevant Client Unit Name.
+As an optional parameter, a briefing text can be given also.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -96,6 +99,7 @@ self
 
 
 ### CLIENT:Transport()
+Transport defines that the Client is a Transport. Transports show cargo.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -107,6 +111,7 @@ self
 
 
 ### CLIENT:AddBriefing(ClientBriefing)
+AddBriefing adds a briefing to a CLIENT when a player joins a mission.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -119,6 +124,7 @@ self
 
 
 ### CLIENT:ShowBriefing()
+Show the briefing of a CLIENT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -130,6 +136,7 @@ self
 
 
 ### CLIENT:ShowMissionBriefing(MissionBriefing)
+Show the mission briefing of a MISSION to the CLIENT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -142,6 +149,7 @@ self
 
 
 ### CLIENT:Reset(ClientName)
+Resets a CLIENT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -151,6 +159,7 @@ self
 <h4> Returns </h4>
 
 ### CLIENT:IsMultiSeated()
+Checks if the CLIENT is a multi-seated UNIT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -161,6 +170,7 @@ self
 
 
 ### CLIENT:Alive(CallBackFunction)
+Checks for a client alive event and calls a function on a continuous basis.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -173,6 +183,8 @@ self
 
 
 ### CLIENT:GetDCSGroup()
+Return the DCSGroup of a Client.
+This function is modified to deal with a couple of bugs in DCS 1.5.3
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -183,6 +195,7 @@ self
 
 
 ### CLIENT:GetClientGroupID()
+Get the group ID of the client.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -193,6 +206,7 @@ self
 
 
 ### CLIENT:GetClientGroupName()
+Get the name of the group of the client.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -203,6 +217,7 @@ self
 
 
 ### CLIENT:GetClientGroupUnit()
+Returns the UNIT of the CLIENT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -213,6 +228,7 @@ self
 
 
 ### CLIENT:GetClientGroupDCSUnit()
+Returns the DCSUnit of the CLIENT.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -223,6 +239,7 @@ self
 
 
 ### CLIENT:IsTransport()
+Evaluates if the CLIENT is a transport.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -233,6 +250,8 @@ self
 
 
 ### CLIENT:ShowCargo()
+Shows the [CARGO](#cargo-class-) contained within the CLIENT to the player as a message.
+The [CARGO](#cargo-class-) is shown using the [MESSAGE](#message-class-) distribution system.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)
@@ -241,6 +260,8 @@ self
 <h4> Returns </h4>
 
 ### CLIENT:Message(Message, MessageDuration, MessageCategory, MessageInterval, MessageID)
+The main message driver for the CLIENT.
+This function displays various messages to the Player logged into the CLIENT through the DCS World Messaging system.
 
 <h4> Parameters </h4>
 * [CLIENT](#client-class-)

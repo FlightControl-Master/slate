@@ -48,6 +48,7 @@ This is an abstract class, so don't use it.
 
 
 ### MENU_BASE:New()
+Consructor
 
 <h4> Parameters </h4>
 * [MENU_BASE](#menu_base-class-)
@@ -59,6 +60,7 @@ self
 
 
 ### MENU_BASE:GetMenu(MenuText)
+Gets a [Menu](#menu-module-) from a parent [Menu](#menu-module-)
 
 <h4> Parameters </h4>
 * [MENU_BASE](#menu_base-class-)
@@ -71,6 +73,7 @@ self
 
 
 ### MENU_BASE:SetRemoveParent(RemoveParent)
+Sets a [Menu](#menu-module-) to remove automatically the parent menu when the menu removed is the last child menu of that parent [Menu](#menu-module-).
 
 <h4> Parameters </h4>
 * [MENU_BASE](#menu_base-class-)
@@ -83,6 +86,7 @@ self
 
 
 ### MENU_BASE:SetTime(self)
+Sets a time stamp for later prevention of menu removal.
 
 <h4> Parameters </h4>
 * [MENU_BASE](#menu_base-class-)
@@ -112,6 +116,7 @@ classes are derived from, in order to set commands.
 
 
 ### MENU_COMMAND_BASE:New()
+Constructor
 
 <h4> Parameters </h4>
 * [MENU_COMMAND_BASE](#menu_command_base-class-)
@@ -137,6 +142,7 @@ Using this object reference, you can then remove ALL the menus and submenus unde
 
 
 ### MENU_MISSION:New(MenuText, ParentMenu)
+MENU_MISSION constructor. Creates a new MENU_MISSION object and creates the menu for a complete mission file.
 
 <h4> Parameters </h4>
 * [MENU_MISSION](#menu_mission-class-)
@@ -150,6 +156,7 @@ self
 
 
 ### MENU_MISSION:RemoveSubMenus()
+Removes the sub menus recursively of this MENU_MISSION. Note that the main menu is kept!
 
 <h4> Parameters </h4>
 * [MENU_MISSION](#menu_mission-class-)
@@ -161,6 +168,7 @@ self
 
 
 ### MENU_MISSION:Remove()
+Removes the main menu and the sub menus recursively of this MENU_MISSION.
 
 <h4> Parameters </h4>
 * [MENU_MISSION](#menu_mission-class-)
@@ -187,6 +195,7 @@ Using this object reference, you can then remove ALL the menus and submenus unde
 
 
 ### MENU_MISSION_COMMAND:New(MenuText, ParentMenu, A, An)
+MENU_MISSION constructor. Creates a new radio command item for a complete mission file, which can invoke a function with parameters.
 
 <h4> Parameters </h4>
 * [MENU_MISSION_COMMAND](#menu_mission_command-class-)
@@ -202,6 +211,7 @@ self
 
 
 ### MENU_MISSION_COMMAND:Remove()
+Removes a radio command item for a coalition
 
 <h4> Parameters </h4>
 * [MENU_MISSION_COMMAND](#menu_mission_command-class-)
@@ -265,6 +275,7 @@ local MenuRemove = MENU_COALITION_COMMAND:New( coalition.side.RED, "Remove Statu
 
 
 ### MENU_COALITION:New(Coalition, MenuText, ParentMenu)
+MENU_COALITION constructor. Creates a new MENU_COALITION object and creates the menu for a complete coalition.
 
 <h4> Parameters </h4>
 * [MENU_COALITION](#menu_coalition-class-)
@@ -279,6 +290,7 @@ self
 
 
 ### MENU_COALITION:RemoveSubMenus()
+Removes the sub menus recursively of this MENU_COALITION. Note that the main menu is kept!
 
 <h4> Parameters </h4>
 * [MENU_COALITION](#menu_coalition-class-)
@@ -290,6 +302,7 @@ self
 
 
 ### MENU_COALITION:Remove()
+Removes the main menu and the sub menus recursively of this MENU_COALITION.
 
 <h4> Parameters </h4>
 * [MENU_COALITION](#menu_coalition-class-)
@@ -316,6 +329,7 @@ Using this object reference, you can then remove ALL the menus and submenus unde
 
 
 ### MENU_COALITION_COMMAND:New(Coalition, MenuText, ParentMenu, A, An)
+MENU_COALITION constructor. Creates a new radio command item for a coalition, which can invoke a function with parameters.
 
 <h4> Parameters </h4>
 * [MENU_COALITION_COMMAND](#menu_coalition_command-class-)
@@ -332,6 +346,7 @@ self
 
 
 ### MENU_COALITION_COMMAND:Remove()
+Removes a radio command item for a coalition
 
 <h4> Parameters </h4>
 * [MENU_COALITION_COMMAND](#menu_coalition_command-class-)
@@ -408,6 +423,7 @@ MENU_COALITION constructor. Creates a new radio command item for a coalition, wh
 
 
 ### MENU_CLIENT:New(Client, MenuText, ParentMenu)
+MENU_CLIENT constructor. Creates a new radio menu item for a client.
 
 <h4> Parameters </h4>
 * [MENU_CLIENT](#menu_client-class-)
@@ -422,6 +438,7 @@ self
 
 
 ### MENU_CLIENT:RemoveSubMenus()
+Removes the sub menus recursively of this [MENU_CLIENT](#menu_client-class-).
 
 <h4> Parameters </h4>
 * [MENU_CLIENT](#menu_client-class-)
@@ -433,6 +450,7 @@ self
 
 
 ### MENU_CLIENT:Remove()
+Removes the sub menus recursively of this MENU_CLIENT.
 
 <h4> Parameters </h4>
 * [MENU_CLIENT](#menu_client-class-)
@@ -457,6 +475,7 @@ Using this object reference, you can then remove ALL the menus and submenus unde
 
 
 ### MENU_CLIENT_COMMAND:New(Client, MenuText, ParentMenu, A)
+MENU_CLIENT_COMMAND constructor. Creates a new radio command item for a client, which can invoke a function with parameters.
 
 <h4> Parameters </h4>
 * [MENU_CLIENT_COMMAND](#menu_client_command-class-)
@@ -472,6 +491,7 @@ ParentMenu : The parent menu.
 
 
 ### MENU_CLIENT_COMMAND:Remove()
+Removes a menu structure for a client.
 
 <h4> Parameters </h4>
 * [MENU_CLIENT_COMMAND](#menu_client_command-class-)
@@ -547,6 +567,7 @@ end, {}, 10, 10 )
 
 
 ### MENU_GROUP:New(MenuGroup, MenuText, ParentMenu)
+MENU_GROUP constructor. Creates a new radio menu item for a group.
 
 <h4> Parameters </h4>
 * [MENU_GROUP](#menu_group-class-)
@@ -561,6 +582,7 @@ self
 
 
 ### MENU_GROUP:RemoveSubMenus(self)
+Removes the sub menus recursively of this MENU_GROUP.
 
 <h4> Parameters </h4>
 * [MENU_GROUP](#menu_group-class-)
@@ -573,6 +595,7 @@ self
 
 
 ### MENU_GROUP:Remove(self)
+Removes the main menu and sub menus recursively of this MENU_GROUP.
 
 <h4> Parameters </h4>
 * [MENU_GROUP](#menu_group-class-)
@@ -599,6 +622,7 @@ Using this object reference, you can then remove ALL the menus and submenus unde
 
 
 ### MENU_GROUP_COMMAND:New(MenuGroup, The, The, A, An)
+Creates a new radio command item for a group
 
 <h4> Parameters </h4>
 * [MENU_GROUP_COMMAND](#menu_group_command-class-)
@@ -615,6 +639,7 @@ self
 
 
 ### MENU_GROUP_COMMAND:Remove(self)
+Removes a menu structure for a group.
 
 <h4> Parameters </h4>
 * [MENU_GROUP_COMMAND](#menu_group_command-class-)

@@ -351,6 +351,7 @@ The method [FSM:AddProcess()](#fsm-addprocess-from-event-process-returnevents) a
 
 
 ### FSM:New()
+Creates a new FSM object.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -362,6 +363,7 @@ self
 
 
 ### FSM:SetStartState(State)
+Sets the start state of the FSM.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -371,6 +373,7 @@ self
 <h4> Returns </h4>
 
 ### FSM:GetStartState()
+Returns the start state of the FSM.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -381,6 +384,8 @@ self
 
 
 ### FSM:AddTransition(From, Event, To)
+Add a new transition rule to the FSM.
+A transition rule defines when and if the FSM can transition from a state towards another state upon a triggered event.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -399,6 +404,7 @@ self
 
 
 ### FSM:AddProcess(From, Event, Process, ReturnEvents)
+Set the default [Process](#process-module-) template with key ProcessName providing the ProcessClass and the process object when it is assigned to a [Controllable](#controllable-module-) by the task.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -430,6 +436,7 @@ self
 <h4> Returns </h4>
 
 ### FSM:AddScore(State, ScoreText, Score)
+Adds a score for the FSM to be achieved.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -444,6 +451,7 @@ self
 
 
 ### FSM:AddScoreProcess(From, Event, State, ScoreText, Score)
+Adds a score for the FSM_PROCESS to be achieved.
 
 <h4> Parameters </h4>
 * [FSM](#fsm-class-)
@@ -490,6 +498,7 @@ FSM_CONTROLLABLE class models Finite State Machines for [Controllable](#controll
 
 
 ### FSM_CONTROLLABLE:New(FSMT, Controllable)
+Creates a new FSM_CONTROLLABLE object.
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -504,6 +513,7 @@ self
 
 ### FSM_CONTROLLABLE:OnBeforeStop(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnBeforeStop
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -519,6 +529,7 @@ self
 
 ### FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnAfterStop
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -532,6 +543,7 @@ self
 
 ### FSM_CONTROLLABLE:Stop()
 Synchronous Event Trigger for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] Stop
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -541,6 +553,7 @@ self
 
 ### FSM_CONTROLLABLE:OnLeaveStopped(Controllable, From, Event, To)
 OnLeave Transition Handler for State Stopped.
+@function [parent=#FSM_CONTROLLABLE] OnLeaveStopped
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -556,6 +569,7 @@ self
 
 ### FSM_CONTROLLABLE:OnEnterStopped(Controllable, From, Event, To)
 OnEnter Transition Handler for State Stopped.
+@function [parent=#FSM_CONTROLLABLE] OnEnterStopped
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -569,6 +583,7 @@ self
 
 ### FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnAfterStop
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -581,6 +596,7 @@ self
 <h4> Returns </h4>
 
 ### FSM_CONTROLLABLE:SetControllable(FSMControllable)
+Sets the CONTROLLABLE object that the FSM_CONTROLLABLE governs.
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -593,6 +609,7 @@ self
 
 
 ### FSM_CONTROLLABLE:GetControllable()
+Gets the CONTROLLABLE object that the FSM_CONTROLLABLE governs.
 
 <h4> Parameters </h4>
 * [FSM_CONTROLLABLE](#fsm_controllable-class-)
@@ -624,6 +641,7 @@ FSM_PROCESS class models Finite State Machines for [Task](#task-module-) actions
 
 
 ### FSM_PROCESS:New()
+Creates a new FSM_PROCESS object.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -635,6 +653,7 @@ self
 
 
 ### FSM_PROCESS:Copy()
+Creates a new FSM_PROCESS object based on this FSM_PROCESS.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -646,6 +665,7 @@ self
 
 
 ### FSM_PROCESS:Remove()
+Removes an FSM_PROCESS object.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -657,6 +677,7 @@ self
 
 
 ### FSM_PROCESS:SetTask(Task)
+Sets the task of the process.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -669,6 +690,7 @@ self
 
 
 ### FSM_PROCESS:GetTask()
+Gets the task of the process.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -679,6 +701,7 @@ self
 
 
 ### FSM_PROCESS:GetMission()
+Gets the mission of the process.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -689,6 +712,7 @@ self
 
 
 ### FSM_PROCESS:GetCommandCenter()
+Gets the mission of the process.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -699,6 +723,7 @@ self
 
 
 ### FSM_PROCESS:Message()
+Send a message of the [Task](#task-module-) to the Group of the Unit.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -707,6 +732,7 @@ self
 <h4> Returns </h4>
 
 ### FSM_PROCESS:Assign(Task, ProcessUnit)
+Assign the process to a [Unit](#unit-module-) and activate the process.
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -720,6 +746,7 @@ self
 
 
 ### FSM_PROCESS:onstatechange(ProcessUnit, Event, From, To)
+StateMachine callback function for a FSM_PROCESS
 
 <h4> Parameters </h4>
 * [FSM_PROCESS](#fsm_process-class-)
@@ -753,6 +780,7 @@ FSM_TASK class
 
 
 ### FSM_TASK:New(FSMT, Task, TaskUnit)
+Creates a new FSM_TASK object.
 
 <h4> Parameters </h4>
 * [FSM_TASK](#fsm_task-class-)
@@ -789,6 +817,7 @@ FSM_SET class
 
 
 ### FSM_SET:New(FSMT, FSMSet)
+Creates a new FSM_SET object.
 
 <h4> Parameters </h4>
 * [FSM_SET](#fsm_set-class-)
@@ -802,6 +831,7 @@ self
 
 
 ### FSM_SET:Set(FSMSet)
+Sets the SET_BASE object that the FSM_SET governs.
 
 <h4> Parameters </h4>
 * [FSM_SET](#fsm_set-class-)
@@ -814,6 +844,7 @@ self
 
 
 ### FSM_SET:Get()
+Gets the SET_BASE object that the FSM_SET governs.
 
 <h4> Parameters </h4>
 * [FSM_SET](#fsm_set-class-)

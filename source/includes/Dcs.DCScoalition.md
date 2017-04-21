@@ -11,6 +11,7 @@ The coalition class does not inherit
 
 
 ### getCountryCoalition()
+@function [parent=#coalition] getCountryCoalition
 
 <h4> Parameters </h4>
 * <u>Number</u> countryId

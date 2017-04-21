@@ -49,6 +49,7 @@ BASE
 -- Define a new DATABASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.
 DBObject = DATABASE:New()
 ```
+Creates a new DATABASE object, building a set of units belonging to a coalitions, categories, countries, types or with defined prefix names.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -60,6 +61,7 @@ self
 
 
 ### DATABASE:FindUnit(UnitName)
+Finds a Unit based on the Unit Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -71,6 +73,7 @@ self
 
 
 ### DATABASE:AddUnit()
+Adds a Unit based on the Unit Name in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -79,6 +82,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:DeleteUnit()
+Deletes a Unit from the DATABASE based on the Unit Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -87,6 +91,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:AddStatic()
+Adds a Static based on the Static Name in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -95,6 +100,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:DeleteStatic()
+Deletes a Static from the DATABASE based on the Static Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -103,6 +109,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:FindStatic(StaticName)
+Finds a STATIC based on the StaticName.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -114,6 +121,7 @@ self
 
 
 ### DATABASE:AddAirbase(AirbaseName)
+Adds a Airbase based on the Airbase Name in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -123,6 +131,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:DeleteAirbase(AirbaseName)
+Deletes a Airbase from the DATABASE based on the Airbase Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -132,6 +141,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:FindAirbase(AirbaseName)
+Finds an AIRBASE based on the AirbaseName.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -143,6 +153,7 @@ self
 
 
 ### DATABASE:AddCargo(CargoName)
+Adds a Cargo based on the Cargo Name in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -152,6 +163,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:DeleteCargo(CargoName)
+Deletes a Cargo from the DATABASE based on the Cargo Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -161,6 +173,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:FindCargo(CargoName)
+Finds an CARGO based on the CargoName.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -172,6 +185,7 @@ self
 
 
 ### DATABASE:FindClient(ClientName)
+Finds a CLIENT based on the ClientName.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -183,6 +197,7 @@ self
 
 
 ### DATABASE:AddClient()
+Adds a CLIENT based on the ClientName in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -191,6 +206,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:FindGroup(GroupName)
+Finds a GROUP based on the GroupName.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -202,6 +218,7 @@ self
 
 
 ### DATABASE:AddGroup()
+Adds a GROUP based on the GroupName in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -210,6 +227,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:AddPlayer()
+Adds a player based on the Player Name in the DATABASE.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -218,6 +236,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:DeletePlayer()
+Deletes a player from the DATABASE based on the Player Name.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -226,6 +245,10 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:Spawn(SpawnTemplate)
+Instantiate new Groups within the DCSRTE.
+This method expects EXACTLY the same structure as a structure within the ME, and needs 2 additional fields defined:
+SpawnCountryID, SpawnCategoryID
+This method is used by the SPAWN class.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -256,6 +279,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:ForEach(IteratorFunction)
+Iterate the DATABASE and call an iterator function for the given set, providing the Object for each element within the set and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -268,6 +292,7 @@ self
 
 
 ### DATABASE:ForEachUnit(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each **alive** UNIT, providing the UNIT and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -280,6 +305,7 @@ self
 
 
 ### DATABASE:ForEachGroup(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each **alive** GROUP, providing the GROUP and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -292,6 +318,7 @@ self
 
 
 ### DATABASE:ForEachPlayer(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each **ALIVE** player, providing the player name and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -304,6 +331,7 @@ self
 
 
 ### DATABASE:ForEachPlayerJoined(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each player who has joined the mission, providing the Unit of the player and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -316,6 +344,7 @@ self
 
 
 ### DATABASE:ForEachClient(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each CLIENT, providing the CLIENT to the function and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -328,6 +357,7 @@ self
 
 
 ### DATABASE:ForEachCargo(IteratorFunction)
+Iterate the DATABASE and call an iterator function for each CARGO, providing the CARGO object to the function and optional parameters.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -340,6 +370,7 @@ self
 
 
 ### DATABASE:OnEventNewCargo(EventData)
+Handles the OnEventNewCargo event.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)
@@ -349,6 +380,7 @@ self
 <h4> Returns </h4>
 
 ### DATABASE:OnEventDeleteCargo(EventData)
+Handles the OnEventDeleteCargo.
 
 <h4> Parameters </h4>
 * [DATABASE](#database-class-)

@@ -140,6 +140,7 @@ BASE
 
 
 ### CONTROLLABLE:New(ControllableName)
+Create a new CONTROLLABLE from a DCSControllable
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -152,6 +153,7 @@ self
 
 
 ### CONTROLLABLE:GetUnits()
+Returns the UNITs wrappers of the DCS Units of the Controllable (default is a GROUP).
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -162,6 +164,7 @@ self
 
 
 ### CONTROLLABLE:GetLife()
+Returns the health. Dead controllables have health <= 1.0.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -173,6 +176,7 @@ self
 
 
 ### CONTROLLABLE:ClearTasks()
+Clear all tasks from the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -184,6 +188,7 @@ self
 
 
 ### CONTROLLABLE:PopCurrentTask()
+Popping current Task from the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -194,6 +199,7 @@ self
 
 
 ### CONTROLLABLE:PushTask()
+Pushing Task on the queue from the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -204,6 +210,7 @@ self
 
 
 ### CONTROLLABLE:SetTask()
+Clearing the Task Queue and Setting the Task on the queue from the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -214,6 +221,7 @@ self
 
 
 ### CONTROLLABLE:TaskCondition(time, userFlag, userFlagValue, condition, duration, lastWayPoint)
+Return a condition section for a controlled task.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -228,6 +236,7 @@ self
 <h4> Returns </h4>
 
 ### CONTROLLABLE:TaskControlled(DCSTask, DCSStopCondition)
+Return a Controlled Task taking a Task and a TaskCondition.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -240,6 +249,7 @@ self
 
 
 ### CONTROLLABLE:TaskCombo(DCSTasks)
+Return a Combo Task taking an array of Tasks.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -251,6 +261,7 @@ self
 
 
 ### CONTROLLABLE:TaskWrappedAction(DCSCommand)
+Return a WrappedAction Task taking a Command.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -262,6 +273,7 @@ self
 
 
 ### CONTROLLABLE:SetCommand(DCSCommand)
+Executes a command action
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -287,6 +299,7 @@ HeliGroup:SetCommand( CommandRTB )
 end, { HeliGroup }, 90
 )
 ```
+Perform a switch waypoint command
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -299,6 +312,15 @@ self
 
 
 ### CONTROLLABLE:CommandStopRoute(StopRoute)
+Create a stop route command, which returns a string containing the command.
+Use the result in the method [CONTROLLABLE:SetCommand()](#controllable-setcommand-dcscommand).
+A value of true will make the ground group stop, a value of false will make it continue.
+Note that this can only work on GROUP level, although individual UNITs can be commanded, the whole GROUP will react.
+
+Example missions:
+
+* GRP-310
+
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -310,6 +332,7 @@ self
 
 
 ### CONTROLLABLE:TaskAttackGroup(AttackGroup, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)
+(AIR) Attack a Controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -327,6 +350,7 @@ self
 
 
 ### CONTROLLABLE:TaskAttackUnit(AttackUnit, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, WeaponType)
+(AIR) Attack the Unit.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -345,6 +369,7 @@ self
 
 
 ### CONTROLLABLE:TaskBombing(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)
+(AIR) Delivering weapon at the point on the ground.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -361,6 +386,7 @@ self
 
 
 ### CONTROLLABLE:TaskOrbitCircleAtVec2(Point, Altitude, Speed)
+(AIR) Orbit at a specified position at a specified alititude during a specified duration with a specified speed.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -375,6 +401,7 @@ self
 
 
 ### CONTROLLABLE:TaskOrbitCircle(Altitude, Speed)
+(AIR) Orbit at the current position of the first unit of the controllable at a specified alititude.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -388,6 +415,7 @@ self
 
 
 ### CONTROLLABLE:TaskHoldPosition(Duration)
+(AIR) Hold position at the current position of the first unit of the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -400,6 +428,7 @@ self
 
 
 ### CONTROLLABLE:TaskAttackMapObject(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)
+(AIR) Attacking the map object (building, structure, e.t.c).
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -416,6 +445,7 @@ self
 
 
 ### CONTROLLABLE:TaskBombingRunway(Airbase, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)
+(AIR) Delivering weapon on the runway.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -432,6 +462,7 @@ self
 
 
 ### CONTROLLABLE:TaskRefueling()
+(AIR) Refueling from the nearest tanker. No parameters.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -442,6 +473,7 @@ self
 
 
 ### CONTROLLABLE:TaskLandAtVec2(Point, Duration)
+(AIR HELICOPTER) Landing at the ground. For helicopters only.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -455,6 +487,7 @@ self
 
 
 ### CONTROLLABLE:TaskLandAtZone(Zone, Duration)
+(AIR) Land the controllable at a @{Zone#ZONE_RADIUS).
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -468,6 +501,9 @@ self
 
 
 ### CONTROLLABLE:TaskFollow(FollowControllable, Vec3, LastWaypointIndex)
+(AIR) Following another airborne controllable.
+The unit / controllable will follow lead unit of another controllable, wingmens of both controllables will continue following their leaders.
+If another controllable is on land the unit / controllable will orbit around.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -481,6 +517,9 @@ self
 
 
 ### CONTROLLABLE:TaskEscort(EscortControllable, Vec3, LastWaypointIndex, EngagementDistanceMax, TargetTypes)
+(AIR) Escort another airborne controllable.
+The unit / controllable will follow lead unit of another controllable, wingmens of both controllables will continue following their leaders.
+The unit / controllable will also protect that controllable from threats of specified types.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -496,6 +535,7 @@ self
 
 
 ### CONTROLLABLE:TaskFireAtPoint(Vec2, Radius, AmmoCount)
+(GROUND) Fire at a VEC2 point until ammunition is finished.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -509,6 +549,7 @@ self
 
 
 ### CONTROLLABLE:TaskHold()
+(GROUND) Hold ground controllable from moving.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -519,6 +560,9 @@ self
 
 
 ### CONTROLLABLE:TaskFAC_AttackGroup(AttackGroup, WeaponType, Designation, Datalink)
+(AIR + GROUND) The task makes the controllable/unit a FAC and orders the FAC to control the target (enemy ground controllable) destruction.
+The killer is player-controlled allied CAS-aircraft that is in contact with the FAC.
+If the task is assigned to the controllable lead unit will be a FAC.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -533,6 +577,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskEngageTargets(Distance, TargetTypes, Priority)
+(AIR) Engaging targets of defined types.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -546,6 +591,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskEngageTargets(Vec2, Radius, TargetTypes, Priority)
+(AIR) Engaging a targets of defined types at circle-shaped zone.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -560,6 +606,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskEngageGroup(AttackGroup, Priority, WeaponType, WeaponExpend, AttackQty, Direction, Altitude, AttackQtyLimit)
+(AIR) Engaging a controllable. The task does not assign the target controllable to the unit/controllable to attack now; it just allows the unit/controllable to engage the target controllable as well as other assigned targets.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -578,6 +625,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskEngageUnit(EngageUnit, Priority, GroupAttack, WeaponExpend, AttackQty, Direction, Altitude, Visible, ControllableAttack)
+(AIR) Search and attack the Unit.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -597,6 +645,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskAWACS()
+(AIR) Aircraft will act as an AWACS for friendly units (will provide them with information about contacts). No parameters.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -607,6 +656,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskTanker()
+(AIR) Aircraft will act as a tanker for friendly units. No parameters.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -617,6 +667,7 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskEWR()
+(GROUND) Ground unit (EW-radar) will act as an EWR for friendly units (will provide them with information about contacts). No parameters.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -627,6 +678,9 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskFAC_EngageGroup(AttackGroup, Priority, WeaponType, Designation, Datalink)
+(AIR + GROUND) The task makes the controllable/unit a FAC and lets the FAC to choose the target (enemy ground controllable) as well as other assigned targets.
+The killer is player-controlled allied CAS-aircraft that is in contact with the FAC.
+If the task is assigned to the controllable lead unit will be a FAC.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -642,6 +696,9 @@ self
 
 
 ### CONTROLLABLE:EnRouteTaskFAC(Radius, Priority)
+(AIR + GROUND) The task makes the controllable/unit a FAC and lets the FAC to choose a targets (enemy ground controllable) around as well as other assigned targets.
+The killer is player-controlled allied CAS-aircraft that is in contact with the FAC.
+If the task is assigned to the controllable lead unit will be a FAC.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -654,6 +711,7 @@ self
 
 
 ### CONTROLLABLE:TaskEmbarking(Point, Duration, EmbarkingControllable)
+(AIR) Move the controllable to a Vec2 Point, wait for a defined duration and embark a controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -668,6 +726,7 @@ EmbarkingControllable : The controllable to be embarked.
 
 
 ### CONTROLLABLE:TaskEmbarkToTransport(Point, Radius)
+Move to a defined Vec2 Point, and embark to a controllable when arrived within a defined Radius.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -680,6 +739,7 @@ self
 
 
 ### CONTROLLABLE:TaskMission(TaskMission)
+(AIR + GROUND) Return a mission task from a mission template.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -691,6 +751,7 @@ self
 
 
 ### CONTROLLABLE:TaskRoute(Points)
+Return a Misson task to follow a given route defined by Points.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -702,6 +763,7 @@ self
 
 
 ### CONTROLLABLE:RouteToVec2(Point, Speed)
+(AIR + GROUND) Make the Controllable move to fly to a given point.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -715,6 +777,7 @@ self
 
 
 ### CONTROLLABLE:RouteToVec3(Point, Speed)
+(AIR + GROUND) Make the Controllable move to a given point.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -728,6 +791,7 @@ self
 
 
 ### CONTROLLABLE:Route(GoPoints)
+Make the controllable to follow a given route.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -740,6 +804,10 @@ self
 
 
 ### CONTROLLABLE:TaskRouteToZone(Zone, Randomize, Speed, Formation)
+(AIR + GROUND) Route the controllable to a given zone.
+The controllable final destination point can be randomized.
+A speed can be given in km/h.
+A given formation can be given.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -752,6 +820,7 @@ self
 <h4> Returns </h4>
 
 ### CONTROLLABLE:CommandDoScript(DoScript)
+Do Script command
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -763,6 +832,7 @@ self
 
 
 ### CONTROLLABLE:GetTaskMission()
+Return the mission template of the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -773,6 +843,7 @@ self
 
 
 ### CONTROLLABLE:GetTaskRoute()
+Return the mission route of the controllable.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -783,6 +854,7 @@ self
 
 
 ### CONTROLLABLE:CopyRoute(Begin, End, Randomize, Radius)
+Return the route of a controllable by using the [DATABASE](#database-class-) class.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -795,6 +867,9 @@ self
 <h4> Returns </h4>
 
 ### CONTROLLABLE:GetDetectedTargets(DetectVisual, DetectOptical, DetectRadar, DetectIRST, DetectRWR, DetectDLINK)
+Return the detected targets of the controllable.
+The optional parametes specify the detection methods that can be applied.
+If no detection method is given, the detection will use all the available methods by default.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-) self
@@ -810,6 +885,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEHoldFirePossible()
+Can the CONTROLLABLE hold their weapons?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -820,6 +896,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEHoldFire()
+Holding weapons.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-) self
@@ -829,6 +906,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEReturnFirePossible()
+Can the CONTROLLABLE attack returning on enemy fire?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -839,6 +917,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEReturnFire()
+Return fire.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -850,6 +929,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEOpenFirePossible()
+Can the CONTROLLABLE attack designated targets?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -860,6 +940,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEOpenFire()
+Openfire.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -871,6 +952,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEWeaponFreePossible()
+Can the CONTROLLABLE attack targets of opportunity?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -881,6 +963,7 @@ self
 
 
 ### CONTROLLABLE:OptionROEWeaponFree()
+Weapon free.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -892,6 +975,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTNoReactionPossible()
+Can the CONTROLLABLE ignore enemy fire?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -902,6 +986,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTNoReaction()
+No evasion on enemy threats.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -913,6 +998,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTPassiveDefensePossible()
+Can the CONTROLLABLE evade using passive defenses?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -923,6 +1009,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTPassiveDefense()
+Evasion passive defense.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -934,6 +1021,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTEvadeFirePossible()
+Can the CONTROLLABLE evade on enemy fire?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -944,6 +1032,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTEvadeFire()
+Evade on fire.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -955,6 +1044,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTVerticalPossible()
+Can the CONTROLLABLE evade on fire using vertical manoeuvres?
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -965,6 +1055,7 @@ self
 
 
 ### CONTROLLABLE:OptionROTVertical()
+Evade on fire using vertical manoeuvres.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -976,6 +1067,10 @@ self
 
 
 ### CONTROLLABLE:WayPointInitialize(WayPoints)
+Retrieve the controllable mission and allow to place function hooks within the mission waypoint plan.
+Use the method @{Controllable#CONTROLLABLE:WayPointFunction} to define the hook functions for specific waypoints.
+Use the method @{Controllable@CONTROLLABLE:WayPointExecute) to start the execution of the new mission plan.
+Note that when WayPointInitialize is called, the Mission of the controllable is RESTARTED!
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -988,6 +1083,7 @@ self
 
 
 ### CONTROLLABLE:GetWayPoints()
+Get the current WayPoints set with the WayPoint functions( Note that the WayPoints can be nil, although there ARE waypoints).
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -998,6 +1094,7 @@ self
 
 
 ### CONTROLLABLE:WayPointFunction(WayPoint, WayPointIndex, WayPointFunction)
+Registers a waypoint function that will be executed when the controllable moves over the WayPoint.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
@@ -1012,6 +1109,9 @@ self
 
 
 ### CONTROLLABLE:WayPointExecute(WayPoint, WaitTime)
+Executes the WayPoint plan.
+The function gets a WayPoint parameter, that you can use to restart the mission at a specific WayPoint.
+Note that when the WayPoint parameter is used, the new start mission waypoint of the controllable will be 1!
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)

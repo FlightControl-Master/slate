@@ -199,6 +199,7 @@ PatrolZone = ZONE:New( 'PatrolZone' )
 PatrolSpawn = SPAWN:New( 'Patrol Group' )
 PatrolArea = AI_PATROL_ZONE:New( PatrolZone, 3000, 6000, 600, 900 )
 ```
+Creates a new AI_PATROL_ZONE object
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -217,6 +218,7 @@ self
 
 ### AI_PATROL_ZONE:OnLeaveStopped(Controllable, From, Event, To)
 OnLeave Transition Handler for State Stopped.
+@function [parent=#AI_PATROL_ZONE] OnLeaveStopped
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -232,6 +234,7 @@ self
 
 ### AI_PATROL_ZONE:OnEnterStopped(Controllable, From, Event, To)
 OnEnter Transition Handler for State Stopped.
+@function [parent=#AI_PATROL_ZONE] OnEnterStopped
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -245,6 +248,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeStop(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Stop.
+@function [parent=#AI_PATROL_ZONE] OnBeforeStop
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -260,6 +264,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterStop(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Stop.
+@function [parent=#AI_PATROL_ZONE] OnAfterStop
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -273,6 +278,7 @@ self
 
 ### AI_PATROL_ZONE:Stop()
 Synchronous Event Trigger for Event Stop.
+@function [parent=#AI_PATROL_ZONE] Stop
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -282,6 +288,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeStart(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Start.
+@function [parent=#AI_PATROL_ZONE] OnBeforeStart
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -297,6 +304,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterStart(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Start.
+@function [parent=#AI_PATROL_ZONE] OnAfterStart
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -310,6 +318,7 @@ self
 
 ### AI_PATROL_ZONE:Start()
 Synchronous Event Trigger for Event Start.
+@function [parent=#AI_PATROL_ZONE] Start
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -319,6 +328,7 @@ self
 
 ### AI_PATROL_ZONE:OnLeavePatrolling(Controllable, From, Event, To)
 OnLeave Transition Handler for State Patrolling.
+@function [parent=#AI_PATROL_ZONE] OnLeavePatrolling
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -334,6 +344,7 @@ self
 
 ### AI_PATROL_ZONE:OnEnterPatrolling(Controllable, From, Event, To)
 OnEnter Transition Handler for State Patrolling.
+@function [parent=#AI_PATROL_ZONE] OnEnterPatrolling
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -347,6 +358,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeRoute(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Route.
+@function [parent=#AI_PATROL_ZONE] OnBeforeRoute
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -362,6 +374,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterRoute(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Route.
+@function [parent=#AI_PATROL_ZONE] OnAfterRoute
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -375,6 +388,7 @@ self
 
 ### AI_PATROL_ZONE:Route()
 Synchronous Event Trigger for Event Route.
+@function [parent=#AI_PATROL_ZONE] Route
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -384,6 +398,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeStatus(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Status.
+@function [parent=#AI_PATROL_ZONE] OnBeforeStatus
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -399,6 +414,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterStatus(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Status.
+@function [parent=#AI_PATROL_ZONE] OnAfterStatus
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -412,6 +428,7 @@ self
 
 ### AI_PATROL_ZONE:Status()
 Synchronous Event Trigger for Event Status.
+@function [parent=#AI_PATROL_ZONE] Status
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -421,6 +438,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeDetect(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Detect.
+@function [parent=#AI_PATROL_ZONE] OnBeforeDetect
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -436,6 +454,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterDetect(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Detect.
+@function [parent=#AI_PATROL_ZONE] OnAfterDetect
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -449,6 +468,7 @@ self
 
 ### AI_PATROL_ZONE:Detect()
 Synchronous Event Trigger for Event Detect.
+@function [parent=#AI_PATROL_ZONE] Detect
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -458,6 +478,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeDetected(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Detected.
+@function [parent=#AI_PATROL_ZONE] OnBeforeDetected
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -473,6 +494,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterDetected(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Detected.
+@function [parent=#AI_PATROL_ZONE] OnAfterDetected
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -486,6 +508,7 @@ self
 
 ### AI_PATROL_ZONE:Detected()
 Synchronous Event Trigger for Event Detected.
+@function [parent=#AI_PATROL_ZONE] Detected
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -495,6 +518,7 @@ self
 
 ### AI_PATROL_ZONE:OnBeforeRTB(Controllable, From, Event, To)
 OnBefore Transition Handler for Event RTB.
+@function [parent=#AI_PATROL_ZONE] OnBeforeRTB
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -510,6 +534,7 @@ self
 
 ### AI_PATROL_ZONE:OnAfterRTB(Controllable, From, Event, To)
 OnAfter Transition Handler for Event RTB.
+@function [parent=#AI_PATROL_ZONE] OnAfterRTB
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -523,6 +548,7 @@ self
 
 ### AI_PATROL_ZONE:RTB()
 Synchronous Event Trigger for Event RTB.
+@function [parent=#AI_PATROL_ZONE] RTB
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -532,6 +558,7 @@ self
 
 ### AI_PATROL_ZONE:OnLeaveReturning(Controllable, From, Event, To)
 OnLeave Transition Handler for State Returning.
+@function [parent=#AI_PATROL_ZONE] OnLeaveReturning
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -547,6 +574,7 @@ self
 
 ### AI_PATROL_ZONE:OnEnterReturning(Controllable, From, Event, To)
 OnEnter Transition Handler for State Returning.
+@function [parent=#AI_PATROL_ZONE] OnEnterReturning
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -559,6 +587,7 @@ self
 <h4> Returns </h4>
 
 ### AI_PATROL_ZONE:SetSpeed(self, self)
+Sets (modifies) the minimum and maximum speed of the patrol.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -572,6 +601,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetAltitude(PatrolFloorAltitude, PatrolCeilingAltitude)
+Sets the floor and ceiling altitude of the patrol.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -585,6 +615,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionOn()
+Set the detection on. The AI will detect for targets.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -596,6 +627,8 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionOff()
+Set the detection off. The AI will NOT detect for targets.
+However, the list of already detected targets will be kept and can be enquired!
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -607,6 +640,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetStatusOff()
+Set the status checking off.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -618,6 +652,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionActivated()
+Activate the detection. The AI will detect for targets if the Detection is switched On.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -629,6 +664,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionDeactivated()
+Deactivate the detection. The AI will NOT detect for targets.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -640,6 +676,11 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionInterval(Seconds)
+Set the interval in seconds between each detection executed by the AI.
+The list of already detected targets will be kept and updated.
+Newly detected targets will be added, but already detected targets that were
+not detected in this cycle, will NOT be removed!
+The default interval is 30 seconds.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -652,6 +693,7 @@ self
 
 
 ### AI_PATROL_ZONE:SetDetectionZone(DetectionZone)
+Set the detection zone where the AI is detecting targets.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -664,6 +706,9 @@ self
 
 
 ### AI_PATROL_ZONE:GetDetectedUnits()
+Gets a list of [UNIT](#unit-class-)s that were detected by the AI.
+No filtering is applied, so, ANY detected UNIT can be in this list.
+It is up to the mission designer to use the [Unit](#unit-module-) class and methods to filter the targets.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -674,6 +719,7 @@ self
 
 
 ### AI_PATROL_ZONE:ClearDetectedUnits()
+Clears the list of [UNIT](#unit-class-)s that were detected by the AI.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -682,6 +728,10 @@ self
 <h4> Returns </h4>
 
 ### AI_PATROL_ZONE:ManageFuel(PatrolFuelTresholdPercentage, PatrolOutOfFuelOrbitTime)
+When the AI is out of fuel, it is required that a new AI is started, before the old AI can return to the home base.
+Therefore, with a parameter and a calculation of the distance to the home base, the fuel treshold is calculated.
+When the fuel treshold is reached, the AI will continue for a given time its patrol task in orbit, while a new AIControllable is targetted to the AI_PATROL_ZONE.
+Once the time is finished, the old AI will return to the base.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -695,6 +745,12 @@ self
 
 
 ### AI_PATROL_ZONE:ManageDamage(PatrolDamageTreshold)
+When the AI is damaged beyond a certain treshold, it is required that the AI returns to the home base.
+However, damage cannot be foreseen early on.
+Therefore, when the damage treshold is reached,
+the AI will return immediately to the home base (RTB).
+Note that for groups, the average damage of the complete group will be calculated.
+So, in a group of 4 airplanes, 2 lost and 2 with damage 0.2, the damage treshold will be 0.25.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -707,6 +763,7 @@ self
 
 
 ### AI_PATROL_ZONE:onafterStart(Controllable, From, Event, To)
+Defines a new patrol route using the [Process_PatrolZone](#process_patrolzone-module-) parameters and settings.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)
@@ -740,6 +797,7 @@ self
 <h4> Returns </h4>
 
 ### AI_PATROL_ZONE:onafterRoute(Controllable, From, Event, To)
+Defines a new patrol route using the [Process_PatrolZone](#process_patrolzone-module-) parameters and settings.
 
 <h4> Parameters </h4>
 * [AI_PATROL_ZONE](#ai_patrol_zone-class-)

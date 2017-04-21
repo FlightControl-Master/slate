@@ -14,6 +14,7 @@ ERROR !
 
 ### getHeight()
 Returns altitude MSL of the point.
+@function [parent=#land] getHeight
 
 <h4> Parameters </h4>
 * #Vec2 point : point on the ground.
@@ -24,6 +25,7 @@ Returns altitude MSL of the point.
 
 ### getSurfaceType()
 returns surface type at the given point.
+@function [parent=#land] getSurfaceType
 
 <h4> Parameters </h4>
 * #Vec2 point : Point on the land.

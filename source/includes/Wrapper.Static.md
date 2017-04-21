@@ -41,6 +41,8 @@ BASE
 
 
 ### STATIC:FindByName(StaticName, RaiseError)
+Finds a STATIC from the _DATABASE using the relevant Static Name.
+As an optional parameter, a briefing text can be given also.
 
 <h4> Parameters </h4>
 * [STATIC](#static-class-)

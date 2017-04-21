@@ -154,6 +154,7 @@ Use the method [AI_CAP_ZONE:SetEngageZone()](#ai_cap_zone-setengagezone-engagezo
 
 
 ### AI_CAP_ZONE:New(PatrolZone, PatrolFloorAltitude, PatrolCeilingAltitude, self, self, PatrolAltType)
+Creates a new AI_CAP_ZONE object
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -172,6 +173,7 @@ self
 
 ### AI_CAP_ZONE:OnBeforeEngage(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Engage.
+@function [parent=#AI_CAP_ZONE] OnBeforeEngage
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -187,6 +189,7 @@ self
 
 ### AI_CAP_ZONE:OnAfterEngage(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Engage.
+@function [parent=#AI_CAP_ZONE] OnAfterEngage
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -200,6 +203,7 @@ self
 
 ### AI_CAP_ZONE:Engage()
 Synchronous Event Trigger for Event Engage.
+@function [parent=#AI_CAP_ZONE] Engage
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -209,6 +213,7 @@ self
 
 ### AI_CAP_ZONE:OnLeaveEngaging(Controllable, From, Event, To)
 OnLeave Transition Handler for State Engaging.
+@function [parent=#AI_CAP_ZONE] OnLeaveEngaging
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -224,6 +229,7 @@ self
 
 ### AI_CAP_ZONE:OnEnterEngaging(Controllable, From, Event, To)
 OnEnter Transition Handler for State Engaging.
+@function [parent=#AI_CAP_ZONE] OnEnterEngaging
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -237,6 +243,7 @@ self
 
 ### AI_CAP_ZONE:OnBeforeFired(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Fired.
+@function [parent=#AI_CAP_ZONE] OnBeforeFired
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -252,6 +259,7 @@ self
 
 ### AI_CAP_ZONE:OnAfterFired(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Fired.
+@function [parent=#AI_CAP_ZONE] OnAfterFired
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -265,6 +273,7 @@ self
 
 ### AI_CAP_ZONE:Fired()
 Synchronous Event Trigger for Event Fired.
+@function [parent=#AI_CAP_ZONE] Fired
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -274,6 +283,7 @@ self
 
 ### AI_CAP_ZONE:OnBeforeDestroy(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Destroy.
+@function [parent=#AI_CAP_ZONE] OnBeforeDestroy
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -289,6 +299,7 @@ self
 
 ### AI_CAP_ZONE:OnAfterDestroy(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Destroy.
+@function [parent=#AI_CAP_ZONE] OnAfterDestroy
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -302,6 +313,7 @@ self
 
 ### AI_CAP_ZONE:Destroy()
 Synchronous Event Trigger for Event Destroy.
+@function [parent=#AI_CAP_ZONE] Destroy
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -311,6 +323,7 @@ self
 
 ### AI_CAP_ZONE:OnBeforeAbort(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Abort.
+@function [parent=#AI_CAP_ZONE] OnBeforeAbort
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -326,6 +339,7 @@ self
 
 ### AI_CAP_ZONE:OnAfterAbort(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Abort.
+@function [parent=#AI_CAP_ZONE] OnAfterAbort
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -339,6 +353,7 @@ self
 
 ### AI_CAP_ZONE:Abort()
 Synchronous Event Trigger for Event Abort.
+@function [parent=#AI_CAP_ZONE] Abort
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -348,6 +363,7 @@ self
 
 ### AI_CAP_ZONE:OnBeforeAccomplish(Controllable, From, Event, To)
 OnBefore Transition Handler for Event Accomplish.
+@function [parent=#AI_CAP_ZONE] OnBeforeAccomplish
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -363,6 +379,7 @@ self
 
 ### AI_CAP_ZONE:OnAfterAccomplish(Controllable, From, Event, To)
 OnAfter Transition Handler for Event Accomplish.
+@function [parent=#AI_CAP_ZONE] OnAfterAccomplish
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -376,6 +393,7 @@ self
 
 ### AI_CAP_ZONE:Accomplish()
 Synchronous Event Trigger for Event Accomplish.
+@function [parent=#AI_CAP_ZONE] Accomplish
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -384,6 +402,7 @@ self
 <h4> Returns </h4>
 
 ### AI_CAP_ZONE:SetEngageZone(EngageZone)
+Set the Engage Zone which defines where the AI will engage bogies.
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -396,6 +415,7 @@ self
 
 
 ### AI_CAP_ZONE:SetEngageRange(EngageRange)
+Set the Engage Range when the AI will engage with airborne enemies.
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)
@@ -408,6 +428,7 @@ self
 
 
 ### AI_CAP_ZONE:onafterStart(Controllable, From, Event, To)
+onafter State Transition for Event Start.
 
 <h4> Parameters </h4>
 * [AI_CAP_ZONE](#ai_cap_zone-class-)

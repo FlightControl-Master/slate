@@ -16,6 +16,7 @@ BASE
 
 
 ### PROCESS_PICKUP:New(Task, ProcessUnit, TargetSetUnit)
+Creates a new DESTROY process.
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -30,6 +31,7 @@ self
 
 
 ### PROCESS_PICKUP:OnStart(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -42,6 +44,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnNavigating(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -54,6 +57,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnHitTarget(Fsm, Event, From, To, Event)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -67,6 +71,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnMoreTargets(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -79,6 +84,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnKilled(Fsm, Event, From, To, DCSEvent)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -92,6 +98,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnRestart(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)
@@ -104,6 +111,7 @@ self
 <h4> Returns </h4>
 
 ### PROCESS_PICKUP:OnDestroyed(Fsm, Event, From, To)
+StateMachine callback function for a PROCESS
 
 <h4> Parameters </h4>
 * [PROCESS_PICKUP](#process_pickup-class-)

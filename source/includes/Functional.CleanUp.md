@@ -17,6 +17,7 @@ or
 CleanUpTbilisi = CLEANUP:New( 'CLEAN Tbilisi', 150 )
 CleanUpKutaisi = CLEANUP:New( 'CLEAN Kutaisi', 600 )
 ```
+Creates the main object which is handling the cleaning of the debris within the given Zone Names.
 
 <h4> Parameters </h4>
 * [CLEANUP](#cleanup-class-)

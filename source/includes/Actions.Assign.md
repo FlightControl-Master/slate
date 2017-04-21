@@ -96,6 +96,7 @@ BASE
 
 
 ### ACT_ASSIGN:New()
+Creates a new task assignment state machine. The process will accept the task by default, no player intervention accepted.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN](#act_assign-class-)
@@ -125,6 +126,7 @@ BASE
 
 
 ### ACT_ASSIGN_ACCEPT:New(TaskBriefing)
+Creates a new task assignment state machine. The process will accept the task by default, no player intervention accepted.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
@@ -134,6 +136,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_ACCEPT:onafterStart(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
@@ -146,6 +149,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_ACCEPT:onenterAssigned(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_ACCEPT](#act_assign_accept-class-)
@@ -176,6 +180,7 @@ BASE
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:New(TaskName, TaskBriefing)
+Init.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -189,6 +194,7 @@ self
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:Init(TaskName, TaskBriefing)
+Creates a new task assignment state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -202,6 +208,7 @@ self
 
 
 ### ACT_ASSIGN_MENU_ACCEPT:onafterStart(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -214,6 +221,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_MENU_ACCEPT:MenuAssign()
+Menu function.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -222,6 +230,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_MENU_ACCEPT:MenuReject()
+Menu function.
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -230,6 +239,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_MENU_ACCEPT:onafterAssign(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)
@@ -242,6 +252,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ASSIGN_MENU_ACCEPT:onafterReject(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ASSIGN_MENU_ACCEPT](#act_assign_menu_accept-class-)

@@ -91,6 +91,7 @@ BASE
 
 
 ### ACT_ROUTE:New()
+Creates a new routing state machine. The process will route a CLIENT to a ZONE until the CLIENT is within that ZONE.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE](#act_route-class-)
@@ -102,6 +103,7 @@ self
 
 
 ### ACT_ROUTE:onafterStart(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ROUTE](#act_route-class-)
@@ -114,6 +116,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE:onfuncHasArrived(ProcessUnit)
+Check if the controllable has arrived.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE](#act_route-class-)
@@ -125,6 +128,7 @@ self
 
 
 ### ACT_ROUTE:onbeforeRoute(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ROUTE](#act_route-class-)
@@ -153,6 +157,8 @@ BASE
 
 
 ### ACT_ROUTE_POINT:New(The, Range, Zone)
+Creates a new routing state machine.
+The task will route a controllable to a PointVec2 until the controllable is within the Range.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -164,6 +170,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE_POINT:SetPointVec2(PointVec2)
+Set PointVec2
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -173,6 +180,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE_POINT:GetPointVec2()
+Get PointVec2
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -183,6 +191,7 @@ self
 
 
 ### ACT_ROUTE_POINT:SetRange(Range)
+Set Range around PointVec2
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -192,6 +201,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE_POINT:GetRange()
+Get Range around PointVec2
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -202,6 +212,7 @@ self
 
 
 ### ACT_ROUTE_POINT:onfuncHasArrived(ProcessUnit)
+Method override to check if the controllable has arrived.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -213,6 +224,7 @@ self
 
 
 ### ACT_ROUTE_POINT:onenterReporting(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_POINT](#act_route_point-class-)
@@ -243,6 +255,7 @@ BASE
 
 
 ### ACT_ROUTE_ZONE:New(Zone)
+Creates a new routing state machine. The task will route a controllable to a ZONE until the controllable is within that ZONE.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_ZONE](#act_route_zone-class-)
@@ -252,6 +265,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE_ZONE:SetZone(Zone)
+Set Zone
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_ZONE](#act_route_zone-class-)
@@ -261,6 +275,7 @@ self
 <h4> Returns </h4>
 
 ### ACT_ROUTE_ZONE:GetZone()
+Get Zone
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_ZONE](#act_route_zone-class-)
@@ -271,6 +286,7 @@ self
 
 
 ### ACT_ROUTE_ZONE:onfuncHasArrived(ProcessUnit)
+Method override to check if the controllable has arrived.
 
 <h4> Parameters </h4>
 * [ACT_ROUTE](#act_route-class-)
@@ -282,6 +298,7 @@ self
 
 
 ### ACT_ROUTE_ZONE:onenterReporting(ProcessUnit, Event, From, To)
+StateMachine callback function
 
 <h4> Parameters </h4>
 * [ACT_ROUTE_ZONE](#act_route_zone-class-)

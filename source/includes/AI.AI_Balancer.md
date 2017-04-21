@@ -120,6 +120,7 @@ otherwise the AI_BALANCER will trigger a **Destroy** event, and the AI will be d
 
 
 ### AI_BALANCER:New(SetClient, SpawnAI)
+Creates a new AI_BALANCER object
 
 <h4> Parameters </h4>
 * [AI_BALANCER](#ai_balancer-class-)
@@ -133,6 +134,8 @@ self
 
 
 ### AI_BALANCER:InitSpawnInterval(Earliest, Latest)
+Sets the earliest to the latest interval in seconds how long AI_BALANCER will wait to spawn a new AI.
+Provide 2 identical seconds if the interval should be a fixed amount of seconds.
 
 <h4> Parameters </h4>
 * [AI_BALANCER](#ai_balancer-class-)
@@ -145,6 +148,7 @@ self
 
 
 ### AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)
+Returns the AI to the nearest friendly [AIRBASE](#airbase-class-).
 
 <h4> Parameters </h4>
 * [AI_BALANCER](#ai_balancer-class-)
@@ -155,6 +159,7 @@ self
 <h4> Returns </h4>
 
 ### AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)
+Returns the AI to the home [AIRBASE](#airbase-class-).
 
 <h4> Parameters </h4>
 * [AI_BALANCER](#ai_balancer-class-)

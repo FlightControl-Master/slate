@@ -43,6 +43,7 @@ BASE
 
 
 ### IDENTIFIABLE:New(IdentifiableName)
+Create a new IDENTIFIABLE from a DCSIdentifiable
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -55,6 +56,9 @@ self
 
 
 ### IDENTIFIABLE:IsAlive()
+Returns if the Identifiable is alive.
+If the Identifiable is not alive, nil is returned.
+If the Identifiable is alive, true is returned.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -66,6 +70,8 @@ self
 
 
 ### IDENTIFIABLE:GetName()
+Returns DCS Identifiable object name.
+The function provides access to non-activated objects too.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -77,6 +83,7 @@ self
 
 
 ### IDENTIFIABLE:GetTypeName()
+Returns the type name of the DCS Identifiable.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -88,6 +95,7 @@ self
 
 
 ### IDENTIFIABLE:GetCategory()
+Returns category of the DCS Identifiable.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -98,6 +106,7 @@ self
 
 
 ### IDENTIFIABLE:GetCategoryName()
+Returns the DCS Identifiable category name as defined within the DCS Identifiable Descriptor.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -108,6 +117,7 @@ self
 
 
 ### IDENTIFIABLE:GetCoalition()
+Returns coalition of the Identifiable.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -119,6 +129,7 @@ self
 
 
 ### IDENTIFIABLE:GetCountry()
+Returns country of the Identifiable.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -130,6 +141,7 @@ self
 
 
 ### IDENTIFIABLE:GetDesc()
+Returns Identifiable descriptor. Descriptor type depends on Identifiable category.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)
@@ -141,6 +153,7 @@ self
 
 
 ### IDENTIFIABLE:GetCallsign()
+Gets the CallSign of the IDENTIFIABLE, which is a blank by default.
 
 <h4> Parameters </h4>
 * [IDENTIFIABLE](#identifiable-class-)

@@ -98,6 +98,7 @@ These state transition methods need to provide a return value, which is specifie
 ### CARGO:Board(ToCarrier, NearRadius)
 Boards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo to the Carrier.
 The cargo must be in the **UnLoaded** state.
+@function [parent=#CARGO] Board
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -110,6 +111,7 @@ self
 ### CARGO:UnBoard(ToPointVec2)
 UnBoards the cargo to a Carrier. The event will create a movement (= running or driving) of the cargo from the Carrier.
 The cargo must be in the **Loaded** state.
+@function [parent=#CARGO] UnBoard
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -121,6 +123,7 @@ self
 ### CARGO:Load(ToCarrier)
 Loads the cargo to a Carrier. The event will load the cargo into the Carrier regardless of its position. There will be no movement simulated of the cargo loading.
 The cargo must be in the **UnLoaded** state.
+@function [parent=#CARGO] Load
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -132,6 +135,7 @@ self
 ### CARGO:UnLoad(ToPointVec2)
 UnLoads the cargo to a Carrier. The event will unload the cargo from the Carrier. There will be no movement simulated of the cargo loading.
 The cargo must be in the **Loaded** state.
+@function [parent=#CARGO] UnLoad
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -141,6 +145,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO:OnLeaveUnLoaded(Controllable)
+@function [parent=#CARGO] OnLeaveUnLoaded
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -152,6 +157,7 @@ self
 
 
 ### CARGO:OnEnterUnLoaded(Controllable)
+@function [parent=#CARGO] OnEnterUnLoaded
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -161,6 +167,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO:OnLeaveLoaded(Controllable)
+@function [parent=#CARGO] OnLeaveLoaded
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -172,6 +179,7 @@ self
 
 
 ### CARGO:OnEnterLoaded(Controllable)
+@function [parent=#CARGO] OnEnterLoaded
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -181,6 +189,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO:OnLeaveBoarding(Controllable)
+@function [parent=#CARGO] OnLeaveBoarding
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -192,6 +201,7 @@ self
 
 
 ### CARGO:OnEnterBoarding(Controllable, NearRadius)
+@function [parent=#CARGO] OnEnterBoarding
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -202,6 +212,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO:OnLeaveUnBoarding(Controllable)
+@function [parent=#CARGO] OnLeaveUnBoarding
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -213,6 +224,7 @@ self
 
 
 ### CARGO:OnEnterUnBoarding(Controllable)
+@function [parent=#CARGO] OnEnterUnBoarding
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -222,6 +234,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO:New(Type, Name, Weight, NearRadius)
+CARGO Constructor. This class is an abstract class and should not be instantiated.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -237,6 +250,7 @@ self
 
 
 ### CARGO:GetName()
+Get the name of the Cargo.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -247,6 +261,7 @@ self
 
 
 ### CARGO:GetType()
+Get the type of the Cargo.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -257,6 +272,7 @@ self
 
 
 ### CARGO:IsLoaded()
+Check if cargo is loaded.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -267,6 +283,7 @@ self
 
 
 ### CARGO:IsUnLoaded()
+Check if cargo is unloaded.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -277,6 +294,7 @@ self
 
 
 ### CARGO:Spawn()
+Template method to spawn a new representation of the CARGO in the simulator.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -288,6 +306,7 @@ self
 
 
 ### CARGO:IsInZone(Zone)
+Check if Cargo is the given [Zone](#zone-module-).
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -299,6 +318,7 @@ self
 
 
 ### CARGO:IsNear(PointVec2, NearRadius)
+Check if CargoCarrier is near the Cargo to be Loaded.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -311,6 +331,7 @@ self
 
 
 ### CARGO:GetPointVec2()
+Get the current PointVec2 of the cargo.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -321,6 +342,7 @@ self
 
 
 ### CARGO:SetWeight(Weight)
+Set the weight of the cargo.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -353,6 +375,7 @@ BASE
 
 
 ### CARGO_REPRESENTABLE:New(Type, Name, Weight, ReportRadius, NearRadius)
+CARGO_REPRESENTABLE Constructor.
 
 <h4> Parameters </h4>
 * [CARGO_REPRESENTABLE](#cargo_representable-class-)
@@ -369,6 +392,7 @@ self
 
 
 ### CARGO_REPRESENTABLE:RouteTo(ToPointVec2, Speed)
+Route a cargo unit to a PointVec2.
 
 <h4> Parameters </h4>
 * [CARGO_REPRESENTABLE](#cargo_representable-class-)
@@ -393,6 +417,7 @@ BASE
 </pre>
 
 ### CARGO_REPORTABLE:New(CargoObject, Type, Name, Weight, ReportRadius, NearRadius)
+CARGO_REPORTABLE Constructor.
 
 <h4> Parameters </h4>
 * [CARGO_REPORTABLE](#cargo_reportable-class-)
@@ -410,6 +435,7 @@ self
 
 
 ### CARGO_REPORTABLE:IsInRadius(PointVec2)
+Check if CargoCarrier is in the ReportRadius for the Cargo to be Loaded.
 
 <h4> Parameters </h4>
 * [CARGO_REPORTABLE](#cargo_reportable-class-)
@@ -421,6 +447,7 @@ self
 
 
 ### CARGO_REPORTABLE:MessageToGroup(Message, TaskGroup, Name)
+Send a CC message to a GROUP.
 
 <h4> Parameters </h4>
 * [COMMANDCENTER](#commandcenter-class-)
@@ -432,6 +459,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_REPORTABLE:GetBoardingRange()
+Get the range till cargo will board.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -455,6 +483,7 @@ BASE
 
 
 ### CARGO_UNIT:New(CargoUnit, Type, Name, Weight, ReportRadius, NearRadius)
+CARGO_UNIT Constructor.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -472,6 +501,7 @@ self
 
 
 ### CARGO_UNIT:Destroy()
+CARGO_UNIT Destructor.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -483,6 +513,7 @@ self
 
 
 ### CARGO_UNIT:onenterUnBoarding(Event, From, To, ToPointVec2)
+Enter UnBoarding State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -495,6 +526,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onleaveUnBoarding(Event, From, To, ToPointVec2)
+Leave UnBoarding State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -507,6 +539,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onafterUnBoarding(Event, From, To, ToPointVec2)
+UnBoard Event.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -519,6 +552,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onenterUnLoaded(Event, From, To, self)
+Enter UnLoaded State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -531,6 +565,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onafterBoard(Event, From, To)
+Board Event.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -542,6 +577,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)
+Leave Boarding State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -554,6 +590,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onafterBoarding(Event, From, To, CargoCarrier, NearRadius)
+Boarding Event.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -567,6 +604,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onenterBoarding(Event, From, To, CargoCarrier)
+Enter Boarding State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -579,6 +617,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_UNIT:onenterLoaded(Event, From, To, CargoCarrier)
+Loaded State.
 
 <h4> Parameters </h4>
 * [CARGO_UNIT](#cargo_unit-class-)
@@ -603,6 +642,7 @@ BASE
 </pre>
 
 ### CARGO_PACKAGE:New(CargoCarrier, Type, Name, Weight, ReportRadius, NearRadius)
+CARGO_PACKAGE Constructor.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -620,6 +660,7 @@ self
 
 
 ### CARGO_PACKAGE:onafterOnBoard(Event, From, To, CargoCarrier, Speed, BoardDistance, Angle)
+Board Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -635,6 +676,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_PACKAGE:IsNear(CargoCarrier)
+Check if CargoCarrier is near the Cargo to be Loaded.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -646,6 +688,7 @@ self
 
 
 ### CARGO_PACKAGE:onafterOnBoarded(Event, From, To, CargoCarrier)
+Boarded Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -658,6 +701,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_PACKAGE:onafterUnBoard(Event, From, To, Speed, UnLoadDistance, UnBoardDistance, Radius, Angle)
+UnBoard Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -674,6 +718,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_PACKAGE:onafterUnBoarded(Event, From, To, CargoCarrier)
+UnBoarded Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -686,6 +731,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_PACKAGE:onafterLoad(Event, From, To, CargoCarrier, Speed, LoadDistance, Angle)
+Load Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -701,6 +747,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_PACKAGE:onafterUnLoad(Event, From, To, Distance, Angle)
+UnLoad Event.
 
 <h4> Parameters </h4>
 * [CARGO_PACKAGE](#cargo_package-class-)
@@ -726,6 +773,7 @@ BASE
 </pre>
 
 ### CARGO_GROUP:New(CargoGroup, Type, Name, ReportRadius, NearRadius)
+CARGO_GROUP constructor.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -742,6 +790,7 @@ self
 
 
 ### CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)
+Enter Boarding State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -754,6 +803,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onenterLoaded(CargoCarrier, Event, From, To)
+Enter Loaded State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -766,6 +816,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onleaveBoarding(CargoCarrier, Event, From, To)
+Leave Boarding State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -778,6 +829,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onenterUnBoarding(ToPointVec2, Event, From, To)
+Enter UnBoarding State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -790,6 +842,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onleaveUnBoarding(ToPointVec2, Event, From, To)
+Leave UnBoarding State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -802,6 +855,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onafterUnBoarding(ToPointVec2, Event, From, To)
+UnBoard Event.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)
@@ -814,6 +868,7 @@ self
 <h4> Returns </h4>
 
 ### CARGO_GROUP:onenterUnLoaded(self, Event, From, To)
+Enter UnLoaded State.
 
 <h4> Parameters </h4>
 * [CARGO_GROUP](#cargo_group-class-)

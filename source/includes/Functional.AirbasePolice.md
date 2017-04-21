@@ -65,6 +65,7 @@ BASE
 
 
 ### AIRBASEPOLICE_BASE:New(A, A)
+Creates a new AIRBASEPOLICE_BASE object.
 
 <h4> Parameters </h4>
 * [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
@@ -78,6 +79,7 @@ self
 
 
 ### AIRBASEPOLICE_BASE:Monitor(AirbaseNames)
+Monitor a table of airbase names.
 
 <h4> Parameters </h4>
 * [AIRBASEPOLICE_BASE](#airbasepolice_base-class-)
@@ -107,6 +109,7 @@ BASE
 
 
 ### AIRBASEPOLICE_CAUCASUS:New(A)
+Creates a new AIRBASEPOLICE_CAUCASUS object.
 
 <h4> Parameters </h4>
 * [AIRBASEPOLICE_CAUCASUS](#airbasepolice_caucasus-class-)
@@ -127,6 +130,7 @@ BASE
 </pre>
 
 ### AIRBASEPOLICE_NEVADA:New(A)
+Creates a new AIRBASEPOLICE_NEVADA object.
 
 <h4> Parameters </h4>
 * [AIRBASEPOLICE_NEVADA](#airbasepolice_nevada-class-)

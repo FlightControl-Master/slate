@@ -23,6 +23,8 @@ BASE
 <h4> Returns </h4>
 
 ### MOVEMENT:OnEventBirth(self)
+Captures the birth events when new Units were spawned.
+@todo This method should become obsolete. The new [DATABASE](#database-module-) class will handle the collection administration.
 
 <h4> Parameters </h4>
 * [MOVEMENT](#movement-class-)

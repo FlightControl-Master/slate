@@ -36,6 +36,7 @@ BASE
 
 
 ### OBJECT:New(ObjectName)
+Create a new OBJECT from a DCSObject
 
 <h4> Parameters </h4>
 * [OBJECT](#object-class-)
@@ -48,6 +49,7 @@ self
 
 
 ### OBJECT:GetID()
+Returns the unit's unique identifier.
 
 <h4> Parameters </h4>
 * [OBJECT](#object-class-) self
@@ -58,6 +60,7 @@ self
 
 
 ### OBJECT:Destroy()
+Destroys the OBJECT.
 
 <h4> Parameters </h4>
 * [OBJECT](#object-class-)
