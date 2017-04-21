@@ -939,7 +939,7 @@ self
 * [GROUP](#group-class-) 
 
 
-### SPAWN.GetSpawnIndexFromGroup(()
+### SPAWN.GetSpawnIndexFromGroup()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>

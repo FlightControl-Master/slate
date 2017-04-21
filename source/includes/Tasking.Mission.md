@@ -624,7 +624,7 @@ self
 * <u>String</u> 
 
 
-### MISSION.GetTasks(()
+### MISSION.GetTasks()
 ``` lua
 -- Get Tasks from the Mission.
 Tasks = Mission:GetTasks()

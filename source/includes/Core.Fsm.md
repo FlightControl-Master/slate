@@ -396,7 +396,7 @@ self
 
 <h4> Returns </h4>
 
-### FSM.GetTransitions(()
+### FSM.GetTransitions()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
@@ -418,19 +418,19 @@ self
 * [FSM_PROCESS](#fsm_process-class-)  The SubFSM.
 
 
-### FSM.GetProcesses(()
+### FSM.GetProcesses()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 * <u>List[]</u> 
 
 
-### FSM.AddEndState(()
+### FSM.AddEndState()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### FSM.GetEndStates(()
+### FSM.GetEndStates()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
@@ -467,12 +467,12 @@ self
 
 
 
-### FSM.GetScores(()
+### FSM.GetScores()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### FSM.GetSubs(()
+### FSM.GetSubs()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>

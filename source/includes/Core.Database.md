@@ -260,12 +260,12 @@ self
 
 
 
-### DATABASE.SetStatusGroup(()
+### DATABASE.SetStatusGroup()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### DATABASE.GetStatusGroup(()
+### DATABASE.GetStatusGroup()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>

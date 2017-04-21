@@ -6,21 +6,21 @@
 The timer class does not inherit
 </pre>
 
-### timer.getTime(()
+### timer.getTime()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 * #Time 
 
 
-### timer.getAbsTime(()
+### timer.getAbsTime()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 * #Time 
 
 
-### timer.getTime0(()
+### timer.getTime0()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>

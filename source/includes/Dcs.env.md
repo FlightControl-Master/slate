@@ -8,22 +8,22 @@ ERROR !
 	`-- env
 </pre>
 
-### env.info(()
+### env.info()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### env.warning(()
+### env.warning()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### env.error(()
+### env.error()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### env.setErrorMessageBoxEnabled(()
+### env.setErrorMessageBoxEnabled()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>

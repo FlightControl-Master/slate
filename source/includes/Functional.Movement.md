@@ -12,12 +12,12 @@ BASE
 </pre>
 
 
-### MOVEMENT.ScheduleStart(()
+### MOVEMENT.ScheduleStart()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
 
-### MOVEMENT.ScheduleStop(()
+### MOVEMENT.ScheduleStop()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
@@ -33,7 +33,7 @@ self
 
 <h4> Returns </h4>
 
-### MOVEMENT.OnDeadOrCrash(()
+### MOVEMENT.OnDeadOrCrash()
 
 <h4> Parameters </h4>
 <h4> Returns </h4>
