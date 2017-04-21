@@ -2,7 +2,7 @@
 <pre>
 The timer class does not inherit
 </pre>
-<span id=timer-gettime></span><h3 id='timer-gettime-'>timer.getTime(()</h3>
+<span id=timer-gettime></span><h3 id='timer-gettime-'>timer.getTime()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
@@ -10,7 +10,7 @@ The timer class does not inherit
 <ul>
 <li>#Time </li>
 </ul>
-<span id=timer-getabstime></span><h3 id='timer-getabstime-'>timer.getAbsTime(()</h3>
+<span id=timer-getabstime></span><h3 id='timer-getabstime-'>timer.getAbsTime()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
@@ -18,7 +18,7 @@ The timer class does not inherit
 <ul>
 <li>#Time </li>
 </ul>
-<span id=timer-gettime0></span><h3 id='timer-gettime0-'>timer.getTime0(()</h3>
+<span id=timer-gettime0></span><h3 id='timer-gettime0-'>timer.getTime0()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>

@@ -400,7 +400,7 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=fsm-gettransitions></span><h3 id='fsm-gettransitions-'>FSM.GetTransitions(()</h3>
+<span id=fsm-gettransitions></span><h3 id='fsm-gettransitions-'>FSM.GetTransitions()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
@@ -427,7 +427,7 @@ self</li>
 <ul>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a>  The SubFSM.</li>
 </ul>
-<span id=fsm-getprocesses></span><h3 id='fsm-getprocesses-'>FSM.GetProcesses(()</h3>
+<span id=fsm-getprocesses></span><h3 id='fsm-getprocesses-'>FSM.GetProcesses()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
@@ -435,11 +435,11 @@ self</li>
 <ul>
 <li><u>List[]</u> </li>
 </ul>
-<span id=fsm-addendstate></span><h3 id='fsm-addendstate-'>FSM.AddEndState(()</h3>
+<span id=fsm-addendstate></span><h3 id='fsm-addendstate-'>FSM.AddEndState()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-<span id=fsm-getendstates></span><h3 id='fsm-getendstates-'>FSM.GetEndStates(()</h3>
+<span id=fsm-getendstates></span><h3 id='fsm-getendstates-'>FSM.GetEndStates()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
@@ -481,11 +481,11 @@ self</li>
 <ul>
 <li><a href="#fsm-class-">FSM</a></li>
 </ul>
-<span id=fsm-getscores></span><h3 id='fsm-getscores-'>FSM.GetScores(()</h3>
+<span id=fsm-getscores></span><h3 id='fsm-getscores-'>FSM.GetScores()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
-<span id=fsm-getsubs></span><h3 id='fsm-getsubs-'>FSM.GetSubs(()</h3>
+<span id=fsm-getsubs></span><h3 id='fsm-getsubs-'>FSM.GetSubs()</h3>
 <h4> Parameters </h4>
 
 <h4> Returns </h4>
