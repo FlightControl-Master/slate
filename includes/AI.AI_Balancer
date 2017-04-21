@@ -91,6 +91,8 @@ otherwise the AI_BALANCER will trigger a <strong>Destroy</strong> event, and the
 <li><a href="#group-class-">GROUP</a> Test</li>
 </ul>
 <span id=ai_balancer-new-setclient-spawnai></span><h3 id='ai_balancer-new-setclient-spawnai-'>AI_BALANCER:New(SetClient, SpawnAI)</h3>
+<p>Creates a new AI_BALANCER object</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -106,6 +108,9 @@ self</li>
 <li><a href="#ai_balancer-class-">AI_BALANCER</a></li>
 </ul>
 <span id=ai_balancer-initspawninterval-earliest-latest></span><h3 id='ai_balancer-initspawninterval-earliest-latest-'>AI_BALANCER:InitSpawnInterval(Earliest, Latest)</h3>
+<p>Sets the earliest to the latest interval in seconds how long AI_BALANCER will wait to spawn a new AI.
+Provide 2 identical seconds if the interval should be a fixed amount of seconds.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -121,6 +126,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset></span><h3 id='ai_balancer-returntonearestairbases-returntresholdrange-returnairbaseset-'>AI_BALANCER:ReturnToNearestAirbases(ReturnTresholdRange, ReturnAirbaseSet)</h3>
+<p>Returns the AI to the nearest friendly <a href="#airbase-class-">AIRBASE</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -132,6 +139,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=ai_balancer-returntohomeairbase-returntresholdrange></span><h3 id='ai_balancer-returntohomeairbase-returntresholdrange-'>AI_BALANCER:ReturnToHomeAirbase(ReturnTresholdRange)</h3>
+<p>Returns the AI to the home <a href="#airbase-class-">AIRBASE</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>

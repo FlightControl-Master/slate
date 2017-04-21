@@ -344,6 +344,8 @@ Depending upon <strong>which state is returned</strong>, the main FSM can contin
 
 <p>The method <a href="#fsm-addprocess-from-event-process-returnevents">FSM:AddProcess()</a> adds a new Sub-FSM to the FSM.</p>
 <span id=fsm-new></span><h3 id='fsm-new-'>FSM:New()</h3>
+<p>Creates a new FSM object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -357,6 +359,8 @@ self</li>
 <li><a href="#fsm-class-">FSM</a></li>
 </ul>
 <span id=fsm-setstartstate-state></span><h3 id='fsm-setstartstate-state-'>FSM:SetStartState(State)</h3>
+<p>Sets the start state of the FSM.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -367,6 +371,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm-getstartstate></span><h3 id='fsm-getstartstate-'>FSM:GetStartState()</h3>
+<p>Returns the start state of the FSM.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -380,6 +386,9 @@ self</li>
 <li><u>String</u>  A string containing the start state.</li>
 </ul>
 <span id=fsm-addtransition-from-event-to></span><h3 id='fsm-addtransition-from-event-to-'>FSM:AddTransition(From, Event, To)</h3>
+<p>Add a new transition rule to the FSM.
+A transition rule defines when and if the FSM can transition from a state towards another state upon a triggered event.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -400,6 +409,8 @@ self</li>
 <li><u>List[]</u> </li>
 </ul>
 <span id=fsm-addprocess-from-event-process-returnevents></span><h3 id='fsm-addprocess-from-event-process-returnevents-'>FSM:AddProcess(From, Event, Process, ReturnEvents)</h3>
+<p>Set the default <a href="#process-module-">Process</a> template with key ProcessName providing the ProcessClass and the process object when it is assigned to a <a href="#controllable-module-">Controllable</a> by the task.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -433,6 +444,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm-addscore-state-scoretext-score></span><h3 id='fsm-addscore-state-scoretext-score-'>FSM:AddScore(State, ScoreText, Score)</h3>
+<p>Adds a score for the FSM to be achieved.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -449,6 +462,8 @@ self</li>
 <li><a href="#fsm-class-">FSM</a></li>
 </ul>
 <span id=fsm-addscoreprocess-from-event-state-scoretext-score></span><h3 id='fsm-addscoreprocess-from-event-state-scoretext-score-'>FSM:AddScoreProcess(From, Event, State, ScoreText, Score)</h3>
+<p>Adds a score for the FSM_PROCESS to be achieved.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -490,6 +505,8 @@ BASE
 <li><a href="#controllable-class-">CONTROLLABLE</a> Controllable</li>
 </ul>
 <span id=fsm_controllable-new-fsmt-controllable></span><h3 id='fsm_controllable-new-fsmt-controllable-'>FSM_CONTROLLABLE:New(FSMT, Controllable)</h3>
+<p>Creates a new FSM_CONTROLLABLE object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -505,7 +522,8 @@ self</li>
 <li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a></li>
 </ul>
 <span id=fsm_controllable-onbeforestop-controllable-from-event-to></span><h3 id='fsm_controllable-onbeforestop-controllable-from-event-to-'>FSM_CONTROLLABLE:OnBeforeStop(Controllable, From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Stop.</p>
+<p>OnBefore Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnBeforeStop</p>
 
 <h4> Parameters </h4>
 
@@ -524,7 +542,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=fsm_controllable-onafterstop-controllable-from-event-to></span><h3 id='fsm_controllable-onafterstop-controllable-from-event-to-'>FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Stop.</p>
+<p>OnAfter Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnAfterStop</p>
 
 <h4> Parameters </h4>
 
@@ -539,7 +558,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm_controllable-stop></span><h3 id='fsm_controllable-stop-'>FSM_CONTROLLABLE:Stop()</h3>
-<p>Synchronous Event Trigger for Event Stop.</p>
+<p>Synchronous Event Trigger for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] Stop</p>
 
 <h4> Parameters </h4>
 
@@ -550,7 +570,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm_controllable-onleavestopped-controllable-from-event-to></span><h3 id='fsm_controllable-onleavestopped-controllable-from-event-to-'>FSM_CONTROLLABLE:OnLeaveStopped(Controllable, From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Stopped.</p>
+<p>OnLeave Transition Handler for State Stopped.
+@function [parent=#FSM_CONTROLLABLE] OnLeaveStopped</p>
 
 <h4> Parameters </h4>
 
@@ -569,7 +590,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=fsm_controllable-onenterstopped-controllable-from-event-to></span><h3 id='fsm_controllable-onenterstopped-controllable-from-event-to-'>FSM_CONTROLLABLE:OnEnterStopped(Controllable, From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Stopped.</p>
+<p>OnEnter Transition Handler for State Stopped.
+@function [parent=#FSM_CONTROLLABLE] OnEnterStopped</p>
 
 <h4> Parameters </h4>
 
@@ -584,7 +606,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm_controllable-onafterstop-controllable-from-event-to></span><h3 id='fsm_controllable-onafterstop-controllable-from-event-to-'>FSM_CONTROLLABLE:OnAfterStop(Controllable, From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Stop.</p>
+<p>OnAfter Transition Handler for Event Stop.
+@function [parent=#FSM_CONTROLLABLE] OnAfterStop</p>
 
 <h4> Parameters </h4>
 
@@ -599,6 +622,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm_controllable-setcontrollable-fsmcontrollable></span><h3 id='fsm_controllable-setcontrollable-fsmcontrollable-'>FSM_CONTROLLABLE:SetControllable(FSMControllable)</h3>
+<p>Sets the CONTROLLABLE object that the FSM_CONTROLLABLE governs.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -613,6 +638,8 @@ self</li>
 <li><a href="#fsm_controllable-class-">FSM_CONTROLLABLE</a></li>
 </ul>
 <span id=fsm_controllable-getcontrollable></span><h3 id='fsm_controllable-getcontrollable-'>FSM_CONTROLLABLE:GetControllable()</h3>
+<p>Gets the CONTROLLABLE object that the FSM_CONTROLLABLE governs.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -642,6 +669,8 @@ BASE
 <li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 <span id=fsm_process-new></span><h3 id='fsm_process-new-'>FSM_PROCESS:New()</h3>
+<p>Creates a new FSM_PROCESS object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -655,6 +684,8 @@ self</li>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-copy></span><h3 id='fsm_process-copy-'>FSM_PROCESS:Copy()</h3>
+<p>Creates a new FSM_PROCESS object based on this FSM_PROCESS.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -668,6 +699,8 @@ self</li>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-remove></span><h3 id='fsm_process-remove-'>FSM_PROCESS:Remove()</h3>
+<p>Removes an FSM_PROCESS object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -681,6 +714,8 @@ self</li>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-settask-task></span><h3 id='fsm_process-settask-task-'>FSM_PROCESS:SetTask(Task)</h3>
+<p>Sets the task of the process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -695,6 +730,8 @@ self</li>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-gettask></span><h3 id='fsm_process-gettask-'>FSM_PROCESS:GetTask()</h3>
+<p>Gets the task of the process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -708,6 +745,8 @@ self</li>
 <li><a href="#task-class-">TASK</a> </li>
 </ul>
 <span id=fsm_process-getmission></span><h3 id='fsm_process-getmission-'>FSM_PROCESS:GetMission()</h3>
+<p>Gets the mission of the process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -721,6 +760,8 @@ self</li>
 <li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=fsm_process-getcommandcenter></span><h3 id='fsm_process-getcommandcenter-'>FSM_PROCESS:GetCommandCenter()</h3>
+<p>Gets the mission of the process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -734,6 +775,8 @@ self</li>
 <li><a href="#commandcenter-class-">COMMANDCENTER</a> </li>
 </ul>
 <span id=fsm_process-message></span><h3 id='fsm_process-message-'>FSM_PROCESS:Message()</h3>
+<p>Send a message of the <a href="#task-module-">Task</a> to the Group of the Unit.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -743,6 +786,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=fsm_process-assign-task-processunit></span><h3 id='fsm_process-assign-task-processunit-'>FSM_PROCESS:Assign(Task, ProcessUnit)</h3>
+<p>Assign the process to a <a href="#unit-module-">Unit</a> and activate the process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -758,6 +803,8 @@ self</li>
 <li><a href="#fsm_process-class-">FSM_PROCESS</a></li>
 </ul>
 <span id=fsm_process-onstatechange-processunit-event-from-to></span><h3 id='fsm_process-onstatechange-processunit-event-from-to-'>FSM_PROCESS:onstatechange(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function for a FSM_PROCESS</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -788,6 +835,8 @@ BASE
 <li><a href="#task-class-">TASK</a> Task</li>
 </ul>
 <span id=fsm_task-new-fsmt-task-taskunit></span><h3 id='fsm_task-new-fsmt-task-taskunit-'>FSM_TASK:New(FSMT, Task, TaskUnit)</h3>
+<p>Creates a new FSM_TASK object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -822,6 +871,8 @@ for multiple objects or the position of the state machine in the process.</p>
 <li><a href="#set_base-class-">SET_BASE</a> Set</li>
 </ul>
 <span id=fsm_set-new-fsmt-fsmset></span><h3 id='fsm_set-new-fsmt-fsmset-'>FSM_SET:New(FSMT, FSMSet)</h3>
+<p>Creates a new FSM_SET object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -837,6 +888,8 @@ self</li>
 <li><a href="#fsm_set-class-">FSM_SET</a></li>
 </ul>
 <span id=fsm_set-set-fsmset></span><h3 id='fsm_set-set-fsmset-'>FSM_SET:Set(FSMSet)</h3>
+<p>Sets the SET_BASE object that the FSM_SET governs.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -851,6 +904,8 @@ self</li>
 <li><a href="#fsm_set-class-">FSM_SET</a></li>
 </ul>
 <span id=fsm_set-get></span><h3 id='fsm_set-get-'>FSM_SET:Get()</h3>
+<p>Gets the SET_BASE object that the FSM_SET governs.</p>
+
 <h4> Parameters </h4>
 
 <ul>

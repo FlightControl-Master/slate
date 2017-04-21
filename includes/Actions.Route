@@ -77,6 +77,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> Zone</li>
 </ul>
 <span id=act_route-new></span><h3 id='act_route-new-'>ACT_ROUTE:New()</h3>
+<p>Creates a new routing state machine. The process will route a CLIENT to a ZONE until the CLIENT is within that ZONE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -90,6 +92,8 @@ self</li>
 <li><a href="#act_route-class-">ACT_ROUTE</a></li>
 </ul>
 <span id=act_route-onafterstart-processunit-event-from-to></span><h3 id='act_route-onafterstart-processunit-event-from-to-'>ACT_ROUTE:onafterStart(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -103,6 +107,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route-onfunchasarrived-processunit></span><h3 id='act_route-onfunchasarrived-processunit-'>ACT_ROUTE:onfuncHasArrived(ProcessUnit)</h3>
+<p>Check if the controllable has arrived.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -117,6 +123,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=act_route-onbeforeroute-processunit-event-from-to></span><h3 id='act_route-onbeforeroute-processunit-event-from-to-'>ACT_ROUTE:onbeforeRoute(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -146,6 +154,9 @@ BASE
 <li><a href="#task-class-">TASK</a> TASK</li>
 </ul>
 <span id=act_route_point-new-the-range-zone></span><h3 id='act_route_point-new-the-range-zone-'>ACT_ROUTE_POINT:New(The, Range, Zone)</h3>
+<p>Creates a new routing state machine.
+The task will route a controllable to a PointVec2 until the controllable is within the Range.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -158,6 +169,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route_point-setpointvec2-pointvec2></span><h3 id='act_route_point-setpointvec2-pointvec2-'>ACT_ROUTE_POINT:SetPointVec2(PointVec2)</h3>
+<p>Set PointVec2</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -168,6 +181,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route_point-getpointvec2></span><h3 id='act_route_point-getpointvec2-'>ACT_ROUTE_POINT:GetPointVec2()</h3>
+<p>Get PointVec2</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -181,6 +196,8 @@ self</li>
 <li><a href="#point_vec2-class-">POINT_VEC2</a>  PointVec2 The PointVec2 to route to.</li>
 </ul>
 <span id=act_route_point-setrange-range></span><h3 id='act_route_point-setrange-range-'>ACT_ROUTE_POINT:SetRange(Range)</h3>
+<p>Set Range around PointVec2</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -191,6 +208,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route_point-getrange></span><h3 id='act_route_point-getrange-'>ACT_ROUTE_POINT:GetRange()</h3>
+<p>Get Range around PointVec2</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -204,6 +223,8 @@ self</li>
 <li><u>Number</u>  The Range to consider the arrival. Default is 10000 meters.</li>
 </ul>
 <span id=act_route_point-onfunchasarrived-processunit></span><h3 id='act_route_point-onfunchasarrived-processunit-'>ACT_ROUTE_POINT:onfuncHasArrived(ProcessUnit)</h3>
+<p>Method override to check if the controllable has arrived.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -218,6 +239,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=act_route_point-onenterreporting-processunit-event-from-to></span><h3 id='act_route_point-onenterreporting-processunit-event-from-to-'>ACT_ROUTE_POINT:onenterReporting(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -249,6 +272,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> Zone</li>
 </ul>
 <span id=act_route_zone-new-zone></span><h3 id='act_route_zone-new-zone-'>ACT_ROUTE_ZONE:New(Zone)</h3>
+<p>Creates a new routing state machine. The task will route a controllable to a ZONE until the controllable is within that ZONE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -259,6 +284,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route_zone-setzone-zone></span><h3 id='act_route_zone-setzone-zone-'>ACT_ROUTE_ZONE:SetZone(Zone)</h3>
+<p>Set Zone</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -269,6 +296,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_route_zone-getzone></span><h3 id='act_route_zone-getzone-'>ACT_ROUTE_ZONE:GetZone()</h3>
+<p>Get Zone</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -282,6 +311,8 @@ self</li>
 <li><a href="#zone_base-class-">ZONE_BASE</a>  Zone The Zone object where to route to.</li>
 </ul>
 <span id=act_route_zone-onfunchasarrived-processunit></span><h3 id='act_route_zone-onfunchasarrived-processunit-'>ACT_ROUTE_ZONE:onfuncHasArrived(ProcessUnit)</h3>
+<p>Method override to check if the controllable has arrived.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -296,6 +327,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=act_route_zone-onenterreporting-processunit-event-from-to></span><h3 id='act_route_zone-onenterreporting-processunit-event-from-to-'>ACT_ROUTE_ZONE:onenterReporting(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>

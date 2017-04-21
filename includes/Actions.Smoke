@@ -61,6 +61,8 @@ BASE
                 `-- ACT_ASSIST
 </pre>
 <span id=act_assist-new></span><h3 id='act_assist-new-'>ACT_ASSIST:New()</h3>
+<p>Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -74,6 +76,8 @@ self</li>
 <li><a href="#act_assist-class-">ACT_ASSIST</a></li>
 </ul>
 <span id=act_assist-onafterstart-processunit-event-from-to></span><h3 id='act_assist-onafterstart-processunit-event-from-to-'>ACT_ASSIST:onafterStart(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -87,6 +91,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assist-onafterstop-processunit-event-from-to></span><h3 id='act_assist-onafterstop-processunit-event-from-to-'>ACT_ASSIST:onafterStop(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -117,6 +123,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> TargetZone</li>
 </ul>
 <span id=act_assist_smoke_targets_zone-new-targetsetunit-targetzone></span><h3 id='act_assist_smoke_targets_zone-new-targetsetunit-targetzone-'>ACT_ASSIST_SMOKE_TARGETS_ZONE:New(TargetSetUnit, TargetZone)</h3>
+<p>Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -128,6 +136,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assist_smoke_targets_zone-init-targetsetunit-targetzone></span><h3 id='act_assist_smoke_targets_zone-init-targetsetunit-targetzone-'>ACT_ASSIST_SMOKE_TARGETS_ZONE:Init(TargetSetUnit, TargetZone)</h3>
+<p>Creates a new target smoking state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -143,6 +153,8 @@ self</li>
 <li><a href="#act_assist_smoke_targets_zone-class-">ACT_ASSIST_SMOKE_TARGETS_ZONE</a></li>
 </ul>
 <span id=act_assist_smoke_targets_zone-onentersmoking-processunit-event-from-to></span><h3 id='act_assist_smoke_targets_zone-onentersmoking-processunit-event-from-to-'>ACT_ASSIST_SMOKE_TARGETS_ZONE:onenterSmoking(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>

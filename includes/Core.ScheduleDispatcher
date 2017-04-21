@@ -30,6 +30,11 @@ The Schedule() method returns the CallID that is the reference ID for each plann
 The SCHEDULEDISPATCHER class does not inherit
 </pre>
 <span id=scheduledispatcher-addschedule-scheduler></span><h3 id='scheduledispatcher-addschedule-scheduler-'>SCHEDULEDISPATCHER:AddSchedule(Scheduler)</h3>
+<p>Add a Schedule to the ScheduleDispatcher.
+The development of this method was really tidy.
+It is constructed as such that a garbage collection is executed on the weak tables, when the Scheduler is nillified.
+Nothing of this code should be modified without testing it thoroughly.</p>
+
 <h4> Parameters </h4>
 
 <ul>

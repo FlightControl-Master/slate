@@ -218,6 +218,8 @@ Detection:Start()</p>
 <li><u>Number</u> DetectionRun</li>
 </ul>
 <span id=detection_base-new-detectionsetgroup></span><h3 id='detection_base-new-detectionsetgroup-'>DETECTION_BASE:New(DetectionSetGroup)</h3>
+<p>DETECTION constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -232,7 +234,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-onleavestopped-from-event-to></span><h3 id='detection_base-onleavestopped-from-event-to-'>DETECTION_BASE:OnLeaveStopped(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Stopped.</p>
+<p>OnLeave Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnLeaveStopped</p>
 
 <h4> Parameters </h4>
 
@@ -250,7 +253,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onenterstopped-from-event-to></span><h3 id='detection_base-onenterstopped-from-event-to-'>DETECTION_BASE:OnEnterStopped(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Stopped.</p>
+<p>OnEnter Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnEnterStopped</p>
 
 <h4> Parameters </h4>
 
@@ -264,7 +268,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onbeforestart-from-event-to></span><h3 id='detection_base-onbeforestart-from-event-to-'>DETECTION_BASE:OnBeforeStart(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Start.</p>
+<p>OnBefore Transition Handler for Event Start.
+@function [parent=#DETECTION_BASE] OnBeforeStart</p>
 
 <h4> Parameters </h4>
 
@@ -282,7 +287,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onafterstart-from-event-to></span><h3 id='detection_base-onafterstart-from-event-to-'>DETECTION_BASE:OnAfterStart(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Start.</p>
+<p>OnAfter Transition Handler for Event Start.
+@function [parent=#DETECTION_BASE] OnAfterStart</p>
 
 <h4> Parameters </h4>
 
@@ -296,7 +302,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-start></span><h3 id='detection_base-start-'>DETECTION_BASE:Start()</h3>
-<p>Synchronous Event Trigger for Event Start.</p>
+<p>Synchronous Event Trigger for Event Start.
+@function [parent=#DETECTION_BASE] Start</p>
 
 <h4> Parameters </h4>
 
@@ -307,7 +314,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onleavedetecting-from-event-to></span><h3 id='detection_base-onleavedetecting-from-event-to-'>DETECTION_BASE:OnLeaveDetecting(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Detecting.</p>
+<p>OnLeave Transition Handler for State Detecting.
+@function [parent=#DETECTION_BASE] OnLeaveDetecting</p>
 
 <h4> Parameters </h4>
 
@@ -325,7 +333,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onenterdetecting-from-event-to></span><h3 id='detection_base-onenterdetecting-from-event-to-'>DETECTION_BASE:OnEnterDetecting(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Detecting.</p>
+<p>OnEnter Transition Handler for State Detecting.
+@function [parent=#DETECTION_BASE] OnEnterDetecting</p>
 
 <h4> Parameters </h4>
 
@@ -339,7 +348,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onbeforedetect-from-event-to></span><h3 id='detection_base-onbeforedetect-from-event-to-'>DETECTION_BASE:OnBeforeDetect(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Detect.</p>
+<p>OnBefore Transition Handler for Event Detect.
+@function [parent=#DETECTION_BASE] OnBeforeDetect</p>
 
 <h4> Parameters </h4>
 
@@ -357,7 +367,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onafterdetect-from-event-to></span><h3 id='detection_base-onafterdetect-from-event-to-'>DETECTION_BASE:OnAfterDetect(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Detect.</p>
+<p>OnAfter Transition Handler for Event Detect.
+@function [parent=#DETECTION_BASE] OnAfterDetect</p>
 
 <h4> Parameters </h4>
 
@@ -371,7 +382,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-detect></span><h3 id='detection_base-detect-'>DETECTION_BASE:Detect()</h3>
-<p>Synchronous Event Trigger for Event Detect.</p>
+<p>Synchronous Event Trigger for Event Detect.
+@function [parent=#DETECTION_BASE] Detect</p>
 
 <h4> Parameters </h4>
 
@@ -382,7 +394,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onbeforedetected-from-event-to></span><h3 id='detection_base-onbeforedetected-from-event-to-'>DETECTION_BASE:OnBeforeDetected(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Detected.</p>
+<p>OnBefore Transition Handler for Event Detected.
+@function [parent=#DETECTION_BASE] OnBeforeDetected</p>
 
 <h4> Parameters </h4>
 
@@ -400,7 +413,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onafterdetected-from-event-to></span><h3 id='detection_base-onafterdetected-from-event-to-'>DETECTION_BASE:OnAfterDetected(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Detected.</p>
+<p>OnAfter Transition Handler for Event Detected.
+@function [parent=#DETECTION_BASE] OnAfterDetected</p>
 
 <h4> Parameters </h4>
 
@@ -414,7 +428,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-detected></span><h3 id='detection_base-detected-'>DETECTION_BASE:Detected()</h3>
-<p>Synchronous Event Trigger for Event Detected.</p>
+<p>Synchronous Event Trigger for Event Detected.
+@function [parent=#DETECTION_BASE] Detected</p>
 
 <h4> Parameters </h4>
 
@@ -425,7 +440,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onbeforestop-from-event-to></span><h3 id='detection_base-onbeforestop-from-event-to-'>DETECTION_BASE:OnBeforeStop(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Stop.</p>
+<p>OnBefore Transition Handler for Event Stop.
+@function [parent=#DETECTION_BASE] OnBeforeStop</p>
 
 <h4> Parameters </h4>
 
@@ -443,7 +459,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onafterstop-from-event-to></span><h3 id='detection_base-onafterstop-from-event-to-'>DETECTION_BASE:OnAfterStop(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Stop.</p>
+<p>OnAfter Transition Handler for Event Stop.
+@function [parent=#DETECTION_BASE] OnAfterStop</p>
 
 <h4> Parameters </h4>
 
@@ -457,7 +474,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-stop></span><h3 id='detection_base-stop-'>DETECTION_BASE:Stop()</h3>
-<p>Synchronous Event Trigger for Event Stop.</p>
+<p>Synchronous Event Trigger for Event Stop.
+@function [parent=#DETECTION_BASE] Stop</p>
 
 <h4> Parameters </h4>
 
@@ -468,7 +486,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-onleavestopped-from-event-to></span><h3 id='detection_base-onleavestopped-from-event-to-'>DETECTION_BASE:OnLeaveStopped(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Stopped.</p>
+<p>OnLeave Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnLeaveStopped</p>
 
 <h4> Parameters </h4>
 
@@ -486,7 +505,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=detection_base-onenterstopped-from-event-to></span><h3 id='detection_base-onenterstopped-from-event-to-'>DETECTION_BASE:OnEnterStopped(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Stopped.</p>
+<p>OnEnter Transition Handler for State Stopped.
+@function [parent=#DETECTION_BASE] OnEnterStopped</p>
 
 <h4> Parameters </h4>
 
@@ -537,6 +557,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-initdetectvisual-detectvisual></span><h3 id='detection_base-initdetectvisual-detectvisual-'>DETECTION_BASE:InitDetectVisual(DetectVisual)</h3>
+<p>Detect Visual.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -551,6 +573,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-initdetectoptical-detectoptical></span><h3 id='detection_base-initdetectoptical-detectoptical-'>DETECTION_BASE:InitDetectOptical(DetectOptical)</h3>
+<p>Detect Optical.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -565,6 +589,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-initdetectradar-detectradar></span><h3 id='detection_base-initdetectradar-detectradar-'>DETECTION_BASE:InitDetectRadar(DetectRadar)</h3>
+<p>Detect Radar.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -579,6 +605,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-initdetectirst-detectirst></span><h3 id='detection_base-initdetectirst-detectirst-'>DETECTION_BASE:InitDetectIRST(DetectIRST)</h3>
+<p>Detect IRST.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -593,6 +621,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-initdetectrwr-detectrwr></span><h3 id='detection_base-initdetectrwr-detectrwr-'>DETECTION_BASE:InitDetectRWR(DetectRWR)</h3>
+<p>Detect RWR.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -607,6 +637,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-initdetectdlink-detectdlink></span><h3 id='detection_base-initdetectdlink-detectdlink-'>DETECTION_BASE:InitDetectDLINK(DetectDLINK)</h3>
+<p>Detect DLINK.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -621,6 +653,27 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-filtercategories-filtercategories></span><h3 id='detection_base-filtercategories-filtercategories-'>DETECTION_BASE:FilterCategories(FilterCategories)</h3>
+<p>Filter the detected units based on Unit.Category
+The different values of Unit.Category can be:</p>
+
+<ul>
+<li>Unit.Category.AIRPLANE</li>
+<li>Unit.Category.GROUND_UNIT</li>
+<li>Unit.Category.HELICOPTER</li>
+<li>Unit.Category.SHIP</li>
+<li>Unit.Category.STRUCTURE</li>
+</ul>
+
+<p>Multiple Unit.Category entries can be given as a table and then these will be evaluated as an OR expression.</p>
+
+<p>Example to filter a single category (Unit.Category.AIRPLANE).</p>
+
+<p>DetectionObject:FilterCategories( Unit.Category.AIRPLANE )</p>
+
+<p>Example to filter multiple categories (Unit.Category.AIRPLANE, Unit.Category.HELICOPTER). Note the {}.</p>
+
+<p>DetectionObject:FilterCategories( { Unit.Category.AIRPLANE, Unit.Category.HELICOPTER } )</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -635,6 +688,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setdetectioninterval-detectioninterval></span><h3 id='detection_base-setdetectioninterval-detectioninterval-'>DETECTION_BASE:SetDetectionInterval(DetectionInterval)</h3>
+<p>Set the detection interval time in seconds.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -649,6 +704,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setacceptrange-acceptrange></span><h3 id='detection_base-setacceptrange-acceptrange-'>DETECTION_BASE:SetAcceptRange(AcceptRange)</h3>
+<p>Accept detections if within a range in meters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -663,6 +720,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setacceptzones-can></span><h3 id='detection_base-setacceptzones-can-'>DETECTION_BASE:SetAcceptZones(Can)</h3>
+<p>Accept detections if within the specified zone(s).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -677,6 +736,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setrejectzones-can></span><h3 id='detection_base-setrejectzones-can-'>DETECTION_BASE:SetRejectZones(Can)</h3>
+<p>Reject detections if within the specified zone(s).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -691,6 +752,12 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setdistanceprobability-the></span><h3 id='detection_base-setdistanceprobability-the-'>DETECTION_BASE:SetDistanceProbability(The)</h3>
+<p>Upon a <strong>visual</strong> detection, the further away a detected object is, the less likely it is to be detected properly.
+Also, the speed of accurate detection plays a role.
+A distance probability factor between 0 and 1 can be given, that will model a linear extrapolated probability over 10 km distance.
+For example, if a probability factor of 0.6 (60%) is given, the extrapolated probabilities over 15 kilometers would like like:
+1 km: 96%, 2 km: 92%, 3 km: 88%, 4 km: 84%, 5 km: 80%, 6 km: 76%, 7 km: 72%, 8 km: 68%, 9 km: 64%, 10 km: 60%, 11 km: 56%, 12 km: 52%, 13 km: 48%, 14 km: 44%, 15 km: 40%.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -705,6 +772,14 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setalphaangleprobability-the></span><h3 id='detection_base-setalphaangleprobability-the-'>DETECTION_BASE:SetAlphaAngleProbability(The)</h3>
+<p>Upon a <strong>visual</strong> detection, the higher the unit is during the detecting process, the more likely the detected unit is to be detected properly.
+A detection at a 90% alpha angle is the most optimal, a detection at 10% is less and a detection at 0% is less likely to be correct.</p>
+
+<p>A probability factor between 0 and 1 can be given, that will model a progressive extrapolated probability if the target would be detected at a 0° angle.</p>
+
+<p>For example, if a alpha angle probability factor of 0.7 is given, the extrapolated probabilities of the different angles would look like:
+0°: 70%, 10°: 75,21%, 20°: 80,26%, 30°: 85%, 40°: 89,28%, 50°: 92,98%, 60°: 95,98%, 70°: 98,19%, 80°: 99,54%, 90°: 100%</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -719,6 +794,10 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-setzoneprobability-aray></span><h3 id='detection_base-setzoneprobability-aray-'>DETECTION_BASE:SetZoneProbability(Aray)</h3>
+<p>Upon a <strong>visual</strong> detection, the more a detected unit is within a cloudy zone, the less likely the detected unit is to be detected successfully.
+The Cloudy Zones work with the ZONE_BASE derived classes. The mission designer can define within the mission
+zones that reflect cloudy areas where detected units may not be so easily visually detected.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -733,6 +812,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-acceptchanges-detecteditem></span><h3 id='detection_base-acceptchanges-detecteditem-'>DETECTION_BASE:AcceptChanges(DetectedItem)</h3>
+<p>Accepts changes from the detected item.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -747,6 +828,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-addchangeitem-detecteditem-changecode></span><h3 id='detection_base-addchangeitem-detecteditem-changecode-'>DETECTION_BASE:AddChangeItem(DetectedItem, ChangeCode)</h3>
+<p>Add a change to the detected zone.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -762,6 +845,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-addchangeunit-detecteditem-changecode-changeunittype></span><h3 id='detection_base-addchangeunit-detecteditem-changecode-changeunittype-'>DETECTION_BASE:AddChangeUnit(DetectedItem, ChangeCode, ChangeUnitType)</h3>
+<p>Add a change to the detected zone.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -778,6 +863,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-isfriendliesnearby></span><h3 id='detection_base-isfriendliesnearby-'>DETECTION_BASE:IsFriendliesNearBy()</h3>
+<p>Returns if there are friendlies nearby the FAC units ...</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -791,6 +878,8 @@ self</li>
 <li><u>Boolean</u>  trhe if there are friendlies nearby</li>
 </ul>
 <span id=detection_base-reportfriendliesnearby></span><h3 id='detection_base-reportfriendliesnearby-'>DETECTION_BASE:ReportFriendliesNearBy()</h3>
+<p>Background worker function to determine if there are friendlies nearby ...</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -800,6 +889,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-isdetectedobjectidentified-detectedobject></span><h3 id='detection_base-isdetectedobjectidentified-detectedobject-'>DETECTION_BASE:IsDetectedObjectIdentified(DetectedObject)</h3>
+<p>Determines if a detected object has already been identified during detection processing.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -814,6 +905,8 @@ self</li>
 <li><u>Boolean</u>  true if already identified.</li>
 </ul>
 <span id=detection_base-identifydetectedobject-detectedobject></span><h3 id='detection_base-identifydetectedobject-detectedobject-'>DETECTION_BASE:IdentifyDetectedObject(DetectedObject)</h3>
+<p>Identifies a detected object during detection processing.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -824,6 +917,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-unidentifydetectedobject-detectedobject></span><h3 id='detection_base-unidentifydetectedobject-detectedobject-'>DETECTION_BASE:UnIdentifyDetectedObject(DetectedObject)</h3>
+<p>UnIdentify a detected object during detection processing.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -834,6 +929,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-unidentifyalldetectedobjects></span><h3 id='detection_base-unidentifyalldetectedobjects-'>DETECTION_BASE:UnIdentifyAllDetectedObjects()</h3>
+<p>UnIdentify all detected objects during detection processing.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -843,6 +940,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-getdetectedobject-objectname></span><h3 id='detection_base-getdetectedobject-objectname-'>DETECTION_BASE:GetDetectedObject(ObjectName)</h3>
+<p>Gets a detected object with a given name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -857,6 +956,9 @@ self</li>
 <li><a href="#detection_base-detectedobject-class-">DetectedObject</a></li>
 </ul>
 <span id=detection_base-adddetecteditem-detecteditemindex-set></span><h3 id='detection_base-adddetecteditem-detecteditemindex-set-'>DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)</h3>
+<p>Adds a new DetectedItem to the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -872,6 +974,9 @@ self</li>
 <li><a href="#detection_base-detecteditem-class-">DetectedItem</a></li>
 </ul>
 <span id=detection_base-adddetecteditemzone-detecteditemindex-set-zone></span><h3 id='detection_base-adddetecteditemzone-detecteditemindex-set-zone-'>DETECTION_BASE:AddDetectedItemZone(DetectedItemIndex, Set, Zone)</h3>
+<p>Adds a new DetectedItem to the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -888,6 +993,9 @@ self</li>
 <li><a href="#detection_base-detecteditem-class-">DetectedItem</a></li>
 </ul>
 <span id=detection_base-removedetecteditem-detecteditemindex></span><h3 id='detection_base-removedetecteditem-detecteditemindex-'>DETECTION_BASE:RemoveDetectedItem(DetectedItemIndex)</h3>
+<p>Removes an existing DetectedItem from the DetectedItems list.
+The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -898,6 +1006,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_base-getdetecteditems></span><h3 id='detection_base-getdetecteditems-'>DETECTION_BASE:GetDetectedItems()</h3>
+<p>Get the detected <a href="#set_base-class-">SET_BASE</a>s.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -911,6 +1021,8 @@ self</li>
 <li><a href="#detection_base-detecteditems-class-">DetectedItems</a></li>
 </ul>
 <span id=detection_base-getdetecteditemscount></span><h3 id='detection_base-getdetecteditemscount-'>DETECTION_BASE:GetDetectedItemsCount()</h3>
+<p>Get the amount of SETs with detected objects.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -924,6 +1036,8 @@ self</li>
 <li><u>Number</u> </li>
 </ul>
 <span id=detection_base-getdetecteditem-index></span><h3 id='detection_base-getdetecteditem-index-'>DETECTION_BASE:GetDetectedItem(Index)</h3>
+<p>Get a detected item using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -938,6 +1052,8 @@ self</li>
 <li><a href="#detection_base-detecteditem-class-">DetectedItem</a></li>
 </ul>
 <span id=detection_base-getdetectedset-index></span><h3 id='detection_base-getdetectedset-index-'>DETECTION_BASE:GetDetectedSet(Index)</h3>
+<p>Get the <a href="#set_unit-class-">SET_UNIT</a> of a detecttion area using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -952,6 +1068,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a> </li>
 </ul>
 <span id=detection_base-getdetectedzone-index></span><h3 id='detection_base-getdetectedzone-index-'>DETECTION_BASE:GetDetectedZone(Index)</h3>
+<p>Get the <a href="#zone_unit-class-">ZONE_UNIT</a> of a detection area using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -966,6 +1084,8 @@ self</li>
 <li><a href="#zone_unit-class-">ZONE_UNIT</a> </li>
 </ul>
 <span id=detection_base-detecteditemreportsummary-self></span><h3 id='detection_base-detecteditemreportsummary-self-'>DETECTION_BASE:DetectedItemReportSummary(self)</h3>
+<p>Report summary of a detected item using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -980,6 +1100,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=detection_base-detectedreportdetailed></span><h3 id='detection_base-detectedreportdetailed-'>DETECTION_BASE:DetectedReportDetailed()</h3>
+<p>Report detailed of a detectedion result.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -993,6 +1115,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=detection_base-getdetectionsetgroup></span><h3 id='detection_base-getdetectionsetgroup-'>DETECTION_BASE:GetDetectionSetGroup()</h3>
+<p>Get the detection Groups.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1006,6 +1130,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
 <span id=detection_base-createdetectionsets></span><h3 id='detection_base-createdetectionsets-'>DETECTION_BASE:CreateDetectionSets()</h3>
+<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1019,6 +1145,8 @@ self</li>
 <li><a href="#detection_base-class-">DETECTION_BASE</a></li>
 </ul>
 <span id=detection_base-schedule-delaytime-repeatinterval></span><h3 id='detection_base-schedule-delaytime-repeatinterval-'>DETECTION_BASE:Schedule(DelayTime, RepeatInterval)</h3>
+<p>Schedule the DETECTION construction.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1091,6 +1219,8 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 <li><a href="#distance-class-">Distance</a> DetectionRange : The range till which targets are detected.</li>
 </ul>
 <span id=detection_units-new-detectionsetgroup></span><h3 id='detection_units-new-detectionsetgroup-'>DETECTION_UNITS:New(DetectionSetGroup)</h3>
+<p>DETECTION_UNITS constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1104,6 +1234,8 @@ Beware that when the amount of units detected is large, the DetectedItems list w
 <li><a href="#detection_units-class-">DETECTION_UNITS</a> </li>
 </ul>
 <span id=detection_units-getchangetext-detecteditem></span><h3 id='detection_units-getchangetext-detecteditem-'>DETECTION_UNITS:GetChangeText(DetectedItem)</h3>
+<p>Make text documenting the changes of the detected zone.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1118,6 +1250,9 @@ self</li>
 <li><u>String</u>  The Changes text</li>
 </ul>
 <span id=detection_units-createdetectionsets></span><h3 id='detection_units-createdetectionsets-'>DETECTION_UNITS:CreateDetectionSets()</h3>
+<p>Create the DetectedItems list from the DetectedObjects table.
+For each DetectedItem, a one field array is created containing the Unit detected.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1131,6 +1266,8 @@ self</li>
 <li><a href="#detection_units-class-">DETECTION_UNITS</a></li>
 </ul>
 <span id=detection_units-detecteditemreportsummary-self></span><h3 id='detection_units-detecteditemreportsummary-self-'>DETECTION_UNITS:DetectedItemReportSummary(self)</h3>
+<p>Report summary of a DetectedItem using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1145,6 +1282,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=detection_units-detectedreportdetailed></span><h3 id='detection_units-detectedreportdetailed-'>DETECTION_UNITS:DetectedReportDetailed()</h3>
+<p>Report detailed of a detection result.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1171,6 +1310,8 @@ It will build a DetectedItems[] list filled with DetectedItems, grouped by the t
 Each DetectedItem will contain a field Set, which contains a <a href="#set_unit-class-">SET_UNIT</a> containing ONE <a href="#unit-module-">UNIT</a> object reference.
 Beware that when the amount of different types detected is large, the DetectedItems[] list will be large also.</p>
 <span id=detection_types-new-detectionsetgroup></span><h3 id='detection_types-new-detectionsetgroup-'>DETECTION_TYPES:New(DetectionSetGroup)</h3>
+<p>DETECTION_TYPES constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1184,6 +1325,8 @@ Beware that when the amount of different types detected is large, the DetectedIt
 <li><a href="#detection_types-class-">DETECTION_TYPES</a> </li>
 </ul>
 <span id=detection_types-getchangetext-detecteditem></span><h3 id='detection_types-getchangetext-detecteditem-'>DETECTION_TYPES:GetChangeText(DetectedItem)</h3>
+<p>Make text documenting the changes of the detected zone.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1198,6 +1341,9 @@ self</li>
 <li><u>String</u>  The Changes text</li>
 </ul>
 <span id=detection_types-createdetectionsets></span><h3 id='detection_types-createdetectionsets-'>DETECTION_TYPES:CreateDetectionSets()</h3>
+<p>Create the DetectedItems list from the DetectedObjects table.
+For each DetectedItem, a one field array is created containing the Unit detected.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1211,6 +1357,8 @@ self</li>
 <li><a href="#detection_types-class-">DETECTION_TYPES</a></li>
 </ul>
 <span id=detection_types-detecteditemreportsummary-self></span><h3 id='detection_types-detecteditemreportsummary-self-'>DETECTION_TYPES:DetectedItemReportSummary(self)</h3>
+<p>Report summary of a DetectedItem using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1225,6 +1373,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=detection_types-detectedreportdetailed></span><h3 id='detection_types-detectedreportdetailed-'>DETECTION_TYPES:DetectedReportDetailed()</h3>
+<p>Report detailed of a detection result.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1279,6 +1429,8 @@ If you want to obtain a specific zone from the DetectedZones, use the method DET
 <li><a href="#detection_base-detecteditems-class-">DetectedItems</a>DetectedItems : A list of areas containing the set of <a href="#unit-module-">Unit</a>s, <a href="#zone-module-">Zone</a>s, the center <a href="#unit-module-">Unit</a> within the zone, and ID of each area that was detected within a DetectionZoneRange.</li>
 </ul>
 <span id=detection_areas-new-detectionsetgroup-detectionzonerange></span><h3 id='detection_areas-new-detectionsetgroup-detectionzonerange-'>DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)</h3>
+<p>DETECTION_AREAS constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1294,6 +1446,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-detecteditemreportsummary-self></span><h3 id='detection_areas-detecteditemreportsummary-self-'>DETECTION_AREAS:DetectedItemReportSummary(self)</h3>
+<p>Report summary of a detected item using a given numeric index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1308,6 +1462,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=detection_areas-isfriendliesnearby></span><h3 id='detection_areas-isfriendliesnearby-'>DETECTION_AREAS:IsFriendliesNearBy()</h3>
+<p>Returns if there are friendlies nearby the FAC units ...</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1321,6 +1477,8 @@ self</li>
 <li><u>Boolean</u>  trhe if there are friendlies nearby</li>
 </ul>
 <span id=detection_areas-calculatethreatlevela2g-detecteditem></span><h3 id='detection_areas-calculatethreatlevela2g-detecteditem-'>DETECTION_AREAS:CalculateThreatLevelA2G(DetectedItem)</h3>
+<p>Calculate the maxium A2G threat level of the DetectedItem.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1331,6 +1489,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=detection_areas-nearestfac-detecteditem></span><h3 id='detection_areas-nearestfac-detecteditem-'>DETECTION_AREAS:NearestFAC(DetectedItem)</h3>
+<p>Find the nearest FAC of the DetectedItem.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1345,6 +1505,8 @@ self</li>
 <li><a href="#unit-class-">UNIT</a>  The nearest FAC unit</li>
 </ul>
 <span id=detection_areas-gettreatlevela2g-detecteditem></span><h3 id='detection_areas-gettreatlevela2g-detecteditem-'>DETECTION_AREAS:GetTreatLevelA2G(DetectedItem)</h3>
+<p>Returns the A2G threat level of the units in the DetectedItem</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1359,6 +1521,8 @@ self</li>
 <li><u>Number</u>  a scale from 0 to 10.</li>
 </ul>
 <span id=detection_areas-smokedetectedunits></span><h3 id='detection_areas-smokedetectedunits-'>DETECTION_AREAS:SmokeDetectedUnits()</h3>
+<p>Smoke the detected units</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1372,6 +1536,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-flaredetectedunits></span><h3 id='detection_areas-flaredetectedunits-'>DETECTION_AREAS:FlareDetectedUnits()</h3>
+<p>Flare the detected units</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1385,6 +1551,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-smokedetectedzones></span><h3 id='detection_areas-smokedetectedzones-'>DETECTION_AREAS:SmokeDetectedZones()</h3>
+<p>Smoke the detected zones</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1398,6 +1566,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-flaredetectedzones></span><h3 id='detection_areas-flaredetectedzones-'>DETECTION_AREAS:FlareDetectedZones()</h3>
+<p>Flare the detected zones</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1411,6 +1581,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-bounddetectedzones></span><h3 id='detection_areas-bounddetectedzones-'>DETECTION_AREAS:BoundDetectedZones()</h3>
+<p>Bound the detected zones</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1424,6 +1596,8 @@ self</li>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
 </ul>
 <span id=detection_areas-getchangetext-detecteditem></span><h3 id='detection_areas-getchangetext-detecteditem-'>DETECTION_AREAS:GetChangeText(DetectedItem)</h3>
+<p>Make text documenting the changes of the detected zone.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1438,6 +1612,8 @@ self</li>
 <li><u>String</u>  The Changes text</li>
 </ul>
 <span id=detection_areas-createdetectionsets></span><h3 id='detection_areas-createdetectionsets-'>DETECTION_AREAS:CreateDetectionSets()</h3>
+<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
+
 <h4> Parameters </h4>
 
 <ul>

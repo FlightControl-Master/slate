@@ -45,6 +45,8 @@ BASE
                 `-- AIRBASE
 </pre>
 <span id=airbase-register-airbasename></span><h3 id='airbase-register-airbasename-'>AIRBASE:Register(AirbaseName)</h3>
+<p>Create a new AIRBASE from DCSAirbase.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -59,6 +61,8 @@ self</li>
 <li><a href="#airbase-class-">AIRBASE</a> </li>
 </ul>
 <span id=airbase-find-dcsairbase></span><h3 id='airbase-find-dcsairbase-'>AIRBASE:Find(DCSAirbase)</h3>
+<p>Finds a AIRBASE from the _DATABASE using a DCSAirbase object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -73,6 +77,8 @@ self</li>
 <li><a href="#airbase-class-">AIRBASE</a> </li>
 </ul>
 <span id=airbase-findbyname-airbasename></span><h3 id='airbase-findbyname-airbasename-'>AIRBASE:FindByName(AirbaseName)</h3>
+<p>Find a AIRBASE in the _DATABASE using the name of an existing DCS Airbase.</p>
+
 <h4> Parameters </h4>
 
 <ul>

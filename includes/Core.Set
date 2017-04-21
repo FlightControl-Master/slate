@@ -60,6 +60,8 @@ You can set the <strong>&quot;yield interval&quot;</strong>, and the <strong>&qu
 <span id=set_base-new></span><h3 id='set_base-new-'>SET_BASE:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_BASE Object. This DBObject will contain a reference to all Group and Unit Templates defined within the ME and the DCSRTE.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_BASE</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_BASE object, building a set of units belonging to a coalitions, categories, countries, types or with defined prefix names.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -73,6 +75,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-getset></span><h3 id='set_base-getset-'>SET_BASE:GetSet()</h3>
+<p>Gets the Set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -86,6 +90,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-add-objectname-object></span><h3 id='set_base-add-objectname-object-'>SET_BASE:Add(ObjectName, Object)</h3>
+<p>Adds a <a href="#base-class-">BASE</a> object in the <a href="#set_base-class-">SET_BASE</a>, using a given ObjectName as the index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -101,6 +107,8 @@ self</li>
 <li><a href="#base-class-">BASE</a>  The added BASE Object.</li>
 </ul>
 <span id=set_base-addobject-object></span><h3 id='set_base-addobject-object-'>SET_BASE:AddObject(Object)</h3>
+<p>Adds a <a href="#base-class-">BASE</a> object in the <a href="#set_base-class-">SET_BASE</a>, using the Object Name as the index.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -115,6 +123,8 @@ self</li>
 <li><a href="#base-class-">BASE</a>  The added BASE Object.</li>
 </ul>
 <span id=set_base-remove-objectname></span><h3 id='set_base-remove-objectname-'>SET_BASE:Remove(ObjectName)</h3>
+<p>Removes a <a href="#base-class-">BASE</a> object from the <a href="#set_base-class-">SET_BASE</a> and derived classes, based on the Object Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -125,6 +135,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=set_base-get-objectname></span><h3 id='set_base-get-objectname-'>SET_BASE:Get(ObjectName)</h3>
+<p>Gets a <a href="#base-class-">BASE</a> object from the <a href="#set_base-class-">SET_BASE</a> and derived classes, based on the Object Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -139,6 +151,8 @@ self</li>
 <li><a href="#base-class-">BASE</a> </li>
 </ul>
 <span id=set_base-getfirst></span><h3 id='set_base-getfirst-'>SET_BASE:GetFirst()</h3>
+<p>Gets the first object from the <a href="#set_base-class-">SET_BASE</a> and derived classes.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -152,6 +166,8 @@ self</li>
 <li><a href="#base-class-">BASE</a> </li>
 </ul>
 <span id=set_base-getlast></span><h3 id='set_base-getlast-'>SET_BASE:GetLast()</h3>
+<p>Gets the last object from the <a href="#set_base-class-">SET_BASE</a> and derived classes.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -165,6 +181,8 @@ self</li>
 <li><a href="#base-class-">BASE</a> </li>
 </ul>
 <span id=set_base-getrandom></span><h3 id='set_base-getrandom-'>SET_BASE:GetRandom()</h3>
+<p>Gets a random object from the <a href="#set_base-class-">SET_BASE</a> and derived classes.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -178,6 +196,8 @@ self</li>
 <li><a href="#base-class-">BASE</a> </li>
 </ul>
 <span id=set_base-count></span><h3 id='set_base-count-'>SET_BASE:Count()</h3>
+<p>Retrieves the amount of objects in the <a href="#set_base-class-">SET_BASE</a> and derived classes.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -191,6 +211,8 @@ self</li>
 <li><u>Number</u> </li>
 </ul>
 <span id=set_base-setdatabase-baseset></span><h3 id='set_base-setdatabase-baseset-'>SET_BASE:SetDatabase(BaseSet)</h3>
+<p>Copies the Filter criteria from a given Set (for rebuilding a new Set based on an existing Set).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -206,6 +228,8 @@ BaseSet</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-setiteratorintervals-yieldinterval-timeinterval></span><h3 id='set_base-setiteratorintervals-yieldinterval-timeinterval-'>SET_BASE:SetIteratorIntervals(YieldInterval, TimeInterval)</h3>
+<p>Define the SET iterator <strong>&quot;yield interval&quot;</strong> and the <strong>&quot;time interval&quot;</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -221,6 +245,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-filteronce></span><h3 id='set_base-filteronce-'>SET_BASE:FilterOnce()</h3>
+<p>Filters for the defined collection.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -234,6 +260,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-filterstop></span><h3 id='set_base-filterstop-'>SET_BASE:FilterStop()</h3>
+<p>Stops the filtering for the defined collection.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -247,6 +275,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-findnearestobjectfrompointvec2-pointvec2></span><h3 id='set_base-findnearestobjectfrompointvec2-pointvec2-'>SET_BASE:FindNearestObjectFromPointVec2(PointVec2)</h3>
+<p>Iterate the SET_BASE while identifying the nearest object from a @{Point#POINT_VEC2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -261,6 +291,8 @@ self</li>
 <li><a href="#base-class-">BASE</a>  The closest object.</li>
 </ul>
 <span id=set_base-foreach-iteratorfunction></span><h3 id='set_base-foreach-iteratorfunction-'>SET_BASE:ForEach(IteratorFunction)</h3>
+<p>Iterate the SET_BASE and derived classes and call an iterator function for the given SET_BASE, providing the Object for each element within the set and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -275,6 +307,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-isincludeobject-object></span><h3 id='set_base-isincludeobject-object-'>SET_BASE:IsIncludeObject(Object)</h3>
+<p>Decides whether to include the Object</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -289,6 +323,8 @@ self</li>
 <li><a href="#set_base-class-">SET_BASE</a></li>
 </ul>
 <span id=set_base-flush></span><h3 id='set_base-flush-'>SET_BASE:Flush()</h3>
+<p>Flushes the current SET_BASE contents in the log ... (for debugging reasons).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -362,6 +398,8 @@ The following iterator methods are currently available within the SET_GROUP:</p>
 <span id=set_group-new></span><h3 id='set_group-new-'>SET_GROUP:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_GROUP Object. This DBObject will contain a reference to all alive GROUPS.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_GROUP object, building a set of groups belonging to a coalitions, categories, countries, types or with defined prefix names.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -375,6 +413,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-addgroupsbyname-addgroupnames></span><h3 id='set_group-addgroupsbyname-addgroupnames-'>SET_GROUP:AddGroupsByName(AddGroupNames)</h3>
+<p>Add GROUP(s) to SET_GROUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -388,6 +428,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_group-removegroupsbyname-removegroupnames></span><h3 id='set_group-removegroupsbyname-removegroupnames-'>SET_GROUP:RemoveGroupsByName(RemoveGroupNames)</h3>
+<p>Remove GROUP(s) from SET_GROUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -401,6 +443,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_group-findgroup-groupname></span><h3 id='set_group-findgroup-groupname-'>SET_GROUP:FindGroup(GroupName)</h3>
+<p>Finds a Group based on the Group Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -415,6 +459,8 @@ self</li>
 <li><a href="#group-class-">GROUP</a>  The found Group.</li>
 </ul>
 <span id=set_group-findnearestgroupfrompointvec2-pointvec2></span><h3 id='set_group-findnearestgroupfrompointvec2-pointvec2-'>SET_GROUP:FindNearestGroupFromPointVec2(PointVec2)</h3>
+<p>Iterate the SET_GROUP while identifying the nearest object from a @{Point#POINT_VEC2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -429,6 +475,9 @@ self</li>
 <li><a href="#group-class-">GROUP</a>  The closest group.</li>
 </ul>
 <span id=set_group-filtercoalitions-coalitions></span><h3 id='set_group-filtercoalitions-coalitions-'>SET_GROUP:FilterCoalitions(Coalitions)</h3>
+<p>Builds a set of groups of coalitions.
+Possible current coalitions are red, blue and neutral.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -443,6 +492,9 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-filtercategories-categories></span><h3 id='set_group-filtercategories-categories-'>SET_GROUP:FilterCategories(Categories)</h3>
+<p>Builds a set of groups out of categories.
+Possible current categories are plane, helicopter, ground, ship.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -457,6 +509,9 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-filtercountries-countries></span><h3 id='set_group-filtercountries-countries-'>SET_GROUP:FilterCountries(Countries)</h3>
+<p>Builds a set of groups of defined countries.
+Possible current countries are those known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -471,6 +526,9 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-filterprefixes-prefixes></span><h3 id='set_group-filterprefixes-prefixes-'>SET_GROUP:FilterPrefixes(Prefixes)</h3>
+<p>Builds a set of groups of defined GROUP prefixes.
+All the groups starting with the given prefixes will be included within the set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -485,6 +543,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-filterstart></span><h3 id='set_group-filterstart-'>SET_GROUP:FilterStart()</h3>
+<p>Starts the filtering.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -498,6 +558,9 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-addindatabase-event></span><h3 id='set_group-addindatabase-event-'>SET_GROUP:AddInDatabase(Event)</h3>
+<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -513,6 +576,9 @@ self</li>
 <li><u>List[]</u>  The GROUP</li>
 </ul>
 <span id=set_group-findindatabase-event></span><h3 id='set_group-findindatabase-event-'>SET_GROUP:FindInDatabase(Event)</h3>
+<p>Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -528,6 +594,8 @@ self</li>
 <li><u>List[]</u>  The GROUP</li>
 </ul>
 <span id=set_group-foreachgroup-iteratorfunction></span><h3 id='set_group-foreachgroup-iteratorfunction-'>SET_GROUP:ForEachGroup(IteratorFunction)</h3>
+<p>Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP, providing the GROUP and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -542,6 +610,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-foreachgroupcompletelyinzone-zoneobject-iteratorfunction></span><h3 id='set_group-foreachgroupcompletelyinzone-zoneobject-iteratorfunction-'>SET_GROUP:ForEachGroupCompletelyInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP presence completely in a <a href="#zone-module-">Zone</a>, providing the GROUP and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -557,6 +627,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-foreachgrouppartlyinzone-zoneobject-iteratorfunction></span><h3 id='set_group-foreachgrouppartlyinzone-zoneobject-iteratorfunction-'>SET_GROUP:ForEachGroupPartlyInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP presence partly in a <a href="#zone-module-">Zone</a>, providing the GROUP and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -572,6 +644,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
 <span id=set_group-foreachgroupnotinzone-zoneobject-iteratorfunction></span><h3 id='set_group-foreachgroupnotinzone-zoneobject-iteratorfunction-'>SET_GROUP:ForEachGroupNotInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_GROUP and call an iterator function for each <strong>alive</strong> GROUP presence not in a <a href="#zone-module-">Zone</a>, providing the GROUP and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -676,6 +750,8 @@ The following iterator methods are currently available within the SET_UNIT:</p>
 <span id=set_unit-new></span><h3 id='set_unit-new-'>SET_UNIT:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_UNIT Object. This DBObject will contain a reference to all alive Units.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_UNIT</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_UNIT object, building a set of units belonging to a coalitions, categories, countries, types or with defined prefix names.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -689,6 +765,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-addunit-addunit></span><h3 id='set_unit-addunit-addunit-'>SET_UNIT:AddUnit(AddUnit)</h3>
+<p>Add UNIT(s) to SET_UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -703,6 +781,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-addunitsbyname-addunitnames></span><h3 id='set_unit-addunitsbyname-addunitnames-'>SET_UNIT:AddUnitsByName(AddUnitNames)</h3>
+<p>Add UNIT(s) to SET_UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -717,6 +797,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-removeunitsbyname-removeunitnames></span><h3 id='set_unit-removeunitsbyname-removeunitnames-'>SET_UNIT:RemoveUnitsByName(RemoveUnitNames)</h3>
+<p>Remove UNIT(s) from SET_UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -730,6 +812,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_unit-findunit-unitname></span><h3 id='set_unit-findunit-unitname-'>SET_UNIT:FindUnit(UnitName)</h3>
+<p>Finds a Unit based on the Unit Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -744,6 +828,9 @@ self</li>
 <li><a href="#unit-class-">UNIT</a>  The found Unit.</li>
 </ul>
 <span id=set_unit-filtercoalitions-coalitions></span><h3 id='set_unit-filtercoalitions-coalitions-'>SET_UNIT:FilterCoalitions(Coalitions)</h3>
+<p>Builds a set of units of coalitions.
+Possible current coalitions are red, blue and neutral.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -758,6 +845,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filtercategories-categories></span><h3 id='set_unit-filtercategories-categories-'>SET_UNIT:FilterCategories(Categories)</h3>
+<p>Builds a set of units out of categories.
+Possible current categories are plane, helicopter, ground, ship.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -772,6 +862,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filtertypes-types></span><h3 id='set_unit-filtertypes-types-'>SET_UNIT:FilterTypes(Types)</h3>
+<p>Builds a set of units of defined unit types.
+Possible current types are those types known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -786,6 +879,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filtercountries-countries></span><h3 id='set_unit-filtercountries-countries-'>SET_UNIT:FilterCountries(Countries)</h3>
+<p>Builds a set of units of defined countries.
+Possible current countries are those known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -800,6 +896,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filterprefixes-prefixes></span><h3 id='set_unit-filterprefixes-prefixes-'>SET_UNIT:FilterPrefixes(Prefixes)</h3>
+<p>Builds a set of units of defined unit prefixes.
+All the units starting with the given prefixes will be included within the set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -814,6 +913,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filterhasradar-radartypes></span><h3 id='set_unit-filterhasradar-radartypes-'>SET_UNIT:FilterHasRadar(RadarTypes)</h3>
+<p>Builds a set of units having a radar of give types.
+All the units having a radar of a given type will be included within the set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -828,6 +930,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filterhassead></span><h3 id='set_unit-filterhassead-'>SET_UNIT:FilterHasSEAD()</h3>
+<p>Builds a set of SEADable units.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -841,6 +945,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-filterstart></span><h3 id='set_unit-filterstart-'>SET_UNIT:FilterStart()</h3>
+<p>Starts the filtering.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -854,6 +960,9 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-addindatabase-event></span><h3 id='set_unit-addindatabase-event-'>SET_UNIT:AddInDatabase(Event)</h3>
+<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -869,6 +978,9 @@ self</li>
 <li><u>List[]</u>  The UNIT</li>
 </ul>
 <span id=set_unit-findindatabase-event></span><h3 id='set_unit-findindatabase-event-'>SET_UNIT:FindInDatabase(Event)</h3>
+<p>Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -884,6 +996,8 @@ self</li>
 <li><u>List[]</u>  The UNIT</li>
 </ul>
 <span id=set_unit-foreachunit-iteratorfunction></span><h3 id='set_unit-foreachunit-iteratorfunction-'>SET_UNIT:ForEachUnit(IteratorFunction)</h3>
+<p>Iterate the SET_UNIT and call an interator function for each <strong>alive</strong> UNIT, providing the UNIT and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -898,6 +1012,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-foreachunitcompletelyinzone-zoneobject-iteratorfunction></span><h3 id='set_unit-foreachunitcompletelyinzone-zoneobject-iteratorfunction-'>SET_UNIT:ForEachUnitCompletelyInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_UNIT and call an iterator function for each <strong>alive</strong> UNIT presence completely in a <a href="#zone-module-">Zone</a>, providing the UNIT and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -913,6 +1029,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-foreachunitnotinzone-zoneobject-iteratorfunction></span><h3 id='set_unit-foreachunitnotinzone-zoneobject-iteratorfunction-'>SET_UNIT:ForEachUnitNotInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_UNIT and call an iterator function for each <strong>alive</strong> UNIT presence not in a <a href="#zone-module-">Zone</a>, providing the UNIT and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -928,6 +1046,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-getunittypes></span><h3 id='set_unit-getunittypes-'>SET_UNIT:GetUnitTypes()</h3>
+<p>Returns map of unit types.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -941,6 +1061,8 @@ self</li>
 <li>#map&lt;<u>String</u>,<u>Number</u>&gt;  A map of the unit types found. The key is the UnitTypeName and the value is the amount of unit types found.</li>
 </ul>
 <span id=set_unit-getunittypestext></span><h3 id='set_unit-getunittypestext-'>SET_UNIT:GetUnitTypesText()</h3>
+<p>Returns a comma separated string of the unit types with a count in the  <a href="#set-module-">Set</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -954,6 +1076,8 @@ self</li>
 <li><u>String</u>  The unit types string</li>
 </ul>
 <span id=set_unit-getunitthreatlevels></span><h3 id='set_unit-getunitthreatlevels-'>SET_UNIT:GetUnitThreatLevels()</h3>
+<p>Returns map of unit threat levels.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -967,6 +1091,8 @@ self</li>
 <li><u>List[]</u>. </li>
 </ul>
 <span id=set_unit-calculatethreatlevela2g></span><h3 id='set_unit-calculatethreatlevela2g-'>SET_UNIT:CalculateThreatLevelA2G()</h3>
+<p>Calculate the maxium A2G threat level of the SET_UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -976,6 +1102,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=set_unit-hasradar-radartype></span><h3 id='set_unit-hasradar-radartype-'>SET_UNIT:HasRadar(RadarType)</h3>
+<p>Returns if the <a href="#set-module-">Set</a> has targets having a radar (of a given type).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -990,6 +1118,8 @@ self</li>
 <li><u>Number</u>  The amount of radars in the Set with the given type</li>
 </ul>
 <span id=set_unit-hassead></span><h3 id='set_unit-hassead-'>SET_UNIT:HasSEAD()</h3>
+<p>Returns if the <a href="#set-module-">Set</a> has targets that can be SEADed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1003,6 +1133,8 @@ self</li>
 <li><u>Number</u>  The amount of SEADable units in the Set</li>
 </ul>
 <span id=set_unit-hasgroundunits></span><h3 id='set_unit-hasgroundunits-'>SET_UNIT:HasGroundUnits()</h3>
+<p>Returns if the <a href="#set-module-">Set</a> has ground targets.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1016,6 +1148,8 @@ self</li>
 <li><u>Number</u>  The amount of ground targets in the Set.</li>
 </ul>
 <span id=set_unit-hasfriendlyunits></span><h3 id='set_unit-hasfriendlyunits-'>SET_UNIT:HasFriendlyUnits()</h3>
+<p>Returns if the <a href="#set-module-">Set</a> has friendly ground units.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1043,6 +1177,8 @@ self</li>
 <li><a href="#set_unit-class-">SET_UNIT</a></li>
 </ul>
 <span id=set_unit-gettypenames-delimiter></span><h3 id='set_unit-gettypenames-delimiter-'>SET_UNIT:GetTypeNames(Delimiter)</h3>
+<p>Retrieve the type names of the <a href="#unit-module-">Unit</a>s in the SET, delimited by an optional delimiter.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1116,6 +1252,8 @@ The following iterator methods are currently available within the SET_CLIENT:</p
 <span id=set_client-new></span><h3 id='set_client-new-'>SET_CLIENT:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CLIENT Object. This DBObject will contain a reference to all Clients.</span>
 <span class="n">DBObject</span> <span class="o">=</span> <span class="n">SET_CLIENT</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_CLIENT object, building a set of clients belonging to a coalitions, categories, countries, types or with defined prefix names.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1129,6 +1267,8 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-addclientsbyname-addclientnames></span><h3 id='set_client-addclientsbyname-addclientnames-'>SET_CLIENT:AddClientsByName(AddClientNames)</h3>
+<p>Add CLIENT(s) to SET_CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1142,6 +1282,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_client-removeclientsbyname-removeclientnames></span><h3 id='set_client-removeclientsbyname-removeclientnames-'>SET_CLIENT:RemoveClientsByName(RemoveClientNames)</h3>
+<p>Remove CLIENT(s) from SET_CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1155,6 +1297,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_client-findclient-clientname></span><h3 id='set_client-findclient-clientname-'>SET_CLIENT:FindClient(ClientName)</h3>
+<p>Finds a Client based on the Client Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1169,6 +1313,9 @@ self</li>
 <li><a href="#client-class-">CLIENT</a>  The found Client.</li>
 </ul>
 <span id=set_client-filtercoalitions-coalitions></span><h3 id='set_client-filtercoalitions-coalitions-'>SET_CLIENT:FilterCoalitions(Coalitions)</h3>
+<p>Builds a set of clients of coalitions.
+Possible current coalitions are red, blue and neutral.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1183,6 +1330,9 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-filtercategories-categories></span><h3 id='set_client-filtercategories-categories-'>SET_CLIENT:FilterCategories(Categories)</h3>
+<p>Builds a set of clients out of categories.
+Possible current categories are plane, helicopter, ground, ship.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1197,6 +1347,9 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-filtertypes-types></span><h3 id='set_client-filtertypes-types-'>SET_CLIENT:FilterTypes(Types)</h3>
+<p>Builds a set of clients of defined client types.
+Possible current types are those types known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1211,6 +1364,9 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-filtercountries-countries></span><h3 id='set_client-filtercountries-countries-'>SET_CLIENT:FilterCountries(Countries)</h3>
+<p>Builds a set of clients of defined countries.
+Possible current countries are those known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1225,6 +1381,9 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-filterprefixes-prefixes></span><h3 id='set_client-filterprefixes-prefixes-'>SET_CLIENT:FilterPrefixes(Prefixes)</h3>
+<p>Builds a set of clients of defined client prefixes.
+All the clients starting with the given prefixes will be included within the set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1239,6 +1398,8 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-filterstart></span><h3 id='set_client-filterstart-'>SET_CLIENT:FilterStart()</h3>
+<p>Starts the filtering.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1252,6 +1413,9 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-addindatabase-event></span><h3 id='set_client-addindatabase-event-'>SET_CLIENT:AddInDatabase(Event)</h3>
+<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1267,6 +1431,9 @@ self</li>
 <li><u>List[]</u>  The CLIENT</li>
 </ul>
 <span id=set_client-findindatabase-event></span><h3 id='set_client-findindatabase-event-'>SET_CLIENT:FindInDatabase(Event)</h3>
+<p>Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1282,6 +1449,8 @@ self</li>
 <li><u>List[]</u>  The CLIENT</li>
 </ul>
 <span id=set_client-foreachclient-iteratorfunction></span><h3 id='set_client-foreachclient-iteratorfunction-'>SET_CLIENT:ForEachClient(IteratorFunction)</h3>
+<p>Iterate the SET_CLIENT and call an interator function for each <strong>alive</strong> CLIENT, providing the CLIENT and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1296,6 +1465,8 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-foreachclientinzone-zoneobject-iteratorfunction></span><h3 id='set_client-foreachclientinzone-zoneobject-iteratorfunction-'>SET_CLIENT:ForEachClientInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_CLIENT and call an iterator function for each <strong>alive</strong> CLIENT presence completely in a <a href="#zone-module-">Zone</a>, providing the CLIENT and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1311,6 +1482,8 @@ self</li>
 <li><a href="#set_client-class-">SET_CLIENT</a></li>
 </ul>
 <span id=set_client-foreachclientnotinzone-zoneobject-iteratorfunction></span><h3 id='set_client-foreachclientnotinzone-zoneobject-iteratorfunction-'>SET_CLIENT:ForEachClientNotInZone(ZoneObject, IteratorFunction)</h3>
+<p>Iterate the SET_CLIENT and call an iterator function for each <strong>alive</strong> CLIENT presence not in a <a href="#zone-module-">Zone</a>, providing the CLIENT and optional parameters to the called function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1385,6 +1558,8 @@ The following iterator methods are currently available within the SET_AIRBASE:</
 <span id=set_airbase-new></span><h3 id='set_airbase-new-'>SET_AIRBASE:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_AIRBASE Object. The DatabaseSet will contain a reference to all Airbases.</span>
 <span class="n">DatabaseSet</span> <span class="o">=</span> <span class="n">SET_AIRBASE</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_AIRBASE object, building a set of airbases belonging to a coalitions and categories.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1398,6 +1573,8 @@ self</li>
 <li><a href="#set_airbase-class-">SET_AIRBASE</a></li>
 </ul>
 <span id=set_airbase-addairbasesbyname-addairbasenames></span><h3 id='set_airbase-addairbasesbyname-addairbasenames-'>SET_AIRBASE:AddAirbasesByName(AddAirbaseNames)</h3>
+<p>Add AIRBASEs to SET_AIRBASE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1411,6 +1588,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_airbase-removeairbasesbyname-removeairbasenames></span><h3 id='set_airbase-removeairbasesbyname-removeairbasenames-'>SET_AIRBASE:RemoveAirbasesByName(RemoveAirbaseNames)</h3>
+<p>Remove AIRBASEs from SET_AIRBASE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1424,6 +1603,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_airbase-findairbase-airbasename></span><h3 id='set_airbase-findairbase-airbasename-'>SET_AIRBASE:FindAirbase(AirbaseName)</h3>
+<p>Finds a Airbase based on the Airbase Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1438,6 +1619,9 @@ self</li>
 <li><a href="#airbase-class-">AIRBASE</a>  The found Airbase.</li>
 </ul>
 <span id=set_airbase-filtercoalitions-coalitions></span><h3 id='set_airbase-filtercoalitions-coalitions-'>SET_AIRBASE:FilterCoalitions(Coalitions)</h3>
+<p>Builds a set of airbases of coalitions.
+Possible current coalitions are red, blue and neutral.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1452,6 +1636,9 @@ self</li>
 <li><a href="#set_airbase-class-">SET_AIRBASE</a></li>
 </ul>
 <span id=set_airbase-filtercategories-categories></span><h3 id='set_airbase-filtercategories-categories-'>SET_AIRBASE:FilterCategories(Categories)</h3>
+<p>Builds a set of airbases out of categories.
+Possible current categories are plane, helicopter, ground, ship.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1466,6 +1653,8 @@ self</li>
 <li><a href="#set_airbase-class-">SET_AIRBASE</a></li>
 </ul>
 <span id=set_airbase-filterstart></span><h3 id='set_airbase-filterstart-'>SET_AIRBASE:FilterStart()</h3>
+<p>Starts the filtering.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1479,6 +1668,9 @@ self</li>
 <li><a href="#set_airbase-class-">SET_AIRBASE</a></li>
 </ul>
 <span id=set_airbase-addindatabase-event></span><h3 id='set_airbase-addindatabase-event-'>SET_AIRBASE:AddInDatabase(Event)</h3>
+<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1494,6 +1686,9 @@ self</li>
 <li><u>List[]</u>  The AIRBASE</li>
 </ul>
 <span id=set_airbase-findindatabase-event></span><h3 id='set_airbase-findindatabase-event-'>SET_AIRBASE:FindInDatabase(Event)</h3>
+<p>Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1509,6 +1704,8 @@ self</li>
 <li><u>List[]</u>  The AIRBASE</li>
 </ul>
 <span id=set_airbase-foreachairbase-iteratorfunction></span><h3 id='set_airbase-foreachairbase-iteratorfunction-'>SET_AIRBASE:ForEachAirbase(IteratorFunction)</h3>
+<p>Iterate the SET_AIRBASE and call an interator function for each AIRBASE, providing the AIRBASE and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1523,6 +1720,8 @@ self</li>
 <li><a href="#set_airbase-class-">SET_AIRBASE</a></li>
 </ul>
 <span id=set_airbase-findnearestairbasefrompointvec2-pointvec2></span><h3 id='set_airbase-findnearestairbasefrompointvec2-pointvec2-'>SET_AIRBASE:FindNearestAirbaseFromPointVec2(PointVec2)</h3>
+<p>Iterate the SET_AIRBASE while identifying the nearest <a href="#airbase-class-">AIRBASE</a> from a @{Point#POINT_VEC2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1601,6 +1800,8 @@ The following iterator methods are currently available within the SET_CARGO:</p>
 <span id=set_cargo-new></span><h3 id='set_cargo-new-'>SET_CARGO:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.</span>
 <span class="n">DatabaseSet</span> <span class="o">=</span> <span class="n">SET_CARGO</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
+<p>Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1614,6 +1815,8 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addcargosbyname-addcargonames></span><h3 id='set_cargo-addcargosbyname-addcargonames-'>SET_CARGO:AddCargosByName(AddCargoNames)</h3>
+<p>Add CARGOs to SET_CARGO.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1627,6 +1830,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-removecargosbyname-removecargonames></span><h3 id='set_cargo-removecargosbyname-removecargonames-'>SET_CARGO:RemoveCargosByName(RemoveCargoNames)</h3>
+<p>Remove CARGOs from SET_CARGO.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1640,6 +1845,8 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-findcargo-cargoname></span><h3 id='set_cargo-findcargo-cargoname-'>SET_CARGO:FindCargo(CargoName)</h3>
+<p>Finds a Cargo based on the Cargo Name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1654,6 +1861,9 @@ self</li>
 <li><a href="#cargo-class-">CARGO</a>  The found Cargo.</li>
 </ul>
 <span id=set_cargo-filtercoalitions-coalitions></span><h3 id='set_cargo-filtercoalitions-coalitions-'>SET_CARGO:FilterCoalitions(Coalitions)</h3>
+<p>Builds a set of cargos of coalitions.
+Possible current coalitions are red, blue and neutral.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1668,6 +1878,9 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtertypes-types></span><h3 id='set_cargo-filtertypes-types-'>SET_CARGO:FilterTypes(Types)</h3>
+<p>Builds a set of cargos of defined cargo types.
+Possible current types are those types known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1682,6 +1895,9 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtercountries-countries></span><h3 id='set_cargo-filtercountries-countries-'>SET_CARGO:FilterCountries(Countries)</h3>
+<p>Builds a set of cargos of defined countries.
+Possible current countries are those known within DCS world.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1696,6 +1912,9 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterprefixes-prefixes></span><h3 id='set_cargo-filterprefixes-prefixes-'>SET_CARGO:FilterPrefixes(Prefixes)</h3>
+<p>Builds a set of cargos of defined cargo prefixes.
+All the cargos starting with the given prefixes will be included within the set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1710,6 +1929,8 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterstart></span><h3 id='set_cargo-filterstart-'>SET_CARGO:FilterStart()</h3>
+<p>Starts the filtering.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1723,6 +1944,9 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addindatabase-event></span><h3 id='set_cargo-addindatabase-event-'>SET_CARGO:AddInDatabase(Event)</h3>
+<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1738,6 +1962,9 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-findindatabase-event></span><h3 id='set_cargo-findindatabase-event-'>SET_CARGO:FindInDatabase(Event)</h3>
+<p>Handles the Database to check on any event that Object exists in the Database.
+This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1753,6 +1980,8 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-foreachcargo-iteratorfunction></span><h3 id='set_cargo-foreachcargo-iteratorfunction-'>SET_CARGO:ForEachCargo(IteratorFunction)</h3>
+<p>Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1767,6 +1996,8 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-findnearestcargofrompointvec2-pointvec2></span><h3 id='set_cargo-findnearestcargofrompointvec2-pointvec2-'>SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)</h3>
+<p>Iterate the SET_CARGO while identifying the nearest <a href="#cargo-class-">CARGO</a> from a @{Point#POINT_VEC2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1795,6 +2026,8 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-oneventnewcargo-eventdata></span><h3 id='set_cargo-oneventnewcargo-eventdata-'>SET_CARGO:OnEventNewCargo(EventData)</h3>
+<p>Handles the OnEventNewCargo event for the Set.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -1805,6 +2038,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=set_cargo-oneventdeletecargo-eventdata></span><h3 id='set_cargo-oneventdeletecargo-eventdata-'>SET_CARGO:OnEventDeleteCargo(EventData)</h3>
+<p>Handles the OnDead or OnCrash event for alive units set.</p>
+
 <h4> Parameters </h4>
 
 <ul>

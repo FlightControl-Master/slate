@@ -10,6 +10,10 @@ BASE
 <span class="c1">-- Defends the Russian SA installations from SEAD attacks.</span>
 <span class="n">SEAD_RU_SAM_Defenses</span> <span class="o">=</span> <span class="n">SEAD</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'RU SA-6 Kub'</span><span class="p">,</span> <span class="s1">'RU SA-6 Defenses'</span><span class="p">,</span> <span class="s1">'RU MI-26 Troops'</span><span class="p">,</span> <span class="s1">'RU Attack Gori'</span> <span class="p">}</span> <span class="p">)</span>
 </code></pre>
+<p>Creates the main object which is handling defensive actions for SA sites or moving SA vehicles.
+When an anti radiation missile is fired (KH-58, KH-31P, KH-31A, KH-25MPU, HARM missiles), the SA will shut down their radars and will take evasive actions...
+Chances are big that the missile will miss.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -22,6 +26,9 @@ BASE
 <li>SEAD </li>
 </ul>
 <span id=sead-oneventshot-eventdata></span><h3 id='sead-oneventshot-eventdata-'>SEAD:OnEventShot(EventData)</h3>
+<p>Detects if an SA site was shot with an anti radiation missile. In this case, take evasive actions based on the skill level set within the ME.
+@see SEAD</p>
+
 <h4> Parameters </h4>
 
 <ul>

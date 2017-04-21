@@ -52,6 +52,8 @@ and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 <li><a href="#spawnstatic-spawnfromzone-zone-heading-(optional)">SPAWNSTATIC:SpawnFromZone()</a>: Spawn a new group in a <a href="#zone-module-">Zone</a>.</li>
 </ul>
 <span id=spawnstatic-newfromstatic-spawntemplateprefix></span><h3 id='spawnstatic-newfromstatic-spawntemplateprefix-'>SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</h3>
+<p>Creates the main object to spawn a <a href="#static-module-">Static</a> defined in the ME.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -66,6 +68,8 @@ self</li>
 <li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
 </ul>
 <span id=spawnstatic-newfromtype-spawntypename></span><h3 id='spawnstatic-newfromtype-spawntypename-'>SPAWNSTATIC:NewFromType(SpawnTypeName)</h3>
+<p>Creates the main object to spawn a <a href="#static-module-">Static</a> based on a type name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -80,6 +84,8 @@ self</li>
 <li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
 </ul>
 <span id=spawnstatic-spawnfrompointvec2-pointvec2-heading-optional></span><h3 id='spawnstatic-spawnfrompointvec2-pointvec2-heading-optional-'>SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</h3>
+<p>Creates a new <a href="#static-module-">Static</a> from a POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -96,6 +102,8 @@ self</li>
 <li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
 </ul>
 <span id=spawnstatic-spawnfromzone-zone-heading-optional></span><h3 id='spawnstatic-spawnfromzone-zone-heading-optional-'>SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</h3>
+<p>Creates a new <a href="#static-module-">Static</a> from a <a href="#zone-module-">Zone</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>

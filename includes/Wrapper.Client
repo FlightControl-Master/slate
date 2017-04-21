@@ -54,6 +54,8 @@ BASE
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 </code></pre>
+<p>Finds a CLIENT from the _DATABASE using the relevant DCS Unit.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -77,6 +79,9 @@ self</li>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*HOT-Deploy Troops 2'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 <span class="n">Mission</span><span class="p">:</span><span class="n">AddClient</span><span class="p">(</span> <span class="n">CLIENT</span><span class="p">:</span><span class="n">FindByName</span><span class="p">(</span> <span class="s1">'RU MI-8MTV2*RAMP-Deploy Troops 4'</span> <span class="p">):</span><span class="n">Transport</span><span class="p">()</span> <span class="p">)</span>
 </code></pre>
+<p>Finds a CLIENT from the _DATABASE using the relevant Client Unit Name.
+As an optional parameter, a briefing text can be given also.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -93,6 +98,8 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-transport></span><h3 id='client-transport-'>CLIENT:Transport()</h3>
+<p>Transport defines that the Client is a Transport. Transports show cargo.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -106,6 +113,8 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-addbriefing-clientbriefing></span><h3 id='client-addbriefing-clientbriefing-'>CLIENT:AddBriefing(ClientBriefing)</h3>
+<p>AddBriefing adds a briefing to a CLIENT when a player joins a mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -120,6 +129,8 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-showbriefing></span><h3 id='client-showbriefing-'>CLIENT:ShowBriefing()</h3>
+<p>Show the briefing of a CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -133,6 +144,8 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-showmissionbriefing-missionbriefing></span><h3 id='client-showmissionbriefing-missionbriefing-'>CLIENT:ShowMissionBriefing(MissionBriefing)</h3>
+<p>Show the mission briefing of a MISSION to the CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -147,6 +160,8 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-reset-clientname></span><h3 id='client-reset-clientname-'>CLIENT:Reset(ClientName)</h3>
+<p>Resets a CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -157,6 +172,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=client-ismultiseated></span><h3 id='client-ismultiseated-'>CLIENT:IsMultiSeated()</h3>
+<p>Checks if the CLIENT is a multi-seated UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -170,6 +187,8 @@ self</li>
 <li><u>Boolean</u>  true if multi-seated.</li>
 </ul>
 <span id=client-alive-callbackfunction></span><h3 id='client-alive-callbackfunction-'>CLIENT:Alive(CallBackFunction)</h3>
+<p>Checks for a client alive event and calls a function on a continuous basis.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -184,6 +203,9 @@ self</li>
 <li><a href="#client-class-">CLIENT</a></li>
 </ul>
 <span id=client-getdcsgroup></span><h3 id='client-getdcsgroup-'>CLIENT:GetDCSGroup()</h3>
+<p>Return the DCSGroup of a Client.
+This function is modified to deal with a couple of bugs in DCS 1.5.3</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -197,6 +219,8 @@ self</li>
 <li>Dcs.DCSWrapper.Group#Group </li>
 </ul>
 <span id=client-getclientgroupid></span><h3 id='client-getclientgroupid-'>CLIENT:GetClientGroupID()</h3>
+<p>Get the group ID of the client.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -210,6 +234,8 @@ self</li>
 <li><a href="#group.id-class-">Group.ID</a> </li>
 </ul>
 <span id=client-getclientgroupname></span><h3 id='client-getclientgroupname-'>CLIENT:GetClientGroupName()</h3>
+<p>Get the name of the group of the client.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -223,6 +249,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=client-getclientgroupunit></span><h3 id='client-getclientgroupunit-'>CLIENT:GetClientGroupUnit()</h3>
+<p>Returns the UNIT of the CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -236,6 +264,8 @@ self</li>
 <li><a href="#unit-class-">UNIT</a> </li>
 </ul>
 <span id=client-getclientgroupdcsunit></span><h3 id='client-getclientgroupdcsunit-'>CLIENT:GetClientGroupDCSUnit()</h3>
+<p>Returns the DCSUnit of the CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -249,6 +279,8 @@ self</li>
 <li><a href="#unit-class-">Unit</a> </li>
 </ul>
 <span id=client-istransport></span><h3 id='client-istransport-'>CLIENT:IsTransport()</h3>
+<p>Evaluates if the CLIENT is a transport.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -262,6 +294,9 @@ self</li>
 <li><u>Boolean</u>  true is a transport.</li>
 </ul>
 <span id=client-showcargo></span><h3 id='client-showcargo-'>CLIENT:ShowCargo()</h3>
+<p>Shows the <a href="#cargo-class-">CARGO</a> contained within the CLIENT to the player as a message.
+The <a href="#cargo-class-">CARGO</a> is shown using the <a href="#message-class-">MESSAGE</a> distribution system.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -271,6 +306,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=client-message-message-messageduration-messagecategory-messageinterval-messageid></span><h3 id='client-message-message-messageduration-messagecategory-messageinterval-messageid-'>CLIENT:Message(Message, MessageDuration, MessageCategory, MessageInterval, MessageID)</h3>
+<p>The main message driver for the CLIENT.
+This function displays various messages to the Player logged into the CLIENT through the DCS World Messaging system.</p>
+
 <h4> Parameters </h4>
 
 <ul>

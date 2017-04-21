@@ -56,6 +56,8 @@ BASE
 <li><a href="#set_client-class-">SET_CLIENT</a> SetClient</li>
 </ul>
 <span id=airbasepolice_base-new-a-a></span><h3 id='airbasepolice_base-new-a-a-'>AIRBASEPOLICE_BASE:New(A, A)</h3>
+<p>Creates a new AIRBASEPOLICE_BASE object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -71,6 +73,8 @@ self</li>
 <li><a href="#airbasepolice_base-class-">AIRBASEPOLICE_BASE</a></li>
 </ul>
 <span id=airbasepolice_base-monitor-airbasenames></span><h3 id='airbasepolice_base-monitor-airbasenames-'>AIRBASEPOLICE_BASE:Monitor(AirbaseNames)</h3>
+<p>Monitor a table of airbase names.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -102,6 +106,8 @@ BASE
 <li><a href="#set_client-class-">SET_CLIENT</a> SetClient</li>
 </ul>
 <span id=airbasepolice_caucasus-new-a></span><h3 id='airbasepolice_caucasus-new-a-'>AIRBASEPOLICE_CAUCASUS:New(A)</h3>
+<p>Creates a new AIRBASEPOLICE_CAUCASUS object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -123,6 +129,8 @@ BASE
         `-- AIRBASEPOLICE_NEVADA
 </pre>
 <span id=airbasepolice_nevada-new-a></span><h3 id='airbasepolice_nevada-new-a-'>AIRBASEPOLICE_NEVADA:New(A)</h3>
+<p>Creates a new AIRBASEPOLICE_NEVADA object.</p>
+
 <h4> Parameters </h4>
 
 <ul>

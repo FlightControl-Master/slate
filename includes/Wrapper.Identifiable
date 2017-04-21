@@ -39,6 +39,8 @@ BASE
 <li><u>String</u> IdentifiableName : The name of the identifiable.</li>
 </ul>
 <span id=identifiable-new-identifiablename></span><h3 id='identifiable-new-identifiablename-'>IDENTIFIABLE:New(IdentifiableName)</h3>
+<p>Create a new IDENTIFIABLE from a DCSIdentifiable</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -53,6 +55,10 @@ self</li>
 <li><a href="#identifiable-class-">IDENTIFIABLE</a></li>
 </ul>
 <span id=identifiable-isalive></span><h3 id='identifiable-isalive-'>IDENTIFIABLE:IsAlive()</h3>
+<p>Returns if the Identifiable is alive.
+If the Identifiable is not alive, nil is returned.
+If the Identifiable is alive, true is returned.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -67,6 +73,9 @@ self</li>
 <li><u>Nil</u>  if the Identifiable is not existing or is not alive.</li>
 </ul>
 <span id=identifiable-getname></span><h3 id='identifiable-getname-'>IDENTIFIABLE:GetName()</h3>
+<p>Returns DCS Identifiable object name.
+The function provides access to non-activated objects too.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -81,6 +90,8 @@ self</li>
 <li><u>Nil</u>  The DCS Identifiable is not existing or alive.</li>
 </ul>
 <span id=identifiable-gettypename></span><h3 id='identifiable-gettypename-'>IDENTIFIABLE:GetTypeName()</h3>
+<p>Returns the type name of the DCS Identifiable.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -95,6 +106,8 @@ self</li>
 <li><u>Nil</u>  The DCS Identifiable is not existing or alive.</li>
 </ul>
 <span id=identifiable-getcategory></span><h3 id='identifiable-getcategory-'>IDENTIFIABLE:GetCategory()</h3>
+<p>Returns category of the DCS Identifiable.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -108,6 +121,8 @@ self</li>
 <li>Dcs.DCSWrapper.Object#Object.Category  The category ID</li>
 </ul>
 <span id=identifiable-getcategoryname></span><h3 id='identifiable-getcategoryname-'>IDENTIFIABLE:GetCategoryName()</h3>
+<p>Returns the DCS Identifiable category name as defined within the DCS Identifiable Descriptor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -121,6 +136,8 @@ self</li>
 <li><u>String</u>  The DCS Identifiable Category Name</li>
 </ul>
 <span id=identifiable-getcoalition></span><h3 id='identifiable-getcoalition-'>IDENTIFIABLE:GetCoalition()</h3>
+<p>Returns coalition of the Identifiable.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -135,6 +152,8 @@ self</li>
 <li><u>Nil</u>  The DCS Identifiable is not existing or alive.</li>
 </ul>
 <span id=identifiable-getcountry></span><h3 id='identifiable-getcountry-'>IDENTIFIABLE:GetCountry()</h3>
+<p>Returns country of the Identifiable.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -149,6 +168,8 @@ self</li>
 <li><u>Nil</u>  The DCS Identifiable is not existing or alive.</li>
 </ul>
 <span id=identifiable-getdesc></span><h3 id='identifiable-getdesc-'>IDENTIFIABLE:GetDesc()</h3>
+<p>Returns Identifiable descriptor. Descriptor type depends on Identifiable category.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -163,6 +184,8 @@ self</li>
 <li><u>Nil</u>  The DCS Identifiable is not existing or alive.</li>
 </ul>
 <span id=identifiable-getcallsign></span><h3 id='identifiable-getcallsign-'>IDENTIFIABLE:GetCallsign()</h3>
+<p>Gets the CallSign of the IDENTIFIABLE, which is a blank by default.</p>
+
 <h4> Parameters </h4>
 
 <ul>

@@ -41,6 +41,8 @@ BASE
                 `-- TASK_CARGO
 </pre>
 <span id=task_cargo-new-mission-setgroup-taskname-setcargo-tasktype></span><h3 id='task_cargo-new-mission-setgroup-taskname-setcargo-tasktype-'>TASK_CARGO:New(Mission, SetGroup, TaskName, SetCargo, TaskType)</h3>
+<p>Instantiates a new TASK_CARGO.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -183,6 +185,8 @@ self</li>
 <li><a href="#zone_base-class-">ZONE_BASE</a>  The Zone object where the Target is located on the map.</li>
 </ul>
 <span id=task_cargo-setscoreondestroy-text-score-taskunit></span><h3 id='task_cargo-setscoreondestroy-text-score-taskunit-'>TASK_CARGO:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
+<p>Set a score when a target in scope of the A2G attack, has been destroyed .</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -199,6 +203,8 @@ self</li>
 <li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setscoreonsuccess-text-score-taskunit></span><h3 id='task_cargo-setscoreonsuccess-text-score-taskunit-'>TASK_CARGO:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
+<p>Set a score when all the targets in scope of the A2G attack, have been destroyed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -215,6 +221,8 @@ self</li>
 <li><a href="#task_cargo-class-">TASK_CARGO</a></li>
 </ul>
 <span id=task_cargo-setpenaltyonfailed-text-penalty-taskunit></span><h3 id='task_cargo-setpenaltyonfailed-text-penalty-taskunit-'>TASK_CARGO:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
+<p>Set a penalty when the A2G attack has failed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -241,6 +249,8 @@ BASE
                     `-- TASK_CARGO_TRANSPORT
 </pre>
 <span id=task_cargo_transport-new-mission-setgroup-taskname-setcargo></span><h3 id='task_cargo_transport-new-mission-setgroup-taskname-setcargo-'>TASK_CARGO_TRANSPORT:New(Mission, SetGroup, TaskName, SetCargo)</h3>
+<p>Instantiates a new TASK_CARGO_TRANSPORT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -258,7 +268,8 @@ self</li>
 <li><a href="#task_cargo_transport-class-">TASK_CARGO_TRANSPORT</a></li>
 </ul>
 <span id=task_cargo_transport-onbeforecargopickedup-from-event-to-taskunit-cargo></span><h3 id='task_cargo_transport-onbeforecargopickedup-from-event-to-taskunit-cargo-'>TASK_CARGO_TRANSPORT:OnBeforeCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
-<p>OnBefore Transition Handler for Event CargoPickedUp.</p>
+<p>OnBefore Transition Handler for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] OnBeforeCargoPickedUp</p>
 
 <h4> Parameters </h4>
 
@@ -278,7 +289,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=task_cargo_transport-onaftercargopickedup-from-event-to-taskunit-cargo></span><h3 id='task_cargo_transport-onaftercargopickedup-from-event-to-taskunit-cargo-'>TASK_CARGO_TRANSPORT:OnAfterCargoPickedUp(From, Event, To, TaskUnit, Cargo)</h3>
-<p>OnAfter Transition Handler for Event CargoPickedUp.</p>
+<p>OnAfter Transition Handler for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] OnAfterCargoPickedUp</p>
 
 <h4> Parameters </h4>
 
@@ -294,7 +306,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=task_cargo_transport-cargopickedup-taskunit-cargo></span><h3 id='task_cargo_transport-cargopickedup-taskunit-cargo-'>TASK_CARGO_TRANSPORT:CargoPickedUp(TaskUnit, Cargo)</h3>
-<p>Synchronous Event Trigger for Event CargoPickedUp.</p>
+<p>Synchronous Event Trigger for Event CargoPickedUp.
+@function [parent=#TASK_CARGO_TRANSPORT] CargoPickedUp</p>
 
 <h4> Parameters </h4>
 
@@ -307,7 +320,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=task_cargo_transport-onbeforecargodeployed-from-event-to-taskunit-cargo-deployzone></span><h3 id='task_cargo_transport-onbeforecargodeployed-from-event-to-taskunit-cargo-deployzone-'>TASK_CARGO_TRANSPORT:OnBeforeCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)</h3>
-<p>OnBefore Transition Handler for Event CargoDeployed.</p>
+<p>OnBefore Transition Handler for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] OnBeforeCargoDeployed</p>
 
 <h4> Parameters </h4>
 
@@ -328,7 +342,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=task_cargo_transport-onaftercargodeployed-from-event-to-taskunit-cargo-deployzone></span><h3 id='task_cargo_transport-onaftercargodeployed-from-event-to-taskunit-cargo-deployzone-'>TASK_CARGO_TRANSPORT:OnAfterCargoDeployed(From, Event, To, TaskUnit, Cargo, DeployZone)</h3>
-<p>OnAfter Transition Handler for Event CargoDeployed.</p>
+<p>OnAfter Transition Handler for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] OnAfterCargoDeployed</p>
 
 <h4> Parameters </h4>
 
@@ -345,7 +360,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=task_cargo_transport-cargodeployed-taskunit-cargo-deployzone></span><h3 id='task_cargo_transport-cargodeployed-taskunit-cargo-deployzone-'>TASK_CARGO_TRANSPORT:CargoDeployed(TaskUnit, Cargo, DeployZone)</h3>
-<p>Synchronous Event Trigger for Event CargoDeployed.</p>
+<p>Synchronous Event Trigger for Event CargoDeployed.
+@function [parent=#TASK_CARGO_TRANSPORT] CargoDeployed</p>
 
 <h4> Parameters </h4>
 

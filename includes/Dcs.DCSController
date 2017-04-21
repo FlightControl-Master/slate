@@ -17,7 +17,8 @@ The Controller class does not inherit
 </ul>
 <span id=controller-setonoff-value></span><h3 id='controller-setonoff-value-'>Controller:setOnOff(value)</h3>
 <p>Enables and disables the controller.
-Note: Now it works only for ground / naval groups!</p>
+Note: Now it works only for ground / naval groups!
+@function [parent=#Controller] setOnOff</p>
 
 <h4> Parameters </h4>
 
@@ -28,7 +29,8 @@ Note: Now it works only for ground / naval groups!</p>
 
 <h4> Returns </h4>
 <span id=controller-settask-task></span><h3 id='controller-settask-task-'>Controller:setTask(task)</h3>
-<p>Resets current task and then sets the task to the controller. Task is a table that contains task identifier and task parameters.</p>
+<p>Resets current task and then sets the task to the controller. Task is a table that contains task identifier and task parameters.
+@function [parent=#Controller] setTask</p>
 
 <h4> Parameters </h4>
 
@@ -39,7 +41,8 @@ Note: Now it works only for ground / naval groups!</p>
 
 <h4> Returns </h4>
 <span id=controller-resettask></span><h3 id='controller-resettask-'>Controller:resetTask()</h3>
-<p>Resets current task of the controller.</p>
+<p>Resets current task of the controller.
+@function [parent=#Controller] resetTask</p>
 
 <h4> Parameters </h4>
 
@@ -49,7 +52,8 @@ Note: Now it works only for ground / naval groups!</p>
 
 <h4> Returns </h4>
 <span id=controller-pushtask-task></span><h3 id='controller-pushtask-task-'>Controller:pushTask(task)</h3>
-<p>Pushes the task to the front of the queue and makes the task active. Further call of function Controller.setTask() function will stop current task, clear the queue and set the new task active. If the task queue is empty the function will work like function Controller.setTask() function.</p>
+<p>Pushes the task to the front of the queue and makes the task active. Further call of function Controller.setTask() function will stop current task, clear the queue and set the new task active. If the task queue is empty the function will work like function Controller.setTask() function.
+@function [parent=#Controller] pushTask</p>
 
 <h4> Parameters </h4>
 
@@ -60,7 +64,8 @@ Note: Now it works only for ground / naval groups!</p>
 
 <h4> Returns </h4>
 <span id=controller-poptask></span><h3 id='controller-poptask-'>Controller:popTask()</h3>
-<p>Pops current (front) task from the queue and makes active next task in the queue (if exists). If no more tasks in the queue the function works like function Controller.resetTask() function. Does nothing if the queue is empty.</p>
+<p>Pops current (front) task from the queue and makes active next task in the queue (if exists). If no more tasks in the queue the function works like function Controller.resetTask() function. Does nothing if the queue is empty.
+@function [parent=#Controller] popTask</p>
 
 <h4> Parameters </h4>
 
@@ -70,7 +75,8 @@ Note: Now it works only for ground / naval groups!</p>
 
 <h4> Returns </h4>
 <span id=controller-hastask></span><h3 id='controller-hastask-'>Controller:hasTask()</h3>
-<p>Returns true if the controller has a task.</p>
+<p>Returns true if the controller has a task.
+@function [parent=#Controller] hasTask</p>
 
 <h4> Parameters </h4>
 
@@ -84,7 +90,8 @@ Note: Now it works only for ground / naval groups!</p>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=controller-setcommand-command></span><h3 id='controller-setcommand-command-'>Controller:setCommand(command)</h3>
-<p>Sets the command to perform by controller.</p>
+<p>Sets the command to perform by controller.
+@function [parent=#Controller] setCommand</p>
 
 <h4> Parameters </h4>
 
@@ -102,6 +109,8 @@ Option identifiers and values are stored in table AI.Option in subtables Air, Gr
 <p>OptionId = @{#AI.Option.Air.id} or @{#AI.Option.Ground.id} or @{#AI.Option.Naval.id}
 OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] or AI.Option.Naval.val[optionName]</p>
 
+<p>@function [parent=#Controller] setOption</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -112,7 +121,8 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 
 <h4> Returns </h4>
 <span id=controller-istargetdetected-target-detection></span><h3 id='controller-istargetdetected-target-detection-'>Controller:isTargetDetected(target, detection)</h3>
-<p>Checks if the target is detected or not. If one or more detection method is specified the function will return true if the target is detected by at least one of these methods. If no detection methods are specified the function will return true if the target is detected by any method.</p>
+<p>Checks if the target is detected or not. If one or more detection method is specified the function will return true if the target is detected by at least one of these methods. If no detection methods are specified the function will return true if the target is detected by any method.
+@function [parent=#Controller] isTargetDetected</p>
 
 <h4> Parameters </h4>
 
@@ -134,7 +144,8 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 <li>#Vec3  lastVel Has effect only if visible is false. Last velocity of the target when it was seen.</li>
 </ul>
 <span id=controller-getdetectedtargets-detection></span><h3 id='controller-getdetectedtargets-detection-'>Controller:getDetectedTargets(detection)</h3>
-<p>Returns list of detected targets. If one or more detection method is specified the function will return targets which were detected by at least one of these methods. If no detection methods are specified the function will return targets which were detected by any method.</p>
+<p>Returns list of detected targets. If one or more detection method is specified the function will return targets which were detected by at least one of these methods. If no detection methods are specified the function will return targets which were detected by any method.
+@function [parent=#Controller] getDetectedTargets</p>
 
 <h4> Parameters </h4>
 
@@ -149,7 +160,8 @@ OptionValue = AI.Option.Air.val[optionName] or AI.Option.Ground.val[optionName] 
 <li>#list&lt;#DetectedTarget&gt;  array of DetectedTarget</li>
 </ul>
 <span id=controller-knowtarget-object-type-distance></span><h3 id='controller-knowtarget-object-type-distance-'>Controller:knowTarget(object, type, distance)</h3>
-<p>Know a target.</p>
+<p>Know a target.
+@function [parent=#Controller] knowTarget</p>
 
 <h4> Parameters </h4>
 

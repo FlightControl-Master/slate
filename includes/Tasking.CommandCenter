@@ -8,6 +8,8 @@ BASE
     `-- REPORT
 </pre>
 <span id=report-new-title></span><h3 id='report-new-title-'>REPORT:New(Title)</h3>
+<p>Create a new REPORT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -22,6 +24,8 @@ self</li>
 <li><a href="#report-class-">REPORT</a></li>
 </ul>
 <span id=report-add-text></span><h3 id='report-add-text-'>REPORT:Add(Text)</h3>
+<p>Add a new line to a REPORT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -36,6 +40,8 @@ self</li>
 <li><a href="#report-class-">REPORT</a></li>
 </ul>
 <span id=report-text-delimiter></span><h3 id='report-text-delimiter-'>REPORT:Text(Delimiter)</h3>
+<p>Produces the text of the report, taking into account an optional delimeter, which is \n by default.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -63,6 +69,8 @@ BASE
 <li>Dcs.DCSCoalitionWrapper.Object#coalition CommandCenterCoalition</li>
 </ul>
 <span id=commandcenter-new-commandcenterpositionable-commandcentername></span><h3 id='commandcenter-new-commandcenterpositionable-commandcentername-'>COMMANDCENTER:New(CommandCenterPositionable, CommandCenterName)</h3>
+<p>The constructor takes an IDENTIFIABLE as the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -78,6 +86,8 @@ self</li>
 <li><a href="#commandcenter-class-">COMMANDCENTER</a></li>
 </ul>
 <span id=commandcenter-getname></span><h3 id='commandcenter-getname-'>COMMANDCENTER:GetName()</h3>
+<p>Gets the name of the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -91,6 +101,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=commandcenter-getpositionable></span><h3 id='commandcenter-getpositionable-'>COMMANDCENTER:GetPositionable()</h3>
+<p>Gets the POSITIONABLE of the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -104,6 +116,8 @@ self</li>
 <li><a href="#positionable-class-">POSITIONABLE</a> </li>
 </ul>
 <span id=commandcenter-getmissions></span><h3 id='commandcenter-getmissions-'>COMMANDCENTER:GetMissions()</h3>
+<p>Get the Missions governed by the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -117,6 +131,8 @@ self</li>
 <li>#list<Tasking.Mission#MISSION> </li>
 </ul>
 <span id=commandcenter-addmission-mission></span><h3 id='commandcenter-addmission-mission-'>COMMANDCENTER:AddMission(Mission)</h3>
+<p>Add a MISSION to be governed by the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -131,6 +147,9 @@ self</li>
 <li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=commandcenter-removemission-mission></span><h3 id='commandcenter-removemission-mission-'>COMMANDCENTER:RemoveMission(Mission)</h3>
+<p>Removes a MISSION to be governed by the HQ command center.
+The given Mission is not nilified.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -145,6 +164,8 @@ self</li>
 <li><a href="#mission-class-">MISSION</a> </li>
 </ul>
 <span id=commandcenter-setmenu></span><h3 id='commandcenter-setmenu-'>COMMANDCENTER:SetMenu()</h3>
+<p>Sets the menu structure of the Missions governed by the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -154,6 +175,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=commandcenter-getmenu></span><h3 id='commandcenter-getmenu-'>COMMANDCENTER:GetMenu()</h3>
+<p>Gets the commandcenter menu structure governed by the HQ command center.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -167,6 +190,8 @@ self</li>
 <li><a href="#menu_coalition-class-">MENU_COALITION</a> </li>
 </ul>
 <span id=commandcenter-hasgroup-self></span><h3 id='commandcenter-hasgroup-self-'>COMMANDCENTER:HasGroup(self)</h3>
+<p>Checks of the COMMANDCENTER has a GROUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -181,6 +206,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=commandcenter-messagetoall></span><h3 id='commandcenter-messagetoall-'>COMMANDCENTER:MessageToAll()</h3>
+<p>Send a CC message to the coalition of the CC.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -190,6 +217,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=commandcenter-messagetogroup-message-taskgroup-name></span><h3 id='commandcenter-messagetogroup-message-taskgroup-name-'>COMMANDCENTER:MessageToGroup(Message, TaskGroup, Name)</h3>
+<p>Send a CC message to a GROUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -202,6 +231,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=commandcenter-messagetocoalition></span><h3 id='commandcenter-messagetocoalition-'>COMMANDCENTER:MessageToCoalition()</h3>
+<p>Send a CC message to the coalition of the CC.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -211,6 +242,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=commandcenter-reportsummary></span><h3 id='commandcenter-reportsummary-'>COMMANDCENTER:ReportSummary()</h3>
+<p>Report the status of all MISSIONs to a GROUP.
+Each Mission is listed, with an indication how many Tasks are still to be completed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -220,6 +254,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=commandcenter-reportdetails></span><h3 id='commandcenter-reportdetails-'>COMMANDCENTER:ReportDetails()</h3>
+<p>Report the status of a Task to a Group.
+Report the details of a Mission, listing the Mission, and all the Task details.</p>
+
 <h4> Parameters </h4>
 
 <ul>

@@ -72,6 +72,8 @@ One laser code can be given or an sequence of laser codes through an table...</p
 
 <p>The above sets a collection of possible laser codes that can be assigned. <strong>Note the { } notation!</strong></p>
 <span id=ai_designate-new-detection-groupset></span><h3 id='ai_designate-new-detection-groupset-'>AI_DESIGNATE:New(Detection, GroupSet)</h3>
+<p>AI_DESIGNATE Constructor. This class is an abstract class and should not be instantiated.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -87,7 +89,8 @@ self</li>
 <li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
 </ul>
 <span id=ai_designate-onbeforedetect-from-event-to></span><h3 id='ai_designate-onbeforedetect-from-event-to-'>AI_DESIGNATE:OnBeforeDetect(From, Event, To)</h3>
-<p>Detect Handler OnBefore for AI_DESIGNATE</p>
+<p>Detect Handler OnBefore for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] OnBeforeDetect</p>
 
 <h4> Parameters </h4>
 
@@ -105,7 +108,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=ai_designate-onafterdetect-from-event-to></span><h3 id='ai_designate-onafterdetect-from-event-to-'>AI_DESIGNATE:OnAfterDetect(From, Event, To)</h3>
-<p>Detect Handler OnAfter for AI_DESIGNATE</p>
+<p>Detect Handler OnAfter for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] OnAfterDetect</p>
 
 <h4> Parameters </h4>
 
@@ -119,7 +123,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=ai_designate-detect></span><h3 id='ai_designate-detect-'>AI_DESIGNATE:Detect()</h3>
-<p>Detect Trigger for AI_DESIGNATE</p>
+<p>Detect Trigger for AI_DESIGNATE
+@function [parent=#AI_DESIGNATE] Detect</p>
 
 <h4> Parameters </h4>
 
@@ -130,6 +135,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=ai_designate-setlasercodes-lasercodes></span><h3 id='ai_designate-setlasercodes-lasercodes-'>AI_DESIGNATE:SetLaserCodes(LaserCodes)</h3>
+<p>Set an array of possible laser codes.
+Each new lase will select a code from this table.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -157,6 +165,8 @@ self</li>
 <li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
 </ul>
 <span id=ai_designate-sendstatus></span><h3 id='ai_designate-sendstatus-'>AI_DESIGNATE:SendStatus()</h3>
+<p>Sends the status to the Attack Groups.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -170,6 +180,8 @@ self</li>
 <li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
 </ul>
 <span id=ai_designate-setdesignatemenu></span><h3 id='ai_designate-setdesignatemenu-'>AI_DESIGNATE:SetDesignateMenu()</h3>
+<p>Sets the Designate Menu.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -210,6 +222,19 @@ self</li>
 
 <h4> Returns </h4>
 <span id=ai_designate-onafterlaseon></span><h3 id='ai_designate-onafterlaseon-'>AI_DESIGNATE:onafterLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#ai_designate-class-">AI_DESIGNATE</a></li>
+</ul>
+<span id=ai_designate-onafterlasing></span><h3 id='ai_designate-onafterlasing-'>AI_DESIGNATE:onafterLasing()</h3>
 <h4> Parameters </h4>
 
 <ul>

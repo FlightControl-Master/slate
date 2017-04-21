@@ -11,7 +11,8 @@ ERROR !
 <li>#land.SurfaceType SurfaceType</li>
 </ul>
 <span id=getheight></span><h3 id='getheight-'>getHeight()</h3>
-<p>Returns altitude MSL of the point.</p>
+<p>Returns altitude MSL of the point.
+@function [parent=#land] getHeight</p>
 
 <h4> Parameters </h4>
 
@@ -25,7 +26,8 @@ ERROR !
 <li><a href="#distance-class-">Distance</a> </li>
 </ul>
 <span id=getsurfacetype></span><h3 id='getsurfacetype-'>getSurfaceType()</h3>
-<p>returns surface type at the given point.</p>
+<p>returns surface type at the given point.
+@function [parent=#land] getSurfaceType</p>
 
 <h4> Parameters </h4>
 

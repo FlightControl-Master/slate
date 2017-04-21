@@ -22,6 +22,8 @@ BASE
                 `-- TASK_PICKUP
 </pre>
 <span id=task_pickup-new-mission-assignedsetgroup-taskname-tasktype-unitsettargets-targetzone></span><h3 id='task_pickup-new-mission-assignedsetgroup-taskname-tasktype-unitsettargets-targetzone-'>TASK_PICKUP:New(Mission, AssignedSetGroup, TaskName, TaskType, UnitSetTargets, TargetZone)</h3>
+<p>Instantiates a new TASK_PICKUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -41,6 +43,8 @@ self</li>
 <li><a href="#task_pickup-class-">TASK_PICKUP</a></li>
 </ul>
 <span id=task_pickup-cleanup></span><h3 id='task_pickup-cleanup-'>TASK_PICKUP:CleanUp()</h3>
+<p>Removes a TASK_PICKUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -54,6 +58,8 @@ self</li>
 <li><u>Nil</u> </li>
 </ul>
 <span id=task_pickup-assigntounit-taskunit></span><h3 id='task_pickup-assigntounit-taskunit-'>TASK_PICKUP:AssignToUnit(TaskUnit)</h3>
+<p>Assign the <a href="#task-module-">Task</a> to a <a href="#unit-module-">Unit</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -68,6 +74,8 @@ self</li>
 <li><a href="#task_pickup-class-">TASK_PICKUP</a></li>
 </ul>
 <span id=task_pickup-onnext-fsm-event-from-to-event></span><h3 id='task_pickup-onnext-fsm-event-from-to-event-'>TASK_PICKUP:OnNext(Fsm, Event, From, To, Event)</h3>
+<p>StateMachine callback function for a TASK</p>
+
 <h4> Parameters </h4>
 
 <ul>

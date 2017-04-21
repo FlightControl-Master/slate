@@ -13,7 +13,8 @@ ERROR !
 <li>#Airbase.Desc Desc : Airbase descriptor. Airdromes are unique and their types are unique, but helipads and ships are not always unique and may have the same type.</li>
 </ul>
 <span id=getbyname></span><h3 id='getbyname-'>getByName()</h3>
-<p>Returns airbase by its name. If no airbase found the function will return nil.</p>
+<p>Returns airbase by its name. If no airbase found the function will return nil.
+@function [parent=#Airbase] getByName</p>
 
 <h4> Parameters </h4>
 
@@ -27,7 +28,8 @@ ERROR !
 <li>#Airbase </li>
 </ul>
 <span id=getdescbyname></span><h3 id='getdescbyname-'>getDescByName()</h3>
-<p>Returns airbase descriptor by type name. If no descriptor is found the function will return nil.</p>
+<p>Returns airbase descriptor by type name. If no descriptor is found the function will return nil.
+@function [parent=#Airbase] getDescByName</p>
 
 <h4> Parameters </h4>
 
@@ -41,7 +43,8 @@ ERROR !
 <li>#Airbase.Desc </li>
 </ul>
 <span id=airbase-getunit></span><h3 id='airbase-getunit-'>Airbase:getUnit()</h3>
-<p>Returns Unit that is corresponded to the airbase. Works only for ships.</p>
+<p>Returns Unit that is corresponded to the airbase. Works only for ships.
+@function [parent=#Airbase] getUnit</p>
 
 <h4> Parameters </h4>
 
@@ -55,7 +58,8 @@ ERROR !
 <li><a href="#unit-class-">Unit</a> </li>
 </ul>
 <span id=airbase-getid></span><h3 id='airbase-getid-'>Airbase:getID()</h3>
-<p>Returns identifier of the airbase.</p>
+<p>Returns identifier of the airbase.
+@function [parent=#Airbase] getID</p>
 
 <h4> Parameters </h4>
 
@@ -69,7 +73,8 @@ ERROR !
 <li>#Airbase.ID </li>
 </ul>
 <span id=airbase-getcallsign></span><h3 id='airbase-getcallsign-'>Airbase:getCallsign()</h3>
-<p>Returns the airbase&#39;s callsign - the localized string.</p>
+<p>Returns the airbase&#39;s callsign - the localized string.
+@function [parent=#Airbase] getCallsign</p>
 
 <h4> Parameters </h4>
 
@@ -83,7 +88,8 @@ ERROR !
 <li><u>String</u> </li>
 </ul>
 <span id=airbase-getdesc></span><h3 id='airbase-getdesc-'>Airbase:getDesc()</h3>
-<p>Returns descriptor of the airbase.</p>
+<p>Returns descriptor of the airbase.
+@function [parent=#Airbase] getDesc</p>
 
 <h4> Parameters </h4>
 

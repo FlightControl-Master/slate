@@ -178,6 +178,8 @@ BASE
 <li><a href="#event-events-class-">Events</a>Events</li>
 </ul>
 <span id=event-init-eventid-eventclass></span><h3 id='event-init-eventid-eventclass-'>EVENT:Init(EventID, EventClass)</h3>
+<p>Initializes the Events structure for the event</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -193,6 +195,8 @@ self</li>
 <li><a href="#event-events-class-">Events</a></li>
 </ul>
 <span id=event-remove-eventclass-eventid></span><h3 id='event-remove-eventclass-eventid-'>EVENT:Remove(EventClass, EventID)</h3>
+<p>Removes a subscription</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -208,6 +212,8 @@ self</li>
 <li><a href="#event-events-class-">Events</a></li>
 </ul>
 <span id=event-reset-eventclass-eventid></span><h3 id='event-reset-eventclass-eventid-'>EVENT:Reset(EventClass, EventID)</h3>
+<p>Resets subscriptions</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -223,6 +229,8 @@ self</li>
 <li><a href="#event-events-class-">Events</a></li>
 </ul>
 <span id=event-removeall-eventobject></span><h3 id='event-removeall-eventobject-'>EVENT:RemoveAll(EventObject)</h3>
+<p>Clears all event subscriptions for a <a href="#base-class-">BASE</a> derived object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -233,6 +241,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction></span><h3 id='event-oneventfortemplate-eventtemplate-eventfunction-the-oneventfunction-'>EVENT:OnEventForTemplate(EventTemplate, EventFunction, The, OnEventFunction)</h3>
+<p>Create an OnDead event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -250,6 +260,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-oneventgeneric-eventfunction-eventclass-self></span><h3 id='event-oneventgeneric-eventfunction-eventclass-self-'>EVENT:OnEventGeneric(EventFunction, EventClass, self)</h3>
+<p>Set a new listener for an S_EVENT_X event independent from a unit or a weapon.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -266,6 +278,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-oneventforunit-unitname-eventfunction-eventclass-self></span><h3 id='event-oneventforunit-unitname-eventfunction-eventclass-self-'>EVENT:OnEventForUnit(UnitName, EventFunction, EventClass, self)</h3>
+<p>Set a new listener for an S_EVENT_X event for a UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -283,6 +297,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-oneventforgroup-groupname-eventfunction-eventclass-self></span><h3 id='event-oneventforgroup-groupname-eventfunction-eventclass-self-'>EVENT:OnEventForGroup(GroupName, EventFunction, EventClass, self)</h3>
+<p>Set a new listener for an S_EVENT_X event for a GROUP.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -300,6 +316,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-onbirthfortemplate-eventgroup-eventfunction-the></span><h3 id='event-onbirthfortemplate-eventgroup-eventfunction-the-'>EVENT:OnBirthForTemplate(EventGroup, EventFunction, The)</h3>
+<p>Create an OnBirth event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -316,6 +334,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-oncrashfortemplate-eventgroup-eventfunction-the></span><h3 id='event-oncrashfortemplate-eventgroup-eventfunction-the-'>EVENT:OnCrashForTemplate(EventGroup, EventFunction, The)</h3>
+<p>Create an OnCrash event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -332,6 +352,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-ondeadfortemplate-eventgroup-eventfunction-the></span><h3 id='event-ondeadfortemplate-eventgroup-eventfunction-the-'>EVENT:OnDeadForTemplate(EventGroup, EventFunction, The)</h3>
+<p>Create an OnDead event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -348,6 +370,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-onlandfortemplate-eventtemplate-eventfunction-the></span><h3 id='event-onlandfortemplate-eventtemplate-eventfunction-the-'>EVENT:OnLandForTemplate(EventTemplate, EventFunction, The)</h3>
+<p>Create an OnLand event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -364,6 +388,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-ontakeofffortemplate-eventtemplate-eventfunction-the></span><h3 id='event-ontakeofffortemplate-eventtemplate-eventfunction-the-'>EVENT:OnTakeOffForTemplate(EventTemplate, EventFunction, The)</h3>
+<p>Create an OnTakeOff event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -380,6 +406,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-onengineshutdownfortemplate-eventtemplate-eventfunction-the></span><h3 id='event-onengineshutdownfortemplate-eventtemplate-eventfunction-the-'>EVENT:OnEngineShutDownForTemplate(EventTemplate, EventFunction, The)</h3>
+<p>Create an OnDead event handler for a group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -396,6 +424,8 @@ self</li>
 <li><a href="#event-class-">EVENT</a></li>
 </ul>
 <span id=event-createeventnewcargo-cargo></span><h3 id='event-createeventnewcargo-cargo-'>EVENT:CreateEventNewCargo(Cargo)</h3>
+<p>Creation of a New Cargo Event.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -406,6 +436,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=event-createeventdeletecargo-cargo></span><h3 id='event-createeventdeletecargo-cargo-'>EVENT:CreateEventDeleteCargo(Cargo)</h3>
+<p>Creation of a Cargo Deletion Event.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -498,6 +530,8 @@ BASE
     `-- EVENTHANDLER
 </pre>
 <span id=eventhandler-new></span><h3 id='eventhandler-new-'>EVENTHANDLER:New()</h3>
+<p>The EVENTHANDLER constructor</p>
+
 <h4> Parameters </h4>
 
 <ul>

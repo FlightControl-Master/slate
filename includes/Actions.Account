@@ -58,6 +58,8 @@ These state transition methods need to provide a return value, which is specifie
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=act_account-new></span><h3 id='act_account-new-'>ACT_ACCOUNT:New()</h3>
+<p>Creates a new DESTROY process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -71,6 +73,8 @@ self</li>
 <li><a href="#act_account-class-">ACT_ACCOUNT</a></li>
 </ul>
 <span id=act_account-onafterstart-processunit-event-from-to></span><h3 id='act_account-onafterstart-processunit-event-from-to-'>ACT_ACCOUNT:onafterStart(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -84,6 +88,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_account-onenterwaiting-processunit-event-from-to></span><h3 id='act_account-onenterwaiting-processunit-event-from-to-'>ACT_ACCOUNT:onenterWaiting(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -97,6 +103,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_account-onafterevent-processunit-event-from-to></span><h3 id='act_account-onafterevent-processunit-event-from-to-'>ACT_ACCOUNT:onafterEvent(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -135,6 +143,8 @@ Each successful dead will trigger an Account state transition that can be scored
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=act_account_deads-new-targetsetunit-taskname></span><h3 id='act_account_deads-new-targetsetunit-taskname-'>ACT_ACCOUNT_DEADS:New(TargetSetUnit, TaskName)</h3>
+<p>Creates a new DESTROY process.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -146,6 +156,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_account_deads-onenterreport-processunit-event-from-to></span><h3 id='act_account_deads-onenterreport-processunit-event-from-to-'>ACT_ACCOUNT_DEADS:onenterReport(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -159,6 +171,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_account_deads-onenteraccount-processunit-event-from-to></span><h3 id='act_account_deads-onenteraccount-processunit-event-from-to-'>ACT_ACCOUNT_DEADS:onenterAccount(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -172,6 +186,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_account_deads-onafterevent-processunit-event-from-to></span><h3 id='act_account_deads-onafterevent-processunit-event-from-to-'>ACT_ACCOUNT_DEADS:onafterEvent(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>

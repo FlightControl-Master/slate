@@ -12,6 +12,8 @@ BASE
 <span class="n">CleanUpTbilisi</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'CLEAN Tbilisi'</span><span class="p">,</span> <span class="mi">150</span> <span class="p">)</span>
 <span class="n">CleanUpKutaisi</span> <span class="o">=</span> <span class="n">CLEANUP</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="s1">'CLEAN Kutaisi'</span><span class="p">,</span> <span class="mi">600</span> <span class="p">)</span>
 </code></pre>
+<p>Creates the main object which is handling the cleaning of the debris within the given Zone Names.</p>
+
 <h4> Parameters </h4>
 
 <ul>

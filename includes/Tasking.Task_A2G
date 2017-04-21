@@ -63,6 +63,8 @@ BASE
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_a2g-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_A2G:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<p>Instantiates a new TASK_A2G.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -183,6 +185,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a>  The Zone object where the Target is located on the map.</li>
 </ul>
 <span id=task_a2g-setscoreondestroy-text-score-taskunit></span><h3 id='task_a2g-setscoreondestroy-text-score-taskunit-'>TASK_A2G:SetScoreOnDestroy(Text, Score, TaskUnit)</h3>
+<p>Set a score when a target in scope of the A2G attack, has been destroyed .</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -198,6 +202,8 @@ BASE
 <li>#TASK_A2G </li>
 </ul>
 <span id=task_a2g-setscoreonsuccess-text-score-taskunit></span><h3 id='task_a2g-setscoreonsuccess-text-score-taskunit-'>TASK_A2G:SetScoreOnSuccess(Text, Score, TaskUnit)</h3>
+<p>Set a score when all the targets in scope of the A2G attack, have been destroyed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -213,6 +219,8 @@ BASE
 <li>#TASK_A2G </li>
 </ul>
 <span id=task_a2g-setpenaltyonfailed-text-penalty-taskunit></span><h3 id='task_a2g-setpenaltyonfailed-text-penalty-taskunit-'>TASK_A2G:SetPenaltyOnFailed(Text, Penalty, TaskUnit)</h3>
+<p>Set a penalty when the A2G attack has failed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -243,6 +251,8 @@ BASE
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=task_sead-new-mission-setgroup-taskname-targetsetunit></span><h3 id='task_sead-new-mission-setgroup-taskname-targetsetunit-'>TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)</h3>
+<p>Instantiates a new TASK_SEAD.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -275,6 +285,8 @@ BASE
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_bai-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<p>Instantiates a new TASK_BAI.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -309,6 +321,8 @@ BASE
 <li><a href="#set_unit-class-">SET_UNIT</a> TargetSetUnit</li>
 </ul>
 <span id=task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone></span><h3 id='task_cas-new-mission-setgroup-taskname-unitsettargets-targetdistance-targetzone-'>TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)</h3>
+<p>Instantiates a new TASK_CAS.</p>
+
 <h4> Parameters </h4>
 
 <ul>

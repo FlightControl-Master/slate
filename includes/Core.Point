@@ -156,6 +156,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3.RoutePointAction RoutePointAction</li>
 </ul>
 <span id=point_vec3-new-x-y-z></span><h3 id='point_vec3-new-x-y-z-'>POINT_VEC3:New(x, y, z)</h3>
+<p>Create a new POINT_VEC3 object.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -171,6 +173,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#point_vec3-class-">POINT_VEC3</a> </li>
 </ul>
 <span id=point_vec3-newfromvec2-vec2></span><h3 id='point_vec3-newfromvec2-vec2-'>POINT_VEC3:NewFromVec2(Vec2)</h3>
+<p>Create a new POINT_VEC3 object from Vec2 coordinates.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -184,6 +188,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#point_vec3-class-">POINT_VEC3</a> </li>
 </ul>
 <span id=point_vec3-newfromvec3-vec3></span><h3 id='point_vec3-newfromvec3-vec3-'>POINT_VEC3:NewFromVec3(Vec3)</h3>
+<p>Create a new POINT_VEC3 object from  Vec3 coordinates.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -197,6 +203,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#point_vec3-class-">POINT_VEC3</a> </li>
 </ul>
 <span id=point_vec3-getvec3></span><h3 id='point_vec3-getvec3-'>POINT_VEC3:GetVec3()</h3>
+<p>Return the coordinates of the POINT_VEC3 in Vec3 format.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -209,6 +217,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#vec3-class-">Vec3</a>  The Vec3 coodinate.</li>
 </ul>
 <span id=point_vec3-getvec2></span><h3 id='point_vec3-getvec2-'>POINT_VEC3:GetVec2()</h3>
+<p>Return the coordinates of the POINT_VEC3 in Vec2 format.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -221,6 +231,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#vec2-class-">Vec2</a>  The Vec2 coodinate.</li>
 </ul>
 <span id=point_vec3-getx></span><h3 id='point_vec3-getx-'>POINT_VEC3:GetX()</h3>
+<p>Return the x coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -233,6 +245,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  The x coodinate.</li>
 </ul>
 <span id=point_vec3-gety></span><h3 id='point_vec3-gety-'>POINT_VEC3:GetY()</h3>
+<p>Return the y coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -245,6 +259,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  The y coodinate.</li>
 </ul>
 <span id=point_vec3-getz></span><h3 id='point_vec3-getz-'>POINT_VEC3:GetZ()</h3>
+<p>Return the z coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -257,6 +273,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  The z coodinate.</li>
 </ul>
 <span id=point_vec3-setx-x></span><h3 id='point_vec3-setx-x-'>POINT_VEC3:SetX(x)</h3>
+<p>Set the x coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -270,6 +288,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-sety-y></span><h3 id='point_vec3-sety-y-'>POINT_VEC3:SetY(y)</h3>
+<p>Set the y coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -283,6 +303,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-setz-z></span><h3 id='point_vec3-setz-z-'>POINT_VEC3:SetZ(z)</h3>
+<p>Set the z coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -296,6 +318,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-addx-x></span><h3 id='point_vec3-addx-x-'>POINT_VEC3:AddX(x)</h3>
+<p>Add to the x coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -309,6 +333,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-addy-y></span><h3 id='point_vec3-addy-y-'>POINT_VEC3:AddY(y)</h3>
+<p>Add to the y coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -322,6 +348,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-addz-z></span><h3 id='point_vec3-addz-z-'>POINT_VEC3:AddZ(z)</h3>
+<p>Add to the z coordinate of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -335,6 +363,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-getrandomvec2inradius-outerradius-innerradius></span><h3 id='point_vec3-getrandomvec2inradius-outerradius-innerradius-'>POINT_VEC3:GetRandomVec2InRadius(OuterRadius, InnerRadius)</h3>
+<p>Return a random Vec2 within an Outer Radius and optionally NOT within an Inner Radius of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -349,6 +379,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#vec2-class-">Vec2</a> </li>
 </ul>
 <span id=point_vec3-getrandompointvec2inradius-outerradius-innerradius></span><h3 id='point_vec3-getrandompointvec2inradius-outerradius-innerradius-'>POINT_VEC3:GetRandomPointVec2InRadius(OuterRadius, InnerRadius)</h3>
+<p>Return a random POINT_VEC2 within an Outer Radius and optionally NOT within an Inner Radius of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -363,6 +395,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec3-getrandomvec3inradius-outerradius-innerradius></span><h3 id='point_vec3-getrandomvec3inradius-outerradius-innerradius-'>POINT_VEC3:GetRandomVec3InRadius(OuterRadius, InnerRadius)</h3>
+<p>Return a random Vec3 within an Outer Radius and optionally NOT within an Inner Radius of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -377,6 +411,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#vec3-class-">Vec3</a> </li>
 </ul>
 <span id=point_vec3-getrandompointvec3inradius-outerradius-innerradius></span><h3 id='point_vec3-getrandompointvec3inradius-outerradius-innerradius-'>POINT_VEC3:GetRandomPointVec3InRadius(OuterRadius, InnerRadius)</h3>
+<p>Return a random POINT_VEC3 within an Outer Radius and optionally NOT within an Inner Radius of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -391,6 +427,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3 </li>
 </ul>
 <span id=point_vec3-getdirectionvec3-targetpointvec3></span><h3 id='point_vec3-getdirectionvec3-targetpointvec3-'>POINT_VEC3:GetDirectionVec3(TargetPointVec3)</h3>
+<p>Return a direction vector Vec3 from POINT_VEC3 to the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -404,6 +442,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#vec3-class-">Vec3</a>  DirectionVec3 The direction vector in Vec3 format.</li>
 </ul>
 <span id=point_vec3-getnorthcorrectionradians></span><h3 id='point_vec3-getnorthcorrectionradians-'>POINT_VEC3:GetNorthCorrectionRadians()</h3>
+<p>Get a correction in radians of the real magnetic north of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -416,6 +456,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  CorrectionRadians The correction in radians.</li>
 </ul>
 <span id=point_vec3-getangleradians-directionvec3></span><h3 id='point_vec3-getangleradians-directionvec3-'>POINT_VEC3:GetAngleRadians(DirectionVec3)</h3>
+<p>Return an angle in radians from the POINT_VEC3 using a direction vector in Vec3 format.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -429,6 +471,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  DirectionRadians The angle in radians.</li>
 </ul>
 <span id=point_vec3-getangledegrees-directionvec3></span><h3 id='point_vec3-getangledegrees-directionvec3-'>POINT_VEC3:GetAngleDegrees(DirectionVec3)</h3>
+<p>Return an angle in degrees from the POINT_VEC3 using a direction vector in Vec3 format.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -442,6 +486,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Number</u>  DirectionRadians The angle in degrees.</li>
 </ul>
 <span id=point_vec3-get2ddistance-targetpointvec3></span><h3 id='point_vec3-get2ddistance-targetpointvec3-'>POINT_VEC3:Get2DDistance(TargetPointVec3)</h3>
+<p>Return the 2D distance in meters between the target POINT_VEC3 and the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -455,6 +501,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#distance-class-">Distance</a>  Distance The distance in meters.</li>
 </ul>
 <span id=point_vec3-get3ddistance-targetpointvec3></span><h3 id='point_vec3-get3ddistance-targetpointvec3-'>POINT_VEC3:Get3DDistance(TargetPointVec3)</h3>
+<p>Return the 3D distance in meters between the target POINT_VEC3 and the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -468,6 +516,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><a href="#distance-class-">Distance</a>  Distance The distance in meters.</li>
 </ul>
 <span id=point_vec3-tostringbr-angleradians-distance></span><h3 id='point_vec3-tostringbr-angleradians-distance-'>POINT_VEC3:ToStringBR(AngleRadians, Distance)</h3>
+<p>Provides a Bearing / Range string</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -482,6 +532,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>String</u>  The BR Text</li>
 </ul>
 <span id=point_vec3-tostringll-angleradians-distance></span><h3 id='point_vec3-tostringll-angleradians-distance-'>POINT_VEC3:ToStringLL(AngleRadians, Distance)</h3>
+<p>Provides a Bearing / Range string</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -496,6 +548,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>String</u>  The BR Text</li>
 </ul>
 <span id=point_vec3-getaltitudetext></span><h3 id='point_vec3-getaltitudetext-'>POINT_VEC3:GetAltitudeText()</h3>
+<p>Return the altitude text of the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -508,6 +562,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>String</u>  Altitude text.</li>
 </ul>
 <span id=point_vec3-getbrtext-targetpointvec3></span><h3 id='point_vec3-getbrtext-targetpointvec3-'>POINT_VEC3:GetBRText(TargetPointVec3)</h3>
+<p>Return a BR string from a POINT_VEC3 to the POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -521,6 +577,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>String</u>  The BR text.</li>
 </ul>
 <span id=point_vec3-setmetric-metric></span><h3 id='point_vec3-setmetric-metric-'>POINT_VEC3:SetMetric(Metric)</h3>
+<p>Sets the POINT_VEC3 metric or NM.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -530,6 +588,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-ismetric></span><h3 id='point_vec3-ismetric-'>POINT_VEC3:IsMetric()</h3>
+<p>Gets if the POINT_VEC3 is metric or NM.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -542,6 +602,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>Boolean</u>  Metric true means metric, false means NM.</li>
 </ul>
 <span id=point_vec3-translate-distance-angle></span><h3 id='point_vec3-translate-distance-angle-'>POINT_VEC3:Translate(Distance, Angle)</h3>
+<p>Add a Distance in meters from the POINT_VEC3 horizontal plane, with the given angle, and calculate the new POINT_VEC3.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -556,6 +618,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li>#POINT_VEC3  The new calculated POINT_VEC3.</li>
 </ul>
 <span id=point_vec3-routepointair-alttype-type-action-speed-speedlocked></span><h3 id='point_vec3-routepointair-alttype-type-action-speed-speedlocked-'>POINT_VEC3:RoutePointAir(AltType, Type, Action, Speed, SpeedLocked)</h3>
+<p>Build an air type route point.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -573,6 +637,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>List[]</u>  The route point.</li>
 </ul>
 <span id=point_vec3-routepointground-speed-formation></span><h3 id='point_vec3-routepointground-speed-formation-'>POINT_VEC3:RoutePointGround(Speed, Formation)</h3>
+<p>Build an ground type route point.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -587,6 +653,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <li><u>List[]</u>  The route point.</li>
 </ul>
 <span id=point_vec3-explosion-explosionintensity></span><h3 id='point_vec3-explosion-explosionintensity-'>POINT_VEC3:Explosion(ExplosionIntensity)</h3>
+<p>Creates an explosion at the point of a certain intensity.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -596,6 +664,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-illuminationbomb></span><h3 id='point_vec3-illuminationbomb-'>POINT_VEC3:IlluminationBomb()</h3>
+<p>Creates an illumination bomb at the point.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -604,6 +674,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smoke-smokecolor></span><h3 id='point_vec3-smoke-smokecolor-'>POINT_VEC3:Smoke(SmokeColor)</h3>
+<p>Smokes the point in a color.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -613,6 +685,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smokegreen></span><h3 id='point_vec3-smokegreen-'>POINT_VEC3:SmokeGreen()</h3>
+<p>Smoke the POINT_VEC3 Green.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -621,6 +695,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smokered></span><h3 id='point_vec3-smokered-'>POINT_VEC3:SmokeRed()</h3>
+<p>Smoke the POINT_VEC3 Red.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -629,6 +705,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smokewhite></span><h3 id='point_vec3-smokewhite-'>POINT_VEC3:SmokeWhite()</h3>
+<p>Smoke the POINT_VEC3 White.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -637,6 +715,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smokeorange></span><h3 id='point_vec3-smokeorange-'>POINT_VEC3:SmokeOrange()</h3>
+<p>Smoke the POINT_VEC3 Orange.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -645,6 +725,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-smokeblue></span><h3 id='point_vec3-smokeblue-'>POINT_VEC3:SmokeBlue()</h3>
+<p>Smoke the POINT_VEC3 Blue.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -653,6 +735,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-flare-flarecolor-optional></span><h3 id='point_vec3-flare-flarecolor-optional-'>POINT_VEC3:Flare(FlareColor, (optional))</h3>
+<p>Flares the point in a color.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -663,6 +747,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-flarewhite-optional></span><h3 id='point_vec3-flarewhite-optional-'>POINT_VEC3:FlareWhite((optional))</h3>
+<p>Flare the POINT_VEC3 White.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -672,6 +758,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-flareyellow-optional></span><h3 id='point_vec3-flareyellow-optional-'>POINT_VEC3:FlareYellow((optional))</h3>
+<p>Flare the POINT_VEC3 Yellow.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -681,6 +769,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-flaregreen-optional></span><h3 id='point_vec3-flaregreen-optional-'>POINT_VEC3:FlareGreen((optional))</h3>
+<p>Flare the POINT_VEC3 Green.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -690,6 +780,8 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 
 <h4> Returns </h4>
 <span id=point_vec3-flarered></span><h3 id='point_vec3-flarered-'>POINT_VEC3:FlareRed()</h3>
+<p>Flare the POINT_VEC3 Red.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -733,6 +825,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#distance-class-">Distance</a> y : the y coordinate in meters.</li>
 </ul>
 <span id=point_vec2-new-x-y-landheightadd></span><h3 id='point_vec2-new-x-y-landheightadd-'>POINT_VEC2:New(x, y, LandHeightAdd)</h3>
+<p>POINT_VEC2 constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -748,6 +842,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#point_vec2-class-">POINT_VEC2</a> </li>
 </ul>
 <span id=point_vec2-newfromvec2-vec2></span><h3 id='point_vec2-newfromvec2-vec2-'>POINT_VEC2:NewFromVec2(Vec2)</h3>
+<p>Create a new POINT_VEC2 object from  Vec2 coordinates.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -761,6 +857,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#point_vec2-class-">POINT_VEC2</a> </li>
 </ul>
 <span id=point_vec2-newfromvec3-vec3></span><h3 id='point_vec2-newfromvec3-vec3-'>POINT_VEC2:NewFromVec3(Vec3)</h3>
+<p>Create a new POINT_VEC2 object from  Vec3 coordinates.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -774,6 +872,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#point_vec2-class-">POINT_VEC2</a> </li>
 </ul>
 <span id=point_vec2-getx></span><h3 id='point_vec2-getx-'>POINT_VEC2:GetX()</h3>
+<p>Return the x coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -786,6 +886,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>Number</u>  The x coodinate.</li>
 </ul>
 <span id=point_vec2-gety></span><h3 id='point_vec2-gety-'>POINT_VEC2:GetY()</h3>
+<p>Return the y coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -798,6 +900,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>Number</u>  The y coodinate.</li>
 </ul>
 <span id=point_vec2-getalt></span><h3 id='point_vec2-getalt-'>POINT_VEC2:GetAlt()</h3>
+<p>Return the altitude (height) of the land at the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -810,6 +914,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>Number</u>  The land altitude.</li>
 </ul>
 <span id=point_vec2-getlat></span><h3 id='point_vec2-getlat-'>POINT_VEC2:GetLat()</h3>
+<p>Return Return the Lat(itude) coordinate of the POINT_VEC2 (ie: (parent)POINT_VEC3.x).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -822,6 +928,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>Number</u>  The x coodinate.</li>
 </ul>
 <span id=point_vec2-getlon></span><h3 id='point_vec2-getlon-'>POINT_VEC2:GetLon()</h3>
+<p>Return the Lon(gitude) coordinate of the POINT_VEC2 (ie: (parent)POINT_VEC3.z).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -834,6 +942,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>Number</u>  The y coodinate.</li>
 </ul>
 <span id=point_vec2-setx-x></span><h3 id='point_vec2-setx-x-'>POINT_VEC2:SetX(x)</h3>
+<p>Set the x coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -847,6 +957,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-sety-y></span><h3 id='point_vec2-sety-y-'>POINT_VEC2:SetY(y)</h3>
+<p>Set the y coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -860,6 +972,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-setlat-x></span><h3 id='point_vec2-setlat-x-'>POINT_VEC2:SetLat(x)</h3>
+<p>Set the Lat(itude) coordinate of the POINT_VEC2 (ie: POINT_VEC3.x).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -873,6 +987,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-setalt-altitude></span><h3 id='point_vec2-setalt-altitude-'>POINT_VEC2:SetAlt(Altitude)</h3>
+<p>Set the altitude of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -886,6 +1002,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-setlon-y></span><h3 id='point_vec2-setlon-y-'>POINT_VEC2:SetLon(y)</h3>
+<p>Set the Lon(gitude) coordinate of the POINT_VEC2 (ie: POINT_VEC3.z).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -899,6 +1017,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-addx-x></span><h3 id='point_vec2-addx-x-'>POINT_VEC2:AddX(x)</h3>
+<p>Add to the x coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -912,6 +1032,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-addy-y></span><h3 id='point_vec2-addy-y-'>POINT_VEC2:AddY(y)</h3>
+<p>Add to the y coordinate of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -925,6 +1047,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-addalt-altitude></span><h3 id='point_vec2-addalt-altitude-'>POINT_VEC2:AddAlt(Altitude)</h3>
+<p>Add to the current land height an altitude.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -938,6 +1062,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li>#POINT_VEC2 </li>
 </ul>
 <span id=point_vec2-distancefrompointvec2-pointvec2reference></span><h3 id='point_vec2-distancefrompointvec2-pointvec2reference-'>POINT_VEC2:DistanceFromPointVec2(PointVec2Reference)</h3>
+<p>Calculate the distance from a reference @{#POINT_VEC2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -951,6 +1077,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#distance-class-">Distance</a>  The distance from the reference @{#POINT_VEC2} in meters.</li>
 </ul>
 <span id=point_vec2-distancefromvec2-vec2reference></span><h3 id='point_vec2-distancefromvec2-vec2reference-'>POINT_VEC2:DistanceFromVec2(Vec2Reference)</h3>
+<p>Calculate the distance from a reference @{DCSTypes#Vec2}.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -964,6 +1092,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><a href="#distance-class-">Distance</a>  The distance from the reference @{DCSTypes#Vec2} in meters.</li>
 </ul>
 <span id=point_vec2-getaltitudetext></span><h3 id='point_vec2-getaltitudetext-'>POINT_VEC2:GetAltitudeText()</h3>
+<p>Return no text for the altitude of the POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -976,6 +1106,8 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 <li><u>String</u>  Empty string.</li>
 </ul>
 <span id=point_vec2-translate-distance-angle></span><h3 id='point_vec2-translate-distance-angle-'>POINT_VEC2:Translate(Distance, Angle)</h3>
+<p>Add a Distance in meters from the POINT_VEC2 orthonormal plane, with the given angle, and calculate the new POINT_VEC2.</p>
+
 <h4> Parameters </h4>
 
 <ul>

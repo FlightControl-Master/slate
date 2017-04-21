@@ -17,6 +17,8 @@ BASE
 <li><u>String</u> MissionBriefing</li>
 </ul>
 <span id=mission-new-commandcenter-missionname-missionpriority-missionbriefing-missioncoalition></span><h3 id='mission-new-commandcenter-missionname-missionpriority-missionbriefing-missioncoalition-'>MISSION:New(CommandCenter, MissionName, MissionPriority, MissionBriefing, MissionCoalition)</h3>
+<p>This is the main MISSION declaration method. Each Mission is like the master or a Mission orchestration between, Clients, Tasks, Stages etc.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -35,7 +37,8 @@ self</li>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIdle(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Idle.</p>
+<p>OnLeave Transition Handler for State Idle.
+@function [parent=#MISSION] OnLeaveIdle</p>
 
 <h4> Parameters </h4>
 
@@ -53,7 +56,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Idle.</p>
+<p>OnEnter Transition Handler for State Idle.
+@function [parent=#MISSION] OnEnterIdle</p>
 
 <h4> Parameters </h4>
 
@@ -67,7 +71,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onleaveongoing-from-event-to></span><h3 id='mission-onleaveongoing-from-event-to-'>MISSION:OnLeaveOngoing(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Ongoing.</p>
+<p>OnLeave Transition Handler for State Ongoing.
+@function [parent=#MISSION] OnLeaveOngoing</p>
 
 <h4> Parameters </h4>
 
@@ -85,7 +90,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenterongoing-from-event-to></span><h3 id='mission-onenterongoing-from-event-to-'>MISSION:OnEnterOngoing(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Ongoing.</p>
+<p>OnEnter Transition Handler for State Ongoing.
+@function [parent=#MISSION] OnEnterOngoing</p>
 
 <h4> Parameters </h4>
 
@@ -99,7 +105,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onbeforestart-from-event-to></span><h3 id='mission-onbeforestart-from-event-to-'>MISSION:OnBeforeStart(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Start.</p>
+<p>OnBefore Transition Handler for Event Start.
+@function [parent=#MISSION] OnBeforeStart</p>
 
 <h4> Parameters </h4>
 
@@ -117,7 +124,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterstart-from-event-to></span><h3 id='mission-onafterstart-from-event-to-'>MISSION:OnAfterStart(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Start.</p>
+<p>OnAfter Transition Handler for Event Start.
+@function [parent=#MISSION] OnAfterStart</p>
 
 <h4> Parameters </h4>
 
@@ -131,7 +139,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-start></span><h3 id='mission-start-'>MISSION:Start()</h3>
-<p>Synchronous Event Trigger for Event Start.</p>
+<p>Synchronous Event Trigger for Event Start.
+@function [parent=#MISSION] Start</p>
 
 <h4> Parameters </h4>
 
@@ -142,7 +151,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIdle(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Idle.</p>
+<p>OnLeave Transition Handler for State Idle.
+@function [parent=#MISSION] OnLeaveIdle</p>
 
 <h4> Parameters </h4>
 
@@ -160,7 +170,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Idle.</p>
+<p>OnEnter Transition Handler for State Idle.
+@function [parent=#MISSION] OnEnterIdle</p>
 
 <h4> Parameters </h4>
 
@@ -174,7 +185,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onbeforestop-from-event-to></span><h3 id='mission-onbeforestop-from-event-to-'>MISSION:OnBeforeStop(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Stop.</p>
+<p>OnBefore Transition Handler for Event Stop.
+@function [parent=#MISSION] OnBeforeStop</p>
 
 <h4> Parameters </h4>
 
@@ -192,7 +204,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterstop-from-event-to></span><h3 id='mission-onafterstop-from-event-to-'>MISSION:OnAfterStop(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Stop.</p>
+<p>OnAfter Transition Handler for Event Stop.
+@function [parent=#MISSION] OnAfterStop</p>
 
 <h4> Parameters </h4>
 
@@ -206,7 +219,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-stop></span><h3 id='mission-stop-'>MISSION:Stop()</h3>
-<p>Synchronous Event Trigger for Event Stop.</p>
+<p>Synchronous Event Trigger for Event Stop.
+@function [parent=#MISSION] Stop</p>
 
 <h4> Parameters </h4>
 
@@ -217,7 +231,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onleavecompleted-from-event-to></span><h3 id='mission-onleavecompleted-from-event-to-'>MISSION:OnLeaveCompleted(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Completed.</p>
+<p>OnLeave Transition Handler for State Completed.
+@function [parent=#MISSION] OnLeaveCompleted</p>
 
 <h4> Parameters </h4>
 
@@ -235,7 +250,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onentercompleted-from-event-to></span><h3 id='mission-onentercompleted-from-event-to-'>MISSION:OnEnterCompleted(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Completed.</p>
+<p>OnEnter Transition Handler for State Completed.
+@function [parent=#MISSION] OnEnterCompleted</p>
 
 <h4> Parameters </h4>
 
@@ -249,7 +265,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onbeforecomplete-from-event-to></span><h3 id='mission-onbeforecomplete-from-event-to-'>MISSION:OnBeforeComplete(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Complete.</p>
+<p>OnBefore Transition Handler for Event Complete.
+@function [parent=#MISSION] OnBeforeComplete</p>
 
 <h4> Parameters </h4>
 
@@ -267,7 +284,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onaftercomplete-from-event-to></span><h3 id='mission-onaftercomplete-from-event-to-'>MISSION:OnAfterComplete(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Complete.</p>
+<p>OnAfter Transition Handler for Event Complete.
+@function [parent=#MISSION] OnAfterComplete</p>
 
 <h4> Parameters </h4>
 
@@ -281,7 +299,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-complete></span><h3 id='mission-complete-'>MISSION:Complete()</h3>
-<p>Synchronous Event Trigger for Event Complete.</p>
+<p>Synchronous Event Trigger for Event Complete.
+@function [parent=#MISSION] Complete</p>
 
 <h4> Parameters </h4>
 
@@ -292,7 +311,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onleavefailed-from-event-to></span><h3 id='mission-onleavefailed-from-event-to-'>MISSION:OnLeaveFailed(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Failed.</p>
+<p>OnLeave Transition Handler for State Failed.
+@function [parent=#MISSION] OnLeaveFailed</p>
 
 <h4> Parameters </h4>
 
@@ -310,7 +330,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onenterfailed-from-event-to></span><h3 id='mission-onenterfailed-from-event-to-'>MISSION:OnEnterFailed(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Failed.</p>
+<p>OnEnter Transition Handler for State Failed.
+@function [parent=#MISSION] OnEnterFailed</p>
 
 <h4> Parameters </h4>
 
@@ -324,7 +345,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-onbeforefail-from-event-to></span><h3 id='mission-onbeforefail-from-event-to-'>MISSION:OnBeforeFail(From, Event, To)</h3>
-<p>OnBefore Transition Handler for Event Fail.</p>
+<p>OnBefore Transition Handler for Event Fail.
+@function [parent=#MISSION] OnBeforeFail</p>
 
 <h4> Parameters </h4>
 
@@ -342,7 +364,8 @@ self</li>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
 <span id=mission-onafterfail-from-event-to></span><h3 id='mission-onafterfail-from-event-to-'>MISSION:OnAfterFail(From, Event, To)</h3>
-<p>OnAfter Transition Handler for Event Fail.</p>
+<p>OnAfter Transition Handler for Event Fail.
+@function [parent=#MISSION] OnAfterFail</p>
 
 <h4> Parameters </h4>
 
@@ -356,7 +379,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-fail></span><h3 id='mission-fail-'>MISSION:Fail()</h3>
-<p>Synchronous Event Trigger for Event Fail.</p>
+<p>Synchronous Event Trigger for Event Fail.
+@function [parent=#MISSION] Fail</p>
 
 <h4> Parameters </h4>
 
@@ -367,6 +391,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-getname></span><h3 id='mission-getname-'>MISSION:GetName()</h3>
+<p>Gets the mission name.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -380,6 +406,11 @@ self</li>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-joinunit-playerunit-playergroup></span><h3 id='mission-joinunit-playerunit-playergroup-'>MISSION:JoinUnit(PlayerUnit, PlayerGroup)</h3>
+<p>Add a Unit to join the Mission.
+For each Task within the Mission, the Unit is joined with the Task.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -395,6 +426,11 @@ self</li>
 <li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-abortunit-playerunit></span><h3 id='mission-abortunit-playerunit-'>MISSION:AbortUnit(PlayerUnit)</h3>
+<p>Aborts a PlayerUnit from the Mission.
+For each Task within the Mission, the PlayerUnit is removed from Task where it is assigned.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -409,6 +445,11 @@ self</li>
 <li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-crashunit-playerunit></span><h3 id='mission-crashunit-playerunit-'>MISSION:CrashUnit(PlayerUnit)</h3>
+<p>Handles a crash of a PlayerUnit from the Mission.
+For each Task within the Mission, the PlayerUnit is removed from Task where it is assigned.
+If the Unit was not part of a Task in the Mission, false is returned.
+If the Unit is part of a Task in the Mission, true is returned.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -423,6 +464,8 @@ self</li>
 <li><u>Boolean</u>  true if Unit is part of a Task in the Mission.</li>
 </ul>
 <span id=mission-addscoring></span><h3 id='mission-addscoring-'>MISSION:AddScoring()</h3>
+<p>Add a scoring to the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -436,6 +479,8 @@ self</li>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-getscoring></span><h3 id='mission-getscoring-'>MISSION:GetScoring()</h3>
+<p>Get the scoring object of a mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -449,6 +494,8 @@ self</li>
 <li><a href="#scoring-class-">SCORING</a></li>
 </ul>
 <span id=mission-getgroups></span><h3 id='mission-getgroups-'>MISSION:GetGroups()</h3>
+<p>Get the groups for which TASKS are given in the mission</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -462,6 +509,8 @@ self</li>
 <li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
 <span id=mission-setmenu-menutime></span><h3 id='mission-setmenu-menutime-'>MISSION:SetMenu(MenuTime)</h3>
+<p>Sets the Planned Task menu.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -472,6 +521,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-removemenu-menutime></span><h3 id='mission-removemenu-menutime-'>MISSION:RemoveMenu(MenuTime)</h3>
+<p>Removes the Planned Task menu.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -482,6 +533,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=mission-getcommandcenter></span><h3 id='mission-getcommandcenter-'>MISSION:GetCommandCenter()</h3>
+<p>Gets the COMMANDCENTER.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -495,6 +548,8 @@ self</li>
 <li><a href="#commandcenter-class-">COMMANDCENTER</a> </li>
 </ul>
 <span id=mission-removetaskmenu-task></span><h3 id='mission-removetaskmenu-task-'>MISSION:RemoveTaskMenu(Task)</h3>
+<p>Removes a Task menu.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -509,6 +564,8 @@ self</li>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
 <span id=mission-getmenu-taskgroup></span><h3 id='mission-getmenu-taskgroup-'>MISSION:GetMenu(TaskGroup)</h3>
+<p>Gets the mission menu for the coalition.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -523,6 +580,8 @@ self</li>
 <li><a href="#menu_coalition-class-">MENU_COALITION</a> </li>
 </ul>
 <span id=gettask></span><h3 id='gettask-'>GetTask()</h3>
+<p>Get the TASK identified by the TaskNumber from the Mission. This function is useful in GoalFunctions.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -536,6 +595,10 @@ self</li>
 <li><u>Nil</u>  Returns nil if no task was found.</li>
 </ul>
 <span id=mission-addtask-task></span><h3 id='mission-addtask-task-'>MISSION:AddTask(Task)</h3>
+<p>Register a <a href="#task-module-">Task</a> to be completed within the <a href="#mission-module-">Mission</a>.
+Note that there can be multiple <a href="#task-module-">Task</a>s registered to be completed.
+Each Task can be set a certain Goals. The Mission will not be completed until all Goals are reached.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -550,6 +613,10 @@ self</li>
 <li><a href="#task-class-">TASK</a>  The task added.</li>
 </ul>
 <span id=mission-removetask-task></span><h3 id='mission-removetask-task-'>MISSION:RemoveTask(Task)</h3>
+<p>Removes a <a href="#task-module-">Task</a> to be completed within the <a href="#mission-module-">Mission</a>.
+Note that there can be multiple <a href="#task-module-">Task</a>s registered to be completed.
+Each Task can be set a certain Goals. The Mission will not be completed until all Goals are reached.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -564,6 +631,8 @@ self</li>
 <li><u>Nil</u>  The cleaned Task reference.</li>
 </ul>
 <span id=mission-getnexttaskid-task></span><h3 id='mission-getnexttaskid-task-'>MISSION:GetNextTaskID(Task)</h3>
+<p>Return the next <a href="#task-module-">Task</a> ID to be completed within the <a href="#mission-module-">Mission</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -578,6 +647,8 @@ self</li>
 <li><a href="#task-class-">TASK</a>  The task added.</li>
 </ul>
 <span id=mission-iscompleted></span><h3 id='mission-iscompleted-'>MISSION:IsCompleted()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>Completed</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -591,6 +662,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isidle></span><h3 id='mission-isidle-'>MISSION:IsIdle()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>Idle</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -604,6 +677,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isongoing></span><h3 id='mission-isongoing-'>MISSION:IsOngoing()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>Ongoing</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -617,6 +692,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=mission-isfailed></span><h3 id='mission-isfailed-'>MISSION:IsFailed()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>Failed</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -630,6 +707,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=mission-ishold></span><h3 id='mission-ishold-'>MISSION:IsHold()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>Hold</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -643,6 +722,8 @@ self</li>
 <li><u>Boolean</u> </li>
 </ul>
 <span id=mission-hasgroup></span><h3 id='mission-hasgroup-'>MISSION:HasGroup()</h3>
+<p>Validates if the Mission has a Group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -656,6 +737,8 @@ self</li>
 <li><u>Boolean</u>  true if the Mission has a Group.</li>
 </ul>
 <span id=mission-reportsummary></span><h3 id='mission-reportsummary-'>MISSION:ReportSummary()</h3>
+<p>Create a summary report of the Mission (one line).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -669,6 +752,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=mission-reportoverview></span><h3 id='mission-reportoverview-'>MISSION:ReportOverview()</h3>
+<p>Create a overview report of the Mission (multiple lines).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -682,6 +767,8 @@ self</li>
 <li><u>String</u> </li>
 </ul>
 <span id=mission-reportdetails></span><h3 id='mission-reportdetails-'>MISSION:ReportDetails()</h3>
+<p>Create a detailed report of the Mission, listing all the details of the Task.</p>
+
 <h4> Parameters </h4>
 
 <ul>

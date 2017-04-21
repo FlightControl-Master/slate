@@ -28,7 +28,8 @@ ERROR !
 <li>#Unit.IRST IRST</li>
 </ul>
 <span id=getbyname></span><h3 id='getbyname-'>getByName()</h3>
-<p>Returns unit object by the name assigned to the unit in Mission Editor. If there is unit with such name or the unit is destroyed the function will return nil. The function provides access to non-activated units too.</p>
+<p>Returns unit object by the name assigned to the unit in Mission Editor. If there is unit with such name or the unit is destroyed the function will return nil. The function provides access to non-activated units too.
+@function [parent=#Unit] getByName</p>
 
 <h4> Parameters </h4>
 
@@ -42,7 +43,8 @@ ERROR !
 <li>#Unit </li>
 </ul>
 <span id=unit-isactive></span><h3 id='unit-isactive-'>Unit:isActive()</h3>
-<p>Returns if the unit is activated.</p>
+<p>Returns if the unit is activated.
+@function [parent=#Unit] isActive</p>
 
 <h4> Parameters </h4>
 
@@ -56,7 +58,8 @@ ERROR !
 <li><u>Boolean</u> </li>
 </ul>
 <span id=unit-getplayername></span><h3 id='unit-getplayername-'>Unit:getPlayerName()</h3>
-<p>Returns name of the player that control the unit or nil if the unit is controlled by A.I.</p>
+<p>Returns name of the player that control the unit or nil if the unit is controlled by A.I.
+@function [parent=#Unit] getPlayerName</p>
 
 <h4> Parameters </h4>
 
@@ -70,7 +73,8 @@ ERROR !
 <li><u>String</u> </li>
 </ul>
 <span id=unit-getid></span><h3 id='unit-getid-'>Unit:getID()</h3>
-<p>returns the unit&#39;s unique identifier.</p>
+<p>returns the unit&#39;s unique identifier.
+@function [parent=#Unit] getID</p>
 
 <h4> Parameters </h4>
 
@@ -84,7 +88,8 @@ ERROR !
 <li>#Unit.ID </li>
 </ul>
 <span id=unit-getnumber></span><h3 id='unit-getnumber-'>Unit:getNumber()</h3>
-<p>Returns the unit&#39;s number in the group. The number is the same number the unit has in ME. It may not be changed during the mission. If any unit in the group is destroyed, the numbers of another units will not be changed.</p>
+<p>Returns the unit&#39;s number in the group. The number is the same number the unit has in ME. It may not be changed during the mission. If any unit in the group is destroyed, the numbers of another units will not be changed.
+@function [parent=#Unit] getNumber</p>
 
 <h4> Parameters </h4>
 
@@ -98,7 +103,8 @@ ERROR !
 <li><u>Number</u> </li>
 </ul>
 <span id=unit-getcontroller></span><h3 id='unit-getcontroller-'>Unit:getController()</h3>
-<p>Returns controller of the unit if it exist and nil otherwise</p>
+<p>Returns controller of the unit if it exist and nil otherwise
+@function [parent=#Unit] getController</p>
 
 <h4> Parameters </h4>
 
@@ -112,7 +118,8 @@ ERROR !
 <li>#Controller </li>
 </ul>
 <span id=unit-getgroup></span><h3 id='unit-getgroup-'>Unit:getGroup()</h3>
-<p>Returns the unit&#39;s group if it exist and nil otherwise</p>
+<p>Returns the unit&#39;s group if it exist and nil otherwise
+@function [parent=#Unit] getGroup</p>
 
 <h4> Parameters </h4>
 
@@ -126,7 +133,8 @@ ERROR !
 <li>Dcs.DCSWrapper.Group#Group </li>
 </ul>
 <span id=unit-getcallsign></span><h3 id='unit-getcallsign-'>Unit:getCallsign()</h3>
-<p>Returns the unit&#39;s callsign - the localized string.</p>
+<p>Returns the unit&#39;s callsign - the localized string.
+@function [parent=#Unit] getCallsign</p>
 
 <h4> Parameters </h4>
 
@@ -140,7 +148,8 @@ ERROR !
 <li><u>String</u> </li>
 </ul>
 <span id=unit-getlife></span><h3 id='unit-getlife-'>Unit:getLife()</h3>
-<p>Returns the unit&#39;s health. Dead units has health &lt;= 1.0</p>
+<p>Returns the unit&#39;s health. Dead units has health &lt;= 1.0
+@function [parent=#Unit] getLife</p>
 
 <h4> Parameters </h4>
 
@@ -154,7 +163,8 @@ ERROR !
 <li><u>Number</u> </li>
 </ul>
 <span id=unit-getlife0></span><h3 id='unit-getlife0-'>Unit:getLife0()</h3>
-<p>returns the unit&#39;s initial health.</p>
+<p>returns the unit&#39;s initial health.
+@function [parent=#Unit] getLife0</p>
 
 <h4> Parameters </h4>
 
@@ -168,7 +178,8 @@ ERROR !
 <li><u>Number</u> </li>
 </ul>
 <span id=unit-getfuel></span><h3 id='unit-getfuel-'>Unit:getFuel()</h3>
-<p>Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal tanks. If there are additional fuel tanks the value may be greater than 1.0.</p>
+<p>Returns relative amount of fuel (from 0.0 to 1.0) the unit has in its internal tanks. If there are additional fuel tanks the value may be greater than 1.0.
+@function [parent=#Unit] getFuel</p>
 
 <h4> Parameters </h4>
 
@@ -182,7 +193,8 @@ ERROR !
 <li><u>Number</u> </li>
 </ul>
 <span id=unit-getammo></span><h3 id='unit-getammo-'>Unit:getAmmo()</h3>
-<p>Returns the unit ammunition.</p>
+<p>Returns the unit ammunition.
+@function [parent=#Unit] getAmmo</p>
 
 <h4> Parameters </h4>
 
@@ -196,7 +208,8 @@ ERROR !
 <li>#Unit.Ammo </li>
 </ul>
 <span id=unit-getsensors></span><h3 id='unit-getsensors-'>Unit:getSensors()</h3>
-<p>Returns the unit sensors.</p>
+<p>Returns the unit sensors.
+@function [parent=#Unit] getSensors</p>
 
 <h4> Parameters </h4>
 
@@ -217,7 +230,8 @@ ERROR !
 <span class="n">If</span> <span class="n">sensor</span> <span class="nb">type</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">specified</span> <span class="n">the</span> <span class="k">function</span> <span class="nf">returns</span> <span class="kc">true</span> <span class="k">if</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">has</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span> <span class="n">sensor</span> <span class="n">of</span> <span class="n">any</span> <span class="nb">type</span><span class="p">.</span>
 
 </code></pre>
-<p>Returns true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&#39;t want to get information about all the unit&#39;s sensors, and just want to check if the unit has specified types of sensors.</p>
+<p>Returns true if the unit has specified types of sensors. This function is more preferable than Unit.getSensors() if you don&#39;t want to get information about all the unit&#39;s sensors, and just want to check if the unit has specified types of sensors.
+@function [parent=#Unit] hasSensors</p>
 
 <h4> Parameters </h4>
 
@@ -235,7 +249,8 @@ ERROR !
 <span id=unit-getradar></span><h3 id='unit-getradar-'>Unit:getRadar()</h3>
 <p>returns two values:
 First value indicates if at least one of the unit&#39;s radar(s) is on.
-Second value is the object of the radar&#39;s interest. Not nil only if at least one radar of the unit is tracking a target.</p>
+Second value is the object of the radar&#39;s interest. Not nil only if at least one radar of the unit is tracking a target.
+@function [parent=#Unit] getRadar</p>
 
 <h4> Parameters </h4>
 
@@ -249,7 +264,8 @@ Second value is the object of the radar&#39;s interest. Not nil only if at least
 <li><u>Boolean</u>, </li>
 </ul>
 <span id=unit-getdesc></span><h3 id='unit-getdesc-'>Unit:getDesc()</h3>
-<p>Returns unit descriptor. Descriptor type depends on unit category.</p>
+<p>Returns unit descriptor. Descriptor type depends on unit category.
+@function [parent=#Unit] getDesc</p>
 
 <h4> Parameters </h4>
 

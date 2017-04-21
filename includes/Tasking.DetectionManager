@@ -37,6 +37,8 @@ BASE
 <li><a href="#detection_base-class-">DETECTION_BASE</a> Detection : The DETECTION_BASE object that is used to report the detected objects.</li>
 </ul>
 <span id=detection_manager-new-setgroup-detection></span><h3 id='detection_manager-new-setgroup-detection-'>DETECTION_MANAGER:New(SetGroup, Detection)</h3>
+<p>FAC constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -52,6 +54,8 @@ self</li>
 <li><a href="#detection_manager-class-">DETECTION_MANAGER</a></li>
 </ul>
 <span id=detection_manager-setreportinterval-reportinterval></span><h3 id='detection_manager-setreportinterval-reportinterval-'>DETECTION_MANAGER:SetReportInterval(ReportInterval)</h3>
+<p>Set the reporting time interval.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -66,6 +70,8 @@ self</li>
 <li><a href="#detection_manager-class-">DETECTION_MANAGER</a></li>
 </ul>
 <span id=detection_manager-setreportdisplaytime-reportdisplaytime></span><h3 id='detection_manager-setreportdisplaytime-reportdisplaytime-'>DETECTION_MANAGER:SetReportDisplayTime(ReportDisplayTime)</h3>
+<p>Set the reporting message display time.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -80,6 +86,8 @@ self</li>
 <li><a href="#detection_manager-class-">DETECTION_MANAGER</a></li>
 </ul>
 <span id=detection_manager-getreportdisplaytime></span><h3 id='detection_manager-getreportdisplaytime-'>DETECTION_MANAGER:GetReportDisplayTime()</h3>
+<p>Get the reporting message display time.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -93,6 +101,8 @@ self</li>
 <li><u>Number</u>  ReportDisplayTime The display time in seconds when a report needs to be done.</li>
 </ul>
 <span id=detection_manager-processdetected-detection></span><h3 id='detection_manager-processdetected-detection-'>DETECTION_MANAGER:ProcessDetected(Detection)</h3>
+<p>Reports the detected items to the <a href="#set_group-class-">SET_GROUP</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -122,6 +132,8 @@ BASE
 <li><a href="#detection_base-class-">DETECTION_BASE</a> Detection : The DETECTION_BASE object that is used to report the detected objects.</li>
 </ul>
 <span id=detection_reporting-new-setgroup-detection></span><h3 id='detection_reporting-new-setgroup-detection-'>DETECTION_REPORTING:New(SetGroup, Detection)</h3>
+<p>DETECTION_REPORTING constructor.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -137,6 +149,8 @@ self</li>
 <li><a href="#detection_reporting-class-">DETECTION_REPORTING</a></li>
 </ul>
 <span id=detection_reporting-getdetecteditemstext-detectedset></span><h3 id='detection_reporting-getdetecteditemstext-detectedset-'>DETECTION_REPORTING:GetDetectedItemsText(DetectedSet)</h3>
+<p>Creates a string of the detected items in a <a href="#detection-module-">Detection</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -151,6 +165,8 @@ self</li>
 <li><a href="#detection_manager-class-">DETECTION_MANAGER</a></li>
 </ul>
 <span id=detection_reporting-processdetected-group-detection></span><h3 id='detection_reporting-processdetected-group-detection-'>DETECTION_REPORTING:ProcessDetected(Group, Detection)</h3>
+<p>Reports the detected items to the <a href="#set_group-class-">SET_GROUP</a>.</p>
+
 <h4> Parameters </h4>
 
 <ul>

@@ -36,6 +36,8 @@ BASE
 <li><u>String</u> PositionableName : The name of the measurable.</li>
 </ul>
 <span id=positionable-new-positionablename></span><h3 id='positionable-new-positionablename-'>POSITIONABLE:New(PositionableName)</h3>
+<p>Create a new POSITIONABLE from a DCSPositionable</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -50,6 +52,8 @@ self</li>
 <li><a href="#positionable-class-">POSITIONABLE</a></li>
 </ul>
 <span id=positionable-getpositionvec3></span><h3 id='positionable-getpositionvec3-'>POSITIONABLE:GetPositionVec3()</h3>
+<p>Returns the @{DCSTypes#Position3} position vectors indicating the point and direction vectors in 3D of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -63,6 +67,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getvec2></span><h3 id='positionable-getvec2-'>POSITIONABLE:GetVec2()</h3>
+<p>Returns the @{DCSTypes#Vec2} vector indicating the point in 2D of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -76,6 +82,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getpointvec2></span><h3 id='positionable-getpointvec2-'>POSITIONABLE:GetPointVec2()</h3>
+<p>Returns a POINT_VEC2 object indicating the point in 2D of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -89,6 +97,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getpointvec3></span><h3 id='positionable-getpointvec3-'>POSITIONABLE:GetPointVec3()</h3>
+<p>Returns a POINT_VEC3 object indicating the point in 3D of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -103,6 +113,8 @@ self</li>
 </ul>
 <span id=positionable-getrandomvec3-radius></span><h3 id='positionable-getrandomvec3-radius-'>POSITIONABLE:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class-) of first UNIT of the GROUP</span>
 </code></pre>
+<p>Returns a random @{DCSTypes#Vec3} vector within a range, indicating the point in 3D of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -117,6 +129,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getvec3></span><h3 id='positionable-getvec3-'>POSITIONABLE:GetVec3()</h3>
+<p>Returns the @{DCSTypes#Vec3} vector indicating the 3D vector of the POSITIONABLE within the mission.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -130,6 +144,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getaltitude></span><h3 id='positionable-getaltitude-'>POSITIONABLE:GetAltitude()</h3>
+<p>Returns the altitude of the POSITIONABLE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -143,6 +159,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-isaboverunway></span><h3 id='positionable-isaboverunway-'>POSITIONABLE:IsAboveRunway()</h3>
+<p>Returns if the Positionable is located above a runway.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -156,6 +174,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getheading></span><h3 id='positionable-getheading-'>POSITIONABLE:GetHeading()</h3>
+<p>Returns the POSITIONABLE heading in degrees.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -169,6 +189,9 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-inair></span><h3 id='positionable-inair-'>POSITIONABLE:InAir()</h3>
+<p>Returns true if the POSITIONABLE is in the air.
+Polymorphic, is overridden in GROUP and UNIT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -182,6 +205,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getvelocity></span><h3 id='positionable-getvelocity-'>POSITIONABLE:GetVelocity()</h3>
+<p>Returns the POSITIONABLE velocity vector.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -195,6 +220,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getvelocitykmh></span><h3 id='positionable-getvelocitykmh-'>POSITIONABLE:GetVelocityKMH()</h3>
+<p>Returns the POSITIONABLE velocity in km/h.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -208,6 +235,8 @@ self</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getmessage-message-duration-name></span><h3 id='positionable-getmessage-message-duration-name-'>POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
+<p>Returns a message with the callsign embedded (if there is one).</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -224,6 +253,9 @@ self</li>
 <li><a href="#message-class-">MESSAGE</a> </li>
 </ul>
 <span id=positionable-messagetoall-message-duration-name></span><h3 id='positionable-messagetoall-message-duration-name-'>POSITIONABLE:MessageToAll(Message, Duration, Name)</h3>
+<p>Send a message to all coalitions.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -236,6 +268,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-messagetocoalition-message-duration-messagecoalition-name></span><h3 id='positionable-messagetocoalition-message-duration-messagecoalition-name-'>POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition, Name)</h3>
+<p>Send a message to a coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -249,6 +284,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-messagetored-message-duration-name></span><h3 id='positionable-messagetored-message-duration-name-'>POSITIONABLE:MessageToRed(Message, Duration, Name)</h3>
+<p>Send a message to the red coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -261,6 +299,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-messagetoblue-message-duration-name></span><h3 id='positionable-messagetoblue-message-duration-name-'>POSITIONABLE:MessageToBlue(Message, Duration, Name)</h3>
+<p>Send a message to the blue coalition.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -273,6 +314,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-messagetoclient-message-duration-client-name></span><h3 id='positionable-messagetoclient-message-duration-client-name-'>POSITIONABLE:MessageToClient(Message, Duration, Client, Name)</h3>
+<p>Send a message to a client.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -286,6 +330,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-messagetogroup-message-duration-messagegroup-name></span><h3 id='positionable-messagetogroup-message-duration-messagegroup-name-'>POSITIONABLE:MessageToGroup(Message, Duration, MessageGroup, Name)</h3>
+<p>Send a message to a <a href="#group-module-">Group</a>.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -299,6 +346,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-message-message-duration-name></span><h3 id='positionable-message-message-duration-name-'>POSITIONABLE:Message(Message, Duration, Name)</h3>
+<p>Send a message to the players in the <a href="#group-module-">Group</a>.
+The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -311,6 +361,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=positionable-getradio></span><h3 id='positionable-getradio-'>POSITIONABLE:GetRadio()</h3>
+<p>Create a <a href="#radio-class-">RADIO</a>, to allow radio transmission for this POSITIONABLE.
+Set parameters with the methods provided, then use RADIO:Broadcast() to actually broadcast the message</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -324,6 +377,8 @@ self</li>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=positionable-getbeacon></span><h3 id='positionable-getbeacon-'>POSITIONABLE:GetBeacon()</h3>
+<p>Create a <a href="#beacon-class-">BEACON</a>, to allow this POSITIONABLE to broadcast beacon signals</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -337,6 +392,8 @@ self</li>
 <li><a href="#radio-class-">RADIO</a></li>
 </ul>
 <span id=positionable-laseunit-target-lasercode-duration></span><h3 id='positionable-laseunit-target-lasercode-duration-'>POSITIONABLE:LaseUnit(Target, LaserCode, Duration)</h3>
+<p>Start Lasing a POSITIONABLE</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -354,6 +411,8 @@ Target</li>
 <li><a href="#spot-class-">SPOT</a> </li>
 </ul>
 <span id=positionable-laseoff-target></span><h3 id='positionable-laseoff-target-'>POSITIONABLE:LaseOff(Target)</h3>
+<p>Stop Lasing a POSITIONABLE</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -369,6 +428,8 @@ Target</li>
 <li><a href="#positionable-class-">POSITIONABLE</a></li>
 </ul>
 <span id=positionable-islasing></span><h3 id='positionable-islasing-'>POSITIONABLE:IsLasing()</h3>
+<p>Check if the POSITIONABLE is lasing a target</p>
+
 <h4> Parameters </h4>
 
 <ul>

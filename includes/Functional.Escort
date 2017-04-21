@@ -155,6 +155,8 @@ BASE
 <span class="c1">-- Now use these 2 objects to construct the new EscortPlanes object.</span>
 <span class="n">EscortPlanes</span> <span class="o">=</span> <span class="n">ESCORT</span><span class="p">:</span><span class="n">New</span><span class="p">(</span> <span class="n">EscortClient</span><span class="p">,</span> <span class="n">EscortGroup</span><span class="p">,</span> <span class="s2">"Desert"</span><span class="p">,</span> <span class="s2">"Welcome to the mission. You are escorted by a plane with code name 'Desert', which can be instructed through the F10 radio menu."</span> <span class="p">)</span>
 </code></pre>
+<p>ESCORT class constructor for an AI group</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -172,6 +174,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-setdetection-detection></span><h3 id='escort-setdetection-detection-'>ESCORT:SetDetection(Detection)</h3>
+<p>Set a Detection method for the EscortClient to be reported upon.
+Detection methods are based on the derived classes from DETECTION_BASE.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -182,6 +187,9 @@ self</li>
 
 <h4> Returns </h4>
 <span id=escort-testsmokedirectionvector-smokedirection></span><h3 id='escort-testsmokedirectionvector-smokedirection-'>ESCORT:TestSmokeDirectionVector(SmokeDirection)</h3>
+<p>This function is for test, it will put on the frequency of the FollowScheduler a red smoke at the direction vector calculated for the escort to fly to.
+This allows to visualize where the escort is flying to.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -192,6 +200,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=escort-menus></span><h3 id='escort-menus-'>ESCORT:Menus()</h3>
+<p>Defines the default menus</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -205,6 +215,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menufollowat-distance></span><h3 id='escort-menufollowat-distance-'>ESCORT:MenuFollowAt(Distance)</h3>
+<p>Defines a menu slot to let the escort Join and Follow you at a certain distance.
+This menu will appear under <strong>Navigation</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -219,6 +232,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuholdatescortposition-height-seconds-menutextformat></span><h3 id='escort-menuholdatescortposition-height-seconds-menutextformat-'>ESCORT:MenuHoldAtEscortPosition(Height, Seconds, MenuTextFormat)</h3>
+<p>Defines a menu slot to let the escort hold at their current position and stay low with a specified height during a specified time in seconds.
+This menu will appear under <strong>Hold position</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -235,6 +251,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuholdatleaderposition-height-seconds-menutextformat></span><h3 id='escort-menuholdatleaderposition-height-seconds-menutextformat-'>ESCORT:MenuHoldAtLeaderPosition(Height, Seconds, MenuTextFormat)</h3>
+<p>Defines a menu slot to let the escort hold at the client position and stay low with a specified height during a specified time in seconds.
+This menu will appear under <strong>Navigation</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -251,6 +270,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuscanfortargets-height-seconds-menutextformat></span><h3 id='escort-menuscanfortargets-height-seconds-menutextformat-'>ESCORT:MenuScanForTargets(Height, Seconds, MenuTextFormat)</h3>
+<p>Defines a menu slot to let the escort scan for targets at a certain height for a certain time in seconds.
+This menu will appear under <strong>Scan targets</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -267,6 +289,10 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuflare-menutextformat></span><h3 id='escort-menuflare-menutextformat-'>ESCORT:MenuFlare(MenuTextFormat)</h3>
+<p>Defines a menu slot to let the escort disperse a flare in a certain color.
+This menu will appear under <strong>Navigation</strong>.
+The flare will be fired from the first unit in the group.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -281,6 +307,11 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menusmoke-menutextformat></span><h3 id='escort-menusmoke-menutextformat-'>ESCORT:MenuSmoke(MenuTextFormat)</h3>
+<p>Defines a menu slot to let the escort disperse a smoke in a certain color.
+This menu will appear under <strong>Navigation</strong>.
+Note that smoke menu options will only be displayed for ships and ground units. Not for air units.
+The smoke will be fired from the first unit in the group.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -295,6 +326,10 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menureporttargets-seconds></span><h3 id='escort-menureporttargets-seconds-'>ESCORT:MenuReportTargets(Seconds)</h3>
+<p>Defines a menu slot to let the escort report their current detected targets with a specified time interval in seconds.
+This menu will appear under <strong>Report targets</strong>.
+Note that if a report targets menu is not specified, no targets will be detected by the escort, and the attack and assisted attack menus will not be displayed.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -309,6 +344,10 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuassistedattack></span><h3 id='escort-menuassistedattack-'>ESCORT:MenuAssistedAttack()</h3>
+<p>Defines a menu slot to let the escort attack its detected targets using assisted attack from another escort joined also with the client.
+This menu will appear under <strong>Request assistance from</strong>.
+Note that this method needs to be preceded with the method MenuReportTargets.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -322,6 +361,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuroe></span><h3 id='escort-menuroe-'>ESCORT:MenuROE()</h3>
+<p>Defines a menu to let the escort set its rules of engagement.
+All rules of engagement will appear under the menu <strong>ROE</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -335,6 +377,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuevasion></span><h3 id='escort-menuevasion-'>ESCORT:MenuEvasion()</h3>
+<p>Defines a menu to let the escort set its evasion when under threat.
+All rules of engagement will appear under the menu <strong>Evasion</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -348,6 +393,9 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-menuresumemission></span><h3 id='escort-menuresumemission-'>ESCORT:MenuResumeMission()</h3>
+<p>Defines a menu to let the escort resume its mission from a waypoint on its route.
+All rules of engagement will appear under the menu <strong>Resume mission from</strong>.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -361,6 +409,8 @@ self</li>
 <li><a href="#escort-class-">ESCORT</a></li>
 </ul>
 <span id=escort-joinupandfollow-escortgroup-escortclient-distance></span><h3 id='escort-joinupandfollow-escortgroup-escortclient-distance-'>ESCORT:JoinUpAndFollow(EscortGroup, EscortClient, Distance)</h3>
+<p>JoinsUp and Follows a CLIENT.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -372,6 +422,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=escort-registerroute></span><h3 id='escort-registerroute-'>ESCORT:RegisterRoute()</h3>
+<p>Registers the waypoints</p>
+
 <h4> Parameters </h4>
 
 <ul>

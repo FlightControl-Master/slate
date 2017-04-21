@@ -77,6 +77,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> TargetZone</li>
 </ul>
 <span id=act_assign-new></span><h3 id='act_assign-new-'>ACT_ASSIGN:New()</h3>
+<p>Creates a new task assignment state machine. The process will accept the task by default, no player intervention accepted.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -109,6 +111,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> TargetZone</li>
 </ul>
 <span id=act_assign_accept-new-taskbriefing></span><h3 id='act_assign_accept-new-taskbriefing-'>ACT_ASSIGN_ACCEPT:New(TaskBriefing)</h3>
+<p>Creates a new task assignment state machine. The process will accept the task by default, no player intervention accepted.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -119,6 +123,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_accept-onafterstart-processunit-event-from-to></span><h3 id='act_assign_accept-onafterstart-processunit-event-from-to-'>ACT_ASSIGN_ACCEPT:onafterStart(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -132,6 +138,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_accept-onenterassigned-processunit-event-from-to></span><h3 id='act_assign_accept-onenterassigned-processunit-event-from-to-'>ACT_ASSIGN_ACCEPT:onenterAssigned(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -163,6 +171,8 @@ BASE
 <li><a href="#zone_base-class-">ZONE_BASE</a> TargetZone</li>
 </ul>
 <span id=act_assign_menu_accept-new-taskname-taskbriefing></span><h3 id='act_assign_menu_accept-new-taskname-taskbriefing-'>ACT_ASSIGN_MENU_ACCEPT:New(TaskName, TaskBriefing)</h3>
+<p>Init.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -178,6 +188,8 @@ self</li>
 <li><a href="#act_assign_menu_accept-class-">ACT_ASSIGN_MENU_ACCEPT</a></li>
 </ul>
 <span id=act_assign_menu_accept-init-taskname-taskbriefing></span><h3 id='act_assign_menu_accept-init-taskname-taskbriefing-'>ACT_ASSIGN_MENU_ACCEPT:Init(TaskName, TaskBriefing)</h3>
+<p>Creates a new task assignment state machine. The process will request from the menu if it accepts the task, if not, the unit is removed from the simulator.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -193,6 +205,8 @@ self</li>
 <li><a href="#act_assign_menu_accept-class-">ACT_ASSIGN_MENU_ACCEPT</a></li>
 </ul>
 <span id=act_assign_menu_accept-onafterstart-processunit-event-from-to></span><h3 id='act_assign_menu_accept-onafterstart-processunit-event-from-to-'>ACT_ASSIGN_MENU_ACCEPT:onafterStart(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -206,6 +220,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_menu_accept-menuassign></span><h3 id='act_assign_menu_accept-menuassign-'>ACT_ASSIGN_MENU_ACCEPT:MenuAssign()</h3>
+<p>Menu function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -215,6 +231,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_menu_accept-menureject></span><h3 id='act_assign_menu_accept-menureject-'>ACT_ASSIGN_MENU_ACCEPT:MenuReject()</h3>
+<p>Menu function.</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -224,6 +242,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_menu_accept-onafterassign-processunit-event-from-to></span><h3 id='act_assign_menu_accept-onafterassign-processunit-event-from-to-'>ACT_ASSIGN_MENU_ACCEPT:onafterAssign(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -237,6 +257,8 @@ self</li>
 
 <h4> Returns </h4>
 <span id=act_assign_menu_accept-onafterreject-processunit-event-from-to></span><h3 id='act_assign_menu_accept-onafterreject-processunit-event-from-to-'>ACT_ASSIGN_MENU_ACCEPT:onafterReject(ProcessUnit, Event, From, To)</h3>
+<p>StateMachine callback function</p>
+
 <h4> Parameters </h4>
 
 <ul>
