@@ -1,5 +1,5 @@
 <span id=core-event-module></span><h1 id='core-event-module-'>Core.Event Module</h1>
-<p><strong>Core</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
+<p><strong>Core R2.1</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
 
 <p><img src="/includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
 <span id=1-event-handling-overview></span><h5 id='1-event-handling-overview-'>1) Event Handling Overview</h5>
@@ -196,23 +196,6 @@ self</li>
 </ul>
 <span id=event-remove-eventclass-eventid></span><h3 id='event-remove-eventclass-eventid-'>EVENT:Remove(EventClass, EventID)</h3>
 <p>Removes a subscription</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#event-class-">EVENT</a>
-self</li>
-<li><a href="#base-class-">BASE</a> EventClass : The self instance of the class for which the event is.</li>
-<li><a href="#world.event-class-">world.event</a> EventID</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#event-events-class-">Events</a></li>
-</ul>
-<span id=event-reset-eventclass-eventid></span><h3 id='event-reset-eventclass-eventid-'>EVENT:Reset(EventClass, EventID)</h3>
-<p>Resets subscriptions</p>
 
 <h4> Parameters </h4>
 

@@ -1,17 +1,63 @@
 <span id=core-spot-module></span><h1 id='core-spot-module-'>Core.Spot Module</h1>
-<p><strong>Core  (Release 2.1)</strong> -- Management of SPOT logistics, that can be transported from and to transportation carriers.</p>
+<p><strong>Core 2.1</strong> -- Management of SPOT logistics, that can be transported from and to transportation carriers.</p>
 
 <p><img src="/includes/Pictures/SPOT/Dia1.JPG" alt="Banner Image" /></p>
 
-<p>Spot lases points endlessly or for a duration.</p>
-<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-spot-demo-missions-source-code-a></span><h5 id='a-href-spot-demo-missions-source-code-a-'><a href="#">SPOT Demo Missions source code</a></h5><span id=a-href-spot-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-spot-demo-missions-only-for-beta-testers-a-'><a href="#">SPOT Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spot-youtube-channel-a></span><h5 id='a-href-spot-youtube-channel-a-'><a href="#">SPOT YouTube Channel</a></h5>
-<p>This module is still under construction, but is described above works already, and will keep working ...</p>
+<p>SPOT implements the DCS Spot class functionality, but adds additional luxury to be able to:</p>
+
+<ul>
+<li>Spot for a defined duration.</li>
+<li>wiggle the spot at the target.</li>
+<li>Provide a <a href="#unit-module-">Unit</a> as a target, instead of a point.</li>
+<li>Implement a status machine, LaseOn, LaseOff.</li>
+</ul>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-spot-demo-missions-source-code-a></span><h5 id='a-href-spot-demo-missions-source-code-a-'><a href="#">SPOT Demo Missions source code</a></h5><span id=a-href-spot-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-spot-demo-missions-only-for-beta-testers-a-'><a href="#">SPOT Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spot-youtube-channel-a></span><h5 id='a-href-spot-youtube-channel-a-'><a href="#">SPOT YouTube Channel</a></h5><span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=112175"><strong>Ciribob</strong></a>: Showing the way how to lase targets + how laser codes work!!! Explained the autolase script.</li>
+<li><a href="https://forums.eagle.ru/member.php?u=112055"><strong>EasyEB</strong></a>: Ideas and Beta Testing</li>
+<li><a href="https://forums.eagle.ru/member.php?u=123698"><strong>Wingthor</strong></a>: Beta Testing</li>
+</ul>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
 <span id=spot-class></span><h2 id='spot-class-'>SPOT Class</h2>
 <pre>
 Inheritance : The SPOT Class inherits from the following parents :
 BASE
-    `-- SPOT
+    `-- FSM
+        `-- SPOT
 </pre>
+
+<p>SPOT implements the DCS Spot class functionality, but adds additional luxury to be able to:</p>
+
+<ul>
+<li>Mark targets for a defined duration.</li>
+<li>wiggle the spot at the target.</li>
+<li>Provide a <a href="#unit-module-">Unit</a> as a target, instead of a point.</li>
+<li>Implement a status machine, LaseOn, LaseOff.</li>
+</ul>
+<span id=1-spot-constructor></span><h5 id='1-spot-constructor-'>1. SPOT constructor</h5>
+<ul>
+<li><a href="#spot-new-recce-lasercode-duration">SPOT:New()</a>..\Presentations\SPOT\Dia2.JPG): Creates a new SPOT object.</li>
+</ul>
+<span id=2-spot-is-a-fsm></span><h5 id='2-spot-is-a-fsm-'>2. SPOT is a FSM</h5>
+<p><img src="/images/" alt="Process" /></p>
+<span id=2-1-spot-states></span><h5 id='2-1-spot-states-'>2.1 SPOT States</h5>
+<ul>
+<li><strong>Off</strong>: Lasing is switched off.</li>
+<li><strong>On</strong>: Lasing is switched on.</li>
+<li><strong>Destroyed</strong>: Target is destroyed.</li>
+</ul>
+<span id=2-2-spot-events></span><h5 id='2-2-spot-events-'>2.2 SPOT Events</h5>
+<ul>
+<li><strong>SPOT-LaseOn-Target, LaserCode, Duration)</strong>: Lase to a target.</li>
+<li><strong>SPOT-LaseOff-</strong>: Stop lasing the target.</li>
+<li><strong>SPOT-Lasing-</strong>: Target is being lased.</li>
+<li><strong>SPOT-Destroyed-</strong>: Triggered when target is destroyed.</li>
+</ul>
+<span id=3-check-if-a-target-is-being-lased></span><h5 id='3-check-if-a-target-is-being-lased-'>3. Check if a Target is being lased</h5>
+<p>The method SPOT-IsLasing- indicates whether lasing is on or off.</p>
 <span id=spot-new-recce-lasercode-duration></span><h3 id='spot-new-recce-lasercode-duration-'>SPOT:New(Recce, LaserCode, Duration)</h3>
 <p>SPOT Constructor.</p>
 
@@ -30,6 +76,144 @@ self</li>
 <ul>
 <li><a href="#spot-class-">SPOT</a></li>
 </ul>
+<span id=spot-onbeforelaseon-from-event-to></span><h3 id='spot-onbeforelaseon-from-event-to-'>SPOT:OnBeforeLaseOn(From, Event, To)</h3>
+<p>LaseOn Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeLaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterlaseon-from-event-to></span><h3 id='spot-onafterlaseon-from-event-to-'>SPOT:OnAfterLaseOn(From, Event, To)</h3>
+<p>LaseOn Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterLaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-laseon></span><h3 id='spot-laseon-'>SPOT:LaseOn()</h3>
+<p>LaseOn Trigger for SPOT
+@function [parent=#SPOT] LaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onbeforelaseoff-from-event-to></span><h3 id='spot-onbeforelaseoff-from-event-to-'>SPOT:OnBeforeLaseOff(From, Event, To)</h3>
+<p>LaseOff Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeLaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterlaseoff-from-event-to></span><h3 id='spot-onafterlaseoff-from-event-to-'>SPOT:OnAfterLaseOff(From, Event, To)</h3>
+<p>LaseOff Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterLaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-laseoff></span><h3 id='spot-laseoff-'>SPOT:LaseOff()</h3>
+<p>LaseOff Trigger for SPOT
+@function [parent=#SPOT] LaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onbeforedestroyed-from-event-to></span><h3 id='spot-onbeforedestroyed-from-event-to-'>SPOT:OnBeforeDestroyed(From, Event, To)</h3>
+<p>Destroyed Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeDestroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterdestroyed-from-event-to></span><h3 id='spot-onafterdestroyed-from-event-to-'>SPOT:OnAfterDestroyed(From, Event, To)</h3>
+<p>Destroyed Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterDestroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-destroyed></span><h3 id='spot-destroyed-'>SPOT:Destroyed()</h3>
+<p>Destroyed Trigger for SPOT
+@function [parent=#SPOT] Destroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
 <span id=spot-onafterlaseon-self-self-self-target-lasercode-duration></span><h3 id='spot-onafterlaseon-self-self-self-target-lasercode-duration-'>SPOT:onafterLaseOn(self, self, self, Target, LaserCode, Duration)</h3>
 <h4> Parameters </h4>
 
@@ -42,6 +226,16 @@ self</li>
 <li><a href="#positionable-class-">POSITIONABLE</a> Target</li>
 <li><u>Number</u> LaserCode</li>
 <li><u>Number</u> Duration</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-oneventdead-eventdata></span><h3 id='spot-oneventdead-eventdata-'>SPOT:OnEventDead(EventData)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData</li>
 </ul>
 
 <h4> Returns </h4>

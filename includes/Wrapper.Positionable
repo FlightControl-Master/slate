@@ -34,6 +34,8 @@ BASE
 
 <ul>
 <li><u>String</u> PositionableName : The name of the measurable.</li>
+<li><a href="#spot-class-">SPOT</a> Spot : The laser Spot.</li>
+<li><u>Number</u> LaserCode : The last assigned laser code.</li>
 </ul>
 <span id=positionable-new-positionablename></span><h3 id='positionable-new-positionablename-'>POSITIONABLE:New(PositionableName)</h3>
 <p>Create a new POSITIONABLE from a DCSPositionable</p>
@@ -234,24 +236,6 @@ Polymorphic, is overridden in GROUP and UNIT.</p>
 <li><u>Number</u>  The velocity in km/h</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
-<span id=positionable-getmessage-message-duration-name></span><h3 id='positionable-getmessage-message-duration-name-'>POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
-<p>Returns a message with the callsign embedded (if there is one).</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><u>String</u> Message : The message text</li>
-<li><a href="#duration-class-">Duration</a> Duration : The duration of the message.</li>
-<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#message-class-">MESSAGE</a> </li>
-</ul>
 <span id=positionable-messagetoall-message-duration-name></span><h3 id='positionable-messagetoall-message-duration-name-'>POSITIONABLE:MessageToAll(Message, Duration, Name)</h3>
 <p>Send a message to all coalitions.
 The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
@@ -360,88 +344,6 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=positionable-getradio></span><h3 id='positionable-getradio-'>POSITIONABLE:GetRadio()</h3>
-<p>Create a <a href="#radio-class-">RADIO</a>, to allow radio transmission for this POSITIONABLE.
-Set parameters with the methods provided, then use RADIO:Broadcast() to actually broadcast the message</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#radio-class-">RADIO</a></li>
-</ul>
-<span id=positionable-getbeacon></span><h3 id='positionable-getbeacon-'>POSITIONABLE:GetBeacon()</h3>
-<p>Create a <a href="#beacon-class-">BEACON</a>, to allow this POSITIONABLE to broadcast beacon signals</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#radio-class-">RADIO</a></li>
-</ul>
-<span id=positionable-laseunit-target-lasercode-duration></span><h3 id='positionable-laseunit-target-lasercode-duration-'>POSITIONABLE:LaseUnit(Target, LaserCode, Duration)</h3>
-<p>Start Lasing a POSITIONABLE</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-Target</li>
-<li><u>Number</u> LaserCode</li>
-<li><u>Number</u> Duration</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spot-class-">SPOT</a> </li>
-</ul>
-<span id=positionable-laseoff-target></span><h3 id='positionable-laseoff-target-'>POSITIONABLE:LaseOff(Target)</h3>
-<p>Stop Lasing a POSITIONABLE</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-Target</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a></li>
-</ul>
-<span id=positionable-islasing></span><h3 id='positionable-islasing-'>POSITIONABLE:IsLasing()</h3>
-<p>Check if the POSITIONABLE is lasing a target</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u>  true if it is lasing a target</li>
-</ul>
 <span id=dcspositionable-class></span><h2 id='dcspositionable-class-'>DCSPositionable Class</h2>
 <pre>
 The DCSPositionable class does not inherit

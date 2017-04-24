@@ -4,45 +4,7 @@
 <p><img src="/includes/Pictures/SPAWN/SPAWN.JPG" alt="Banner Image" /></p>
 
 <p>The documentation of the SPAWN class can be found further in this document.</p>
-<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
-<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
-
-<ul>
-<li><strong>Added</strong> parts are expressed in bold type face.</li>
-<li><em>Removed</em> parts are expressed in italic type face.</li>
-</ul>
-
-<p>Hereby the change log:</p>
-
-<p>2017-04-08: SPAWN:<strong>InitDelayOnOff( DelayOnOff )</strong> added.
-2017-04-08: SPAWN:<strong>InitDelayOn()</strong> added.
-2017-04-08: SPAWN:<strong>InitDelayOff()</strong> added.</p>
-
-<p>2017-03-14: SPAWN:<strong>InitKeepUnitNames()</strong> added.
-2017-03-14: SPAWN:<strong>InitRandomizePosition( RandomizePosition, OuterRadious, InnerRadius )</strong> added.</p>
-
-<p>2017-02-04: SPAWN:InitUnControlled( <strong>UnControlled</strong> ) replaces SPAWN:InitUnControlled().</p>
-
-<p>2017-01-24: SPAWN:<strong>InitAIOnOff( AIOnOff )</strong> added.
-2017-01-24: SPAWN:<strong>InitAIOn()</strong> added.
-2017-01-24: SPAWN:<strong>InitAIOff()</strong> added.</p>
-
-<p>2016-08-15: SPAWN:<strong>InitCleanUp</strong>( SpawnCleanUpInterval ) replaces SPAWN:<em>CleanUp</em>( SpawnCleanUpInterval ).
-2016-08-15: SPAWN:<strong>InitRandomizeZones( SpawnZones )</strong> added.</p>
-
-<p>2016-08-14: SPAWN:<strong>OnSpawnGroup</strong>( SpawnCallBackFunction, ... ) replaces SPAWN:<em>SpawnFunction</em>( SpawnCallBackFunction, ... ).
-2016-08-14: SPAWN.SpawnInZone( Zone, <strong>RandomizeGroup</strong>, SpawnIndex ) replaces SpawnInZone( Zone, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromVec3( Vec3, SpawnIndex ) replaces SpawnFromVec3( Vec3, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromVec2( Vec2, SpawnIndex ) replaces SpawnFromVec2( Vec2, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromUnit( SpawnUnit, SpawnIndex ) replaces SpawnFromUnit( SpawnUnit, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromUnit( SpawnUnit, SpawnIndex ) replaces SpawnFromStatic( SpawnStatic, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.<strong>InitRandomizeUnits( RandomizeUnits, OuterRadius, InnerRadius )</strong> added.
-2016-08-14: SPAWN.<strong>Init</strong>Limit( SpawnMaxUnitsAlive, SpawnMaxGroups ) replaces SPAWN.<em>Limit</em>( SpawnMaxUnitsAlive, SpawnMaxGroups ).
-2016-08-14: SPAWN.<strong>Init</strong>Array( SpawnAngle, SpawnWidth, SpawnDeltaX, SpawnDeltaY ) replaces SPAWN.<em>Array</em>( SpawnAngle, SpawnWidth, SpawnDeltaX, SpawnDeltaY ).
-2016-08-14: SPAWN.<strong>Init</strong>RandomizeRoute( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ) replaces SPAWN.<em>RandomizeRoute</em>( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ).
-2016-08-14: SPAWN.<strong>Init</strong>RandomizeTemplate( SpawnTemplatePrefixTable ) replaces SPAWN.<em>RandomizeTemplate</em>( SpawnTemplatePrefixTable ).
-2016-08-14: SPAWN.<strong>Init</strong>UnControlled() replaces SPAWN.<em>UnControlled</em>().</p>
-<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li><strong>Aaron</strong>: Posed the idea for Group position randomization at SpawnInZone and make the Unit randomization separate from the Group randomization.</li>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>

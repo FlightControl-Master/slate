@@ -660,6 +660,178 @@ self</li>
 <ul>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
 </ul>
+<span id=set_group-allcompletelyinzone-zoneobject></span><h3 id='set_group-allcompletelyinzone-zoneobject-'>SET_GROUP:AllCompletelyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AllCompletelyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"All the SET's GROUP are in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Some or all SET's GROUP are outside zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if all the <a href="#group-class-">GROUP</a> are completely in the <a href="#zone-class-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if all the <a href="#group-class-">GROUP</a> are completly in the <a href="#zone-class-">ZONE</a>, false otherwise</li>
+</ul>
+<span id=set_group-anycompletelyinzone-zoneobject></span><h3 id='set_group-anycompletelyinzone-zoneobject-'>SET_GROUP:AnyCompletelyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyCompletelyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one of the <a href="#group-class-">GROUP</a> is completely inside the <a href="#zone-class-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-anyinzone-zoneobject></span><h3 id='set_group-anyinzone-zoneobject-'>SET_GROUP:AnyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyPartlyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP has at least one UNIT in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No UNIT of any GROUP is in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one <a href="#unit-class-">UNIT</a> of one <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is in <a href="#zone-module-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is partly or completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-anypartlyinzone-zoneobject></span><h3 id='set_group-anypartlyinzone-zoneobject-'>SET_GROUP:AnyPartlyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyPartlyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP is partially in the zone, but none are fully in it !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP are in zone, or one (or more) GROUP is completely in it !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is partly in <a href="#zone-module-">ZONE</a>.
+Will return false if a <a href="#group-module-">GROUP</a> is fully in the <a href="#zone-module-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is partly or completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-noneinzone-zoneobject></span><h3 id='set_group-noneinzone-zoneobject-'>SET_GROUP:NoneInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">NoneInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No UNIT of any GROUP is in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if no <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is in <a href="#zone-module-">ZONE</a>
+This could also be achieved with <code>not SET_GROUP:AnyPartlyInZone(Zone)</code>, but it&#39;s easier for the
+mission designer to add a dedicated method</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if no <a href="#group-class-">GROUP</a> is inside the <a href="#zone-class-">ZONE</a> in any way, false otherwise.</li>
+</ul>
+<span id=set_group-countinzone-zoneobject></span><h3 id='set_group-countinzone-zoneobject-'>SET_GROUP:CountInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"There are "</span> <span class="o">..</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">CountInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="o">..</span> <span class="s2">" GROUPs in the Zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+</code></pre>
+<p>Iterate the SET_GROUP and count how many GROUPs are completely in the Zone
+That could easily be done with SET_GROUP:ForEachGroupCompletelyInZone(), but this function
+provides an easy to use shortcut...</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u>  the number of GROUPs completely in the Zone</li>
+</ul>
+<span id=set_group-countunitinzone-zoneobject></span><h3 id='set_group-countunitinzone-zoneobject-'>SET_GROUP:CountUnitInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"There are "</span> <span class="o">..</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">CountUnitInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="o">..</span> <span class="s2">" UNITs in the Zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+</code></pre>
+<p>Iterate the SET_GROUP and count how many UNITs are completely in the Zone</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u>  the number of GROUPs completely in the Zone</li>
+</ul>
 <span id=set_group-isincludeobject-moosegroup></span><h3 id='set_group-isincludeobject-moosegroup-'>SET_GROUP:IsIncludeObject(MooseGroup)</h3>
 <h4> Parameters </h4>
 
@@ -1800,7 +1972,7 @@ The following iterator methods are currently available within the SET_CARGO:</p>
 <span id=set_cargo-new></span><h3 id='set_cargo-new-'>SET_CARGO:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.</span>
 <span class="n">DatabaseSet</span> <span class="o">=</span> <span class="n">SET_CARGO</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
-<p>Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.</p>
+<p>(R2.1) Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.</p>
 
 <h4> Parameters </h4>
 
@@ -1815,7 +1987,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addcargosbyname-addcargonames></span><h3 id='set_cargo-addcargosbyname-addcargonames-'>SET_CARGO:AddCargosByName(AddCargoNames)</h3>
-<p>Add CARGOs to SET_CARGO.</p>
+<p>(R2.1) Add CARGOs to SET_CARGO.</p>
 
 <h4> Parameters </h4>
 
@@ -1830,7 +2002,7 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-removecargosbyname-removecargonames></span><h3 id='set_cargo-removecargosbyname-removecargonames-'>SET_CARGO:RemoveCargosByName(RemoveCargoNames)</h3>
-<p>Remove CARGOs from SET_CARGO.</p>
+<p>(R2.1) Remove CARGOs from SET_CARGO.</p>
 
 <h4> Parameters </h4>
 
@@ -1845,7 +2017,7 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-findcargo-cargoname></span><h3 id='set_cargo-findcargo-cargoname-'>SET_CARGO:FindCargo(CargoName)</h3>
-<p>Finds a Cargo based on the Cargo Name.</p>
+<p>(R2.1) Finds a Cargo based on the Cargo Name.</p>
 
 <h4> Parameters </h4>
 
@@ -1861,7 +2033,7 @@ self</li>
 <li><a href="#cargo-class-">CARGO</a>  The found Cargo.</li>
 </ul>
 <span id=set_cargo-filtercoalitions-coalitions></span><h3 id='set_cargo-filtercoalitions-coalitions-'>SET_CARGO:FilterCoalitions(Coalitions)</h3>
-<p>Builds a set of cargos of coalitions.
+<p>(R2.1) Builds a set of cargos of coalitions.
 Possible current coalitions are red, blue and neutral.</p>
 
 <h4> Parameters </h4>
@@ -1878,7 +2050,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtertypes-types></span><h3 id='set_cargo-filtertypes-types-'>SET_CARGO:FilterTypes(Types)</h3>
-<p>Builds a set of cargos of defined cargo types.
+<p>(R2.1) Builds a set of cargos of defined cargo types.
 Possible current types are those types known within DCS world.</p>
 
 <h4> Parameters </h4>
@@ -1895,7 +2067,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtercountries-countries></span><h3 id='set_cargo-filtercountries-countries-'>SET_CARGO:FilterCountries(Countries)</h3>
-<p>Builds a set of cargos of defined countries.
+<p>(R2.1) Builds a set of cargos of defined countries.
 Possible current countries are those known within DCS world.</p>
 
 <h4> Parameters </h4>
@@ -1912,7 +2084,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterprefixes-prefixes></span><h3 id='set_cargo-filterprefixes-prefixes-'>SET_CARGO:FilterPrefixes(Prefixes)</h3>
-<p>Builds a set of cargos of defined cargo prefixes.
+<p>(R2.1) Builds a set of cargos of defined cargo prefixes.
 All the cargos starting with the given prefixes will be included within the set.</p>
 
 <h4> Parameters </h4>
@@ -1929,7 +2101,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterstart></span><h3 id='set_cargo-filterstart-'>SET_CARGO:FilterStart()</h3>
-<p>Starts the filtering.</p>
+<p>(R2.1) Starts the filtering.</p>
 
 <h4> Parameters </h4>
 
@@ -1944,7 +2116,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addindatabase-event></span><h3 id='set_cargo-addindatabase-event-'>SET_CARGO:AddInDatabase(Event)</h3>
-<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+<p>(R2.1) Handles the Database to check on an event (birth) that the Object was added in the Database.
 This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
 
 <h4> Parameters </h4>
@@ -1962,7 +2134,7 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-findindatabase-event></span><h3 id='set_cargo-findindatabase-event-'>SET_CARGO:FindInDatabase(Event)</h3>
-<p>Handles the Database to check on any event that Object exists in the Database.
+<p>(R2.1) Handles the Database to check on any event that Object exists in the Database.
 This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
 
 <h4> Parameters </h4>
@@ -1980,7 +2152,7 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-foreachcargo-iteratorfunction></span><h3 id='set_cargo-foreachcargo-iteratorfunction-'>SET_CARGO:ForEachCargo(IteratorFunction)</h3>
-<p>Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.</p>
+<p>(R2.1) Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.</p>
 
 <h4> Parameters </h4>
 
@@ -1996,7 +2168,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-findnearestcargofrompointvec2-pointvec2></span><h3 id='set_cargo-findnearestcargofrompointvec2-pointvec2-'>SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)</h3>
-<p>Iterate the SET_CARGO while identifying the nearest <a href="#cargo-class-">CARGO</a> from a @{Point#POINT_VEC2}.</p>
+<p>(R2.1) Iterate the SET_CARGO while identifying the nearest <a href="#cargo-class-">CARGO</a> from a @{Point#POINT_VEC2}.</p>
 
 <h4> Parameters </h4>
 
@@ -2012,6 +2184,8 @@ self</li>
 <li><a href="#cargo-class-">CARGO</a>  The closest <a href="#cargo-class-">CARGO</a>.</li>
 </ul>
 <span id=set_cargo-isincludeobject-mcargo></span><h3 id='set_cargo-isincludeobject-mcargo-'>SET_CARGO:IsIncludeObject(MCargo)</h3>
+<p>(R2.1)</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -2026,7 +2200,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-oneventnewcargo-eventdata></span><h3 id='set_cargo-oneventnewcargo-eventdata-'>SET_CARGO:OnEventNewCargo(EventData)</h3>
-<p>Handles the OnEventNewCargo event for the Set.</p>
+<p>(R2.1) Handles the OnEventNewCargo event for the Set.</p>
 
 <h4> Parameters </h4>
 
@@ -2038,7 +2212,7 @@ self</li>
 
 <h4> Returns </h4>
 <span id=set_cargo-oneventdeletecargo-eventdata></span><h3 id='set_cargo-oneventdeletecargo-eventdata-'>SET_CARGO:OnEventDeleteCargo(EventData)</h3>
-<p>Handles the OnDead or OnCrash event for alive units set.</p>
+<p>(R2.1) Handles the OnDead or OnCrash event for alive units set.</p>
 
 <h4> Parameters </h4>
 

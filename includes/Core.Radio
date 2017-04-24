@@ -312,12 +312,12 @@ There are two types of BEACONs available : the AA TACAN Beacon and the general p
 Note that in both case, you can set an optional parameter : the <code>BeaconDuration</code>. This can be very usefull to simulate the battery time if your BEACON is
 attach to a cargo crate, for exemple.</p>
 <span id=aa-tacan-beacon-usage></span><h5 id='aa-tacan-beacon-usage-'>AA TACAN Beacon usage</h5>
-<p>This beacon only works with airborne <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>. Use <a href="#beacon-aatacan-tacanchannel-message-bearing-beaconduration">BEACON:AATACAN()</a> to set the beacon parameters and start the beacon.
+<p>This beacon only works with airborne <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>. Use @{#BEACON:AATACAN}() to set the beacon parameters and start the beacon.
 Use @#BEACON:StopAATACAN}() to stop it.</p>
 <span id=general-purpose-radio-beacon-usage></span><h5 id='general-purpose-radio-beacon-usage-'>General Purpose Radio Beacon usage</h5>
 <p>This beacon will work with any <a href="#positionable-class-">POSITIONABLE</a>, but <strong>it won&#39;t follow the <a href="#positionable-class-">POSITIONABLE</a></strong> ! This means that you should only use it with
-<a href="#positionable-class-">POSITIONABLE</a> that don&#39;t move, or move very slowly. Use <a href="#beacon-radiobeacon-filename-frequency-modulation-power-beaconduration">BEACON:RadioBeacon()</a> to set the beacon parameters and start the beacon.
-Use BEACON-StopRadioBeacon- to stop it.</p>
+<a href="#positionable-class-">POSITIONABLE</a> that don&#39;t move, or move very slowly. Use @{#BEACON:RadioBeacon}() to set the beacon parameters and start the beacon.
+Use @{#BEACON:StopRadioBeacon}() to stop it.</p>
 <span id=beacon-new-positionable></span><h3 id='beacon-new-positionable-'>BEACON:New(Positionable)</h3>
 <p>Create a new BEACON Object. This doesn&#39;t activate the beacon, though, use <a href="#beacon-aatacan-tacanchannel-message-bearing-beaconduration">BEACON:AATACAN()</a> or BEACON-Generic-
 If you want to create a BEACON, you probably should use POSITIONABLE-GetBeacon- instead.</p>
@@ -387,16 +387,13 @@ self</li>
 <p>Activates a general pupose Radio Beacon
 This uses the very generic singleton function &quot;trigger.action.radioTransmission()&quot; provided by DCS to broadcast a sound file on a specific frequency.
 Although any frequency could be used, only 2 DCS Modules can home on radio beacons at the time of writing : the Huey and the Mi-8.
-They can home in on these specific frequencies :</p>
-
-<ul>
-<li><strong>Mi8</strong></li>
-<li>R-828 -&gt; 20-60MHz</li>
-<li>ARKUD -&gt; 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM</li>
-<li>ARK9 -&gt; 150-1300KHz</li>
-<li><strong>Huey</strong></li>
-<li>AN/ARC-131 -&gt; 30-76 Mhz FM</li>
-</ul>
+They can home in on these specific frequencies :
+* <strong>Mi8</strong>
+* R-828 -&gt; 20-60MHz
+* ARKUD -&gt; 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM
+* ARK9 -&gt; 150-1300KHz
+* <strong>Huey</strong>
+* AN/ARC-131 -&gt; 30-76 Mhz FM</p>
 
 <h4> Parameters </h4>
 

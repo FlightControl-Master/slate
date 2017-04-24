@@ -1,0 +1,485 @@
+<span id=functional-designate-module></span><h1 id='functional-designate-module-'>Functional.Designate Module</h1>
+<p><strong>Funtional R2.1</strong> -- Management of target <strong>Designation</strong>.</p>
+
+<p>--<img src="/includes/Pictures/DESIGNATE/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>DESIGNATE is orchestrating the designation of potential targets executed by a Recce group,
+and communicates these to a dedicated attacking group of players,
+so that following a dynamically generated menu system,
+each detected set of potential targets can be lased or smoked...</p>
+
+<p>Targets can be:</p>
+
+<ul>
+<li><strong>Lased</strong> for a period of time.</li>
+<li><strong>Smoked</strong>. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.)</li>
+<li><strong>Illuminated</strong> through an illumination bomb. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.</li>
+</ul>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=112175"><strong>Ciribob</strong></a>: Showing the way how to lase targets + how laser codes work!!! Explained the autolase script.</li>
+<li><a href="https://forums.eagle.ru/member.php?u=112055"><strong>EasyEB</strong></a>: Ideas and Beta Testing</li>
+<li><a href="https://forums.eagle.ru/member.php?u=123698"><strong>Wingthor</strong></a>: Beta Testing</li>
+</ul>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
+<span id=designate-class></span><h2 id='designate-class-'>DESIGNATE Class</h2>
+<pre>
+Inheritance : The DESIGNATE Class inherits from the following parents :
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- DESIGNATE
+</pre>
+
+<p>DESIGNATE is orchestrating the designation of potential targets executed by a Recce group,
+and communicates these to a dedicated attacking group of players,
+so that following a dynamically generated menu system,
+each detected set of potential targets can be lased or smoked...</p>
+
+<p>Targets can be:</p>
+
+<ul>
+<li><strong>Lased</strong> for a period of time.</li>
+<li><strong>Smoked</strong>. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.)</li>
+<li><strong>Illuminated</strong> through an illumination bomb. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.</li>
+</ul>
+
+<p>The following terminology is being used throughout this document:</p>
+
+<ul>
+<li>The <strong>DesignateObject</strong> is the object of the DESIGNATE class, which is this class explained in the document.</li>
+<li>The <strong>DetectionObject</strong> is the object of a DETECTION_ class (DETECTION_TYPES, DETECTION_AREAS, DETECTION_UNITS), which is executing the detection and grouping of Targets into <em>DetectionItems</em>.</li>
+<li><strong>DetectionItems</strong> is the list of detected target groupings by the <em>DetectionObject</em>. Each <em>DetectionItem</em> contains a <em>TargetSet</em>.</li>
+<li><strong>DetectionItem</strong> is one element of the <em>DetectionItems</em> list, and contains a <em>TargetSet</em>.</li>
+<li>The <strong>TargetSet</strong> is a SET_UNITS collection of <em>Targets</em>, that have been detected by the <em>DetectionObject</em>.</li>
+<li>A <strong>Target</strong> is a detected UNIT object by the <em>DetectionObject</em>.</li>
+<li>A <strong>Threat Level</strong> is a number from 0 to 10 that is calculated based on the threat of the Target in an Air to Ground battle scenario.</li>
+<li>The <strong>RecceSet</strong> is a SET_GROUP collection that contains the <strong>RecceGroups</strong>.</li>
+<li>A <strong>RecceGroup</strong> is a GROUP object containing the <strong>Recces</strong>.</li>
+<li>A <strong>Recce</strong> is a UNIT object executing the reconnaissance as part the <em>DetectionObject</em>. A Recce can be of any UNIT type.</li>
+<li>An <strong>AttackGroup</strong> is a GROUP object that contain <em>Players</em>.</li>
+<li>A <strong>Player</strong> is an active CLIENT object containing a human player.</li>
+<li>A <strong>Designate Menu</strong> is the menu that is dynamically created during the designation process for each <em>AttackGroup</em>.</li>
+</ul>
+
+<p>The RecceSet is continuously detecting for potential Targets, executing its task as part of the DetectionObject.
+Once Targets have been detected, the DesignateObject will trigger the <strong>Detect Event</strong>.</p>
+
+<p>As part of the Detect Event, the DetectionItems list is used by the DesignateObject to provide the Players with:</p>
+
+<ul>
+<li>The RecceGroups are reporting to each AttackGroup, sending <strong>Messages</strong> containing the Threat Level and the TargetSet composition.</li>
+<li><strong>Menu options</strong> are created and updated for each AttackGroup, containing the Threat Level and the TargetSet composition.</li>
+</ul>
+
+<p>A Player can then select an action from the Designate Menu.</p>
+
+<p><strong>Note that each selected action will be executed for a TargetSet, thus the Target grouping done by the DetectionObject.</strong></p>
+
+<p>Each <strong>Menu Option</strong> in the Designate Menu has two modes:</p>
+
+<ol>
+<li>If the TargetSet <strong>is not being designated</strong>, then the <strong>Designate Menu</strong> option for the target Set will provide options to <strong>Lase</strong> or <strong>Smoke</strong> the targets.</li>
+<li>If the Target Set <strong>is being designated</strong>, then the <strong>Designate Menu</strong> option will provide an option to stop or cancel the designation.</li>
+</ol>
+
+<p>While designating, the RecceGroups will report any change in TargetSet composition or Target presence.</p>
+
+<p>The following logic is executed when a TargetSet is selected to be <em>lased</em> from the Designation Menu:</p>
+
+<ul>
+<li>The RecceSet is searched for any Recce that is within <em>designation distance</em> from a Target in the TargetSet that is currently not being designated.</li>
+<li>If there is a Recce found that is currently no designating a target, and is within designation distance from the Target, then that Target will be designated.</li>
+<li>During designation, any Recce that does not have Line of Sight (LOS) and is not within disignation distance from the Target, will stop designating the Target, and a report is given.</li>
+<li>When a Recce is designating a Target, and that Target is destroyed, then the Recce will stop designating the Target, and will report the event.</li>
+<li>When a Recce is designating a Target, and that Recce is destroyed, then the Recce will be removed from the RecceSet and designation will stop without reporting.</li>
+<li>When all RecceGroups are destroyed from the RecceSet, then the DesignationObject will stop functioning, and nothing will be reported.</li>
+</ul>
+
+<p>In this way, the DesignationObject assists players to designate ground targets for a coordinated attack!</p>
+
+<p>Have FUN!</p>
+<span id=1-designate-constructor></span><h5 id='1-designate-constructor-'>1. DESIGNATE constructor</h5>
+<ul>
+<li><a href="#designate-new-cc-detection-attackset">DESIGNATE:New()</a>: Creates a new DESIGNATE object.</li>
+</ul>
+<span id=2-designate-is-a-fsm></span><h5 id='2-designate-is-a-fsm-'>2. DESIGNATE is a FSM</h5>
+<p><img src="/includes/Pictures/DESIGNATE/Dia2.JPG" alt="Process" /></p>
+<span id=2-1-designate-states></span><h5 id='2-1-designate-states-'>2.1 DESIGNATE States</h5>
+<ul>
+<li><strong>Designating</strong> ( Group ): The process is not started yet.</li>
+</ul>
+<span id=2-2-designate-events></span><h5 id='2-2-designate-events-'>2.2 DESIGNATE Events</h5>
+<ul>
+<li><strong>DESIGNATE-Detect-</strong>: Detect targets.</li>
+<li><strong>DESIGNATE-LaseOn-</strong>: Lase the targets with the specified Index.</li>
+<li><strong>DESIGNATE-LaseOff-</strong>: Stop lasing the targets with the specified Index.</li>
+<li><strong>DESIGNATE-Smoke-</strong>: Smoke the targets with the specified Index.</li>
+<li><strong>DESIGNATE-Status-</strong>: Report designation status.</li>
+</ul>
+<span id=3-laser-codes></span><h5 id='3-laser-codes-'>3. Laser codes</h5><span id=3-1-set-possible-laser-codes></span><h5 id='3-1-set-possible-laser-codes-'>3.1 Set possible laser codes</h5>
+<p>An array of laser codes can be provided, that will be used by the DESIGNATE when lasing.
+The laser code is communicated by the Recce when it is lasing a larget.
+Note that the default laser code is 1113.
+Working known laser codes are: 1113,1462,1483,1537,1362,1214,1131,1182,1644,1614,1515,1411,1621,1138,1542,1678,1573,1314,1643,1257,1467,1375,1341,1275,1237</p>
+
+<p>Use the method DESIGNATE-SetLaserCodes- to set the possible laser codes to be selected from.
+One laser code can be given or an sequence of laser codes through an table...</p>
+
+<p>Designate:SetLaserCodes( 1214 )</p>
+
+<p>The above sets one laser code with the value 1214.</p>
+
+<p>Designate:SetLaserCodes( { 1214, 1131, 1614, 1138 } )</p>
+
+<p>The above sets a collection of possible laser codes that can be assigned. <strong>Note the { } notation!</strong></p>
+<span id=3-2-auto-generate-laser-codes></span><h5 id='3-2-auto-generate-laser-codes-'>3.2 Auto generate laser codes</h5>
+<p>Use the method DESIGNATE-GenerateLaserCodes- to generate all possible laser codes. Logic implemented and advised by Ciribob!</p>
+<span id=4-autolase-to-automatically-lase-detected-targets></span><h5 id='4-autolase-to-automatically-lase-detected-targets-'>4. Autolase to automatically lase detected targets.</h5>
+<p>DetectionItems can be auto lased once detected by Recces. As such, there is almost no action required from the Players using the Designate Menu.
+The <strong>auto lase</strong> function can be activated through the Designation Menu.
+Use the method DESIGNATE-SetAutoLase- to activate or deactivate the auto lase function programmatically.
+Note that autolase will automatically activate lasing for ALL DetectedItems. Individual items can be switched-off if required using the Designation Menu.</p>
+
+<p>Designate:SetAutoLase( true )</p>
+
+<p>Activate the auto lasing.</p>
+<span id=5-target-prioritization-on-threat-level></span><h5 id='5-target-prioritization-on-threat-level-'>5. Target prioritization on threat level</h5>
+<p>Targets can be detected of different types in one DetectionItem. Depending on the type of the Target, a different threat level applies in an Air to Ground combat context.
+SAMs are of a higher threat than normal tanks. So, if the Target type was recognized, the Recces will select those targets that form the biggest threat first,
+and will continue this until the remaining vehicles with the lowest threat have been reached.</p>
+
+<p>This threat level prioritization can be activated using the method DESIGNATE-SetThreatLevelPrioritization-.
+If not activated, Targets will be selected in a random order, but most like those first which are the closest to the Recce marking the Target.</p>
+
+<p>Designate:SetThreatLevelPrioritization( true )</p>
+
+<p>The example will activate the threat level prioritization for this the Designate object. Threats will be marked based on the threat level of the Target.</p>
+<span id=6-status-report></span><h5 id='6-status-report-'>6. Status Report</h5>
+<p>A status report is available that displays the current Targets detected, grouped per DetectionItem, and a list of which Targets are currently being marked.</p>
+
+<ul>
+<li>The status report can be shown by selecting &quot;Status&quot; -&gt; &quot;Report Status&quot; from the Designation menu .</li>
+<li>The status report can be automatically flashed by selecting &quot;Status&quot; -&gt; &quot;Flash Status On&quot;.</li>
+<li>The automatic flashing of the status report can be deactivated by selecting &quot;Status&quot; -&gt; &quot;Flash Status Off&quot;.</li>
+<li>The flashing of the status menu is disabled by default.</li>
+<li>The method DESIGNATE-FlashStatusMenu- can be used to enable or disable to flashing of the status menu.</li>
+</ul>
+
+<p>Designate:FlashStatusMenu( true )</p>
+
+<p>The example will activate the flashing of the status menu for this Designate object.</p>
+<span id=designate-new-cc-detection-attackset></span><h3 id='designate-new-cc-detection-attackset-'>DESIGNATE:New(CC, Detection, AttackSet)</h3>
+<p>DESIGNATE Constructor. This class is an abstract class and should not be instantiated.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> CC</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection</li>
+<li><a href="#set_group-class-">SET_GROUP</a> AttackSet : The Attack collection of GROUP objects to designate and report for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onbeforedetect-from-event-to></span><h3 id='designate-onbeforedetect-from-event-to-'>DESIGNATE:OnBeforeDetect(From, Event, To)</h3>
+<p>Detect Handler OnBefore for DESIGNATE
+@function [parent=#DESIGNATE] OnBeforeDetect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=designate-onafterdetect-from-event-to></span><h3 id='designate-onafterdetect-from-event-to-'>DESIGNATE:OnAfterDetect(From, Event, To)</h3>
+<p>Detect Handler OnAfter for DESIGNATE
+@function [parent=#DESIGNATE] OnAfterDetect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-detect></span><h3 id='designate-detect-'>DESIGNATE:Detect()</h3>
+<p>Detect Trigger for DESIGNATE
+@function [parent=#DESIGNATE] Detect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onbeforeilluminate-from-event-to></span><h3 id='designate-onbeforeilluminate-from-event-to-'>DESIGNATE:OnBeforeIlluminate(From, Event, To)</h3>
+<p>Illuminate Handler OnBefore for DESIGNATE
+@function [parent=#DESIGNATE] OnBeforeIlluminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=designate-onafterilluminate-from-event-to></span><h3 id='designate-onafterilluminate-from-event-to-'>DESIGNATE:OnAfterIlluminate(From, Event, To)</h3>
+<p>Illuminate Handler OnAfter for DESIGNATE
+@function [parent=#DESIGNATE] OnAfterIlluminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-illuminate></span><h3 id='designate-illuminate-'>DESIGNATE:Illuminate()</h3>
+<p>Illuminate Trigger for DESIGNATE
+@function [parent=#DESIGNATE] Illuminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterdetect></span><h3 id='designate-onafterdetect-'>DESIGNATE:onafterDetect()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-sendstatus-attackgroup></span><h3 id='designate-sendstatus-attackgroup-'>DESIGNATE:SendStatus(AttackGroup)</h3>
+<p>Sends the status to the Attack Groups.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><a href="#group-class-">GROUP</a> AttackGroup</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-activateautolase></span><h3 id='designate-activateautolase-'>DESIGNATE:ActivateAutoLase()</h3>
+<p>Coordinates the Auto Lase.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-setdesignatemenu></span><h3 id='designate-setdesignatemenu-'>DESIGNATE:SetDesignateMenu()</h3>
+<p>Sets the Designate Menu.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-menustatus></span><h3 id='designate-menustatus-'>DESIGNATE:MenuStatus()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuflashstatus></span><h3 id='designate-menuflashstatus-'>DESIGNATE:MenuFlashStatus()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuautolase></span><h3 id='designate-menuautolase-'>DESIGNATE:MenuAutoLase()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menusmoke></span><h3 id='designate-menusmoke-'>DESIGNATE:MenuSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuilluminate></span><h3 id='designate-menuilluminate-'>DESIGNATE:MenuIlluminate()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menulaseon></span><h3 id='designate-menulaseon-'>DESIGNATE:MenuLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menulaseoff></span><h3 id='designate-menulaseoff-'>DESIGNATE:MenuLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterlaseon></span><h3 id='designate-onafterlaseon-'>DESIGNATE:onafterLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterlasing></span><h3 id='designate-onafterlasing-'>DESIGNATE:onafterLasing()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterlaseoff></span><h3 id='designate-onafterlaseoff-'>DESIGNATE:onafterLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onaftersmoke></span><h3 id='designate-onaftersmoke-'>DESIGNATE:onafterSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterilluminate></span><h3 id='designate-onafterilluminate-'>DESIGNATE:onafterIlluminate()</h3>
+<p>Illuminating</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterdone></span><h3 id='designate-onafterdone-'>DESIGNATE:onafterDone()</h3>
+<p>Done</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>

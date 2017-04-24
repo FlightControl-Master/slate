@@ -1002,6 +1002,9 @@
                    <a href="#base-oneventrefueling-eventdata-" class="toc-h3 toc-link" data-title="Core.Base Module">BASE:OnEventRefueling(EventData)</a>
                  </li>
                  <li>
+                   <a href="#base-oneventdead-eventdata-" class="toc-h3 toc-link" data-title="Core.Base Module">BASE:OnEventDead(EventData)</a>
+                 </li>
+                 <li>
                    <a href="#base-onevent-eventdata-" class="toc-h3 toc-link" data-title="Core.Base Module">BASE:OnEvent(EventData)</a>
                  </li>
                  <li>
@@ -1145,12 +1148,6 @@
                  </li>
                  <li>
                    <a href="#cargo-onenterunboarding-controllable-" class="toc-h3 toc-link" data-title="Core.Cargo Module">CARGO:OnEnterUnBoarding(Controllable)</a>
-                 </li>
-                 <li>
-                   <a href="#cargo-new-type-name-weight-nearradius-" class="toc-h3 toc-link" data-title="Core.Cargo Module">CARGO:New(Type, Name, Weight, NearRadius)</a>
-                 </li>
-                 <li>
-                   <a href="#cargo-getname-" class="toc-h3 toc-link" data-title="Core.Cargo Module">CARGO:GetName()</a>
                  </li>
                  <li>
                    <a href="#cargo-gettype-" class="toc-h3 toc-link" data-title="Core.Cargo Module">CARGO:GetType()</a>
@@ -1424,9 +1421,6 @@
                  </li>
                  <li>
                    <a href="#event-remove-eventclass-eventid-" class="toc-h3 toc-link" data-title="Core.Event Module">EVENT:Remove(EventClass, EventID)</a>
-                 </li>
-                 <li>
-                   <a href="#event-reset-eventclass-eventid-" class="toc-h3 toc-link" data-title="Core.Event Module">EVENT:Reset(EventClass, EventID)</a>
                  </li>
                  <li>
                    <a href="#event-removeall-eventobject-" class="toc-h3 toc-link" data-title="Core.Event Module">EVENT:RemoveAll(EventObject)</a>
@@ -2236,6 +2230,27 @@
                    <a href="#set_group-foreachgroupnotinzone-zoneobject-iteratorfunction-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:ForEachGroupNotInZone(ZoneObject, IteratorFunction)</a>
                  </li>
                  <li>
+                   <a href="#set_group-allcompletelyinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:AllCompletelyInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-anycompletelyinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:AnyCompletelyInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-anyinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:AnyInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-anypartlyinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:AnyPartlyInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-noneinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:NoneInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-countinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:CountInZone(ZoneObject)</a>
+                 </li>
+                 <li>
+                   <a href="#set_group-countunitinzone-zoneobject-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:CountUnitInZone(ZoneObject)</a>
+                 </li>
+                 <li>
                    <a href="#set_group-isincludeobject-moosegroup-" class="toc-h3 toc-link" data-title="Core.Set Module">SET_GROUP:IsIncludeObject(MooseGroup)</a>
                  </li>
                </ul>
@@ -2483,20 +2498,6 @@
         <ul class="toc-list-h2">
           <li>
              <a href="#spawnstatic-class-" class="toc-h2 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC Class</a>
-               <ul class="toc-list-h3">
-                 <li>
-                   <a href="#spawnstatic-newfromstatic-spawntemplateprefix-" class="toc-h3 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</a>
-                 </li>
-                 <li>
-                   <a href="#spawnstatic-newfromtype-spawntypename-" class="toc-h3 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC:NewFromType(SpawnTypeName)</a>
-                 </li>
-                 <li>
-                   <a href="#spawnstatic-spawnfrompointvec2-pointvec2-heading-optional-" class="toc-h3 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</a>
-                 </li>
-                 <li>
-                   <a href="#spawnstatic-spawnfromzone-zone-heading-optional-" class="toc-h3 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</a>
-                 </li>
-               </ul>
           </li>
           <li>
              <a href="#spawnstatic-spawnzonetable-class-" class="toc-h2 toc-link" data-title="Core.SpawnStatic Module">SPAWNSTATIC.SpawnZoneTable Class</a>
@@ -2513,7 +2514,37 @@
                    <a href="#spot-new-recce-lasercode-duration-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:New(Recce, LaserCode, Duration)</a>
                  </li>
                  <li>
+                   <a href="#spot-onbeforelaseon-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnBeforeLaseOn(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-onafterlaseon-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnAfterLaseOn(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-laseon-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:LaseOn()</a>
+                 </li>
+                 <li>
+                   <a href="#spot-onbeforelaseoff-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnBeforeLaseOff(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-onafterlaseoff-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnAfterLaseOff(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-laseoff-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:LaseOff()</a>
+                 </li>
+                 <li>
+                   <a href="#spot-onbeforedestroyed-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnBeforeDestroyed(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-onafterdestroyed-from-event-to-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnAfterDestroyed(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-destroyed-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:Destroyed()</a>
+                 </li>
+                 <li>
                    <a href="#spot-onafterlaseon-self-self-self-target-lasercode-duration-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:onafterLaseOn(self, self, self, Target, LaserCode, Duration)</a>
+                 </li>
+                 <li>
+                   <a href="#spot-oneventdead-eventdata-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:OnEventDead(EventData)</a>
                  </li>
                  <li>
                    <a href="#spot-onafterlasing-self-self-self-" class="toc-h3 toc-link" data-title="Core.Spot Module">SPOT:onafterLasing(self, self, self)</a>
@@ -3393,6 +3424,88 @@
         </ul>
       </li>
 			<li>
+				<a href="#functional-designate-module-" class="toc-h1 toc-link" data-title="Functional.Designate Module">Functional.Designate Module</a>
+        <ul class="toc-list-h2">
+          <li>
+             <a href="#designate-class-" class="toc-h2 toc-link" data-title="Functional.Designate Module">DESIGNATE Class</a>
+               <ul class="toc-list-h3">
+                 <li>
+                   <a href="#designate-new-cc-detection-attackset-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:New(CC, Detection, AttackSet)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onbeforedetect-from-event-to-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:OnBeforeDetect(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterdetect-from-event-to-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:OnAfterDetect(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-detect-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:Detect()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onbeforeilluminate-from-event-to-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:OnBeforeIlluminate(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterilluminate-from-event-to-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:OnAfterIlluminate(From, Event, To)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-illuminate-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:Illuminate()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterdetect-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterDetect()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-sendstatus-attackgroup-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:SendStatus(AttackGroup)</a>
+                 </li>
+                 <li>
+                   <a href="#designate-activateautolase-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:ActivateAutoLase()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-setdesignatemenu-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:SetDesignateMenu()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menustatus-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuStatus()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menuflashstatus-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuFlashStatus()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menuautolase-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuAutoLase()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menusmoke-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuSmoke()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menuilluminate-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuIlluminate()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menulaseon-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuLaseOn()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-menulaseoff-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:MenuLaseOff()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterlaseon-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterLaseOn()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterlasing-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterLasing()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterlaseoff-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterLaseOff()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onaftersmoke-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterSmoke()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterilluminate-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterIlluminate()</a>
+                 </li>
+                 <li>
+                   <a href="#designate-onafterdone-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterDone()</a>
+                 </li>
+               </ul>
+          </li>
+        </ul>
+      </li>
+			<li>
 				<a href="#functional-detection-module-" class="toc-h1 toc-link" data-title="Functional.Detection Module">Functional.Detection Module</a>
         <ul class="toc-list-h2">
           <li>
@@ -3463,6 +3576,9 @@
                  </li>
                  <li>
                    <a href="#detection_base-onafterdetectiongroup-from-event-to-detectiongroup-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:onafterDetectionGroup(From, Event, To, DetectionGroup)</a>
+                 </li>
+                 <li>
+                   <a href="#detection_base-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:CreateDetectionItems()</a>
                  </li>
                  <li>
                    <a href="#detection_base-initdetectvisual-detectvisual-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:InitDetectVisual(DetectVisual)</a>
@@ -3570,9 +3686,6 @@
                    <a href="#detection_base-getdetectionsetgroup-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:GetDetectionSetGroup()</a>
                  </li>
                  <li>
-                   <a href="#detection_base-createdetectionsets-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:CreateDetectionSets()</a>
-                 </li>
-                 <li>
                    <a href="#detection_base-schedule-delaytime-repeatinterval-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:Schedule(DelayTime, RepeatInterval)</a>
                  </li>
                </ul>
@@ -3599,7 +3712,7 @@
                    <a href="#detection_units-getchangetext-detecteditem-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:GetChangeText(DetectedItem)</a>
                  </li>
                  <li>
-                   <a href="#detection_units-createdetectionsets-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:CreateDetectionSets()</a>
+                   <a href="#detection_units-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:CreateDetectionItems()</a>
                  </li>
                  <li>
                    <a href="#detection_units-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:DetectedItemReportSummary(self)</a>
@@ -3619,7 +3732,7 @@
                    <a href="#detection_types-getchangetext-detecteditem-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:GetChangeText(DetectedItem)</a>
                  </li>
                  <li>
-                   <a href="#detection_types-createdetectionsets-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:CreateDetectionSets()</a>
+                   <a href="#detection_types-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:CreateDetectionItems()</a>
                  </li>
                  <li>
                    <a href="#detection_types-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:DetectedItemReportSummary(self)</a>
@@ -3669,7 +3782,7 @@
                    <a href="#detection_areas-getchangetext-detecteditem-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:GetChangeText(DetectedItem)</a>
                  </li>
                  <li>
-                   <a href="#detection_areas-createdetectionsets-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:CreateDetectionSets()</a>
+                   <a href="#detection_areas-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:CreateDetectionItems()</a>
                  </li>
                </ul>
           </li>
@@ -5204,6 +5317,9 @@
                    <a href="#group-isnotinzone-zone-" class="toc-h3 toc-link" data-title="Wrapper.Group Module">GROUP:IsNotInZone(Zone)</a>
                  </li>
                  <li>
+                   <a href="#group-countinzone-zone-" class="toc-h3 toc-link" data-title="Wrapper.Group Module">GROUP:CountInZone(Zone)</a>
+                 </li>
+                 <li>
                    <a href="#group-isair-" class="toc-h3 toc-link" data-title="Wrapper.Group Module">GROUP:IsAir()</a>
                  </li>
                  <li>
@@ -5396,9 +5512,6 @@
                    <a href="#positionable-getvelocitykmh-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetVelocityKMH()</a>
                  </li>
                  <li>
-                   <a href="#positionable-getmessage-message-duration-name-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetMessage(Message, Duration, Name)</a>
-                 </li>
-                 <li>
                    <a href="#positionable-messagetoall-message-duration-name-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:MessageToAll(Message, Duration, Name)</a>
                  </li>
                  <li>
@@ -5418,21 +5531,6 @@
                  </li>
                  <li>
                    <a href="#positionable-message-message-duration-name-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:Message(Message, Duration, Name)</a>
-                 </li>
-                 <li>
-                   <a href="#positionable-getradio-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetRadio()</a>
-                 </li>
-                 <li>
-                   <a href="#positionable-getbeacon-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetBeacon()</a>
-                 </li>
-                 <li>
-                   <a href="#positionable-laseunit-target-lasercode-duration-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:LaseUnit(Target, LaserCode, Duration)</a>
-                 </li>
-                 <li>
-                   <a href="#positionable-laseoff-target-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:LaseOff(Target)</a>
-                 </li>
-                 <li>
-                   <a href="#positionable-islasing-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:IsLasing()</a>
                  </li>
                </ul>
           </li>
@@ -8235,7 +8333,7 @@ Each menu option has two modes:</p>
 <p>Have FUN!</p>
 <span id=1-ai_designate-constructor></span><h5 id='1-ai_designate-constructor-'>1. AI_DESIGNATE constructor</h5>
 <ul>
-<li><a href="#ai_designate-new-detection-groupset">AI_DESIGNATE:New()</a>: Creates a new AI_DESIGNATE object.</li>
+<li>AI_DESIGNATE-New-: Creates a new AI_DESIGNATE object.</li>
 </ul>
 <span id=2-ai_designate-is-a-fsm></span><h5 id='2-ai_designate-is-a-fsm-'>2. AI_DESIGNATE is a FSM</h5>
 <p><img src="images/%C2%B5" alt="Process" /></p>
@@ -8257,7 +8355,7 @@ The laser code is communicated by the Recce when it is lasing a larget.
 Note that the default laser code is 1113.
 Working known laser codes are: 1113,1462,1483,1537,1362,1214,1131,1182,1644,1614,1515,1411,1621,1138,1542,1678,1573,1314,1643,1257,1467,1375,1341,1275,1237</p>
 
-<p>Use the method <a href="#ai_designate-setlasercodes-lasercodes">AI_DESIGNATE:SetLaserCodes()</a> to set the possible laser codes to be selected from.
+<p>Use the method AI_DESIGNATE-SetLaserCodes- to set the possible laser codes to be selected from.
 One laser code can be given or an sequence of laser codes through an table...</p>
 
 <p>AIDesignate:SetLaserCodes( 1214 )</p>
@@ -9775,6 +9873,20 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
+<span id=base-oneventdead-eventdata></span><h3 id='base-oneventdead-eventdata-'>BASE:OnEventDead(EventData)</h3>
+<p>Occurs when an object is dead.
+initiator : The unit that is dead.
+@function [parent=#BASE] OnEventDead</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#base-class-">BASE</a>
+self</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData : The EventData structure.</li>
+</ul>
+
+<h4> Returns </h4>
 <span id=base-onevent-eventdata></span><h3 id='base-onevent-eventdata-'>BASE:OnEvent(EventData)</h3>
 <p>Occurs when an object is completely destroyed.
 initiator : The unit that is was destroyed.
@@ -10231,7 +10343,7 @@ The FORMATION class does not inherit
 <li>Cone A : cone formation.</li>
 </ul>
 <span id=core-cargo-module></span><h1 id='core-cargo-module-'>Core.Cargo Module</h1>
-<p><strong>Core</strong> -- Management of CARGO logistics, that can be transported from and to transportation carriers.</p>
+<p><strong>(R2.1) Core</strong> -- Management of CARGO logistics, that can be transported from and to transportation carriers.</p>
 
 <p><img src="includes/Pictures/CARGO/Dia1.JPG" alt="Banner Image" /></p>
 
@@ -10474,40 +10586,6 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=cargo-new-type-name-weight-nearradius></span><h3 id='cargo-new-type-name-weight-nearradius-'>CARGO:New(Type, Name, Weight, NearRadius)</h3>
-<p>CARGO Constructor. This class is an abstract class and should not be instantiated.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo-class-">CARGO</a>
-self</li>
-<li><u>String</u> Type</li>
-<li><u>String</u> Name</li>
-<li><u>Number</u> Weight</li>
-<li><u>Number</u> NearRadius : (optional)</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#cargo-class-">CARGO</a></li>
-</ul>
-<span id=cargo-getname></span><h3 id='cargo-getname-'>CARGO:GetName()</h3>
-<p>Get the name of the Cargo.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#cargo-class-">CARGO</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u>  The name of the Cargo.</li>
-</ul>
 <span id=cargo-gettype></span><h3 id='cargo-gettype-'>CARGO:GetType()</h3>
 <p>Get the type of the Cargo.</p>
 
@@ -11693,7 +11771,7 @@ self</li>
 
 <h4> Returns </h4>
 <span id=core-event-module></span><h1 id='core-event-module-'>Core.Event Module</h1>
-<p><strong>Core</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
+<p><strong>Core R2.1</strong> - EVENT models DCS <strong>event dispatching</strong> using a <strong>publish-subscribe</strong> model.</p>
 
 <p><img src="includes/Pictures/EVENT/Dia1.JPG" alt="Banner Image" /></p>
 <span id=1-event-handling-overview></span><h5 id='1-event-handling-overview-'>1) Event Handling Overview</h5>
@@ -11890,23 +11968,6 @@ self</li>
 </ul>
 <span id=event-remove-eventclass-eventid></span><h3 id='event-remove-eventclass-eventid-'>EVENT:Remove(EventClass, EventID)</h3>
 <p>Removes a subscription</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#event-class-">EVENT</a>
-self</li>
-<li><a href="#base-class-">BASE</a> EventClass : The self instance of the class for which the event is.</li>
-<li><a href="#world.event-class-">world.event</a> EventID</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#event-events-class-">Events</a></li>
-</ul>
-<span id=event-reset-eventclass-eventid></span><h3 id='event-reset-eventclass-eventid-'>EVENT:Reset(EventClass, EventID)</h3>
-<p>Resets subscriptions</p>
 
 <h4> Parameters </h4>
 
@@ -15547,12 +15608,12 @@ There are two types of BEACONs available : the AA TACAN Beacon and the general p
 Note that in both case, you can set an optional parameter : the <code>BeaconDuration</code>. This can be very usefull to simulate the battery time if your BEACON is
 attach to a cargo crate, for exemple.</p>
 <span id=aa-tacan-beacon-usage></span><h5 id='aa-tacan-beacon-usage-'>AA TACAN Beacon usage</h5>
-<p>This beacon only works with airborne <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>. Use <a href="#beacon-aatacan-tacanchannel-message-bearing-beaconduration">BEACON:AATACAN()</a> to set the beacon parameters and start the beacon.
+<p>This beacon only works with airborne <a href="#unit-class-">UNIT</a> or a <a href="#group-class-">GROUP</a>. Use @{#BEACON:AATACAN}() to set the beacon parameters and start the beacon.
 Use @#BEACON:StopAATACAN}() to stop it.</p>
 <span id=general-purpose-radio-beacon-usage></span><h5 id='general-purpose-radio-beacon-usage-'>General Purpose Radio Beacon usage</h5>
 <p>This beacon will work with any <a href="#positionable-class-">POSITIONABLE</a>, but <strong>it won&#39;t follow the <a href="#positionable-class-">POSITIONABLE</a></strong> ! This means that you should only use it with
-<a href="#positionable-class-">POSITIONABLE</a> that don&#39;t move, or move very slowly. Use <a href="#beacon-radiobeacon-filename-frequency-modulation-power-beaconduration">BEACON:RadioBeacon()</a> to set the beacon parameters and start the beacon.
-Use BEACON-StopRadioBeacon- to stop it.</p>
+<a href="#positionable-class-">POSITIONABLE</a> that don&#39;t move, or move very slowly. Use @{#BEACON:RadioBeacon}() to set the beacon parameters and start the beacon.
+Use @{#BEACON:StopRadioBeacon}() to stop it.</p>
 <span id=beacon-new-positionable></span><h3 id='beacon-new-positionable-'>BEACON:New(Positionable)</h3>
 <p>Create a new BEACON Object. This doesn&#39;t activate the beacon, though, use <a href="#beacon-aatacan-tacanchannel-message-bearing-beaconduration">BEACON:AATACAN()</a> or BEACON-Generic-
 If you want to create a BEACON, you probably should use POSITIONABLE-GetBeacon- instead.</p>
@@ -15622,16 +15683,13 @@ self</li>
 <p>Activates a general pupose Radio Beacon
 This uses the very generic singleton function &quot;trigger.action.radioTransmission()&quot; provided by DCS to broadcast a sound file on a specific frequency.
 Although any frequency could be used, only 2 DCS Modules can home on radio beacons at the time of writing : the Huey and the Mi-8.
-They can home in on these specific frequencies :</p>
-
-<ul>
-<li><strong>Mi8</strong></li>
-<li>R-828 -&gt; 20-60MHz</li>
-<li>ARKUD -&gt; 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM</li>
-<li>ARK9 -&gt; 150-1300KHz</li>
-<li><strong>Huey</strong></li>
-<li>AN/ARC-131 -&gt; 30-76 Mhz FM</li>
-</ul>
+They can home in on these specific frequencies :
+* <strong>Mi8</strong>
+* R-828 -&gt; 20-60MHz
+* ARKUD -&gt; 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM
+* ARK9 -&gt; 150-1300KHz
+* <strong>Huey</strong>
+* AN/ARC-131 -&gt; 30-76 Mhz FM</p>
 
 <h4> Parameters </h4>
 
@@ -16629,6 +16687,178 @@ self</li>
 
 <ul>
 <li><a href="#set_group-class-">SET_GROUP</a></li>
+</ul>
+<span id=set_group-allcompletelyinzone-zoneobject></span><h3 id='set_group-allcompletelyinzone-zoneobject-'>SET_GROUP:AllCompletelyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AllCompletelyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"All the SET's GROUP are in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Some or all SET's GROUP are outside zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if all the <a href="#group-class-">GROUP</a> are completely in the <a href="#zone-class-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if all the <a href="#group-class-">GROUP</a> are completly in the <a href="#zone-class-">ZONE</a>, false otherwise</li>
+</ul>
+<span id=set_group-anycompletelyinzone-zoneobject></span><h3 id='set_group-anycompletelyinzone-zoneobject-'>SET_GROUP:AnyCompletelyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyCompletelyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one of the <a href="#group-class-">GROUP</a> is completely inside the <a href="#zone-class-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-anyinzone-zoneobject></span><h3 id='set_group-anyinzone-zoneobject-'>SET_GROUP:AnyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyPartlyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP has at least one UNIT in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No UNIT of any GROUP is in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one <a href="#unit-class-">UNIT</a> of one <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is in <a href="#zone-module-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is partly or completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-anypartlyinzone-zoneobject></span><h3 id='set_group-anypartlyinzone-zoneobject-'>SET_GROUP:AnyPartlyInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">AnyPartlyInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"At least one GROUP is partially in the zone, but none are fully in it !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP are in zone, or one (or more) GROUP is completely in it !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if at least one <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is partly in <a href="#zone-module-">ZONE</a>.
+Will return false if a <a href="#group-module-">GROUP</a> is fully in the <a href="#zone-module-">ZONE</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if at least one of the <a href="#group-class-">GROUP</a> is partly or completly inside the <a href="#zone-class-">ZONE</a>, false otherwise.</li>
+</ul>
+<span id=set_group-noneinzone-zoneobject></span><h3 id='set_group-noneinzone-zoneobject-'>SET_GROUP:NoneInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">NoneInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="k">then</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No GROUP is completely in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">else</span>
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"No UNIT of any GROUP is in zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+<span class="k">end</span>
+</code></pre>
+<p>Iterate the SET_GROUP and return true if no <a href="#group-module-">GROUP</a> of the <a href="#set_group-module-">SET_GROUP</a> is in <a href="#zone-module-">ZONE</a>
+This could also be achieved with <code>not SET_GROUP:AnyPartlyInZone(Zone)</code>, but it&#39;s easier for the
+mission designer to add a dedicated method</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u>  true if no <a href="#group-class-">GROUP</a> is inside the <a href="#zone-class-">ZONE</a> in any way, false otherwise.</li>
+</ul>
+<span id=set_group-countinzone-zoneobject></span><h3 id='set_group-countinzone-zoneobject-'>SET_GROUP:CountInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"There are "</span> <span class="o">..</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">CountInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="o">..</span> <span class="s2">" GROUPs in the Zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+</code></pre>
+<p>Iterate the SET_GROUP and count how many GROUPs are completely in the Zone
+That could easily be done with SET_GROUP:ForEachGroupCompletelyInZone(), but this function
+provides an easy to use shortcut...</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u>  the number of GROUPs completely in the Zone</li>
+</ul>
+<span id=set_group-countunitinzone-zoneobject></span><h3 id='set_group-countunitinzone-zoneobject-'>SET_GROUP:CountUnitInZone(ZoneObject)</h3><pre class="highlight lua tab-lua"><code><span class="kd">local</span> <span class="n">MyZone</span> <span class="o">=</span> <span class="n">ZONE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"Zone1"</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">MySetGroup</span> <span class="o">=</span> <span class="n">SET_GROUP</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
+<span class="n">MySetGroup</span><span class="p">:</span><span class="n">AddGroupsByName</span><span class="p">({</span><span class="s2">"Group1"</span><span class="p">,</span> <span class="s2">"Group2"</span><span class="p">})</span>
+
+<span class="n">MESSAGE</span><span class="p">:</span><span class="n">New</span><span class="p">(</span><span class="s2">"There are "</span> <span class="o">..</span> <span class="n">MySetGroup</span><span class="p">:</span><span class="n">CountUnitInZone</span><span class="p">(</span><span class="n">MyZone</span><span class="p">)</span> <span class="o">..</span> <span class="s2">" UNITs in the Zone !"</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span><span class="n">ToAll</span><span class="p">()</span>
+</code></pre>
+<p>Iterate the SET_GROUP and count how many UNITs are completely in the Zone</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#set_group-class-">SET_GROUP</a>
+self</li>
+<li><a href="#zone-class-">ZONE</a> ZoneObject : The Zone to be tested for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u>  the number of GROUPs completely in the Zone</li>
 </ul>
 <span id=set_group-isincludeobject-moosegroup></span><h3 id='set_group-isincludeobject-moosegroup-'>SET_GROUP:IsIncludeObject(MooseGroup)</h3>
 <h4> Parameters </h4>
@@ -17770,7 +18000,7 @@ The following iterator methods are currently available within the SET_CARGO:</p>
 <span id=set_cargo-new></span><h3 id='set_cargo-new-'>SET_CARGO:New()</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.</span>
 <span class="n">DatabaseSet</span> <span class="o">=</span> <span class="n">SET_CARGO</span><span class="p">:</span><span class="n">New</span><span class="p">()</span>
 </code></pre>
-<p>Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.</p>
+<p>(R2.1) Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.</p>
 
 <h4> Parameters </h4>
 
@@ -17785,7 +18015,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addcargosbyname-addcargonames></span><h3 id='set_cargo-addcargosbyname-addcargonames-'>SET_CARGO:AddCargosByName(AddCargoNames)</h3>
-<p>Add CARGOs to SET_CARGO.</p>
+<p>(R2.1) Add CARGOs to SET_CARGO.</p>
 
 <h4> Parameters </h4>
 
@@ -17800,7 +18030,7 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-removecargosbyname-removecargonames></span><h3 id='set_cargo-removecargosbyname-removecargonames-'>SET_CARGO:RemoveCargosByName(RemoveCargoNames)</h3>
-<p>Remove CARGOs from SET_CARGO.</p>
+<p>(R2.1) Remove CARGOs from SET_CARGO.</p>
 
 <h4> Parameters </h4>
 
@@ -17815,7 +18045,7 @@ self</li>
 <li>self </li>
 </ul>
 <span id=set_cargo-findcargo-cargoname></span><h3 id='set_cargo-findcargo-cargoname-'>SET_CARGO:FindCargo(CargoName)</h3>
-<p>Finds a Cargo based on the Cargo Name.</p>
+<p>(R2.1) Finds a Cargo based on the Cargo Name.</p>
 
 <h4> Parameters </h4>
 
@@ -17831,7 +18061,7 @@ self</li>
 <li><a href="#cargo-class-">CARGO</a>  The found Cargo.</li>
 </ul>
 <span id=set_cargo-filtercoalitions-coalitions></span><h3 id='set_cargo-filtercoalitions-coalitions-'>SET_CARGO:FilterCoalitions(Coalitions)</h3>
-<p>Builds a set of cargos of coalitions.
+<p>(R2.1) Builds a set of cargos of coalitions.
 Possible current coalitions are red, blue and neutral.</p>
 
 <h4> Parameters </h4>
@@ -17848,7 +18078,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtertypes-types></span><h3 id='set_cargo-filtertypes-types-'>SET_CARGO:FilterTypes(Types)</h3>
-<p>Builds a set of cargos of defined cargo types.
+<p>(R2.1) Builds a set of cargos of defined cargo types.
 Possible current types are those types known within DCS world.</p>
 
 <h4> Parameters </h4>
@@ -17865,7 +18095,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filtercountries-countries></span><h3 id='set_cargo-filtercountries-countries-'>SET_CARGO:FilterCountries(Countries)</h3>
-<p>Builds a set of cargos of defined countries.
+<p>(R2.1) Builds a set of cargos of defined countries.
 Possible current countries are those known within DCS world.</p>
 
 <h4> Parameters </h4>
@@ -17882,7 +18112,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterprefixes-prefixes></span><h3 id='set_cargo-filterprefixes-prefixes-'>SET_CARGO:FilterPrefixes(Prefixes)</h3>
-<p>Builds a set of cargos of defined cargo prefixes.
+<p>(R2.1) Builds a set of cargos of defined cargo prefixes.
 All the cargos starting with the given prefixes will be included within the set.</p>
 
 <h4> Parameters </h4>
@@ -17899,7 +18129,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-filterstart></span><h3 id='set_cargo-filterstart-'>SET_CARGO:FilterStart()</h3>
-<p>Starts the filtering.</p>
+<p>(R2.1) Starts the filtering.</p>
 
 <h4> Parameters </h4>
 
@@ -17914,7 +18144,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-addindatabase-event></span><h3 id='set_cargo-addindatabase-event-'>SET_CARGO:AddInDatabase(Event)</h3>
-<p>Handles the Database to check on an event (birth) that the Object was added in the Database.
+<p>(R2.1) Handles the Database to check on an event (birth) that the Object was added in the Database.
 This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!</p>
 
 <h4> Parameters </h4>
@@ -17932,7 +18162,7 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-findindatabase-event></span><h3 id='set_cargo-findindatabase-event-'>SET_CARGO:FindInDatabase(Event)</h3>
-<p>Handles the Database to check on any event that Object exists in the Database.
+<p>(R2.1) Handles the Database to check on any event that Object exists in the Database.
 This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!</p>
 
 <h4> Parameters </h4>
@@ -17950,7 +18180,7 @@ self</li>
 <li><u>List[]</u>  The CARGO</li>
 </ul>
 <span id=set_cargo-foreachcargo-iteratorfunction></span><h3 id='set_cargo-foreachcargo-iteratorfunction-'>SET_CARGO:ForEachCargo(IteratorFunction)</h3>
-<p>Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.</p>
+<p>(R2.1) Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.</p>
 
 <h4> Parameters </h4>
 
@@ -17966,7 +18196,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-findnearestcargofrompointvec2-pointvec2></span><h3 id='set_cargo-findnearestcargofrompointvec2-pointvec2-'>SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)</h3>
-<p>Iterate the SET_CARGO while identifying the nearest <a href="#cargo-class-">CARGO</a> from a @{Point#POINT_VEC2}.</p>
+<p>(R2.1) Iterate the SET_CARGO while identifying the nearest <a href="#cargo-class-">CARGO</a> from a @{Point#POINT_VEC2}.</p>
 
 <h4> Parameters </h4>
 
@@ -17982,6 +18212,8 @@ self</li>
 <li><a href="#cargo-class-">CARGO</a>  The closest <a href="#cargo-class-">CARGO</a>.</li>
 </ul>
 <span id=set_cargo-isincludeobject-mcargo></span><h3 id='set_cargo-isincludeobject-mcargo-'>SET_CARGO:IsIncludeObject(MCargo)</h3>
+<p>(R2.1)</p>
+
 <h4> Parameters </h4>
 
 <ul>
@@ -17996,7 +18228,7 @@ self</li>
 <li><a href="#set_cargo-class-">SET_CARGO</a></li>
 </ul>
 <span id=set_cargo-oneventnewcargo-eventdata></span><h3 id='set_cargo-oneventnewcargo-eventdata-'>SET_CARGO:OnEventNewCargo(EventData)</h3>
-<p>Handles the OnEventNewCargo event for the Set.</p>
+<p>(R2.1) Handles the OnEventNewCargo event for the Set.</p>
 
 <h4> Parameters </h4>
 
@@ -18008,7 +18240,7 @@ self</li>
 
 <h4> Returns </h4>
 <span id=set_cargo-oneventdeletecargo-eventdata></span><h3 id='set_cargo-oneventdeletecargo-eventdata-'>SET_CARGO:OnEventDeleteCargo(EventData)</h3>
-<p>Handles the OnDead or OnCrash event for alive units set.</p>
+<p>(R2.1) Handles the OnDead or OnCrash event for alive units set.</p>
 
 <h4> Parameters </h4>
 
@@ -18020,7 +18252,7 @@ self</li>
 
 <h4> Returns </h4>
 <span id=core-spawnstatic-module></span><h1 id='core-spawnstatic-module-'>Core.SpawnStatic Module</h1>
-<p><strong>Core</strong> -- Spawn dynamically new STATICs in your missions.</p>
+<p>(R2.1) <strong>Core</strong> -- Spawn dynamically new STATICs in your missions.</p>
 
 <p><img src="includes/Pictures/SPAWNSTATIC/Dia1.JPG" alt="Banner Image" /></p>
 
@@ -18059,86 +18291,18 @@ By default, spawned <a href="#static-module-">Static</a>s will follow a naming c
 and <em>nnn</em> is a <strong>counter from 0 to 99999</strong>.</li>
 </ul>
 <span id=spawnstatic-construction-methods></span><h5 id='spawnstatic-construction-methods-'>SPAWNSTATIC construction methods</h5>
-<p>Create a new SPAWNSTATIC object with the <a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>:</p>
+<p>Create a new SPAWNSTATIC object with the SPAWNSTATIC-NewFromStatic-:</p>
 
 <ul>
-<li><a href="#spawnstatic-newfromstatic-spawntemplateprefix">SPAWNSTATIC:NewFromStatic()</a>: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
+<li>SPAWNSTATIC-NewFromStatic-: Creates a new SPAWNSTATIC object given a name that is used as the base of the naming of each spawned Static.</li>
 </ul>
 <span id=strong-spawn-strong-methods></span><h5 id='strong-spawn-strong-methods-'><strong>Spawn</strong> methods</h5>
 <p>Groups can be spawned at different times and methods:</p>
 
 <ul>
-<li><a href="#spawnstatic-spawnfrompointvec2-pointvec2-heading-(optional)">SPAWNSTATIC:SpawnFromPointVec2()</a>: Spawn a new group from a POINT_VEC2 coordinate.
+<li>SPAWNSTATIC-SpawnFromPointVec2-: Spawn a new group from a POINT_VEC2 coordinate.
 (The group will be spawned at land height ).</li>
-<li><a href="#spawnstatic-spawnfromzone-zone-heading-(optional)">SPAWNSTATIC:SpawnFromZone()</a>: Spawn a new group in a <a href="#zone-module-">Zone</a>.</li>
-</ul>
-<span id=spawnstatic-newfromstatic-spawntemplateprefix></span><h3 id='spawnstatic-newfromstatic-spawntemplateprefix-'>SPAWNSTATIC:NewFromStatic(SpawnTemplatePrefix)</h3>
-<p>Creates the main object to spawn a <a href="#static-module-">Static</a> defined in the ME.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a>
-self</li>
-<li><u>String</u> SpawnTemplatePrefix : is the name of the Group in the ME that defines the Template.  Each new group will have the name starting with SpawnTemplatePrefix.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
-</ul>
-<span id=spawnstatic-newfromtype-spawntypename></span><h3 id='spawnstatic-newfromtype-spawntypename-'>SPAWNSTATIC:NewFromType(SpawnTypeName)</h3>
-<p>Creates the main object to spawn a <a href="#static-module-">Static</a> based on a type name.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a>
-self</li>
-<li><u>String</u> SpawnTypeName : is the name of the type.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
-</ul>
-<span id=spawnstatic-spawnfrompointvec2-pointvec2-heading-optional></span><h3 id='spawnstatic-spawnfrompointvec2-pointvec2-heading-optional-'>SPAWNSTATIC:SpawnFromPointVec2(PointVec2, Heading, (optional))</h3>
-<p>Creates a new <a href="#static-module-">Static</a> from a POINT_VEC2.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a>
-self</li>
-<li><a href="#point_vec2-class-">POINT_VEC2</a> PointVec2 : The 2D coordinate where to spawn the static.</li>
-<li><u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
-<li><u>String</u> (optional) : The name of the new static.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
-</ul>
-<span id=spawnstatic-spawnfromzone-zone-heading-optional></span><h3 id='spawnstatic-spawnfromzone-zone-heading-optional-'>SPAWNSTATIC:SpawnFromZone(Zone, Heading, (optional))</h3>
-<p>Creates a new <a href="#static-module-">Static</a> from a <a href="#zone-module-">Zone</a>.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a>
-self</li>
-<li><a href="#zone_base-class-">ZONE_BASE</a> Zone : The Zone where to spawn the static.</li>
-<li><u>Number</u> Heading : The heading of the static, which is a number in degrees from 0 to 360.</li>
-<li><u>String</u> (optional) : The name of the new static.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spawnstatic-class-">SPAWNSTATIC</a></li>
+<li>SPAWNSTATIC-SpawnFromZone-: Spawn a new group in a <a href="#zone-module-">Zone</a>.</li>
 </ul>
 <span id=spawnstatic-spawnzonetable-class></span><h2 id='spawnstatic-spawnzonetable-class-'>SPAWNSTATIC.SpawnZoneTable Class</h2>
 <pre>
@@ -18151,19 +18315,65 @@ The SPAWNSTATIC.SpawnZoneTable class does not inherit
 <li><u>List[]</u>[Core.Zone#ZONE_BASE] SpawnZone</li>
 </ul>
 <span id=core-spot-module></span><h1 id='core-spot-module-'>Core.Spot Module</h1>
-<p><strong>Core  (Release 2.1)</strong> -- Management of SPOT logistics, that can be transported from and to transportation carriers.</p>
+<p><strong>Core 2.1</strong> -- Management of SPOT logistics, that can be transported from and to transportation carriers.</p>
 
 <p><img src="includes/Pictures/SPOT/Dia1.JPG" alt="Banner Image" /></p>
 
-<p>Spot lases points endlessly or for a duration.</p>
-<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-spot-demo-missions-source-code-a></span><h5 id='a-href-spot-demo-missions-source-code-a-'><a href="#">SPOT Demo Missions source code</a></h5><span id=a-href-spot-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-spot-demo-missions-only-for-beta-testers-a-'><a href="#">SPOT Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spot-youtube-channel-a></span><h5 id='a-href-spot-youtube-channel-a-'><a href="#">SPOT YouTube Channel</a></h5>
-<p>This module is still under construction, but is described above works already, and will keep working ...</p>
+<p>SPOT implements the DCS Spot class functionality, but adds additional luxury to be able to:</p>
+
+<ul>
+<li>Spot for a defined duration.</li>
+<li>wiggle the spot at the target.</li>
+<li>Provide a <a href="#unit-module-">Unit</a> as a target, instead of a point.</li>
+<li>Implement a status machine, LaseOn, LaseOff.</li>
+</ul>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-spot-demo-missions-source-code-a></span><h5 id='a-href-spot-demo-missions-source-code-a-'><a href="#">SPOT Demo Missions source code</a></h5><span id=a-href-spot-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-spot-demo-missions-only-for-beta-testers-a-'><a href="#">SPOT Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-spot-youtube-channel-a></span><h5 id='a-href-spot-youtube-channel-a-'><a href="#">SPOT YouTube Channel</a></h5><span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=112175"><strong>Ciribob</strong></a>: Showing the way how to lase targets + how laser codes work!!! Explained the autolase script.</li>
+<li><a href="https://forums.eagle.ru/member.php?u=112055"><strong>EasyEB</strong></a>: Ideas and Beta Testing</li>
+<li><a href="https://forums.eagle.ru/member.php?u=123698"><strong>Wingthor</strong></a>: Beta Testing</li>
+</ul>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
 <span id=spot-class></span><h2 id='spot-class-'>SPOT Class</h2>
 <pre>
 Inheritance : The SPOT Class inherits from the following parents :
 BASE
-    `-- SPOT
+    `-- FSM
+        `-- SPOT
 </pre>
+
+<p>SPOT implements the DCS Spot class functionality, but adds additional luxury to be able to:</p>
+
+<ul>
+<li>Mark targets for a defined duration.</li>
+<li>wiggle the spot at the target.</li>
+<li>Provide a <a href="#unit-module-">Unit</a> as a target, instead of a point.</li>
+<li>Implement a status machine, LaseOn, LaseOff.</li>
+</ul>
+<span id=1-spot-constructor></span><h5 id='1-spot-constructor-'>1. SPOT constructor</h5>
+<ul>
+<li><a href="#spot-new-recce-lasercode-duration">SPOT:New()</a>..\Presentations\SPOT\Dia2.JPG): Creates a new SPOT object.</li>
+</ul>
+<span id=2-spot-is-a-fsm></span><h5 id='2-spot-is-a-fsm-'>2. SPOT is a FSM</h5>
+<p><img src="images/" alt="Process" /></p>
+<span id=2-1-spot-states></span><h5 id='2-1-spot-states-'>2.1 SPOT States</h5>
+<ul>
+<li><strong>Off</strong>: Lasing is switched off.</li>
+<li><strong>On</strong>: Lasing is switched on.</li>
+<li><strong>Destroyed</strong>: Target is destroyed.</li>
+</ul>
+<span id=2-2-spot-events></span><h5 id='2-2-spot-events-'>2.2 SPOT Events</h5>
+<ul>
+<li><strong>SPOT-LaseOn-Target, LaserCode, Duration)</strong>: Lase to a target.</li>
+<li><strong>SPOT-LaseOff-</strong>: Stop lasing the target.</li>
+<li><strong>SPOT-Lasing-</strong>: Target is being lased.</li>
+<li><strong>SPOT-Destroyed-</strong>: Triggered when target is destroyed.</li>
+</ul>
+<span id=3-check-if-a-target-is-being-lased></span><h5 id='3-check-if-a-target-is-being-lased-'>3. Check if a Target is being lased</h5>
+<p>The method SPOT-IsLasing- indicates whether lasing is on or off.</p>
 <span id=spot-new-recce-lasercode-duration></span><h3 id='spot-new-recce-lasercode-duration-'>SPOT:New(Recce, LaserCode, Duration)</h3>
 <p>SPOT Constructor.</p>
 
@@ -18182,6 +18392,144 @@ self</li>
 <ul>
 <li><a href="#spot-class-">SPOT</a></li>
 </ul>
+<span id=spot-onbeforelaseon-from-event-to></span><h3 id='spot-onbeforelaseon-from-event-to-'>SPOT:OnBeforeLaseOn(From, Event, To)</h3>
+<p>LaseOn Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeLaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterlaseon-from-event-to></span><h3 id='spot-onafterlaseon-from-event-to-'>SPOT:OnAfterLaseOn(From, Event, To)</h3>
+<p>LaseOn Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterLaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-laseon></span><h3 id='spot-laseon-'>SPOT:LaseOn()</h3>
+<p>LaseOn Trigger for SPOT
+@function [parent=#SPOT] LaseOn</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onbeforelaseoff-from-event-to></span><h3 id='spot-onbeforelaseoff-from-event-to-'>SPOT:OnBeforeLaseOff(From, Event, To)</h3>
+<p>LaseOff Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeLaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterlaseoff-from-event-to></span><h3 id='spot-onafterlaseoff-from-event-to-'>SPOT:OnAfterLaseOff(From, Event, To)</h3>
+<p>LaseOff Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterLaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-laseoff></span><h3 id='spot-laseoff-'>SPOT:LaseOff()</h3>
+<p>LaseOff Trigger for SPOT
+@function [parent=#SPOT] LaseOff</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-onbeforedestroyed-from-event-to></span><h3 id='spot-onbeforedestroyed-from-event-to-'>SPOT:OnBeforeDestroyed(From, Event, To)</h3>
+<p>Destroyed Handler OnBefore for SPOT
+@function [parent=#SPOT] OnBeforeDestroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=spot-onafterdestroyed-from-event-to></span><h3 id='spot-onafterdestroyed-from-event-to-'>SPOT:OnAfterDestroyed(From, Event, To)</h3>
+<p>Destroyed Handler OnAfter for SPOT
+@function [parent=#SPOT] OnAfterDestroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-destroyed></span><h3 id='spot-destroyed-'>SPOT:Destroyed()</h3>
+<p>Destroyed Trigger for SPOT
+@function [parent=#SPOT] Destroyed</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
 <span id=spot-onafterlaseon-self-self-self-target-lasercode-duration></span><h3 id='spot-onafterlaseon-self-self-self-target-lasercode-duration-'>SPOT:onafterLaseOn(self, self, self, Target, LaserCode, Duration)</h3>
 <h4> Parameters </h4>
 
@@ -18194,6 +18542,16 @@ self</li>
 <li><a href="#positionable-class-">POSITIONABLE</a> Target</li>
 <li><u>Number</u> LaserCode</li>
 <li><u>Number</u> Duration</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=spot-oneventdead-eventdata></span><h3 id='spot-oneventdead-eventdata-'>SPOT:OnEventDead(EventData)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#spot-class-">SPOT</a>
+self</li>
+<li><a href="#eventdata-class-">EVENTDATA</a> EventData</li>
 </ul>
 
 <h4> Returns </h4>
@@ -21578,6 +21936,491 @@ self</li>
 <ul>
 <li><a href="#cleanup-class-">CLEANUP</a></li>
 </ul>
+<span id=functional-designate-module></span><h1 id='functional-designate-module-'>Functional.Designate Module</h1>
+<p><strong>Funtional R2.1</strong> -- Management of target <strong>Designation</strong>.</p>
+
+<p>--<img src="includes/Pictures/DESIGNATE/Dia1.JPG" alt="Banner Image" /></p>
+
+<p>DESIGNATE is orchestrating the designation of potential targets executed by a Recce group,
+and communicates these to a dedicated attacking group of players,
+so that following a dynamically generated menu system,
+each detected set of potential targets can be lased or smoked...</p>
+
+<p>Targets can be:</p>
+
+<ul>
+<li><strong>Lased</strong> for a period of time.</li>
+<li><strong>Smoked</strong>. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.)</li>
+<li><strong>Illuminated</strong> through an illumination bomb. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.</li>
+</ul>
+<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<ul>
+<li><a href="https://forums.eagle.ru/member.php?u=112175"><strong>Ciribob</strong></a>: Showing the way how to lase targets + how laser codes work!!! Explained the autolase script.</li>
+<li><a href="https://forums.eagle.ru/member.php?u=112055"><strong>EasyEB</strong></a>: Ideas and Beta Testing</li>
+<li><a href="https://forums.eagle.ru/member.php?u=123698"><strong>Wingthor</strong></a>: Beta Testing</li>
+</ul>
+<span id=authors></span><h5 id='authors-'>Authors:</h5>
+<ul>
+<li><strong>FlightControl</strong>: Design &amp; Programming</li>
+</ul>
+<span id=designate-class></span><h2 id='designate-class-'>DESIGNATE Class</h2>
+<pre>
+Inheritance : The DESIGNATE Class inherits from the following parents :
+BASE
+    `-- FSM
+        `-- FSM_CONTROLLABLE
+            `-- FSM_PROCESS
+                `-- DESIGNATE
+</pre>
+
+<p>DESIGNATE is orchestrating the designation of potential targets executed by a Recce group,
+and communicates these to a dedicated attacking group of players,
+so that following a dynamically generated menu system,
+each detected set of potential targets can be lased or smoked...</p>
+
+<p>Targets can be:</p>
+
+<ul>
+<li><strong>Lased</strong> for a period of time.</li>
+<li><strong>Smoked</strong>. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.)</li>
+<li><strong>Illuminated</strong> through an illumination bomb. Artillery or airplanes with Illuminatino ordonance need to be present. (WIP, but early demo ready.</li>
+</ul>
+
+<p>The following terminology is being used throughout this document:</p>
+
+<ul>
+<li>The <strong>DesignateObject</strong> is the object of the DESIGNATE class, which is this class explained in the document.</li>
+<li>The <strong>DetectionObject</strong> is the object of a DETECTION_ class (DETECTION_TYPES, DETECTION_AREAS, DETECTION_UNITS), which is executing the detection and grouping of Targets into <em>DetectionItems</em>.</li>
+<li><strong>DetectionItems</strong> is the list of detected target groupings by the <em>DetectionObject</em>. Each <em>DetectionItem</em> contains a <em>TargetSet</em>.</li>
+<li><strong>DetectionItem</strong> is one element of the <em>DetectionItems</em> list, and contains a <em>TargetSet</em>.</li>
+<li>The <strong>TargetSet</strong> is a SET_UNITS collection of <em>Targets</em>, that have been detected by the <em>DetectionObject</em>.</li>
+<li>A <strong>Target</strong> is a detected UNIT object by the <em>DetectionObject</em>.</li>
+<li>A <strong>Threat Level</strong> is a number from 0 to 10 that is calculated based on the threat of the Target in an Air to Ground battle scenario.</li>
+<li>The <strong>RecceSet</strong> is a SET_GROUP collection that contains the <strong>RecceGroups</strong>.</li>
+<li>A <strong>RecceGroup</strong> is a GROUP object containing the <strong>Recces</strong>.</li>
+<li>A <strong>Recce</strong> is a UNIT object executing the reconnaissance as part the <em>DetectionObject</em>. A Recce can be of any UNIT type.</li>
+<li>An <strong>AttackGroup</strong> is a GROUP object that contain <em>Players</em>.</li>
+<li>A <strong>Player</strong> is an active CLIENT object containing a human player.</li>
+<li>A <strong>Designate Menu</strong> is the menu that is dynamically created during the designation process for each <em>AttackGroup</em>.</li>
+</ul>
+
+<p>The RecceSet is continuously detecting for potential Targets, executing its task as part of the DetectionObject.
+Once Targets have been detected, the DesignateObject will trigger the <strong>Detect Event</strong>.</p>
+
+<p>As part of the Detect Event, the DetectionItems list is used by the DesignateObject to provide the Players with:</p>
+
+<ul>
+<li>The RecceGroups are reporting to each AttackGroup, sending <strong>Messages</strong> containing the Threat Level and the TargetSet composition.</li>
+<li><strong>Menu options</strong> are created and updated for each AttackGroup, containing the Threat Level and the TargetSet composition.</li>
+</ul>
+
+<p>A Player can then select an action from the Designate Menu.</p>
+
+<p><strong>Note that each selected action will be executed for a TargetSet, thus the Target grouping done by the DetectionObject.</strong></p>
+
+<p>Each <strong>Menu Option</strong> in the Designate Menu has two modes:</p>
+
+<ol>
+<li>If the TargetSet <strong>is not being designated</strong>, then the <strong>Designate Menu</strong> option for the target Set will provide options to <strong>Lase</strong> or <strong>Smoke</strong> the targets.</li>
+<li>If the Target Set <strong>is being designated</strong>, then the <strong>Designate Menu</strong> option will provide an option to stop or cancel the designation.</li>
+</ol>
+
+<p>While designating, the RecceGroups will report any change in TargetSet composition or Target presence.</p>
+
+<p>The following logic is executed when a TargetSet is selected to be <em>lased</em> from the Designation Menu:</p>
+
+<ul>
+<li>The RecceSet is searched for any Recce that is within <em>designation distance</em> from a Target in the TargetSet that is currently not being designated.</li>
+<li>If there is a Recce found that is currently no designating a target, and is within designation distance from the Target, then that Target will be designated.</li>
+<li>During designation, any Recce that does not have Line of Sight (LOS) and is not within disignation distance from the Target, will stop designating the Target, and a report is given.</li>
+<li>When a Recce is designating a Target, and that Target is destroyed, then the Recce will stop designating the Target, and will report the event.</li>
+<li>When a Recce is designating a Target, and that Recce is destroyed, then the Recce will be removed from the RecceSet and designation will stop without reporting.</li>
+<li>When all RecceGroups are destroyed from the RecceSet, then the DesignationObject will stop functioning, and nothing will be reported.</li>
+</ul>
+
+<p>In this way, the DesignationObject assists players to designate ground targets for a coordinated attack!</p>
+
+<p>Have FUN!</p>
+<span id=1-designate-constructor></span><h5 id='1-designate-constructor-'>1. DESIGNATE constructor</h5>
+<ul>
+<li><a href="#designate-new-cc-detection-attackset">DESIGNATE:New()</a>: Creates a new DESIGNATE object.</li>
+</ul>
+<span id=2-designate-is-a-fsm></span><h5 id='2-designate-is-a-fsm-'>2. DESIGNATE is a FSM</h5>
+<p><img src="includes/Pictures/DESIGNATE/Dia2.JPG" alt="Process" /></p>
+<span id=2-1-designate-states></span><h5 id='2-1-designate-states-'>2.1 DESIGNATE States</h5>
+<ul>
+<li><strong>Designating</strong> ( Group ): The process is not started yet.</li>
+</ul>
+<span id=2-2-designate-events></span><h5 id='2-2-designate-events-'>2.2 DESIGNATE Events</h5>
+<ul>
+<li><strong>DESIGNATE-Detect-</strong>: Detect targets.</li>
+<li><strong>DESIGNATE-LaseOn-</strong>: Lase the targets with the specified Index.</li>
+<li><strong>DESIGNATE-LaseOff-</strong>: Stop lasing the targets with the specified Index.</li>
+<li><strong>DESIGNATE-Smoke-</strong>: Smoke the targets with the specified Index.</li>
+<li><strong>DESIGNATE-Status-</strong>: Report designation status.</li>
+</ul>
+<span id=3-laser-codes></span><h5 id='3-laser-codes-'>3. Laser codes</h5><span id=3-1-set-possible-laser-codes></span><h5 id='3-1-set-possible-laser-codes-'>3.1 Set possible laser codes</h5>
+<p>An array of laser codes can be provided, that will be used by the DESIGNATE when lasing.
+The laser code is communicated by the Recce when it is lasing a larget.
+Note that the default laser code is 1113.
+Working known laser codes are: 1113,1462,1483,1537,1362,1214,1131,1182,1644,1614,1515,1411,1621,1138,1542,1678,1573,1314,1643,1257,1467,1375,1341,1275,1237</p>
+
+<p>Use the method DESIGNATE-SetLaserCodes- to set the possible laser codes to be selected from.
+One laser code can be given or an sequence of laser codes through an table...</p>
+
+<p>Designate:SetLaserCodes( 1214 )</p>
+
+<p>The above sets one laser code with the value 1214.</p>
+
+<p>Designate:SetLaserCodes( { 1214, 1131, 1614, 1138 } )</p>
+
+<p>The above sets a collection of possible laser codes that can be assigned. <strong>Note the { } notation!</strong></p>
+<span id=3-2-auto-generate-laser-codes></span><h5 id='3-2-auto-generate-laser-codes-'>3.2 Auto generate laser codes</h5>
+<p>Use the method DESIGNATE-GenerateLaserCodes- to generate all possible laser codes. Logic implemented and advised by Ciribob!</p>
+<span id=4-autolase-to-automatically-lase-detected-targets></span><h5 id='4-autolase-to-automatically-lase-detected-targets-'>4. Autolase to automatically lase detected targets.</h5>
+<p>DetectionItems can be auto lased once detected by Recces. As such, there is almost no action required from the Players using the Designate Menu.
+The <strong>auto lase</strong> function can be activated through the Designation Menu.
+Use the method DESIGNATE-SetAutoLase- to activate or deactivate the auto lase function programmatically.
+Note that autolase will automatically activate lasing for ALL DetectedItems. Individual items can be switched-off if required using the Designation Menu.</p>
+
+<p>Designate:SetAutoLase( true )</p>
+
+<p>Activate the auto lasing.</p>
+<span id=5-target-prioritization-on-threat-level></span><h5 id='5-target-prioritization-on-threat-level-'>5. Target prioritization on threat level</h5>
+<p>Targets can be detected of different types in one DetectionItem. Depending on the type of the Target, a different threat level applies in an Air to Ground combat context.
+SAMs are of a higher threat than normal tanks. So, if the Target type was recognized, the Recces will select those targets that form the biggest threat first,
+and will continue this until the remaining vehicles with the lowest threat have been reached.</p>
+
+<p>This threat level prioritization can be activated using the method DESIGNATE-SetThreatLevelPrioritization-.
+If not activated, Targets will be selected in a random order, but most like those first which are the closest to the Recce marking the Target.</p>
+
+<p>Designate:SetThreatLevelPrioritization( true )</p>
+
+<p>The example will activate the threat level prioritization for this the Designate object. Threats will be marked based on the threat level of the Target.</p>
+<span id=6-status-report></span><h5 id='6-status-report-'>6. Status Report</h5>
+<p>A status report is available that displays the current Targets detected, grouped per DetectionItem, and a list of which Targets are currently being marked.</p>
+
+<ul>
+<li>The status report can be shown by selecting &quot;Status&quot; -&gt; &quot;Report Status&quot; from the Designation menu .</li>
+<li>The status report can be automatically flashed by selecting &quot;Status&quot; -&gt; &quot;Flash Status On&quot;.</li>
+<li>The automatic flashing of the status report can be deactivated by selecting &quot;Status&quot; -&gt; &quot;Flash Status Off&quot;.</li>
+<li>The flashing of the status menu is disabled by default.</li>
+<li>The method DESIGNATE-FlashStatusMenu- can be used to enable or disable to flashing of the status menu.</li>
+</ul>
+
+<p>Designate:FlashStatusMenu( true )</p>
+
+<p>The example will activate the flashing of the status menu for this Designate object.</p>
+<span id=designate-new-cc-detection-attackset></span><h3 id='designate-new-cc-detection-attackset-'>DESIGNATE:New(CC, Detection, AttackSet)</h3>
+<p>DESIGNATE Constructor. This class is an abstract class and should not be instantiated.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><a href="#commandcenter-class-">COMMANDCENTER</a> CC</li>
+<li><a href="#detection_base-class-">DETECTION_BASE</a> Detection</li>
+<li><a href="#set_group-class-">SET_GROUP</a> AttackSet : The Attack collection of GROUP objects to designate and report for.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onbeforedetect-from-event-to></span><h3 id='designate-onbeforedetect-from-event-to-'>DESIGNATE:OnBeforeDetect(From, Event, To)</h3>
+<p>Detect Handler OnBefore for DESIGNATE
+@function [parent=#DESIGNATE] OnBeforeDetect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=designate-onafterdetect-from-event-to></span><h3 id='designate-onafterdetect-from-event-to-'>DESIGNATE:OnAfterDetect(From, Event, To)</h3>
+<p>Detect Handler OnAfter for DESIGNATE
+@function [parent=#DESIGNATE] OnAfterDetect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-detect></span><h3 id='designate-detect-'>DESIGNATE:Detect()</h3>
+<p>Detect Trigger for DESIGNATE
+@function [parent=#DESIGNATE] Detect</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onbeforeilluminate-from-event-to></span><h3 id='designate-onbeforeilluminate-from-event-to-'>DESIGNATE:OnBeforeIlluminate(From, Event, To)</h3>
+<p>Illuminate Handler OnBefore for DESIGNATE
+@function [parent=#DESIGNATE] OnBeforeIlluminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Boolean</u> </li>
+</ul>
+<span id=designate-onafterilluminate-from-event-to></span><h3 id='designate-onafterilluminate-from-event-to-'>DESIGNATE:OnAfterIlluminate(From, Event, To)</h3>
+<p>Illuminate Handler OnAfter for DESIGNATE
+@function [parent=#DESIGNATE] OnAfterIlluminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><u>String</u> From</li>
+<li><u>String</u> Event</li>
+<li><u>String</u> To</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-illuminate></span><h3 id='designate-illuminate-'>DESIGNATE:Illuminate()</h3>
+<p>Illuminate Trigger for DESIGNATE
+@function [parent=#DESIGNATE] Illuminate</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterdetect></span><h3 id='designate-onafterdetect-'>DESIGNATE:onafterDetect()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-sendstatus-attackgroup></span><h3 id='designate-sendstatus-attackgroup-'>DESIGNATE:SendStatus(AttackGroup)</h3>
+<p>Sends the status to the Attack Groups.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+<li><a href="#group-class-">GROUP</a> AttackGroup</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-activateautolase></span><h3 id='designate-activateautolase-'>DESIGNATE:ActivateAutoLase()</h3>
+<p>Coordinates the Auto Lase.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-setdesignatemenu></span><h3 id='designate-setdesignatemenu-'>DESIGNATE:SetDesignateMenu()</h3>
+<p>Sets the Designate Menu.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-menustatus></span><h3 id='designate-menustatus-'>DESIGNATE:MenuStatus()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuflashstatus></span><h3 id='designate-menuflashstatus-'>DESIGNATE:MenuFlashStatus()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuautolase></span><h3 id='designate-menuautolase-'>DESIGNATE:MenuAutoLase()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menusmoke></span><h3 id='designate-menusmoke-'>DESIGNATE:MenuSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menuilluminate></span><h3 id='designate-menuilluminate-'>DESIGNATE:MenuIlluminate()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menulaseon></span><h3 id='designate-menulaseon-'>DESIGNATE:MenuLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-menulaseoff></span><h3 id='designate-menulaseoff-'>DESIGNATE:MenuLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterlaseon></span><h3 id='designate-onafterlaseon-'>DESIGNATE:onafterLaseOn()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=designate-onafterlasing></span><h3 id='designate-onafterlasing-'>DESIGNATE:onafterLasing()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterlaseoff></span><h3 id='designate-onafterlaseoff-'>DESIGNATE:onafterLaseOff()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onaftersmoke></span><h3 id='designate-onaftersmoke-'>DESIGNATE:onafterSmoke()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterilluminate></span><h3 id='designate-onafterilluminate-'>DESIGNATE:onafterIlluminate()</h3>
+<p>Illuminating</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
+<span id=designate-onafterdone></span><h3 id='designate-onafterdone-'>DESIGNATE:onafterDone()</h3>
+<p>Done</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#designate-class-">DESIGNATE</a></li>
+</ul>
 <span id=functional-detection-module></span><h1 id='functional-detection-module-'>Functional.Detection Module</h1>
 <p><strong>Functional</strong> - DETECTION_ classes model the detection of enemy units by FACs or RECCEs and group them according various methods.</p>
 
@@ -22136,6 +22979,21 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
+<span id=detection_base-createdetectionitems></span><h3 id='detection_base-createdetectionitems-'>DETECTION_BASE:CreateDetectionItems()</h3>
+<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a></li>
+</ul>
 <span id=detection_base-initdetectvisual-detectvisual></span><h3 id='detection_base-initdetectvisual-detectvisual-'>DETECTION_BASE:InitDetectVisual(DetectVisual)</h3>
 <p>Detect Visual.</p>
 
@@ -22709,21 +23567,6 @@ self</li>
 <ul>
 <li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
-<span id=detection_base-createdetectionsets></span><h3 id='detection_base-createdetectionsets-'>DETECTION_BASE:CreateDetectionSets()</h3>
-<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#detection_base-class-">DETECTION_BASE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#detection_base-class-">DETECTION_BASE</a></li>
-</ul>
 <span id=detection_base-schedule-delaytime-repeatinterval></span><h3 id='detection_base-schedule-delaytime-repeatinterval-'>DETECTION_BASE:Schedule(DelayTime, RepeatInterval)</h3>
 <p>Schedule the DETECTION construction.</p>
 
@@ -22829,7 +23672,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_units-createdetectionsets></span><h3 id='detection_units-createdetectionsets-'>DETECTION_UNITS:CreateDetectionSets()</h3>
+<span id=detection_units-createdetectionitems></span><h3 id='detection_units-createdetectionitems-'>DETECTION_UNITS:CreateDetectionItems()</h3>
 <p>Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.</p>
 
@@ -22920,7 +23763,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_types-createdetectionsets></span><h3 id='detection_types-createdetectionsets-'>DETECTION_TYPES:CreateDetectionSets()</h3>
+<span id=detection_types-createdetectionitems></span><h3 id='detection_types-createdetectionitems-'>DETECTION_TYPES:CreateDetectionItems()</h3>
 <p>Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.</p>
 
@@ -23191,7 +24034,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_areas-createdetectionsets></span><h3 id='detection_areas-createdetectionsets-'>DETECTION_AREAS:CreateDetectionSets()</h3>
+<span id=detection_areas-createdetectionitems></span><h3 id='detection_areas-createdetectionitems-'>DETECTION_AREAS:CreateDetectionItems()</h3>
 <p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
 
 <h4> Parameters </h4>
@@ -24799,45 +25642,7 @@ self</li>
 <p><img src="includes/Pictures/SPAWN/SPAWN.JPG" alt="Banner Image" /></p>
 
 <p>The documentation of the SPAWN class can be found further in this document.</p>
-<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><span id=strong-api-change-history-strong></span><h5 id='strong-api-change-history-strong-'><strong>API CHANGE HISTORY</strong></h5>
-<p>The underlying change log documents the API changes. Please read this carefully. The following notation is used:</p>
-
-<ul>
-<li><strong>Added</strong> parts are expressed in bold type face.</li>
-<li><em>Removed</em> parts are expressed in italic type face.</li>
-</ul>
-
-<p>Hereby the change log:</p>
-
-<p>2017-04-08: SPAWN:<strong>InitDelayOnOff( DelayOnOff )</strong> added.
-2017-04-08: SPAWN:<strong>InitDelayOn()</strong> added.
-2017-04-08: SPAWN:<strong>InitDelayOff()</strong> added.</p>
-
-<p>2017-03-14: SPAWN:<strong>InitKeepUnitNames()</strong> added.
-2017-03-14: SPAWN:<strong>InitRandomizePosition( RandomizePosition, OuterRadious, InnerRadius )</strong> added.</p>
-
-<p>2017-02-04: SPAWN:InitUnControlled( <strong>UnControlled</strong> ) replaces SPAWN:InitUnControlled().</p>
-
-<p>2017-01-24: SPAWN:<strong>InitAIOnOff( AIOnOff )</strong> added.
-2017-01-24: SPAWN:<strong>InitAIOn()</strong> added.
-2017-01-24: SPAWN:<strong>InitAIOff()</strong> added.</p>
-
-<p>2016-08-15: SPAWN:<strong>InitCleanUp</strong>( SpawnCleanUpInterval ) replaces SPAWN:<em>CleanUp</em>( SpawnCleanUpInterval ).
-2016-08-15: SPAWN:<strong>InitRandomizeZones( SpawnZones )</strong> added.</p>
-
-<p>2016-08-14: SPAWN:<strong>OnSpawnGroup</strong>( SpawnCallBackFunction, ... ) replaces SPAWN:<em>SpawnFunction</em>( SpawnCallBackFunction, ... ).
-2016-08-14: SPAWN.SpawnInZone( Zone, <strong>RandomizeGroup</strong>, SpawnIndex ) replaces SpawnInZone( Zone, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromVec3( Vec3, SpawnIndex ) replaces SpawnFromVec3( Vec3, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromVec2( Vec2, SpawnIndex ) replaces SpawnFromVec2( Vec2, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromUnit( SpawnUnit, SpawnIndex ) replaces SpawnFromUnit( SpawnUnit, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.SpawnFromUnit( SpawnUnit, SpawnIndex ) replaces SpawnFromStatic( SpawnStatic, <em>RandomizeUnits, OuterRadius, InnerRadius,</em> SpawnIndex ).
-2016-08-14: SPAWN.<strong>InitRandomizeUnits( RandomizeUnits, OuterRadius, InnerRadius )</strong> added.
-2016-08-14: SPAWN.<strong>Init</strong>Limit( SpawnMaxUnitsAlive, SpawnMaxGroups ) replaces SPAWN.<em>Limit</em>( SpawnMaxUnitsAlive, SpawnMaxGroups ).
-2016-08-14: SPAWN.<strong>Init</strong>Array( SpawnAngle, SpawnWidth, SpawnDeltaX, SpawnDeltaY ) replaces SPAWN.<em>Array</em>( SpawnAngle, SpawnWidth, SpawnDeltaX, SpawnDeltaY ).
-2016-08-14: SPAWN.<strong>Init</strong>RandomizeRoute( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ) replaces SPAWN.<em>RandomizeRoute</em>( SpawnStartPoint, SpawnEndPoint, SpawnRadius, SpawnHeight ).
-2016-08-14: SPAWN.<strong>Init</strong>RandomizeTemplate( SpawnTemplatePrefixTable ) replaces SPAWN.<em>RandomizeTemplate</em>( SpawnTemplatePrefixTable ).
-2016-08-14: SPAWN.<strong>Init</strong>UnControlled() replaces SPAWN.<em>UnControlled</em>().</p>
-<span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
+<span id=demo-missions></span><h5 id='demo-missions-'>Demo Missions</h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-release-spa-20-20spawning-spawn-demo-missions-source-code-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master-release/SPA%20-%20Spawning">SPAWN Demo Missions source code</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-tree-master-spa-20-20spawning-spawn-demo-missions-only-for-beta-testers-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/tree/master/SPA%20-%20Spawning">SPAWN Demo Missions, only for beta testers</a></h5><span id=a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a></span><h5 id='a-href-https-github-com-flightcontrol-master-moose_missions-releases-all-demo-missions-pack-of-the-last-release-a-'><a href="https://github.com/FlightControl-Master/MOOSE_MISSIONS/releases">ALL Demo Missions pack of the last release</a></h5><span id=youtube-channel></span><h5 id='youtube-channel-'>YouTube Channel</h5><span id=a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a></span><h5 id='a-href-https-www-youtube-com-playlist-list-pl7zuru4zzul1jirwio4t4yxqn-hxjqrkl-spawn-youtube-channel-a-'><a href="https://www.youtube.com/playlist?list=PL7ZUrU4zZUl1jirWIo4t4YxqN-HxjqRkL">SPAWN YouTube Channel</a></h5><span id=strong-authors-and-contributions-strong></span><h5 id='strong-authors-and-contributions-strong-'><strong>AUTHORS and CONTRIBUTIONS</strong></h5><span id=contributions></span><h5 id='contributions-'>Contributions:</h5>
 <ul>
 <li><strong>Aaron</strong>: Posed the idea for Group position randomization at SpawnInZone and make the Unit randomization separate from the Group randomization.</li>
 <li><a href="https://forums.eagle.ru/member.php?u=111471"><strong>Entropy</strong></a>, <strong>Afinegan</strong>: Came up with the requirement for AIOnOff().</li>
@@ -31511,6 +32316,22 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Returns true if the Group is not within the <a href="#zone_base-class-">ZONE_BASE</a></li>
 </ul>
+<span id=group-countinzone-zone></span><h3 id='group-countinzone-zone-'>GROUP:CountInZone(Zone)</h3>
+<p>Returns the number of UNITs that are in the <a href="#zone-module-">Zone</a></p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#group-class-">GROUP</a>
+self</li>
+<li><a href="#zone_base-class-">ZONE_BASE</a> Zone : The zone to test.</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u>  The number of UNITs that are in the <a href="#zone-module-">Zone</a></li>
+</ul>
 <span id=group-isair></span><h3 id='group-isair-'>GROUP:IsAir()</h3>
 <p>Returns if the group is of an air category.
 If the group is a helicopter or a plane, then this method will return true, otherwise false.</p>
@@ -32281,6 +33102,8 @@ BASE
 
 <ul>
 <li><u>String</u> PositionableName : The name of the measurable.</li>
+<li><a href="#spot-class-">SPOT</a> Spot : The laser Spot.</li>
+<li><u>Number</u> LaserCode : The last assigned laser code.</li>
 </ul>
 <span id=positionable-new-positionablename></span><h3 id='positionable-new-positionablename-'>POSITIONABLE:New(PositionableName)</h3>
 <p>Create a new POSITIONABLE from a DCSPositionable</p>
@@ -32481,24 +33304,6 @@ Polymorphic, is overridden in GROUP and UNIT.</p>
 <li><u>Number</u>  The velocity in km/h</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
-<span id=positionable-getmessage-message-duration-name></span><h3 id='positionable-getmessage-message-duration-name-'>POSITIONABLE:GetMessage(Message, Duration, Name)</h3>
-<p>Returns a message with the callsign embedded (if there is one).</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><u>String</u> Message : The message text</li>
-<li><a href="#duration-class-">Duration</a> Duration : The duration of the message.</li>
-<li><u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#message-class-">MESSAGE</a> </li>
-</ul>
 <span id=positionable-messagetoall-message-duration-name></span><h3 id='positionable-messagetoall-message-duration-name-'>POSITIONABLE:MessageToAll(Message, Duration, Name)</h3>
 <p>Send a message to all coalitions.
 The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.</p>
@@ -32607,88 +33412,6 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=positionable-getradio></span><h3 id='positionable-getradio-'>POSITIONABLE:GetRadio()</h3>
-<p>Create a <a href="#radio-class-">RADIO</a>, to allow radio transmission for this POSITIONABLE.
-Set parameters with the methods provided, then use RADIO:Broadcast() to actually broadcast the message</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#radio-class-">RADIO</a></li>
-</ul>
-<span id=positionable-getbeacon></span><h3 id='positionable-getbeacon-'>POSITIONABLE:GetBeacon()</h3>
-<p>Create a <a href="#beacon-class-">BEACON</a>, to allow this POSITIONABLE to broadcast beacon signals</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#radio-class-">RADIO</a></li>
-</ul>
-<span id=positionable-laseunit-target-lasercode-duration></span><h3 id='positionable-laseunit-target-lasercode-duration-'>POSITIONABLE:LaseUnit(Target, LaserCode, Duration)</h3>
-<p>Start Lasing a POSITIONABLE</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-Target</li>
-<li><u>Number</u> LaserCode</li>
-<li><u>Number</u> Duration</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#spot-class-">SPOT</a> </li>
-</ul>
-<span id=positionable-laseoff-target></span><h3 id='positionable-laseoff-target-'>POSITIONABLE:LaseOff(Target)</h3>
-<p>Stop Lasing a POSITIONABLE</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-Target</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a></li>
-</ul>
-<span id=positionable-islasing></span><h3 id='positionable-islasing-'>POSITIONABLE:IsLasing()</h3>
-<p>Check if the POSITIONABLE is lasing a target</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#positionable-class-">POSITIONABLE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>Boolean</u>  true if it is lasing a target</li>
-</ul>
 <span id=dcspositionable-class></span><h2 id='dcspositionable-class-'>DCSPositionable Class</h2>
 <pre>
 The DCSPositionable class does not inherit

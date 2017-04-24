@@ -556,6 +556,21 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
+<span id=detection_base-createdetectionitems></span><h3 id='detection_base-createdetectionitems-'>DETECTION_BASE:CreateDetectionItems()</h3>
+<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a></li>
+</ul>
 <span id=detection_base-initdetectvisual-detectvisual></span><h3 id='detection_base-initdetectvisual-detectvisual-'>DETECTION_BASE:InitDetectVisual(DetectVisual)</h3>
 <p>Detect Visual.</p>
 
@@ -1129,21 +1144,6 @@ self</li>
 <ul>
 <li><a href="#set_group-class-">SET_GROUP</a> </li>
 </ul>
-<span id=detection_base-createdetectionsets></span><h3 id='detection_base-createdetectionsets-'>DETECTION_BASE:CreateDetectionSets()</h3>
-<p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#detection_base-class-">DETECTION_BASE</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#detection_base-class-">DETECTION_BASE</a></li>
-</ul>
 <span id=detection_base-schedule-delaytime-repeatinterval></span><h3 id='detection_base-schedule-delaytime-repeatinterval-'>DETECTION_BASE:Schedule(DelayTime, RepeatInterval)</h3>
 <p>Schedule the DETECTION construction.</p>
 
@@ -1249,7 +1249,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_units-createdetectionsets></span><h3 id='detection_units-createdetectionsets-'>DETECTION_UNITS:CreateDetectionSets()</h3>
+<span id=detection_units-createdetectionitems></span><h3 id='detection_units-createdetectionitems-'>DETECTION_UNITS:CreateDetectionItems()</h3>
 <p>Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.</p>
 
@@ -1340,7 +1340,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_types-createdetectionsets></span><h3 id='detection_types-createdetectionsets-'>DETECTION_TYPES:CreateDetectionSets()</h3>
+<span id=detection_types-createdetectionitems></span><h3 id='detection_types-createdetectionitems-'>DETECTION_TYPES:CreateDetectionItems()</h3>
 <p>Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.</p>
 
@@ -1611,7 +1611,7 @@ self</li>
 <ul>
 <li><u>String</u>  The Changes text</li>
 </ul>
-<span id=detection_areas-createdetectionsets></span><h3 id='detection_areas-createdetectionsets-'>DETECTION_AREAS:CreateDetectionSets()</h3>
+<span id=detection_areas-createdetectionitems></span><h3 id='detection_areas-createdetectionitems-'>DETECTION_AREAS:CreateDetectionItems()</h3>
 <p>Make a DetectionSet table. This function will be overridden in the derived clsses.</p>
 
 <h4> Parameters </h4>

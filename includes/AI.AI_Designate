@@ -39,7 +39,7 @@ Each menu option has two modes:</p>
 <p>Have FUN!</p>
 <span id=1-ai_designate-constructor></span><h5 id='1-ai_designate-constructor-'>1. AI_DESIGNATE constructor</h5>
 <ul>
-<li><a href="#ai_designate-new-detection-groupset">AI_DESIGNATE:New()</a>: Creates a new AI_DESIGNATE object.</li>
+<li>AI_DESIGNATE-New-: Creates a new AI_DESIGNATE object.</li>
 </ul>
 <span id=2-ai_designate-is-a-fsm></span><h5 id='2-ai_designate-is-a-fsm-'>2. AI_DESIGNATE is a FSM</h5>
 <p><img src="/images/%C2%B5" alt="Process" /></p>
@@ -61,7 +61,7 @@ The laser code is communicated by the Recce when it is lasing a larget.
 Note that the default laser code is 1113.
 Working known laser codes are: 1113,1462,1483,1537,1362,1214,1131,1182,1644,1614,1515,1411,1621,1138,1542,1678,1573,1314,1643,1257,1467,1375,1341,1275,1237</p>
 
-<p>Use the method <a href="#ai_designate-setlasercodes-lasercodes">AI_DESIGNATE:SetLaserCodes()</a> to set the possible laser codes to be selected from.
+<p>Use the method AI_DESIGNATE-SetLaserCodes- to set the possible laser codes to be selected from.
 One laser code can be given or an sequence of laser codes through an table...</p>
 
 <p>AIDesignate:SetLaserCodes( 1214 )</p>
