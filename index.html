@@ -1872,9 +1872,6 @@
                    <a href="#point_vec3-tostringbr-angleradians-distance-" class="toc-h3 toc-link" data-title="Core.Point Module">POINT_VEC3:ToStringBR(AngleRadians, Distance)</a>
                  </li>
                  <li>
-                   <a href="#point_vec3-tostringll-angleradians-distance-" class="toc-h3 toc-link" data-title="Core.Point Module">POINT_VEC3:ToStringLL(AngleRadians, Distance)</a>
-                 </li>
-                 <li>
                    <a href="#point_vec3-getaltitudetext-" class="toc-h3 toc-link" data-title="Core.Point Module">POINT_VEC3:GetAltitudeText()</a>
                  </li>
                  <li>
@@ -2000,6 +1997,9 @@
                    <a href="#point_vec2-translate-distance-angle-" class="toc-h3 toc-link" data-title="Core.Point Module">POINT_VEC2:Translate(Distance, Angle)</a>
                  </li>
                </ul>
+          </li>
+          <li>
+             <a href="#coordinate-class-" class="toc-h2 toc-link" data-title="Core.Point Module">COORDINATE Class</a>
           </li>
           <li>
              <a href="#point_vec3-routepointalttype-class-" class="toc-h2 toc-link" data-title="Core.Point Module">POINT_VEC3.RoutePointAltType Class</a>
@@ -3454,7 +3454,7 @@
                    <a href="#designate-onafterdetect-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:onafterDetect()</a>
                  </li>
                  <li>
-                   <a href="#designate-sendstatus-attackgroup-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:SendStatus(AttackGroup)</a>
+                   <a href="#designate-sendstatus-attackgroup-duration-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:SendStatus(AttackGroup, Duration)</a>
                  </li>
                  <li>
                    <a href="#designate-activateautolase-" class="toc-h3 toc-link" data-title="Functional.Designate Module">DESIGNATE:ActivateAutoLase()</a>
@@ -3653,7 +3653,7 @@
                    <a href="#detection_base-getdetectedobject-objectname-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:GetDetectedObject(ObjectName)</a>
                  </li>
                  <li>
-                   <a href="#detection_base-adddetecteditem-detecteditemindex-set-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)</a>
+                   <a href="#detection_base-adddetecteditem-self-detecteditemindex-set-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:AddDetectedItem(self, DetectedItemIndex, Set)</a>
                  </li>
                  <li>
                    <a href="#detection_base-adddetecteditemzone-detecteditemindex-set-zone-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:AddDetectedItemZone(DetectedItemIndex, Set, Zone)</a>
@@ -3675,6 +3675,9 @@
                  </li>
                  <li>
                    <a href="#detection_base-getdetectedzone-index-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:GetDetectedZone(Index)</a>
+                 </li>
+                 <li>
+                   <a href="#detection_base-detecteditemmenu-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:DetectedItemMenu(self)</a>
                  </li>
                  <li>
                    <a href="#detection_base-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_BASE:DetectedItemReportSummary(self)</a>
@@ -3715,6 +3718,9 @@
                    <a href="#detection_units-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:CreateDetectionItems()</a>
                  </li>
                  <li>
+                   <a href="#detection_units-detecteditemmenu-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:DetectedItemMenu(self)</a>
+                 </li>
+                 <li>
                    <a href="#detection_units-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_UNITS:DetectedItemReportSummary(self)</a>
                  </li>
                  <li>
@@ -3735,6 +3741,9 @@
                    <a href="#detection_types-createdetectionitems-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:CreateDetectionItems()</a>
                  </li>
                  <li>
+                   <a href="#detection_types-detecteditemmenu-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:DetectedItemMenu(self)</a>
+                 </li>
+                 <li>
                    <a href="#detection_types-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_TYPES:DetectedItemReportSummary(self)</a>
                  </li>
                  <li>
@@ -3747,6 +3756,9 @@
                <ul class="toc-list-h3">
                  <li>
                    <a href="#detection_areas-new-detectionsetgroup-detectionzonerange-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:New(DetectionSetGroup, DetectionZoneRange)</a>
+                 </li>
+                 <li>
+                   <a href="#detection_areas-detecteditemmenu-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:DetectedItemMenu(self)</a>
                  </li>
                  <li>
                    <a href="#detection_areas-detecteditemreportsummary-self-" class="toc-h3 toc-link" data-title="Functional.Detection Module">DETECTION_AREAS:DetectedItemReportSummary(self)</a>
@@ -4305,16 +4317,16 @@
                    <a href="#mission-new-commandcenter-missionname-missionpriority-missionbriefing-missioncoalition-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:New(CommandCenter, MissionName, MissionPriority, MissionBriefing, MissionCoalition)</a>
                  </li>
                  <li>
-                   <a href="#mission-onleaveidle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveIdle(From, Event, To)</a>
+                   <a href="#mission-onleaveidle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveIDLE(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onenteridle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterIdle(From, Event, To)</a>
+                   <a href="#mission-onenteridle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterIDLE(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onleaveongoing-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveOngoing(From, Event, To)</a>
+                   <a href="#mission-onleaveengaged-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveENGAGED(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onenterongoing-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterOngoing(From, Event, To)</a>
+                   <a href="#mission-onenterengaged-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterENGAGED(From, Event, To)</a>
                  </li>
                  <li>
                    <a href="#mission-onbeforestart-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnBeforeStart(From, Event, To)</a>
@@ -4326,10 +4338,10 @@
                    <a href="#mission-start-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:Start()</a>
                  </li>
                  <li>
-                   <a href="#mission-onleaveidle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveIdle(From, Event, To)</a>
+                   <a href="#mission-onleaveidle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveIDLE(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onenteridle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterIdle(From, Event, To)</a>
+                   <a href="#mission-onenteridle-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterIDLE(From, Event, To)</a>
                  </li>
                  <li>
                    <a href="#mission-onbeforestop-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnBeforeStop(From, Event, To)</a>
@@ -4341,10 +4353,10 @@
                    <a href="#mission-stop-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:Stop()</a>
                  </li>
                  <li>
-                   <a href="#mission-onleavecompleted-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveCompleted(From, Event, To)</a>
+                   <a href="#mission-onleavecompleted-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveCOMPLETED(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onentercompleted-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterCompleted(From, Event, To)</a>
+                   <a href="#mission-onentercompleted-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterCOMPLETED(From, Event, To)</a>
                  </li>
                  <li>
                    <a href="#mission-onbeforecomplete-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnBeforeComplete(From, Event, To)</a>
@@ -4356,10 +4368,10 @@
                    <a href="#mission-complete-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:Complete()</a>
                  </li>
                  <li>
-                   <a href="#mission-onleavefailed-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveFailed(From, Event, To)</a>
+                   <a href="#mission-onleavefailed-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnLeaveFAILED(From, Event, To)</a>
                  </li>
                  <li>
-                   <a href="#mission-onenterfailed-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterFailed(From, Event, To)</a>
+                   <a href="#mission-onenterfailed-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnEnterFAILED(From, Event, To)</a>
                  </li>
                  <li>
                    <a href="#mission-onbeforefail-from-event-to-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:OnBeforeFail(From, Event, To)</a>
@@ -4404,7 +4416,7 @@
                    <a href="#mission-removetaskmenu-task-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:RemoveTaskMenu(Task)</a>
                  </li>
                  <li>
-                   <a href="#mission-getmenu-taskgroup-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:GetMenu(TaskGroup)</a>
+                   <a href="#mission-getmenu-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:GetMenu()</a>
                  </li>
                  <li>
                    <a href="#gettask-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">GetTask()</a>
@@ -4419,22 +4431,25 @@
                    <a href="#mission-getnexttaskid-task-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:GetNextTaskID(Task)</a>
                  </li>
                  <li>
-                   <a href="#mission-iscompleted-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsCompleted()</a>
+                   <a href="#mission-iscompleted-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsCOMPLETED()</a>
                  </li>
                  <li>
-                   <a href="#mission-isidle-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsIdle()</a>
+                   <a href="#mission-isidle-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsIDLE()</a>
                  </li>
                  <li>
-                   <a href="#mission-isongoing-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsOngoing()</a>
+                   <a href="#mission-isengaged-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsENGAGED()</a>
                  </li>
                  <li>
-                   <a href="#mission-isfailed-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsFailed()</a>
+                   <a href="#mission-isfailed-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsFAILED()</a>
                  </li>
                  <li>
-                   <a href="#mission-ishold-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsHold()</a>
+                   <a href="#mission-ishold-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:IsHOLD()</a>
                  </li>
                  <li>
                    <a href="#mission-hasgroup-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:HasGroup()</a>
+                 </li>
+                 <li>
+                   <a href="#mission-gettasksremaining-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:GetTasksRemaining()</a>
                  </li>
                  <li>
                    <a href="#mission-reportsummary-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:ReportSummary()</a>
@@ -4447,6 +4462,12 @@
                  </li>
                  <li>
                    <a href="#mission-gettasks-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION.GetTasks()</a>
+                 </li>
+                 <li>
+                   <a href="#mission-menureportsummary-reportgroup-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:MenuReportSummary(ReportGroup)</a>
+                 </li>
+                 <li>
+                   <a href="#mission-menureportoverview-taskstatus-reportgroup-" class="toc-h3 toc-link" data-title="Tasking.Mission Module">MISSION:MenuReportOverview(TaskStatus, ReportGroup)</a>
                  </li>
                </ul>
           </li>
@@ -4540,9 +4561,6 @@
                    <a href="#task-hasaliveunits-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:HasAliveUnits()</a>
                  </li>
                  <li>
-                   <a href="#task-setmenu-menutime-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:SetMenu(MenuTime)</a>
-                 </li>
-                 <li>
                    <a href="#task-setmenuforgroup-menutime-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:SetMenuForGroup(MenuTime)</a>
                  </li>
                  <li>
@@ -4601,6 +4619,9 @@
                  </li>
                  <li>
                    <a href="#task-settype-tasktype-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:SetType(TaskType)</a>
+                 </li>
+                 <li>
+                   <a href="#task-setinfo-taskinfo-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:SetInfo(TaskInfo)</a>
                  </li>
                  <li>
                    <a href="#task-gettype-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:GetType()</a>
@@ -4691,12 +4712,6 @@
                  </li>
                  <li>
                    <a href="#task-setdispatcher-dispatcher-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:SetDispatcher(Dispatcher)</a>
-                 </li>
-                 <li>
-                   <a href="#task-reportsummary-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:ReportSummary()</a>
-                 </li>
-                 <li>
-                   <a href="#task-reportdetails-" class="toc-h3 toc-link" data-title="Tasking.Task Module">TASK:ReportDetails()</a>
                  </li>
                </ul>
           </li>
@@ -4797,7 +4812,7 @@
                    <a href="#task_a2g_dispatcher-evaluatebai-detecteditem-" class="toc-h3 toc-link" data-title="Tasking.Task_A2G_Dispatcher Module">TASK_A2G_DISPATCHER:EvaluateBAI(DetectedItem)</a>
                  </li>
                  <li>
-                   <a href="#task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem-" class="toc-h3 toc-link" data-title="Tasking.Task_A2G_Dispatcher Module">TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)</a>
+                   <a href="#task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditemid-detecteditemchange-" class="toc-h3 toc-link" data-title="Tasking.Task_A2G_Dispatcher Module">TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItemID, DetectedItemChange)</a>
                  </li>
                  <li>
                    <a href="#task_a2g_dispatcher-processdetected-detection-" class="toc-h3 toc-link" data-title="Tasking.Task_A2G_Dispatcher Module">TASK_A2G_DISPATCHER:ProcessDetected(Detection)</a>
@@ -5486,6 +5501,9 @@
                  </li>
                  <li>
                    <a href="#positionable-getpointvec3-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetPointVec3()</a>
+                 </li>
+                 <li>
+                   <a href="#positionable-getcoordinate-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetCoordinate()</a>
                  </li>
                  <li>
                    <a href="#positionable-getrandomvec3-radius-" class="toc-h3 toc-link" data-title="Wrapper.Positionable Module">POSITIONABLE:GetRandomVec3(Radius)</a>
@@ -14672,22 +14690,6 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <ul>
 <li><u>String</u>  The BR Text</li>
 </ul>
-<span id=point_vec3-tostringll-angleradians-distance></span><h3 id='point_vec3-tostringll-angleradians-distance-'>POINT_VEC3:ToStringLL(AngleRadians, Distance)</h3>
-<p>Provides a Bearing / Range string</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li>#POINT_VEC3 self</li>
-<li><u>Number</u> AngleRadians : The angle in randians</li>
-<li><u>Number</u> Distance : The distance</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u>  The BR Text</li>
-</ul>
 <span id=point_vec3-getaltitudetext></span><h3 id='point_vec3-getaltitudetext-'>POINT_VEC3:GetAltitudeText()</h3>
 <p>Return the altitude text of the POINT_VEC3.</p>
 
@@ -15261,6 +15263,45 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 
 <ul>
 <li>#POINT_VEC2  The new calculated POINT_VEC2.</li>
+</ul>
+<span id=coordinate-class></span><h2 id='coordinate-class-'>COORDINATE Class</h2>
+<pre>
+Inheritance : The COORDINATE Class inherits from the following parents :
+BASE
+    `-- POINT_VEC3
+        `-- POINT_VEC2
+            `-- COORDINATE
+</pre>
+
+<p>The COORDINATE class defines a 2D coordinate in the simulator. The height coordinate (if needed) will be the land height + an optional added height specified.
+A COORDINATE can be expressed in LL or in MGRS.</p>
+<span id=coordinate-constructor></span><h5 id='coordinate-constructor-'>COORDINATE constructor</h5>
+<p>A new COORDINATE instance can be created with:</p>
+
+<ul>
+<li>COORDINATE-New-: a 2D point, taking an additional height parameter.</li>
+<li>COORDINATE-NewFromVec2-: a 2D point created from a @{DCSTypes#Vec2}.</li>
+</ul>
+<span id=manupulate-the-x-altitude-y-coordinates-of-the-2d-point></span><h5 id='manupulate-the-x-altitude-y-coordinates-of-the-2d-point-'>Manupulate the X, Altitude, Y coordinates of the 2D point</h5>
+<p>A COORDINATE class works in 2D space, with an altitude setting. It contains internally an X, Altitude, Y coordinate.
+Methods exist to manupulate these coordinates.</p>
+
+<p>The current X, Altitude, Y axis can be retrieved with the methods COORDINATE-GetX-, COORDINATE-GetY-, COORDINATE-SetX- respectively.
+The methods COORDINATE-SetY-, COORDINATE-GetLat-, COORDINATE-GetLon- change the respective axis with a new value.
+The current Lat(itude), Alt(itude), Lon(gitude) values can also be retrieved with the methods COORDINATE-AddX-, COORDINATE-AddY-, @{#COORDINATE.GetLon}() respectively.
+The current axis values can be changed by using the methods @{#COORDINATE.AddX}(), @{#COORDINATE.AddAlt}(), @{#COORDINATE.AddY}()
+to add or substract a value from the current respective axis value.
+Note that the Set and Add methods return the current COORDINATE object, so these manipulation methods can be chained... For example:</p>
+
+<p>local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()</p>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>Number</u> LL_Accuracy</li>
+<li><u>Boolean</u> LL_DMS</li>
+<li><u>Number</u> MGRS_Accuracy</li>
+<li><u>String</u> System</li>
 </ul>
 <span id=point_vec3-routepointalttype-class></span><h2 id='point_vec3-routepointalttype-class-'>POINT_VEC3.RoutePointAltType Class</h2>
 <pre>
@@ -22234,7 +22275,7 @@ self</li>
 <ul>
 <li><a href="#designate-class-">DESIGNATE</a></li>
 </ul>
-<span id=designate-sendstatus-attackgroup></span><h3 id='designate-sendstatus-attackgroup-'>DESIGNATE:SendStatus(AttackGroup)</h3>
+<span id=designate-sendstatus-attackgroup-duration></span><h3 id='designate-sendstatus-attackgroup-duration-'>DESIGNATE:SendStatus(AttackGroup, Duration)</h3>
 <p>Sends the status to the Attack Groups.</p>
 
 <h4> Parameters </h4>
@@ -22243,6 +22284,7 @@ self</li>
 <li><a href="#designate-class-">DESIGNATE</a>
 self</li>
 <li><a href="#group-class-">GROUP</a> AttackGroup</li>
+<li><u>Number</u> Duration : The time in seconds the report should be visible.</li>
 </ul>
 
 <h4> Returns </h4>
@@ -23393,7 +23435,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-detectedobject-class-">DetectedObject</a></li>
 </ul>
-<span id=detection_base-adddetecteditem-detecteditemindex-set></span><h3 id='detection_base-adddetecteditem-detecteditemindex-set-'>DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)</h3>
+<span id=detection_base-adddetecteditem-self-detecteditemindex-set></span><h3 id='detection_base-adddetecteditem-self-detecteditemindex-set-'>DETECTION_BASE:AddDetectedItem(self, DetectedItemIndex, Set)</h3>
 <p>Adds a new DetectedItem to the DetectedItems list.
 The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
 
@@ -23402,6 +23444,7 @@ The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
 <ul>
 <li><a href="#detection_base-class-">DETECTION_BASE</a>
 self</li>
+<li>ItemPrefix self</li>
 <li><u>String</u> DetectedItemIndex : The index of the DetectedItem.</li>
 <li><a href="#set_unit-class-">SET_UNIT</a> Set : (optional) The Set of Units to be added.</li>
 </ul>
@@ -23520,6 +23563,22 @@ self</li>
 
 <ul>
 <li><a href="#zone_unit-class-">ZONE_UNIT</a> </li>
+</ul>
+<span id=detection_base-detecteditemmenu-self></span><h3 id='detection_base-detecteditemmenu-self-'>DETECTION_BASE:DetectedItemMenu(self)</h3>
+<p>Menu of a detected item using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
 </ul>
 <span id=detection_base-detecteditemreportsummary-self></span><h3 id='detection_base-detecteditemreportsummary-self-'>DETECTION_BASE:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a detected item using a given numeric index.</p>
@@ -23688,6 +23747,22 @@ self</li>
 <ul>
 <li><a href="#detection_units-class-">DETECTION_UNITS</a></li>
 </ul>
+<span id=detection_units-detecteditemmenu-self></span><h3 id='detection_units-detecteditemmenu-self-'>DETECTION_UNITS:DetectedItemMenu(self)</h3>
+<p>Menu of a DetectedItem using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_units-class-">DETECTION_UNITS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
+</ul>
 <span id=detection_units-detecteditemreportsummary-self></span><h3 id='detection_units-detecteditemreportsummary-self-'>DETECTION_UNITS:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a DetectedItem using a given numeric index.</p>
 
@@ -23779,6 +23854,22 @@ self</li>
 <ul>
 <li><a href="#detection_types-class-">DETECTION_TYPES</a></li>
 </ul>
+<span id=detection_types-detecteditemmenu-self></span><h3 id='detection_types-detecteditemmenu-self-'>DETECTION_TYPES:DetectedItemMenu(self)</h3>
+<p>Menu of a DetectedItem using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_types-class-">DETECTION_TYPES</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
+</ul>
 <span id=detection_types-detecteditemreportsummary-self></span><h3 id='detection_types-detecteditemreportsummary-self-'>DETECTION_TYPES:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a DetectedItem using a given numeric index.</p>
 
@@ -23867,6 +23958,22 @@ self</li>
 
 <ul>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
+</ul>
+<span id=detection_areas-detecteditemmenu-self></span><h3 id='detection_areas-detecteditemmenu-self-'>DETECTION_AREAS:DetectedItemMenu(self)</h3>
+<p>Menu of a detected item using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_areas-class-">DETECTION_AREAS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
 </ul>
 <span id=detection_areas-detecteditemreportsummary-self></span><h3 id='detection_areas-detecteditemreportsummary-self-'>DETECTION_AREAS:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a detected item using a given numeric index.</p>
@@ -27109,9 +27216,9 @@ self</li>
 <ul>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
-<span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIdle(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Idle.
-@function [parent=#MISSION] OnLeaveIdle</p>
+<span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIDLE(From, Event, To)</h3>
+<p>OnLeave Transition Handler for State IDLE.
+@function [parent=#MISSION] OnLeaveIDLE</p>
 
 <h4> Parameters </h4>
 
@@ -27128,9 +27235,9 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
-<span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Idle.
-@function [parent=#MISSION] OnEnterIdle</p>
+<span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIDLE(From, Event, To)</h3>
+<p>OnEnter Transition Handler for State IDLE.
+@function [parent=#MISSION] OnEnterIDLE</p>
 
 <h4> Parameters </h4>
 
@@ -27143,9 +27250,9 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=mission-onleaveongoing-from-event-to></span><h3 id='mission-onleaveongoing-from-event-to-'>MISSION:OnLeaveOngoing(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Ongoing.
-@function [parent=#MISSION] OnLeaveOngoing</p>
+<span id=mission-onleaveengaged-from-event-to></span><h3 id='mission-onleaveengaged-from-event-to-'>MISSION:OnLeaveENGAGED(From, Event, To)</h3>
+<p>OnLeave Transition Handler for State ENGAGED.
+@function [parent=#MISSION] OnLeaveENGAGED</p>
 
 <h4> Parameters </h4>
 
@@ -27162,9 +27269,9 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
-<span id=mission-onenterongoing-from-event-to></span><h3 id='mission-onenterongoing-from-event-to-'>MISSION:OnEnterOngoing(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Ongoing.
-@function [parent=#MISSION] OnEnterOngoing</p>
+<span id=mission-onenterengaged-from-event-to></span><h3 id='mission-onenterengaged-from-event-to-'>MISSION:OnEnterENGAGED(From, Event, To)</h3>
+<p>OnEnter Transition Handler for State ENGAGED.
+@function [parent=#MISSION] OnEnterENGAGED</p>
 
 <h4> Parameters </h4>
 
@@ -27223,9 +27330,9 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIdle(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Idle.
-@function [parent=#MISSION] OnLeaveIdle</p>
+<span id=mission-onleaveidle-from-event-to></span><h3 id='mission-onleaveidle-from-event-to-'>MISSION:OnLeaveIDLE(From, Event, To)</h3>
+<p>OnLeave Transition Handler for State IDLE.
+@function [parent=#MISSION] OnLeaveIDLE</p>
 
 <h4> Parameters </h4>
 
@@ -27242,9 +27349,9 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
-<span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIdle(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Idle.
-@function [parent=#MISSION] OnEnterIdle</p>
+<span id=mission-onenteridle-from-event-to></span><h3 id='mission-onenteridle-from-event-to-'>MISSION:OnEnterIDLE(From, Event, To)</h3>
+<p>OnEnter Transition Handler for State IDLE.
+@function [parent=#MISSION] OnEnterIDLE</p>
 
 <h4> Parameters </h4>
 
@@ -27303,9 +27410,9 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=mission-onleavecompleted-from-event-to></span><h3 id='mission-onleavecompleted-from-event-to-'>MISSION:OnLeaveCompleted(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Completed.
-@function [parent=#MISSION] OnLeaveCompleted</p>
+<span id=mission-onleavecompleted-from-event-to></span><h3 id='mission-onleavecompleted-from-event-to-'>MISSION:OnLeaveCOMPLETED(From, Event, To)</h3>
+<p>OnLeave Transition Handler for State COMPLETED.
+@function [parent=#MISSION] OnLeaveCOMPLETED</p>
 
 <h4> Parameters </h4>
 
@@ -27322,9 +27429,9 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
-<span id=mission-onentercompleted-from-event-to></span><h3 id='mission-onentercompleted-from-event-to-'>MISSION:OnEnterCompleted(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Completed.
-@function [parent=#MISSION] OnEnterCompleted</p>
+<span id=mission-onentercompleted-from-event-to></span><h3 id='mission-onentercompleted-from-event-to-'>MISSION:OnEnterCOMPLETED(From, Event, To)</h3>
+<p>OnEnter Transition Handler for State COMPLETED.
+@function [parent=#MISSION] OnEnterCOMPLETED</p>
 
 <h4> Parameters </h4>
 
@@ -27383,9 +27490,9 @@ self</li>
 </ul>
 
 <h4> Returns </h4>
-<span id=mission-onleavefailed-from-event-to></span><h3 id='mission-onleavefailed-from-event-to-'>MISSION:OnLeaveFailed(From, Event, To)</h3>
-<p>OnLeave Transition Handler for State Failed.
-@function [parent=#MISSION] OnLeaveFailed</p>
+<span id=mission-onleavefailed-from-event-to></span><h3 id='mission-onleavefailed-from-event-to-'>MISSION:OnLeaveFAILED(From, Event, To)</h3>
+<p>OnLeave Transition Handler for State FAILED.
+@function [parent=#MISSION] OnLeaveFAILED</p>
 
 <h4> Parameters </h4>
 
@@ -27402,9 +27509,9 @@ self</li>
 <ul>
 <li><u>Boolean</u>  Return false to cancel Transition.</li>
 </ul>
-<span id=mission-onenterfailed-from-event-to></span><h3 id='mission-onenterfailed-from-event-to-'>MISSION:OnEnterFailed(From, Event, To)</h3>
-<p>OnEnter Transition Handler for State Failed.
-@function [parent=#MISSION] OnEnterFailed</p>
+<span id=mission-onenterfailed-from-event-to></span><h3 id='mission-onenterfailed-from-event-to-'>MISSION:OnEnterFAILED(From, Event, To)</h3>
+<p>OnEnter Transition Handler for State FAILED.
+@function [parent=#MISSION] OnEnterFAILED</p>
 
 <h4> Parameters </h4>
 
@@ -27636,7 +27743,7 @@ self</li>
 <ul>
 <li><a href="#mission-class-">MISSION</a></li>
 </ul>
-<span id=mission-getmenu-taskgroup></span><h3 id='mission-getmenu-taskgroup-'>MISSION:GetMenu(TaskGroup)</h3>
+<span id=mission-getmenu></span><h3 id='mission-getmenu-'>MISSION:GetMenu()</h3>
 <p>Gets the mission menu for the coalition.</p>
 
 <h4> Parameters </h4>
@@ -27644,7 +27751,6 @@ self</li>
 <ul>
 <li><a href="#mission-class-">MISSION</a>
 self</li>
-<li><a href="#group-class-">GROUP</a> TaskGroup</li>
 </ul>
 
 <h4> Returns </h4>
@@ -27719,8 +27825,8 @@ self</li>
 <ul>
 <li><a href="#task-class-">TASK</a>  The task added.</li>
 </ul>
-<span id=mission-iscompleted></span><h3 id='mission-iscompleted-'>MISSION:IsCompleted()</h3>
-<p>Is the <a href="#mission-module-">Mission</a> <strong>Completed</strong>.</p>
+<span id=mission-iscompleted></span><h3 id='mission-iscompleted-'>MISSION:IsCOMPLETED()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>COMPLETED</strong>.</p>
 
 <h4> Parameters </h4>
 
@@ -27734,8 +27840,8 @@ self</li>
 <ul>
 <li><u>Boolean</u> </li>
 </ul>
-<span id=mission-isidle></span><h3 id='mission-isidle-'>MISSION:IsIdle()</h3>
-<p>Is the <a href="#mission-module-">Mission</a> <strong>Idle</strong>.</p>
+<span id=mission-isidle></span><h3 id='mission-isidle-'>MISSION:IsIDLE()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>IDLE</strong>.</p>
 
 <h4> Parameters </h4>
 
@@ -27749,8 +27855,8 @@ self</li>
 <ul>
 <li><u>Boolean</u> </li>
 </ul>
-<span id=mission-isongoing></span><h3 id='mission-isongoing-'>MISSION:IsOngoing()</h3>
-<p>Is the <a href="#mission-module-">Mission</a> <strong>Ongoing</strong>.</p>
+<span id=mission-isengaged></span><h3 id='mission-isengaged-'>MISSION:IsENGAGED()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>ENGAGED</strong>.</p>
 
 <h4> Parameters </h4>
 
@@ -27764,8 +27870,8 @@ self</li>
 <ul>
 <li><u>Boolean</u> </li>
 </ul>
-<span id=mission-isfailed></span><h3 id='mission-isfailed-'>MISSION:IsFailed()</h3>
-<p>Is the <a href="#mission-module-">Mission</a> <strong>Failed</strong>.</p>
+<span id=mission-isfailed></span><h3 id='mission-isfailed-'>MISSION:IsFAILED()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>FAILED</strong>.</p>
 
 <h4> Parameters </h4>
 
@@ -27779,8 +27885,8 @@ self</li>
 <ul>
 <li><u>Boolean</u> </li>
 </ul>
-<span id=mission-ishold></span><h3 id='mission-ishold-'>MISSION:IsHold()</h3>
-<p>Is the <a href="#mission-module-">Mission</a> <strong>Hold</strong>.</p>
+<span id=mission-ishold></span><h3 id='mission-ishold-'>MISSION:IsHOLD()</h3>
+<p>Is the <a href="#mission-module-">Mission</a> <strong>HOLD</strong>.</p>
 
 <h4> Parameters </h4>
 
@@ -27808,6 +27914,19 @@ self</li>
 
 <ul>
 <li><u>Boolean</u>  true if the Mission has a Group.</li>
+</ul>
+<span id=mission-gettasksremaining></span><h3 id='mission-gettasksremaining-'>MISSION:GetTasksRemaining()</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#mission-class-">MISSION</a>
+self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>Number</u> </li>
 </ul>
 <span id=mission-reportsummary></span><h3 id='mission-reportsummary-'>MISSION:ReportSummary()</h3>
 <p>Create a summary report of the Mission (one line).</p>
@@ -27865,6 +27984,27 @@ self</li>
 <ul>
 <li>{TASK,...}  Structure of TASKS with the <a href="#task-module-">TASK</a> number as the key.</li>
 </ul>
+<span id=mission-menureportsummary-reportgroup></span><h3 id='mission-menureportsummary-reportgroup-'>MISSION:MenuReportSummary(ReportGroup)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#mission-class-">MISSION</a>
+self</li>
+<li><a href="#group-class-">GROUP</a> ReportGroup</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=mission-menureportoverview-taskstatus-reportgroup></span><h3 id='mission-menureportoverview-taskstatus-reportgroup-'>MISSION:MenuReportOverview(TaskStatus, ReportGroup)</h3>
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#mission-class-">MISSION</a>
+self</li>
+<li><u>String</u> TaskStatus : The status</li>
+<li><a href="#group-class-">GROUP</a> ReportGroup</li>
+</ul>
+
+<h4> Returns </h4>
 <span id=tasking-task-module></span><h1 id='tasking-task-module-'>Tasking.Task Module</h1>
 <p><strong>Tasking</strong> -- This module contains the TASK class.</p>
 <span id=authors-flightcontrol-design-and-programming></span><h5 id='authors-flightcontrol-design-and-programming-'>Authors: FlightControl - Design and Programming</h5><span id=task-class></span><h2 id='task-class-'>TASK Class</h2>
@@ -28278,22 +28418,6 @@ self</li>
 <ul>
 <li><u>Boolean</u> </li>
 </ul>
-<span id=task-setmenu-menutime></span><h3 id='task-setmenu-menutime-'>TASK:SetMenu(MenuTime)</h3>
-<p>Set the menu options of the <a href="#task-module-">Task</a> to all the groups in the SetGroup.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#task-class-">TASK</a>
-self</li>
-<li><u>Number</u> MenuTime</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><a href="#task-class-">TASK</a></li>
-</ul>
 <span id=task-setmenuforgroup-menutime></span><h3 id='task-setmenuforgroup-menutime-'>TASK:SetMenuForGroup(MenuTime)</h3>
 <p>Set the Menu for a Group</p>
 
@@ -28595,6 +28719,18 @@ self</li>
 <li><a href="#task-class-">TASK</a>
 self</li>
 <li><u>String</u> TaskType</li>
+</ul>
+
+<h4> Returns </h4>
+<span id=task-setinfo-taskinfo></span><h3 id='task-setinfo-taskinfo-'>TASK:SetInfo(TaskInfo)</h3>
+<p>Sets the Information on the Task</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#task-class-">TASK</a>
+self</li>
+<li><u>String</u> TaskInfo</li>
 </ul>
 
 <h4> Returns </h4>
@@ -28970,38 +29106,6 @@ self</li>
 
 <ul>
 <li><a href="#task-class-">TASK</a></li>
-</ul>
-<span id=task-reportsummary></span><h3 id='task-reportsummary-'>TASK:ReportSummary()</h3>
-<p>Create a summary report of the Task.
-List the Task Name and Status</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#task-class-">TASK</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u> </li>
-</ul>
-<span id=task-reportdetails></span><h3 id='task-reportdetails-'>TASK:ReportDetails()</h3>
-<p>Create a detailed report of the Task.
-List the Task Status, and the Players assigned to the Task.</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li><a href="#task-class-">TASK</a>
-self</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u> </li>
 </ul>
 <span id=tasking-task_a2g-module></span><h1 id='tasking-task_a2g-module-'>Tasking.Task_A2G Module</h1>
 <p><strong>Tasking</strong> - The TASK_A2G models tasks for players in Air to Ground engagements.</p>
@@ -29473,7 +29577,7 @@ BASE
 <ul>
 <li><a href="#task-class-">TASK</a> </li>
 </ul>
-<span id=task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem></span><h3 id='task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem-'>TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)</h3>
+<span id=task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditemid-detecteditemchange></span><h3 id='task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditemid-detecteditemchange-'>TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItemID, DetectedItemChange)</h3>
 <p>Evaluates the removal of the Task from the Mission.
 Can only occur when the DetectedItem is Changed AND the state of the Task is &quot;Planned&quot;.</p>
 
@@ -29483,7 +29587,8 @@ Can only occur when the DetectedItem is Changed AND the state of the Task is &qu
 <li>#TASK_A2G_DISPATCHER self</li>
 <li><a href="#mission-class-">MISSION</a> Mission</li>
 <li><a href="#task-class-">TASK</a> Task</li>
-<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><u>Boolean</u> DetectedItemID</li>
+<li><u>Boolean</u> DetectedItemChange</li>
 </ul>
 
 <h4> Returns </h4>
@@ -33179,6 +33284,21 @@ self</li>
 
 <ul>
 <li><a href="#point_vec3-class-">POINT_VEC3</a>  The 3D point vector of the POSITIONABLE.</li>
+<li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
+</ul>
+<span id=positionable-getcoordinate></span><h3 id='positionable-getcoordinate-'>POSITIONABLE:GetCoordinate()</h3>
+<p>Returns a COORDINATE object indicating the point in 3D of the POSITIONABLE within the mission.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#positionable-class-">POSITIONABLE</a> self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#coordinate-class-">COORDINATE</a>  The COORDINATE of the POSITIONABLE.</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
 <span id=positionable-getrandomvec3-radius></span><h3 id='positionable-getrandomvec3-radius-'>POSITIONABLE:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class-) of first UNIT of the GROUP</span>

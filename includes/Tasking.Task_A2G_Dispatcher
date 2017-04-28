@@ -125,7 +125,7 @@ BASE
 <ul>
 <li><a href="#task-class-">TASK</a> </li>
 </ul>
-<span id=task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem></span><h3 id='task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditem-'>TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)</h3>
+<span id=task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditemid-detecteditemchange></span><h3 id='task_a2g_dispatcher-evaluateremovetask-mission-task-detecteditemid-detecteditemchange-'>TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItemID, DetectedItemChange)</h3>
 <p>Evaluates the removal of the Task from the Mission.
 Can only occur when the DetectedItem is Changed AND the state of the Task is &quot;Planned&quot;.</p>
 
@@ -135,7 +135,8 @@ Can only occur when the DetectedItem is Changed AND the state of the Task is &qu
 <li>#TASK_A2G_DISPATCHER self</li>
 <li><a href="#mission-class-">MISSION</a> Mission</li>
 <li><a href="#task-class-">TASK</a> Task</li>
-<li><a href="#detection_areas.detecteditem-class-">DETECTION_AREAS.DetectedItem</a> DetectedItem</li>
+<li><u>Boolean</u> DetectedItemID</li>
+<li><u>Boolean</u> DetectedItemChange</li>
 </ul>
 
 <h4> Returns </h4>

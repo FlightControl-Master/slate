@@ -113,6 +113,21 @@ self</li>
 <li><a href="#point_vec3-class-">POINT_VEC3</a>  The 3D point vector of the POSITIONABLE.</li>
 <li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
 </ul>
+<span id=positionable-getcoordinate></span><h3 id='positionable-getcoordinate-'>POSITIONABLE:GetCoordinate()</h3>
+<p>Returns a COORDINATE object indicating the point in 3D of the POSITIONABLE within the mission.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#positionable-class-">POSITIONABLE</a> self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><a href="#coordinate-class-">COORDINATE</a>  The COORDINATE of the POSITIONABLE.</li>
+<li><u>Nil</u>  The POSITIONABLE is not existing or alive.</li>
+</ul>
 <span id=positionable-getrandomvec3-radius></span><h3 id='positionable-getrandomvec3-radius-'>POSITIONABLE:GetRandomVec3(Radius)</h3><pre class="highlight lua tab-lua"><code><span class="c1">-- If Radius is ignored, returns the [Vec3](#vec3-class-) of first UNIT of the GROUP</span>
 </code></pre>
 <p>Returns a random @{DCSTypes#Vec3} vector within a range, indicating the point in 3D of the POSITIONABLE within the mission.</p>

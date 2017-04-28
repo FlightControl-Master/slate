@@ -531,22 +531,6 @@ Note that the Set and Add methods return the current POINT_VEC3 object, so these
 <ul>
 <li><u>String</u>  The BR Text</li>
 </ul>
-<span id=point_vec3-tostringll-angleradians-distance></span><h3 id='point_vec3-tostringll-angleradians-distance-'>POINT_VEC3:ToStringLL(AngleRadians, Distance)</h3>
-<p>Provides a Bearing / Range string</p>
-
-<h4> Parameters </h4>
-
-<ul>
-<li>#POINT_VEC3 self</li>
-<li><u>Number</u> AngleRadians : The angle in randians</li>
-<li><u>Number</u> Distance : The distance</li>
-</ul>
-
-<h4> Returns </h4>
-
-<ul>
-<li><u>String</u>  The BR Text</li>
-</ul>
 <span id=point_vec3-getaltitudetext></span><h3 id='point_vec3-getaltitudetext-'>POINT_VEC3:GetAltitudeText()</h3>
 <p>Return the altitude text of the POINT_VEC3.</p>
 
@@ -1120,6 +1104,45 @@ Note that the Set and Add methods return the current POINT_VEC2 object, so these
 
 <ul>
 <li>#POINT_VEC2  The new calculated POINT_VEC2.</li>
+</ul>
+<span id=coordinate-class></span><h2 id='coordinate-class-'>COORDINATE Class</h2>
+<pre>
+Inheritance : The COORDINATE Class inherits from the following parents :
+BASE
+    `-- POINT_VEC3
+        `-- POINT_VEC2
+            `-- COORDINATE
+</pre>
+
+<p>The COORDINATE class defines a 2D coordinate in the simulator. The height coordinate (if needed) will be the land height + an optional added height specified.
+A COORDINATE can be expressed in LL or in MGRS.</p>
+<span id=coordinate-constructor></span><h5 id='coordinate-constructor-'>COORDINATE constructor</h5>
+<p>A new COORDINATE instance can be created with:</p>
+
+<ul>
+<li>COORDINATE-New-: a 2D point, taking an additional height parameter.</li>
+<li>COORDINATE-NewFromVec2-: a 2D point created from a @{DCSTypes#Vec2}.</li>
+</ul>
+<span id=manupulate-the-x-altitude-y-coordinates-of-the-2d-point></span><h5 id='manupulate-the-x-altitude-y-coordinates-of-the-2d-point-'>Manupulate the X, Altitude, Y coordinates of the 2D point</h5>
+<p>A COORDINATE class works in 2D space, with an altitude setting. It contains internally an X, Altitude, Y coordinate.
+Methods exist to manupulate these coordinates.</p>
+
+<p>The current X, Altitude, Y axis can be retrieved with the methods COORDINATE-GetX-, COORDINATE-GetY-, COORDINATE-SetX- respectively.
+The methods COORDINATE-SetY-, COORDINATE-GetLat-, COORDINATE-GetLon- change the respective axis with a new value.
+The current Lat(itude), Alt(itude), Lon(gitude) values can also be retrieved with the methods COORDINATE-AddX-, COORDINATE-AddY-, @{#COORDINATE.GetLon}() respectively.
+The current axis values can be changed by using the methods @{#COORDINATE.AddX}(), @{#COORDINATE.AddAlt}(), @{#COORDINATE.AddY}()
+to add or substract a value from the current respective axis value.
+Note that the Set and Add methods return the current COORDINATE object, so these manipulation methods can be chained... For example:</p>
+
+<p>local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()</p>
+
+<h4> Attributes </h4>
+
+<ul>
+<li><u>Number</u> LL_Accuracy</li>
+<li><u>Boolean</u> LL_DMS</li>
+<li><u>Number</u> MGRS_Accuracy</li>
+<li><u>String</u> System</li>
 </ul>
 <span id=point_vec3-routepointalttype-class></span><h2 id='point_vec3-routepointalttype-class-'>POINT_VEC3.RoutePointAltType Class</h2>
 <pre>

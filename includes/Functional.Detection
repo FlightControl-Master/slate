@@ -970,7 +970,7 @@ self</li>
 <ul>
 <li><a href="#detection_base-detectedobject-class-">DetectedObject</a></li>
 </ul>
-<span id=detection_base-adddetecteditem-detecteditemindex-set></span><h3 id='detection_base-adddetecteditem-detecteditemindex-set-'>DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)</h3>
+<span id=detection_base-adddetecteditem-self-detecteditemindex-set></span><h3 id='detection_base-adddetecteditem-self-detecteditemindex-set-'>DETECTION_BASE:AddDetectedItem(self, DetectedItemIndex, Set)</h3>
 <p>Adds a new DetectedItem to the DetectedItems list.
 The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
 
@@ -979,6 +979,7 @@ The DetectedItem is a table and contains a SET_UNIT in the field Set.</p>
 <ul>
 <li><a href="#detection_base-class-">DETECTION_BASE</a>
 self</li>
+<li>ItemPrefix self</li>
 <li><u>String</u> DetectedItemIndex : The index of the DetectedItem.</li>
 <li><a href="#set_unit-class-">SET_UNIT</a> Set : (optional) The Set of Units to be added.</li>
 </ul>
@@ -1097,6 +1098,22 @@ self</li>
 
 <ul>
 <li><a href="#zone_unit-class-">ZONE_UNIT</a> </li>
+</ul>
+<span id=detection_base-detecteditemmenu-self></span><h3 id='detection_base-detecteditemmenu-self-'>DETECTION_BASE:DetectedItemMenu(self)</h3>
+<p>Menu of a detected item using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_base-class-">DETECTION_BASE</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
 </ul>
 <span id=detection_base-detecteditemreportsummary-self></span><h3 id='detection_base-detecteditemreportsummary-self-'>DETECTION_BASE:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a detected item using a given numeric index.</p>
@@ -1265,6 +1282,22 @@ self</li>
 <ul>
 <li><a href="#detection_units-class-">DETECTION_UNITS</a></li>
 </ul>
+<span id=detection_units-detecteditemmenu-self></span><h3 id='detection_units-detecteditemmenu-self-'>DETECTION_UNITS:DetectedItemMenu(self)</h3>
+<p>Menu of a DetectedItem using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_units-class-">DETECTION_UNITS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
+</ul>
 <span id=detection_units-detecteditemreportsummary-self></span><h3 id='detection_units-detecteditemreportsummary-self-'>DETECTION_UNITS:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a DetectedItem using a given numeric index.</p>
 
@@ -1356,6 +1389,22 @@ self</li>
 <ul>
 <li><a href="#detection_types-class-">DETECTION_TYPES</a></li>
 </ul>
+<span id=detection_types-detecteditemmenu-self></span><h3 id='detection_types-detecteditemmenu-self-'>DETECTION_TYPES:DetectedItemMenu(self)</h3>
+<p>Menu of a DetectedItem using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_types-class-">DETECTION_TYPES</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
+</ul>
 <span id=detection_types-detecteditemreportsummary-self></span><h3 id='detection_types-detecteditemreportsummary-self-'>DETECTION_TYPES:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a DetectedItem using a given numeric index.</p>
 
@@ -1444,6 +1493,22 @@ self</li>
 
 <ul>
 <li><a href="#detection_areas-class-">DETECTION_AREAS</a></li>
+</ul>
+<span id=detection_areas-detecteditemmenu-self></span><h3 id='detection_areas-detecteditemmenu-self-'>DETECTION_AREAS:DetectedItemMenu(self)</h3>
+<p>Menu of a detected item using a given numeric index.</p>
+
+<h4> Parameters </h4>
+
+<ul>
+<li><a href="#detection_areas-class-">DETECTION_AREAS</a>
+self</li>
+<li>Index self</li>
+</ul>
+
+<h4> Returns </h4>
+
+<ul>
+<li><u>String</u> </li>
 </ul>
 <span id=detection_areas-detecteditemreportsummary-self></span><h3 id='detection_areas-detecteditemreportsummary-self-'>DETECTION_AREAS:DetectedItemReportSummary(self)</h3>
 <p>Report summary of a detected item using a given numeric index.</p>
