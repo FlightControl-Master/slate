@@ -1,5 +1,5 @@
 # Core.Event Module
-**Core** - EVENT models DCS **event dispatching** using a **publish-subscribe** model.
+**Core R2.1** - EVENT models DCS **event dispatching** using a **publish-subscribe** model.
 
 ![Banner Image](/includes/Pictures/EVENT/Dia1.JPG)
 
@@ -213,19 +213,6 @@ self
 
 ### EVENT:Remove(EventClass, EventID)
 Removes a subscription
-
-<h4> Parameters </h4>
-* [EVENT](#event-class-)
-self
-* [BASE](#base-class-) EventClass : The self instance of the class for which the event is.
-* [world.event](#world.event-class-) EventID
-
-<h4> Returns </h4>
-* [Events](#event-events-class-)
-
-
-### EVENT:Reset(EventClass, EventID)
-Resets subscriptions
 
 <h4> Parameters </h4>
 * [EVENT](#event-class-)

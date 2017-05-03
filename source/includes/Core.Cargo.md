@@ -1,5 +1,5 @@
 # Core.Cargo Module
-**Core** -- Management of CARGO logistics, that can be transported from and to transportation carriers.
+**(R2.1) Core** -- Management of CARGO logistics, that can be transported from and to transportation carriers.
 
 ![Banner Image](/includes/Pictures/CARGO/Dia1.JPG)
 
@@ -232,33 +232,6 @@ self
 * [CONTROLLABLE](#controllable-class-) Controllable
 
 <h4> Returns </h4>
-
-### CARGO:New(Type, Name, Weight, NearRadius)
-CARGO Constructor. This class is an abstract class and should not be instantiated.
-
-<h4> Parameters </h4>
-* [CARGO](#cargo-class-)
-self
-* <u>String</u> Type
-* <u>String</u> Name
-* <u>Number</u> Weight
-* <u>Number</u> NearRadius : (optional)
-
-<h4> Returns </h4>
-* [CARGO](#cargo-class-)
-
-
-
-### CARGO:GetName()
-Get the name of the Cargo.
-
-<h4> Parameters </h4>
-* [CARGO](#cargo-class-)
-self
-
-<h4> Returns </h4>
-* <u>String</u>  The name of the Cargo.
-
 
 ### CARGO:GetType()
 Get the type of the Cargo.

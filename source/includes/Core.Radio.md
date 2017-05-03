@@ -279,14 +279,14 @@ attach to a cargo crate, for exemple.
 
 #####  AA TACAN Beacon usage
 
-This beacon only works with airborne [UNIT](#unit-class-) or a [GROUP](#group-class-). Use [BEACON:AATACAN()](#beacon-aatacan-tacanchannel-message-bearing-beaconduration) to set the beacon parameters and start the beacon.
+This beacon only works with airborne [UNIT](#unit-class-) or a [GROUP](#group-class-). Use @{#BEACON:AATACAN}() to set the beacon parameters and start the beacon.
 Use @#BEACON:StopAATACAN}() to stop it.
 
 #####  General Purpose Radio Beacon usage
 
 This beacon will work with any [POSITIONABLE](#positionable-class-), but **it won't follow the [POSITIONABLE](#positionable-class-)** ! This means that you should only use it with
-[POSITIONABLE](#positionable-class-) that don't move, or move very slowly. Use [BEACON:RadioBeacon()](#beacon-radiobeacon-filename-frequency-modulation-power-beaconduration) to set the beacon parameters and start the beacon.
-Use BEACON-StopRadioBeacon- to stop it.
+[POSITIONABLE](#positionable-class-) that don't move, or move very slowly. Use @{#BEACON:RadioBeacon}() to set the beacon parameters and start the beacon.
+Use @{#BEACON:StopRadioBeacon}() to stop it.
 
 
 
@@ -355,14 +355,12 @@ Activates a general pupose Radio Beacon
 This uses the very generic singleton function "trigger.action.radioTransmission()" provided by DCS to broadcast a sound file on a specific frequency.
 Although any frequency could be used, only 2 DCS Modules can home on radio beacons at the time of writing : the Huey and the Mi-8.
 They can home in on these specific frequencies :
-
 * **Mi8**
 * R-828 -> 20-60MHz
 * ARKUD -> 100-150MHz (canal 1 : 114166, canal 2 : 114333, canal 3 : 114583, canal 4 : 121500, canal 5 : 123100, canal 6 : 124100) AM
 * ARK9 -> 150-1300KHz
 * **Huey**
 * AN/ARC-131 -> 30-76 Mhz FM
-
 
 <h4> Parameters </h4>
 * [BEACON](#beacon-class-)

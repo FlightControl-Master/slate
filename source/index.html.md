@@ -20,7 +20,6 @@ includes:
   - AI.AI_Balancer
   - AI.AI_Cap
   - AI.AI_Cas
-  - AI.AI_Designate
   - AI.AI_Patrol
   - Core.Base
   - Core.Cargo
@@ -60,6 +59,7 @@ includes:
   - Dcs.StaticObject
   - Functional.AirbasePolice
   - Functional.CleanUp
+  - Functional.Designate
   - Functional.Detection
   - Functional.Escort
   - Functional.MissileTrainer

@@ -36,6 +36,8 @@ BASE
 <h4> Attributes </h4>
 
 * <u>String</u> PositionableName : The name of the measurable.
+* [SPOT](#spot-class-) Spot : The laser Spot.
+* <u>Number</u> LaserCode : The last assigned laser code.
 
 
 ### POSITIONABLE:New(PositionableName)
@@ -92,6 +94,17 @@ Returns a POINT_VEC3 object indicating the point in 3D of the POSITIONABLE withi
 
 <h4> Returns </h4>
 * [POINT_VEC3](#point_vec3-class-)  The 3D point vector of the POSITIONABLE.
+* <u>Nil</u>  The POSITIONABLE is not existing or alive.
+
+
+### POSITIONABLE:GetCoordinate()
+Returns a COORDINATE object indicating the point in 3D of the POSITIONABLE within the mission.
+
+<h4> Parameters </h4>
+* [POSITIONABLE](#positionable-class-) self
+
+<h4> Returns </h4>
+* [COORDINATE](#coordinate-class-)  The COORDINATE of the POSITIONABLE.
 * <u>Nil</u>  The POSITIONABLE is not existing or alive.
 
 
@@ -188,20 +201,6 @@ Returns the POSITIONABLE velocity in km/h.
 * <u>Nil</u>  The POSITIONABLE is not existing or alive.
 
 
-### POSITIONABLE:GetMessage(Message, Duration, Name)
-Returns a message with the callsign embedded (if there is one).
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-* <u>String</u> Message : The message text
-* [Duration](#duration-class-) Duration : The duration of the message.
-* <u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.
-
-<h4> Returns </h4>
-* [MESSAGE](#message-class-) 
-
-
 ### POSITIONABLE:MessageToAll(Message, Duration, Name)
 Send a message to all coalitions.
 The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
@@ -295,71 +294,6 @@ self
 * <u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.
 
 <h4> Returns </h4>
-
-### POSITIONABLE:GetRadio()
-Create a [RADIO](#radio-class-), to allow radio transmission for this POSITIONABLE.
-Set parameters with the methods provided, then use RADIO:Broadcast() to actually broadcast the message
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-
-<h4> Returns </h4>
-* [RADIO](#radio-class-)
-
-
-
-### POSITIONABLE:GetBeacon()
-Create a [BEACON](#beacon-class-), to allow this POSITIONABLE to broadcast beacon signals
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-
-<h4> Returns </h4>
-* [RADIO](#radio-class-)
-
-
-
-### POSITIONABLE:LaseUnit(Target, LaserCode, Duration)
-Start Lasing a POSITIONABLE
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-* [POSITIONABLE](#positionable-class-)
-Target
-* <u>Number</u> LaserCode
-* <u>Number</u> Duration
-
-<h4> Returns </h4>
-* [SPOT](#spot-class-) 
-
-
-### POSITIONABLE:LaseOff(Target)
-Stop Lasing a POSITIONABLE
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-* [POSITIONABLE](#positionable-class-)
-Target
-
-<h4> Returns </h4>
-* [POSITIONABLE](#positionable-class-)
-
-
-
-### POSITIONABLE:IsLasing()
-Check if the POSITIONABLE is lasing a target
-
-<h4> Parameters </h4>
-* [POSITIONABLE](#positionable-class-)
-self
-
-<h4> Returns </h4>
-* <u>Boolean</u>  true if it is lasing a target
-
 
 ## DCSPositionable Class
 <pre>

@@ -554,6 +554,164 @@ self
 
 
 
+### SET_GROUP:AllCompletelyInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+if MySetGroup:AllCompletelyInZone(MyZone) then
+MESSAGE:New("All the SET's GROUP are in zone !", 10):ToAll()
+else
+MESSAGE:New("Some or all SET's GROUP are outside zone !", 10):ToAll()
+end
+```
+Iterate the SET_GROUP and return true if all the [GROUP](#group-class-) are completely in the [ZONE](#zone-class-)
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if all the [GROUP](#group-class-) are completly in the [ZONE](#zone-class-), false otherwise
+
+
+### SET_GROUP:AnyCompletelyInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+if MySetGroup:AnyCompletelyInZone(MyZone) then
+MESSAGE:New("At least one GROUP is completely in zone !", 10):ToAll()
+else
+MESSAGE:New("No GROUP is completely in zone !", 10):ToAll()
+end
+```
+Iterate the SET_GROUP and return true if at least one of the [GROUP](#group-class-) is completely inside the [ZONE](#zone-class-)
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if at least one of the [GROUP](#group-class-) is completly inside the [ZONE](#zone-class-), false otherwise.
+
+
+### SET_GROUP:AnyInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+if MySetGroup:AnyPartlyInZone(MyZone) then
+MESSAGE:New("At least one GROUP has at least one UNIT in zone !", 10):ToAll()
+else
+MESSAGE:New("No UNIT of any GROUP is in zone !", 10):ToAll()
+end
+```
+Iterate the SET_GROUP and return true if at least one [UNIT](#unit-class-) of one [GROUP](#group-module-) of the [SET_GROUP](#set_group-module-) is in [ZONE](#zone-module-)
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if at least one of the [GROUP](#group-class-) is partly or completly inside the [ZONE](#zone-class-), false otherwise.
+
+
+### SET_GROUP:AnyPartlyInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+if MySetGroup:AnyPartlyInZone(MyZone) then
+MESSAGE:New("At least one GROUP is partially in the zone, but none are fully in it !", 10):ToAll()
+else
+MESSAGE:New("No GROUP are in zone, or one (or more) GROUP is completely in it !", 10):ToAll()
+end
+```
+Iterate the SET_GROUP and return true if at least one [GROUP](#group-module-) of the [SET_GROUP](#set_group-module-) is partly in [ZONE](#zone-module-).
+Will return false if a [GROUP](#group-module-) is fully in the [ZONE](#zone-module-)
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if at least one of the [GROUP](#group-class-) is partly or completly inside the [ZONE](#zone-class-), false otherwise.
+
+
+### SET_GROUP:NoneInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+if MySetGroup:NoneInZone(MyZone) then
+MESSAGE:New("No GROUP is completely in zone !", 10):ToAll()
+else
+MESSAGE:New("No UNIT of any GROUP is in zone !", 10):ToAll()
+end
+```
+Iterate the SET_GROUP and return true if no [GROUP](#group-module-) of the [SET_GROUP](#set_group-module-) is in [ZONE](#zone-module-)
+This could also be achieved with `not SET_GROUP:AnyPartlyInZone(Zone)`, but it's easier for the
+mission designer to add a dedicated method
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if no [GROUP](#group-class-) is inside the [ZONE](#zone-class-) in any way, false otherwise.
+
+
+### SET_GROUP:CountInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+MESSAGE:New("There are " .. MySetGroup:CountInZone(MyZone) .. " GROUPs in the Zone !", 10):ToAll()
+```
+Iterate the SET_GROUP and count how many GROUPs are completely in the Zone
+That could easily be done with SET_GROUP:ForEachGroupCompletelyInZone(), but this function
+provides an easy to use shortcut...
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Number</u>  the number of GROUPs completely in the Zone
+
+
+### SET_GROUP:CountUnitInZone(ZoneObject)
+``` lua
+local MyZone = ZONE:New("Zone1")
+local MySetGroup = SET_GROUP:New()
+MySetGroup:AddGroupsByName({"Group1", "Group2"})
+
+MESSAGE:New("There are " .. MySetGroup:CountUnitInZone(MyZone) .. " UNITs in the Zone !", 10):ToAll()
+```
+Iterate the SET_GROUP and count how many UNITs are completely in the Zone
+
+<h4> Parameters </h4>
+* [SET_GROUP](#set_group-class-)
+self
+* [ZONE](#zone-class-) ZoneObject : The Zone to be tested for.
+
+<h4> Returns </h4>
+* <u>Number</u>  the number of GROUPs completely in the Zone
+
+
 ### SET_GROUP:IsIncludeObject(MooseGroup)
 
 
@@ -1523,7 +1681,7 @@ The following iterator methods are currently available within the SET_CARGO:
 -- Define a new SET_CARGO Object. The DatabaseSet will contain a reference to all Cargos.
 DatabaseSet = SET_CARGO:New()
 ```
-Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.
+(R2.1) Creates a new SET_CARGO object, building a set of cargos belonging to a coalitions and categories.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1535,7 +1693,7 @@ self
 
 
 ### SET_CARGO:AddCargosByName(AddCargoNames)
-Add CARGOs to SET_CARGO.
+(R2.1) Add CARGOs to SET_CARGO.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-) self
@@ -1546,7 +1704,7 @@ Add CARGOs to SET_CARGO.
 
 
 ### SET_CARGO:RemoveCargosByName(RemoveCargoNames)
-Remove CARGOs from SET_CARGO.
+(R2.1) Remove CARGOs from SET_CARGO.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-) self
@@ -1557,7 +1715,7 @@ Remove CARGOs from SET_CARGO.
 
 
 ### SET_CARGO:FindCargo(CargoName)
-Finds a Cargo based on the Cargo Name.
+(R2.1) Finds a Cargo based on the Cargo Name.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1569,7 +1727,7 @@ self
 
 
 ### SET_CARGO:FilterCoalitions(Coalitions)
-Builds a set of cargos of coalitions.
+(R2.1) Builds a set of cargos of coalitions.
 Possible current coalitions are red, blue and neutral.
 
 <h4> Parameters </h4>
@@ -1583,7 +1741,7 @@ self
 
 
 ### SET_CARGO:FilterTypes(Types)
-Builds a set of cargos of defined cargo types.
+(R2.1) Builds a set of cargos of defined cargo types.
 Possible current types are those types known within DCS world.
 
 <h4> Parameters </h4>
@@ -1597,7 +1755,7 @@ self
 
 
 ### SET_CARGO:FilterCountries(Countries)
-Builds a set of cargos of defined countries.
+(R2.1) Builds a set of cargos of defined countries.
 Possible current countries are those known within DCS world.
 
 <h4> Parameters </h4>
@@ -1611,7 +1769,7 @@ self
 
 
 ### SET_CARGO:FilterPrefixes(Prefixes)
-Builds a set of cargos of defined cargo prefixes.
+(R2.1) Builds a set of cargos of defined cargo prefixes.
 All the cargos starting with the given prefixes will be included within the set.
 
 <h4> Parameters </h4>
@@ -1625,7 +1783,7 @@ self
 
 
 ### SET_CARGO:FilterStart()
-Starts the filtering.
+(R2.1) Starts the filtering.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1637,7 +1795,7 @@ self
 
 
 ### SET_CARGO:AddInDatabase(Event)
-Handles the Database to check on an event (birth) that the Object was added in the Database.
+(R2.1) Handles the Database to check on an event (birth) that the Object was added in the Database.
 This is required, because sometimes the _DATABASE birth event gets called later than the SET_BASE birth event!
 
 <h4> Parameters </h4>
@@ -1651,7 +1809,7 @@ self
 
 
 ### SET_CARGO:FindInDatabase(Event)
-Handles the Database to check on any event that Object exists in the Database.
+(R2.1) Handles the Database to check on any event that Object exists in the Database.
 This is required, because sometimes the _DATABASE event gets called later than the SET_BASE event or vise versa!
 
 <h4> Parameters </h4>
@@ -1665,7 +1823,7 @@ self
 
 
 ### SET_CARGO:ForEachCargo(IteratorFunction)
-Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.
+(R2.1) Iterate the SET_CARGO and call an interator function for each CARGO, providing the CARGO and optional parameters.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1678,7 +1836,7 @@ self
 
 
 ### SET_CARGO:FindNearestCargoFromPointVec2(PointVec2)
-Iterate the SET_CARGO while identifying the nearest [CARGO](#cargo-class-) from a @{Point#POINT_VEC2}.
+(R2.1) Iterate the SET_CARGO while identifying the nearest [CARGO](#cargo-class-) from a @{Point#POINT_VEC2}.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1690,7 +1848,7 @@ self
 
 
 ### SET_CARGO:IsIncludeObject(MCargo)
-
+(R2.1)
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1703,7 +1861,7 @@ self
 
 
 ### SET_CARGO:OnEventNewCargo(EventData)
-Handles the OnEventNewCargo event for the Set.
+(R2.1) Handles the OnEventNewCargo event for the Set.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)
@@ -1713,7 +1871,7 @@ self
 <h4> Returns </h4>
 
 ### SET_CARGO:OnEventDeleteCargo(EventData)
-Handles the OnDead or OnCrash event for alive units set.
+(R2.1) Handles the OnDead or OnCrash event for alive units set.
 
 <h4> Parameters </h4>
 * [SET_CARGO](#set_cargo-class-)

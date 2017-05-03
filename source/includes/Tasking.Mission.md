@@ -33,9 +33,9 @@ self
 
 
 
-### MISSION:OnLeaveIdle(From, Event, To)
-OnLeave Transition Handler for State Idle.
-@function [parent=#MISSION] OnLeaveIdle
+### MISSION:OnLeaveIDLE(From, Event, To)
+OnLeave Transition Handler for State IDLE.
+@function [parent=#MISSION] OnLeaveIDLE
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -48,9 +48,9 @@ self
 * <u>Boolean</u>  Return false to cancel Transition.
 
 
-### MISSION:OnEnterIdle(From, Event, To)
-OnEnter Transition Handler for State Idle.
-@function [parent=#MISSION] OnEnterIdle
+### MISSION:OnEnterIDLE(From, Event, To)
+OnEnter Transition Handler for State IDLE.
+@function [parent=#MISSION] OnEnterIDLE
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -61,9 +61,9 @@ self
 
 <h4> Returns </h4>
 
-### MISSION:OnLeaveOngoing(From, Event, To)
-OnLeave Transition Handler for State Ongoing.
-@function [parent=#MISSION] OnLeaveOngoing
+### MISSION:OnLeaveENGAGED(From, Event, To)
+OnLeave Transition Handler for State ENGAGED.
+@function [parent=#MISSION] OnLeaveENGAGED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -76,9 +76,9 @@ self
 * <u>Boolean</u>  Return false to cancel Transition.
 
 
-### MISSION:OnEnterOngoing(From, Event, To)
-OnEnter Transition Handler for State Ongoing.
-@function [parent=#MISSION] OnEnterOngoing
+### MISSION:OnEnterENGAGED(From, Event, To)
+OnEnter Transition Handler for State ENGAGED.
+@function [parent=#MISSION] OnEnterENGAGED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -127,9 +127,9 @@ self
 
 <h4> Returns </h4>
 
-### MISSION:OnLeaveIdle(From, Event, To)
-OnLeave Transition Handler for State Idle.
-@function [parent=#MISSION] OnLeaveIdle
+### MISSION:OnLeaveIDLE(From, Event, To)
+OnLeave Transition Handler for State IDLE.
+@function [parent=#MISSION] OnLeaveIDLE
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -142,9 +142,9 @@ self
 * <u>Boolean</u>  Return false to cancel Transition.
 
 
-### MISSION:OnEnterIdle(From, Event, To)
-OnEnter Transition Handler for State Idle.
-@function [parent=#MISSION] OnEnterIdle
+### MISSION:OnEnterIDLE(From, Event, To)
+OnEnter Transition Handler for State IDLE.
+@function [parent=#MISSION] OnEnterIDLE
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -193,9 +193,9 @@ self
 
 <h4> Returns </h4>
 
-### MISSION:OnLeaveCompleted(From, Event, To)
-OnLeave Transition Handler for State Completed.
-@function [parent=#MISSION] OnLeaveCompleted
+### MISSION:OnLeaveCOMPLETED(From, Event, To)
+OnLeave Transition Handler for State COMPLETED.
+@function [parent=#MISSION] OnLeaveCOMPLETED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -208,9 +208,9 @@ self
 * <u>Boolean</u>  Return false to cancel Transition.
 
 
-### MISSION:OnEnterCompleted(From, Event, To)
-OnEnter Transition Handler for State Completed.
-@function [parent=#MISSION] OnEnterCompleted
+### MISSION:OnEnterCOMPLETED(From, Event, To)
+OnEnter Transition Handler for State COMPLETED.
+@function [parent=#MISSION] OnEnterCOMPLETED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -259,9 +259,9 @@ self
 
 <h4> Returns </h4>
 
-### MISSION:OnLeaveFailed(From, Event, To)
-OnLeave Transition Handler for State Failed.
-@function [parent=#MISSION] OnLeaveFailed
+### MISSION:OnLeaveFAILED(From, Event, To)
+OnLeave Transition Handler for State FAILED.
+@function [parent=#MISSION] OnLeaveFAILED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -274,9 +274,9 @@ self
 * <u>Boolean</u>  Return false to cancel Transition.
 
 
-### MISSION:OnEnterFailed(From, Event, To)
-OnEnter Transition Handler for State Failed.
-@function [parent=#MISSION] OnEnterFailed
+### MISSION:OnEnterFAILED(From, Event, To)
+OnEnter Transition Handler for State FAILED.
+@function [parent=#MISSION] OnEnterFAILED
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -462,13 +462,12 @@ self
 
 
 
-### MISSION:GetMenu(TaskGroup)
+### MISSION:GetMenu()
 Gets the mission menu for the coalition.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
 self
-* [GROUP](#group-class-) TaskGroup
 
 <h4> Returns </h4>
 * [MENU_COALITION](#menu_coalition-class-) 
@@ -525,8 +524,8 @@ self
 * [TASK](#task-class-)  The task added.
 
 
-### MISSION:IsCompleted()
-Is the [Mission](#mission-module-) **Completed**.
+### MISSION:IsCOMPLETED()
+Is the [Mission](#mission-module-) **COMPLETED**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -536,8 +535,8 @@ self
 * <u>Boolean</u> 
 
 
-### MISSION:IsIdle()
-Is the [Mission](#mission-module-) **Idle**.
+### MISSION:IsIDLE()
+Is the [Mission](#mission-module-) **IDLE**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -547,8 +546,8 @@ self
 * <u>Boolean</u> 
 
 
-### MISSION:IsOngoing()
-Is the [Mission](#mission-module-) **Ongoing**.
+### MISSION:IsENGAGED()
+Is the [Mission](#mission-module-) **ENGAGED**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -558,8 +557,8 @@ self
 * <u>Boolean</u> 
 
 
-### MISSION:IsFailed()
-Is the [Mission](#mission-module-) **Failed**.
+### MISSION:IsFAILED()
+Is the [Mission](#mission-module-) **FAILED**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -569,8 +568,8 @@ self
 * <u>Boolean</u> 
 
 
-### MISSION:IsHold()
-Is the [Mission](#mission-module-) **Hold**.
+### MISSION:IsHOLD()
+Is the [Mission](#mission-module-) **HOLD**.
 
 <h4> Parameters </h4>
 * [MISSION](#mission-class-)
@@ -589,6 +588,16 @@ self
 
 <h4> Returns </h4>
 * <u>Boolean</u>  true if the Mission has a Group.
+
+
+### MISSION:GetTasksRemaining()
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+
+<h4> Returns </h4>
+* <u>Number</u> 
 
 
 ### MISSION:ReportSummary()
@@ -635,4 +644,23 @@ env.info( "Task 2 Completion = " .. Tasks[2]:GetGoalPercentage() .. "%" )
 <h4> Returns </h4>
 * {TASK,...}  Structure of TASKS with the [TASK](#task-module-) number as the key.
 
+
+### MISSION:MenuReportSummary(ReportGroup)
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+* [GROUP](#group-class-) ReportGroup
+
+<h4> Returns </h4>
+
+### MISSION:MenuReportOverview(TaskStatus, ReportGroup)
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+* <u>String</u> TaskStatus : The status
+* [GROUP](#group-class-) ReportGroup
+
+<h4> Returns </h4>
 

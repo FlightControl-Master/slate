@@ -297,6 +297,18 @@ self
 
 <h4> Returns </h4>
 
+### BASE:OnEventDead(EventData)
+Occurs when an object is dead.
+initiator : The unit that is dead.
+@function [parent=#BASE] OnEventDead
+
+<h4> Parameters </h4>
+* [BASE](#base-class-)
+self
+* [EVENTDATA](#eventdata-class-) EventData : The EventData structure.
+
+<h4> Returns </h4>
+
 ### BASE:OnEvent(EventData)
 Occurs when an object is completely destroyed.
 initiator : The unit that is was destroyed.

@@ -545,6 +545,18 @@ self
 
 <h4> Returns </h4>
 
+### DETECTION_BASE:CreateDetectionItems()
+Make a DetectionSet table. This function will be overridden in the derived clsses.
+
+<h4> Parameters </h4>
+* [DETECTION_BASE](#detection_base-class-)
+self
+
+<h4> Returns </h4>
+* [DETECTION_BASE](#detection_base-class-)
+
+
+
 ### DETECTION_BASE:InitDetectVisual(DetectVisual)
 Detect Visual.
 
@@ -872,13 +884,14 @@ self
 * [DetectedObject](#detection_base-detectedobject-class-)
 
 
-### DETECTION_BASE:AddDetectedItem(DetectedItemIndex, Set)
+### DETECTION_BASE:AddDetectedItem(self, DetectedItemIndex, Set)
 Adds a new DetectedItem to the DetectedItems list.
 The DetectedItem is a table and contains a SET_UNIT in the field Set.
 
 <h4> Parameters </h4>
 * [DETECTION_BASE](#detection_base-class-)
 self
+* ItemPrefix self
 * <u>String</u> DetectedItemIndex : The index of the DetectedItem.
 * [SET_UNIT](#set_unit-class-) Set : (optional) The Set of Units to be added.
 
@@ -970,6 +983,18 @@ self
 * [ZONE_UNIT](#zone_unit-class-) 
 
 
+### DETECTION_BASE:DetectedItemMenu(self)
+Menu of a detected item using a given numeric index.
+
+<h4> Parameters </h4>
+* [DETECTION_BASE](#detection_base-class-)
+self
+* Index self
+
+<h4> Returns </h4>
+* <u>String</u> 
+
+
 ### DETECTION_BASE:DetectedItemReportSummary(self)
 Report summary of a detected item using a given numeric index.
 
@@ -1004,18 +1029,6 @@ self
 * [SET_GROUP](#set_group-class-) 
 
 
-### DETECTION_BASE:CreateDetectionSets()
-Make a DetectionSet table. This function will be overridden in the derived clsses.
-
-<h4> Parameters </h4>
-* [DETECTION_BASE](#detection_base-class-)
-self
-
-<h4> Returns </h4>
-* [DETECTION_BASE](#detection_base-class-)
-
-
-
 ### DETECTION_BASE:Schedule(DelayTime, RepeatInterval)
 Schedule the DETECTION construction.
 
@@ -1042,10 +1055,15 @@ The DETECTION_BASE.DetectedObject class does not inherit
 <h4> Attributes </h4>
 
 * <u>String</u> Name
-* <u>Boolean</u> Visible
+* <u>Boolean</u> IsVisible
+* <u>Boolean</u> KnowType
+* <u>Boolean</u> KnowDistance
 * <u>String</u> Type
 * <u>Number</u> Distance
 * <u>Boolean</u> Identified
+* <u>Number</u> LastTime
+* <u>Boolean</u> LastPos
+* <u>Number</u> LastVelocity
 
 
 ## DETECTION_BASE.DetectedItems Class
@@ -1111,7 +1129,7 @@ self
 * <u>String</u>  The Changes text
 
 
-### DETECTION_UNITS:CreateDetectionSets()
+### DETECTION_UNITS:CreateDetectionItems()
 Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.
 
@@ -1122,6 +1140,18 @@ self
 <h4> Returns </h4>
 * [DETECTION_UNITS](#detection_units-class-)
 
+
+
+### DETECTION_UNITS:DetectedItemMenu(self)
+Menu of a DetectedItem using a given numeric index.
+
+<h4> Parameters </h4>
+* [DETECTION_UNITS](#detection_units-class-)
+self
+* Index self
+
+<h4> Returns </h4>
+* <u>String</u> 
 
 
 ### DETECTION_UNITS:DetectedItemReportSummary(self)
@@ -1186,7 +1216,7 @@ self
 * <u>String</u>  The Changes text
 
 
-### DETECTION_TYPES:CreateDetectionSets()
+### DETECTION_TYPES:CreateDetectionItems()
 Create the DetectedItems list from the DetectedObjects table.
 For each DetectedItem, a one field array is created containing the Unit detected.
 
@@ -1197,6 +1227,18 @@ self
 <h4> Returns </h4>
 * [DETECTION_TYPES](#detection_types-class-)
 
+
+
+### DETECTION_TYPES:DetectedItemMenu(self)
+Menu of a DetectedItem using a given numeric index.
+
+<h4> Parameters </h4>
+* [DETECTION_TYPES](#detection_types-class-)
+self
+* Index self
+
+<h4> Returns </h4>
+* <u>String</u> 
 
 
 ### DETECTION_TYPES:DetectedItemReportSummary(self)
@@ -1280,6 +1322,18 @@ self
 <h4> Returns </h4>
 * [DETECTION_AREAS](#detection_areas-class-)
 
+
+
+### DETECTION_AREAS:DetectedItemMenu(self)
+Menu of a detected item using a given numeric index.
+
+<h4> Parameters </h4>
+* [DETECTION_AREAS](#detection_areas-class-)
+self
+* Index self
+
+<h4> Returns </h4>
+* <u>String</u> 
 
 
 ### DETECTION_AREAS:DetectedItemReportSummary(self)
@@ -1411,7 +1465,7 @@ self
 * <u>String</u>  The Changes text
 
 
-### DETECTION_AREAS:CreateDetectionSets()
+### DETECTION_AREAS:CreateDetectionItems()
 Make a DetectionSet table. This function will be overridden in the derived clsses.
 
 <h4> Parameters </h4>
