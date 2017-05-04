@@ -343,19 +343,6 @@ self
 * <u>Boolean</u> 
 
 
-### TASK:SetMenu(MenuTime)
-Set the menu options of the [Task](#task-module-) to all the groups in the SetGroup.
-
-<h4> Parameters </h4>
-* [TASK](#task-class-)
-self
-* <u>Number</u> MenuTime
-
-<h4> Returns </h4>
-* [TASK](#task-class-)
-
-
-
 ### TASK:SetMenuForGroup(MenuTime)
 Set the Menu for a Group
 
@@ -595,6 +582,16 @@ Sets the Type of the Task
 * [TASK](#task-class-)
 self
 * <u>String</u> TaskType
+
+<h4> Returns </h4>
+
+### TASK:SetInfo(TaskInfo)
+Sets the Information on the Task
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+* <u>String</u> TaskInfo
 
 <h4> Returns </h4>
 
@@ -903,29 +900,5 @@ self
 <h4> Returns </h4>
 * [TASK](#task-class-)
 
-
-
-### TASK:ReportSummary()
-Create a summary report of the Task.
-List the Task Name and Status
-
-<h4> Parameters </h4>
-* [TASK](#task-class-)
-self
-
-<h4> Returns </h4>
-* <u>String</u> 
-
-
-### TASK:ReportDetails()
-Create a detailed report of the Task.
-List the Task Status, and the Players assigned to the Task.
-
-<h4> Parameters </h4>
-* [TASK](#task-class-)
-self
-
-<h4> Returns </h4>
-* <u>String</u> 
 
 

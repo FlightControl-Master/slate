@@ -120,7 +120,7 @@ Creates a BAI task when there are targets for it.
 * [TASK](#task-class-) 
 
 
-### TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItem)
+### TASK_A2G_DISPATCHER:EvaluateRemoveTask(Mission, Task, DetectedItemID, DetectedItemChange)
 Evaluates the removal of the Task from the Mission.
 Can only occur when the DetectedItem is Changed AND the state of the Task is "Planned".
 
@@ -128,7 +128,8 @@ Can only occur when the DetectedItem is Changed AND the state of the Task is "Pl
 * #TASK_A2G_DISPATCHER self
 * [MISSION](#mission-class-) Mission
 * [TASK](#task-class-) Task
-* [DETECTION_AREAS.DetectedItem](#detection_areas.detecteditem-class-) DetectedItem
+* <u>Boolean</u> DetectedItemID
+* <u>Boolean</u> DetectedItemChange
 
 <h4> Returns </h4>
 * [TASK](#task-class-) 

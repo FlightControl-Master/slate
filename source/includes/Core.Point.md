@@ -175,7 +175,6 @@ Various methods exist to calculate random locations around a given 3D point.
 * @{#POINT_VEC3.ToStringLL}(): Generates a Latutude & Longutude text.
 
 
-
 The POINT_VEC3 class
 
 <h4> Attributes </h4>
@@ -466,18 +465,6 @@ Provides a Bearing / Range string
 * <u>String</u>  The BR Text
 
 
-### POINT_VEC3:ToStringLL(AngleRadians, Distance)
-Provides a Bearing / Range string
-
-<h4> Parameters </h4>
-* #POINT_VEC3 self
-* <u>Number</u> AngleRadians : The angle in randians
-* <u>Number</u> Distance : The distance
-
-<h4> Returns </h4>
-* <u>String</u>  The BR Text
-
-
 ### POINT_VEC3:GetAltitudeText()
 Return the altitude text of the POINT_VEC3.
 
@@ -698,7 +685,6 @@ to add or substract a value from the current respective axis value.
 Note that the Set and Add methods return the current POINT_VEC2 object, so these manipulation methods can be chained... For example:
 
 local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
-
 
 
 
@@ -923,6 +909,49 @@ Add a Distance in meters from the POINT_VEC2 orthonormal plane, with the given a
 
 <h4> Returns </h4>
 * #POINT_VEC2  The new calculated POINT_VEC2.
+
+
+## COORDINATE Class
+<pre>
+Inheritance : The COORDINATE Class inherits from the following parents :
+BASE
+	`-- POINT_VEC3
+		`-- POINT_VEC2
+			`-- COORDINATE
+</pre>
+
+The COORDINATE class defines a 2D coordinate in the simulator. The height coordinate (if needed) will be the land height + an optional added height specified.
+A COORDINATE can be expressed in LL or in MGRS.
+
+#####  COORDINATE constructor
+
+A new COORDINATE instance can be created with:
+
+* COORDINATE-New-: a 2D point, taking an additional height parameter.
+* COORDINATE-NewFromVec2-: a 2D point created from a @{DCSTypes#Vec2}.
+
+#####  Manupulate the X, Altitude, Y coordinates of the 2D point
+
+A COORDINATE class works in 2D space, with an altitude setting. It contains internally an X, Altitude, Y coordinate.
+Methods exist to manupulate these coordinates.
+
+The current X, Altitude, Y axis can be retrieved with the methods COORDINATE-GetX-, COORDINATE-GetY-, COORDINATE-SetX- respectively.
+The methods COORDINATE-SetY-, COORDINATE-GetLat-, COORDINATE-GetLon- change the respective axis with a new value.
+The current Lat(itude), Alt(itude), Lon(gitude) values can also be retrieved with the methods COORDINATE-AddX-, COORDINATE-AddY-, @{#COORDINATE.GetLon}() respectively.
+The current axis values can be changed by using the methods @{#COORDINATE.AddX}(), @{#COORDINATE.AddAlt}(), @{#COORDINATE.AddY}()
+to add or substract a value from the current respective axis value.
+Note that the Set and Add methods return the current COORDINATE object, so these manipulation methods can be chained... For example:
+
+local Vec2 = PointVec2:AddX( 100 ):AddY( 2000 ):GetVec2()
+
+
+
+<h4> Attributes </h4>
+
+* <u>Number</u> LL_Accuracy
+* <u>Boolean</u> LL_DMS
+* <u>Number</u> MGRS_Accuracy
+* <u>String</u> System
 
 
 ## POINT_VEC3.RoutePointAltType Class

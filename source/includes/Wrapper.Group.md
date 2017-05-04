@@ -381,6 +381,18 @@ self
 * <u>Boolean</u>  Returns true if the Group is not within the [ZONE_BASE](#zone_base-class-)
 
 
+### GROUP:CountInZone(Zone)
+Returns the number of UNITs that are in the [Zone](#zone-module-)
+
+<h4> Parameters </h4>
+* [GROUP](#group-class-)
+self
+* [ZONE_BASE](#zone_base-class-) Zone : The zone to test.
+
+<h4> Returns </h4>
+* <u>Number</u>  The number of UNITs that are in the [Zone](#zone-module-)
+
+
 ### GROUP:IsAir()
 Returns if the group is of an air category.
 If the group is a helicopter or a plane, then this method will return true, otherwise false.
