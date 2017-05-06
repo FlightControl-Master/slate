@@ -1,0 +1,16 @@
+current directory: C:/Users/Hugues/Documents/GitHub/slate/vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank
+C:/Ruby23-x64/bin/ruby.exe -r ./siteconf20170504-18596-1wdf0bu.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/Hugues/Documents/GitHub/slate/vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR=" clean
+
+current directory: C:/Users/Hugues/Documents/GitHub/slate/vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR="
+generating fast_blank-x64-mingw32.def
+compiling fast_blank.c
+linking shared-object fast_blank.so
+
+current directory: C:/Users/Hugues/Documents/GitHub/slate/vendor/bundle/ruby/2.3.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fast_blank.so ./.gem.20170504-18596-sxo8hp
