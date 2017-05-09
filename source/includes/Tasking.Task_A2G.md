@@ -235,7 +235,7 @@ BASE
 * [SET_UNIT](#set_unit-class-) TargetSetUnit
 
 
-### TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit)
+### TASK_SEAD:New(Mission, SetGroup, TaskName, TargetSetUnit, TaskBriefing)
 Instantiates a new TASK_SEAD.
 
 <h4> Parameters </h4>
@@ -245,6 +245,7 @@ self
 * [SET_GROUP](#set_group-class-) SetGroup : The set of groups for which the Task can be assigned.
 * <u>String</u> TaskName : The name of the Task.
 * [SET_UNIT](#set_unit-class-) TargetSetUnit
+* <u>String</u> TaskBriefing : The briefing of the task.
 
 <h4> Returns </h4>
 * [TASK_SEAD](#task_sead-class-)
@@ -266,7 +267,7 @@ BASE
 * [SET_UNIT](#set_unit-class-) TargetSetUnit
 
 
-### TASK_BAI:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)
+### TASK_BAI:New(Mission, SetGroup, TaskName, TargetSetUnit, TaskBriefing)
 Instantiates a new TASK_BAI.
 
 <h4> Parameters </h4>
@@ -275,9 +276,8 @@ self
 * [MISSION](#mission-class-) Mission
 * [SET_GROUP](#set_group-class-) SetGroup : The set of groups for which the Task can be assigned.
 * <u>String</u> TaskName : The name of the Task.
-* [SET_UNIT](#set_unit-class-) UnitSetTargets
-* <u>Number</u> TargetDistance : The distance to Target when the Player is considered to have "arrived" at the engagement range.
-* [ZONE_BASE](#zone_base-class-) TargetZone : The target zone, if known.
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
+* <u>String</u> TaskBriefing : The briefing of the task.
 
 <h4> Returns </h4>
 * [TASK_BAI](#task_bai-class-)
@@ -299,7 +299,7 @@ BASE
 * [SET_UNIT](#set_unit-class-) TargetSetUnit
 
 
-### TASK_CAS:New(Mission, SetGroup, TaskName, UnitSetTargets, TargetDistance, TargetZone)
+### TASK_CAS:New(Mission, SetGroup, TaskName, TargetSetUnit, TaskBriefing)
 Instantiates a new TASK_CAS.
 
 <h4> Parameters </h4>
@@ -308,9 +308,8 @@ self
 * [MISSION](#mission-class-) Mission
 * [SET_GROUP](#set_group-class-) SetGroup : The set of groups for which the Task can be assigned.
 * <u>String</u> TaskName : The name of the Task.
-* [SET_UNIT](#set_unit-class-) UnitSetTargets
-* <u>Number</u> TargetDistance : The distance to Target when the Player is considered to have "arrived" at the engagement range.
-* [ZONE_BASE](#zone_base-class-) TargetZone : The target zone, if known.
+* [SET_UNIT](#set_unit-class-) TargetSetUnit
+* <u>String</u> TaskBriefing : The briefing of the task.
 
 <h4> Returns </h4>
 * [TASK_CAS](#task_cas-class-)

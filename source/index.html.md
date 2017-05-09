@@ -17,6 +17,7 @@ includes:
   - Actions.Process_Pickup
   - Actions.Route
   - Actions.Smoke
+  - AI.AI_BAI
   - AI.AI_Balancer
   - AI.AI_Cap
   - AI.AI_Cas

@@ -170,7 +170,7 @@ self
 * <u>Boolean</u>  true if Unit is part of the Task.
 
 
-### TASK:AbortUnit(PlayerUnit)
+### TASK:AbortGroup(PlayerUnit)
 Abort a PlayerUnit from a Task.
 If the Unit was not part of the Task, false is returned.
 If the Unit is part of the Task, true is returned.
@@ -181,10 +181,11 @@ self
 * [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
 
 <h4> Returns </h4>
-* <u>Boolean</u>  true if Unit is part of the Task.
+* [TASK](#task-class-)
 
 
-### TASK:CrashUnit(PlayerUnit)
+
+### TASK:CrashGroup(PlayerUnit)
 A PlayerUnit crashed in a Task. Abort the Player.
 If the Unit was not part of the Task, false is returned.
 If the Unit is part of the Task, true is returned.
@@ -195,7 +196,8 @@ self
 * [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player aborting the Task.
 
 <h4> Returns </h4>
-* <u>Boolean</u>  true if Unit is part of the Task.
+* [TASK](#task-class-)
+
 
 
 ### TASK:GetMission()
@@ -220,6 +222,44 @@ self
 * [SET_GROUP](#set_group-class-) 
 
 
+### TASK:IsGroupAssigned(TaskGroup)
+Returns if the [Task](#task-module-) is assigned to the Group.
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+* [GROUP](#group-class-) TaskGroup
+
+<h4> Returns </h4>
+* <u>Boolean</u> 
+
+
+### TASK:SetGroupAssigned(TaskGroup)
+Set [Group](#group-module-) assigned to the [Task](#task-module-).
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+* [GROUP](#group-class-) TaskGroup
+
+<h4> Returns </h4>
+* [TASK](#task-class-)
+
+
+
+### TASK:ClearGroupAssignment(TaskGroup)
+Clear the [Group](#group-module-) assignment from the [Task](#task-module-).
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+* [GROUP](#group-class-) TaskGroup
+
+<h4> Returns </h4>
+* [TASK](#task-class-)
+
+
+
 ### TASK:AssignToGroup(TaskGroup)
 Assign the [Task](#task-module-) to a [Group](#group-module-).
 
@@ -232,6 +272,15 @@ self
 * [TASK](#task-class-)
 
 
+
+### TASK:UnAssignFromGroup()
+UnAssign the [Task](#task-module-) from a [Group](#group-module-).
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+
+<h4> Returns </h4>
 
 ### TASK:HasGroup(FindGroup)
 
@@ -311,27 +360,6 @@ self
 
 <h4> Returns </h4>
 
-### TASK:UnAssignFromGroup()
-UnAssign the [Task](#task-module-) from a [Group](#group-module-).
-
-<h4> Parameters </h4>
-* [TASK](#task-class-)
-self
-
-<h4> Returns </h4>
-
-### TASK:IsAssignedToGroup(TaskGroup)
-Returns if the [Task](#task-module-) is assigned to the Group.
-
-<h4> Parameters </h4>
-* [TASK](#task-class-)
-self
-* [GROUP](#group-class-) TaskGroup
-
-<h4> Returns </h4>
-* <u>Boolean</u> 
-
-
 ### TASK:HasAliveUnits()
 Returns if the [Task](#task-module-) has still alive and assigned Units.
 
@@ -398,7 +426,7 @@ self
 
 
 
-### TASK:RemovePlannedMenuForGroup(TaskGroup, MenuTime)
+### TASK:RefreshMenus(TaskGroup, MenuTime)
 Remove the menu option of the [Task](#task-module-) for a [Group](#group-module-).
 
 <h4> Parameters </h4>
@@ -453,6 +481,17 @@ self
 
 <h4> Returns </h4>
 * <u>String</u> 
+
+
+### TASK:GetTaskBriefing()
+Returns the [Task](#task-module-) briefing.
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+
+<h4> Returns </h4>
+* <u>String</u>  Task briefing.
 
 
 ### TASK:GetProcessTemplate(ProcessName)
@@ -791,6 +830,17 @@ self
 <h4> Returns </h4>
 * [TASK](#task-class-)
 
+
+
+### TASK:GetBriefing()
+Gets the [Task](#task-module-) briefing.
+
+<h4> Parameters </h4>
+* [TASK](#task-class-)
+self
+
+<h4> Returns </h4>
+* <u>String</u>  The briefing text.
 
 
 ### TASK:onenterAssigned(Event, From, To)

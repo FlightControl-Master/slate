@@ -407,6 +407,16 @@ self
 
 <h4> Returns </h4>
 
+### EVENT:CreateEventPlayerEnterUnit(PlayerUnit.)
+Creation of a S_EVENT_PLAYER_ENTER_UNIT Event.
+
+<h4> Parameters </h4>
+* [EVENT](#event-class-)
+self
+* [UNIT](#unit-class-) PlayerUnit.
+
+<h4> Returns </h4>
+
 ### EVENT:onEvent(Event)
 
 <h4> Parameters </h4>

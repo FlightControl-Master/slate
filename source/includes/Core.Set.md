@@ -797,6 +797,18 @@ Various methods exist for a SET_UNIT to perform actions or calculations and retr
 
 
 
+### SET_UNIT:GetFirst()
+Get the first unit from the set.
+@function [parent=#SET_UNIT] GetFirst
+
+<h4> Parameters </h4>
+* [SET_UNIT](#set_unit-class-)
+self
+
+<h4> Returns </h4>
+* [UNIT](#unit-class-)  The UNIT object.
+
+
 ### SET_UNIT:New()
 ``` lua
 -- Define a new SET_UNIT Object. This DBObject will contain a reference to all alive Units.

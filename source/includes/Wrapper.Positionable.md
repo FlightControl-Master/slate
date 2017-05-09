@@ -214,7 +214,7 @@ self
 
 <h4> Returns </h4>
 
-### POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition, Name)
+### POSITIONABLE:MessageToCoalition(Message, Duration, MessageCoalition)
 Send a message to a coalition.
 The message will appear in the message area. The message will begin with the callsign of the group and the type of the first unit sending the message.
 
@@ -224,7 +224,6 @@ self
 * <u>String</u> Message : The message text
 * [Duration](#duration-class-) Duration : The duration of the message.
 * [coalition](#coalition-class-) MessageCoalition : The Coalition receiving the message.
-* <u>String</u> Name : (optional) The Name of the sender. If not provided, the Name is the type of the Positionable.
 
 <h4> Returns </h4>
 

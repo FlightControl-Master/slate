@@ -244,6 +244,17 @@ self
 * <u>String</u>  The type of the Cargo.
 
 
+### CARGO:GetCoordinate()
+Get the current coordinates of the Cargo.
+
+<h4> Parameters </h4>
+* [CARGO](#cargo-class-)
+self
+
+<h4> Returns </h4>
+* [COORDINATE](#coordinate-class-)  The coordinates of the Cargo.
+
+
 ### CARGO:IsLoaded()
 Check if cargo is loaded.
 
@@ -257,6 +268,17 @@ self
 
 ### CARGO:IsUnLoaded()
 Check if cargo is unloaded.
+
+<h4> Parameters </h4>
+* [CARGO](#cargo-class-)
+self
+
+<h4> Returns </h4>
+* <u>Boolean</u>  true if unloaded
+
+
+### CARGO:IsAlive()
+Check if cargo is alive.
 
 <h4> Parameters </h4>
 * [CARGO](#cargo-class-)
@@ -549,19 +571,6 @@ self
 
 <h4> Returns </h4>
 
-### CARGO_UNIT:onleaveBoarding(Event, From, To, CargoCarrier)
-Leave Boarding State.
-
-<h4> Parameters </h4>
-* [CARGO_UNIT](#cargo_unit-class-)
-self
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-* [UNIT](#unit-class-) CargoCarrier
-
-<h4> Returns </h4>
-
 ### CARGO_UNIT:onafterBoarding(Event, From, To, CargoCarrier, NearRadius)
 Boarding Event.
 
@@ -599,6 +608,126 @@ self
 * <u>String</u> From
 * <u>String</u> To
 * [UNIT](#unit-class-) CargoCarrier
+
+<h4> Returns </h4>
+
+## CARGO_GROUP Class
+<pre>
+Inheritance : The CARGO_GROUP Class inherits from the following parents :
+BASE
+	`-- FSM
+		`-- FSM_CONTROLLABLE
+			`-- FSM_PROCESS
+				`-- CARGO
+					`-- CARGO_REPORTABLE
+						`-- CARGO_GROUP
+</pre>
+
+### CARGO_GROUP:New(CargoGroup, Type, Name, ReportRadius, NearRadius)
+CARGO_GROUP constructor.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [GROUP](#group-class-) CargoGroup
+* <u>String</u> Type
+* <u>String</u> Name
+* <u>Number</u> ReportRadius : (optional)
+* <u>Number</u> NearRadius : (optional)
+
+<h4> Returns </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+
+
+
+### CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)
+Enter Boarding State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [UNIT](#unit-class-) CargoCarrier
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onenterLoaded(CargoCarrier, Event, From, To)
+Enter Loaded State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [UNIT](#unit-class-) CargoCarrier
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onafterBoarding(CargoCarrier, Event, From, To)
+Leave Boarding State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [UNIT](#unit-class-) CargoCarrier
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onenterUnBoarding(ToPointVec2, Event, From, To)
+Enter UnBoarding State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [POINT_VEC2](#point_vec2-class-) ToPointVec2
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onleaveUnBoarding(ToPointVec2, Event, From, To)
+Leave UnBoarding State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [POINT_VEC2](#point_vec2-class-) ToPointVec2
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onafterUnBoarding(ToPointVec2, Event, From, To)
+UnBoard Event.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [POINT_VEC2](#point_vec2-class-) ToPointVec2
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
+
+<h4> Returns </h4>
+
+### CARGO_GROUP:onenterUnLoaded(self, Event, From, To)
+Enter UnLoaded State.
+
+<h4> Parameters </h4>
+* [CARGO_GROUP](#cargo_group-class-)
+self
+* [POINT_VEC2](#point_vec2-class-) self
+* <u>String</u> Event
+* <u>String</u> From
+* <u>String</u> To
 
 <h4> Returns </h4>
 
@@ -730,126 +859,6 @@ self
 * <u>String</u> To
 * <u>Number</u> Distance
 * <u>Number</u> Angle
-
-<h4> Returns </h4>
-
-## CARGO_GROUP Class
-<pre>
-Inheritance : The CARGO_GROUP Class inherits from the following parents :
-BASE
-	`-- FSM
-		`-- FSM_CONTROLLABLE
-			`-- FSM_PROCESS
-				`-- CARGO
-					`-- CARGO_REPORTABLE
-						`-- CARGO_GROUP
-</pre>
-
-### CARGO_GROUP:New(CargoGroup, Type, Name, ReportRadius, NearRadius)
-CARGO_GROUP constructor.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [GROUP](#group-class-) CargoGroup
-* <u>String</u> Type
-* <u>String</u> Name
-* <u>Number</u> ReportRadius : (optional)
-* <u>Number</u> NearRadius : (optional)
-
-<h4> Returns </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-
-
-
-### CARGO_GROUP:onenterBoarding(CargoCarrier, Event, From, To)
-Enter Boarding State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [UNIT](#unit-class-) CargoCarrier
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onenterLoaded(CargoCarrier, Event, From, To)
-Enter Loaded State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [UNIT](#unit-class-) CargoCarrier
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onleaveBoarding(CargoCarrier, Event, From, To)
-Leave Boarding State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [UNIT](#unit-class-) CargoCarrier
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onenterUnBoarding(ToPointVec2, Event, From, To)
-Enter UnBoarding State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [POINT_VEC2](#point_vec2-class-) ToPointVec2
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onleaveUnBoarding(ToPointVec2, Event, From, To)
-Leave UnBoarding State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [POINT_VEC2](#point_vec2-class-) ToPointVec2
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onafterUnBoarding(ToPointVec2, Event, From, To)
-UnBoard Event.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [POINT_VEC2](#point_vec2-class-) ToPointVec2
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
-
-<h4> Returns </h4>
-
-### CARGO_GROUP:onenterUnLoaded(self, Event, From, To)
-Enter UnLoaded State.
-
-<h4> Parameters </h4>
-* [CARGO_GROUP](#cargo_group-class-)
-self
-* [POINT_VEC2](#point_vec2-class-) self
-* <u>String</u> Event
-* <u>String</u> From
-* <u>String</u> To
 
 <h4> Returns </h4>
 

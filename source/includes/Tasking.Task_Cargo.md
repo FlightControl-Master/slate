@@ -48,7 +48,7 @@ BASE
 				`-- TASK_CARGO
 </pre>
 
-### TASK_CARGO:New(Mission, SetGroup, TaskName, SetCargo, TaskType)
+### TASK_CARGO:New(Mission, SetGroup, TaskName, SetCargo, TaskType, TaskBriefing)
 Instantiates a new TASK_CARGO.
 
 <h4> Parameters </h4>
@@ -59,6 +59,7 @@ self
 * <u>String</u> TaskName : The name of the Task.
 * [SET_CARGO](#set_cargo-class-) SetCargo : The scope of the cargo to be transported.
 * <u>String</u> TaskType : The type of Cargo task.
+* <u>String</u> TaskBriefing : The Cargo Task briefing.
 
 <h4> Returns </h4>
 * [TASK_CARGO](#task_cargo-class-)
@@ -226,7 +227,7 @@ BASE
 </pre>
 
 
-### TASK_CARGO_TRANSPORT:New(Mission, SetGroup, TaskName, SetCargo)
+### TASK_CARGO_TRANSPORT:New(Mission, SetGroup, TaskName, SetCargo, TaskBriefing)
 Instantiates a new TASK_CARGO_TRANSPORT.
 
 <h4> Parameters </h4>
@@ -236,6 +237,7 @@ self
 * [SET_GROUP](#set_group-class-) SetGroup : The set of groups for which the Task can be assigned.
 * <u>String</u> TaskName : The name of the Task.
 * [SET_CARGO](#set_cargo-class-) SetCargo : The scope of the cargo to be transported.
+* <u>String</u> TaskBriefing : The Cargo Task briefing.
 
 <h4> Returns </h4>
 * [TASK_CARGO_TRANSPORT](#task_cargo_transport-class-)

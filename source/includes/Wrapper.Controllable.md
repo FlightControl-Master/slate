@@ -34,7 +34,7 @@ Find below a list of the **assigned task** methods:
 * [CONTROLLABLE:TaskAttackGroup()](#controllable-taskattackgroup-attackgroup-weapontype-weaponexpend-attackqty-direction-altitude-attackqtylimit): (AIR) Attack a Controllable.
 * [CONTROLLABLE:TaskAttackMapObject()](#controllable-taskattackmapobject-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack): (AIR) Attacking the map object (building, structure, e.t.c).
 * [CONTROLLABLE:TaskAttackUnit()](#controllable-taskattackunit-attackunit-groupattack-weaponexpend-attackqty-direction-altitude-visible-weapontype): (AIR) Attack the Unit.
-* [CONTROLLABLE:TaskBombing()](#controllable-taskbombing-vec2-weapontype-weaponexpend-attackqty-direction-controllableattack): (AIR) Delivering weapon at the point on the ground.
+* [CONTROLLABLE:TaskBombing()](#controllable-taskbombing-vec2-groupattack-weaponexpend-attackqty-direction-weapontype): (AIR) Delivering weapon at the point on the ground.
 * [CONTROLLABLE:TaskBombingRunway()](#controllable-taskbombingrunway-airbase-weapontype-weaponexpend-attackqty-direction-controllableattack): (AIR) Delivering weapon on the runway.
 * [CONTROLLABLE:TaskEmbarking()](#controllable-taskembarking-point-duration-embarkingcontrollable): (AIR) Move the controllable to a Vec2 Point, wait for a defined duration and embark a controllable.
 * [CONTROLLABLE:TaskEmbarkToTransport()](#controllable-taskembarktotransport-point-radius): (GROUND) Embark to a Transport landed at a location.
@@ -368,18 +368,18 @@ self
 * Dcs.DCSTasking.Task#Task  The DCS task structure.
 
 
-### CONTROLLABLE:TaskBombing(Vec2, WeaponType, WeaponExpend, AttackQty, Direction, ControllableAttack)
+### CONTROLLABLE:TaskBombing(Vec2, GroupAttack, WeaponExpend, AttackQty, Direction, WeaponType)
 (AIR) Delivering weapon at the point on the ground.
 
 <h4> Parameters </h4>
 * [CONTROLLABLE](#controllable-class-)
 self
 * [Vec2](#vec2-class-) Vec2 : 2D-coordinates of the point to deliver weapon at.
-* <u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.
+* <u>Boolean</u> GroupAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the group. Has effect only if the task is assigned to a group, not to a single aircraft.
 * [AI.Task.WeaponExpend](#ai.task.weaponexpend-class-) WeaponExpend : (optional) Determines how much weapon will be released at each attack. If parameter is not defined the unit / controllable will choose expend on its own discretion.
 * <u>Number</u> AttackQty : (optional) Desired quantity of passes. The parameter is not the same in AttackGroup and AttackUnit tasks.
 * [Azimuth](#azimuth-class-) Direction : (optional) Desired ingress direction from the target to the attacking aircraft. Controllable/aircraft will make its attacks from the direction. Of course if there is no way to attack from the direction due the terrain controllable/aircraft will choose another direction.
-* <u>Boolean</u> ControllableAttack : (optional) Flag indicates that the target must be engaged by all aircrafts of the controllable. Has effect only if the task is assigned to a controllable, not to a single aircraft.
+* <u>Number</u> WeaponType : (optional) Bitmask of weapon types those allowed to use. If parameter is not defined that means no limits on weapon usage.
 
 <h4> Returns </h4>
 * Dcs.DCSTasking.Task#Task  The DCS task structure.

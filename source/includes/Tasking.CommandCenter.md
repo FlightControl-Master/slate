@@ -194,8 +194,18 @@ self
 
 <h4> Returns </h4>
 
-### COMMANDCENTER:ReportSummary()
+### COMMANDCENTER:ReportMissionsStatus()
 Report the status of all MISSIONs to a GROUP.
+Each Mission is listed, with an indication how many Tasks are still to be completed.
+
+<h4> Parameters </h4>
+* [COMMANDCENTER](#commandcenter-class-)
+self
+
+<h4> Returns </h4>
+
+### COMMANDCENTER:ReportMissionsPlayers()
+Report the players of all MISSIONs to a GROUP.
 Each Mission is listed, with an indication how many Tasks are still to be completed.
 
 <h4> Parameters </h4>

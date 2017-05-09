@@ -365,7 +365,8 @@ self
 * [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player joining the Mission.
 
 <h4> Returns </h4>
-* <u>Boolean</u>  true if Unit is part of a Task in the Mission.
+* [MISSION](#mission-class-)
+
 
 
 ### MISSION:CrashUnit(PlayerUnit)
@@ -380,7 +381,8 @@ self
 * [UNIT](#unit-class-) PlayerUnit : The CLIENT or UNIT of the Player crashing.
 
 <h4> Returns </h4>
-* <u>Boolean</u>  true if Unit is part of a Task in the Mission.
+* [MISSION](#mission-class-)
+
 
 
 ### MISSION:AddScoring()
@@ -437,6 +439,44 @@ self
 * <u>Number</u> MenuTime
 
 <h4> Returns </h4>
+
+### MISSION:IsGroupAssigned(MissionGroup)
+Returns if the [Mission](#mission-module-) is assigned to the Group.
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+* [GROUP](#group-class-) MissionGroup
+
+<h4> Returns </h4>
+* <u>Boolean</u> 
+
+
+### MISSION:SetGroupAssigned(MissionGroup)
+Set [Group](#group-module-) assigned to the [Mission](#mission-module-).
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+* [GROUP](#group-class-) MissionGroup
+
+<h4> Returns </h4>
+* [MISSION](#mission-class-)
+
+
+
+### MISSION:ClearGroupAssignment(MissionGroup)
+Clear the [Group](#group-module-) assignment from the [Mission](#mission-module-).
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+* [GROUP](#group-class-) MissionGroup
+
+<h4> Returns </h4>
+* [MISSION](#mission-class-)
+
+
 
 ### MISSION:GetCommandCenter()
 Gets the COMMANDCENTER.
@@ -598,6 +638,57 @@ self
 
 <h4> Returns </h4>
 * <u>Number</u> 
+
+
+### MISSION:GetTaskTypes()
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+
+<h4> Returns </h4>
+* <u>Number</u> 
+
+
+### MISSION:ReportStatus()
+Create a status report of the Mission.
+This reports provides a one liner of the mission status. It indicates how many players and how many Tasks.
+
+Mission "<MissionName>" - Status "<MissionStatus>"
+- Task Types: <TaskType>, <TaskType>
+- <xx> Planned Tasks (xp)
+- <xx> Assigned Tasks(xp)
+- <xx> Success Tasks (xp)
+- <xx> Hold Tasks (xp)
+- <xx> Cancelled Tasks (xp)
+- <xx> Aborted Tasks (xp)
+- <xx> Failed Tasks (xp)
+
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+
+<h4> Returns </h4>
+* <u>String</u> 
+
+
+### MISSION:ReportPlayers()
+Create a player report of the Mission.
+This reports provides a one liner of the mission status. It indicates how many players and how many Tasks.
+
+Mission "<MissionName>" - Status "<MissionStatus>"
+- Player "<PlayerName>: Task <TaskName> <TaskStatus>, Task <TaskName> <TaskStatus>
+- Player <PlayerName>: Task <TaskName> <TaskStatus>, Task <TaskName> <TaskStatus>
+- ..
+
+
+<h4> Parameters </h4>
+* [MISSION](#mission-class-)
+self
+
+<h4> Returns </h4>
+* <u>String</u> 
 
 
 ### MISSION:ReportSummary()
