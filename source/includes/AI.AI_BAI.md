@@ -1,5 +1,5 @@
 # AI.AI_BAI Module
-**AI** -- **Provide Battleground Air Interdiction (bombing).**
+**AI** -- **Provide Battlefield Air Interdiction (bombing).**
 
 ![Banner Image](/includes/Pictures/AI_BAI/Dia1.JPG)
 
@@ -145,6 +145,18 @@ When the fuel treshold has been reached, the airplane will fly towards the neare
 * **AI_BAI_ZONE-Destroy-**: The AI has destroyed a target [Unit](#unit-module-).
 * **AI_BAI_ZONE-Destroyed-**: The AI has destroyed all target [Unit](#unit-module-)s assigned in the BOMB task.
 * **Status**: The AI is checking status (fuel and damage). When the tresholds have been reached, the AI will RTB.
+
+#####  3. Modify the Engage Zone behaviour to pinpoint a **map object** or **scenery object**
+
+Use the method AI_BAI_ZONE-SearchOff- to specify that the EngageZone is not to be searched for potential targets (UNITs), but that the center of the zone
+is the point where a map object is to be destroyed (like a bridge).
+
+Example:
+
+-- Tell the BAI not to search for potential targets in the BAIEngagementZone, but rather use the center of the BAIEngagementZone as the bombing location.
+AIBAIZone:SearchOff()
+
+Searching can be switched back on with the method AI_BAI_ZONE-SearchOn-. Use the method AI_BAI_ZONE-SearchOnOff- to flexibily switch searching on or off.
 
 
 
@@ -416,6 +428,43 @@ Set the Engage Zone where the AI is performing BOMB. Note that if the EngageZone
 * [AI_BAI_ZONE](#ai_bai_zone-class-)
 self
 * [ZONE](#zone-class-) EngageZone : The zone where the AI is performing BOMB.
+
+<h4> Returns </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+
+
+
+### AI_BAI_ZONE:SearchOnOff()
+Specifies whether to search for potential targets in the zone, or let the center of the zone be the bombing coordinate.
+AI_BAI_ZONE will search for potential targets by default.
+
+<h4> Parameters </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+self
+
+<h4> Returns </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+
+
+
+### AI_BAI_ZONE:SearchOff()
+If Search is Off, the current zone coordinate will be the center of the bombing.
+
+<h4> Parameters </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+self
+
+<h4> Returns </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+
+
+
+### AI_BAI_ZONE:SearchOn()
+If Search is On, BAI will search for potential targets in the zone.
+
+<h4> Parameters </h4>
+* [AI_BAI_ZONE](#ai_bai_zone-class-)
+self
 
 <h4> Returns </h4>
 * [AI_BAI_ZONE](#ai_bai_zone-class-)
